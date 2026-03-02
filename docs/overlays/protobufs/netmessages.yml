@@ -1,0 +1,249 @@
+# docs/overlays/protobufs/netmessages.yml
+#
+# Overlay for Protobufs/netmessages.proto
+#
+# Sources: HL2SDK (alliedmodders/hl2sdk cs2 branch), Source 2 network
+#          documentation, AlliedModders community research, Valve Networking
+#          documentation.
+
+description: >
+  Core Source 2 network protocol messages exchanged between client and server.
+  Includes server-info negotiation, entity delta updates, string tables,
+  voice data, and game-event delivery.  Client→Server messages use the
+  CLC_ prefix; Server→Client use SVC_.
+
+messages:
+  CCLCMsg_ClientInfo:
+    description: >
+      Sent by the client immediately after the initial connection handshake to
+      provide hardware/software capability information.
+
+  CCLCMsg_Move:
+    description: >
+      Primary per-tick user-command message carrying all player input: view
+      angles, buttons pressed, tick number, and move delta.  This is the
+      heartbeat of the client→server input channel.
+
+  CCLCMsg_VoiceData:
+    description: >
+      Carries a compressed voice-audio packet from the client to the server
+      for relay to nearby players.
+
+  CCLCMsg_BaselineAck:
+    description: >
+      Acknowledges that the client has received and applied the entity baseline
+      snapshot up to a given tick, allowing the server to stop retransmitting
+      baseline data.
+
+  CCLCMsg_ListenEvents:
+    description: >
+      Registers which game-events this client wishes to receive (similar to
+      CMsgSource1LegacyListenEvents but at the CLC layer).
+
+  CCLCMsg_RespondCvarValue:
+    description: >
+      Client response to a CSVCMsg_GetCvarValue query; reports the current value
+      of a convar requested by the server (e.g. for anti-cheat verification).
+
+  CCLCMsg_LoadingProgress:
+    description: >
+      Periodic heartbeat sent by the client while loading a map, reporting
+      the current loading percentage so the server can track all-clients-loaded
+      state.
+
+  CCLCMsg_RequestPause:
+    description: >
+      Client request to pause or unpause the server (only honoured when the
+      client has appropriate privileges, e.g. tournament admin).
+
+  CSVCMsg_ServerInfo:
+    description: >
+      First substantial message sent by the server after handshake.  Provides
+      all configuration data the client needs to initialise its session.
+    fields:
+      protocol:
+        description: "Network protocol version number."
+      server_count:
+        description: "Unique server instance counter; increments on each map change."
+      is_dedicated:
+        description: "True when running on a dedicated server (as opposed to a listen server)."
+      is_hltv:
+        description: "True when this connection is a GOTV/HLTV proxy."
+      c_os:
+        description: "Server operating system code (0 = Windows, 1 = Linux, 2 = macOS)."
+      max_clients:
+        description: "Maximum number of player slots on this server."
+      max_classes:
+        description: "Number of entity class types registered; used to size class-info tables."
+      player_slot:
+        description: "Slot index assigned to this connecting client."
+      tick_interval:
+        description: "Duration of one server tick in seconds (e.g. 0.015625 for 64-tick)."
+      game_dir:
+        description: "Game directory name (e.g. 'csgo')."
+      map_name:
+        description: "Name of the map currently running on the server."
+      sky_name:
+        description: "Sky-box texture set name used for the current map."
+      host_name:
+        description: "Display name of the server as shown in the server browser."
+
+  CSVCMsg_ClassInfo:
+    description: >
+      Enumerates all entity class types known to the server, mapping numeric
+      class IDs to class name strings.  Clients use this to instantiate the
+      correct entity objects when receiving entity creation deltas.
+    fields:
+      create_on_client:
+        description: "True when the client should create entity objects from this list immediately."
+      classes:
+        description: "List of (class_id, class_name) pairs for all registered entity classes."
+
+  CSVCMsg_SetPause:
+    description: >
+      Instructs the client to enter or leave pause state.
+    fields:
+      paused:
+        description: "True to pause client-side simulation."
+
+  CSVCMsg_VoiceInit:
+    description: >
+      Initialises the voice-codec parameters on the client.
+    fields:
+      quality:
+        description: "Voice codec quality level."
+
+  CSVCMsg_CreateStringTable:
+    description: >
+      Creates a new named string table on the client, initialised with the
+      provided data blob.  String tables are the primary mechanism for sharing
+      static/semi-static lookup data (model precache, sound precache, user info, etc.).
+    fields:
+      name:
+        description: "Unique name of the string table (e.g. 'userinfo', 'modelprecache')."
+      num_entries:
+        description: "Number of entries in the initial table."
+      user_data_fixed_size:
+        description: "True when all entries have fixed-size user-data blobs."
+      user_data_size:
+        description: "Fixed user-data size in bytes (valid when user_data_fixed_size is true)."
+      user_data_size_bits:
+        description: "Bit-width of each user-data field."
+      flags:
+        description: "Table flags (e.g. FSTRINGTAB_DICTIONARY_ENABLED)."
+      string_data:
+        description: "Serialised table data blob (may be compressed)."
+      uncompressed_size:
+        description: "Size of the data after decompression (0 when not compressed)."
+      data_compressed:
+        description: "True when string_data is compressed."
+      using_varint_bitcounts:
+        description: "True when the serialised bit-counts are encoded as varints."
+
+  CSVCMsg_UpdateStringTable:
+    description: >
+      Incremental update to an existing string table, adding or modifying
+      entries since the last full snapshot.
+    fields:
+      table_id:
+        description: "Index of the string table to update."
+      changed_entries:
+        description: "Number of changed entries in this update."
+      string_data:
+        description: "Delta-encoded table data blob."
+
+  CSVCMsg_PacketEntities:
+    description: >
+      The most bandwidth-intensive server message; carries the delta-compressed
+      entity-state update for all entities that changed since the client's last
+      acknowledged snapshot.
+    notes: >
+      The inner data blob is decoded using the Source 2 entity-delta codec.
+      Demo parsers (demoinfocs-golang, etc.) spend most of their time
+      processing this message.
+    fields:
+      max_entries:
+        description: "Maximum entity index present in this packet."
+      updated_entries:
+        description: "Number of entity change records in the data blob."
+      is_delta:
+        description: "True for incremental updates; false for a full baseline snapshot."
+      update_from_tick:
+        description: "Tick the delta is computed from (only valid when is_delta is true)."
+      baseline:
+        description: "Which baseline buffer (0 or 1) the data is relative to."
+      delta_from:
+        description: "Tick that the delta originates from."
+      entity_data:
+        description: "Binary blob of delta-encoded entity field changes."
+
+  CSVCMsg_TempEntities:
+    description: >
+      Batches one or more temporary-entity (TE) events into a single reliable
+      message.  TE events produce short-lived visual/audio effects without
+      creating persistent server entities.
+    fields:
+      num_entries:
+        description: "Number of TE entries packed into this message."
+      entity_data:
+        description: "Serialised list of TE event data blobs."
+
+  CSVCMsg_SetView:
+    description: >
+      Changes the entity index used as the origin for the client's view (e.g.
+      switches from player view to a camera entity during replays).
+    fields:
+      entity_index:
+        description: "Entity index to use as the view origin."
+      slot:
+        description: "Split-screen slot this view assignment applies to."
+
+  CSVCMsg_FixAngle:
+    description: >
+      Forces the client's view angles to specific values (used for spawn
+      orientation resets, teleports, and some map entities).
+    fields:
+      relative:
+        description: "True for a relative angle delta, false for absolute."
+      angle:
+        description: "Target view angle (pitch, yaw, roll)."
+
+  CSVCMsg_VoiceData:
+    description: >
+      Relays a voice-audio packet from a speaking player to all listeners.
+    fields:
+      audio:
+        description: "CMsgVoiceAudio containing the compressed audio data and format."
+      client:
+        description: "Player slot index of the speaker."
+      audible_mask:
+        description: "Bitmask of player slots that should hear this audio."
+      proximity:
+        description: "True when the voice is 3D positional (proximity voice chat)."
+
+  CSVCMsg_GetCvarValue:
+    description: >
+      Asks the client to report the current value of a specific convar.
+      The client responds with CCLCMsg_RespondCvarValue.
+    fields:
+      cookie:
+        description: "Opaque identifier echoed back in the response for correlation."
+      cvar_name:
+        description: "Name of the convar whose value is being queried."
+
+  CSVCMsg_UserMessage:
+    description: >
+      Wraps a higher-level user-message (CCSUsrMsg_*, CUserMessage*) inside a
+      network packet for reliable delivery.
+    fields:
+      msg_type:
+        description: "User-message type ID from ECstrike15UserMessages or EBaseUserMessages."
+      msg_data:
+        description: "Serialised protobuf payload of the specific user-message type."
+      passthrough:
+        description: "Passthrough flag used by split-screen."
+
+  CSVCMsg_PacketReliable:
+    description: >
+      Reliable wrapper for delta packets that must be delivered in order and
+      without loss (e.g. initial baseline or important game-state transitions).

@@ -1,0 +1,162 @@
+name: Generate Documentation
+
+on:
+  # Poll for upstream changes every 4 hours
+  schedule:
+    - cron: "0 */4 * * *"
+
+  # Rebuild immediately when overlays, the generator, or workflow config change
+  push:
+    paths:
+      - "docs/overlays/**"
+      - "docs/generate_docs.py"
+      - ".github/workflows/generate-docs.yml"
+
+  # Allow manual runs from the Actions tab
+  workflow_dispatch:
+
+# Only one docs build at a time per branch; cancel any in-progress run
+concurrency:
+  group: docs-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # -------------------------------------------------------------------------
+  # 1. Update the submodule to latest upstream, regenerate docs if anything
+  #    changed, then either push directly (on a push event) or open/update a
+  #    pull request (on schedule or workflow_dispatch).
+  # -------------------------------------------------------------------------
+  check-and-update:
+    name: Update submodule and regenerate docs
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout repository with submodule
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Update submodule to latest upstream HEAD
+        id: submodule
+        run: |
+          BEFORE=$(git -C data rev-parse HEAD)
+          git submodule update --remote --merge data
+          AFTER=$(git -C data rev-parse HEAD)
+          echo "before=$BEFORE" >> "$GITHUB_OUTPUT"
+          echo "after=$AFTER"   >> "$GITHUB_OUTPUT"
+          if [ "$BEFORE" = "$AFTER" ] && [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "Submodule unchanged ($AFTER). Nothing to do."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            echo "Will regenerate (was: $BEFORE, now: $AFTER, trigger: ${{ github.event_name }})."
+          fi
+
+      - name: Set up Python
+        if: steps.submodule.outputs.skip == 'false'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        if: steps.submodule.outputs.skip == 'false'
+        run: pip install pyyaml -q
+
+      - name: Generate documentation
+        if: steps.submodule.outputs.skip == 'false'
+        run: |
+          python3 docs/generate_docs.py \
+            --repo-root . \
+            --data-root ./data \
+            --output docs
+
+      # On direct push events we commit straight to the current branch.
+      - name: Commit and push (push event)
+        if: steps.submodule.outputs.skip == 'false' && github.event_name == 'push'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data docs/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "docs: regenerate for upstream ${{ steps.submodule.outputs.after }} [skip ci]"
+            git push
+          fi
+
+      # On scheduled / manual runs, open (or update) a PR so changes are
+      # visible and can be reviewed before landing on the default branch.
+      - name: Open or update pull request (schedule / workflow_dispatch)
+        if: steps.submodule.outputs.skip == 'false' && github.event_name != 'push'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "docs: regenerate for upstream ${{ steps.submodule.outputs.after }} [skip ci]"
+          branch: automated/docs-update
+          delete-branch: true
+          title: "docs: automated update for upstream ${{ steps.submodule.outputs.after }}"
+          body: |
+            Automated documentation update triggered by the `${{ github.event_name }}` event.
+
+            **Upstream submodule**: `${{ steps.submodule.outputs.before }}` → `${{ steps.submodule.outputs.after }}`
+
+            This pull request was created automatically by the [Generate Documentation](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) workflow.
+          labels: automated,documentation
+
+  # -------------------------------------------------------------------------
+  # 2. Build Jekyll site from the docs/ directory.
+  #    Checks out the branch HEAD so it always picks up any commit pushed
+  #    by the check-and-update job above.
+  # -------------------------------------------------------------------------
+  build:
+    name: Build Jekyll documentation
+    runs-on: ubuntu-latest
+    needs: check-and-update
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout repository (latest HEAD)
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./docs
+          destination: ./_site
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+  # -------------------------------------------------------------------------
+  # 3. Deploy to GitHub Pages (only from the default branch).
+  # -------------------------------------------------------------------------
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

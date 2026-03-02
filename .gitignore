@@ -1,0 +1,9 @@
+# Output from manual local generator runs (docs/ itself IS committed)
+docs/output/
+
+# Python cache
+docs/__pycache__/
+__pycache__/
+
+# Submodule data/ prevent it from being committed or tracked
+data/

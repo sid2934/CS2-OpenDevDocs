@@ -1,0 +1,1275 @@
+# docs/overlays/server.yml
+#
+# Multi-entity overlay for the 'server' schema module.
+# Top-level keys are entity names; their values follow the same format as
+# single-entity overlay files (description, notes, warning, fields).
+#
+# Sources: HL2SDK (alliedmodders/hl2sdk), AlliedModders forums, HLAE,
+#          cs2-schema dumps, demoinfocs-golang, Valve developer wiki.
+#
+# See docs/overlays/README.md for the full format reference.
+
+# ---------------------------------------------------------------------------
+# Player controller
+# ---------------------------------------------------------------------------
+
+CBasePlayerController:
+  description: >
+    Base class for all player controller entities in Source 2.  A controller
+    is the persistent, session-level entity that represents a connected client;
+    it is never recreated between rounds.  The controller owns one or more pawn
+    entities (the physical in-world representation).
+
+  fields:
+    m_nTickBase:
+      description: "Server tick number at the time of the most-recent usercmd from this client."
+      notes: "Only sent to the owning player (LocalPlayerExclusive). Used for lag compensation and prediction."
+
+    m_hPawn:
+      description: "CHandle to the base pawn currently controlled by this controller."
+      notes: "For CS2 human players the concrete type is CCSPlayerPawn.  Use m_hPlayerPawn on CCSPlayerController for the typed handle."
+
+    m_iConnected:
+      description: "PlayerConnectedState enum – 0 = Disconnected, 1 = Connected, 2 = Connecting."
+
+    m_iszPlayerName:
+      description: "Display name of the player, as reported by Steam (up to 128 bytes, UTF-8)."
+
+    m_steamID:
+      description: "64-bit Steam account ID (SteamID64) of the connected client."
+      notes: "Transmitted as a fixed64; only sent to the owning player and GOTV."
+
+    m_bNoClipEnabled:
+      description: "True when sv_cheats noclip is active for this player."
+
+    m_iDesiredFOV:
+      description: "Field-of-view override requested by the player (0 = use server default)."
+
+# ---------------------------------------------------------------------------
+# CS2 player controller
+# ---------------------------------------------------------------------------
+
+CCSPlayerController:
+  description: >
+    The server-side controller entity for a CS2 player.  One CCSPlayerController
+    exists per connected client for the lifetime of the connection; it persists
+    across rounds.  The controller owns a CCSPlayerPawn (the physical in-world
+    representation) which may be recreated each round.
+
+  notes: >
+    The controller / pawn split mirrors the Source 2 architecture described in
+    the HL2SDK: a lightweight controller manages session-level state (score,
+    team, competitive rank) while the pawn carries per-round physics and
+    animation state.  Demo parsers should track m_hPlayerPawn to find the
+    corresponding pawn entity handle each round.
+
+  fields:
+    m_iPing:
+      description: "Player's current network round-trip latency, in milliseconds."
+      notes: "Smoothed by m_flSmoothedPing server-side; updated roughly every 5 s."
+
+    m_hPlayerPawn:
+      description: "CHandle pointing to the player's active CCSPlayerPawn."
+      notes: >
+        Becomes invalid (INVALID_EHANDLE) when the player is dead and their pawn
+        has been removed.  Check m_bPawnIsAlive before dereferencing.
+
+    m_hObserverPawn:
+      description: "CHandle to the CCSObserverPawn when the player is spectating."
+      notes: "Valid only while the player is in spectator mode; otherwise INVALID_EHANDLE."
+
+    m_bPawnIsAlive:
+      description: "True while the player's pawn is alive and spawned."
+
+    m_iPawnHealth:
+      description: "Current health of the pawn, networked to teammates and spectators."
+      notes: "Only sent to TeammateAndSpectatorExclusive group; enemies do not receive this."
+
+    m_iPawnArmor:
+      description: "Current armor value of the pawn (0–100 for vest, 100+ for helmet)."
+
+    m_bPawnHasDefuser:
+      description: "True when the pawn is carrying a defuse kit."
+
+    m_bPawnHasHelmet:
+      description: "True when the pawn has a full helmet (takes head-shot armor penalty into account)."
+
+    m_nPawnCharacterDefIndex:
+      description: "Item definition index of the character/agent skin equipped on the pawn."
+
+    m_iPawnLifetimeStart:
+      description: "Server tick on which the current pawn was spawned."
+
+    m_iPawnLifetimeEnd:
+      description: "Server tick on which the current pawn died (0 while still alive)."
+
+    m_iScore:
+      description: "Lifetime score for this connection (frags minus team-kills, etc.)."
+
+    m_iCompetitiveRanking:
+      description: "Player's current Premier/Competitive numeric skill rating."
+
+    m_iCompetitiveWins:
+      description: "Total number of ranked wins accumulated on this account."
+
+    m_iCompetitiveRankType:
+      description: "Rank type identifier (e.g. 0 = unranked, 11 = Premier, 12 = Competitive)."
+
+    m_iCompetitiveRankingPredicted_Win:
+      description: "Predicted rating delta if the match ends in a win for this player."
+
+    m_iCompetitiveRankingPredicted_Loss:
+      description: "Predicted rating delta if the match ends in a loss."
+
+    m_iCompetitiveRankingPredicted_Tie:
+      description: "Predicted rating delta if the match ends in a tie/draw."
+
+    m_szClan:
+      description: "Player's clan tag string, displayed next to the name in the scoreboard."
+
+    m_nPlayerDominated:
+      description: >
+        64-bit mask of player-slot bits this player is currently dominating.
+        Bit N is set when this player has killed player-slot N four times without
+        being killed back.
+
+    m_nPlayerDominatingMe:
+      description: >
+        64-bit mask of player-slot bits that are currently dominating this player.
+
+    m_bControllingBot:
+      description: "True when this human controller has taken over a bot pawn."
+
+    m_bHasControlledBotThisRound:
+      description: "True if the player took over a bot at any point this round."
+
+    m_bCanControlObservedBot:
+      description: "True when the player is allowed to take control of the bot they are spectating."
+
+    m_hOriginalControllerOfCurrentPawn:
+      description: >
+        When a human takes over a bot, this holds a handle back to the original
+        bot controller so the pawn can be returned after the human disconnects.
+
+    m_iMVPs:
+      description: "Number of MVP stars the player has earned in the current match."
+
+    m_eMvpReason:
+      description: "Reason for the most recent MVP award (enum: 1 = most kills, 2 = bomb defuse, 3 = bomb plant, etc.)."
+
+    m_bMvpNoMusic:
+      description: "True when the MVP jingle should be suppressed for this player's MVP award."
+
+    m_iMusicKitID:
+      description: "Item definition index of the music kit active for this player."
+
+    m_iMusicKitMVPs:
+      description: "Number of MVPs awarded while this music kit has been equipped (affects music kit stat tracking)."
+
+    m_recentKillQueue:
+      description: "Circular buffer of the 8 most-recent enemy kills this round (pawn entity indices)."
+      notes: "Used to determine domination/revenge streaks."
+
+    m_nFirstKill:
+      description: "Index within m_recentKillQueue of the oldest valid entry."
+
+    m_nKillCount:
+      description: "Number of valid entries currently in m_recentKillQueue."
+
+    m_bFireBulletsSeedSynchronized:
+      description: "True once the client's bullet-fire PRNG seed has been synchronised with the server."
+      notes: "Only sent to the owning player (LocalPlayerExclusive)."
+
+    m_unActiveQuestId:
+      description: "Active operation mission ID for this player (0 if none active)."
+
+    m_nEndMatchNextMapVote:
+      description: "Index of the map this player has voted for in the end-of-match map vote."
+
+    m_nQuestProgressReason:
+      description: "Reason code for the last quest-progress update sent to this player."
+
+    m_nDisconnectionTick:
+      description: "Server tick at which this player disconnected (used for reconnect grace period)."
+
+    m_nPlayerDominated:
+      description: "64-bit bitmask; bit N set means this player is dominating player-slot N."
+
+    m_szCrosshairCodes:
+      description: "Encoded crosshair configuration string (same format as the cl_crosshair_reticle_* convars share-code)."
+
+    m_iPendingTeamNum:
+      description: "Team number the player will be moved to at the next team-change opportunity."
+
+    m_flForceTeamTime:
+      description: "GameTime after which team-forcing is no longer applied."
+
+    m_bEverPlayedOnTeam:
+      description: "True once this player has played at least one round as a non-spectator."
+
+    m_iCoachingTeam:
+      description: "Team number this player is coaching (0 if not coaching)."
+
+# ---------------------------------------------------------------------------
+# CS2 player pawn
+# ---------------------------------------------------------------------------
+
+CCSPlayerPawn:
+  description: >
+    The physical in-world representation of a CS2 player.  Carries per-round
+    state: health, armor, position, animations, and weapon inventory.  A new
+    CCSPlayerPawn is created each round on (re)spawn; the corresponding
+    CCSPlayerController persists across rounds.
+
+  notes: >
+    Source 2 architecture separates the controller (session/connection state)
+    from the pawn (physics/animation state).  Demo parsers must follow
+    m_hController → CCSPlayerController to resolve name, team, and stats.
+
+  fields:
+    m_pBulletServices:
+      description: "Pointer to CCSPlayer_BulletServices which tracks hit counts registered on the server."
+
+    m_pHostageServices:
+      description: "Pointer to CCSPlayer_HostageServices which tracks which hostage entity this player is currently carrying."
+
+    m_pBuyServices:
+      description: "Pointer to CCSPlayer_BuyServices which tracks sellback purchase history for the current round."
+
+    m_pActionTrackingServices:
+      description: "Pointer to CCSPlayer_ActionTrackingServices which tracks weapon purchases and rescue state for stats/scoring."
+
+    m_bHasFemaleVoice:
+      description: "True when the equipped agent skin uses a female voice pack."
+
+    m_szLastPlaceName:
+      description: "Human-readable area/landmark name from the nav mesh where the player was last located (e.g. 'CTSpawn', 'BombsiteA')."
+
+    m_bInBuyZone:
+      description: "True while the player is standing inside a buy zone."
+
+    m_bInBombZone:
+      description: "True while the player is standing inside a bomb-plant zone (bombsite trigger)."
+      notes: "m_nWhichBombZone indicates which site (0 = not in any, 1 = A, 2 = B)."
+
+    m_bInHostageRescueZone:
+      description: "True while the player is inside a hostage rescue zone."
+
+    m_bInNoDefuseArea:
+      description: "True when the player is in a location where defusing is not permitted."
+
+    m_nWhichBombZone:
+      description: "Indicates which bomb site the player is currently inside (0 = none, 1 = A, 2 = B)."
+
+    m_iShotsFired:
+      description: "Number of bullets fired since the player last stopped firing (resets when trigger is released or weapon changes)."
+      notes: "Used to drive the walk-run bobbing animation state."
+
+    m_flVelocityModifier:
+      description: "Multiplicative speed modifier applied on top of base movement speed (0.0–1.0 typically; reduced while injured or tased)."
+
+    m_flHitHeading:
+      description: "Horizontal heading angle (degrees) of the last incoming hit; drives the flinch animation direction."
+
+    m_nHitBodyPart:
+      description: "Hit-group constant of the last incoming hit (head=1, chest=2, stomach=3, leftarm=4, rightarm=5, leftleg=6, rightleg=7, neck=8)."
+
+    m_flFlinchStack:
+      description: "Accumulated flinch value from recent damage; drives the camera-shake magnitude."
+      notes: "Only sent to the owning player (LocalPlayerExclusive)."
+
+    m_bIsScoped:
+      description: "True while the player is looking through a weapon scope."
+
+    m_bResumeZoom:
+      description: "True when the scope should be re-engaged automatically after the next shot (AWP/SSG 08 bolt-action mechanic)."
+
+    m_bIsDefusing:
+      description: "True while the player is actively defusing the planted bomb."
+
+    m_bIsGrabbingHostage:
+      description: "True while the player is picking up a hostage entity."
+
+    m_iBlockingUseActionInProgress:
+      description: "CSPlayerBlockingUseAction_t enum indicating a use-action in progress that blocks other actions (e.g. defuse, hostage grab)."
+
+    m_bWaitForNoAttack:
+      description: "True when the weapon's fire input must be fully released before the next shot is accepted (prevents auto-fire on re-deploy)."
+
+    m_bKilledByHeadshot:
+      description: "True if the killing blow on this player was a headshot."
+
+    m_bIsWalking:
+      description: "True while the player is in walk mode (shift-walk / cl_showpos = 1 walking)."
+
+    m_ArmorValue:
+      description: "Current armor HP (0–100). Combined-arms note: vest+helmet does not exceed 100 armor points."
+
+    m_unCurrentEquipmentValue:
+      description: "Total buy value (in dollars) of equipment currently held by the player."
+
+    m_unRoundStartEquipmentValue:
+      description: "Equipment value at the start of the current round (after freeze-time buy phase ends)."
+
+    m_unFreezetimeEndEquipmentValue:
+      description: "Equipment value at the moment freeze time ended."
+
+    m_aimPunchAngle:
+      description: "Accumulated aim-punch (recoil kick) angle in pitch and yaw applied to the camera view, in degrees."
+      notes: "Networked at full 32-bit precision. Clients subtract this from view angles to derive the true aim direction."
+
+    m_aimPunchAngleVel:
+      description: "Current velocity of the aim-punch angle – how fast the recoil is decaying per tick."
+
+    m_aimPunchTickBase:
+      description: "Server tick at which the aim-punch sample list was last reset."
+
+    m_aimPunchTickFraction:
+      description: "Fractional tick offset for interpolating the aim-punch curve between ticks."
+
+    m_bIsBuyMenuOpen:
+      description: "True while the player's buy menu is open."
+
+    m_flTimeOfLastInjury:
+      description: "GameTime of the most-recent damage event that reduced this player's health."
+
+    m_nRagdollDamageBone:
+      description: "Bone index of the last hit that caused a ragdoll impulse."
+
+    m_vRagdollDamageForce:
+      description: "World-space impulse vector applied to the ragdoll bone on death."
+
+    m_vRagdollDamagePosition:
+      description: "World-space position of the hit point that caused the fatal damage."
+
+    m_szRagdollDamageWeaponName:
+      description: "Class name of the weapon that killed this player (used to select the correct death ragdoll)."
+
+    m_bRagdollDamageHeadshot:
+      description: "True if the fatal blow was a headshot, used to trigger headshot-specific ragdoll animation."
+
+    m_vRagdollServerOrigin:
+      description: "World-space position of the player's origin at the moment of death."
+
+    m_EconGloves:
+      description: "CEconItemView describing the glove skin equipped on this player."
+
+    m_nEconGlovesChanged:
+      description: "Incremented each time the glove loadout changes, so the client can refresh the glove model."
+
+    m_qDeathEyeAngles:
+      description: "Eye angles at the moment of death, used to pose the ragdoll's head correctly."
+
+    m_bLeftHanded:
+      description: "True when the player has switched the weapon to the left hand (cl_lefthand 1)."
+
+    m_fSwitchedHandednessTime:
+      description: "GameTime at which the player last toggled handedness (prevents rapid toggling)."
+
+    m_flViewmodelOffsetX:
+      description: "Custom viewmodel X offset in world units (cl_viewmodel_offset_x)."
+
+    m_flViewmodelOffsetY:
+      description: "Custom viewmodel Y offset in world units (cl_viewmodel_offset_y)."
+
+    m_flViewmodelOffsetZ:
+      description: "Custom viewmodel Z offset in world units (cl_viewmodel_offset_z)."
+
+    m_flViewmodelFOV:
+      description: "Custom viewmodel FOV in degrees (cl_viewmodel_fov; clamped to 60–68)."
+
+    m_nLastKillerIndex:
+      description: "Entity index of the player or entity that last killed this pawn."
+
+    m_entitySpottedState:
+      description: "EntitySpottedState_t struct tracking which players have spotted (ESP-radar dot) this entity."
+      notes: "See also m_bSpotted and the spotted bitmask used by the minimap."
+
+    m_bGunGameImmunity:
+      description: "True while the player has gun-game spawn immunity (brief invincibility after spawning in Arms Race mode)."
+
+    m_GunGameImmunityColor:
+      description: "Color applied to the player model while gun-game immunity is active."
+
+    m_fImmuneToGunGameDamageTime:
+      description: "GameTime until which the player is immune to damage in Gun Game / Arms Race mode."
+
+    m_fMolotovDamageTime:
+      description: "GameTime at which molotov/incendiary damage will next be applied to this player."
+
+    m_angEyeAngles:
+      description: "Server-authoritative eye angles (pitch, yaw, roll) used for hit-box calculation and third-person rendering."
+      notes: "Encoded at full qangle_precise precision. The definitive source for a player's look direction."
+
+    m_thirdPersonHeading:
+      description: "Horizontal heading angle shown in third-person and spectator view (may differ from eye yaw when crouching/moving)."
+
+    m_iRetakesOffering:
+      description: "Retakes-mode offering index: which weapon/utility load-out this player was offered for the retake."
+
+    m_iRetakesOfferingCard:
+      description: "Card index the player selected in the retakes offering interface."
+
+    m_bRetakesHasDefuseKit:
+      description: "True when the retakes system has granted this player a defuse kit for the retake round."
+
+    m_bRetakesMVPLastRound:
+      description: "True if this player earned the retakes MVP award in the previous round."
+
+    m_iRetakesMVPBoostItem:
+      description: "Item definition index of the bonus item awarded to the retakes MVP."
+
+    m_flHealthShotBoostExpirationTime:
+      description: "GameTime at which the health-shot (medshot) movement speed boost expires."
+
+    m_flEmitSoundTime:
+      description: "GameTime of the next footstep sound emission; controls footstep sound spacing."
+
+    m_flSlopeDropOffset:
+      description: "Vertical offset applied when the player is walking down a slope (prevents foot clipping)."
+
+    m_flSlopeDropHeight:
+      description: "Height of the slope the player is descending; used to scale the slope-drop animation."
+
+    m_vHeadConstraintOffset:
+      description: "Additional world-space offset applied to the head bone IK constraint."
+
+    m_vecPlayerPatchEconIndices:
+      description: "Array of 5 item-definition indices for the agent patch slots (team patches worn on the uniform)."
+
+# ---------------------------------------------------------------------------
+# Observer pawn
+# ---------------------------------------------------------------------------
+
+CCSObserverPawn:
+  description: >
+    Lightweight pawn used when a player is in spectator mode.  Created when the
+    player joins as spectator or dies and has not yet respawned.  Overrides the
+    movement and camera services with observer-specific implementations.
+
+# ---------------------------------------------------------------------------
+# Player pawn base
+# ---------------------------------------------------------------------------
+
+CCSPlayerPawnBase:
+  description: >
+    Abstract base class shared by CCSPlayerPawn and CCSObserverPawn, providing
+    the flash-bang state, progress bar, and original-controller link.
+
+  fields:
+    m_iPlayerState:
+      description: "CSPlayerState enum: STATE_ACTIVE = 0 (alive), STATE_WELCOME = 1, STATE_PICKINGTEAM = 2, STATE_PICKINGCLASS = 3, STATE_DEATH_ANIM = 4, STATE_DEATH_WAIT_FOR_KEY = 5, STATE_OBSERVER_MODE = 6."
+
+    m_flFlashDuration:
+      description: "Total duration in seconds of the current flash-bang blind effect (0 when not flashed)."
+
+    m_flFlashMaxAlpha:
+      description: "Peak screen-overlay alpha (0–255) of the current flash bang; scales with proximity and facing angle."
+
+    m_bHasMovedSinceSpawn:
+      description: "True once the player moves after spawning; prevents accidental movement-triggered events."
+
+    m_flProgressBarStartTime:
+      description: "GameTime at which the current progress bar (defuse/pickup) started."
+
+    m_iProgressBarDuration:
+      description: "Duration in seconds of the current progress bar interaction."
+
+    m_hOriginalController:
+      description: "CHandle back to the CCSPlayerController that owns this pawn, even when a bot has taken over."
+      notes: "Use this to map a pawn to its player for demo parsing."
+
+    m_pPingServices:
+      description: "Pointer to CCSPlayer_PingServices managing the in-game map-ping system."
+
+# ---------------------------------------------------------------------------
+# Player weapon services
+# ---------------------------------------------------------------------------
+
+CCSPlayer_WeaponServices:
+  description: >
+    Component attached to CCSPlayerPawn that manages the active weapon and
+    weapon-switch timing for a CS2 player.
+
+  fields:
+    m_flNextAttack:
+      description: "GameTime before which no weapon switch is permitted (e.g. after throwing a grenade)."
+      notes: "Only sent to the owning player (LocalPlayerExclusive)."
+
+    m_bIsLookingAtWeapon:
+      description: "True while the player is pressing the inspect key and the weapon is in the idle look-at animation."
+
+    m_bIsHoldingLookAtWeapon:
+      description: "True while the inspect key is held down (distinct from the animation actually playing)."
+
+    m_networkAnimTiming:
+      description: "Byte array encoding animation transition timing for the active weapon, used to synchronise viewmodel animations across client and server."
+
+    m_bBlockInspectUntilNextGraphUpdate:
+      description: "True when the inspect animation is suppressed until the animation graph ticks again (prevents stutter)."
+
+# ---------------------------------------------------------------------------
+# Action tracking services
+# ---------------------------------------------------------------------------
+
+CCSPlayer_ActionTrackingServices:
+  description: >
+    Component tracking scoring-relevant actions: weapon purchases and hostage
+    rescue status.
+
+  fields:
+    m_bIsRescuing:
+      description: "True while the player is escorting a hostage to the rescue zone."
+
+    m_weaponPurchasesThisMatch:
+      description: "WeaponPurchaseTracker_t recording which weapons were bought during the match (used for match-stats)."
+
+    m_weaponPurchasesThisRound:
+      description: "WeaponPurchaseTracker_t recording which weapons were bought this round (used for in-round stats and economy tracking)."
+
+# ---------------------------------------------------------------------------
+# Bullet services
+# ---------------------------------------------------------------------------
+
+CCSPlayer_BulletServices:
+  description: >
+    Component tracking bullet-hit statistics registered on the server side.
+
+  fields:
+    m_totalHitsOnServer:
+      description: "Cumulative number of bullet hits this player has registered on the server this round."
+
+# ---------------------------------------------------------------------------
+# Hostage services
+# ---------------------------------------------------------------------------
+
+CCSPlayer_HostageServices:
+  description: >
+    Component tracking whether this player is currently carrying a hostage.
+
+  fields:
+    m_hCarriedHostage:
+      description: "CHandle to the CHostage entity currently being carried by this player (INVALID_EHANDLE if none)."
+
+    m_hCarriedHostageProp:
+      description: "CHandle to the ragdoll/prop entity representing the carried hostage visually."
+
+# ---------------------------------------------------------------------------
+# Buy services
+# ---------------------------------------------------------------------------
+
+CCSPlayer_BuyServices:
+  description: >
+    Component that records the player's sellback-eligible purchases for the
+    current round.
+
+  fields:
+    m_vecSellbackPurchaseEntries:
+      description: "Vector of SellbackPurchaseEntry_t structs; each entry represents a weapon or equipment purchase that can still be sold back before freeze time expires."
+
+# ---------------------------------------------------------------------------
+# Base weapon
+# ---------------------------------------------------------------------------
+
+CBasePlayerWeapon:
+  description: >
+    Base class for all player-held weapons in Source 2.  Manages clip ammo,
+    reserve ammo, and attack scheduling.
+
+  fields:
+    m_nNextPrimaryAttackTick:
+      description: "Server game-tick after which the next primary fire is permitted."
+      notes: "Only sent to the owning player (LocalWeaponExclusive). Pair with m_flNextPrimaryAttackTickRatio for sub-tick precision."
+
+    m_flNextPrimaryAttackTickRatio:
+      description: "Fractional sub-tick ratio for m_nNextPrimaryAttackTick; together they encode the exact fire-rate timing."
+
+    m_nNextSecondaryAttackTick:
+      description: "Server game-tick after which the next secondary fire is permitted."
+      notes: "Only sent to the owning player (LocalWeaponExclusive)."
+
+    m_flNextSecondaryAttackTickRatio:
+      description: "Fractional sub-tick ratio for m_nNextSecondaryAttackTick."
+
+    m_iClip1:
+      description: "Current ammunition in the primary clip/magazine."
+      notes: "Serialized with the 'minusone' encoder so -1 means 'use weapon max-clip'. Sent to all clients."
+
+    m_iClip2:
+      description: "Current ammunition in the secondary clip (unused by most weapons; grenade count for grenade weapons)."
+      notes: "Only sent to the owning player (LocalWeaponExclusive)."
+
+    m_pReserveAmmo:
+      description: "Array of 2 reserve-ammo counts; index 0 = primary ammo type, index 1 = secondary ammo type."
+      notes: "Only sent to the owning player (LocalWeaponExclusive)."
+
+# ---------------------------------------------------------------------------
+# CS2 weapon base
+# ---------------------------------------------------------------------------
+
+CCSWeaponBase:
+  description: >
+    Extends CBasePlayerWeapon with CS2-specific mechanics: recoil accumulation,
+    accuracy penalty, silencer state, burst-fire mode, and weapon inspect.
+
+  fields:
+    m_weaponMode:
+      description: "CSWeaponMode enum: Primary_Mode = 0, Secondary_Mode = 1. Governs which attack function runs on fire."
+
+    m_fAccuracyPenalty:
+      description: "Additive inaccuracy penalty accumulated by recent shots; decays over time. Feeds into the cone-spread calculation."
+
+    m_iRecoilIndex:
+      description: "Integer index into the weapon's recoil table; incremented with each shot, decays when not firing."
+
+    m_flRecoilIndex:
+      description: "Fractional recoil index for sub-step interpolation of the recoil pattern table."
+      notes: "Demo parsers often use this to reproduce exact spray patterns."
+
+    m_bBurstMode:
+      description: "True when the weapon is in burst-fire mode (e.g. Famas burst, Glock18 burst)."
+
+    m_bInReload:
+      description: "True while the weapon is performing its reload animation."
+
+    m_bSilencerOn:
+      description: "True when the suppressor is attached (M4A1-S / USP-S)."
+
+    m_flTimeSilencerSwitchComplete:
+      description: "GameTime at which the suppressor attach/detach animation completes."
+
+    m_flDroppedAtTime:
+      description: "GameTime at which this weapon was dropped onto the ground."
+
+    m_bIsHauledBack:
+      description: "True while the player is winding up to throw a grenade (held throw)."
+
+    m_bDroppedNearBuyZone:
+      description: "True if the weapon was dropped close to a buy zone (affects whether bots will pick it up)."
+
+    m_hPrevOwner:
+      description: "CHandle to the CCSPlayerPawn that most recently owned this weapon before it was dropped."
+
+    m_nDropTick:
+      description: "Server tick on which the weapon was most recently dropped."
+
+    m_bWasActiveWeaponWhenDropped:
+      description: "True if the weapon was the active weapon at the moment it was dropped."
+
+    m_fLastShotTime:
+      description: "GameTime of the most recent shot fired from this weapon."
+
+    m_iOriginalTeamNumber:
+      description: "Team that originally spawned this weapon; buy-zone weapon pools are filtered by this."
+
+    m_iMostRecentTeamNumber:
+      description: "Team of the player most recently holding this weapon."
+
+    m_nPostponeFireReadyTicks:
+      description: "Tick after which a postponed shot will fire (used for the tick-aligned fire mechanism in sub-tick shooting)."
+
+    m_flPostponeFireReadyFrac:
+      description: "Fractional tick ratio for m_nPostponeFireReadyTicks."
+
+    m_iWeaponGameplayAnimState:
+      description: "WeaponGameplayAnimState enum controlling the weapon's anim-graph state (idle, firing, reloading, inspecting, etc.)."
+
+    m_bInspectPending:
+      description: "True when an inspect animation has been queued but not yet started."
+
+    m_bInspectShouldLoop:
+      description: "True when the inspect animation should loop (held-inspect mode)."
+
+    m_flInspectCancelCompleteTime:
+      description: "GameTime at which an in-progress inspect cancel animation will finish."
+
+    m_iIronSightMode:
+      description: "Iron-sight zoom state (0 = none, 1 = iron-sighted)."
+
+    m_nextPrevOwnerUseTime:
+      description: "GameTime before which the previous owner cannot pick this weapon back up (prevents instant re-pickup after dropping)."
+
+# ---------------------------------------------------------------------------
+# Game rules
+# ---------------------------------------------------------------------------
+
+CCSGameRules:
+  description: >
+    Singleton entity that holds all CS2 match-level state: phase, round timer,
+    team time-outs, map layout flags, match stats, and end-of-round information.
+    Accessible via the CCSGameRulesProxy entity on the client.
+
+  notes: >
+    Many fields here are the ground truth for demo-parsing tools (e.g.
+    demoinfocs-golang).  Round phase transitions are driven by m_gamePhase and
+    m_bFreezePeriod / m_bWarmupPeriod.
+
+  fields:
+    m_bFreezePeriod:
+      description: "True during the buy phase (freeze time) at the start of each round."
+      notes: "Players cannot move while this is true; buy menus open automatically."
+
+    m_bWarmupPeriod:
+      description: "True while the pre-match warmup is active."
+
+    m_fWarmupPeriodEnd:
+      description: "GameTime at which the warmup period ends and the first round begins."
+
+    m_fWarmupPeriodStart:
+      description: "GameTime at which the current warmup period started."
+
+    m_bTerroristTimeOutActive:
+      description: "True while the Terrorist team's tactical time-out is in progress."
+
+    m_bCTTimeOutActive:
+      description: "True while the Counter-Terrorist team's tactical time-out is in progress."
+
+    m_flTerroristTimeOutRemaining:
+      description: "Seconds remaining in the active Terrorist time-out."
+
+    m_flCTTimeOutRemaining:
+      description: "Seconds remaining in the active CT time-out."
+
+    m_nTerroristTimeOuts:
+      description: "Number of tactical time-outs the T-side has used so far in the match."
+
+    m_nCTTimeOuts:
+      description: "Number of tactical time-outs the CT-side has used so far in the match."
+
+    m_bTechnicalTimeOut:
+      description: "True during a technical pause (admin-issued, not team time-out)."
+
+    m_bMatchWaitingForResume:
+      description: "True when the match is paused and waiting for both teams to confirm resumption."
+
+    m_iFreezeTime:
+      description: "Freeze-time duration in seconds (mirrors mp_freezetime convar value)."
+
+    m_iRoundTime:
+      description: "Round time limit in seconds (mirrors mp_roundtime_* convar value)."
+
+    m_fMatchStartTime:
+      description: "Unix-epoch float of when the match (not the round) began."
+
+    m_fRoundStartTime:
+      description: "GameTime at which the current round's freeze time ended and play started."
+
+    m_flRestartRoundTime:
+      description: "GameTime at which the current round will be force-restarted by the server (0 = no pending restart)."
+
+    m_bGameRestart:
+      description: "True in the brief window between a restart being triggered and the new round spawning."
+
+    m_flGameStartTime:
+      description: "GameTime at which the first live round of the match started (after all warmup/knife rounds)."
+
+    m_timeUntilNextPhaseStarts:
+      description: "Countdown in seconds until the next phase (round, half, overtime) begins; drives the on-screen timer."
+
+    m_gamePhase:
+      description: "Game-phase enum: 1 = First Half, 2 = Second Half, 3 = Pre-overtime, 4 = Overtime, 5 = Game Over."
+      notes: "Triggers OnGamePhaseChanged callback on clients."
+
+    m_totalRoundsPlayed:
+      description: "Total number of rounds completed since the match started (all phases combined)."
+
+    m_nRoundsPlayedThisPhase:
+      description: "Number of rounds played in the current phase (half/overtime period)."
+
+    m_nOvertimePlaying:
+      description: "Number of overtime periods played so far (0 = regulation)."
+
+    m_iHostagesRemaining:
+      description: "Number of hostages that have not yet been rescued or killed."
+
+    m_bAnyHostageReached:
+      description: "True once any hostage has reached the rescue zone this round."
+
+    m_bMapHasBombTarget:
+      description: "True when the map has at least one bomb-plant zone (bombsite entity)."
+
+    m_bMapHasRescueZone:
+      description: "True when the map has at least one hostage rescue zone."
+
+    m_bMapHasBuyZone:
+      description: "True when the map has at least one buy zone."
+
+    m_bIsQueuedMatchmaking:
+      description: "True when the server is running a matchmaking (Valve-hosted) game rather than a community server."
+
+    m_nQueuedMatchmakingMode:
+      description: "Matchmaking mode identifier (0 = casual, 1 = competitive, etc.)."
+
+    m_bIsValveDS:
+      description: "True when the server is an official Valve dedicated server."
+
+    m_bLogoMap:
+      description: "True when the server is running a workshop or demo map that does not count for match records."
+
+    m_iSpectatorSlotCount:
+      description: "Number of spectator slots available on this server."
+
+    m_bHasMatchStarted:
+      description: "True from the moment the first live round begins; remains true until the match ends."
+
+    m_nNextMapInMapgroup:
+      description: "Index within the server's map-group of the map that will be played next."
+
+    m_szTournamentEventName:
+      description: "Display name of the tournament/event shown in the HUD scoreboard (up to 512 bytes)."
+
+    m_szTournamentEventStage:
+      description: "Stage label for the tournament event (e.g. 'Grand Final', 'Quarterfinal')."
+
+    m_bBombPlanted:
+      description: "True while the planted bomb entity is active and ticking."
+
+    m_bBombDropped:
+      description: "True while the bomb (C4) is lying on the ground, not carried by any player."
+
+    m_iRoundWinStatus:
+      description: "Which team won the most-recently completed round (0 = not over, 2 = Terrorist win, 3 = CT win)."
+
+    m_eRoundWinReason:
+      description: "RoundWinReason_t enum: 1 = target bombed, 7 = bomb defused, 8 = all T killed, 9 = hostage rescued, etc."
+
+    m_bTCantBuy:
+      description: "True when the Terrorist team is currently locked out of purchasing weapons."
+
+    m_bCTCantBuy:
+      description: "True when the Counter-Terrorist team is currently locked out of purchasing weapons."
+
+    m_iNumConsecutiveCTLoses:
+      description: "Number of consecutive rounds the CT side has lost; drives the loss-bonus economy."
+
+    m_iNumConsecutiveTerroristLoses:
+      description: "Number of consecutive rounds the T side has lost; drives the loss-bonus economy."
+
+    m_iMatchStats_RoundResults:
+      description: "Array of 30 round-result codes (one per round slot) used to fill the scoreboard half-time panel."
+
+    m_iMatchStats_PlayersAlive_CT:
+      description: "Array of 30 values – number of CT players alive at the end of each round."
+
+    m_iMatchStats_PlayersAlive_T:
+      description: "Array of 30 values – number of T players alive at the end of each round."
+
+    m_nMatchAbortedEarlyReason:
+      description: "Reason code for an early match abort (0 = not aborted, non-zero codes map to abandonment reasons)."
+
+    m_pGameModeRules:
+      description: "Polymorphic pointer to CCSGameModeRules (sub-classed for Arms Race, Deathmatch, etc.)."
+      notes: "Use the MNetworkPolymorphic annotation when decoding; concrete types: CCSGameModeRules_ArmsRace, _Deathmatch, _Noop."
+
+    m_RetakeRules:
+      description: "CRetakeGameRules struct holding all Retakes-mode specific state."
+
+    m_nMatchEndCount:
+      description: "Incremented each time a match-end event fires; clients trigger their match-end UI on the change."
+
+    m_iRoundEndWinnerTeam:
+      description: "Team number of the team that won the most-recently ended round."
+
+    m_eRoundEndReason:
+      description: "RoundEndReason_t enum describing how the round ended (bomb exploded, time ran out, all enemies eliminated, etc.)."
+
+    m_bRoundEndShowTimerDefend:
+      description: "True when the end-of-round panel should show a 'defend' timer countdown."
+
+    m_iRoundEndTimerTime:
+      description: "Remaining time in seconds shown in the round-end countdown panel."
+
+    m_sRoundEndFunFactToken:
+      description: "Localization token for the fun-fact string shown in the round-end panel."
+
+    m_iRoundEndFunFactPlayerSlot:
+      description: "Player slot of the player featured in the fun-fact message."
+
+    m_iRoundEndFunFactData1:
+      description: "First numeric argument substituted into the fun-fact localization string."
+
+    m_iRoundEndFunFactData2:
+      description: "Second numeric argument substituted into the fun-fact localization string."
+
+    m_iRoundEndFunFactData3:
+      description: "Third numeric argument substituted into the fun-fact localization string."
+
+    m_sRoundEndMessage:
+      description: "Custom message string displayed in the round-end overlay (tournament use)."
+
+    m_bRoundEndNoMusic:
+      description: "True when the end-of-round music stinger should be suppressed."
+
+    m_nRoundEndCount:
+      description: "Incremented each time a round-end event fires; clients trigger round-end UI on the change."
+
+    m_iRoundStartRoundNumber:
+      description: "The round number associated with the most-recent round-start event."
+
+    m_nRoundStartCount:
+      description: "Incremented each time a round-start event fires; clients initialize per-round state on the change."
+
+    m_flCMMItemDropRevealStartTime:
+      description: "GameTime at which the post-match item-drop reveal animation begins."
+
+    m_flCMMItemDropRevealEndTime:
+      description: "GameTime at which the post-match item-drop reveal animation ends."
+
+    m_bIsDroppingItems:
+      description: "True while the post-match item-drop animation is playing."
+
+    m_bIsQuestEligible:
+      description: "True when the current match is eligible for operation mission progress."
+
+    m_bIsHltvActive:
+      description: "True when at least one GOTV/HLTV spectator slot is connected."
+
+    m_arrProhibitedItemIndices:
+      description: "Array of up to 100 item-definition indices that are prohibited from being used in this match (e.g. tournament bans)."
+
+    m_nEndMatchMapGroupVoteTypes:
+      description: "Array of 10 vote-type codes for the end-of-match map vote options."
+
+    m_nEndMatchMapGroupVoteOptions:
+      description: "Array of 10 map-group option indices corresponding to the vote types."
+
+    m_nEndMatchMapVoteWinner:
+      description: "Index of the winning map-vote option (-1 while voting is in progress)."
+
+    m_vMinimapMins:
+      description: "World-space minimum corner of the minimap bounding box."
+
+    m_vMinimapMaxs:
+      description: "World-space maximum corner of the minimap bounding box."
+
+    m_MinimapVerticalSectionHeights:
+      description: "Array of 8 height values dividing the map into vertical sections for the radar's floor-switching feature."
+
+    m_nTTeamIntroVariant:
+      description: "Variant index for the Terrorist team intro cinematic sequence."
+
+    m_nCTTeamIntroVariant:
+      description: "Variant index for the CT team intro cinematic sequence."
+
+    m_bTeamIntroPeriod:
+      description: "True while the pre-round team-intro cinematic is playing."
+
+    m_numBestOfMaps:
+      description: "Best-of-N series length configured for this match (e.g. 1, 3, 5)."
+
+    m_szMatchStatTxt:
+      description: "Match-stats summary text displayed in the scoreboard (tournament use)."
+
+    m_MatchDevice:
+      description: "Platform/device identifier for the match (used by Valve matchmaking for stats reporting)."
+
+# ---------------------------------------------------------------------------
+# CS2 team
+# ---------------------------------------------------------------------------
+
+CCSTeam:
+  description: >
+    Server-side entity representing one team in a CS2 match (T or CT).  Two
+    CCSTeam entities exist per match: one for teamnum 2 (Terrorist) and one for
+    teamnum 3 (Counter-Terrorist).  Inherits the shared score from CTeam.
+
+  fields:
+    m_bSurrendered:
+      description: "True when this team has surrendered the match (competitive FF vote passed)."
+
+    m_szTeamMatchStat:
+      description: "Match-stat summary string displayed in the team header of the scoreboard (up to 512 bytes)."
+
+    m_numMapVictories:
+      description: "Number of maps this team has won in the current best-of-N series."
+
+    m_scoreFirstHalf:
+      description: "Number of rounds won by this team during the first half."
+
+    m_scoreSecondHalf:
+      description: "Number of rounds won by this team during the second half."
+
+    m_scoreOvertime:
+      description: "Number of rounds won by this team across all overtime periods."
+
+    m_szClanTeamname:
+      description: "Team organisation/clan name displayed in the scoreboard (up to 129 bytes; set by tournament operators)."
+
+    m_iClanID:
+      description: "Steam group / clan ID associated with this team (used for team logo lookup)."
+
+    m_szTeamFlagImage:
+      description: "Short country/region flag code (up to 8 bytes) used to select the flag sprite (e.g. 'US', 'EU')."
+
+    m_szTeamLogoImage:
+      description: "Short logo image name (up to 8 bytes) used to look up the team logo spray texture."
+
+# ---------------------------------------------------------------------------
+# Planted C4
+# ---------------------------------------------------------------------------
+
+CPlantedC4:
+  description: >
+    Entity created when a Terrorist player successfully plants the bomb.
+    Contains all state needed to track detonation, defuse progress, and
+    whose responsibility it is.
+
+  fields:
+    m_bBombTicking:
+      description: "True once the bomb has been armed and the countdown has started."
+
+    m_flC4Blow:
+      description: "GameTime at which the bomb will detonate if not defused."
+      notes: "Compute remaining time as: m_flC4Blow - current_game_time."
+
+    m_nBombSite:
+      description: "Which bombsite the bomb was planted on (0 = site A, 1 = site B; matches the bombsite trigger index)."
+
+    m_flTimerLength:
+      description: "Total bomb-timer duration in seconds (mirrors mp_c4timer value at plant time)."
+
+    m_bBeingDefused:
+      description: "True while a CT player is actively pressing the defuse key on the bomb."
+
+    m_flDefuseLength:
+      description: "Total defuse time in seconds: 5 s with kit, 10 s without."
+
+    m_flDefuseCountDown:
+      description: "GameTime at which the defuse will complete if uninterrupted."
+      notes: "Remaining defuse time = m_flDefuseCountDown - current_game_time."
+
+    m_hBombDefuser:
+      description: "CHandle to the CCSPlayerPawn currently defusing the bomb (INVALID_EHANDLE if not being defused)."
+
+    m_bBombDefused:
+      description: "True after the bomb has been successfully defused."
+
+    m_bHasExploded:
+      description: "True after the bomb has detonated."
+
+    m_bCannotBeDefused:
+      description: "True when the bomb is in a state where it physically cannot be defused (e.g. during some special game modes)."
+
+    m_entitySpottedState:
+      description: "EntitySpottedState_t tracking which players have spotted (radar dot) the planted bomb."
+
+    m_nSourceSoundscapeHash:
+      description: "Hash of the soundscape entity to activate when players are near the planted bomb."
+
+# ---------------------------------------------------------------------------
+# Inferno (Molotov / Incendiary fire)
+# ---------------------------------------------------------------------------
+
+CInferno:
+  description: >
+    Entity created when a molotov or incendiary grenade detonates.  Manages an
+    array of individual fire positions that expand and spread across the surface.
+    Deals damage to all entities within burning fire positions each tick.
+
+  fields:
+    m_firePositions:
+      description: "Array of up to 64 world-space positions of active fire cells."
+
+    m_fireParentPositions:
+      description: "Array of parent fire-cell positions that spawned each fire cell (for spread graph)."
+
+    m_bFireIsBurning:
+      description: "Per-cell boolean array; true when the corresponding fire cell is actively burning."
+
+    m_BurnNormal:
+      description: "Surface normal at each fire-cell position; used to orient flame effects."
+
+    m_fireCount:
+      description: "Number of active fire cells currently burning."
+
+    m_nInfernoType:
+      description: "Type of fire: 0 = molotov, 1 = incendiary grenade."
+
+    m_nFireEffectTickBegin:
+      description: "Server tick on which the fire visual effects started; used by clients to synchronise particle timing."
+
+    m_nFireLifetime:
+      description: "Total lifetime of the inferno entity in seconds."
+
+    m_bInPostEffectTime:
+      description: "True during the brief post-fire period after all flames have died but before the entity is removed (allows smoke and heat-shimmer to linger)."
+
+# ---------------------------------------------------------------------------
+# Hostage
+# ---------------------------------------------------------------------------
+
+CHostage:
+  description: >
+    Entity representing a hostage NPC in hostage-rescue game mode.  Each
+    hostage has a simple navigation AI that follows the rescuing CT player.
+
+  fields:
+    m_entitySpottedState:
+      description: "EntitySpottedState_t tracking which players have spotted (radar dot) this hostage."
+
+    m_vel:
+      description: "Current velocity vector of the hostage entity."
+
+    m_isRescued:
+      description: "True after the hostage has been delivered to the rescue zone."
+
+    m_jumpedThisFrame:
+      description: "True if the hostage jumped this tick (used to trigger jump animation)."
+
+    m_nHostageState:
+      description: "State enum: 0 = Idle, 1 = Being grabbed, 2 = Being carried, 3 = Rescued, 4 = Dead."
+
+    m_leader:
+      description: "CHandle to the entity (usually CCSPlayerPawn) that is currently leading this hostage."
+
+    m_reuseTimer:
+      description: "CountdownTimer preventing another player from grabbing this hostage too quickly after it was released."
+
+    m_bHandsHaveBeenCut:
+      description: "True once a CT has interacted with this hostage to free it (deprecated mechanic from CS:GO; retained for compatibility)."
+
+    m_hHostageGrabber:
+      description: "CHandle to the CCSPlayerPawn currently grabbing/carrying this hostage."
+
+    m_flRescueStartTime:
+      description: "GameTime at which the current rescue attempt began."
+
+    m_flGrabSuccessTime:
+      description: "GameTime at which the grab interaction successfully completed and carrying began."
+
+    m_flDropStartTime:
+      description: "GameTime at which the carrier started dropping the hostage."
+
+# ---------------------------------------------------------------------------
+# Grenade projectile base
+# ---------------------------------------------------------------------------
+
+CBaseCSGrenadeProjectile:
+  description: >
+    Base class for all CS2 grenade projectile entities (HE, flash, smoke,
+    molotov, decoy).  Tracks the initial throw parameters so clients can
+    predict the trajectory.
+
+  fields:
+    m_vInitialPosition:
+      description: "World-space position from which the grenade was thrown."
+
+    m_vInitialVelocity:
+      description: "Initial velocity vector (world units per second) at the moment of throw."
+
+    m_nBounces:
+      description: "Number of times the grenade has bounced off a surface so far."
+
+    m_nExplodeEffectIndex:
+      description: "Particle system definition handle for the detonation effect."
+
+    m_nExplodeEffectTickBegin:
+      description: "Server tick at which the explosion particle effect started."
+
+    m_vecExplodeEffectOrigin:
+      description: "World-space position of the explosion centre."
+
+# ---------------------------------------------------------------------------
+# Base entity
+# ---------------------------------------------------------------------------
+
+CBaseEntity:
+  description: >
+    Root entity class in Source 2 from which all server-side entities derive.
+    Provides health, team, physics, timing, and transmit state.
+
+  fields:
+    m_iHealth:
+      description: "Current health points of the entity. Serialised with the 'ClampHealth' encoder so values above max are clamped."
+      notes: "Sent only to the Player network group and LocalPlayerExclusive."
+
+    m_iMaxHealth:
+      description: "Maximum health points; used to normalise health bars in the HUD."
+
+    m_lifeState:
+      description: "LIFE_STATE enum: 0 = Alive, 1 = Dying, 2 = Dead, 3 = Respawnable, 4 = Discardbody."
+
+    m_iTeamNum:
+      description: "Team number: 0 = Unassigned, 1 = Spectator, 2 = Terrorist, 3 = Counter-Terrorist."
+
+    m_fFlags:
+      description: "Entity flags bitmask (FL_ONGROUND = 1, FL_DUCKING = 4, FL_INWATER = 8, FL_FROZEN = 0x200, etc.)."
+
+    m_vecVelocity:
+      description: "Current world-space velocity vector of the entity."
+
+    m_vecBaseVelocity:
+      description: "Additional world-space velocity contributed by moving platforms, conveyor belts, etc."
+
+    m_hOwnerEntity:
+      description: "CHandle to the entity that owns or spawned this entity (e.g. the thrower of a grenade)."
+
+    m_hGroundEntity:
+      description: "CHandle to the entity this entity is standing on (INVALID_EHANDLE if airborne)."
+
+    m_flFriction:
+      description: "Surface friction multiplier (1.0 = normal; lower values make the entity slide more)."
+
+    m_flGravityScale:
+      description: "Gravity scale multiplier (1.0 = normal; 0 = no gravity)."
+
+    m_flTimeScale:
+      description: "Time-scale multiplier applied to this entity's simulation (1.0 = real time; used by bullet time effects)."
+
+    m_nNextThinkTick:
+      description: "Server tick on which the entity's Think() function will next execute (-1 = never)."
+
+    m_flAnimTime:
+      description: "Floating-point timestamp of the most-recent animation update; used by the client for animation interpolation."
+
+    m_flSimulationTime:
+      description: "Floating-point timestamp of the most-recent physics simulation step; used by the client for position interpolation."
+
+    m_fEffects:
+      description: "Effect flags bitmask (EF_NODRAW = 32, EF_NORECEIVESHADOW = 64, etc.)."
+
+    m_bAnimatedEveryTick:
+      description: "True when the entity's animation must be updated every server tick regardless of network interest."
+
+# ---------------------------------------------------------------------------
+# Base model entity
+# ---------------------------------------------------------------------------
+
+CBaseModelEntity:
+  description: >
+    Extends CBaseEntity with a visible model, collision, glow, and render
+    properties.  Base class for all entities that have a mesh in the world.
+
+  fields:
+    m_nRenderMode:
+      description: "RenderMode_t enum controlling transparency and rendering method (0 = Normal, 5 = Translucent, etc.)."
+
+    m_nRenderFX:
+      description: "RenderFx_t enum for special rendering effects (pulsing, fading, hologram, etc.)."
+
+    m_clrRender:
+      description: "RGBA tint colour multiplied onto the entity's diffuse texture."
+
+    m_Collision:
+      description: "CCollisionProperty struct encoding the entity's collision bounding box shape and flags."
+
+    m_Glow:
+      description: "CGlowProperty struct controlling the entity's glow outline (colour, radius, visibility rules)."
+
+    m_flGlowBackfaceMult:
+      description: "Multiplier for the glow effect on back-facing surfaces of the model."
+
+    m_fadeMinDist:
+      description: "Minimum distance (world units) at which the entity starts to fade out."
+
+    m_fadeMaxDist:
+      description: "Distance at which the entity is fully faded out and invisible."
+
+    m_flFadeScale:
+      description: "Scale factor applied to fade distances; 0 disables distance fading."
+
+    m_flShadowStrength:
+      description: "Opacity of this entity's cast shadow (0 = no shadow, 1 = full shadow)."
+
+    m_vecViewOffset:
+      description: "Offset from the entity origin to the player's view position (eye height)."

@@ -1,0 +1,44 @@
+---
+layout: default
+title: Schemas
+nav_order: 2
+---
+
+# Schema Reference
+
+All entities and types extracted from CS2's schema dump, organised by module.
+
+## Modules
+
+| Module | Entities | UML |
+|--------|----------|-----|
+| [animationsystem](schemas/animationsystem.md) | 55 | [📊 Diagram](diagrams/animationsystem.md) |
+| [animgraphlib](schemas/animgraphlib.md) | 265 | [📊 Diagram](diagrams/animgraphlib.md) |
+| [animlib](schemas/animlib.md) | 210 | [📊 Diagram](diagrams/animlib.md) |
+| [client](schemas/client.md) | 714 | [📊 Diagram](diagrams/client.md) |
+| [compositematerialslib](schemas/compositematerialslib.md) | 17 | [📊 Diagram](diagrams/compositematerialslib.md) |
+| [entity2](schemas/entity2.md) | 17 | [📊 Diagram](diagrams/entity2.md) |
+| [host](schemas/host.md) | 2 | [📊 Diagram](diagrams/host.md) |
+| [materialsystem2](schemas/materialsystem2.md) | 19 | [📊 Diagram](diagrams/materialsystem2.md) |
+| [mathlib_extended](schemas/mathlib_extended.md) | 12 | — |
+| [modellib](schemas/modellib.md) | 140 | [📊 Diagram](diagrams/modellib.md) |
+| [navlib](schemas/navlib.md) | 11 | [📊 Diagram](diagrams/navlib.md) |
+| [networksystem](schemas/networksystem.md) | 2 | — |
+| [panorama_content](schemas/panorama_content.md) | 2 | — |
+| [particles](schemas/particles.md) | 502 | [📊 Diagram](diagrams/particles.md) |
+| [particleslib](schemas/particleslib.md) | 33 | [📊 Diagram](diagrams/particleslib.md) |
+| [physicslib](schemas/physicslib.md) | 98 | [📊 Diagram](diagrams/physicslib.md) |
+| [pulse_runtime_lib](schemas/pulse_runtime_lib.md) | 107 | [📊 Diagram](diagrams/pulse_runtime_lib.md) |
+| [pulse_system](schemas/pulse_system.md) | 33 | [📊 Diagram](diagrams/pulse_system.md) |
+| [rendersystemvulkan](schemas/rendersystemvulkan.md) | 7 | [📊 Diagram](diagrams/rendersystemvulkan.md) |
+| [resourcefile](schemas/resourcefile.md) | 6 | [📊 Diagram](diagrams/resourcefile.md) |
+| [resourcesystem](schemas/resourcesystem.md) | 48 | — |
+| [scenesystem](schemas/scenesystem.md) | 12 | [📊 Diagram](diagrams/scenesystem.md) |
+| [schemasystem](schemas/schemasystem.md) | 3 | — |
+| [server](schemas/server.md) | 745 | [📊 Diagram](diagrams/server.md) |
+| [soundsystem](schemas/soundsystem.md) | 23 | [📊 Diagram](diagrams/soundsystem.md) |
+| [soundsystem_lowlevel](schemas/soundsystem_lowlevel.md) | 80 | [📊 Diagram](diagrams/soundsystem_lowlevel.md) |
+| [soundsystem_voicecontainers](schemas/soundsystem_voicecontainers.md) | 42 | [📊 Diagram](diagrams/soundsystem_voicecontainers.md) |
+| [tier2](schemas/tier2.md) | 2 | — |
+| [vphysics2](schemas/vphysics2.md) | 5 | [📊 Diagram](diagrams/vphysics2.md) |
+| [worldrenderer](schemas/worldrenderer.md) | 31 | [📊 Diagram](diagrams/worldrenderer.md) |
