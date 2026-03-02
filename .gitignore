@@ -4,6 +4,3 @@ docs/output/
 # Python cache
 docs/__pycache__/
 __pycache__/
-
-# Submodule data/ prevent it from being committed or tracked
-data/
