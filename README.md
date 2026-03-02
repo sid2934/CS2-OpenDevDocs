@@ -47,8 +47,8 @@ See [`docs/overlays/README.md`](docs/overlays/README.md) for the full format and
 
 ```bash
 # Clone with submodule
-git clone --recurse-submodules https://github.com/sid2934/GameTracking-CS2.git
-cd GameTracking-CS2
+git clone --recurse-submodules https://github.com/sid2934/CS2-OpenDevDocs.git
+cd CS2-OpenDevDocs
 
 # Or initialise the submodule in an existing clone
 git submodule update --init

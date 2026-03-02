@@ -10,7 +10,7 @@ your AI tool's context, or copy-paste the content directly into a system
 prompt / custom instructions field:
 
 ```
-https://raw.githubusercontent.com/sid2934/GameTracking-CS2/main/AGENTS.md
+https://raw.githubusercontent.com/sid2934/CS2-OpenDevDocs/main/AGENTS.md
 ```
 
 ---
@@ -25,11 +25,11 @@ covers:
 
 | Section | Contents | Browse URL |
 |---------|----------|------------|
-| **Schema entities** | All C++ entity classes, structs, and enums from CS2's DumpSource2 schemas (~3 000 types across 30 engine modules) | https://sid2934.github.io/GameTracking-CS2/schemas |
-| **Protobufs** | All `.proto` message definitions — game events, network messages, GC messages, demo format (42 files, ~777 messages) | https://sid2934.github.io/GameTracking-CS2/protobufs |
-| **ConVars** | Every console variable with default value, flags, and description (~3 800 entries) | https://sid2934.github.io/GameTracking-CS2/convars |
-| **Commands** | Every console command with flags and description (~1 130 entries) | https://sid2934.github.io/GameTracking-CS2/commands |
-| **UML diagrams** | Mermaid class-hierarchy diagrams for every schema module | https://sid2934.github.io/GameTracking-CS2/diagrams/server_hierarchy |
+| **Schema entities** | All C++ entity classes, structs, and enums from CS2's DumpSource2 schemas (~3 000 types across 30 engine modules) | https://sid2934.github.io/CS2-OpenDevDocs/schemas |
+| **Protobufs** | All `.proto` message definitions — game events, network messages, GC messages, demo format (42 files, ~777 messages) | https://sid2934.github.io/CS2-OpenDevDocs/protobufs |
+| **ConVars** | Every console variable with default value, flags, and description (~3 800 entries) | https://sid2934.github.io/CS2-OpenDevDocs/convars |
+| **Commands** | Every console command with flags and description (~1 130 entries) | https://sid2934.github.io/CS2-OpenDevDocs/commands |
+| **UML diagrams** | Mermaid class-hierarchy diagrams for every schema module | https://sid2934.github.io/CS2-OpenDevDocs/diagrams/server_hierarchy |
 
 ---
 
@@ -54,7 +54,7 @@ All server-side entities ultimately derive from `CEntityInstance` →
 
 ### `CBaseEntity`
 *Root entity. Every server entity derives from this.*
-Full reference: https://sid2934.github.io/GameTracking-CS2/schemas/server#cbaseentity
+Full reference: https://sid2934.github.io/CS2-OpenDevDocs/schemas/server#cbaseentity
 
 Key fields:
 
@@ -72,7 +72,7 @@ Key fields:
 
 ### `CCSPlayerController`
 *One per connected client, persists across rounds.*
-Full reference: https://sid2934.github.io/GameTracking-CS2/schemas/server#ccsplayercontroller
+Full reference: https://sid2934.github.io/CS2-OpenDevDocs/schemas/server#ccsplayercontroller
 
 Inheritance: `CEntityInstance` → `CBaseEntity` → `CBasePlayerController` → `CCSPlayerController`
 
@@ -100,7 +100,7 @@ Key fields:
 
 ### `CCSPlayerPawn`
 *The in-world player body; recreated each round.*
-Full reference: https://sid2934.github.io/GameTracking-CS2/schemas/server#ccsplayerpawn
+Full reference: https://sid2934.github.io/CS2-OpenDevDocs/schemas/server#ccsplayerpawn
 
 Inheritance: `CBaseEntity` → `CBaseModelEntity` → `CBaseFlex` → `CBaseAnimGraph` → `CBaseCombatCharacter` → `CBasePlayerPawn` → `CCSPlayerPawnBase` → `CCSPlayerPawn`
 
@@ -126,7 +126,7 @@ Key fields:
 
 ### `CCSGameRules`
 *Singleton holding all match-level state.*
-Full reference: https://sid2934.github.io/GameTracking-CS2/schemas/server#ccsgamerules
+Full reference: https://sid2934.github.io/CS2-OpenDevDocs/schemas/server#ccsgamerules
 
 Accessed via the `CCSGameRulesProxy` entity on the client. Inheritance:
 `CGameRules` → `CMultiplayRules` → `CTeamplayRules` → `CCSGameRules`
@@ -157,7 +157,7 @@ Key fields:
 
 ### `CCSWeaponBase` / `CCSWeaponBaseGun`
 *Base weapon classes.*
-Full reference: https://sid2934.github.io/GameTracking-CS2/schemas/server#ccsweaponbase
+Full reference: https://sid2934.github.io/CS2-OpenDevDocs/schemas/server#ccsweaponbase
 
 Inheritance: `CBaseEntity` → `CBaseModelEntity` → `CBasePlayerWeapon` → `CCSWeaponBase` → `CCSWeaponBaseGun`
 
@@ -179,13 +179,13 @@ All individual weapons (`CAWP`, `CAK47`, `CDEAGLE`, etc.) inherit from
 `CCSWeaponBaseGun` and typically carry 0 additional fields (all data is in
 `CCSWeaponBaseVData` and the base classes).
 
-Full weapon list: https://sid2934.github.io/GameTracking-CS2/schemas/server
+Full weapon list: https://sid2934.github.io/CS2-OpenDevDocs/schemas/server
 
 ---
 
 ### `CPlantedC4`
 *The planted bomb entity.*
-Full reference: https://sid2934.github.io/GameTracking-CS2/schemas/server#cplantedc4
+Full reference: https://sid2934.github.io/CS2-OpenDevDocs/schemas/server#cplantedc4
 
 | Field | Type | Notes |
 |-------|------|-------|
@@ -202,13 +202,13 @@ Full reference: https://sid2934.github.io/GameTracking-CS2/schemas/server#cplant
 ## Key Protobuf message groups
 
 ### Game events (`cs_gameevents.proto`)
-Reference: https://sid2934.github.io/GameTracking-CS2/proto/cs_gameevents
+Reference: https://sid2934.github.io/CS2-OpenDevDocs/proto/cs_gameevents
 
 CS2-specific game event messages (e.g. bomb plant/defuse, kill, round end).
 Sent as `CMsgSource1LegacyGameEvent` on the network.
 
 ### CS2 user messages (`cstrike15_usermessages.proto`)
-Reference: https://sid2934.github.io/GameTracking-CS2/proto/cstrike15_usermessages
+Reference: https://sid2934.github.io/CS2-OpenDevDocs/proto/cstrike15_usermessages
 
 73 messages sent from server to individual clients: HUD hints, radar updates,
 kill cam data, round end summary, item purchases, etc.
@@ -218,7 +218,7 @@ Key messages: `CCSUsrMsg_RoundEnd`, `CCSUsrMsg_SendAudio`,
 `CCSUsrMsg_MatchEndData`
 
 ### CS2 GC messages (`cstrike15_gcmessages.proto`)
-Reference: https://sid2934.github.io/GameTracking-CS2/proto/cstrike15_gcmessages
+Reference: https://sid2934.github.io/CS2-OpenDevDocs/proto/cstrike15_gcmessages
 
 156 messages between the game client/server and Valve's Game Coordinator:
 matchmaking, lobbies, item inventory, competitive ranks, GOTV relay, etc.
@@ -228,7 +228,7 @@ Key messages: `CMsgGCCStrike15_v2_MatchmakingClient2GCHello`,
 `CMsgGCCStrike15_v2_MatchList`
 
 ### Core net messages (`netmessages.proto`)
-Reference: https://sid2934.github.io/GameTracking-CS2/proto/netmessages
+Reference: https://sid2934.github.io/CS2-OpenDevDocs/proto/netmessages
 
 63 engine-level network messages: snapshot packets, string tables, data
 tables (SendTables), sound events, entity creation/deletion.
@@ -237,14 +237,14 @@ Key messages: `CNETMsg_Tick`, `CSVCMsg_PacketEntities`,
 `CSVCMsg_CreateStringTable`, `CSVCMsg_GameEvent`, `CSVCMsg_UserMessage`
 
 ### Demo file format (`demo.proto`)
-Reference: https://sid2934.github.io/GameTracking-CS2/proto/demo
+Reference: https://sid2934.github.io/CS2-OpenDevDocs/proto/demo
 
 Messages defining the `.dem` file format: `CDemoHeader`, `CDemoFileHeader`,
 `CDemoPacket`, `CDemoFullPacket`, `CDemoStringTables`, `CDemoClassInfo`.
 CS2 demos are written in the Source 2 "PBDEMS2" binary format.
 
 ### User commands (`cs_usercmd.proto`)
-Reference: https://sid2934.github.io/GameTracking-CS2/proto/cs_usercmd
+Reference: https://sid2934.github.io/CS2-OpenDevDocs/proto/cs_usercmd
 
 `CCSUsrCmd` — the per-tick command sent from client to server: move direction,
 view angles, attack buttons, subtick data.
@@ -283,22 +283,22 @@ view angles, attack buttons, subtick data.
 
 | Module | Entities | Description | URL |
 |--------|----------|-------------|-----|
-| `server` | ~574 | Server-side entity classes (weapons, players, game rules, …) | https://sid2934.github.io/GameTracking-CS2/schemas/server |
-| `client` | ~714 | Client-side entity mirrors and UI components | https://sid2934.github.io/GameTracking-CS2/schemas/client |
-| `particles` | ~502 | Particle system types | https://sid2934.github.io/GameTracking-CS2/schemas/particles |
-| `animgraphlib` | ~265 | Animation graph nodes and types | https://sid2934.github.io/GameTracking-CS2/schemas/animgraphlib |
-| `animlib` | ~210 | Core animation types | https://sid2934.github.io/GameTracking-CS2/schemas/animlib |
-| `animationsystem` | ~55 | Top-level animation system | https://sid2934.github.io/GameTracking-CS2/schemas/animationsystem |
-| `physicslib` | ~98 | Physics types | https://sid2934.github.io/GameTracking-CS2/schemas/physicslib |
-| `vphysics2` | ~5 | Havok physics integration | https://sid2934.github.io/GameTracking-CS2/schemas/vphysics2 |
-| `modellib` | ~140 | Model/mesh types | https://sid2934.github.io/GameTracking-CS2/schemas/modellib |
-| `soundsystem` | ~23 | Sound system types | https://sid2934.github.io/GameTracking-CS2/schemas/soundsystem |
-| `materialsystem2` | ~19 | Material types | https://sid2934.github.io/GameTracking-CS2/schemas/materialsystem2 |
-| `entity2` | ~17 | Base entity framework types (`CEntityInstance`, `GameTime_t`, …) | https://sid2934.github.io/GameTracking-CS2/schemas/entity2 |
-| `navlib` | ~11 | Navigation mesh types | https://sid2934.github.io/GameTracking-CS2/schemas/navlib |
-| `resourcesystem` | ~48 | Resource/asset system types | https://sid2934.github.io/GameTracking-CS2/schemas/resourcesystem |
-| `scenesystem` | ~12 | Scene graph types | https://sid2934.github.io/GameTracking-CS2/schemas/scenesystem |
-| `pulse_system` | ~30 | Pulse scripting system | https://sid2934.github.io/GameTracking-CS2/schemas/pulse_system |
+| `server` | ~574 | Server-side entity classes (weapons, players, game rules, …) | https://sid2934.github.io/CS2-OpenDevDocs/schemas/server |
+| `client` | ~714 | Client-side entity mirrors and UI components | https://sid2934.github.io/CS2-OpenDevDocs/schemas/client |
+| `particles` | ~502 | Particle system types | https://sid2934.github.io/CS2-OpenDevDocs/schemas/particles |
+| `animgraphlib` | ~265 | Animation graph nodes and types | https://sid2934.github.io/CS2-OpenDevDocs/schemas/animgraphlib |
+| `animlib` | ~210 | Core animation types | https://sid2934.github.io/CS2-OpenDevDocs/schemas/animlib |
+| `animationsystem` | ~55 | Top-level animation system | https://sid2934.github.io/CS2-OpenDevDocs/schemas/animationsystem |
+| `physicslib` | ~98 | Physics types | https://sid2934.github.io/CS2-OpenDevDocs/schemas/physicslib |
+| `vphysics2` | ~5 | Havok physics integration | https://sid2934.github.io/CS2-OpenDevDocs/schemas/vphysics2 |
+| `modellib` | ~140 | Model/mesh types | https://sid2934.github.io/CS2-OpenDevDocs/schemas/modellib |
+| `soundsystem` | ~23 | Sound system types | https://sid2934.github.io/CS2-OpenDevDocs/schemas/soundsystem |
+| `materialsystem2` | ~19 | Material types | https://sid2934.github.io/CS2-OpenDevDocs/schemas/materialsystem2 |
+| `entity2` | ~17 | Base entity framework types (`CEntityInstance`, `GameTime_t`, …) | https://sid2934.github.io/CS2-OpenDevDocs/schemas/entity2 |
+| `navlib` | ~11 | Navigation mesh types | https://sid2934.github.io/CS2-OpenDevDocs/schemas/navlib |
+| `resourcesystem` | ~48 | Resource/asset system types | https://sid2934.github.io/CS2-OpenDevDocs/schemas/resourcesystem |
+| `scenesystem` | ~12 | Scene graph types | https://sid2934.github.io/CS2-OpenDevDocs/schemas/scenesystem |
+| `pulse_system` | ~30 | Pulse scripting system | https://sid2934.github.io/CS2-OpenDevDocs/schemas/pulse_system |
 
 ---
 
@@ -309,18 +309,18 @@ content for a specific section:
 
 | Content | Raw URL |
 |---------|---------|
-| Server schema (full, ~large) | `https://raw.githubusercontent.com/sid2934/GameTracking-CS2/main/docs/schemas/server.md` |
-| Client schema (full, ~large) | `https://raw.githubusercontent.com/sid2934/GameTracking-CS2/main/docs/schemas/client.md` |
-| ConVars | `https://raw.githubusercontent.com/sid2934/GameTracking-CS2/main/docs/convars.md` |
-| Commands | `https://raw.githubusercontent.com/sid2934/GameTracking-CS2/main/docs/commands.md` |
-| cs_gameevents proto | `https://raw.githubusercontent.com/sid2934/GameTracking-CS2/main/docs/proto/cs_gameevents.md` |
-| cstrike15_usermessages proto | `https://raw.githubusercontent.com/sid2934/GameTracking-CS2/main/docs/proto/cstrike15_usermessages.md` |
-| cstrike15_gcmessages proto | `https://raw.githubusercontent.com/sid2934/GameTracking-CS2/main/docs/proto/cstrike15_gcmessages.md` |
-| netmessages proto | `https://raw.githubusercontent.com/sid2934/GameTracking-CS2/main/docs/proto/netmessages.md` |
-| demo proto | `https://raw.githubusercontent.com/sid2934/GameTracking-CS2/main/docs/proto/demo.md` |
-| cs_usercmd proto | `https://raw.githubusercontent.com/sid2934/GameTracking-CS2/main/docs/proto/cs_usercmd.md` |
-| Entity hierarchy diagram | `https://raw.githubusercontent.com/sid2934/GameTracking-CS2/main/docs/diagrams/server_hierarchy.md` |
-| This file (AGENTS.md) | `https://raw.githubusercontent.com/sid2934/GameTracking-CS2/main/AGENTS.md` |
+| Server schema (full, ~large) | `https://raw.githubusercontent.com/sid2934/CS2-OpenDevDocs/main/docs/schemas/server.md` |
+| Client schema (full, ~large) | `https://raw.githubusercontent.com/sid2934/CS2-OpenDevDocs/main/docs/schemas/client.md` |
+| ConVars | `https://raw.githubusercontent.com/sid2934/CS2-OpenDevDocs/main/docs/convars.md` |
+| Commands | `https://raw.githubusercontent.com/sid2934/CS2-OpenDevDocs/main/docs/commands.md` |
+| cs_gameevents proto | `https://raw.githubusercontent.com/sid2934/CS2-OpenDevDocs/main/docs/proto/cs_gameevents.md` |
+| cstrike15_usermessages proto | `https://raw.githubusercontent.com/sid2934/CS2-OpenDevDocs/main/docs/proto/cstrike15_usermessages.md` |
+| cstrike15_gcmessages proto | `https://raw.githubusercontent.com/sid2934/CS2-OpenDevDocs/main/docs/proto/cstrike15_gcmessages.md` |
+| netmessages proto | `https://raw.githubusercontent.com/sid2934/CS2-OpenDevDocs/main/docs/proto/netmessages.md` |
+| demo proto | `https://raw.githubusercontent.com/sid2934/CS2-OpenDevDocs/main/docs/proto/demo.md` |
+| cs_usercmd proto | `https://raw.githubusercontent.com/sid2934/CS2-OpenDevDocs/main/docs/proto/cs_usercmd.md` |
+| Entity hierarchy diagram | `https://raw.githubusercontent.com/sid2934/CS2-OpenDevDocs/main/docs/diagrams/server_hierarchy.md` |
+| This file (AGENTS.md) | `https://raw.githubusercontent.com/sid2934/CS2-OpenDevDocs/main/AGENTS.md` |
 
 ---
 

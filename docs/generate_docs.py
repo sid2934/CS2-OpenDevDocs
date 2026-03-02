@@ -15,7 +15,7 @@ Usage:
 
     --repo-root  Root of the repository that contains docs/, overlays/, etc.
                  (default: current directory)
-    --data-root  Root of the GameTracking-CS2 data tree that contains
+    --data-root  Root of the CS2-OpenDevDocs data tree that contains
                  DumpSource2/ and Protobufs/.  Defaults to --repo-root, which
                  is the right value when running inside this repository.  Set
                  this to a submodule or sibling checkout path when running
@@ -1280,7 +1280,7 @@ plugins:
   - jekyll-remote-theme
 
 url: "https://sid2934.github.io"
-baseurl: "/GameTracking-CS2"
+baseurl: "/CS2-OpenDevDocs"
 
 # Dark color scheme (follows the just-the-docs built-in dark theme)
 color_scheme: dark
@@ -1307,7 +1307,7 @@ back_to_top: true
 back_to_top_text: "Back to top"
 
 # Footer
-footer_content: "Auto-generated from <a href='https://github.com/sid2934/GameTracking-CS2'>GameTracking-CS2</a>."
+footer_content: "Auto-generated from <a href='https://github.com/sid2934/CS2-OpenDevDocs'>CS2-OpenDevDocs</a>."
 
 # Exclude generator scripts and overlays from Jekyll processing
 exclude:
@@ -1329,7 +1329,7 @@ def main(argv: list[str] | None = None) -> int:
         "--data-root",
         default=None,
         help=(
-            "Path to the GameTracking-CS2 data tree (contains DumpSource2/ and "
+            "Path to the CS2-OpenDevDocs data tree (contains DumpSource2/ and "
             "Protobufs/).  Defaults to --repo-root.  Override when running from a "
             "standalone documentation repository that tracks game data in a "
             "submodule or sibling checkout."

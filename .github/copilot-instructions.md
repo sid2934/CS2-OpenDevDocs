@@ -42,8 +42,8 @@ generator. See `docs/overlays/README.md` for the format.
 ## Running the generator locally
 
 ```bash
-git clone --recurse-submodules https://github.com/sid2934/GameTracking-CS2.git
-cd GameTracking-CS2
+git clone --recurse-submodules https://github.com/sid2934/CS2-OpenDevDocs.git
+cd CS2-OpenDevDocs
 pip install pyyaml
 python3 docs/generate_docs.py --repo-root . --data-root ./data --output docs
 ```

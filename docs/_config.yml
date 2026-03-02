@@ -6,7 +6,7 @@ plugins:
   - jekyll-remote-theme
 
 url: "https://sid2934.github.io"
-baseurl: "/GameTracking-CS2"
+baseurl: "/CS2-OpenDevDocs"
 
 # Dark color scheme (follows the just-the-docs built-in dark theme)
 color_scheme: dark
@@ -33,7 +33,7 @@ back_to_top: true
 back_to_top_text: "Back to top"
 
 # Footer
-footer_content: "Auto-generated from <a href='https://github.com/sid2934/GameTracking-CS2'>GameTracking-CS2</a>."
+footer_content: "Auto-generated from <a href='https://github.com/sid2934/CS2-OpenDevDocs'>CS2-OpenDevDocs</a>."
 
 # Exclude generator scripts and overlays from Jekyll processing
 exclude:
