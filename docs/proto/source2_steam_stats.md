@@ -156,6 +156,7 @@ direction LR
     +List~string~ string_vals
     +List~string~ low_cardinality_string_vals
     +List~fixed32~ utcdatetime_vals
+    +List~fixed64~ steamidtrustbucket_vals
   }
 
   class FieldDef {
@@ -217,6 +218,7 @@ direction LR
     Source2PlayStats_String
     Source2PlayStats_LowCardinalityString
     Source2PlayStats_UTCDateTime
+    Source2PlayStats_SteamIDTrustBucket
   }
 
 ```
@@ -242,6 +244,7 @@ direction LR
 | `Source2PlayStats_String` | 12 |
 | `Source2PlayStats_LowCardinalityString` | 13 |
 | `Source2PlayStats_UTCDateTime` | 14 |
+| `Source2PlayStats_SteamIDTrustBucket` | 15 |
 
 ## Messages
 
@@ -388,6 +391,7 @@ direction LR
 | `string_vals` | 15 | string | repeated |  |
 | `low_cardinality_string_vals` | 16 | string | repeated |  |
 | `utcdatetime_vals` | 17 | fixed32 | repeated |  |
+| `steamidtrustbucket_vals` | 18 | fixed64 | repeated |  |
 
 ### `CSource2Metrics_RecordPlayStats_Notification`
 

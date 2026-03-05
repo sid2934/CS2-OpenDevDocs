@@ -504,6 +504,7 @@ All console variables extracted from CS2.
 | `cl_interp_threadmodeticks` | `0` | `developmentonly` `clientdll` `defensive` | Additional interpolation ticks to use when interpolating with threaded engine mode set. |
 | `cl_interpolate` | `true` | `developmentonly` `clientdll` `userinfo` | Interpolate entities on the client. |
 | `cl_interpolate_report` | `false` | `clientdll` `archive` | Enable to show interpolation profile timing |
+| `cl_inv_volatile_limits` | `"0:0"` | `clientdll` `archive` | <no description> |
 | `cl_inventory_debug_tooltip` | `false` | `clientdll` `release` | <no description> |
 | `cl_inventory_radial_immediate_select` | `true` | `clientdll` `archive` `per_user` | In inventory selection radials. Select weapons the moment the cursor highlights them. Otherwise, only select the selected item on exit. |
 | `cl_inventory_radial_tap_to_cycle` | `true` | `clientdll` `archive` `per_user` | In inventory selection radials. Select weapons the moment the cursor highlights them. Otherwise, only select the selected item on exit. |
@@ -616,7 +617,9 @@ All console variables extracted from CS2.
 | `cl_radar_scale` | `0.7` | `min:` `0.25,` `max:` `1,` `clientdll` `archive` `release` | Sets the radar scale. Valid values are 0.25 to 1.0. |
 | `cl_radar_scale_alternate` | `1` | `min:` `0.25,` `max:` `1,` `clientdll` `archive` `release` | Sets the alternate radar scale. Valid values are 0.25 to 1.0. |
 | `cl_radar_scale_dynamic` | `false` | `clientdll` `archive` `release` | Toggles between a radar that scales dynamically to encompass all the detected elements on the map. |
+| `cl_radar_show_all_players_when_spectating` | `true` | `clientdll` `archive` `release` | Set all players visible on radar when spectating, regardless of whether they have been spotted. |
 | `cl_radar_square_always` | `false` | `clientdll` `archive` `release` | If set, the radar will always be square. |
+| `cl_radar_square_when_spectating` | `true` | `clientdll` `archive` `release` | If set, the radar will be square when spectating. |
 | `cl_radar_square_with_scoreboard` | `true` | `clientdll` `archive` `release` | If set, the radar will toggle to square when the scoreboard is visible. |
 | `cl_radial_coyote_time` | `0.15` | `developmentonly` `clientdll` | Selection lenience: How long in seconds the last selected radial segment is used if no segment is selected. |
 | `cl_radial_menu_icon_radius` | `200` | `developmentonly` `clientdll` | <no description> |
@@ -3466,6 +3469,7 @@ All console variables extracted from CS2.
 | `sv_script_think_interval` | `0.1` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | <no description> |
 | `sv_search_key` | `""` | `release` | <no description> |
 | `sv_search_team_key` | `"public"` | `release` | When initiating team search, set this key to match with known opponents team |
+| `sv_sellback_enabled` | `true` | `gamedll` `clientdll` `replicated` `release` | Determines whether players can undo purchases in the buy menu |
 | `sv_sendtables` | `1` | `developmentonly` | Force full sendtable sending path. |
 | `sv_sequence_debug` | `-1` | `developmentonly` `gamedll` `defensive` | <no description> |
 | `sv_sequence_debug2` | `-1` | `developmentonly` `gamedll` `defensive` | <no description> |
