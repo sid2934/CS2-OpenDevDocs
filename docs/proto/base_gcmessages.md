@@ -521,6 +521,7 @@ direction LR
     +uint64 subject_item_id
     +bool for_rental
     +uint32 points_remaining
+    +uint32 volatile_limit
   }
 
   class CSOEconRentalHistory {
@@ -1263,6 +1264,7 @@ direction LR
 | `subject_item_id` | 2 | uint64 | optional |  |
 | `for_rental` | 3 | bool | optional |  |
 | `points_remaining` | 4 | uint32 | optional |  |
+| `volatile_limit` | 5 | uint32 | optional |  |
 
 ### `CSOEconRentalHistory`
 
