@@ -1035,16 +1035,16 @@ classDiagram
 | `m_PredNetVectorVariables` | C_NetworkUtlVectorBase< Vector > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkChangeCallback = "OnNetVectorVarChanged"` `MNetworkAlias = "m_PredVectorVariables"` |
 | `m_PredNetQuaternionVariables` | C_NetworkUtlVectorBase< Quaternion > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkChangeCallback = "OnNetQuaternionVarChanged"` `MNetworkAlias = "m_PredQuaternionVariables"` |
 | `m_PredNetGlobalSymbolVariables` | C_NetworkUtlVectorBase< CGlobalSymbol > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkChangeCallback = "OnNetGlobalSymbolVarChanged"` `MNetworkAlias = "m_PredGlobalSymbolVariables"` |
-| `m_OwnerOnlyPredNetBoolVariables` | C_NetworkUtlVectorBase< uint32 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` `MNetworkChangeCallback = "OnNetOOBoolVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetBoolVariables"` |
-| `m_OwnerOnlyPredNetByteVariables` | C_NetworkUtlVectorBase< uint8 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` `MNetworkChangeCallback = "OnNetOOByteVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetByteVariables"` |
-| `m_OwnerOnlyPredNetUInt16Variables` | C_NetworkUtlVectorBase< uint16 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` `MNetworkChangeCallback = "OnNetOOUInt16VarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetUInt16Variables"` |
-| `m_OwnerOnlyPredNetIntVariables` | C_NetworkUtlVectorBase< int32 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` `MNetworkChangeCallback = "OnNetOOIntVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetIntVariables"` |
-| `m_OwnerOnlyPredNetUInt32Variables` | C_NetworkUtlVectorBase< uint32 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` `MNetworkChangeCallback = "OnNetOOUInt32VarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetUInt32Variables"` |
-| `m_OwnerOnlyPredNetUInt64Variables` | C_NetworkUtlVectorBase< uint64 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` `MNetworkChangeCallback = "OnNetOOUInt64VarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetUInt64Variables"` |
-| `m_OwnerOnlyPredNetFloatVariables` | C_NetworkUtlVectorBase< float32 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` `MNetworkChangeCallback = "OnNetOOFloatVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetFloatVariables"` |
-| `m_OwnerOnlyPredNetVectorVariables` | C_NetworkUtlVectorBase< Vector > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` `MNetworkChangeCallback = "OnNetOOVectorVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetVectorVariables"` |
-| `m_OwnerOnlyPredNetQuaternionVariables` | C_NetworkUtlVectorBase< Quaternion > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` `MNetworkChangeCallback = "OnNetOOQuaternionVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetQuaternionVariables"` |
-| `m_OwnerOnlyPredNetGlobalSymbolVariables` | C_NetworkUtlVectorBase< CGlobalSymbol > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` `MNetworkChangeCallback = "OnNetOOGlobalSymbolVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetGlobalSymbolVariables"` |
+| `m_OwnerOnlyPredNetBoolVariables` | C_NetworkUtlVectorBase< uint32 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOBoolVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetBoolVariables"` |
+| `m_OwnerOnlyPredNetByteVariables` | C_NetworkUtlVectorBase< uint8 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOByteVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetByteVariables"` |
+| `m_OwnerOnlyPredNetUInt16Variables` | C_NetworkUtlVectorBase< uint16 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOUInt16VarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetUInt16Variables"` |
+| `m_OwnerOnlyPredNetIntVariables` | C_NetworkUtlVectorBase< int32 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOIntVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetIntVariables"` |
+| `m_OwnerOnlyPredNetUInt32Variables` | C_NetworkUtlVectorBase< uint32 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOUInt32VarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetUInt32Variables"` |
+| `m_OwnerOnlyPredNetUInt64Variables` | C_NetworkUtlVectorBase< uint64 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOUInt64VarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetUInt64Variables"` |
+| `m_OwnerOnlyPredNetFloatVariables` | C_NetworkUtlVectorBase< float32 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOFloatVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetFloatVariables"` |
+| `m_OwnerOnlyPredNetVectorVariables` | C_NetworkUtlVectorBase< Vector > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOVectorVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetVectorVariables"` |
+| `m_OwnerOnlyPredNetQuaternionVariables` | C_NetworkUtlVectorBase< Quaternion > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOQuaternionVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetQuaternionVariables"` |
+| `m_OwnerOnlyPredNetGlobalSymbolVariables` | C_NetworkUtlVectorBase< CGlobalSymbol > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOGlobalSymbolVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetGlobalSymbolVariables"` |
 | `m_nBoolVariablesCount` | int32 | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` |
 | `m_nOwnerOnlyBoolVariablesCount` | int32 | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` |
 | `m_nRandomSeedOffset` | int32 | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` |
@@ -1162,8 +1162,8 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_graphControllerManager` | [CAnimGraphControllerManager](../schemas/client.md#canimgraphcontrollermanager) | `MSaveOpsForField (UNKNOWN FOR PARSER)` |
-| `m_pMainGraphController` | [CAnimGraphControllerBase](../schemas/client.md#canimgraphcontrollerbase)* | `MSaveOpsForField (UNKNOWN FOR PARSER)` |
+| `m_graphControllerManager` | [CAnimGraphControllerManager](../schemas/client.md#canimgraphcontrollermanager) | `MSaveOpsForField = "GetAnimGraphControllerManagerSaveRestoreOps"` |
+| `m_pMainGraphController` | [CAnimGraphControllerBase](../schemas/client.md#canimgraphcontrollerbase)* | `MSaveOpsForField = "GetAnimGraphControllerPtrSaveRestoreOps"` |
 | `m_bInitiallyPopulateInterpHistory` | bool | `MNetworkEnable` |
 | `m_bSuppressAnimEventSounds` | bool |  |
 | `m_bAnimGraphUpdateEnabled` | bool | `MNetworkEnable` |
@@ -1208,7 +1208,7 @@ classDiagram
 |------|------|-------------|
 | `m_nAnimationAlgorithm` | [AnimationAlgorithm_t](../schemas/client.md#animationalgorithm_t) | `MNetworkEnable` `MNetworkChangeCallback = "AG2_OnAnimGraphDefinitionOrModeChanged"` |
 | `m_animGraphNetworkedVars` | [CAnimGraphNetworkedVariables](../schemas/client.md#canimgraphnetworkedvariables) | `MNetworkEnable` |
-| `m_pAnimGraphInstance` | CSmartPtr< [IAnimationGraphInstance](../schemas/animgraphlib.md#ianimationgraphinstance) > | `MSaveOpsForField (UNKNOWN FOR PARSER)` |
+| `m_pAnimGraphInstance` | CSmartPtr< [IAnimationGraphInstance](../schemas/animgraphlib.md#ianimationgraphinstance) > | `MSaveOpsForField = "GetAnimGraphSaveRestoreOps"` |
 | `m_nNextExternalGraphHandle` | [ExternalAnimGraphHandle_t](../schemas/client.md#externalanimgraphhandle_t) |  |
 | `m_vecSecondarySkeletonNames` | CUtlVector< CGlobalSymbol > |  |
 | `m_vecSecondarySkeletons` | C_NetworkUtlVectorBase< CHandle< [CBaseAnimGraph](../schemas/client.md#cbaseanimgraph) > > | `MNetworkEnable` `MNetworkChangeCallback = "OnSecondarySkeletonsChanged"` |
@@ -3775,8 +3775,8 @@ classDiagram
 | Name | Type | Annotations |
 |------|------|-------------|
 | `m_hSequence` | [HSequence](../schemas/animationsystem.md#hsequence) | `MNetworkEnable` `MNetworkSerializer = "minusone"` `MNetworkChangeCallback = "sequenceOpSequenceChanged"` `MNetworkPriority = 32` |
-| `m_flPrevCycle` | float32 | `MNetworkEnable` `MNetworkBitCount = 15` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 1.000000` `MNetworkEncodeFlags = 8` `MNetworkPriority = 32` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` `MNetworkUserGroup = "m_flCycle"` |
-| `m_flCycle` | float32 | `MNetworkEnable` `MNetworkBitCount = 15` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 1.000000` `MNetworkEncodeFlags = 8` `MNetworkPriority = 32` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` `MNetworkUserGroup = "m_flCycle"` |
+| `m_flPrevCycle` | float32 | `MNetworkEnable` `MNetworkBitCount = 15` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 1.000000` `MNetworkEncodeFlags = 8` `MNetworkPriority = 32` `MNetworkSendProxyRecipientsFilter = "SendProxyNeverSend_RecipientsFilter"` `MNetworkUserGroup = "m_flCycle"` |
+| `m_flCycle` | float32 | `MNetworkEnable` `MNetworkBitCount = 15` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 1.000000` `MNetworkEncodeFlags = 8` `MNetworkPriority = 32` `MNetworkSendProxyRecipientsFilter = "SendProxyNeverSend_RecipientsFilter"` `MNetworkUserGroup = "m_flCycle"` |
 | `m_flWeight` | CNetworkedQuantizedFloat | `MNetworkEnable` `MNetworkBitCount = 8` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 1.000000` `MNetworkEncodeFlags = 0` |
 | `m_bSequenceChangeNetworked` | bool |  |
 | `m_bDiscontinuity` | bool |  |
@@ -6063,7 +6063,7 @@ classDiagram
 | `m_pClientAlphaProperty` | [CClientAlphaProperty](../schemas/client.md#cclientalphaproperty)* | `MNotSaved` |
 | `m_ClientOverrideTint` | Color | `MNotSaved` |
 | `m_bUseClientOverrideTint` | bool | `MNotSaved` |
-| `m_bvDisabledHitGroups` | uint32[1] | `MNetworkEnable` `MNetworkChangeCallback = "OnDisabledHitgroupsChanged"` `MSaveOpsForField (UNKNOWN FOR PARSER)` |
+| `m_bvDisabledHitGroups` | uint32[1] | `MNetworkEnable` `MNetworkChangeCallback = "OnDisabledHitgroupsChanged"` `MSaveOpsForField = "GetHitgroupDisableListSaveRestoreOps"` |
 
 ### C_BasePlayerPawn
 
@@ -8050,7 +8050,7 @@ classDiagram
 | `m_bInventoryImageTriedCache` | bool |  |
 | `m_nInventoryImageRgbaWidth` | int32 |  |
 | `m_nInventoryImageRgbaHeight` | int32 |  |
-| `m_szCurrentLoadCachedFileName` | char[4096] |  |
+| `m_szCurrentLoadCachedFileName` | char[260] |  |
 | `m_bRestoreCustomMaterialAfterPrecache` | bool |  |
 | `m_iItemDefinitionIndex` | uint16 | `MNetworkEnable` |
 | `m_iEntityQuality` | int32 | `MNetworkEnable` |
@@ -10340,7 +10340,7 @@ classDiagram
 | `m_iNodeNumber` | int32 | `MNetworkEnable` |
 | `m_iNodeNumberMax` | int32 | `MNetworkEnable` |
 | `m_bListenedTo` | bool | `MNetworkEnable` |
-| `m_sndCommentary` | [CSoundPatch](../schemas/client.md#csoundpatch)* | `MSaveOpsForField (UNKNOWN FOR PARSER)` |
+| `m_sndCommentary` | [CSoundPatch](../schemas/client.md#csoundpatch)* | `MSaveOpsForField = "GetSoundSaveRestoreOps"` |
 | `m_hViewPosition` | CHandle< [C_BaseEntity](../schemas/client.md#c_baseentity) > | `MNetworkEnable` |
 | `m_bRestartAfterRestore` | bool | `MNotSaved` |
 

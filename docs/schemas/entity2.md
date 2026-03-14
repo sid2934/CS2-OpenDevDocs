@@ -101,7 +101,7 @@ classDiagram
 | `m_worldGroupId` | WorldGroupId_t | `MNotSaved` |
 | `m_fDataObjectTypes` | uint32 | `MNotSaved` |
 | `m_PathIndex` | [ChangeAccessorFieldPathIndex_t](../schemas/networksystem.md#changeaccessorfieldpathindex_t) | `MNotSaved` |
-| `m_pAttributes` | [CEntityAttributeTable](../schemas/entity2.md#centityattributetable)* | `MSaveOpsForField (UNKNOWN FOR PARSER)` |
+| `m_pAttributes` | [CEntityAttributeTable](../schemas/entity2.md#centityattributetable)* | `MSaveOpsForField = "GetAttributeDictSaveDataOps"` |
 | `m_pPrev` | [CEntityIdentity](../schemas/entity2.md#centityidentity)* | `MNotSaved` |
 | `m_pNext` | [CEntityIdentity](../schemas/entity2.md#centityidentity)* | `MNotSaved` |
 | `m_pPrevByClass` | [CEntityIdentity](../schemas/entity2.md#centityidentity)* | `MNotSaved` |

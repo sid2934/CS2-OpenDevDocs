@@ -327,7 +327,7 @@ classDiagram
 
 ### FollowAttachmentData
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_boneIndex": 0,`, `"m_attachmentHandle": 0`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_boneIndex": 5,`, `"m_attachmentHandle": 0`, `}`
 
 ### HSequence
 

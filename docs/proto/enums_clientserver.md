@@ -89,6 +89,7 @@ direction LR
     k_EMsgLicenseProcessingComplete
     k_EMsgSetTestFlag
     k_EMsgQueuedEmailsComplete
+    k_EMsgGMReportPHPError
     k_EMsgGMDRMSync
     k_EMsgPhysicalBoxInventory
     k_EMsgUpdateConfigFile
@@ -106,8 +107,6 @@ direction LR
     k_EMsgExpectShellRestart
     k_EMsgHotFixProgress
     k_EMsgGMStatsForwardToAdminConnections
-    k_EMsgGMGetModifiedConVars
-    k_EMsgGMGetModifiedConVarsResponse
     k_EMsgBaseAIS
     k_EMsgAISRequestContentDescription
     k_EMsgAISUpdateAppInfo
@@ -516,8 +515,11 @@ direction LR
     k_EMsgClientDPSendSpecialSurveyResponse
     k_EMsgClientDPSendSpecialSurveyResponseReply
     k_EMsgDPStoreSaleStatistics
+    k_EMsgClientDPUpdateAppJobReport
+    k_EMsgClientDPUnsignedInstallScript
     k_EMsgDPPartnerMicroTxns
     k_EMsgDPPartnerMicroTxnsResponse
+    k_EMsgClientDPContentStatsReport
     k_EMsgDPVRUniquePlayersStat
     k_EMsgBaseCM
     k_EMsgCMSetAllowState
@@ -563,9 +565,6 @@ direction LR
     k_EMsgGCHAppCheersReceived
     k_EMsgGCHAppCheersGetAllowedTypes
     k_EMsgGCHAppCheersGetAllowedTypesResponse
-    k_EMsgGCHRoutingRulesFromGCHtoGM
-    k_EMsgGCHRoutingRulesToGCHfromGM
-    k_EMsgUpdateCMMessageRateRules
     k_EMsgBaseP2P
     k_EMsgP2PIntroducerMessage
     k_EMsgBaseSM
@@ -712,6 +711,8 @@ direction LR
     k_EMsgAMSendQueuedEmails
     k_EMsgAMSetLicenseFlags
     k_EMsgCommunityDeleteUserNews
+    k_EMsgAMAllowUserFilesRequest
+    k_EMsgAMAllowUserFilesResponse
     k_EMsgAMGetAccountStatus
     k_EMsgAMGetAccountStatusResponse
     k_EMsgAMEditBanReason
@@ -739,6 +740,7 @@ direction LR
     k_EMsgAMSupportIsAccountEnabledResponse
     k_EMsgUGSGetUserStats
     k_EMsgAMGSSearch
+    k_EMsgMarketingMessageUpdate
     k_EMsgChatServerRouteFriendMsg
     k_EMsgAMTicketAuthRequestOrResponse
     k_EMsgAMAddFreeLicense
@@ -765,6 +767,7 @@ direction LR
     k_EMsgAMCreateFinancialAdjustment
     k_EMsgAMPlayerNicknameList
     k_EMsgAMPlayerNicknameListResponse
+    k_EMsgAMSetDRMTestConfig
     k_EMsgAMGetUserCurrentGameInfo
     k_EMsgAMGetUserCurrentGameInfoResponse
     k_EMsgAMGetGSPlayerList
@@ -895,7 +898,6 @@ direction LR
     k_EMsgAMPerfectWorldPaymentResponse
     k_EMsgAMECommPayPayment
     k_EMsgAMECommPayPaymentResponse
-    k_EMsgAMSetRemoteClientID
     k_EMsgBasePSRange
     k_EMsgPSCreateShoppingCart
     k_EMsgPSCreateShoppingCartResponse
@@ -985,6 +987,7 @@ direction LR
     k_EMsgClientP2PConnectionFailInfo
     k_EMsgClientGetDepotDecryptionKey
     k_EMsgClientGetDepotDecryptionKeyResponse
+    k_EMsgGSPerformHardwareSurvey
     k_EMsgClientEnableTestLicense
     k_EMsgClientEnableTestLicenseResponse
     k_EMsgClientDisableTestLicense
@@ -1024,10 +1027,8 @@ direction LR
     k_EMsgClientOGSEndSession
     k_EMsgClientOGSEndSessionResponse
     k_EMsgClientOGSWriteRow
-    k_EMsgClientGetPeerContentInfo
-    k_EMsgClientGetPeerContentInfoResponse
-    k_EMsgClientStartPeerContentServer
-    k_EMsgClientStartPeerContentServerResponse
+    k_EMsgClientDRMTest
+    k_EMsgClientDRMTestResult
     k_EMsgClientServerUnavailable
     k_EMsgClientServersAvailable
     k_EMsgClientRegisterAuthTicketWithCM
@@ -1037,6 +1038,7 @@ direction LR
     k_EMsgClientMicroTxnAuthorizeResponse
     k_EMsgClientGetMicroTxnInfo
     k_EMsgClientGetMicroTxnInfoResponse
+    k_EMsgClientMarketingMessageUpdate2
     k_EMsgClientDeregisterWithServer
     k_EMsgClientSubscribeToPersonaFeed
     k_EMsgClientLogon
@@ -1251,6 +1253,8 @@ direction LR
     k_EMsgClientUCMUpdatePublishedFileResponse
     k_EMsgUCMUpdatePublishedFile
     k_EMsgUCMUpdatePublishedFileResponse
+    k_EMsgUCMDeletePublishedFile
+    k_EMsgUCMDeletePublishedFileResponse
     k_EMsgUCMUpdatePublishedFileStat
     k_EMsgUCMReloadPublishedFile
     k_EMsgUCMReloadUserFileListCaches
@@ -1279,6 +1283,8 @@ direction LR
     k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse
     k_EMsgUCMPublishedFileContentUpdated
     k_EMsgClientUCMPublishedFileUpdated
+    k_EMsgClientWorkshopItemChangesRequest
+    k_EMsgClientWorkshopItemChangesResponse
     k_EMsgFSBase
     k_EMsgClientRichPresenceUpload
     k_EMsgClientRichPresenceRequest
@@ -1449,14 +1455,14 @@ direction LR
     k_EMsgRemoteClientStartStreamResponse
     k_EMsgRemoteClientPing
     k_EMsgRemoteClientPingResponse
-    k_EMsgClientUnlockH264
-    k_EMsgClientUnlockH264Response
+    k_EMsgClientUnlockStreaming
+    k_EMsgClientUnlockStreamingResponse
     k_EMsgRemoteClientAcceptEULA
     k_EMsgRemoteClientGetControllerConfig
     k_EMsgRemoteClientGetControllerConfigResponse
     k_EMsgRemoteClientStreamingEnabled
-    k_EMsgClientUnlockHEVC_OBSOLETE
-    k_EMsgClientUnlockHEVCResponse_OBSOLETE
+    k_EMsgClientUnlockHEVC
+    k_EMsgClientUnlockHEVCResponse
     k_EMsgRemoteClientStatusRequest
     k_EMsgRemoteClientStatusResponse
     k_EMsgClientConcurrentSessionsBase
@@ -1466,6 +1472,7 @@ direction LR
     k_EMsgClientBroadcastInit
     k_EMsgClientBroadcastFrames
     k_EMsgClientBroadcastDisconnect
+    k_EMsgClientBroadcastScreenshot
     k_EMsgClientBroadcastUploadConfig
     k_EMsgBaseClient3
     k_EMsgClientVoiceCallPreAuthorize
@@ -1474,13 +1481,9 @@ direction LR
     k_EMsgClientServerTimestampResponse
     k_EMsgServiceMethodCallFromClientNonAuthed
     k_EMsgClientHello
-    k_EMsgClientEnableOrDisableDownloads
-    k_EMsgClientEnableOrDisableDownloadsResponse
     k_EMsgClientLANP2PBase
     k_EMsgClientLANP2PRequestChunk
     k_EMsgClientLANP2PRequestChunkResponse
-    k_EMsgClientPeerChunkRequest
-    k_EMsgClientPeerChunkResponse
     k_EMsgClientLANP2PMax
     k_EMsgBaseWatchdogServer
     k_EMsgNotifyWatchdog
@@ -1497,12 +1500,6 @@ direction LR
     k_EMsgChatServerGetPendingNotificationCountResponse
     k_EMsgBaseSecretServer
     k_EMsgServerSecretChanged
-    k_EMsgBaseWG
-    k_EMsgWGConnectionProtocolError
-    k_EMsgWGConnectionValidateUserToken
-    k_EMsgWGConnectionValidateUserTokenResponse
-    k_EMsgWGConnectionLegacyWGRequest
-    k_EMsgWGConnectionLegacyWGResponse
   }
 
   class EClientPersonaStateFlag{
@@ -1544,23 +1541,6 @@ direction LR
     k_ESteamReviewScore_VeryNegative
     k_ESteamReviewScore_OverwhelminglyNegative
     k_ESteamReviewScore_None
-  }
-
-  class ECodecUsagePlatform{
-    <<enumeration>>
-    k_ECodecUsagePlatformUnknown
-    k_ECodecUsagePlatformWindows
-    k_ECodecUsagePlatformMacOS
-    k_ECodecUsagePlatformLinux
-    k_ECodecUsagePlatformSteamDeck
-  }
-
-  class ECodecUsageReason{
-    <<enumeration>>
-    k_ECodecUsageReasonUnknown
-    k_ECodecUsageReasonRemotePlay
-    k_ECodecUsageReasonBroadcasting
-    k_ECodecUsageReasonGameVideo
   }
 
 ```
@@ -1645,6 +1625,7 @@ direction LR
 | `k_EMsgLicenseProcessingComplete` | 316 |
 | `k_EMsgSetTestFlag` | 317 |
 | `k_EMsgQueuedEmailsComplete` | 318 |
+| `k_EMsgGMReportPHPError` | 319 |
 | `k_EMsgGMDRMSync` | 320 |
 | `k_EMsgPhysicalBoxInventory` | 321 |
 | `k_EMsgUpdateConfigFile` | 322 |
@@ -1662,8 +1643,6 @@ direction LR
 | `k_EMsgExpectShellRestart` | 336 |
 | `k_EMsgHotFixProgress` | 337 |
 | `k_EMsgGMStatsForwardToAdminConnections` | 338 |
-| `k_EMsgGMGetModifiedConVars` | 339 |
-| `k_EMsgGMGetModifiedConVarsResponse` | 340 |
 | `k_EMsgBaseAIS` | 400 |
 | `k_EMsgAISRequestContentDescription` | 402 |
 | `k_EMsgAISUpdateAppInfo` | 403 |
@@ -2072,8 +2051,11 @@ direction LR
 | `k_EMsgClientDPSendSpecialSurveyResponse` | 1622 |
 | `k_EMsgClientDPSendSpecialSurveyResponseReply` | 1623 |
 | `k_EMsgDPStoreSaleStatistics` | 1624 |
+| `k_EMsgClientDPUpdateAppJobReport` | 1625 |
+| `k_EMsgClientDPUnsignedInstallScript` | 1627 |
 | `k_EMsgDPPartnerMicroTxns` | 1628 |
 | `k_EMsgDPPartnerMicroTxnsResponse` | 1629 |
+| `k_EMsgClientDPContentStatsReport` | 1630 |
 | `k_EMsgDPVRUniquePlayersStat` | 1631 |
 | `k_EMsgBaseCM` | 1700 |
 | `k_EMsgCMSetAllowState` | 1701 |
@@ -2119,9 +2101,6 @@ direction LR
 | `k_EMsgGCHAppCheersReceived` | 2242 |
 | `k_EMsgGCHAppCheersGetAllowedTypes` | 2243 |
 | `k_EMsgGCHAppCheersGetAllowedTypesResponse` | 2244 |
-| `k_EMsgGCHRoutingRulesFromGCHtoGM` | 2245 |
-| `k_EMsgGCHRoutingRulesToGCHfromGM` | 2246 |
-| `k_EMsgUpdateCMMessageRateRules` | 2247 |
 | `k_EMsgBaseP2P` | 2500 |
 | `k_EMsgP2PIntroducerMessage` | 2502 |
 | `k_EMsgBaseSM` | 2900 |
@@ -2268,6 +2247,8 @@ direction LR
 | `k_EMsgAMSendQueuedEmails` | 4152 |
 | `k_EMsgAMSetLicenseFlags` | 4153 |
 | `k_EMsgCommunityDeleteUserNews` | 4155 |
+| `k_EMsgAMAllowUserFilesRequest` | 4156 |
+| `k_EMsgAMAllowUserFilesResponse` | 4157 |
 | `k_EMsgAMGetAccountStatus` | 4158 |
 | `k_EMsgAMGetAccountStatusResponse` | 4159 |
 | `k_EMsgAMEditBanReason` | 4160 |
@@ -2295,6 +2276,7 @@ direction LR
 | `k_EMsgAMSupportIsAccountEnabledResponse` | 4210 |
 | `k_EMsgUGSGetUserStats` | 4211 |
 | `k_EMsgAMGSSearch` | 4213 |
+| `k_EMsgMarketingMessageUpdate` | 4216 |
 | `k_EMsgChatServerRouteFriendMsg` | 4219 |
 | `k_EMsgAMTicketAuthRequestOrResponse` | 4220 |
 | `k_EMsgAMAddFreeLicense` | 4224 |
@@ -2321,6 +2303,7 @@ direction LR
 | `k_EMsgAMCreateFinancialAdjustment` | 4265 |
 | `k_EMsgAMPlayerNicknameList` | 4266 |
 | `k_EMsgAMPlayerNicknameListResponse` | 4267 |
+| `k_EMsgAMSetDRMTestConfig` | 4268 |
 | `k_EMsgAMGetUserCurrentGameInfo` | 4269 |
 | `k_EMsgAMGetUserCurrentGameInfoResponse` | 4270 |
 | `k_EMsgAMGetGSPlayerList` | 4271 |
@@ -2451,7 +2434,6 @@ direction LR
 | `k_EMsgAMPerfectWorldPaymentResponse` | 4422 |
 | `k_EMsgAMECommPayPayment` | 4423 |
 | `k_EMsgAMECommPayPaymentResponse` | 4424 |
-| `k_EMsgAMSetRemoteClientID` | 4425 |
 | `k_EMsgBasePSRange` | 5000 |
 | `k_EMsgPSCreateShoppingCart` | 5001 |
 | `k_EMsgPSCreateShoppingCartResponse` | 5002 |
@@ -2541,6 +2523,7 @@ direction LR
 | `k_EMsgClientP2PConnectionFailInfo` | 5435 |
 | `k_EMsgClientGetDepotDecryptionKey` | 5438 |
 | `k_EMsgClientGetDepotDecryptionKeyResponse` | 5439 |
+| `k_EMsgGSPerformHardwareSurvey` | 5440 |
 | `k_EMsgClientEnableTestLicense` | 5443 |
 | `k_EMsgClientEnableTestLicenseResponse` | 5444 |
 | `k_EMsgClientDisableTestLicense` | 5445 |
@@ -2580,10 +2563,8 @@ direction LR
 | `k_EMsgClientOGSEndSession` | 5492 |
 | `k_EMsgClientOGSEndSessionResponse` | 5493 |
 | `k_EMsgClientOGSWriteRow` | 5494 |
-| `k_EMsgClientGetPeerContentInfo` | 5495 |
-| `k_EMsgClientGetPeerContentInfoResponse` | 5496 |
-| `k_EMsgClientStartPeerContentServer` | 5497 |
-| `k_EMsgClientStartPeerContentServerResponse` | 5498 |
+| `k_EMsgClientDRMTest` | 5495 |
+| `k_EMsgClientDRMTestResult` | 5496 |
 | `k_EMsgClientServerUnavailable` | 5500 |
 | `k_EMsgClientServersAvailable` | 5501 |
 | `k_EMsgClientRegisterAuthTicketWithCM` | 5502 |
@@ -2593,6 +2574,7 @@ direction LR
 | `k_EMsgClientMicroTxnAuthorizeResponse` | 5506 |
 | `k_EMsgClientGetMicroTxnInfo` | 5508 |
 | `k_EMsgClientGetMicroTxnInfoResponse` | 5509 |
+| `k_EMsgClientMarketingMessageUpdate2` | 5510 |
 | `k_EMsgClientDeregisterWithServer` | 5511 |
 | `k_EMsgClientSubscribeToPersonaFeed` | 5512 |
 | `k_EMsgClientLogon` | 5514 |
@@ -2807,6 +2789,8 @@ direction LR
 | `k_EMsgClientUCMUpdatePublishedFileResponse` | 7326 |
 | `k_EMsgUCMUpdatePublishedFile` | 7327 |
 | `k_EMsgUCMUpdatePublishedFileResponse` | 7328 |
+| `k_EMsgUCMDeletePublishedFile` | 7329 |
+| `k_EMsgUCMDeletePublishedFileResponse` | 7330 |
 | `k_EMsgUCMUpdatePublishedFileStat` | 7331 |
 | `k_EMsgUCMReloadPublishedFile` | 7337 |
 | `k_EMsgUCMReloadUserFileListCaches` | 7338 |
@@ -2835,6 +2819,8 @@ direction LR
 | `k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse` | 7379 |
 | `k_EMsgUCMPublishedFileContentUpdated` | 7380 |
 | `k_EMsgClientUCMPublishedFileUpdated` | 7381 |
+| `k_EMsgClientWorkshopItemChangesRequest` | 7382 |
+| `k_EMsgClientWorkshopItemChangesResponse` | 7383 |
 | `k_EMsgFSBase` | 7500 |
 | `k_EMsgClientRichPresenceUpload` | 7501 |
 | `k_EMsgClientRichPresenceRequest` | 7502 |
@@ -3005,14 +2991,14 @@ direction LR
 | `k_EMsgRemoteClientStartStreamResponse` | 9504 |
 | `k_EMsgRemoteClientPing` | 9505 |
 | `k_EMsgRemoteClientPingResponse` | 9506 |
-| `k_EMsgClientUnlockH264` | 9507 |
-| `k_EMsgClientUnlockH264Response` | 9508 |
+| `k_EMsgClientUnlockStreaming` | 9507 |
+| `k_EMsgClientUnlockStreamingResponse` | 9508 |
 | `k_EMsgRemoteClientAcceptEULA` | 9509 |
 | `k_EMsgRemoteClientGetControllerConfig` | 9510 |
 | `k_EMsgRemoteClientGetControllerConfigResponse` | 9511 |
 | `k_EMsgRemoteClientStreamingEnabled` | 9512 |
-| `k_EMsgClientUnlockHEVC_OBSOLETE` | 9513 |
-| `k_EMsgClientUnlockHEVCResponse_OBSOLETE` | 9514 |
+| `k_EMsgClientUnlockHEVC` | 9513 |
+| `k_EMsgClientUnlockHEVCResponse` | 9514 |
 | `k_EMsgRemoteClientStatusRequest` | 9515 |
 | `k_EMsgRemoteClientStatusResponse` | 9516 |
 | `k_EMsgClientConcurrentSessionsBase` | 9600 |
@@ -3022,6 +3008,7 @@ direction LR
 | `k_EMsgClientBroadcastInit` | 9700 |
 | `k_EMsgClientBroadcastFrames` | 9701 |
 | `k_EMsgClientBroadcastDisconnect` | 9702 |
+| `k_EMsgClientBroadcastScreenshot` | 9703 |
 | `k_EMsgClientBroadcastUploadConfig` | 9704 |
 | `k_EMsgBaseClient3` | 9800 |
 | `k_EMsgClientVoiceCallPreAuthorize` | 9800 |
@@ -3030,13 +3017,9 @@ direction LR
 | `k_EMsgClientServerTimestampResponse` | 9803 |
 | `k_EMsgServiceMethodCallFromClientNonAuthed` | 9804 |
 | `k_EMsgClientHello` | 9805 |
-| `k_EMsgClientEnableOrDisableDownloads` | 9806 |
-| `k_EMsgClientEnableOrDisableDownloadsResponse` | 9807 |
 | `k_EMsgClientLANP2PBase` | 9900 |
 | `k_EMsgClientLANP2PRequestChunk` | 9900 |
 | `k_EMsgClientLANP2PRequestChunkResponse` | 9901 |
-| `k_EMsgClientPeerChunkRequest` | 9902 |
-| `k_EMsgClientPeerChunkResponse` | 9903 |
 | `k_EMsgClientLANP2PMax` | 9999 |
 | `k_EMsgBaseWatchdogServer` | 10000 |
 | `k_EMsgNotifyWatchdog` | 10000 |
@@ -3053,12 +3036,6 @@ direction LR
 | `k_EMsgChatServerGetPendingNotificationCountResponse` | 12001 |
 | `k_EMsgBaseSecretServer` | 12100 |
 | `k_EMsgServerSecretChanged` | 12100 |
-| `k_EMsgBaseWG` | 12200 |
-| `k_EMsgWGConnectionProtocolError` | 12200 |
-| `k_EMsgWGConnectionValidateUserToken` | 12201 |
-| `k_EMsgWGConnectionValidateUserTokenResponse` | 12202 |
-| `k_EMsgWGConnectionLegacyWGRequest` | 12203 |
-| `k_EMsgWGConnectionLegacyWGResponse` | 12204 |
 
 ### `EClientPersonaStateFlag`
 
@@ -3103,22 +3080,3 @@ direction LR
 | `k_ESteamReviewScore_VeryNegative` | 2 |
 | `k_ESteamReviewScore_OverwhelminglyNegative` | 1 |
 | `k_ESteamReviewScore_None` | 0 |
-
-### `ECodecUsagePlatform`
-
-| Name | Value |
-|------|-------|
-| `k_ECodecUsagePlatformUnknown` | 0 |
-| `k_ECodecUsagePlatformWindows` | 1 |
-| `k_ECodecUsagePlatformMacOS` | 2 |
-| `k_ECodecUsagePlatformLinux` | 3 |
-| `k_ECodecUsagePlatformSteamDeck` | 4 |
-
-### `ECodecUsageReason`
-
-| Name | Value |
-|------|-------|
-| `k_ECodecUsageReasonUnknown` | 0 |
-| `k_ECodecUsageReasonRemotePlay` | 1 |
-| `k_ECodecUsageReasonBroadcasting` | 2 |
-| `k_ECodecUsageReasonGameVideo` | 3 |

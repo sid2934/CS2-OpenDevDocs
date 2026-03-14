@@ -25,11 +25,6 @@ direction LR
     +fixed64 bucket
   }
 
-  class CMsgGCRoutingProtoBufHeader {
-    +uint64 dst_gcid_queue
-    +uint32 dst_gc_dir_index
-  }
-
   class CMsgProtoBufHeader {
     +fixed64 steamid
     +int32 client_sessionid
@@ -56,12 +51,6 @@ direction LR
     +uint32 realm
     +int32 timeout_ms
     +string debug_source
-    +uint32 debug_source_string_index
-    +uint64 token_id
-    +CMsgGCRoutingProtoBufHeader routing_gc
-    +CMsgProtoBufHeader.ESessionDisposition session_disposition
-    +string wg_token
-    +string webui_auth_key
     +uint32 ip
     +bytes ip_v6
   }
@@ -83,8 +72,6 @@ direction LR
     +uint32 h_steam_pipe
     +uint32 ticket_crc
     +bytes ticket
-    +bytes server_secret
-    +uint32 ticket_type
   }
 
   class CCDDBAppDetailCommon {
@@ -100,9 +87,6 @@ direction LR
     +bool has_adult_content
     +bool is_visible_in_steam_china
     +uint32 app_type
-    +bool has_adult_content_sex
-    +bool has_adult_content_violence
-    +List~uint32~ content_descriptorids
   }
 
   class CMsgAppRights {
@@ -184,7 +168,6 @@ direction LR
     +int32 voteupcount
     +int32 votedowncount
     +EBanContentCheckResult ban_check_result
-    +bool banned
   }
 
   class CClanEventData {
@@ -253,23 +236,12 @@ direction LR
     +List~CMsgKeyValuePair~ pairs
   }
 
-  class UserContentDescriptorPreferences {
-    +List~UserContentDescriptorPreferences.ContentDescriptor~ content_descriptors_to_exclude
-  }
-
-  class ContentDescriptor {
-    +uint32 content_descriptorid
-    +uint32 timestamp_added
-  }
-
   CMsgIPAddressBucket --> CMsgIPAddress : original_ip_address
-  CMsgProtoBufHeader --> CMsgGCRoutingProtoBufHeader : routing_gc
   CClanMatchEventByRange --> CClanEventUserNewsTuple : events[]
   CCommunity_ClanAnnouncementInfo --> EBanContentCheckResult : ban_check_result
   CClanEventData --> EProtoClanEventType : event_type
   CClanEventData --> CCommunity_ClanAnnouncementInfo : announcement_body
   CMsgKeyValueSet --> CMsgKeyValuePair : pairs[]
-  UserContentDescriptorPreferences --> ContentDescriptor : content_descriptors_to_exclude[]
 
   class EBanContentCheckResult{
     <<enumeration>>
@@ -412,13 +384,6 @@ direction LR
 | `original_ip_address` | 1 | [CMsgIPAddress](#cmsgipaddress) | optional |  |
 | `bucket` | 2 | fixed64 | optional |  |
 
-### `CMsgGCRoutingProtoBufHeader`
-
-| Field | Ordinal | Type | Label | Description |
-|-------|---------|------|-------|-------------|
-| `dst_gcid_queue` | 1 | uint64 | optional |  |
-| `dst_gc_dir_index` | 2 | uint32 | optional |  |
-
 ### `CMsgProtoBufHeader`
 
 | Field | Ordinal | Type | Label | Description |
@@ -450,12 +415,6 @@ direction LR
 | `realm` | 32 | uint32 | optional | *(default: `0`)* |
 | `timeout_ms` | 33 | int32 | optional | *(default: `-1`)* |
 | `debug_source` | 34 | string | optional |  |
-| `debug_source_string_index` | 35 | uint32 | optional |  |
-| `token_id` | 36 | uint64 | optional |  |
-| `routing_gc` | 37 | [CMsgGCRoutingProtoBufHeader](#cmsggcroutingprotobufheader) | optional |  |
-| `session_disposition` | 38 | CMsgProtoBufHeader.ESessionDisposition | optional | *(default: `k_ESessionDispositionNormal`)* |
-| `wg_token` | 39 | string | optional |  |
-| `webui_auth_key` | 40 | string | optional |  |
 
 ### `CMsgMulti`
 
@@ -481,8 +440,6 @@ direction LR
 | `h_steam_pipe` | 5 | uint32 | optional |  |
 | `ticket_crc` | 6 | uint32 | optional |  |
 | `ticket` | 7 | bytes | optional |  |
-| `server_secret` | 8 | bytes | optional |  |
-| `ticket_type` | 9 | uint32 | optional |  |
 
 ### `CCDDBAppDetailCommon`
 
@@ -500,9 +457,6 @@ direction LR
 | `has_adult_content` | 12 | bool | optional |  |
 | `is_visible_in_steam_china` | 13 | bool | optional |  |
 | `app_type` | 14 | uint32 | optional |  |
-| `has_adult_content_sex` | 15 | bool | optional |  |
-| `has_adult_content_violence` | 16 | bool | optional |  |
-| `content_descriptorids` | 17 | uint32 | repeated |  |
 
 ### `CMsgAppRights`
 
@@ -596,7 +550,6 @@ direction LR
 | `voteupcount` | 14 | int32 | optional |  |
 | `votedowncount` | 15 | int32 | optional |  |
 | `ban_check_result` | 16 | [EBanContentCheckResult](#ebancontentcheckresult) | optional | *(default: `k_EBanContentCheckResult_NotScanned`)* |
-| `banned` | 17 | bool | optional |  |
 
 ### `CClanEventData`
 
@@ -673,9 +626,3 @@ direction LR
 | Field | Ordinal | Type | Label | Description |
 |-------|---------|------|-------|-------------|
 | `pairs` | 1 | [CMsgKeyValuePair](#cmsgkeyvaluepair) | repeated |  |
-
-### `UserContentDescriptorPreferences`
-
-| Field | Ordinal | Type | Label | Description |
-|-------|---------|------|-------|-------------|
-| `content_descriptors_to_exclude` | 1 | UserContentDescriptorPreferences.ContentDescriptor | repeated |  |
