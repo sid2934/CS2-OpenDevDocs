@@ -927,6 +927,7 @@ All console variables extracted from CS2.
 | `cv_bot_ai_bt_debug_target` | `-1` | `gamedll` `replicated` `cheat` | Draw the behavior tree of the given bot. |
 | `cv_bot_ai_bt_hiding_spot_show` | `false` | `gamedll` `replicated` `cheat` | Draw hiding spots. |
 | `cv_bot_ai_bt_moveto_show_next_hiding_spot` | `false` | `gamedll` `replicated` `cheat` | Draw the hiding spot the bot will check next. |
+| `d3d_max_feature_level` | `"<Not set>"` | `developmentonly` `defensive` | Report the maximum D3D feature level available. |
 | `damage_impact_heavy` | `40` | `developmentonly` `clientdll` `defensive` | Damage ABOVE this value is considered heavy damage |
 | `damage_impact_medium` | `20` | `developmentonly` `clientdll` `defensive` | Damage BELOW this value is considered light damage |
 | `death_chase_distance` | `76` | `developmentonly` `clientdll` | <no description> |
@@ -1046,7 +1047,6 @@ All console variables extracted from CS2.
 | `engine_show_frame_dispatch` | `false` | `developmentonly` | show frame dispatch names. |
 | `engine_show_frame_pacing` | `false` | `release` | <no description> |
 | `engine_show_frame_ticks` | `false` | `developmentonly` `defensive` | <no description> |
-| `engine_sleep_busy_waits` | `false` | `developmentonly` | <no description> |
 | `engine_sse42` | `true` | `developmentonly` `defensive` | turn on sse4.2 optimizations in the engine |
 | `engine_update_resource_system_during_low_latency_sleep` | `true` | `developmentonly` | <no description> |
 | `english` | `true` | `clientdll` `userinfo` | If set to 1, running the english language set of assets. |
@@ -2191,6 +2191,7 @@ All console variables extracted from CS2.
 | `particle_cluster_manager_search_dist` | `256` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | <no description> |
 | `particle_cluster_nodraw` | `false` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | <no description> |
 | `particle_cluster_use_collision_hulls` | `true` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | <no description> |
+| `particle_debug_creation_filter` | `""` | `developmentonly` `clientdll` `hidden` `replicated` `defensive` | <no description> |
 | `particle_test_attach_attachment` | `0` | `gamedll` `cheat` | Attachment index for attachment mode |
 | `particle_test_attach_mode` | `"follow_attachment"` | `gamedll` `cheat` | Possible Values: 'start_at_attachment', 'follow_attachment', 'start_at_origin', 'follow_origin' |
 | `particle_test_file` | `""` | `gamedll` `cheat` | Name of the particle system to dynamically spawn |
@@ -2291,7 +2292,6 @@ All console variables extracted from CS2.
 | `r_RainAllowInSplitScreen` | `false` | `developmentonly` `clientdll` `defensive` | Allows rain in splitscreen |
 | `r_RainParticleDensity` | `1` | `developmentonly` `clientdll` `defensive` | Density of Particle Rain 0-1 |
 | `r_add_views_in_pre_output` | `false` | `developmentonly` `defensive` | <no description> |
-| `r_allow_low_gpu_memory_mode` | `true` | `release` | Allow Low GPU Memory mode (i.e. when building maps). |
 | `r_allow_onesweep_gpusort` | `true` | `developmentonly` `defensive` | <no description> |
 | `r_always_render_all_windows` | `false` | `developmentonly` `defensive` | Always force all engine & tools to render |
 | `r_aoproxy_cull_dist` | `12` | `developmentonly` `defensive` | Distance to cull the AO proxy as a factor of size |
@@ -2303,13 +2303,13 @@ All console variables extracted from CS2.
 | `r_aspectratio` | `0` | `developmentonly` `defensive` | <no description> |
 | `r_async_shader_compile_notify_frequency` | `10` | `developmentonly` | <no description> |
 | `r_bloom_tent_filter_radius` | `3.1` | `developmentonly` `clientdll` `cheat` | bloom mip up-sample filtering radius (using 3x3 tent filter, radius in mip level texels), 0.0 radius => box (2x2) filter with (fixed) 1.0 radius |
-| `r_cache_pool_allocations` | `true` | `developmentonly` | <no description> |
 | `r_character_decal_monitor_draw_frustum` | `false` | `developmentonly` | <no description> |
 | `r_character_decal_monitor_emissive` | `false` | `developmentonly` | <no description> |
 | `r_character_decal_monitor_render_res` | `512` | `developmentonly` | <no description> |
 | `r_character_decal_renderdoc_capture` | `false` | `developmentonly` | <no description> |
 | `r_character_decal_resolution` | `1024` | `min:` `256,` `developmentonly` `defensive` | Resolution of character decal texture. |
 | `r_cs2_show_icon_editor` | `false` | `developmentonly` `clientdll` `replicated` `cheat` `menubar_item` | CSGO/Icon Editor |
+| `r_csgo_barnlight_shadow_scale_preview` | `4` | `developmentonly` `clientdll` | <no description> |
 | `r_csgo_bloom_threshold_all_samples` | `true` | `developmentonly` `clientdll` | Execute bloom threshold once per sample during downsample (default enabled, higher quality, less bloom aliasing) |
 | `r_csgo_bloom_threshold_downsample_jimenez` | `true` | `developmentonly` `clientdll` | Custom downsample based on Jimenez14, (default enabled, higher quality, decreases bloom aliasing further) |
 | `r_csgo_cable_pixel_radius_clamp` | `1.2` | `developmentonly` `clientdll` | Minimum clamped size in pixels of a cable (if using F_CLAMP_MIN_RADIUS 1 in cable material) |
@@ -2317,6 +2317,8 @@ All console variables extracted from CS2.
 | `r_csgo_cmaa_enable` | `false` | `developmentonly` `clientdll` `defensive` | <no description> |
 | `r_csgo_cmaa_extra_sharp` | `false` | `developmentonly` `clientdll` `defensive` | trade more sharpness for reduced antialiasing |
 | `r_csgo_cmaa_quality` | `3` | `developmentonly` `clientdll` `defensive` | 0=low, 1=medium, 2=high, 3=ultra |
+| `r_csgo_csm_max_visible_distance` | `7500` | `developmentonly` `clientdll` | <no description> |
+| `r_csgo_csm_max_visible_distance_preview` | `2000` | `developmentonly` `clientdll` | <no description> |
 | `r_csgo_csm_override_staticgeo_cascades_alphatest` | `false` | `developmentonly` `clientdll` `defensive` | If lb_csm_override_staticgeo_cascades true, ensure objects with SCENEOBJECTFLAG_ALPHA_TESTED flag will be rendered into cascade. |
 | `r_csgo_csm_pushback_distance` | `7000` | `developmentonly` `clientdll` | <no description> |
 | `r_csgo_csm_pushback_distance_preview` | `1500` | `developmentonly` `clientdll` | <no description> |
@@ -2458,6 +2460,8 @@ All console variables extracted from CS2.
 | `r_dof_override_tilt_to_ground` | `0.5` | `cheat` | <no description> |
 | `r_dopixelvisibility` | `true` | `cheat` | <no description> |
 | `r_draw3dskybox` | `true` | `developmentonly` `clientdll` `defensive` | <no description> |
+| `r_draw_first_tri_only` | `false` | `cheat` | <no description> |
+| `r_draw_instances` | `true` | `cheat` | <no description> |
 | `r_draw_overlays` | `true` | `developmentonly` `defensive` | <no description> |
 | `r_drawblankworld` | `false` | `cheat` | Render blank instead of the game world |
 | `r_drawchickens` | `true` | `clientdll` `cheat` | Render chickens |
@@ -2472,6 +2476,8 @@ All console variables extracted from CS2.
 | `r_drawtracers_firstperson` | `true` | `clientdll` `archive` `release` | Toggle visibility of first person weapon tracers |
 | `r_drawviewmodel` | `true` | `clientdll` `cheat` | Render view model |
 | `r_drawworld` | `true` | `cheat` | Render the world. |
+| `r_dx11_debug_clean` | `false` | `release` | Aggressively unbind bound resources to cleanup DX11 debug warnings. |
+| `r_dx11_software_cmd_lists` | `true` | `developmentonly` `defensive` | Enable Software Command lists for DX11 (Avoid using deferred contexts) |
 | `r_enable_rigid_animation` | `false` | `developmentonly` `clientdll` | <no description> |
 | `r_experimental_lag_limiter` | `false` | `developmentonly` `defensive` | <no description> |
 | `r_extra_render_frames` | `0` | `cheat` | <no description> |
@@ -2498,6 +2504,7 @@ All console variables extracted from CS2.
 | `r_flashlighttracedistwatercutoff` | `80` | `clientdll` `cheat` | <no description> |
 | `r_flashlightvisualizetrace` | `false` | `clientdll` `cheat` | <no description> |
 | `r_flush_on_pooled_ib_resize` | `true` | `release` | <no description> |
+| `r_force_no_present` | `false` | `cheat` | Force the render device to not present frames. |
 | `r_force_render_frame_count` | `5` | `developmentonly` | The number of frames to render when a |
 | `r_force_thick_hair` | `false` | `developmentonly` `cheat` | <no description> |
 | `r_force_zprepass` | `-1` | `cheat` | 0: Force z prepass off. 1: Force on. -1: Don't force |
@@ -2547,6 +2554,7 @@ All console variables extracted from CS2.
 | `r_impacts_decal_grazing_incidence_variance` | `0.1` | `developmentonly` `clientdll` `defensive` | <no description> |
 | `r_indirectlighting` | `true` | `cheat` | Set to use indirect lighting |
 | `r_late_particle_job_sync` | `false` | `developmentonly` `clientdll` `defensive` | <no description> |
+| `r_legacy_vsync` | `false` | `developmentonly` `hidden` `defensive` | Use legacy vsync mode -- for testing for a couple user machines. |
 | `r_light_flickering_enabled` | `true` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | <no description> |
 | `r_light_probe_volume_debug_colors` | `false` | `cheat` | <no description> |
 | `r_light_probe_volume_debug_grid` | `0` | `cheat` | Show LPV debug grid, 0: off, 1: closest only 2: closest and keep 3: all |
@@ -2564,8 +2572,6 @@ All console variables extracted from CS2.
 | `r_low_latency_trigger_flash` | `true` | `developmentonly` `defensive` | NVIDIA Low Latency Trigger Flash |
 | `r_mapextents` | `16384` | `clientdll` `cheat` | Set the max dimension for the map.  This determines the far clipping plane |
 | `r_max_texture_pool_size` | `0` | `developmentonly` `defensive` | Upper limit on texture pool size. |
-| `r_memory_aliasing` | `true` | `developmentonly` | Allow disabling memory aliasing in the device memory pool.  This is just intended for testing/ruling out aliasing issues. |
-| `r_mipgen_compute_shader` | `true` | `developmentonly` `defensive` | Use compute shader for mipgen. |
 | `r_mixed_shadows_fade_in_time` | `0.5` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | <no description> |
 | `r_mixed_shadows_fade_out_time` | `0.5` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | <no description> |
 | `r_monitor_3dskybox` | `true` | `developmentonly` `clientdll` `defensive` | <no description> |
@@ -2583,6 +2589,10 @@ All console variables extracted from CS2.
 | `r_particle_shadows_cast_on_world` | `true` | `developmentonly` `clientdll` `defensive` | <no description> |
 | `r_particle_shadows_compute` | `true` | `clientdll` `release` | <no description> |
 | `r_particle_timescale` | `0` | `reference` | <no description> |
+| `r_pipeline_stats_command_flush` | `false` | `developmentonly` `defensive` | Experimental: Set to 1 to enable full GPU pipeline flushing after each command list. |
+| `r_pipeline_stats_flush_before_sleeping` | `false` | `developmentonly` `defensive` | Experimental: Set to 1 to enable GPU pipeline flushes right before the render thread sleeps to wait for more work. |
+| `r_pipeline_stats_present_flush` | `false` | `developmentonly` `defensive` | Experimental: Set to 1 to enable full GPU pipeline flushing after each present. |
+| `r_pipeline_stats_use_flush_api` | `true` | `developmentonly` `defensive` | Experimental: Set to 1 to use the ID3D11DeviceContext11::Flush() to flush the GPU pipeline instead of queries. |
 | `r_pixelvisibility_partial` | `true` | `cheat` | <no description> |
 | `r_pixelvisibility_spew` | `false` | `cheat` | <no description> |
 | `r_player_fog_distance_multiplier` | `1.7` | `developmentonly` `clientdll` `cheat` | <no description> |
@@ -2591,7 +2601,6 @@ All console variables extracted from CS2.
 | `r_player_visibility_stencil` | `true` | `developmentonly` `clientdll` `cheat` | <no description> |
 | `r_player_visibility_strength` | `1.1` | `developmentonly` `clientdll` `cheat` | <no description> |
 | `r_post_bloom_debug` | `0` | `developmentonly` `clientdll` | 1 = bloom output (before thresholding), 2 = quarter res downsample, 3 = quarter res effects bloom 4 = quarter res effects raw |
-| `r_prefer_loop_unrolling` | `true` | `developmentonly` `defensive` | Prefer shader loop unrolling. |
 | `r_propsmaxdist` | `1200` | `developmentonly` `clientdll` `defensive` | Maximum visible distance |
 | `r_render_hair` | `true` | `developmentonly` `cheat` | <no description> |
 | `r_render_to_cubemap_begin_mixing_roughness` | `0.25` | `developmentonly` `clientdll` `defensive` | <no description> |
@@ -2608,7 +2617,6 @@ All console variables extracted from CS2.
 | `r_shadows` | `true` | `cheat` | <no description> |
 | `r_shadowtile_waveops` | `false` | `reference` | <no description> |
 | `r_show_build_info` | `true` | `clientdll` `archive` `release` | Build information. Leave this enabled when submitting bug screenshots and videos, please! |
-| `r_show_gpu_memory_visualizer` | `false` | `developmentonly` `cheat` `menubar_item` | SceneSystem/Vulkan GPU Memory Visualizer |
 | `r_show_time_info` | `false` | `clientdll` `release` | Show real time, large. |
 | `r_showdebugoverlays` | `false` | `cheat` | Set to render debug overlays |
 | `r_showdebugrendertarget` | `false` | `cheat` | Set the debug render target to show, 0 == disable |
@@ -2627,6 +2635,7 @@ All console variables extracted from CS2.
 | `r_ssao_radius` | `30` | `developmentonly` `defensive` | <no description> |
 | `r_ssao_strength` | `1.2` | `developmentonly` `defensive` | <no description> |
 | `r_strip_invisible_during_sceneobject_update` | `false` | `developmentonly` `clientdll` `defensive` | <no description> |
+| `r_suppress_redundant_state_changes` | `true` | `developmentonly` `defensive` | <no description> |
 | `r_test1_maximum_wait_ms` | `10` | `clientdll` `release` | <no description> |
 | `r_texture_budget_dynamic` | `true` | `developmentonly` `defensive` | Dynamically adjust texture streaming budget based on GPU memory usage. |
 | `r_texture_budget_threshold` | `0.9` | `developmentonly` `defensive` | Reduce texture memory pool size when this percentage of the budget is full. |
@@ -2654,20 +2663,12 @@ All console variables extracted from CS2.
 | `r_threaded_particle_creation` | `false` | `reference` | <no description> |
 | `r_threaded_particles` | `false` | `reference` | <no description> |
 | `r_threaded_scene_object_update` | `true` | `developmentonly` `clientdll` `defensive` | <no description> |
+| `r_timestamp_query_multiplier` | `1` | `developmentonly` `defensive` | Set the TIMESTAMP query cycle multiplier, for drivers that lie |
 | `r_translucent` | `true` | `cheat` | Enable rendering of translucent geometry |
 | `r_update_particles_on_render_only_frames` | `false` | `developmentonly` `clientdll` `defensive` | <no description> |
+| `r_use_memory_budget_model` | `false` | `developmentonly` `defensive` | Use a model of GPU memory use to determine budget rather than querying the OS. |
 | `r_validate_texture_streaming` | `false` | `developmentonly` `defensive` | Dumps state of texture streaming at the next frame boundary. |
 | `r_vconsole_foregroundforcerender` | `true` | `developmentonly` `defensive` | When VConsole is in the foreground, force all engine & tools to render |
-| `r_vma_defrag_algorithm` | `1` | `developmentonly` | Defrag algorithm 0=Fast 1=Balanced 2=full 3=Extensive |
-| `r_vma_defrag_enabled` | `true` | `developmentonly` | <no description> |
-| `r_vma_defrag_max_allocation_count_per_pass` | `256` | `developmentonly` | During a VMA defrag, number of moves per pass. |
-| `r_vma_defrag_max_allocation_size_per_pass` | `32` | `developmentonly` | During a VMA defrag, number of MB in moves per pass. |
-| `r_vma_defrag_moves_per_frame` | `20` | `developmentonly` | During a VMA defrag, number of moves to process for a pass in a single frame update. |
-| `r_vma_defrag_threshold_mb` | `256` | `release` | <no description> |
-| `r_vulkan_force_sync1` | `false` | `developmentonly` | <no description> |
-| `r_vulkan_sw_cmd_lists` | `true` | `release` | Enable Software Command lists for Vulkan |
-| `r_vulkan_validation_filter_in` | `""` | `developmentonly` | Comma delimited list of stristr filters for including validation messages.  Only messages matching filter will be included. |
-| `r_vulkan_validation_filter_out` | `""` | `developmentonly` | Comma delimited list of stristr filters for excluding validation messages.  Any messages matching filter will be excluded. |
 | `r_wait_on_present` | `false` | `developmentonly` `defensive` | <no description> |
 | `r_world_frame_load_threshold_ms` | `10` | `developmentonly` `defensive` | <no description> |
 | `r_world_wind_dir` | `[0.707, 0.707, 0.707]` | `developmentonly` `defensive` | <no description> |
@@ -2713,6 +2714,7 @@ All console variables extracted from CS2.
 | `replay_debug` | `0` | `replicated` `release` | <no description> |
 | `report_cliententitysim` | `false` | `clientdll` `cheat` | List all clientside simulations and time - will report and turn itself off. |
 | `report_clientthinklist` | `false` | `clientdll` `cheat` | List all clientside entities thinking and time - will report and turn itself off. |
+| `report_connection_failure_percentage` | `0` | `developmentonly` `defensive` | <no description> |
 | `reset_voice_on_input_stallout` | `false` | `userinfo` | If true, resets the input device when there was a long enough hitch between callbacks. |
 | `resourcesystem_multiframe_finalize_time_msec` | `10` | `developmentonly` | Max time to spend finalizing resources per frame in miliseconds. |
 | `rope_averagelight` | `true` | `developmentonly` `clientdll` `defensive` | Makes ropes use average of cubemap lighting instead of max intensity. |
@@ -2731,8 +2733,6 @@ All console variables extracted from CS2.
 | `rr_debugrule` | `""` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | If set to the name of the rule, that rule's score will be shown whenever a concept is passed into the response rules system. |
 | `rr_followup_maxdist` | `1800` | `gamedll` `cheat` | 'then ANY' or 'then ALL' response followups will be dispatched only to characters within this distance. |
 | `rr_thenany_score_slop` | `0` | `gamedll` `archive` `cheat` | When computing respondents for a 'THEN ANY' rule, all rule-matching scores within this much of the best score will be considered. |
-| `rtx_allow_blas_compact` | `true` | `developmentonly` `defensive` | <no description> |
-| `rtx_allow_blas_create` | `true` | `developmentonly` `defensive` | <no description> |
 | `rtx_dynamic_blas` | `true` | `developmentonly` `defensive` | Allow dynamic BLAS creation for geometry going through the compute shader skinning path. |
 | `rtx_dynamic_blas_caching` | `true` | `developmentonly` `defensive` | Cache dynamic BLAS if geometry has not changed |
 | `rtx_force_default_hitgroup` | `false` | `developmentonly` `defensive` | Forces all ray traced geometry to use default hit shaders instead of specialized ones. |
@@ -3844,12 +3844,6 @@ All console variables extracted from CS2.
 | `vprof_scope_entity_clientthink` | `false` | `developmentonly` `clientdll` `hidden` `defensive` | Does nothing whatsoever. |
 | `vprof_scope_entity_thinks` | `false` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | <no description> |
 | `vprof_think_limit` | `false` | `developmentonly` `gamedll` `defensive` | <no description> |
-| `vulkan_batch_size` | `500` | `developmentonly` `defensive` | <no description> |
-| `vulkan_batch_submits` | `true` | `developmentonly` `defensive` | <no description> |
-| `vulkan_dedicated_allocation_threshold` | `512` | `developmentonly` `defensive` | Size (in KBs) above which textures should be allocated in dedicated memory (NV-only). |
-| `vulkan_link_time_optimize_libraries` | `true` | `release` | <no description> |
-| `vulkan_pipeline_compile_spew` | `false` | `developmentonly` `defensive` | <no description> |
-| `vulkan_pipeline_compile_throttle_ms` | `0` | `developmentonly` `defensive` | <no description> |
 | `weapon_accuracy_forcespread` | `0` | `gamedll` `clientdll` `replicated` `release` | Force spread to the specified value. |
 | `weapon_accuracy_logging` | `false` | `developmentonly` `gamedll` `clientdll` `archive` `replicated` | <no description> |
 | `weapon_accuracy_nospread` | `false` | `gamedll` `clientdll` `replicated` `release` `commandline_enforced` | Disable weapon inaccuracy spread |

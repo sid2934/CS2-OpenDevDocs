@@ -469,6 +469,7 @@ All console commands extracted from CS2.
 | `fog_override_color` | `cheat` | Sets the fog color override |
 | `force_assert` | `developmentonly` | Fire an assertion failure |
 | `force_fatal_error` | `developmentonly` | Fire a fatal error |
+| `force_floating_point_exceptions` | `developmentonly` | Enable floating point exceptions to find bugs |
 | `force_hibernate` | `developmentonly` | Force toggle hibernation state |
 | `fs_clear_open_duplicate_times` | `developmentonly` `defensive` | Clear the list of files that have been opened. |
 | `fs_dump_open_duplicate_times` | `developmentonly` `defensive` | Set fs_report_long_reads 1 before loading to use this. Prints a list of files that were opened more than once and ~how long was spent reading from them. |
@@ -585,7 +586,6 @@ All console commands extracted from CS2.
 | `lrucache_reset_stats` | `developmentonly` `defensive` | Resets stats for the specified CUtlLRUCaches (or all if none specified) |
 | `lrucache_set_size` | `developmentonly` `defensive` | Sets the specified cache to the specified size |
 | `lrucache_stats` | `developmentonly` `defensive` | Spews information about all CUtlLRUCaches |
-| `malloc_stats_dump` | `developmentonly` `defensive` | Dump malloc stats to stderr. |
 | `map` | `release` `vconsole_fuzzy_matching` `vconsole_set_focus` | map <mapname> :Load a new map. |
 | `map_enable_portrait_worlds` | `clientdll` `cheat` | Enables/disables portrait worlds |
 | `map_setbombradius` | `gamedll` `cheat` | Sets the bomb radius for the map. |
@@ -752,12 +752,15 @@ All console commands extracted from CS2.
 | `pulse_print_graph_execution_history` | `cheat` | Prints the execution history of a graph by filename or instanceid |
 | `push_var_values` | `developmentonly` `defensive` | Save convars and config values |
 | `quit` | `release` `vconsole_set_focus` | Quit the game |
+| `r_dx11_report_live_objects` | `developmentonly` `defensive` | Prints out live D3D11 objects (requires -dx11debug) |
 | `r_force_engine_render_frame` | `developmentonly` `defensive` | Force a single render of the engine viewport. |
 | `r_gpu_mem_stats` | `linked_concommand` `developmentonly` `defensive` | Display GPU memory usage. |
 | `r_print_buffers` | `linked_concommand` `developmentonly` `defensive` | Print Vertex/Index/GPU buffers. |
+| `r_print_texture_stats` | `developmentonly` `defensive` | Texture stats |
 | `r_render_coordination_state` | `developmentonly` `defensive` | Prints out the current render coordination state. |
 | `r_renderdoc_capture_frame` | `linked_concommand` `developmentonly` `defensive` | Triggers a RenderDoc capture |
-| `r_renderdoc_capture_window_vulkan` | `developmentonly` | Triggers a RenderDoc capture of a specific Window |
+| `r_renderdoc_capture_window_dx11` | `developmentonly` | Triggers a RenderDoc capture of a specific Window |
+| `r_textures_evict_all` | `linked_concommand` `developmentonly` `defensive` | Evict all resident texture. |
 | `r_toggleviewportsize` | `developmentonly` `defensive` | Toggles viewport size between small + full window. |
 | `r_viewport` | `developmentonly` `defensive` | Slams viewport size to a specified value. |
 | `radio` | `clientdll` `release` | Opens a radio menu |
@@ -790,6 +793,7 @@ All console commands extracted from CS2.
 | `resource_leaks` | `developmentonly` `defensive` | resource_leaks <resource_name>: Show resource leaks for the named resource |
 | `resource_list` | `developmentonly` `defensive` | List loaded resources matching a substring |
 | `resource_log_allocate_timing` | `developmentonly` `defensive` | Log time spent in Allocate for all resource types |
+| `resource_manifest_validate_modules` | `developmentonly` `defensive` | Scan all of the loaded modules and validate any resource manifests found |
 | `resource_repeated_reload` | `developmentonly` `defensive` | resource_repeated_reload <count> <resource_name> (<resource name> ...): Load and unload the specified resource(s) |
 | `resource_reset_allocate_timing` | `developmentonly` `defensive` | Reset tracked time spent in Allocate (see resource_log_allocate_timing) |
 | `respawn_player` | `gamedll` `cheat` | Respawns the player from death! |
@@ -1108,6 +1112,7 @@ All console commands extracted from CS2.
 | `voice_mute` | `developmentonly` `defensive` | Mute a specific Steam user |
 | `voice_reset_mutelist` | `developmentonly` `defensive` | Reset all mute information for all players who were ever muted. |
 | `voice_show_mute` | `developmentonly` `defensive` | Show whether current players are muted. |
+| `voice_status_test_toggle` | `developmentonly` `clientdll` | Test voice and status notices |
 | `voice_toggle_open_mic` | `clientdll` `release` | Toggles between open-mic and push-to-talk |
 | `voice_unmute` | `developmentonly` `defensive` | Unmute a specific Steam user, or `all` to unmute all connected players. |
 | `vprof_dump_counters` | `developmentonly` `defensive` | Dump vprof counters to the console |
@@ -1123,13 +1128,6 @@ All console commands extracted from CS2.
 | `vprof_reset_peaks` | `developmentonly` `defensive` | Reset just the peak time in VProf profiler |
 | `vprof_time_scale` | `developmentonly` `hidden` | Scale used when displaying time (0 = use default) |
 | `vtune` | `developmentonly` `defensive` | Controls VTune's sampling. |
-| `vulkan_framebuffermgr_print` | `developmentonly` `defensive` | Prints out stats for the Vulkan Framebuffer manager |
-| `vulkan_memgr_fragmentation_print` | `developmentonly` `defensive` | Prints out detailed memory fragmentation stats for the Vulkan memory manager |
-| `vulkan_memgr_print` | `developmentonly` `defensive` | Prints out stats for the Vulkan memory manager |
-| `vulkan_pipelinemgr_print` | `developmentonly` `defensive` | Prints out stats for the Vulkan Pipeline manager |
-| `vulkan_shader_table_print` | `developmentonly` `defensive` | Prints out stats for the Vulkan shader table |
-| `vulkan_vma_defrag` | `developmentonly` `defensive` | Force defragmenting memory with VMA |
-| `vulkan_vma_gpu_mem_dump` | `developmentonly` `defensive` | Dump .json file for use by GpuMemDumpVis.py |
 | `weapon_switch` | `developmentonly` `gamedll` | Use a particular weapon |
 | `workshop_annotation_submit` | `clientdll` `release` | Submit annotation to workshop. To update an existing submission add its ID number from the workshop URL as a second argument. |
 | `workshop_item_submit` | `clientdll` `hidden` `release` | <no description> |

@@ -102,7 +102,7 @@ nav_exclude: true
 | [RnShapeDesc_t](#rnshapedesc_t) | class |  | 0 |
 | [RnSoftbodyCapsule_t](#rnsoftbodycapsule_t) | class |  | 0 |
 | [RnSoftbodyParticle_t](#rnsoftbodyparticle_t) | class |  | 0 |
-| [RnSoftbodySpring_t](#rnsoftbodyspring_t) | class |  | 0 |
+| [RnSoftbodySpring_t](#rnsoftbodyspring_t) | class |  | 2 |
 | [RnSphereDesc_t](#rnspheredesc_t) | class | RnShapeDesc_t | 0 |
 | [RnTriangle_t](#rntriangle_t) | class |  | 0 |
 | [RnVertex_t](#rnvertex_t) | class |  | 0 |
@@ -297,7 +297,7 @@ classDiagram
 
 ### FeDynKinLink_t
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_nParent": 0,`, `"m_nChild": 0`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_nParent": 5,`, `"m_nChild": 0`, `}`
 
 ### FeEdgeDesc_t
 
@@ -580,7 +580,7 @@ classDiagram
 
 ### RnHalfEdge_t
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_nNext": 0,`, `"m_nTwin": 0,`, `"m_nOrigin": 0,`, `"m_nFace": 0`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_nNext": 5,`, `"m_nTwin": 0,`, `"m_nOrigin": 0,`, `"m_nFace": 0`, `}`
 
 ### RnHullDesc_t
 
@@ -650,7 +650,14 @@ classDiagram
 
 ### RnSoftbodySpring_t
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_nParticle":`, `[`, `0,`, `0`, `],`, `"m_flLength": 0.000000`, `}`
+**Metadata:** `MGetKV3ClassDefaults = Could not parse KV3 Defaults`
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `m_nParticle` | uint16[2] |  |
+| `m_flLength` | float32 |  |
 
 ### RnSphereDesc_t
 
