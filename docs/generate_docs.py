@@ -391,20 +391,20 @@ def parse_commands(path: Path) -> list[dict]:
 
 # Known field types in .gameevents files and their JSON Schema equivalents.
 _GAMEEVENTS_TYPE_MAP: dict[str, dict[str, str]] = {
-    "none":                         {"type": "null",    "description": "Value is not networked"},
-    "string":                       {"type": "string",  "description": "A zero-terminated string"},
-    "bool":                         {"type": "boolean", "description": "Unsigned int, 1 bit"},
-    "byte":                         {"type": "integer", "description": "Unsigned int, 8 bit"},
-    "short":                        {"type": "integer", "description": "Signed int, 16 bit"},
-    "long":                         {"type": "integer", "description": "Signed int, 32 bit"},
-    "int":                          {"type": "integer", "description": "Signed integer"},
-    "float":                        {"type": "number",  "description": "Float, 32 bit"},
-    "uint64":                       {"type": "string",  "description": "Unsigned 64-bit integer (string-encoded)"},
-    "local":                        {"type": "string",  "description": "Any data, not networked"},
-    "player_controller":            {"type": "integer", "description": "Player controller entity reference"},
-    "player_controller_and_pawn":   {"type": "integer", "description": "Player controller + pawn entity reference"},
-    "player_pawn":                  {"type": "integer", "description": "Player pawn entity reference"},
-    "ehandle":                      {"type": "integer", "description": "Entity handle"},
+    "none":                       {"type": "null",    "description": "Value is not networked"},
+    "string":                     {"type": "string",  "description": "A zero-terminated string"},
+    "bool":                       {"type": "boolean", "description": "Unsigned int, 1 bit"},
+    "byte":                       {"type": "integer", "description": "Unsigned int, 8 bit"},
+    "short":                      {"type": "integer", "description": "Signed int, 16 bit"},
+    "long":                       {"type": "integer", "description": "Signed int, 32 bit"},
+    "int":                        {"type": "integer", "description": "Signed integer"},
+    "float":                      {"type": "number",  "description": "Float, 32 bit"},
+    "uint64":                     {"type": "string",  "description": "Unsigned 64-bit integer (string-encoded)"},
+    "local":                      {"type": "string",  "description": "Any data, not networked"},
+    "player_controller":          {"type": "integer", "description": "Player controller entity reference"},
+    "player_controller_and_pawn": {"type": "integer", "description": "Player controller + pawn entity reference"},
+    "player_pawn":                {"type": "integer", "description": "Player pawn entity reference"},
+    "ehandle":                    {"type": "integer", "description": "Entity handle"},
 }
 
 # These keys inside an event body are event-level metadata, not field defs.
