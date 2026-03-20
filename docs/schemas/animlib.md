@@ -428,7 +428,7 @@ classDiagram
 
 ### CNmClip
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_skeleton": "",`, `"m_nNumFrames": 0,`, `"m_flDuration": 0.000000,`, `"m_compressedPoseData": "[BINARY BLOB]",`, `"m_trackCompressionSettings":`, `[`, `],`, `"m_compressedPoseOffsets":`, `[`, `],`, `"m_floatCurveIDs":`, `[`, `],`, `"m_floatCurveDefs":`, `[`, `],`, `"m_compressedFloatCurveData":`, `[`, `],`, `"m_compressedFloatCurveOffsets":`, `[`, `],`, `"m_secondaryAnimations":`, `[`, `],`, `"m_syncTrack":`, `{`, `"m_syncEvents":`, `[`, `{`, `"m_ID": "",`, `"m_startTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_duration":`, `{`, `"m_flValue": 1.000000`, `}`, `}`, `],`, `"m_nStartEventOffset": 0`, `},`, `"m_rootMotion":`, `{`, `"m_transforms":`, `[`, `],`, `"m_nNumFrames": 0,`, `"m_flAverageLinearVelocity": 0.000000,`, `"m_flAverageAngularVelocityRadians": 0.000000,`, `"m_totalDelta":`, `[`, `0.000000,`, `0.000000,`, `0.000000,`, `0.000000,`, `0.000000,`, `0.000000,`, `0.000000,`, `0.000000`, `]`, `},`, `"m_bIsAdditive": false,`, `"m_modelSpaceSamplingChain":`, `[`, `],`, `"m_modelSpaceBoneSamplingIndices":`, `[`, `],`, `"m_events":`, `[`, `]`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_skeleton": "",`, `"m_nNumFrames": 0,`, `"m_flDuration": 0.000000,`, `"m_compressedPoseData": "[BINARY BLOB]",`, `"m_trackCompressionSettings":`, `[`, `],`, `"m_compressedPoseOffsets":`, `[`, `],`, `"m_floatCurveIDs":`, `[`, `],`, `"m_floatCurveDefs":`, `[`, `],`, `"m_compressedFloatCurveData":`, `[`, `],`, `"m_compressedFloatCurveOffsets":`, `[`, `],`, `"m_secondaryAnimations":`, `[`, `],`, `"m_syncTrack":`, `{`, `"m_syncEvents":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_startTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_duration":`, `{`, `"m_flValue": 1.000000`, `}`, `}`, `],`, `"m_nStartEventOffset": 0`, `},`, `"m_rootMotion":`, `{`, `"m_transforms":`, `[`, `],`, `"m_nNumFrames": 0,`, `"m_flAverageLinearVelocity": 0.000000,`, `"m_flAverageAngularVelocityRadians": 0.000000,`, `"m_totalDelta":`, `[`, `0.000000,`, `0.000000,`, `0.000000,`, `0.000000,`, `0.000000,`, `0.000000,`, `0.000000,`, `0.000000`, `]`, `},`, `"m_bIsAdditive": false,`, `"m_modelSpaceSamplingChain":`, `[`, `],`, `"m_modelSpaceBoneSamplingIndices":`, `[`, `],`, `"m_events":`, `[`, `]`, `}`
 
 ### CNmClip
 
@@ -646,7 +646,7 @@ classDiagram
 
 **Inherits from:** [CNmEvent](animlib.md#cnmevent)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmFloatCurveEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_bClientOnly": false,`, `"m_ID": "",`, `"m_curve":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `}`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmFloatCurveEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_bClientOnly": false,`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_curve":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `}`, `}`
 
 **Relationships:**
 
@@ -829,7 +829,7 @@ classDiagram
 
 **Inherits from:** [CNmEvent](animlib.md#cnmevent)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmIDEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_bClientOnly": false,`, `"m_ID": "",`, `"m_secondaryID": ""`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmIDEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_bClientOnly": false,`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_secondaryID": ""`, `}`
 
 **Relationships:**
 
@@ -1143,7 +1143,7 @@ classDiagram
 
 ### CNmSkeleton
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_ID": "",`, `"m_boneIDs":`, `[`, `],`, `"m_parentIndices":`, `[`, `],`, `"m_parentSpaceReferencePose":`, `[`, `],`, `"m_modelSpaceReferencePose":`, `[`, `],`, `"m_numBonesToSampleAtLowLOD": 0,`, `"m_maskDefinitions":`, `[`, `],`, `"m_secondarySkeletons":`, `[`, `],`, `"m_bIsPropSkeleton": false`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_boneIDs":`, `[`, `],`, `"m_parentIndices":`, `[`, `],`, `"m_parentSpaceReferencePose":`, `[`, `],`, `"m_modelSpaceReferencePose":`, `[`, `],`, `"m_numBonesToSampleAtLowLOD": 0,`, `"m_maskDefinitions":`, `[`, `],`, `"m_secondarySkeletons":`, `[`, `],`, `"m_bIsPropSkeleton": false`, `}`
 
 ### CNmSkeleton
 
@@ -1204,7 +1204,7 @@ classDiagram
 
 ### CNmStateNode
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_ID": "",`, `"m_flTimeValueSeconds": 0.000000,`, `"m_comparisionOperator": "LessThanEqual"`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_flTimeValueSeconds": 0.000000,`, `"m_comparisionOperator": "LessThanEqual"`, `}`
 
 ### CNmStateNode
 
@@ -1230,7 +1230,7 @@ classDiagram
 
 ### CNmSyncTrack
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_syncEvents":`, `[`, `{`, `"m_ID": "",`, `"m_startTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_duration":`, `{`, `"m_flValue": 1.000000`, `}`, `}`, `],`, `"m_nStartEventOffset": 0`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_syncEvents":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_startTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_duration":`, `{`, `"m_flValue": 1.000000`, `}`, `}`, `],`, `"m_nStartEventOffset": 0`, `}`
 
 ### CNmSyncTrack
 
@@ -1238,7 +1238,7 @@ classDiagram
 
 ### CNmSyncTrack
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_ID": "",`, `"m_startTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_duration":`, `{`, `"m_flValue": 1.000000`, `}`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_startTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_duration":`, `{`, `"m_flValue": 1.000000`, `}`, `}`
 
 ### CNmTarget
 
@@ -1467,7 +1467,7 @@ classDiagram
 
 ### NmBoneMaskSetDefinition_t
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_ID": "",`, `"m_primaryWeightList":`, `{`, `"m_skeletonName": "",`, `"m_boneIDs":`, `[`, `],`, `"m_weights":`, `[`, `]`, `},`, `"m_secondaryWeightLists":`, `[`, `]`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_primaryWeightList":`, `{`, `"m_skeletonName": "",`, `"m_boneIDs":`, `[`, `],`, `"m_weights":`, `[`, `]`, `},`, `"m_secondaryWeightLists":`, `[`, `]`, `}`
 
 ### NmCachedValueMode_t
 

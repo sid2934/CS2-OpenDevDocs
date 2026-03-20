@@ -20,7 +20,7 @@ nav_exclude: true
 | [AnimTagID](#animtagid) | class |  | 0 |
 | [AttachmentHandle_t](#attachmenthandle_t) | class |  | 1 |
 | [CAimConstraint](#caimconstraint) | class | CBaseConstraint | 0 |
-| [CAnimAttachment](#canimattachment) | class |  | 0 |
+| [CAnimAttachment](#canimattachment) | class |  | 5 |
 | [CAnimCycle](#canimcycle) | class | CCycleBase | 0 |
 | [CAnimFoot](#canimfoot) | class |  | 0 |
 | [CAnimSkeleton](#canimskeleton) | class |  | 0 |
@@ -156,31 +156,31 @@ nav_exclude: true
 
 ### AnimComponentID
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_id": 4294967295`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_id": <HIDDEN FOR DIFF>,`, `}`
 
 ### AnimNodeID
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_id": 4294967295`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_id": <HIDDEN FOR DIFF>,`, `}`
 
 ### AnimNodeOutputID
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_id": 4294967295`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_id": <HIDDEN FOR DIFF>,`, `}`
 
 ### AnimParamID
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_id": 4294967295`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_id": <HIDDEN FOR DIFF>,`, `}`
 
 ### AnimScriptHandle
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_id": 4294967295`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_id": <HIDDEN FOR DIFF>,`, `}`
 
 ### AnimStateID
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_id": 4294967295`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_id": <HIDDEN FOR DIFF>,`, `}`
 
 ### AnimTagID
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_id": 4294967295`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_id": <HIDDEN FOR DIFF>,`, `}`
 
 ### AttachmentHandle_t
 
@@ -208,7 +208,17 @@ classDiagram
 
 ### CAnimAttachment
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_influenceRotations":`, `[`, `[`, `0.000000,`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `[`, `0.000000,`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `[`, `0.000000,`, `0.000000,`, `0.000000,`, `0.000000`, `]`, `],`, `"m_influenceOffsets":`, `[`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `]`, `],`, `"m_influenceIndices":`, `[`, `0,`, `0,`, `0`, `],`, `"m_influenceWeights":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_numInfluences": 0`, `}`
+**Metadata:** `MGetKV3ClassDefaults = Could not parse KV3 Defaults`
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `m_influenceRotations` | Quaternion[3] |  |
+| `m_influenceOffsets` | VectorAligned[3] |  |
+| `m_influenceIndices` | int32[3] |  |
+| `m_influenceWeights` | float32[3] |  |
+| `m_numInfluences` | uint8 |  |
 
 ### CAnimCycle
 

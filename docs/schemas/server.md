@@ -79,7 +79,7 @@ nav_exclude: true
 | [CBuyZone](#cbuyzone) | class | CBaseTrigger | 1 |
 | [CC4](#cc4) | class | CCSWeaponBase | 11 |
 | [CCS2WeaponGraphController](#ccs2weapongraphcontroller) | class | CAnimGraphControllerBase | 0 |
-| [CCSBot](#ccsbot) | class | CBot | 139 |
+| [CCSBot](#ccsbot) | class | CBot | 140 |
 | [CCSGO_TeamIntroCharacterPosition](#ccsgo_teamintrocharacterposition) | class | CCSGO_TeamPreviewCharacterPosition | 0 |
 | [CCSGO_TeamIntroCounterTerroristPosition](#ccsgo_teamintrocounterterroristposition) | class | CCSGO_TeamIntroCharacterPosition | 0 |
 | [CCSGO_TeamIntroTerroristPosition](#ccsgo_teamintroterroristposition) | class | CCSGO_TeamIntroCharacterPosition | 0 |
@@ -550,7 +550,7 @@ nav_exclude: true
 | [CRuleEntity](#cruleentity) | class | CBaseModelEntity | 1 |
 | [CRulePointEntity](#crulepointentity) | class | CRuleEntity | 1 |
 | [CSAdditionalMatchStats_t](#csadditionalmatchstats_t) | class | CSAdditionalPerRoundStats_t | 12 |
-| [CSAdditionalPerRoundStats_t](#csadditionalperroundstats_t) | class |  | 11 |
+| [CSAdditionalPerRoundStats_t](#csadditionalperroundstats_t) | class |  | 12 |
 | [CSMatchStats_t](#csmatchstats_t) | class | CSPerRoundStats_t | 21 |
 | [CSPerRoundStats_t](#csperroundstats_t) | class |  | 13 |
 | [CSceneEntity](#csceneentity) | class | CPointEntity | 62 |
@@ -911,16 +911,16 @@ classDiagram
 | `m_PredNetVectorVariables` | CNetworkUtlVectorBase< Vector > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkChangeCallback = "OnNetVectorVarChanged"` `MNetworkAlias = "m_PredVectorVariables"` |
 | `m_PredNetQuaternionVariables` | CNetworkUtlVectorBase< Quaternion > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkChangeCallback = "OnNetQuaternionVarChanged"` `MNetworkAlias = "m_PredQuaternionVariables"` |
 | `m_PredNetGlobalSymbolVariables` | CNetworkUtlVectorBase< CGlobalSymbol > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkChangeCallback = "OnNetGlobalSymbolVarChanged"` `MNetworkAlias = "m_PredGlobalSymbolVariables"` |
-| `m_OwnerOnlyPredNetBoolVariables` | CNetworkUtlVectorBase< uint32 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` `MNetworkChangeCallback = "OnNetOOBoolVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetBoolVariables"` |
-| `m_OwnerOnlyPredNetByteVariables` | CNetworkUtlVectorBase< uint8 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` `MNetworkChangeCallback = "OnNetOOByteVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetByteVariables"` |
-| `m_OwnerOnlyPredNetUInt16Variables` | CNetworkUtlVectorBase< uint16 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` `MNetworkChangeCallback = "OnNetOOUInt16VarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetUInt16Variables"` |
-| `m_OwnerOnlyPredNetIntVariables` | CNetworkUtlVectorBase< int32 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` `MNetworkChangeCallback = "OnNetOOIntVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetIntVariables"` |
-| `m_OwnerOnlyPredNetUInt32Variables` | CNetworkUtlVectorBase< uint32 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` `MNetworkChangeCallback = "OnNetOOUInt32VarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetUInt32Variables"` |
-| `m_OwnerOnlyPredNetUInt64Variables` | CNetworkUtlVectorBase< uint64 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` `MNetworkChangeCallback = "OnNetOOUInt64VarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetUInt64Variables"` |
-| `m_OwnerOnlyPredNetFloatVariables` | CNetworkUtlVectorBase< float32 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` `MNetworkChangeCallback = "OnNetOOFloatVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetFloatVariables"` |
-| `m_OwnerOnlyPredNetVectorVariables` | CNetworkUtlVectorBase< Vector > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` `MNetworkChangeCallback = "OnNetOOVectorVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetVectorVariables"` |
-| `m_OwnerOnlyPredNetQuaternionVariables` | CNetworkUtlVectorBase< Quaternion > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` `MNetworkChangeCallback = "OnNetOOQuaternionVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetQuaternionVariables"` |
-| `m_OwnerOnlyPredNetGlobalSymbolVariables` | CNetworkUtlVectorBase< CGlobalSymbol > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` `MNetworkChangeCallback = "OnNetOOGlobalSymbolVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetGlobalSymbolVariables"` |
+| `m_OwnerOnlyPredNetBoolVariables` | CNetworkUtlVectorBase< uint32 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOBoolVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetBoolVariables"` |
+| `m_OwnerOnlyPredNetByteVariables` | CNetworkUtlVectorBase< uint8 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOByteVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetByteVariables"` |
+| `m_OwnerOnlyPredNetUInt16Variables` | CNetworkUtlVectorBase< uint16 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOUInt16VarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetUInt16Variables"` |
+| `m_OwnerOnlyPredNetIntVariables` | CNetworkUtlVectorBase< int32 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOIntVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetIntVariables"` |
+| `m_OwnerOnlyPredNetUInt32Variables` | CNetworkUtlVectorBase< uint32 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOUInt32VarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetUInt32Variables"` |
+| `m_OwnerOnlyPredNetUInt64Variables` | CNetworkUtlVectorBase< uint64 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOUInt64VarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetUInt64Variables"` |
+| `m_OwnerOnlyPredNetFloatVariables` | CNetworkUtlVectorBase< float32 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOFloatVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetFloatVariables"` |
+| `m_OwnerOnlyPredNetVectorVariables` | CNetworkUtlVectorBase< Vector > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOVectorVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetVectorVariables"` |
+| `m_OwnerOnlyPredNetQuaternionVariables` | CNetworkUtlVectorBase< Quaternion > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOQuaternionVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetQuaternionVariables"` |
+| `m_OwnerOnlyPredNetGlobalSymbolVariables` | CNetworkUtlVectorBase< CGlobalSymbol > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOGlobalSymbolVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetGlobalSymbolVariables"` |
 | `m_nBoolVariablesCount` | int32 | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` |
 | `m_nOwnerOnlyBoolVariablesCount` | int32 | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` |
 | `m_nRandomSeedOffset` | int32 | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` |
@@ -1164,10 +1164,10 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_graphControllerManager` | [CAnimGraphControllerManager](../schemas/client.md#canimgraphcontrollermanager) | `MSaveOpsForField (UNKNOWN FOR PARSER)` |
-| `m_pMainGraphController` | [CAnimGraphControllerBase](../schemas/client.md#canimgraphcontrollerbase)* | `MSaveOpsForField (UNKNOWN FOR PARSER)` |
+| `m_graphControllerManager` | [CAnimGraphControllerManager](../schemas/client.md#canimgraphcontrollermanager) | `MSaveOpsForField = "GetAnimGraphControllerManagerSaveRestoreOps"` |
+| `m_pMainGraphController` | [CAnimGraphControllerBase](../schemas/client.md#canimgraphcontrollerbase)* | `MSaveOpsForField = "GetAnimGraphControllerPtrSaveRestoreOps"` |
 | `m_bInitiallyPopulateInterpHistory` | bool | `MNetworkEnable` |
-| `m_pChoreoServices` | [IChoreoServices](../schemas/client.md#ichoreoservices)* | `MSaveOpsForField (UNKNOWN FOR PARSER)` |
+| `m_pChoreoServices` | [IChoreoServices](../schemas/client.md#ichoreoservices)* | `MSaveOpsForField = "GetChoreoServicesSaveRestoreOps"` |
 | `m_bAnimGraphUpdateEnabled` | bool | `MNetworkEnable` |
 | `m_flMaxSlopeDistance` | float32 |  |
 | `m_vLastSlopeCheckPos` | VectorWS | `MNotSaved` |
@@ -1208,7 +1208,7 @@ classDiagram
 |------|------|-------------|
 | `m_nAnimationAlgorithm` | [AnimationAlgorithm_t](../schemas/client.md#animationalgorithm_t) | `MNetworkEnable` `MNetworkChangeCallback = "AG2_OnAnimGraphDefinitionOrModeChanged"` |
 | `m_animGraphNetworkedVars` | [CAnimGraphNetworkedVariables](../schemas/server.md#canimgraphnetworkedvariables) | `MNetworkEnable` |
-| `m_pAnimGraphInstance` | CSmartPtr< [IAnimationGraphInstance](../schemas/animgraphlib.md#ianimationgraphinstance) > | `MSaveOpsForField (UNKNOWN FOR PARSER)` |
+| `m_pAnimGraphInstance` | CSmartPtr< [IAnimationGraphInstance](../schemas/animgraphlib.md#ianimationgraphinstance) > | `MSaveOpsForField = "GetAnimGraphSaveRestoreOps"` |
 | `m_nNextExternalGraphHandle` | [ExternalAnimGraphHandle_t](../schemas/client.md#externalanimgraphhandle_t) |  |
 | `m_vecSecondarySkeletonNames` | CUtlVector< CGlobalSymbol > |  |
 | `m_vecSecondarySkeletons` | CNetworkUtlVectorBase< CHandle< [CBaseAnimGraph](../schemas/server.md#cbaseanimgraph) > > | `MNetworkEnable` `MNetworkChangeCallback = "OnSecondarySkeletonsChanged"` |
@@ -1622,7 +1622,7 @@ classDiagram
 |------|------|-------------|
 | `m_CBodyComponent` | [CBodyComponent](../schemas/server.md#cbodycomponent)* | `MNetworkEnable` `MNetworkUserGroup = "CBodyComponent"` `MNetworkAlias = "CBodyComponent"` `MNetworkTypeAlias = "CBodyComponent"` `MNetworkPriority = 48` |
 | `m_NetworkTransmitComponent` | [CNetworkTransmitComponent](../schemas/client.md#cnetworktransmitcomponent) |  |
-| `m_aThinkFunctions` | CUtlVector< thinkfunc_t > | `MSaveOpsForField (UNKNOWN FOR PARSER)` |
+| `m_aThinkFunctions` | CUtlVector< thinkfunc_t > | `MSaveOpsForField = "GetThinkContextSaveDataOps"` |
 | `m_iCurrentThinkContext` | int32 | `MNotSaved` |
 | `m_nLastThinkTick` | [GameTick_t](../schemas/entity2.md#gametick_t) |  |
 | `m_bDisabledContextThinks` | bool |  |
@@ -1647,9 +1647,9 @@ classDiagram
 | `m_hDamageFilter` | CHandle< [CBaseFilter](../schemas/server.md#cbasefilter) > |  |
 | `m_iszDamageFilterName` | CUtlSymbolLarge |  |
 | `m_flMoveDoneTime` | float32 |  |
-| `m_nSubclassID` | CUtlStringToken | `MNetworkEnable` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` |
+| `m_nSubclassID` | CUtlStringToken | `MNetworkEnable` `MNetworkSendProxyRecipientsFilter = "SubclassID_RecipientsFilter"` |
 | `m_flAnimTime` | float32 | Floating-point timestamp of the most-recent animation update; used by the client for animation interpolation. `MNetworkEnable` `MNetworkPriority = 0` `MNetworkSerializer = "animTimeSerializer"` `MNetworkUserGroup = "AnimTime"` |
-| `m_flSimulationTime` | float32 | Floating-point timestamp of the most-recent physics simulation step; used by the client for position interpolation. `MNetworkEnable` `MNetworkPriority = 1` `MNetworkSerializer = "simulationTimeSerializer"` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` |
+| `m_flSimulationTime` | float32 | Floating-point timestamp of the most-recent physics simulation step; used by the client for position interpolation. `MNetworkEnable` `MNetworkPriority = 1` `MNetworkSerializer = "simulationTimeSerializer"` `MNetworkSendProxyRecipientsFilter = "SendProxyNoPlayerEntities_RecipientsFilter"` |
 | `m_flCreateTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` |
 | `m_bClientSideRagdoll` | bool | `MNetworkEnable` |
 | `m_ubInterpolationFrame` | uint8 | `MNetworkEnable` |
@@ -1699,7 +1699,7 @@ classDiagram
 | `m_flLocalTime` | float32 |  |
 | `m_flVPhysicsUpdateLocalTime` | float32 |  |
 | `m_nBloodType` | [BloodType](../schemas/client.md#bloodtype) | `MNetworkEnable` |
-| `m_pPulseGraphInstance` | [CPulseGraphInstance_ServerEntity](../schemas/server.md#cpulsegraphinstance_serverentity)* | `MSaveOpsForField (UNKNOWN FOR PARSER)` |
+| `m_pPulseGraphInstance` | [CPulseGraphInstance_ServerEntity](../schemas/server.md#cpulsegraphinstance_serverentity)* | `MSaveOpsForField = "GetPulseInstanceSaveRestoreOps"` |
 
 ### CBaseEntityAPI
 
@@ -1844,7 +1844,7 @@ classDiagram
 | Name | Type | Annotations |
 |------|------|-------------|
 | `m_szTypeString` | char[64] |  |
-| `m_szDetailsString` | char[4096] |  |
+| `m_szDetailsString` | char[260] |  |
 | `m_iNumYesVotes` | int32 |  |
 | `m_iNumNoVotes` | int32 |  |
 | `m_iNumPotentialVotes` | int32 |  |
@@ -1954,7 +1954,7 @@ classDiagram
 | `m_flShadowStrength` | float32 | Opacity of this entity's cast shadow (0 = no shadow, 1 = full shadow). `MNetworkEnable` |
 | `m_nObjectCulling` | uint8 | `MNetworkEnable` |
 | `m_vecViewOffset` | [CNetworkViewOffsetVector](../schemas/client.md#cnetworkviewoffsetvector) | Offset from the entity origin to the player's view position (eye height). `MNetworkEnable` `MNetworkPriority = 32` `MNetworkUserGroup = "Player"` |
-| `m_bvDisabledHitGroups` | uint32[1] | `MNetworkEnable` `MNetworkChangeCallback = "OnDisabledHitgroupsChanged"` `MSaveOpsForField (UNKNOWN FOR PARSER)` |
+| `m_bvDisabledHitGroups` | uint32[1] | `MNetworkEnable` `MNetworkChangeCallback = "OnDisabledHitgroupsChanged"` `MSaveOpsForField = "GetHitgroupDisableListSaveRestoreOps"` |
 
 ### CBaseModelEntityAPI
 
@@ -3102,6 +3102,7 @@ classDiagram
 | `m_bendNoisePositionValid` | bool |  |
 | `m_lookAroundStateTimestamp` | float32 |  |
 | `m_lookAheadAngle` | float32 |  |
+| `m_lookUpAngle` | float32 |  |
 | `m_forwardAngle` | float32 |  |
 | `m_inhibitLookAroundTimestamp` | float32 |  |
 | `m_lookAtSpot` | Vector |  |
@@ -11229,8 +11230,8 @@ classDiagram
 | Name | Type | Annotations |
 |------|------|-------------|
 | `m_hSequence` | [HSequence](../schemas/animationsystem.md#hsequence) | `MNetworkEnable` `MNetworkSerializer = "minusone"` `MNetworkChangeCallback = "sequenceOpSequenceChanged"` `MNetworkPriority = 32` |
-| `m_flPrevCycle` | float32 | `MNetworkEnable` `MNetworkBitCount = 15` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 1.000000` `MNetworkEncodeFlags = 8` `MNetworkPriority = 32` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` `MNetworkUserGroup = "m_flCycle"` |
-| `m_flCycle` | float32 | `MNetworkEnable` `MNetworkBitCount = 15` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 1.000000` `MNetworkEncodeFlags = 8` `MNetworkPriority = 32` `MNetworkSendProxyRecipientsFilter (UNKNOWN FOR PARSER)` `MNetworkUserGroup = "m_flCycle"` |
+| `m_flPrevCycle` | float32 | `MNetworkEnable` `MNetworkBitCount = 15` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 1.000000` `MNetworkEncodeFlags = 8` `MNetworkPriority = 32` `MNetworkSendProxyRecipientsFilter = "SendProxyNeverSend_RecipientsFilter"` `MNetworkUserGroup = "m_flCycle"` |
+| `m_flCycle` | float32 | `MNetworkEnable` `MNetworkBitCount = 15` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 1.000000` `MNetworkEncodeFlags = 8` `MNetworkPriority = 32` `MNetworkSendProxyRecipientsFilter = "SendProxyNeverSend_RecipientsFilter"` `MNetworkUserGroup = "m_flCycle"` |
 | `m_flWeight` | CNetworkedQuantizedFloat | `MNetworkEnable` `MNetworkBitCount = 8` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 1.000000` `MNetworkEncodeFlags = 0` |
 | `m_bSequenceChangeNetworked` | bool |  |
 | `m_bDiscontinuity` | bool |  |
@@ -13747,7 +13748,7 @@ classDiagram
 
 **Inherits from:** [CPulseCell_BaseYieldingInflow](pulse_runtime_lib.md#cpulsecell_baseyieldinginflow)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CPulseCell_Outflow_ListenForAnimgraphTag",`, `"m_nEditorNodeID": -1,`, `"m_OnStart":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `},`, `"m_OnEnd":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `},`, `"m_OnCanceled":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `},`, `"m_TagName": ""`, `}`, `MPropertyFriendlyName = "Listen for AnimGraph Tag"`, `MPropertyDescription = "Creates new cursors for when an animgraph tag is handled. Will listen until canceled."`, `MPulseEditorSubHeaderText (UNKNOWN FOR PARSER)`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CPulseCell_Outflow_ListenForAnimgraphTag",`, `"m_nEditorNodeID": -1,`, `"m_OnStart":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `},`, `"m_OnEnd":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `},`, `"m_OnCanceled":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `},`, `"m_TagName": ""`, `}`, `MPropertyFriendlyName = "Listen for AnimGraph Tag"`, `MPropertyDescription = "Creates new cursors for when an animgraph tag is handled. Will listen until canceled."`, `MPulseEditorSubHeaderText = "{ 'TagName'='m_TagName' }"`
 
 **Relationships:**
 
@@ -13762,7 +13763,7 @@ classDiagram
 
 **Inherits from:** [CPulseCell_BaseYieldingInflow](pulse_runtime_lib.md#cpulsecell_baseyieldinginflow)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CPulseCell_Outflow_ListenForEntityOutput",`, `"m_nEditorNodeID": -1,`, `"m_OnFired":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `},`, `"m_OnCanceled":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `},`, `"m_strEntityOutput": "",`, `"m_strEntityOutputParam": "",`, `"m_bListenUntilCanceled": false`, `}`, `MPropertyFriendlyName = "Wait for Entity Output"`, `MPropertyDescription = "Waits for the entity to fire a specific output. By default, this listens once, but can be configured to listen until canceled."`, `MPulseEditorSubHeaderText (UNKNOWN FOR PARSER)`, `MPulseEditorHeaderIcon = "tools/images/pulse_editor/inflow_wait.png"`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CPulseCell_Outflow_ListenForEntityOutput",`, `"m_nEditorNodeID": -1,`, `"m_OnFired":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `},`, `"m_OnCanceled":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `},`, `"m_strEntityOutput": "",`, `"m_strEntityOutputParam": "",`, `"m_bListenUntilCanceled": false`, `}`, `MPropertyFriendlyName = "Wait for Entity Output"`, `MPropertyDescription = "Waits for the entity to fire a specific output. By default, this listens once, but can be configured to listen until canceled."`, `MPulseEditorSubHeaderText = "{ 'Output'='m_strEntityOutput' 'Param'='m_strEntityOutputParam' 'Until Canceled'='m_bListenUntilCanceled' }"`, `MPulseEditorHeaderIcon = "tools/images/pulse_editor/inflow_wait.png"`
 
 **Relationships:**
 
@@ -14566,6 +14567,7 @@ classDiagram
 | `m_nDefuseStarts` | int32 |  |
 | `m_nHostagePickUps` | int32 |  |
 | `m_numTeammatesFlashed` | int32 |  |
+| `m_strAnnotationsWorkshopId` | CUtlString |  |
 
 ### CSMatchStats_t
 
