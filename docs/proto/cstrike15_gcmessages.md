@@ -625,6 +625,7 @@ direction LR
     +uint32 join_ipp
     +CMsgGCCStrike15_v2_MatchmakingGC2ClientReserve res
     +string errormsg
+    +bool is_local_server
   }
 
   class CMsgGCCStrike15_v2_ClientRequestJoinServerData {
@@ -2496,6 +2497,7 @@ direction LR
 | `join_ipp` | 4 | uint32 | optional |  |
 | `res` | 5 | [CMsgGCCStrike15_v2_MatchmakingGC2ClientReserve](#cmsggccstrike15_v2_matchmakinggc2clientreserve) | optional |  |
 | `errormsg` | 6 | string | optional |  |
+| `is_local_server` | 7 | bool | optional |  |
 
 ### `CMsgGCCStrike15_v2_ClientRequestJoinServerData`
 

@@ -32,7 +32,7 @@ nav_exclude: true
 | [NodeData_t](#nodedata_t) | class |  | 0 |
 | [ObjectTypeFlags_t](#objecttypeflags_t) | enum |  | 15 |
 | [PermEntityLumpData_t](#permentitylumpdata_t) | class |  | 0 |
-| [RTProxyBLAS_t](#rtproxyblas_t) | class |  | 0 |
+| [RTProxyBLAS_t](#rtproxyblas_t) | class |  | 9 |
 | [RTProxyInstanceFlags_t](#rtproxyinstanceflags_t) | enum |  | 2 |
 | [RTProxyInstanceInfo_t](#rtproxyinstanceinfo_t) | class |  | 0 |
 | [SceneObject_t](#sceneobject_t) | class |  | 0 |
@@ -184,7 +184,29 @@ classDiagram
 
 ### RTProxyBLAS_t
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_nFirstIndex": 0,`, `"m_nIndexCount": 0,`, `"m_nVBByteOffset": 0,`, `"m_nBaseVertex": 0,`, `"m_nVertexCount": 0,`, `"m_albedoFormat": "VERTEX_ALBEDO_NONE",`, `"m_boundLs":`, `{`, `"m_vMinBounds":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_vMaxBounds":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `]`, `},`, `"m_vVertexOriginLs":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_vVertexExtentLs":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `]`, `}`
+**Metadata:** `MGetKV3ClassDefaults = Could not parse KV3 Defaults`
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    RTProxyBLAS_t *-- VertexAlbedoFormat_t
+    RTProxyBLAS_t *-- AABB_t
+```
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `m_nFirstIndex` | uint32 |  |
+| `m_nIndexCount` | uint32 |  |
+| `m_nVBByteOffset` | uint32 |  |
+| `m_nBaseVertex` | uint32 |  |
+| `m_nVertexCount` | uint16 |  |
+| `m_albedoFormat` | [VertexAlbedoFormat_t](../schemas/modellib.md#vertexalbedoformat_t) |  |
+| `m_boundLs` | [AABB_t](../schemas/mathlib_extended.md#aabb_t) |  |
+| `m_vVertexOriginLs` | Vector |  |
+| `m_vVertexExtentLs` | Vector |  |
 
 ### RTProxyInstanceFlags_t
 

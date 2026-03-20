@@ -1,0 +1,19 @@
+---
+layout: default
+title: "UML: toolscene"
+parent: Schemas
+nav_exclude: true
+---
+
+# UML: toolscene
+
+Class relationships (inheritance and composition) for the `toolscene` module.
+
+**Arrow legend:** `<|--` inheritance &nbsp; `*--` composition &nbsp; `-->` association/pointer
+
+```mermaid
+classDiagram
+    CLightRigLight <|-- CLightRigPointLight
+    CLightRigLight <|-- CLightRigSpotLight
+    CLightRigLight <|-- CLightRigSunLight
+```

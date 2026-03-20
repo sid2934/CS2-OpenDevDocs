@@ -123,7 +123,7 @@ nav_exclude: true
 
 ### CBasePulseGraphInstance
 
-**Derived by:** [CParticleCollectionBindingInstance](particleslib.md#cparticlecollectionbindinginstance), [CPulseGraphInstance_ServerEntity](server.md#cpulsegraphinstance_serverentity), [CPulseGraphInstance_TestDomain](pulse_system.md#cpulsegraphinstance_testdomain), [CPulseGraphInstance_TestDomain_FakeEntityOwner](pulse_system.md#cpulsegraphinstance_testdomain_fakeentityowner), [CPulseGraphInstance_TurtleGraphics](pulse_system.md#cpulsegraphinstance_turtlegraphics)
+**Derived by:** [CParticleCollectionBindingInstance](particleslib.md#cparticlecollectionbindinginstance), [CPulseGraphInstance_ServerEntity](server.md#cpulsegraphinstance_serverentity), [CPulseGraphInstance_SmartPropEval](smartprops.md#cpulsegraphinstance_smartpropeval), [CPulseGraphInstance_TestDomain](pulse_system.md#cpulsegraphinstance_testdomain), [CPulseGraphInstance_TestDomain_FakeEntityOwner](pulse_system.md#cpulsegraphinstance_testdomain_fakeentityowner), [CPulseGraphInstance_TurtleGraphics](pulse_system.md#cpulsegraphinstance_turtlegraphics)
 
 **Relationships:**
 
@@ -134,6 +134,7 @@ classDiagram
     CBasePulseGraphInstance <|-- CPulseGraphInstance_TestDomain_FakeEntityOwner
     CBasePulseGraphInstance <|-- CPulseGraphInstance_TurtleGraphics
     CBasePulseGraphInstance <|-- CPulseGraphInstance_ServerEntity
+    CBasePulseGraphInstance <|-- CPulseGraphInstance_SmartPropEval
 ```
 
 ### CPulseArraylib
@@ -160,7 +161,7 @@ classDiagram
 
 **Inherits from:** [CPulseCell_Base](pulse_runtime_lib.md#cpulsecell_base)
 
-**Derived by:** [CPulseCell_BaseYieldingInflow](pulse_runtime_lib.md#cpulsecell_baseyieldinginflow), [CPulseCell_ExampleSelector](pulse_system.md#cpulsecell_exampleselector), [CPulseCell_Inflow_BaseEntrypoint](pulse_runtime_lib.md#cpulsecell_inflow_baseentrypoint), [CPulseCell_InlineNodeSkipSelector](pulse_runtime_lib.md#cpulsecell_inlinenodeskipselector), [CPulseCell_Outflow_CycleOrdered](pulse_runtime_lib.md#cpulsecell_outflow_cycleordered), [CPulseCell_Outflow_CycleRandom](pulse_runtime_lib.md#cpulsecell_outflow_cyclerandom), [CPulseCell_Outflow_CycleShuffled](pulse_runtime_lib.md#cpulsecell_outflow_cycleshuffled), [CPulseCell_Outflow_TestExplicitYesNo](pulse_system.md#cpulsecell_outflow_testexplicityesno), [CPulseCell_Outflow_TestRandomYesNo](pulse_system.md#cpulsecell_outflow_testrandomyesno), [CPulseCell_PickBestOutflowSelector](pulse_runtime_lib.md#cpulsecell_pickbestoutflowselector), [CPulseCell_SoundEventStart](server.md#cpulsecell_soundeventstart), [CPulseCell_Step_DebugLog](pulse_runtime_lib.md#cpulsecell_step_debuglog), [CPulseCell_Step_EntFire](client.md#cpulsecell_step_entfire), [CPulseCell_Step_FollowEntity](server.md#cpulsecell_step_followentity), [CPulseCell_Step_PublicOutput](pulse_runtime_lib.md#cpulsecell_step_publicoutput), [CPulseCell_Step_SetAnimGraphParam](server.md#cpulsecell_step_setanimgraphparam), [CPulseCell_Step_TestDomainCreateFakeEntity](pulse_system.md#cpulsecell_step_testdomaincreatefakeentity), [CPulseCell_Step_TestDomainDestroyFakeEntity](pulse_system.md#cpulsecell_step_testdomaindestroyfakeentity), [CPulseCell_Step_TestDomainEntFire](pulse_system.md#cpulsecell_step_testdomainentfire), [CPulseCell_Step_TestDomainTracepoint](pulse_system.md#cpulsecell_step_testdomaintracepoint), [CPulseCell_Test_MultiInflow_NoDefault](pulse_system.md#cpulsecell_test_multiinflow_nodefault), [CPulseCell_Test_MultiInflow_WithDefault](pulse_system.md#cpulsecell_test_multiinflow_withdefault), [CPulseCell_Test_MultiOutflow_WithParams](pulse_system.md#cpulsecell_test_multioutflow_withparams), [CPulseCell_Test_NoInflow](pulse_system.md#cpulsecell_test_noinflow)
+**Derived by:** [CPulseCell_BaseYieldingInflow](pulse_runtime_lib.md#cpulsecell_baseyieldinginflow), [CPulseCell_ExampleSelector](pulse_system.md#cpulsecell_exampleselector), [CPulseCell_Inflow_BaseEntrypoint](pulse_runtime_lib.md#cpulsecell_inflow_baseentrypoint), [CPulseCell_InlineNodeSkipSelector](pulse_runtime_lib.md#cpulsecell_inlinenodeskipselector), [CPulseCell_Outflow_CycleOrdered](pulse_runtime_lib.md#cpulsecell_outflow_cycleordered), [CPulseCell_Outflow_CycleRandom](pulse_runtime_lib.md#cpulsecell_outflow_cyclerandom), [CPulseCell_Outflow_CycleShuffled](pulse_runtime_lib.md#cpulsecell_outflow_cycleshuffled), [CPulseCell_Outflow_TestExplicitYesNo](pulse_system.md#cpulsecell_outflow_testexplicityesno), [CPulseCell_Outflow_TestRandomYesNo](pulse_system.md#cpulsecell_outflow_testrandomyesno), [CPulseCell_PickBestOutflowSelector](pulse_runtime_lib.md#cpulsecell_pickbestoutflowselector), [CPulseCell_SoundEventStart](server.md#cpulsecell_soundeventstart), [CPulseCell_Step_DebugLog](pulse_runtime_lib.md#cpulsecell_step_debuglog), [CPulseCell_Step_EntFire](client.md#cpulsecell_step_entfire), [CPulseCell_Step_FollowEntity](server.md#cpulsecell_step_followentity), [CPulseCell_Step_PublicOutput](pulse_runtime_lib.md#cpulsecell_step_publicoutput), [CPulseCell_Step_SetAnimGraphParam](server.md#cpulsecell_step_setanimgraphparam), [CPulseCell_Step_TestDomainCreateFakeEntity](pulse_system.md#cpulsecell_step_testdomaincreatefakeentity), [CPulseCell_Step_TestDomainDestroyFakeEntity](pulse_system.md#cpulsecell_step_testdomaindestroyfakeentity), [CPulseCell_Step_TestDomainEntFire](pulse_system.md#cpulsecell_step_testdomainentfire), [CPulseCell_Step_TestDomainTracepoint](pulse_system.md#cpulsecell_step_testdomaintracepoint), [CPulseCell_Test_MultiInflow_NoDefault](pulse_system.md#cpulsecell_test_multiinflow_nodefault), [CPulseCell_Test_MultiInflow_WithDefault](pulse_system.md#cpulsecell_test_multiinflow_withdefault), [CPulseCell_Test_MultiOutflow_WithParams](pulse_system.md#cpulsecell_test_multioutflow_withparams), [CPulseCell_Test_NoInflow](pulse_system.md#cpulsecell_test_noinflow), [CSmartPropPulse_BaseQueryableFlow](smartprops.md#csmartproppulse_basequeryableflow), [CSmartPropPulse_CreateRotator](smartprops.md#csmartproppulse_createrotator), [CSmartPropPulse_CreateSizer](smartprops.md#csmartproppulse_createsizer), [CSmartPropPulse_FitOnLine](smartprops.md#csmartproppulse_fitonline), [CSmartPropPulse_Group](smartprops.md#csmartproppulse_group), [CSmartPropPulse_PickOneSelector](smartprops.md#csmartproppulse_pickoneselector), [CSmartPropPulse_PlaceInSphere](smartprops.md#csmartproppulse_placeinsphere), [CSmartPropPulse_SmartProp](smartprops.md#csmartproppulse_smartprop)
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CPulseCell_BaseFlow",`, `"m_nEditorNodeID": -1`, `}`
 
@@ -193,6 +194,14 @@ classDiagram
     CPulseCell_BaseFlow <|-- CPulseCell_SoundEventStart
     CPulseCell_BaseFlow <|-- CPulseCell_Step_FollowEntity
     CPulseCell_BaseFlow <|-- CPulseCell_Step_SetAnimGraphParam
+    CPulseCell_BaseFlow <|-- CSmartPropPulse_BaseQueryableFlow
+    CPulseCell_BaseFlow <|-- CSmartPropPulse_CreateRotator
+    CPulseCell_BaseFlow <|-- CSmartPropPulse_CreateSizer
+    CPulseCell_BaseFlow <|-- CSmartPropPulse_FitOnLine
+    CPulseCell_BaseFlow <|-- CSmartPropPulse_Group
+    CPulseCell_BaseFlow <|-- CSmartPropPulse_PickOneSelector
+    CPulseCell_BaseFlow <|-- CSmartPropPulse_PlaceInSphere
+    CPulseCell_BaseFlow <|-- CSmartPropPulse_SmartProp
 ```
 
 ### CPulseCell_BaseLerp
@@ -237,7 +246,7 @@ classDiagram
 
 **Inherits from:** [CPulseCell_Base](pulse_runtime_lib.md#cpulsecell_base)
 
-**Derived by:** [CPulseCell_ExampleCriteria](pulse_system.md#cpulsecell_examplecriteria), [CPulseCell_IsRequirementValid](pulse_runtime_lib.md#cpulsecell_isrequirementvalid), [CPulseCell_LimitCount](pulse_runtime_lib.md#cpulsecell_limitcount)
+**Derived by:** [CPulseCell_ExampleCriteria](pulse_system.md#cpulsecell_examplecriteria), [CPulseCell_IsRequirementValid](pulse_runtime_lib.md#cpulsecell_isrequirementvalid), [CPulseCell_LimitCount](pulse_runtime_lib.md#cpulsecell_limitcount), [CSmartPropPulse_CriteriaPathPosition](smartprops.md#csmartproppulse_criteriapathposition), [CSmartPropPulse_SelectionChoiceWeight](smartprops.md#csmartproppulse_selectionchoiceweight), [CSmartPropPulse_SelectionEndCap](smartprops.md#csmartproppulse_selectionendcap), [CSmartPropPulse_SelectionLinearLength](smartprops.md#csmartproppulse_selectionlinearlength)
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CPulseCell_BaseRequirement",`, `"m_nEditorNodeID": -1`, `}`
 
@@ -249,6 +258,10 @@ classDiagram
     CPulseCell_BaseRequirement <|-- CPulseCell_IsRequirementValid
     CPulseCell_BaseRequirement <|-- CPulseCell_LimitCount
     CPulseCell_BaseRequirement <|-- CPulseCell_ExampleCriteria
+    CPulseCell_BaseRequirement <|-- CSmartPropPulse_CriteriaPathPosition
+    CPulseCell_BaseRequirement <|-- CSmartPropPulse_SelectionChoiceWeight
+    CPulseCell_BaseRequirement <|-- CSmartPropPulse_SelectionEndCap
+    CPulseCell_BaseRequirement <|-- CSmartPropPulse_SelectionLinearLength
 ```
 
 ### CPulseCell_BaseState

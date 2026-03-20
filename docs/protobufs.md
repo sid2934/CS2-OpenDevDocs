@@ -22,7 +22,7 @@ Network message definitions and game event structures from CS2's Protobufs direc
 | [demo.proto](proto/demo.md) | 20 | 1 |
 | [econ_gcmessages.proto](proto/econ_gcmessages.md) | 5 | 4 |
 | [engine_gcmessages.proto](proto/engine_gcmessages.md) | 1 | 0 |
-| [enums_clientserver.proto](proto/enums_clientserver.md) | 0 | 6 |
+| [enums_clientserver.proto](proto/enums_clientserver.md) | 0 | 4 |
 | [fatdemo.proto](proto/fatdemo.md) | 10 | 3 |
 | [gameevents.proto](proto/gameevents.md) | 13 | 1 |
 | [gcsdk_gcmessages.proto](proto/gcsdk_gcmessages.md) | 36 | 2 |
@@ -36,7 +36,7 @@ Network message definitions and game event structures from CS2's Protobufs direc
 | [steamdatagram_messages_auth.proto](proto/steamdatagram_messages_auth.md) | 6 | 0 |
 | [steamdatagram_messages_sdr.proto](proto/steamdatagram_messages_sdr.md) | 33 | 1 |
 | [steammessages.proto](proto/steammessages.md) | 3 | 1 |
-| [steammessages_base.proto](proto/steammessages_base.md) | 20 | 3 |
+| [steammessages_base.proto](proto/steammessages_base.md) | 18 | 3 |
 | [steammessages_cloud.steamworkssdk.proto](proto/steammessages_cloud.steamworkssdk.md) | 9 | 0 |
 | [steammessages_gamenetworkingui.proto](proto/steammessages_gamenetworkingui.md) | 5 | 0 |
 | [steammessages_helprequest.steamworkssdk.proto](proto/steammessages_helprequest.steamworkssdk.md) | 2 | 0 |
