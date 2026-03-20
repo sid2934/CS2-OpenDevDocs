@@ -386,6 +386,177 @@ def parse_commands(path: Path) -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
+# Game-events parser  (Valve KeyValues1 format)
+# ---------------------------------------------------------------------------
+
+# Known field types in .gameevents files and their JSON Schema equivalents.
+_GAMEEVENTS_TYPE_MAP: dict[str, dict[str, str]] = {
+    "none":                         {"type": "null",    "description": "Value is not networked"},
+    "string":                       {"type": "string",  "description": "A zero-terminated string"},
+    "bool":                         {"type": "boolean", "description": "Unsigned int, 1 bit"},
+    "byte":                         {"type": "integer", "description": "Unsigned int, 8 bit"},
+    "short":                        {"type": "integer", "description": "Signed int, 16 bit"},
+    "long":                         {"type": "integer", "description": "Signed int, 32 bit"},
+    "int":                          {"type": "integer", "description": "Signed integer"},
+    "float":                        {"type": "number",  "description": "Float, 32 bit"},
+    "uint64":                       {"type": "string",  "description": "Unsigned 64-bit integer (string-encoded)"},
+    "local":                        {"type": "string",  "description": "Any data, not networked"},
+    "player_controller":            {"type": "integer", "description": "Player controller entity reference"},
+    "player_controller_and_pawn":   {"type": "integer", "description": "Player controller + pawn entity reference"},
+    "player_pawn":                  {"type": "integer", "description": "Player pawn entity reference"},
+    "ehandle":                      {"type": "integer", "description": "Entity handle"},
+}
+
+# These keys inside an event body are event-level metadata, not field defs.
+_GAMEEVENTS_META_KEYS = {"local", "reliable"}
+
+
+def parse_gameevents_file(path: Path) -> list[dict[str, Any]]:
+    """Parse a Valve KeyValues1 ``.gameevents`` file.
+
+    Returns a list of event dicts, each with:
+        name        – event name
+        comment     – trailing ``//`` comment on the event name line
+        source      – basename of the originating file (e.g. ``mod.gameevents``)
+        properties  – dict of event-level metadata (``local``, ``reliable``)
+        fields      – list of ``{name, type, comment}`` dicts
+    """
+    try:
+        text = path.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return []
+
+    source = path.name
+    events: list[dict[str, Any]] = []
+    lines = text.splitlines()
+    i = 0
+    total = len(lines)
+
+    def _strip_comment(line: str) -> tuple[str, str]:
+        """Return (code_part, comment_text) splitting on the first ``//``."""
+        idx = line.find("//")
+        if idx == -1:
+            return line, ""
+        return line[:idx], line[idx + 2:].strip()
+
+    # Skip until the first top-level opening brace (root container).
+    while i < total:
+        code, _ = _strip_comment(lines[i])
+        if "{" in code:
+            i += 1
+            break
+        i += 1
+
+    # Now we're inside the root object.  Each event is:
+    #   "event_name"  // optional comment
+    #   {
+    #       "field" "type"  // optional comment
+    #       ...
+    #   }
+    depth = 0
+    pending_name: str | None = None
+    pending_comment = ""
+    # Collect comments that appear above an event name for group/section context
+    section_comments: list[str] = []
+
+    while i < total:
+        raw_line = lines[i]
+        code, comment = _strip_comment(raw_line)
+        stripped = code.strip()
+        i += 1
+
+        # Pure comment line — accumulate for section headings
+        if not stripped and comment:
+            section_comments.append(comment)
+            continue
+
+        # Blank line
+        if not stripped:
+            # Reset section comments on blank non-comment lines only if
+            # we haven't started an event yet.
+            if pending_name is None:
+                section_comments = []
+            continue
+
+        # Opening brace for an event body
+        if stripped == "{" and depth == 0 and pending_name is not None:
+            depth = 1
+            event: dict[str, Any] = {
+                "name": pending_name,
+                "comment": pending_comment,
+                "source": source,
+                "properties": {},
+                "fields": [],
+            }
+            pending_name = None
+            pending_comment = ""
+            section_comments = []
+
+            # Parse event body
+            while i < total:
+                braw = lines[i]
+                bcode, bcomment = _strip_comment(braw)
+                bstripped = bcode.strip()
+                i += 1
+
+                if bstripped == "}":
+                    depth = 0
+                    break
+                if not bstripped:
+                    continue
+
+                # Match key-value pairs: "key" "value"
+                kv_match = re.match(
+                    r'^\s*"([^"]+)"\s+"([^"]*)"', braw
+                )
+                if kv_match:
+                    key = kv_match.group(1)
+                    val = kv_match.group(2)
+                    if key in _GAMEEVENTS_META_KEYS:
+                        event["properties"][key] = val
+                    else:
+                        event["fields"].append({
+                            "name": key,
+                            "type": val,
+                            "comment": bcomment,
+                        })
+                # Standalone quoted key with no value (shouldn't normally happen)
+                # Skip it gracefully.
+            events.append(event)
+            continue
+
+        # Closing brace of the root container
+        if stripped == "}":
+            break
+
+        # Event name line: "event_name" // optional comment
+        name_match = re.match(r'^\s*"([^"]+)"', raw_line)
+        if name_match:
+            pending_name = name_match.group(1)
+            pending_comment = comment
+            continue
+
+    return events
+
+
+def parse_all_gameevents(data_root: Path) -> list[dict[str, Any]]:
+    """Find and parse all ``.gameevents`` files under the data tree.
+
+    Searches the three known locations and any other ``.gameevents`` files.
+    Returns a flat list of event dicts.
+    """
+    all_events: list[dict[str, Any]] = []
+    seen_paths: set[str] = set()
+    for ge_file in sorted(data_root.rglob("*.gameevents")):
+        real = str(ge_file.resolve())
+        if real in seen_paths:
+            continue
+        seen_paths.add(real)
+        all_events.extend(parse_gameevents_file(ge_file))
+    return all_events
+
+
+# ---------------------------------------------------------------------------
 # Overlay loader
 # ---------------------------------------------------------------------------
 
@@ -1175,12 +1346,237 @@ def generate_commands_md_page(commands: list[dict], out_dir: Path) -> None:
     (out_dir / "commands.md").write_text("\n".join(lines), encoding="utf-8")
 
 
+def generate_gameevents_md_page(
+    gameevents: list[dict[str, Any]],
+    overlays: dict[str, dict],
+    out_dir: Path,
+) -> None:
+    """Generate gameevents.md – the Game Events documentation page."""
+    overlay = overlays.get("gameevents", {})
+    overlay_events: dict = overlay.get("events", {}) or {}
+
+    lines: list[str] = []
+    lines.append(_md_front_matter(layout="default", title="Game Events", nav_order="6"))
+    lines.append("# Game Events Reference\n")
+    lines.append(
+        "Game events extracted from CS2's `.gameevents` resource files. "
+        "These events are fired by the game engine and server to signal "
+        "in-game occurrences such as player actions, round state changes, "
+        "and UI notifications.\n"
+    )
+    if overlay.get("description"):
+        lines.append(f"{overlay['description']}\n")
+    if overlay.get("notes"):
+        lines.append(f"> 📝 {overlay['notes']}\n")
+
+    # Data-type legend
+    lines.append("## Field Types\n")
+    lines.append("| Type | Description |")
+    lines.append("|------|-------------|")
+    for tname, tinfo in sorted(_GAMEEVENTS_TYPE_MAP.items()):
+        lines.append(f"| `{tname}` | {tinfo['description']} |")
+    lines.append("")
+
+    # Group events by source file
+    by_source: dict[str, list[dict]] = {}
+    for ev in gameevents:
+        by_source.setdefault(ev["source"], []).append(ev)
+
+    source_labels: dict[str, str] = {
+        "core.gameevents": "Core Engine Events",
+        "game.gameevents": "Game Events",
+        "mod.gameevents": "CS2 (Counter-Strike) Events",
+    }
+
+    # Summary table
+    lines.append("## Summary\n")
+    lines.append(f"**Total events:** {len(gameevents)}\n")
+    lines.append("| Source | Events | Description |")
+    lines.append("|--------|--------|-------------|")
+    for src in sorted(by_source):
+        label = source_labels.get(src, src)
+        lines.append(f"| `{src}` | {len(by_source[src])} | {label} |")
+    lines.append("")
+
+    # Quick-reference index
+    lines.append("## Event Index\n")
+    lines.append("| Event | Source | Fields | Description |")
+    lines.append("|-------|--------|--------|-------------|")
+    for ev in gameevents:
+        anchor = ev["name"].lower().replace(" ", "-")
+        eov = overlay_events.get(ev["name"], {}) if isinstance(overlay_events, dict) else {}
+        desc = ""
+        if eov and isinstance(eov, dict) and eov.get("description"):
+            desc = str(eov["description"])
+        elif ev["comment"]:
+            desc = ev["comment"]
+        desc = desc.replace("|", "\\|")
+        lines.append(
+            f"| [{ev['name']}](#{anchor}) | `{ev['source']}` | {len(ev['fields'])} | {desc} |"
+        )
+    lines.append("")
+
+    # Detailed event sections grouped by source
+    lines.append("---\n")
+    for src in sorted(by_source):
+        label = source_labels.get(src, src)
+        lines.append(f"## {label}\n")
+        lines.append(f"*Source: `{src}`*\n")
+
+        for ev in by_source[src]:
+            ename = ev["name"]
+            eov = overlay_events.get(ename, {}) if isinstance(overlay_events, dict) else {}
+
+            lines.append(f"### {ename}\n")
+
+            # Description from overlay, then from inline comment
+            if eov and isinstance(eov, dict) and eov.get("description"):
+                lines.append(f"{eov['description']}\n")
+            elif ev["comment"]:
+                lines.append(f"{ev['comment']}\n")
+
+            if eov and isinstance(eov, dict) and eov.get("notes"):
+                lines.append(f"> 📝 {eov['notes']}\n")
+            if eov and isinstance(eov, dict) and eov.get("warning"):
+                lines.append(f"> ⚠️ {eov['warning']}\n")
+
+            # Event-level properties
+            if ev["properties"]:
+                props = ", ".join(f"`{k}={v}`" for k, v in ev["properties"].items())
+                lines.append(f"**Properties:** {props}\n")
+
+            if ev["fields"]:
+                overlay_flds: dict = (
+                    eov.get("fields", {}) or {}
+                    if eov and isinstance(eov, dict) else {}
+                )
+                lines.append("| Field | Type | Description |")
+                lines.append("|-------|------|-------------|")
+                for fld in ev["fields"]:
+                    fname = fld["name"]
+                    ftype = fld["type"]
+                    fov = overlay_flds.get(fname, {}) if isinstance(overlay_flds, dict) else {}
+                    desc_parts: list[str] = []
+                    if fov and isinstance(fov, dict) and fov.get("description"):
+                        desc_parts.append(str(fov["description"]))
+                    if fld["comment"]:
+                        desc_parts.append(fld["comment"])
+                    if fov and isinstance(fov, dict) and fov.get("notes"):
+                        desc_parts.append(f"*{fov['notes']}*")
+                    desc = " ".join(desc_parts).replace("|", "\\|")
+                    lines.append(f"| `{fname}` | `{ftype}` | {desc} |")
+                lines.append("")
+            else:
+                lines.append("*No fields — this event carries no additional data.*\n")
+
+    (out_dir / "gameevents.md").write_text("\n".join(lines), encoding="utf-8")
+
+
+def generate_gameevents_json_schema(
+    gameevents: list[dict[str, Any]],
+    overlays: dict[str, dict],
+    out_dir: Path,
+) -> None:
+    """Generate a JSON Schema file describing all game events.
+
+    The schema follows the JSON Schema 2020-12 specification and uses
+    ``$defs`` to define each event as a reusable sub-schema.
+    """
+    overlay = overlays.get("gameevents", {})
+    overlay_events: dict = overlay.get("events", {}) or {}
+
+    defs: dict[str, Any] = {}
+    for ev in gameevents:
+        ename = ev["name"]
+        eov = overlay_events.get(ename, {}) if isinstance(overlay_events, dict) else {}
+
+        # Build description from overlay or inline comment
+        desc_parts: list[str] = []
+        if eov and isinstance(eov, dict) and eov.get("description"):
+            desc_parts.append(str(eov["description"]))
+        elif ev["comment"]:
+            desc_parts.append(ev["comment"])
+        if ev["properties"]:
+            props = ", ".join(f"{k}={v}" for k, v in ev["properties"].items())
+            desc_parts.append(f"(properties: {props})")
+
+        event_schema: dict[str, Any] = {
+            "type": "object",
+            "additionalProperties": False,
+        }
+        if desc_parts:
+            event_schema["description"] = " ".join(desc_parts)
+
+        # Add source metadata
+        event_schema["x-source"] = ev["source"]
+
+        properties: dict[str, Any] = {}
+        required: list[str] = []
+        overlay_flds: dict = (
+            eov.get("fields", {}) or {}
+            if eov and isinstance(eov, dict) else {}
+        )
+        for fld in ev["fields"]:
+            fname = fld["name"]
+            ftype = fld["type"]
+            fov = overlay_flds.get(fname, {}) if isinstance(overlay_flds, dict) else {}
+
+            type_info = _GAMEEVENTS_TYPE_MAP.get(ftype, {"type": "string"})
+            fprop: dict[str, Any] = {"type": type_info["type"]}
+
+            # Use the original game-event type as a format hint
+            fprop["x-gameevents-type"] = ftype
+
+            # Build field description
+            fdesc_parts: list[str] = []
+            if fov and isinstance(fov, dict) and fov.get("description"):
+                fdesc_parts.append(str(fov["description"]))
+            if fld["comment"]:
+                fdesc_parts.append(fld["comment"])
+            if fov and isinstance(fov, dict) and fov.get("notes"):
+                fdesc_parts.append(fov["notes"])
+            if fdesc_parts:
+                fprop["description"] = " ".join(fdesc_parts)
+
+            properties[fname] = fprop
+            required.append(fname)
+
+        if properties:
+            event_schema["properties"] = properties
+        if required:
+            event_schema["required"] = required
+
+        defs[ename] = event_schema
+
+    schema: dict[str, Any] = {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://sid2934.github.io/CS2-OpenDevDocs/gameevents_schema.json",
+        "title": "CS2 Game Events Schema",
+        "description": (
+            "JSON Schema describing all game events extracted from CS2's "
+            ".gameevents resource files.  Each event is defined under $defs "
+            "and can be referenced individually."
+        ),
+        "type": "object",
+        "oneOf": [
+            {"$ref": f"#/$defs/{name}"} for name in defs
+        ],
+        "$defs": defs,
+    }
+
+    (out_dir / "gameevents_schema.json").write_text(
+        json.dumps(schema, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+
+
 def generate_index_md(
     entities: dict[str, dict],
     protos: list[dict],
     convars: list[dict],
     commands: list[dict],
     out_dir: Path,
+    gameevents: list[dict[str, Any]] | None = None,
 ) -> None:
     """Generate the Jekyll home page index.md."""
     by_module: dict[str, list] = defaultdict(list)
@@ -1195,7 +1591,8 @@ def generate_index_md(
     lines.append("# CS2 Developer Reference\n")
     lines.append(
         "Auto-generated documentation from the CS2 game tracking data. "
-        "Includes entity schemas, network message definitions, console variables, and commands.\n"
+        "Includes entity schemas, network message definitions, game events, "
+        "console variables, and commands.\n"
     )
     lines.append("## Statistics\n")
     lines.append("| Category | Count |")
@@ -1203,12 +1600,16 @@ def generate_index_md(
     lines.append(f"| Schema Entities | {total_entities} |")
     lines.append(f"| Proto Files | {len(protos)} |")
     lines.append(f"| Proto Messages | {total_proto_msgs} |")
+    if gameevents is not None:
+        lines.append(f"| Game Events | {len(gameevents)} |")
     lines.append(f"| ConVars | {len(convars)} |")
     lines.append(f"| Commands | {len(commands)} |")
     lines.append("")
     lines.append("## Quick Links\n")
     lines.append("- [Schema Entities](schemas.md) – Classes, structs, and enums from CS2's schema dump")
     lines.append("- [Protobufs](protobufs.md) – Network message and game event definitions")
+    if gameevents is not None:
+        lines.append("- [Game Events](gameevents.md) – Game event definitions with field schemas ([JSON Schema](gameevents_schema.json))")
     lines.append("- [ConVars](convars.md) – Console variable reference with flags and defaults")
     lines.append("- [Commands](commands.md) – Console command reference")
     lines.append("- [Entity Hierarchy Diagram](diagrams/server_hierarchy.md) – UML inheritance diagram for server & client entities")
@@ -1309,11 +1710,12 @@ back_to_top_text: "Back to top"
 # Footer
 footer_content: "Auto-generated from <a href='https://github.com/sid2934/CS2-OpenDevDocs'>CS2-OpenDevDocs</a>."
 
-# Exclude generator scripts and overlays from Jekyll processing
+# Exclude generator scripts, overlays, and JSON artefacts from Jekyll processing
 exclude:
   - generate_docs.py
   - generate_proto_md.py
   - overlays/
+  - gameevents_schema.json
 """
     (out_dir / "_config.yml").write_text(config, encoding="utf-8")
 
@@ -1373,6 +1775,10 @@ def main(argv: list[str] | None = None) -> int:
     commands = parse_commands(dump_dir / "commands.txt")
     print(f"  {len(convars)} convars, {len(commands)} commands.")
 
+    print("Parsing game events…")
+    gameevents = parse_all_gameevents(data_root)
+    print(f"  Parsed {len(gameevents)} game events.")
+
     print("Generating Jekyll config…")
     generate_jekyll_config(out_dir)
 
@@ -1393,8 +1799,12 @@ def main(argv: list[str] | None = None) -> int:
     generate_convars_md_page(convars, out_dir)
     generate_commands_md_page(commands, out_dir)
 
+    print("Generating game events documentation…")
+    generate_gameevents_md_page(gameevents, overlays, out_dir)
+    generate_gameevents_json_schema(gameevents, overlays, out_dir)
+
     print("Generating Markdown home page…")
-    generate_index_md(entities, protos, convars, commands, out_dir)
+    generate_index_md(entities, protos, convars, commands, out_dir, gameevents=gameevents)
 
     print(f"\nDone!  Documentation written to: {out_dir}")
     return 0
