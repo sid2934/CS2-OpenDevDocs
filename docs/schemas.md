@@ -26,7 +26,9 @@ All entities and types extracted from CS2's schema dump, organised by module.
 | [materialsystem2](schemas/materialsystem2.md) | 19 | [📊 Diagram](diagrams/materialsystem2.md) |
 | [mathlib_extended](schemas/mathlib_extended.md) | 12 | — |
 | [met](schemas/met.md) | 3 | — |
+| [modeldoc_editor](schemas/modeldoc_editor.md) | 4 | — |
 | [modellib](schemas/modellib.md) | 140 | [📊 Diagram](diagrams/modellib.md) |
+| [modtools](schemas/modtools.md) | 2 | [📊 Diagram](diagrams/modtools.md) |
 | [navlib](schemas/navlib.md) | 11 | [📊 Diagram](diagrams/navlib.md) |
 | [networksystem](schemas/networksystem.md) | 2 | — |
 | [panorama_content](schemas/panorama_content.md) | 2 | — |
@@ -36,6 +38,7 @@ All entities and types extracted from CS2's schema dump, organised by module.
 | [pulse_runtime_lib](schemas/pulse_runtime_lib.md) | 107 | [📊 Diagram](diagrams/pulse_runtime_lib.md) |
 | [pulse_system](schemas/pulse_system.md) | 33 | [📊 Diagram](diagrams/pulse_system.md) |
 | [pulsedoc_lib](schemas/pulsedoc_lib.md) | 4 | — |
+| [qcontrols](schemas/qcontrols.md) | 15 | — |
 | [rendersystemdx11](schemas/rendersystemdx11.md) | 7 | [📊 Diagram](diagrams/rendersystemdx11.md) |
 | [resourcecompiler](schemas/resourcecompiler.md) | 18 | [📊 Diagram](diagrams/resourcecompiler.md) |
 | [resourcefile](schemas/resourcefile.md) | 6 | [📊 Diagram](diagrams/resourcefile.md) |
@@ -48,6 +51,7 @@ All entities and types extracted from CS2's schema dump, organised by module.
 | [soundsystem](schemas/soundsystem.md) | 23 | [📊 Diagram](diagrams/soundsystem.md) |
 | [soundsystem_lowlevel](schemas/soundsystem_lowlevel.md) | 80 | [📊 Diagram](diagrams/soundsystem_lowlevel.md) |
 | [soundsystem_voicecontainers](schemas/soundsystem_voicecontainers.md) | 42 | [📊 Diagram](diagrams/soundsystem_voicecontainers.md) |
+| [steamaudio](schemas/steamaudio.md) | 16 | — |
 | [texturelib](schemas/texturelib.md) | 10 | — |
 | [tier2](schemas/tier2.md) | 2 | — |
 | [toolscene](schemas/toolscene.md) | 12 | [📊 Diagram](diagrams/toolscene.md) |
