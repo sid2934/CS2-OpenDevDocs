@@ -35,8 +35,9 @@ back_to_top_text: "Back to top"
 # Footer
 footer_content: "Auto-generated from <a href='https://github.com/sid2934/CS2-OpenDevDocs'>CS2-OpenDevDocs</a>."
 
-# Exclude generator scripts and overlays from Jekyll processing
+# Exclude generator scripts, overlays, and JSON artefacts from Jekyll processing
 exclude:
   - generate_docs.py
   - generate_proto_md.py
   - overlays/
+  - gameevents_schema.json

@@ -12,6 +12,7 @@ generated HTML at build time without touching the auto-generated schema files.
 docs/overlays/
 ├── README.md            ← you are here
 ├── server.yml           ← multi-entity overlay for the 'server' module
+├── gameevents.yml       ← overlay for game events (from .gameevents files)
 ├── protobufs/           ← overlays for Protobufs/*.proto (single-file format)
 │   └── cs_gameevents.yml
 └── <module>.yml         ← multi-entity overlays for any schema module
@@ -103,6 +104,36 @@ cs_gameevents:
   messages:
     CMsgTEFireBullets:
       description: "Broadcast when a player fires."
+```
+
+---
+
+## Game events overlays
+
+For game events (from `.gameevents` files), use a file named `gameevents.yml`
+in this directory.  Top-level keys are `description`, `notes`, and `events`.
+Under `events`, each key is an event name; its value supports `description`,
+`notes`, `warning`, and per-field annotations under `fields`:
+
+```yaml
+# docs/overlays/gameevents.yml
+description: >
+  Optional page-level description shown at the top of the Game Events page.
+notes: >
+  Optional page-level notes callout.
+events:
+  player_death:
+    description: "Fired when a player is killed."
+    notes: "This event extends the base engine player_death with CS2-specific fields."
+    fields:
+      headshot:
+        description: "Whether the killing blow was a headshot."
+      weapon:
+        description: "Weapon classname used by the attacker."
+        notes: "Does not include the 'weapon_' prefix."
+  round_end:
+    description: "Fired when a round ends."
+    warning: "The 'reason' field uses CS-specific enum values not documented here."
 ```
 
 ---

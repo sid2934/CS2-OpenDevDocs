@@ -7,7 +7,7 @@ nav_exclude: true
 
 # CS2 Developer Reference
 
-Auto-generated documentation from the CS2 game tracking data. Includes entity schemas, network message definitions, console variables, and commands.
+Auto-generated documentation from the CS2 game tracking data. Includes entity schemas, network message definitions, game events, console variables, and commands.
 
 ## Statistics
 
@@ -16,6 +16,7 @@ Auto-generated documentation from the CS2 game tracking data. Includes entity sc
 | Schema Entities | 3688 |
 | Proto Files | 42 |
 | Proto Messages | 775 |
+| Game Events | 288 |
 | ConVars | 3865 |
 | Commands | 1129 |
 
@@ -23,6 +24,7 @@ Auto-generated documentation from the CS2 game tracking data. Includes entity sc
 
 - [Schema Entities](schemas.md) – Classes, structs, and enums from CS2's schema dump
 - [Protobufs](protobufs.md) – Network message and game event definitions
+- [Game Events](gameevents.md) – Game event definitions with field schemas ([JSON Schema](gameevents_schema.json))
 - [ConVars](convars.md) – Console variable reference with flags and defaults
 - [Commands](commands.md) – Console command reference
 - [Entity Hierarchy Diagram](diagrams/server_hierarchy.md) – UML inheritance diagram for server & client entities
