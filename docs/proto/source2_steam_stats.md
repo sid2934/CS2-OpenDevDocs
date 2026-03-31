@@ -157,11 +157,16 @@ direction LR
     +List~string~ low_cardinality_string_vals
     +List~fixed32~ utcdatetime_vals
     +List~fixed64~ steamidtrustbucket_vals
+    +List~CMsgSource2PlayStatsPackedRecordList.SteamIDList~ trustbucket_vals
   }
 
   class FieldDef {
     +string field_name
     +ESource2PlayStatsFieldType field_type
+  }
+
+  class SteamIDList {
+    +List~fixed64~ steamid
   }
 
   class CSource2Metrics_RecordPlayStats_Notification {
@@ -197,6 +202,7 @@ direction LR
   Client --> CMsgSource2NetworkFlowQuality : downstream_flow
   Client --> CMsgSource2PerfIntervalSample : perf_samples[]
   CMsgSource2PlayStatsPackedRecordList --> FieldDef : field_defs[]
+  CMsgSource2PlayStatsPackedRecordList --> SteamIDList : trustbucket_vals[]
   FieldDef --> ESource2PlayStatsFieldType : field_type
   CSource2Metrics_RecordPlayStats_Notification --> CMsgSource2PlayStatsPackedRecordList : record_types[]
   CSource2Metrics_FetchMapData_Response --> MapData : results[]
@@ -219,6 +225,7 @@ direction LR
     Source2PlayStats_LowCardinalityString
     Source2PlayStats_UTCDateTime
     Source2PlayStats_SteamIDTrustBucket
+    Source2PlayStats_SteamIDTrustBucketMin
   }
 
 ```
@@ -245,6 +252,7 @@ direction LR
 | `Source2PlayStats_LowCardinalityString` | 13 |
 | `Source2PlayStats_UTCDateTime` | 14 |
 | `Source2PlayStats_SteamIDTrustBucket` | 15 |
+| `Source2PlayStats_SteamIDTrustBucketMin` | 16 |
 
 ## Messages
 
@@ -392,6 +400,7 @@ direction LR
 | `low_cardinality_string_vals` | 16 | string | repeated |  |
 | `utcdatetime_vals` | 17 | fixed32 | repeated |  |
 | `steamidtrustbucket_vals` | 18 | fixed64 | repeated |  |
+| `trustbucket_vals` | 19 | CMsgSource2PlayStatsPackedRecordList.SteamIDList | repeated |  |
 
 ### `CSource2Metrics_RecordPlayStats_Notification`
 

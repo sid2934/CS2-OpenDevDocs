@@ -34,7 +34,7 @@ nav_exclude: true
 
 ### CTextureSheetDoc
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_ePackingMode": "PCKM_FLAT",`, `"m_NumMips": 2,`, `"m_bHasDecalParams": false,`, `"m_sLayoutOwnerSheet": "",`, `"m_Sequences":`, `{`, `},`, `"generic_data_type": "CTextureSheetDoc"`, `}`, `MVDataRoot`, `MVDataSingleton`, `MVDataPreviewWidget (UNKNOWN FOR PARSER)`, `MVDataFileExtension = "mks"`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_ePackingMode": "PCKM_FLAT",`, `"m_NumMips": 2,`, `"m_bHasDecalParams": false,`, `"m_sLayoutOwnerSheet": "",`, `"m_Sequences":`, `{`, `},`, `"generic_data_type": "CTextureSheetDoc"`, `}`, `MVDataRoot`, `MVDataSingleton`, `MVDataPreviewWidget = "sheet_file_preview"`, `MVDataFileExtension = "mks"`
 
 ### CTextureSheetDoc_Frame
 

@@ -94,7 +94,7 @@ nav_exclude: true
 
 ### CAssetTagInfo
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_TagName": "",`, `"m_TagDescription": "",`, `"m_TagIcon": "",`, `"m_TagColor":`, `[`, `255,`, `255,`, `255`, `],`, `"m_TagAliases":`, `[`, `],`, `"m_ThumbnailOverlayImage": "",`, `"m_bTagIndicatesRejectedAsset": false,`, `"m_bTagHidesAssetByDefault": false,`, `"m_RestrictAutoTagToAssetType": "",`, `"m_AutoFilterTag": "",`, `"m_AutoDataTag":`, `{`, `"m_SourceFile": "",`, `"m_AssetKey": "",`, `"m_AlternateAssetKey": "",`, `"m_Expression": ""`, `}`, `}`, `MVDataRoot`, `MVDataOutlinerDetailExpr (UNKNOWN FOR PARSER)`, `MVDataOutlinerIconExpr = "m_TagIcon"`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_TagName": "",`, `"m_TagDescription": "",`, `"m_TagIcon": "",`, `"m_TagColor":`, `[`, `255,`, `255,`, `255`, `],`, `"m_TagAliases":`, `[`, `],`, `"m_ThumbnailOverlayImage": "",`, `"m_bTagIndicatesRejectedAsset": false,`, `"m_bTagHidesAssetByDefault": false,`, `"m_RestrictAutoTagToAssetType": "",`, `"m_AutoFilterTag": "",`, `"m_AutoDataTag":`, `{`, `"m_SourceFile": "",`, `"m_AssetKey": "",`, `"m_AlternateAssetKey": "",`, `"m_Expression": ""`, `}`, `}`, `MVDataRoot`, `MVDataOutlinerDetailExpr = "m_TagName"`, `MVDataOutlinerIconExpr = "m_TagIcon"`
 
 ### CAssetTypeConfig
 
