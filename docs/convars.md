@@ -1459,10 +1459,10 @@ All console variables extracted from CS2.
 | `mat_luxels` | `false` | `cheat` | <no description> |
 | `mat_max_lighting_complexity` | `8` | `cheat` | <no description> |
 | `mat_overdraw` | `0` | `cheat` | Visualize overdraw |
-| `mat_overdraw_color` | `[0.075, 0.15, 0.075]` | `cheat` | <no description> |
+| `mat_overdraw_color` | `[0.075, 0.15, 0.3]` | `cheat` | <no description> |
 | `mat_shader_cache` | `true` | `developmentonly` | <no description> |
 | `mat_shading_complexity` | `false` | `cheat` | Visualize shading complexity |
-| `mat_shading_complexity_color` | `[1, 0.5, 1]` | `cheat` | <no description> |
+| `mat_shading_complexity_color` | `[1, 0.5, 0.25]` | `cheat` | <no description> |
 | `mat_shading_complexity_max_instruction_count` | `1024` | `cheat` | <no description> |
 | `mat_shading_complexity_max_register_count` | `128` | `cheat` | <no description> |
 | `mat_shadowmap_luxels` | `false` | `cheat` | <no description> |
@@ -2670,10 +2670,10 @@ All console variables extracted from CS2.
 | `r_vconsole_foregroundforcerender` | `true` | `developmentonly` `defensive` | When VConsole is in the foreground, force all engine & tools to render |
 | `r_wait_on_present` | `false` | `developmentonly` `defensive` | <no description> |
 | `r_world_frame_load_threshold_ms` | `10` | `developmentonly` `defensive` | <no description> |
-| `r_world_wind_dir` | `[0.707, 0.707, 0.707]` | `developmentonly` `defensive` | <no description> |
+| `r_world_wind_dir` | `[0.707, 0.707, 0]` | `developmentonly` `defensive` | <no description> |
 | `r_world_wind_frequency_grass` | `0.03` | `developmentonly` `defensive` | <no description> |
 | `r_world_wind_frequency_trees` | `0.003` | `developmentonly` `defensive` | <no description> |
-| `r_world_wind_offset_speed` | `[0.25, 0.3, 0.25]` | `developmentonly` `defensive` | <no description> |
+| `r_world_wind_offset_speed` | `[0.25, 0.3, 0.2]` | `developmentonly` `defensive` | <no description> |
 | `r_world_wind_smooth_time` | `2` | `developmentonly` `defensive` | <no description> |
 | `r_world_wind_strength` | `40` | `developmentonly` `defensive` | <no description> |
 | `r_zprepass_normals` | `false` | `cheat` | 0: Use normals reconstructed from depth. 1: Output correct normals in z prepass. |
@@ -2886,8 +2886,8 @@ All console variables extracted from CS2.
 | `slope_drop_enable` | `true` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | Toggles a test dropping the view offset based on the slope |
 | `slope_drop_max_offset` | `16` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | The maximum distance to adjust the view height |
 | `slope_drop_off_ground_blend_speed` | `160` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | The speed with which the slope drop is blended out when the entity leaves the ground |
-| `smoke_grenade_ct_color` | `[75, 127, 75]` | `developmentonly` `gamedll` `cheat` | <no description> |
-| `smoke_grenade_t_color` | `[180, 129, 180]` | `developmentonly` `gamedll` `cheat` | <no description> |
+| `smoke_grenade_ct_color` | `[75, 127, 155]` | `developmentonly` `gamedll` `cheat` | <no description> |
+| `smoke_grenade_t_color` | `[180, 129, 50]` | `developmentonly` `gamedll` `cheat` | <no description> |
 | `smoke_param1` | `6.26` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | <no description> |
 | `smoke_param2` | `8.27` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | <no description> |
 | `smoke_param3` | `0.13` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | <no description> |
@@ -3503,7 +3503,7 @@ All console variables extracted from CS2.
 | `sv_sniper_tracer_innacuracy_length` | `200` | `developmentonly` `gamedll` `clientdll` `replicated` | How far should the tracer draw if we trip sv_sniper_tracer_mode behavior. |
 | `sv_sniper_tracer_mode` | `1` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | Mode for sniper tracers. 0: legacy, 1: hide when more than sv_sniper_tracer_innacuracy inaccurate. |
 | `sv_spawn_afk_bomb_drop_time` | `15` | `gamedll` `replicated` `release` | Players that have never moved since they spawned will drop the bomb after this amount of time. |
-| `sv_spec_hear` | `1` | `gamedll` `clientdll` `notify` `replicated` `release` | Determines who spectators can hear: 0: only spectators; 1: all players; 2: spectated team; 3: self only; 4: nobody |
+| `sv_spec_hear` | `3` | `gamedll` `clientdll` `notify` `replicated` `release` | Determines who spectators can hear: 0: only spectators; 1: all players; 2: spectated team; 3: self only; 4: nobody |
 | `sv_spec_use_tournament_content_standards` | `false` | `gamedll` `clientdll` `replicated` `release` | <no description> |
 | `sv_specaccelerate` | `5` | `gamedll` `clientdll` `archive` `notify` `replicated` | <no description> |
 | `sv_specnoclip` | `true` | `gamedll` `clientdll` `archive` `notify` `replicated` | <no description> |
