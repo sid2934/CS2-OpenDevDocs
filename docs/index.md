@@ -17,7 +17,7 @@ Auto-generated documentation from the CS2 game tracking data. Includes entity sc
 | Proto Files | 42 |
 | Proto Messages | 775 |
 | Game Events | 288 |
-| ConVars | 3865 |
+| ConVars | 3866 |
 | Commands | 1129 |
 
 ## Quick Links
