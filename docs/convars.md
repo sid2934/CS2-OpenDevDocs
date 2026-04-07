@@ -3719,6 +3719,7 @@ All console variables extracted from CS2.
 | `ui_mainmenu_bkgnd_movie_539CD0B9` | `"de_ancient"` | `clientdll` `archive` `release` | Main menu background movie |
 | `ui_nearbylobbies_filter3` | `"competitive"` | `clientdll` `archive` `release` | <no description> |
 | `ui_news_last_read_link` | `""` | `clientdll` `archive` `release` | <no description> |
+| `ui_news_last_read_link2` | `""` | `clientdll` `archive` `release` | <no description> |
 | `ui_notification_tb_snooze` | `""` | `clientdll` `archive` `release` | <no description> |
 | `ui_party_msg_sound_enabled` | `true` | `clientdll` `release` | When enabled, lobby messages will play a short sound |
 | `ui_playsettings_custom_preset` | `""` | `clientdll` `archive` `release` | <no description> |
