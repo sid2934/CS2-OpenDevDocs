@@ -308,7 +308,7 @@ classDiagram
 
 **Inherits from:** [CPulseCell_BaseFlow](pulse_runtime_lib.md#cpulsecell_baseflow)
 
-**Derived by:** [CPulseCell_BaseLerp](pulse_runtime_lib.md#cpulsecell_baselerp), [CPulseCell_BaseState](pulse_runtime_lib.md#cpulsecell_basestate), [CPulseCell_FireCursors](pulse_runtime_lib.md#cpulsecell_firecursors), [CPulseCell_Inflow_Wait](pulse_runtime_lib.md#cpulsecell_inflow_wait), [CPulseCell_Inflow_Yield](pulse_runtime_lib.md#cpulsecell_inflow_yield), [CPulseCell_IntervalTimer](pulse_runtime_lib.md#cpulsecell_intervaltimer), [CPulseCell_Outflow_ListenForAnimgraphTag](server.md#cpulsecell_outflow_listenforanimgraphtag), [CPulseCell_Outflow_ListenForEntityOutput](server.md#cpulsecell_outflow_listenforentityoutput), [CPulseCell_Outflow_PlaySceneBase](server.md#cpulsecell_outflow_playscenebase), [CPulseCell_Outflow_ScriptedSequence](server.md#cpulsecell_outflow_scriptedsequence), [CPulseCell_PlaySequence](client.md#cpulsecell_playsequence), [CPulseCell_Step_CallExternalMethod](pulse_runtime_lib.md#cpulsecell_step_callexternalmethod), [CPulseCell_TestWaitWithCursorState](pulse_system.md#cpulsecell_testwaitwithcursorstate), [CPulseCell_Test_MultiOutflow_WithParams_Yielding](pulse_system.md#cpulsecell_test_multioutflow_withparams_yielding), [CPulseCell_Timeline](pulse_runtime_lib.md#cpulsecell_timeline), [CPulseCell_WaitForCursorsWithTagBase](pulse_runtime_lib.md#cpulsecell_waitforcursorswithtagbase), [CPulseCell_WaitForObservable](pulse_runtime_lib.md#cpulsecell_waitforobservable)
+**Derived by:** [CPulseCell_BaseLerp](pulse_runtime_lib.md#cpulsecell_baselerp), [CPulseCell_BaseState](pulse_runtime_lib.md#cpulsecell_basestate), [CPulseCell_FireCursors](pulse_runtime_lib.md#cpulsecell_firecursors), [CPulseCell_Inflow_Wait](pulse_runtime_lib.md#cpulsecell_inflow_wait), [CPulseCell_Inflow_Yield](pulse_runtime_lib.md#cpulsecell_inflow_yield), [CPulseCell_IntervalTimer](pulse_runtime_lib.md#cpulsecell_intervaltimer), [CPulseCell_Outflow_ListenForAnimgraphTag](server.md#cpulsecell_outflow_listenforanimgraphtag), [CPulseCell_Outflow_ListenForEntityOutput](server.md#cpulsecell_outflow_listenforentityoutput), [CPulseCell_Outflow_PlaySceneBase](server.md#cpulsecell_outflow_playscenebase), [CPulseCell_Outflow_PlayVOLine](server.md#cpulsecell_outflow_playvoline), [CPulseCell_Outflow_ScriptedSequence](server.md#cpulsecell_outflow_scriptedsequence), [CPulseCell_PlaySequence](client.md#cpulsecell_playsequence), [CPulseCell_Step_CallExternalMethod](pulse_runtime_lib.md#cpulsecell_step_callexternalmethod), [CPulseCell_TestWaitWithCursorState](pulse_system.md#cpulsecell_testwaitwithcursorstate), [CPulseCell_Test_MultiOutflow_WithParams_Yielding](pulse_system.md#cpulsecell_test_multioutflow_withparams_yielding), [CPulseCell_Timeline](pulse_runtime_lib.md#cpulsecell_timeline), [CPulseCell_WaitForCursorsWithTagBase](pulse_runtime_lib.md#cpulsecell_waitforcursorswithtagbase), [CPulseCell_WaitForObservable](pulse_runtime_lib.md#cpulsecell_waitforobservable)
 
 **Metadata:** `MGetKV3ClassDefaults = Could not parse KV3 Defaults`
 
@@ -334,6 +334,7 @@ classDiagram
     CPulseCell_BaseYieldingInflow <|-- CPulseCell_Outflow_ListenForAnimgraphTag
     CPulseCell_BaseYieldingInflow <|-- CPulseCell_Outflow_ListenForEntityOutput
     CPulseCell_BaseYieldingInflow <|-- CPulseCell_Outflow_PlaySceneBase
+    CPulseCell_BaseYieldingInflow <|-- CPulseCell_Outflow_PlayVOLine
     CPulseCell_BaseYieldingInflow <|-- CPulseCell_Outflow_ScriptedSequence
 ```
 
@@ -341,7 +342,7 @@ classDiagram
 
 **Inherits from:** [CPulseCell_BaseState](pulse_runtime_lib.md#cpulsecell_basestate)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CPulseCell_BooleanSwitchState",`, `"m_nEditorNodeID": -1,`, `"m_Condition":`, `{`, `"m_EvaluateConnection":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `},`, `"m_DependentObservableVars":`, `[`, `],`, `"m_DependentObservableBlackboardReferences":`, `[`, `]`, `},`, `"m_SubGraph":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `},`, `"m_WhenTrue":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `},`, `"m_WhenFalse":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `}`, `}`, `MPropertyFriendlyName = "Boolean Switch State"`, `MPropertyDescription = "While active, activate a child state based on the results of a boolean condition. Any referenced variables must be marked as observable."`, `MPulseEditorCanvasItemSpecKV3 = "{ className = 'IsStateNode' item_factory = 'BooleanSwitchState' }"`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CPulseCell_BooleanSwitchState",`, `"m_nEditorNodeID": -1,`, `"m_Condition":`, `{`, `"m_EvaluateConnection":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `},`, `"m_DependentObservableVars":`, `[`, `],`, `"m_DependentObservableBlackboardReferences":`, `[`, `]`, `},`, `"m_Always":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `},`, `"m_WhenTrue":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `},`, `"m_WhenFalse":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `}`, `}`, `MPropertyFriendlyName = "Monitor Observable"`, `MPropertyDescription = "While active, manage child cursors based on the results of a boolean condition. When the observable result changes, the prior cursor will be canceled and the appropriate outflow will fire a new child cursor. Will monitor continuously until externally canceled."`, `MPulseEditorCanvasItemSpecKV3 = "{ className = 'IsStateNode' item_factory = 'BooleanSwitchState' }"`
 
 **Relationships:**
 
@@ -484,7 +485,7 @@ classDiagram
 
 **Inherits from:** [CPulseCell_BaseYieldingInflow](pulse_runtime_lib.md#cpulsecell_baseyieldinginflow)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CPulseCell_Inflow_Wait",`, `"m_nEditorNodeID": -1,`, `"m_WakeResume":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `}`, `}`, `MPropertyFriendlyName = "Wait"`, `MPropertyDescription = "Causes each execution cursor to pause at this node for a fixed period of time. Each cursor will wake up and resume execution when the time expires, unless aborted or early-woken."`, `MPulseEditorHeaderIcon = "tools/images/pulse_editor/inflow_wait.png"`, `MPulseEditorCanvasItemSpecKV3 = "{ className = 'IsWaitNode IsControlFlowNode' }"`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CPulseCell_Inflow_Wait",`, `"m_nEditorNodeID": -1,`, `"m_WakeResume":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `}`, `}`, `MPropertyFriendlyName = "Wait"`, `MPropertyDescription = "Causes each execution cursor to pause at this node for a fixed period of time. Each cursor will wake up and resume execution when the time expires, unless aborted or early-woken."`, `MPulseEditorHeaderIcon = "tools/images/pulse_editor/inflow_wait.png"`, `MPulseEditorCanvasItemSpecKV3 = "{ className = 'IsWaitNode IsControlFlowNode' item_factory = 'InflowWait' }"`
 
 **Relationships:**
 
@@ -659,7 +660,7 @@ classDiagram
 
 **Inherits from:** [CPulseCell_BaseYieldingInflow](pulse_runtime_lib.md#cpulsecell_baseyieldinginflow)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CPulseCell_Step_CallExternalMethod",`, `"m_nEditorNodeID": -1,`, `"m_MethodName": "",`, `"m_GameBlackboard": "",`, `"m_ExpectedArgs":`, `[`, `],`, `"m_nAsyncCallMode": "ASYNC_FIRE_AND_FORGET",`, `"m_OnFinished":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `}`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CPulseCell_Step_CallExternalMethod",`, `"m_nEditorNodeID": -1,`, `"m_MethodName": "",`, `"m_nBlackboardIndex": -1,`, `"m_ExpectedArgs":`, `[`, `],`, `"m_nAsyncCallMode": "ASYNC_FIRE_AND_FORGET",`, `"m_OnFinished":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `}`, `}`
 
 **Relationships:**
 
@@ -847,7 +848,7 @@ classDiagram
 
 **Inherits from:** [CPulseCell_BaseYieldingInflow](pulse_runtime_lib.md#cpulsecell_baseyieldinginflow)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CPulseCell_WaitForObservable",`, `"m_nEditorNodeID": -1,`, `"m_Condition":`, `{`, `"m_EvaluateConnection":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `},`, `"m_DependentObservableVars":`, `[`, `],`, `"m_DependentObservableBlackboardReferences":`, `[`, `]`, `},`, `"m_OnTrue":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `}`, `}`, `MPulseEditorHeaderIcon = "tools/images/pulse_editor/observable_variable_listener.png"`, `MPropertyFriendlyName = "Wait For Observable Condition"`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CPulseCell_WaitForObservable",`, `"m_nEditorNodeID": -1,`, `"m_Condition":`, `{`, `"m_EvaluateConnection":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `},`, `"m_DependentObservableVars":`, `[`, `],`, `"m_DependentObservableBlackboardReferences":`, `[`, `]`, `},`, `"m_OnTrue":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `}`, `}`, `MPulseEditorHeaderIcon = "tools/images/pulse_editor/observable_variable_listener.png"`, `MPropertyFriendlyName = "Wait Until"`, `MPropertyDescription = "All values connected to this node must be 'observable'. Variables on this graph will be automatically promoted to observable. Other value nodes must take an explicit context, look for those nodes with a corresponding icon."`
 
 **Relationships:**
 
@@ -1084,7 +1085,7 @@ classDiagram
 
 ### PulseGraphExecutionHistoryCursorDesc_t
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"vecAncestorCursorIDs":`, `[`, `],`, `"nSpawnNodeID": -1,`, `"nRetiredAtNodeID": -1,`, `"flLastReferenced": 0.000000,`, `"nLastValidEntryIdx": 0`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"vecAncestorCursorIDs":`, `[`, `],`, `"nSpawnNodeID": -1,`, `"nRetiredAtNodeID": -1,`, `"flLastReferenced": 0.000000,`, `"nLastValidEntryIdx": 0,`, `"bWasAnObservableComputation": false`, `}`
 
 ### PulseGraphExecutionHistoryEntry_t
 

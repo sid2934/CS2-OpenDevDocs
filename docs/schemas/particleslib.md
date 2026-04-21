@@ -11,6 +11,7 @@ nav_exclude: true
 
 | Name | Kind | Bases | Fields |
 |------|------|-------|--------|
+| [AnimationType_t](#animationtype_t) | enum |  | 3 |
 | [CNewParticleEffect](#cnewparticleeffect) | class | IParticleEffect | 33 |
 | [CParticleBindingRealPulse](#cparticlebindingrealpulse) | class | CParticleCollectionBindingInstance | 0 |
 | [CParticleCollectionBindingInstance](#cparticlecollectionbindinginstance) | class | CBasePulseGraphInstance | 0 |
@@ -28,24 +29,39 @@ nav_exclude: true
 | [CParticleVecInput](#cparticlevecinput) | class | CParticleInput | 0 |
 | [CPerParticleFloatInput](#cperparticlefloatinput) | class | CParticleFloatInput | 0 |
 | [CPerParticleVecInput](#cperparticlevecinput) | class | CParticleVecInput | 0 |
+| [GPUParticleCollisionMode_t](#gpuparticlecollisionmode_t) | enum |  | 3 |
 | [IParticleEffect](#iparticleeffect) | class |  | 0 |
 | [PARTICLE_EHANDLE__](#particle_ehandle__) | class |  | 1 |
 | [PFNoiseModifier_t](#pfnoisemodifier_t) | enum |  | 4 |
 | [PFNoiseTurbulence_t](#pfnoiseturbulence_t) | enum |  | 6 |
 | [PFNoiseType_t](#pfnoisetype_t) | enum |  | 4 |
+| [ParticleColorBlendMode_t](#particlecolorblendmode_t) | enum |  | 5 |
+| [ParticleColorBlendType_t](#particlecolorblendtype_t) | enum |  | 13 |
+| [ParticleDirectionNoiseType_t](#particledirectionnoisetype_t) | enum |  | 3 |
 | [ParticleFloatBiasType_t](#particlefloatbiastype_t) | enum |  | 5 |
 | [ParticleFloatInputMode_t](#particlefloatinputmode_t) | enum |  | 4 |
 | [ParticleFloatMapType_t](#particlefloatmaptype_t) | enum |  | 9 |
 | [ParticleFloatRandomMode_t](#particlefloatrandommode_t) | enum |  | 4 |
 | [ParticleFloatRoundType_t](#particlefloatroundtype_t) | enum |  | 5 |
-| [ParticleFloatType_t](#particlefloattype_t) | enum |  | 31 |
+| [ParticleFloatType_t](#particlefloattype_t) | enum |  | 32 |
 | [ParticleModelType_t](#particlemodeltype_t) | enum |  | 5 |
 | [ParticleNamedValueConfiguration_t](#particlenamedvalueconfiguration_t) | class |  | 0 |
 | [ParticleNamedValueSource_t](#particlenamedvaluesource_t) | class |  | 0 |
+| [ParticleSetMethod_t](#particlesetmethod_t) | enum |  | 6 |
 | [ParticleTransformType_t](#particletransformtype_t) | enum |  | 5 |
-| [ParticleVecType_t](#particlevectype_t) | enum |  | 20 |
+| [ParticleVecType_t](#particlevectype_t) | enum |  | 21 |
 
 ---
+
+### AnimationType_t
+
+**Values:**
+
+| Name | Value |
+|------|-------|
+| `ANIMATION_TYPE_FIXED_RATE` | 0 |
+| `ANIMATION_TYPE_FIT_LIFETIME` | 1 |
+| `ANIMATION_TYPE_MANUAL_FRAMES` | 2 |
 
 ### CNewParticleEffect
 
@@ -314,6 +330,16 @@ classDiagram
     CParticleInput <|-- CParticleVecInput
 ```
 
+### GPUParticleCollisionMode_t
+
+**Values:**
+
+| Name | Value |
+|------|-------|
+| `PARTICLE_GPU_COLLISION_MODE_RT` | 0 |
+| `PARTICLE_GPU_COLLISION_MODE_DEPTH` | 1 |
+| `PARTICLE_GPU_COLLISION_MODE_HYBRID` | 2 |
+
 ### IParticleEffect
 
 **Derived by:** [CNewParticleEffect](particleslib.md#cnewparticleeffect)
@@ -367,6 +393,48 @@ classDiagram
 | `PF_NOISE_TYPE_SIMPLEX` | 1 |
 | `PF_NOISE_TYPE_WORLEY` | 2 |
 | `PF_NOISE_TYPE_CURL` | 3 |
+
+### ParticleColorBlendMode_t
+
+**Values:**
+
+| Name | Value |
+|------|-------|
+| `PARTICLEBLEND_DEFAULT` | 0 |
+| `PARTICLEBLEND_OVERLAY` | 1 |
+| `PARTICLEBLEND_DARKEN` | 2 |
+| `PARTICLEBLEND_LIGHTEN` | 3 |
+| `PARTICLEBLEND_MULTIPLY` | 4 |
+
+### ParticleColorBlendType_t
+
+**Values:**
+
+| Name | Value |
+|------|-------|
+| `PARTICLE_COLOR_BLEND_MULTIPLY` | 0 |
+| `PARTICLE_COLOR_BLEND_MULTIPLY2X` | 1 |
+| `PARTICLE_COLOR_BLEND_DIVIDE` | 2 |
+| `PARTICLE_COLOR_BLEND_ADD` | 3 |
+| `PARTICLE_COLOR_BLEND_SUBTRACT` | 4 |
+| `PARTICLE_COLOR_BLEND_MOD2X` | 5 |
+| `PARTICLE_COLOR_BLEND_SCREEN` | 6 |
+| `PARTICLE_COLOR_BLEND_MAX` | 7 |
+| `PARTICLE_COLOR_BLEND_MIN` | 8 |
+| `PARTICLE_COLOR_BLEND_REPLACE` | 9 |
+| `PARTICLE_COLOR_BLEND_AVERAGE` | 10 |
+| `PARTICLE_COLOR_BLEND_NEGATE` | 11 |
+| `PARTICLE_COLOR_BLEND_LUMINANCE` | 12 |
+
+### ParticleDirectionNoiseType_t
+
+**Values:**
+
+| Name | Value |
+|------|-------|
+| `PARTICLE_DIR_NOISE_PERLIN` | 0 |
+| `PARTICLE_DIR_NOISE_CURL` | 1 |
+| `PARTICLE_DIR_NOISE_WORLEY_BASIC` | 2 |
 
 ### ParticleFloatBiasType_t
 
@@ -450,23 +518,24 @@ classDiagram
 | `PF_TYPE_CONCURRENT_DEF_COUNT` | 10 |
 | `PF_TYPE_CLOSEST_CAMERA_DISTANCE` | 11 |
 | `PF_TYPE_SNAPSHOT_COUNT` | 12 |
-| `PF_TYPE_RENDERER_CAMERA_DISTANCE` | 13 |
-| `PF_TYPE_RENDERER_CAMERA_DOT_PRODUCT` | 14 |
-| `PF_TYPE_PARTICLE_NOISE` | 15 |
-| `PF_TYPE_PARTICLE_AGE` | 16 |
-| `PF_TYPE_PARTICLE_AGE_NORMALIZED` | 17 |
-| `PF_TYPE_PARTICLE_FLOAT` | 18 |
-| `PF_TYPE_PARTICLE_INITIAL_FLOAT` | 19 |
-| `PF_TYPE_PARTICLE_VECTOR_COMPONENT` | 20 |
-| `PF_TYPE_PARTICLE_INITIAL_VECTOR_COMPONENT` | 21 |
-| `PF_TYPE_PARTICLE_SPEED` | 22 |
-| `PF_TYPE_PARTICLE_NUMBER` | 23 |
-| `PF_TYPE_PARTICLE_NUMBER_NORMALIZED` | 24 |
-| `PF_TYPE_PARTICLE_ROPE_SEGMENT` | 25 |
-| `PF_TYPE_PARTICLE_ROPE_SEGMENT_NORMALIZED` | 26 |
-| `PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DISTANCE` | 27 |
-| `PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DOT_PRODUCT` | 28 |
-| `PF_TYPE_COUNT` | 29 |
+| `PF_TYPE_SNAPSHOT_CHANGED` | 13 |
+| `PF_TYPE_RENDERER_CAMERA_DISTANCE` | 14 |
+| `PF_TYPE_RENDERER_CAMERA_DOT_PRODUCT` | 15 |
+| `PF_TYPE_PARTICLE_NOISE` | 16 |
+| `PF_TYPE_PARTICLE_AGE` | 17 |
+| `PF_TYPE_PARTICLE_AGE_NORMALIZED` | 18 |
+| `PF_TYPE_PARTICLE_FLOAT` | 19 |
+| `PF_TYPE_PARTICLE_INITIAL_FLOAT` | 20 |
+| `PF_TYPE_PARTICLE_VECTOR_COMPONENT` | 21 |
+| `PF_TYPE_PARTICLE_INITIAL_VECTOR_COMPONENT` | 22 |
+| `PF_TYPE_PARTICLE_SPEED` | 23 |
+| `PF_TYPE_PARTICLE_NUMBER` | 24 |
+| `PF_TYPE_PARTICLE_NUMBER_NORMALIZED` | 25 |
+| `PF_TYPE_PARTICLE_ROPE_SEGMENT` | 26 |
+| `PF_TYPE_PARTICLE_ROPE_SEGMENT_NORMALIZED` | 27 |
+| `PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DISTANCE` | 28 |
+| `PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DOT_PRODUCT` | 29 |
+| `PF_TYPE_COUNT` | 30 |
 
 ### ParticleModelType_t
 
@@ -487,6 +556,19 @@ classDiagram
 ### ParticleNamedValueSource_t
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"m_Name": "",`, `"m_IsPublic": true,`, `"m_ValueType": "PVAL_VOID",`, `"m_DefaultConfig":`, `{`, `"m_ConfigName": "",`, `"m_ConfigValue": null,`, `"m_BoundValuePath": "",`, `"m_iAttachType": "PATTACH_INVALID",`, `"m_strEntityScope": "",`, `"m_strAttachmentName": ""`, `}`, `}`
+
+### ParticleSetMethod_t
+
+**Values:**
+
+| Name | Value |
+|------|-------|
+| `PARTICLE_SET_REPLACE_VALUE` | 0 |
+| `PARTICLE_SET_SCALE_INITIAL_VALUE` | 1 |
+| `PARTICLE_SET_ADD_TO_INITIAL_VALUE` | 2 |
+| `PARTICLE_SET_RAMP_CURRENT_VALUE` | 3 |
+| `PARTICLE_SET_SCALE_CURRENT_VALUE` | 4 |
+| `PARTICLE_SET_ADD_TO_CURRENT_VALUE` | 5 |
 
 ### ParticleTransformType_t
 
@@ -513,16 +595,17 @@ classDiagram
 | `PVEC_TYPE_PARTICLE_VECTOR` | 3 |
 | `PVEC_TYPE_PARTICLE_INITIAL_VECTOR` | 4 |
 | `PVEC_TYPE_PARTICLE_VELOCITY` | 5 |
-| `PVEC_TYPE_CP_VALUE` | 6 |
-| `PVEC_TYPE_CP_RELATIVE_POSITION` | 7 |
-| `PVEC_TYPE_CP_RELATIVE_DIR` | 8 |
-| `PVEC_TYPE_CP_RELATIVE_RANDOM_DIR` | 9 |
-| `PVEC_TYPE_FLOAT_COMPONENTS` | 10 |
-| `PVEC_TYPE_FLOAT_INTERP_CLAMPED` | 11 |
-| `PVEC_TYPE_FLOAT_INTERP_OPEN` | 12 |
-| `PVEC_TYPE_FLOAT_INTERP_GRADIENT` | 13 |
-| `PVEC_TYPE_RANDOM_UNIFORM` | 14 |
-| `PVEC_TYPE_RANDOM_UNIFORM_OFFSET` | 15 |
-| `PVEC_TYPE_CP_DELTA` | 16 |
-| `PVEC_TYPE_CLOSEST_CAMERA_POSITION` | 17 |
-| `PVEC_TYPE_COUNT` | 18 |
+| `PVEC_TYPE_PARTICLE_GRAVITY` | 6 |
+| `PVEC_TYPE_CP_VALUE` | 7 |
+| `PVEC_TYPE_CP_RELATIVE_POSITION` | 8 |
+| `PVEC_TYPE_CP_RELATIVE_DIR` | 9 |
+| `PVEC_TYPE_CP_RELATIVE_RANDOM_DIR` | 10 |
+| `PVEC_TYPE_FLOAT_COMPONENTS` | 11 |
+| `PVEC_TYPE_FLOAT_INTERP_CLAMPED` | 12 |
+| `PVEC_TYPE_FLOAT_INTERP_OPEN` | 13 |
+| `PVEC_TYPE_FLOAT_INTERP_GRADIENT` | 14 |
+| `PVEC_TYPE_RANDOM_UNIFORM` | 15 |
+| `PVEC_TYPE_RANDOM_UNIFORM_OFFSET` | 16 |
+| `PVEC_TYPE_CP_DELTA` | 17 |
+| `PVEC_TYPE_CLOSEST_CAMERA_POSITION` | 18 |
+| `PVEC_TYPE_COUNT` | 19 |

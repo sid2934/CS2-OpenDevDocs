@@ -27,6 +27,7 @@ classDiagram
     CSmartPropElement_Group <|-- CSmartPropElement_PickOne
     CSmartPropElement_Group <|-- CSmartPropElement_PlaceInSphere
     CSmartPropElement_Group <|-- CSmartPropElement_PlaceMultiple
+    CSmartPropElement_Deformer <|-- CSmartPropElement_PlaceOnMesh
     CSmartPropElement_Group <|-- CSmartPropElement_PlaceOnPath
     CSmartPropElement_ModelEntity <|-- CSmartPropElement_PropDynamic
     CSmartPropElement_ModelEntity <|-- CSmartPropElement_PropPhysics
@@ -92,10 +93,14 @@ classDiagram
     CPulseCell_BaseRequirement <|-- CSmartPropPulse_SelectionLinearLength
     CPulseCell_BaseFlow <|-- CSmartPropPulse_SmartProp
     CSmartPropSelectionCriteria <|-- CSmartPropSelectionCriteria_ChoiceWeight
+    CSmartPropSelectionCriteria <|-- CSmartPropSelectionCriteria_EdgeAngleCriteria
     CSmartPropSelectionCriteria <|-- CSmartPropSelectionCriteria_EndCap
     CSmartPropSelectionCriteria <|-- CSmartPropSelectionCriteria_IsValid
     CSmartPropSelectionCriteria <|-- CSmartPropSelectionCriteria_LinearLength
+    CSmartPropSelectionCriteria <|-- CSmartPropSelectionCriteria_MaterialCriteria
     CSmartPropSelectionCriteria <|-- CSmartPropSelectionCriteria_PathPosition
+    CSmartPropSelectionCriteria <|-- CSmartPropSelectionCriteria_TopoEdgeCountCriteria
+    CSmartPropSelectionCriteria <|-- CSmartPropSelectionCriteria_VertexCountCriteria
     CSmartPropOperation <|-- CSmartPropTransformOperation
     CSmartPropParameter <|-- CSmartPropVariable
     CSmartPropVariable <|-- CSmartPropVariable_Angles
@@ -114,6 +119,7 @@ classDiagram
     CSmartPropVariable <|-- CSmartPropVariable_Material
     CSmartPropVariable <|-- CSmartPropVariable_MaterialGroup
     CSmartPropVariable <|-- CSmartPropVariable_Model
+    CSmartPropVariable <|-- CSmartPropVariable_OrientationMode
     CSmartPropVariable <|-- CSmartPropVariable_PathPositions
     CSmartPropVariable <|-- CSmartPropVariable_PickMode
     CSmartPropVariable <|-- CSmartPropVariable_RadiusPlacementMode

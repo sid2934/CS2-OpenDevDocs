@@ -172,6 +172,7 @@ direction LR
     +bool affect_ragdolls
     +string sound_name
     +uint32 explosion_type
+    +uint32 explosion_type_name
     +bool create_debris
     +CMsgVector debris_origin
     +fixed32 debris_surfaceprop
@@ -400,7 +401,7 @@ direction LR
 | `flags` | 16 | uint32 | optional |  |
 | `attachmentindex` | 17 | int32 | optional |  |
 | `effectname` | 18 | uint32 | optional |  |
-| `attachmentname` | 19 | uint32 | optional |  |
+| `attachmentname` | 19 | uint32 | optional | *(default: `0`)* |
 
 ### `CMsgTEEffectDispatch`
 
@@ -489,6 +490,7 @@ direction LR
 | `create_debris` | 12 | bool | optional |  |
 | `debris_origin` | 13 | CMsgVector | optional |  |
 | `debris_surfaceprop` | 14 | fixed32 | optional |  |
+| `explosion_type_name` | 15 | uint32 | optional | *(default: `0`)* |
 
 ### `CMsgTEDust`
 
@@ -522,7 +524,7 @@ direction LR
 | `origin` | 1 | CMsgVector | optional |  |
 | `velocity` | 2 | CMsgVector | optional |  |
 | `angles` | 3 | CMsgQAngle | optional |  |
-| `skin` | 4 | fixed32 | optional |  |
+| `skin` | 4 | fixed32 | optional | *(default: `0`)* |
 | `flags` | 5 | uint32 | optional |  |
 | `effects` | 6 | uint32 | optional |  |
 | `color` | 7 | fixed32 | optional |  |

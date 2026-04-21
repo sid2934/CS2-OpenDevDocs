@@ -20,13 +20,13 @@ classDiagram
     CNmPoseTask <|-- CNmCachedPoseReadTask
     CNmPoseTask <|-- CNmCachedPoseWriteTask
     CNmPoseTask <|-- CNmChainLookatTask
-    CNmPoseTask <|-- CNmChainSolverTask
     CNmEvent <|-- CNmEntityAttributeEventBase
     CNmEntityAttributeEventBase <|-- CNmEntityAttributeFloatEvent
     CNmEntityAttributeEventBase <|-- CNmEntityAttributeIntEvent
     CNmEvent <|-- CNmFloatCurveEvent
     CNmPoseTask <|-- CNmFollowBoneTask
     CNmEvent <|-- CNmFootEvent
+    CNmPoseTask <|-- CNmFootIKTask
     CNmEvent <|-- CNmFrameSnapEvent
     CNmEvent <|-- CNmIDEvent
     CNmEvent <|-- CNmLegacyEvent
@@ -44,9 +44,9 @@ classDiagram
     CNmEvent <|-- CNmTransitionEvent
     CNmPoseTask <|-- CNmTwoBoneIKTask
     CNmPoseTask <|-- CNmZeroPoseTask
-    CNmChainSolverTask *-- CNmTarget
-    CNmChainSolverTask *-- NmIKBlendMode_t
     CNmEvent *-- NmPercent_t
+    CNmFootIKTask *-- CNmTarget
+    CNmFootIKTask *-- NmIKBlendMode_t
     CNmTwoBoneIKTask *-- CNmTarget
     CNmTwoBoneIKTask *-- NmIKBlendMode_t
 ```

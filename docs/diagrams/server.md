@@ -7,7 +7,7 @@ nav_exclude: true
 
 # UML: server
 
-Class relationships (inheritance and composition) for the `server` module (showing 300 of 604 relationships).
+Class relationships (inheritance and composition) for the `server` module (showing 300 of 611 relationships).
 
 **Arrow legend:** `<|--` inheritance &nbsp; `*--` composition &nbsp; `-->` association/pointer
 
@@ -26,7 +26,9 @@ classDiagram
     CBodyComponent <|-- CBodyComponentPoint
     CBodyComponent <|-- CBodyComponentSkeletonInstance
     CBaseTrigger <|-- CBombTarget
+    CCS2WeaponGraphController <|-- CCS2PawnGraphController
     CAnimGraphControllerBase <|-- CCS2WeaponGraphController
+    CCSGO_EndOfMatchLineupEndpoint <|-- CCSGO_EndOfMatchLineupEnd
     CCSGO_TeamIntroCharacterPosition <|-- CCSGO_WingmanIntroCharacterPosition
     CCSGO_WingmanIntroCharacterPosition <|-- CCSGO_WingmanIntroCounterTerroristPosition
     CCSGO_WingmanIntroCharacterPosition <|-- CCSGO_WingmanIntroTerroristPosition
@@ -56,6 +58,7 @@ classDiagram
     CPlayer_WaterServices <|-- CCSPlayer_WaterServices
     CPlayer_WeaponServices <|-- CCSPlayer_WeaponServices
     CBasePlayerWeaponVData <|-- CCSWeaponBaseVData
+    CBaseModelEntity <|-- CCashStack
     CPointEntity <|-- CChoreoInfoTarget
     CBaseEntity <|-- CCitadelSoundOpvarSetOBB
     CBaseEntity <|-- CEnvSoundscape
@@ -135,13 +138,11 @@ classDiagram
     CCSWeaponBase <|-- CBaseCSGrenade
     CBaseGrenade <|-- CBaseCSGrenadeProjectile
     CBaseModelEntity <|-- CBaseClientUIEntity
-    CBaseFlex <|-- CBaseCombatCharacter
+    CBaseAnimGraph <|-- CBaseCombatCharacter
     CPointEntity <|-- CBaseDMStart
     CBaseToggle <|-- CBaseDoor
     CEntityInstance <|-- CBaseEntity
-    CBaseAnimGraph <|-- CBaseFlex
-    CBaseFlex <|-- CBaseFlexAlias_funCBaseFlex
-    CBaseFlex <|-- CBaseGrenade
+    CBaseAnimGraph <|-- CBaseGrenade
     CBaseEntity <|-- CBaseModelEntity
     CPathKeyFrame <|-- CBaseMoveBehavior
     CBaseToggle <|-- CBasePlatTrain
@@ -165,6 +166,8 @@ classDiagram
     CBaseTrigger <|-- CBuyZone
     CCSWeaponBase <|-- CC4
     CBot <|-- CCSBot
+    CBaseEntity <|-- CCSGO_EndOfMatchLineupEndpoint
+    CCSGO_EndOfMatchLineupEndpoint <|-- CCSGO_EndOfMatchLineupStart
     CCSGO_TeamPreviewCharacterPosition <|-- CCSGO_TeamIntroCharacterPosition
     CCSGO_TeamIntroCharacterPosition <|-- CCSGO_TeamIntroCounterTerroristPosition
     CCSGO_TeamIntroCharacterPosition <|-- CCSGO_TeamIntroTerroristPosition
@@ -207,7 +210,7 @@ classDiagram
     CDynamicProp <|-- CDynamicPropAlias_cable_dynamic
     CDynamicProp <|-- CDynamicPropAlias_dynamic_prop
     CDynamicProp <|-- CDynamicPropAlias_prop_dynamic_override
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
     IHasAttributes <|-- CEconEntity
     IEconItemInterface <|-- CEconItemView
     CEconEntity <|-- CEconWearable
@@ -218,6 +221,7 @@ classDiagram
     CBeam <|-- CEnvBeam
     CBaseEntity <|-- CEnvBeverage
     CBaseEntity <|-- CEnvCombinedLightProbeVolume
+    CEnvCombinedLightProbeVolume <|-- CEnvCombinedLightProbeVolumeAlias_func_combined_light_probe_volume
     CBaseEntity <|-- CEnvCubemap
     CEnvCubemap <|-- CEnvCubemapBox
     CBaseEntity <|-- CEnvCubemapFog
@@ -308,9 +312,5 @@ classDiagram
     CBaseCombatCharacter <|-- CHostageExpresserShim
     CMolotovGrenade <|-- CIncendiaryGrenade
     CBaseModelEntity <|-- CInferno
-    CServerOnlyEntity <|-- CInfoData
-    SpawnPoint <|-- CInfoDeathmatchSpawn
-    CPointEntity <|-- CInfoGameEventProxy
-    CPointEntity <|-- CInfoInstructorHintBombTargetA
-    CPointEntity <|-- CInfoInstructorHintBombTargetB
+    CPointEntity <|-- CInfoChoreoAnchor
 ```

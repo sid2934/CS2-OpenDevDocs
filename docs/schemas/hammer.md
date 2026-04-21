@@ -18,7 +18,7 @@ nav_exclude: true
 | [TexturesOptionsEditableData_t](#texturesoptionseditabledata_t) | class |  | 1 |
 | [ToolsOptionsEditableData_t](#toolsoptionseditabledata_t) | class |  | 9 |
 | [View2DOptionsEditableData_t](#view2doptionseditabledata_t) | class |  | 4 |
-| [View3DOptionsEditableData_t](#view3doptionseditabledata_t) | class |  | 20 |
+| [View3DOptionsEditableData_t](#view3doptionseditabledata_t) | class |  | 21 |
 
 ---
 
@@ -145,6 +145,7 @@ nav_exclude: true
 |------|------|-------------|
 | `bReverseY` | bool | `MPropertyFriendlyName = "Reverse Y"` |
 | `flPanSpeed` | float32 | `MPropertyFriendlyName = "Pan Speed"` |
+| `flRotationScale` | float32 | `MPropertyFriendlyName = "Rotation scale"` |
 | `nForwardSpeedMax` | int32 | `MPropertyFriendlyName = "Forward speed max (world units/sec)"` |
 | `nTimeToMaxSpeed` | int32 | `MPropertyFriendlyName = "Time to max speed (ms)"` |
 | `flFOV` | int32 | `MPropertyFriendlyName = "Field of View (degrees)"` |

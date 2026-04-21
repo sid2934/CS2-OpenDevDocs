@@ -173,6 +173,12 @@ direction LR
     +fixed32 source_soundscapeid
   }
 
+  class CCSUsrMsg_WeaponMagDrop {
+    +int32 entidx
+    +int32 secondary_data
+    +bool server_event
+  }
+
   class CCSUsrMsg_UpdateScreenHealthBar {
     +int32 entidx
     +float healthratio_old
@@ -648,6 +654,7 @@ direction LR
     CS_UM_DamagePrediction
     CS_UM_RecurringMissionSchema
     CS_UM_SendPlayerLoadout
+    CS_UM_WeaponMagDrop
   }
 
   class ECSUsrMsg_DisconnectToLobby_Action{
@@ -741,6 +748,7 @@ direction LR
 | `CS_UM_DamagePrediction` | 386 |
 | `CS_UM_RecurringMissionSchema` | 387 |
 | `CS_UM_SendPlayerLoadout` | 388 |
+| `CS_UM_WeaponMagDrop` | 389 |
 
 ### `ECSUsrMsg_DisconnectToLobby_Action`
 
@@ -984,6 +992,14 @@ Plays a weapon sound at a specific world position; used for sounds that must be 
 | `sound` | 5 | string | optional | Sound event name to play. |
 | `game_timestamp` | 6 | float | optional | Server game-time at which the sound originated (used for latency-compensated audio sync). |
 | `source_soundscapeid` | 7 | fixed32 | optional | Hash of the soundscape that was active when the sound was emitted. |
+
+### `CCSUsrMsg_WeaponMagDrop`
+
+| Field | Ordinal | Type | Label | Description |
+|-------|---------|------|-------|-------------|
+| `entidx` | 1 | int32 | optional | *(default: `-1`)* |
+| `secondary_data` | 2 | int32 | optional |  |
+| `server_event` | 3 | bool | optional |  |
 
 ### `CCSUsrMsg_UpdateScreenHealthBar`
 

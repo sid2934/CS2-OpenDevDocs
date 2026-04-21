@@ -17,8 +17,8 @@ Network message definitions and game event structures from CS2's Protobufs direc
 | [cs_gameevents.proto](proto/cs_gameevents.md) | 4 | 1 |
 | [cs_prediction_events.proto](proto/cs_prediction_events.md) | 2 | 1 |
 | [cs_usercmd.proto](proto/cs_usercmd.md) | 4 | 0 |
-| [cstrike15_gcmessages.proto](proto/cstrike15_gcmessages.md) | 156 | 5 |
-| [cstrike15_usermessages.proto](proto/cstrike15_usermessages.md) | 73 | 2 |
+| [cstrike15_gcmessages.proto](proto/cstrike15_gcmessages.md) | 155 | 5 |
+| [cstrike15_usermessages.proto](proto/cstrike15_usermessages.md) | 74 | 2 |
 | [demo.proto](proto/demo.md) | 20 | 1 |
 | [econ_gcmessages.proto](proto/econ_gcmessages.md) | 5 | 4 |
 | [engine_gcmessages.proto](proto/engine_gcmessages.md) | 1 | 0 |
@@ -27,7 +27,7 @@ Network message definitions and game event structures from CS2's Protobufs direc
 | [gameevents.proto](proto/gameevents.md) | 13 | 1 |
 | [gcsdk_gcmessages.proto](proto/gcsdk_gcmessages.md) | 36 | 2 |
 | [gcsystemmsgs.proto](proto/gcsystemmsgs.md) | 13 | 6 |
-| [netmessages.proto](proto/netmessages.md) | 63 | 12 |
+| [netmessages.proto](proto/netmessages.md) | 63 | 11 |
 | [network_connection.proto](proto/network_connection.md) | 0 | 1 |
 | [networkbasetypes.proto](proto/networkbasetypes.md) | 24 | 3 |
 | [networksystem_protomessages.proto](proto/networksystem_protomessages.md) | 5 | 0 |

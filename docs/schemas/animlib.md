@@ -36,7 +36,6 @@ nav_exclude: true
 | [CNmCachedVectorNode](#cnmcachedvectornode) | class |  | 0 |
 | [CNmChainLookatNode](#cnmchainlookatnode) | class |  | 0 |
 | [CNmChainLookatTask](#cnmchainlookattask) | class | CNmPoseTask | 11 |
-| [CNmChainSolverTask](#cnmchainsolvertask) | class | CNmPoseTask | 13 |
 | [CNmClip](#cnmclip) | class |  | 0 |
 | [CNmClip](#cnmclip) | class |  | 0 |
 | [CNmClipNode](#cnmclipnode) | class |  | 0 |
@@ -59,8 +58,9 @@ nav_exclude: true
 | [CNmEntityAttributeEventBase](#cnmentityattributeeventbase) | class | CNmEvent | 0 |
 | [CNmEntityAttributeFloatEvent](#cnmentityattributefloatevent) | class | CNmEntityAttributeEventBase | 0 |
 | [CNmEntityAttributeIntEvent](#cnmentityattributeintevent) | class | CNmEntityAttributeEventBase | 0 |
-| [CNmEvent](#cnmevent) | class |  | 4 |
+| [CNmEvent](#cnmevent) | class |  | 3 |
 | [CNmEventRelevance_t](#cnmeventrelevance_t) | enum |  | 3 |
+| [CNmEventTargetEntity_t](#cnmeventtargetentity_t) | enum |  | 4 |
 | [CNmExternalPoseNode](#cnmexternalposenode) | class |  | 0 |
 | [CNmFixedWeightBoneMaskNode](#cnmfixedweightbonemasknode) | class |  | 0 |
 | [CNmFloatAngleMathNode](#cnmfloatanglemathnode) | class |  | 0 |
@@ -78,12 +78,15 @@ nav_exclude: true
 | [CNmFloatRemapNode](#cnmfloatremapnode) | class |  | 0 |
 | [CNmFloatRemapNode](#cnmfloatremapnode) | class |  | 0 |
 | [CNmFloatSelectorNode](#cnmfloatselectornode) | class |  | 0 |
+| [CNmFloatSpringNode](#cnmfloatspringnode) | class |  | 0 |
 | [CNmFloatSwitchNode](#cnmfloatswitchnode) | class |  | 0 |
 | [CNmFloatValueNode](#cnmfloatvaluenode) | class |  | 0 |
 | [CNmFollowBoneNode](#cnmfollowbonenode) | class |  | 0 |
 | [CNmFollowBoneTask](#cnmfollowbonetask) | class | CNmPoseTask | 0 |
 | [CNmFootEvent](#cnmfootevent) | class | CNmEvent | 0 |
 | [CNmFootEventConditionNode](#cnmfooteventconditionnode) | class |  | 0 |
+| [CNmFootIKNode](#cnmfootiknode) | class |  | 0 |
+| [CNmFootIKTask](#cnmfootiktask) | class | CNmPoseTask | 12 |
 | [CNmFootstepEventIDNode](#cnmfootstepeventidnode) | class |  | 0 |
 | [CNmFootstepEventPercentageThroughNode](#cnmfootstepeventpercentagethroughnode) | class |  | 0 |
 | [CNmFrameSnapEvent](#cnmframesnapevent) | class | CNmEvent | 0 |
@@ -93,8 +96,11 @@ nav_exclude: true
 | [CNmGraphDefinition](#cnmgraphdefinition) | class |  | 0 |
 | [CNmGraphEventConditionNode](#cnmgrapheventconditionnode) | class |  | 0 |
 | [CNmGraphEventConditionNode](#cnmgrapheventconditionnode) | class |  | 0 |
+| [CNmGraphInstance](#cnmgraphinstance) | class |  | 0 |
 | [CNmGraphNode](#cnmgraphnode) | class |  | 1 |
 | [CNmGraphVariationUserData](#cnmgraphvariationuserdata) | class |  | 0 |
+| [CNmIDBasedClipSelectorNode](#cnmidbasedclipselectornode) | class |  | 0 |
+| [CNmIDBasedSelectorNode](#cnmidbasedselectornode) | class |  | 0 |
 | [CNmIDComparisonNode](#cnmidcomparisonnode) | class |  | 0 |
 | [CNmIDComparisonNode](#cnmidcomparisonnode) | enum |  | 2 |
 | [CNmIDEvent](#cnmidevent) | class | CNmEvent | 0 |
@@ -105,10 +111,6 @@ nav_exclude: true
 | [CNmIDSwitchNode](#cnmidswitchnode) | class |  | 0 |
 | [CNmIDToFloatNode](#cnmidtofloatnode) | class |  | 0 |
 | [CNmIDValueNode](#cnmidvaluenode) | class |  | 0 |
-| [CNmIKBody](#cnmikbody) | class |  | 0 |
-| [CNmIKEffector](#cnmikeffector) | class |  | 0 |
-| [CNmIKJoint](#cnmikjoint) | class |  | 0 |
-| [CNmIKRig](#cnmikrig) | class |  | 0 |
 | [CNmIsExternalGraphSlotFilledNode](#cnmisexternalgraphslotfillednode) | class |  | 0 |
 | [CNmIsExternalPoseSetNode](#cnmisexternalposesetnode) | class |  | 0 |
 | [CNmIsInactiveBranchConditionNode](#cnmisinactivebranchconditionnode) | class |  | 0 |
@@ -172,6 +174,7 @@ nav_exclude: true
 | [CNmTargetValueNode](#cnmtargetvaluenode) | class |  | 0 |
 | [CNmTargetWarpEvent](#cnmtargetwarpevent) | class | CNmEvent | 0 |
 | [CNmTargetWarpNode](#cnmtargetwarpnode) | class |  | 0 |
+| [CNmTargetWarpNode](#cnmtargetwarpnode) | enum |  | 4 |
 | [CNmTimeConditionNode](#cnmtimeconditionnode) | class |  | 0 |
 | [CNmTimeConditionNode](#cnmtimeconditionnode) | enum |  | 3 |
 | [CNmTimeConditionNode](#cnmtimeconditionnode) | enum |  | 4 |
@@ -209,6 +212,7 @@ nav_exclude: true
 | [NmFootPhaseCondition_t](#nmfootphasecondition_t) | enum |  | 7 |
 | [NmFootPhase_t](#nmfootphase_t) | enum |  | 5 |
 | [NmFrameSnapEventMode_t](#nmframesnapeventmode_t) | enum |  | 2 |
+| [NmGraphDebugMode_t](#nmgraphdebugmode_t) | enum |  | 2 |
 | [NmGraphEventTypeCondition_t](#nmgrapheventtypecondition_t) | enum |  | 6 |
 | [NmGraphValueType_t](#nmgraphvaluetype_t) | enum |  | 9 |
 | [NmIKBlendMode_t](#nmikblendmode_t) | enum |  | 2 |
@@ -254,7 +258,7 @@ classDiagram
 
 ### CNmBlend2DNode
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmBlend2DNode::CDefinition",`, `"m_nNodeIdx": -1,`, `"m_sourceNodeIndices":`, `[`, `],`, `"m_nInputParameterNodeIdx0": -1,`, `"m_nInputParameterNodeIdx1": -1,`, `"m_values":`, `[`, `],`, `"m_indices":`, `[`, `],`, `"m_hullIndices":`, `[`, `],`, `"m_bAllowLooping": true`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmBlend2DNode::CDefinition",`, `"m_nNodeIdx": -1,`, `"m_sourceNodeIndices":`, `[`, `],`, `"m_values":`, `[`, `],`, `"m_indices":`, `[`, `],`, `"m_hullIndices":`, `[`, `],`, `"m_nInputParameterNodeIdx0": -1,`, `"m_nInputParameterNodeIdx1": -1,`, `"m_bAllowLooping": true`, `}`
 
 ### CNmBlendTask
 
@@ -289,7 +293,7 @@ classDiagram
 
 **Inherits from:** [CNmEvent](animlib.md#cnmevent)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmBodyGroupEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_bClientOnly": false,`, `"m_groupName": "",`, `"m_nGroupValue": 0`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmBodyGroupEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_target": "Self",`, `"m_groupName": "",`, `"m_nGroupValue": 0`, `}`
 
 **Relationships:**
 
@@ -395,37 +399,6 @@ classDiagram
 | `m_flHorizontalAngleDegrees` | float32 |  |
 | `m_flVerticalAngleDegrees` | float32 |  |
 
-### CNmChainSolverTask
-
-**Inherits from:** [CNmPoseTask](animlib.md#cnmposetask)
-
-**Relationships:**
-
-```mermaid
-classDiagram
-    CNmPoseTask <|-- CNmChainSolverTask
-    CNmChainSolverTask *-- CNmTarget
-    CNmChainSolverTask *-- NmIKBlendMode_t
-```
-
-**Fields:**
-
-| Name | Type | Annotations |
-|------|------|-------------|
-| `m_nEffectorBoneIdx` | int32 |  |
-| `m_nEffectorTargetBoneIdx` | int32 |  |
-| `m_targetTransform` | CTransform |  |
-| `m_nNumBonesInChain` | int32 |  |
-| `m_effectorTarget` | [CNmTarget](../schemas/animlib.md#cnmtarget) |  |
-| `m_blendMode` | [NmIKBlendMode_t](../schemas/animlib.md#nmikblendmode_t) |  |
-| `m_flBlendWeight` | float32 |  |
-| `m_bIsTargetInWorldSpace` | bool |  |
-| `m_bIsRunningFromDeserializedData` | bool |  |
-| `m_debugEffectorBoneID` | CGlobalSymbol |  |
-| `m_chainStartTransformMS` | CTransform |  |
-| `m_debugRequestedTargetTransformMS` | CTransform |  |
-| `m_debugTotalChainLength` | float32 |  |
-
 ### CNmClip
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"m_skeleton": "",`, `"m_nNumFrames": 0,`, `"m_flDuration": 0.000000,`, `"m_compressedPoseData": "[BINARY BLOB]",`, `"m_trackCompressionSettings":`, `[`, `],`, `"m_compressedPoseOffsets":`, `[`, `],`, `"m_floatCurveIDs":`, `[`, `],`, `"m_floatCurveDefs":`, `[`, `],`, `"m_compressedFloatCurveData":`, `[`, `],`, `"m_compressedFloatCurveOffsets":`, `[`, `],`, `"m_secondaryAnimations":`, `[`, `],`, `"m_syncTrack":`, `{`, `"m_syncEvents":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_startTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_duration":`, `{`, `"m_flValue": 1.000000`, `}`, `}`, `],`, `"m_nStartEventOffset": 0`, `},`, `"m_rootMotion":`, `{`, `"m_transforms":`, `[`, `],`, `"m_nNumFrames": 0,`, `"m_flAverageLinearVelocity": 0.000000,`, `"m_flAverageAngularVelocityRadians": 0.000000,`, `"m_totalDelta":`, `[`, `0.000000,`, `0.000000,`, `0.000000,`, `0.000000,`, `0.000000,`, `0.000000,`, `0.000000,`, `0.000000`, `]`, `},`, `"m_bIsAdditive": false,`, `"m_modelSpaceSamplingChain":`, `[`, `],`, `"m_modelSpaceBoneSamplingIndices":`, `[`, `],`, `"m_events":`, `[`, `]`, `}`
@@ -514,7 +487,7 @@ classDiagram
 
 **Derived by:** [CNmEntityAttributeFloatEvent](animlib.md#cnmentityattributefloatevent), [CNmEntityAttributeIntEvent](animlib.md#cnmentityattributeintevent)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmEntityAttributeEventBase",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_bClientOnly": false,`, `"m_attributeName": ""`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmEntityAttributeEventBase",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_target": "Self",`, `"m_attributeName": ""`, `}`
 
 **Relationships:**
 
@@ -529,7 +502,7 @@ classDiagram
 
 **Inherits from:** [CNmEntityAttributeEventBase](animlib.md#cnmentityattributeeventbase)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmEntityAttributeFloatEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_bClientOnly": false,`, `"m_attributeName": "",`, `"m_FloatValue":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `}`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmEntityAttributeFloatEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_target": "Self",`, `"m_attributeName": "",`, `"m_FloatValue":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `}`, `}`
 
 **Relationships:**
 
@@ -543,7 +516,7 @@ classDiagram
 
 **Inherits from:** [CNmEntityAttributeEventBase](animlib.md#cnmentityattributeeventbase)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmEntityAttributeIntEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_bClientOnly": false,`, `"m_attributeName": "",`, `"m_nIntValue": 0`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmEntityAttributeIntEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_target": "Self",`, `"m_attributeName": "",`, `"m_nIntValue": 0`, `}`
 
 **Relationships:**
 
@@ -587,7 +560,6 @@ classDiagram
 | `m_flStartTime` | [NmPercent_t](../schemas/animlib.md#nmpercent_t) |  |
 | `m_flDuration` | [NmPercent_t](../schemas/animlib.md#nmpercent_t) |  |
 | `m_syncID` | CGlobalSymbol |  |
-| `m_bClientOnly` | bool |  |
 
 ### CNmEventRelevance_t
 
@@ -598,6 +570,17 @@ classDiagram
 | `ClientOnly` | 0 |
 | `ServerOnly` | 1 |
 | `ClientAndServer` | 2 |
+
+### CNmEventTargetEntity_t
+
+**Values:**
+
+| Name | Value |
+|------|-------|
+| `Self` | 0 |
+| `Weapon` | 1 |
+| `HeldItem` | 2 |
+| `Custom` | 3 |
 
 ### CNmExternalPoseNode
 
@@ -646,7 +629,7 @@ classDiagram
 
 **Inherits from:** [CNmEvent](animlib.md#cnmevent)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmFloatCurveEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_bClientOnly": false,`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_curve":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `}`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmFloatCurveEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_curve":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `}`, `}`
 
 **Relationships:**
 
@@ -706,6 +689,10 @@ classDiagram
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmFloatSelectorNode::CDefinition",`, `"m_nNodeIdx": -1,`, `"m_conditionNodeIndices":`, `[`, `],`, `"m_values":`, `[`, `],`, `"m_flDefaultValue": 0.000000,`, `"m_flEaseTime": 0.200000,`, `"m_easingOp": "Linear"`, `}`
 
+### CNmFloatSpringNode
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmFloatSpringNode::CDefinition",`, `"m_nNodeIdx": -1,`, `"m_flStartValue": 0.000000,`, `"m_flHertz": 4.000000,`, `"m_flDampingRatio": 0.700000,`, `"m_nInputValueNodeIdx": -1,`, `"m_bUseStartValue": false`, `}`
+
 ### CNmFloatSwitchNode
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmFloatSwitchNode::CDefinition",`, `"m_nNodeIdx": -1,`, `"m_nSwitchValueNodeIdx": -1,`, `"m_nTrueValueNodeIdx": -1,`, `"m_nFalseValueNodeIdx": -1,`, `"m_flFalseValue": 0.000000,`, `"m_flTrueValue": 1.000000`, `}`
@@ -731,7 +718,7 @@ classDiagram
 
 **Inherits from:** [CNmEvent](animlib.md#cnmevent)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmFootEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_bClientOnly": false,`, `"m_phase": "LeftFootDown"`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmFootEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_phase": "LeftFootDown"`, `}`
 
 **Relationships:**
 
@@ -743,6 +730,40 @@ classDiagram
 ### CNmFootEventConditionNode
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmFootEventConditionNode::CDefinition",`, `"m_nNodeIdx": -1,`, `"m_nSourceStateNodeIdx": -1,`, `"m_phaseCondition": "LeftFootDown",`, `"m_eventConditionRules":`, `{`, `"m_flags": 0`, `}`, `}`
+
+### CNmFootIKNode
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmFootIKNode::CDefinition",`, `"m_nNodeIdx": -1,`, `"m_nChildNodeIdx": -1,`, `"m_leftEffectorBoneID": "",`, `"m_rightEffectorBoneID": "",`, `"m_nLeftTargetNodeIdx": -1,`, `"m_nRightTargetNodeIdx": -1,`, `"m_nEnabledNodeIdx": -1,`, `"m_flBlendTimeSeconds": 0.000000,`, `"m_blendMode": "Effector",`, `"m_bIsTargetInWorldSpace": false`, `}`
+
+### CNmFootIKTask
+
+**Inherits from:** [CNmPoseTask](animlib.md#cnmposetask)
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CNmPoseTask <|-- CNmFootIKTask
+    CNmFootIKTask *-- CNmTarget
+    CNmFootIKTask *-- NmIKBlendMode_t
+```
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `m_nLeftEffectorBoneIdx` | int32 |  |
+| `m_nRightEffectorBoneIdx` | int32 |  |
+| `m_leftTargetTransform` | CTransform |  |
+| `m_rightTargetTransform` | CTransform |  |
+| `m_nLeftTargetBoneIdx` | int32 |  |
+| `m_nRightTargetBoneIdx` | int32 |  |
+| `m_leftTarget` | [CNmTarget](../schemas/animlib.md#cnmtarget) |  |
+| `m_rightTarget` | [CNmTarget](../schemas/animlib.md#cnmtarget) |  |
+| `m_blendMode` | [NmIKBlendMode_t](../schemas/animlib.md#nmikblendmode_t) |  |
+| `m_flBlendWeight` | float32 |  |
+| `m_bIsTargetInWorldSpace` | bool |  |
+| `m_bIsRunningFromDeserializedData` | bool |  |
 
 ### CNmFootstepEventIDNode
 
@@ -756,7 +777,7 @@ classDiagram
 
 **Inherits from:** [CNmEvent](animlib.md#cnmevent)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmFrameSnapEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_bClientOnly": false,`, `"m_frameSnapMode": "Floor"`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmFrameSnapEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_frameSnapMode": "Floor"`, `}`
 
 **Relationships:**
 
@@ -767,7 +788,7 @@ classDiagram
 
 ### CNmGraphDefinition
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_variationID": "",`, `"m_skeleton": "",`, `"m_pUserData": null,`, `"m_persistentNodeIndices":`, `[`, `],`, `"m_nRootNodeIdx": -1,`, `"m_controlParameterIDs":`, `[`, `],`, `"m_virtualParameterIDs":`, `[`, `],`, `"m_virtualParameterNodeIndices":`, `[`, `],`, `"m_referencedGraphSlots":`, `[`, `],`, `"m_externalGraphSlots":`, `[`, `],`, `"m_externalPoseSlots":`, `[`, `],`, `"m_nodePaths":`, `[`, `],`, `"m_resources":`, `[`, `],`, `"m_nodes":`, `[`, `]`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_variationID": "",`, `"m_skeleton": "",`, `"m_supportedSecondarySkeletons":`, `[`, `],`, `"m_pUserData": null,`, `"m_persistentNodeIndices":`, `[`, `],`, `"m_nRootNodeIdx": -1,`, `"m_controlParameterIDs":`, `[`, `],`, `"m_virtualParameterIDs":`, `[`, `],`, `"m_virtualParameterNodeIndices":`, `[`, `],`, `"m_referencedGraphSlots":`, `[`, `],`, `"m_externalGraphSlots":`, `[`, `],`, `"m_externalPoseSlots":`, `[`, `],`, `"m_nodePaths":`, `[`, `],`, `"m_resources":`, `[`, `],`, `"m_nodes":`, `[`, `]`, `}`
 
 ### CNmGraphDefinition
 
@@ -788,6 +809,8 @@ classDiagram
 ### CNmGraphEventConditionNode
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"m_eventID": "",`, `"m_eventTypeCondition": "Entry"`, `}`
+
+### CNmGraphInstance
 
 ### CNmGraphNode
 
@@ -812,6 +835,14 @@ classDiagram
     CNmGraphVariationUserData <|-- CBaseAnimGraphVariationUserData
 ```
 
+### CNmIDBasedClipSelectorNode
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmIDBasedClipSelectorNode::CDefinition",`, `"m_nNodeIdx": -1,`, `"m_optionNodeIndices":`, `[`, `],`, `"m_optionIDs":`, `[`, `],`, `"m_nParameterNodeIdx": -1,`, `"m_nFallbackNodeIdx": -1,`, `"m_bIgnoreInvalidOptions": false`, `}`
+
+### CNmIDBasedSelectorNode
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmIDBasedSelectorNode::CDefinition",`, `"m_nNodeIdx": -1,`, `"m_optionNodeIndices":`, `[`, `],`, `"m_optionIDs":`, `[`, `],`, `"m_nParameterNodeIdx": -1,`, `"m_nFallbackNodeIdx": -1,`, `"m_bIgnoreInvalidOptions": false`, `}`
+
 ### CNmIDComparisonNode
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmIDComparisonNode::CDefinition",`, `"m_nNodeIdx": -1,`, `"m_nInputValueNodeIdx": -1,`, `"m_comparison": "Matches",`, `"m_comparisionIDs":`, `[`, `]`, `}`
@@ -829,7 +860,7 @@ classDiagram
 
 **Inherits from:** [CNmEvent](animlib.md#cnmevent)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmIDEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_bClientOnly": false,`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_secondaryID": ""`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmIDEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_secondaryID": ""`, `}`
 
 **Relationships:**
 
@@ -864,22 +895,6 @@ classDiagram
 
 ### CNmIDValueNode
 
-### CNmIKBody
-
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_flMass": 0.000000,`, `"m_vLocalMassCenter":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_vRadius":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_flResistance": 0.000000`, `}`
-
-### CNmIKEffector
-
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_nBodyIndex": -1,`, `"m_bEnabled": true,`, `"m_vTargetPosition":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_qTargetOrientation":`, `[`, `0.000000,`, `0.000000,`, `0.000000,`, `1.000000`, `],`, `"m_flWeight": 1.000000`, `}`
-
-### CNmIKJoint
-
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_nParentIndex": -1,`, `"m_nBodyIndex": -1,`, `"m_xLocalFrame":`, `[`, `0.000000,`, `0.000000,`, `0.000000,`, `1.000000,`, `0.000000,`, `0.000000,`, `0.000000,`, `1.000000`, `],`, `"m_flSwingLimit": 90.000000,`, `"m_flMinTwistLimit": -180.000000,`, `"m_flMaxTwistLimit": 180.000000,`, `"m_flWeight": 1.000000`, `}`
-
-### CNmIKRig
-
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_skeleton": "",`, `"m_vecBodies":`, `[`, `],`, `"m_vecJoints":`, `[`, `]`, `}`
-
 ### CNmIsExternalGraphSlotFilledNode
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmIsExternalGraphSlotFilledNode::CDefinition",`, `"m_nNodeIdx": -1,`, `"m_nExternalGraphNodeIdx": -1`, `}`
@@ -908,7 +923,7 @@ classDiagram
 
 **Inherits from:** [CNmEvent](animlib.md#cnmevent)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmLegacyEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_bClientOnly": false,`, `"m_animEventClassName": "",`, `"m_KV": null`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmLegacyEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_animEventClassName": "",`, `"m_KV": null`, `}`
 
 **Relationships:**
 
@@ -921,7 +936,7 @@ classDiagram
 
 **Inherits from:** [CNmEvent](animlib.md#cnmevent)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmMaterialAttributeEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_bClientOnly": false,`, `"m_attributeName": "",`, `"m_attributeNameToken": "",`, `"m_x":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `},`, `"m_y":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `},`, `"m_z":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `},`, `"m_w":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `}`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmMaterialAttributeEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_target": "Self",`, `"m_attributeName": "",`, `"m_attributeNameToken": "",`, `"m_x":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `},`, `"m_y":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `},`, `"m_z":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `},`, `"m_w":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `}`, `}`
 
 **Relationships:**
 
@@ -954,7 +969,7 @@ classDiagram
 
 **Inherits from:** [CNmEvent](animlib.md#cnmevent)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmOrientationWarpEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_bClientOnly": false`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmOrientationWarpEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": ""`, `}`
 
 **Relationships:**
 
@@ -993,17 +1008,17 @@ classDiagram
 
 ### CNmParameterizedClipSelectorNode
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmParameterizedClipSelectorNode::CDefinition",`, `"m_nNodeIdx": -1,`, `"m_optionNodeIndices":`, `[`, `],`, `"m_optionWeights":`, `[`, `],`, `"m_parameterNodeIdx": 0,`, `"m_bIgnoreInvalidOptions": false,`, `"m_bHasWeightsSet": false`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmParameterizedClipSelectorNode::CDefinition",`, `"m_nNodeIdx": -1,`, `"m_optionNodeIndices":`, `[`, `],`, `"m_optionWeights":`, `[`, `],`, `"m_parameterNodeIdx": -1,`, `"m_bIgnoreInvalidOptions": false,`, `"m_bHasWeightsSet": false`, `}`
 
 ### CNmParameterizedSelectorNode
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmParameterizedSelectorNode::CDefinition",`, `"m_nNodeIdx": -1,`, `"m_optionNodeIndices":`, `[`, `],`, `"m_optionWeights":`, `[`, `],`, `"m_parameterNodeIdx": 0,`, `"m_bIgnoreInvalidOptions": false,`, `"m_bHasWeightsSet": false`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmParameterizedSelectorNode::CDefinition",`, `"m_nNodeIdx": -1,`, `"m_optionNodeIndices":`, `[`, `],`, `"m_optionWeights":`, `[`, `],`, `"m_parameterNodeIdx": -1,`, `"m_bIgnoreInvalidOptions": false,`, `"m_bHasWeightsSet": false`, `}`
 
 ### CNmParticleEvent
 
 **Inherits from:** [CNmEvent](animlib.md#cnmevent)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmParticleEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_bClientOnly": false,`, `"m_relevance": "ClientAndServer",`, `"m_type": "Create",`, `"m_hParticleSystem": "",`, `"m_tags": "",`, `"m_bStopImmediately": false,`, `"m_bDetachFromOwner": false,`, `"m_bPlayEndCap": false,`, `"m_attachmentPoint0": "",`, `"m_attachmentType0": "PATTACH_ABSORIGIN",`, `"m_attachmentPoint1": "",`, `"m_attachmentType1": "PATTACH_ABSORIGIN",`, `"m_config": "preview",`, `"m_effectForConfig": ""`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmParticleEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_relevance": "ClientAndServer",`, `"m_type": "Create",`, `"m_target": "Self",`, `"m_hParticleSystem": "",`, `"m_tags": "",`, `"m_bStopImmediately": false,`, `"m_bDetachFromOwner": false,`, `"m_bPlayEndCap": false,`, `"m_attachmentPoint0": "",`, `"m_attachmentType0": "PATTACH_ABSORIGIN",`, `"m_attachmentPoint1": "",`, `"m_attachmentType1": "PATTACH_ABSORIGIN",`, `"m_config": "preview",`, `"m_effectForConfig": ""`, `}`
 
 **Relationships:**
 
@@ -1029,7 +1044,7 @@ classDiagram
 
 ### CNmPoseTask
 
-**Derived by:** [CNmAimCSTask](client.md#cnmaimcstask), [CNmBlendTaskBase](animlib.md#cnmblendtaskbase), [CNmCachedPoseReadTask](animlib.md#cnmcachedposereadtask), [CNmCachedPoseWriteTask](animlib.md#cnmcachedposewritetask), [CNmChainLookatTask](animlib.md#cnmchainlookattask), [CNmChainSolverTask](animlib.md#cnmchainsolvertask), [CNmFollowBoneTask](animlib.md#cnmfollowbonetask), [CNmReferencePoseTask](animlib.md#cnmreferenceposetask), [CNmSampleTask](animlib.md#cnmsampletask), [CNmScaleTask](animlib.md#cnmscaletask), [CNmSnapWeaponTask](client.md#cnmsnapweapontask), [CNmTwoBoneIKTask](animlib.md#cnmtwoboneiktask), [CNmZeroPoseTask](animlib.md#cnmzeroposetask)
+**Derived by:** [CNmAimCSTask](client.md#cnmaimcstask), [CNmBlendTaskBase](animlib.md#cnmblendtaskbase), [CNmCachedPoseReadTask](animlib.md#cnmcachedposereadtask), [CNmCachedPoseWriteTask](animlib.md#cnmcachedposewritetask), [CNmChainLookatTask](animlib.md#cnmchainlookattask), [CNmFollowBoneTask](animlib.md#cnmfollowbonetask), [CNmFootIKTask](animlib.md#cnmfootiktask), [CNmReferencePoseTask](animlib.md#cnmreferenceposetask), [CNmSampleTask](animlib.md#cnmsampletask), [CNmScaleTask](animlib.md#cnmscaletask), [CNmSnapWeaponTask](client.md#cnmsnapweapontask), [CNmTwoBoneIKTask](animlib.md#cnmtwoboneiktask), [CNmZeroPoseTask](animlib.md#cnmzeroposetask)
 
 **Relationships:**
 
@@ -1039,8 +1054,8 @@ classDiagram
     CNmPoseTask <|-- CNmCachedPoseReadTask
     CNmPoseTask <|-- CNmCachedPoseWriteTask
     CNmPoseTask <|-- CNmChainLookatTask
-    CNmPoseTask <|-- CNmChainSolverTask
     CNmPoseTask <|-- CNmFollowBoneTask
+    CNmPoseTask <|-- CNmFootIKTask
     CNmPoseTask <|-- CNmReferencePoseTask
     CNmPoseTask <|-- CNmSampleTask
     CNmPoseTask <|-- CNmScaleTask
@@ -1086,7 +1101,7 @@ classDiagram
 
 **Inherits from:** [CNmEvent](animlib.md#cnmevent)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmRootMotionEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_bClientOnly": false,`, `"m_flBlendTimeSeconds": 0.100000`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmRootMotionEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_flBlendTimeSeconds": 0.100000`, `}`
 
 **Relationships:**
 
@@ -1153,7 +1168,7 @@ classDiagram
 
 **Inherits from:** [CNmEvent](animlib.md#cnmevent)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmSoundEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_bClientOnly": false,`, `"m_relevance": "ClientAndServer",`, `"m_name": "",`, `"m_position": "None",`, `"m_attachmentName": "",`, `"m_tags": "",`, `"m_bContinuePlayingSoundAtDurationEnd": false,`, `"m_flDurationInterruptionThreshold": 0.900000`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmSoundEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_relevance": "ClientAndServer",`, `"m_name": "",`, `"m_position": "None",`, `"m_attachmentName": "",`, `"m_tags": "",`, `"m_bContinuePlayingSoundAtDurationEnd": false,`, `"m_flDurationInterruptionThreshold": 0.900000`, `}`
 
 **Relationships:**
 
@@ -1281,7 +1296,7 @@ classDiagram
 
 **Inherits from:** [CNmEvent](animlib.md#cnmevent)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmTargetWarpEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_bClientOnly": false,`, `"m_rule": "WarpXYZ",`, `"m_algorithm": "Bezier"`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmTargetWarpEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_rule": "WarpXYZ",`, `"m_algorithm": "Bezier"`, `}`
 
 **Relationships:**
 
@@ -1292,7 +1307,18 @@ classDiagram
 
 ### CNmTargetWarpNode
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmTargetWarpNode::CDefinition",`, `"m_nNodeIdx": -1,`, `"m_nClipReferenceNodeIdx": -1,`, `"m_nTargetValueNodeIdx": -1,`, `"m_samplingMode": "Delta",`, `"m_bAllowTargetUpdate": false,`, `"m_bAlignWithTargetAtLastWarpEvent": false,`, `"m_flSamplingPositionErrorThresholdSq": 0.000000,`, `"m_flMaxTangentLength": 1.250000,`, `"m_flLerpFallbackDistanceThreshold": 0.100000,`, `"m_flTargetUpdateDistanceThreshold": 0.100000,`, `"m_flTargetUpdateAngleThresholdRadians": 0.087266`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmTargetWarpNode::CDefinition",`, `"m_nNodeIdx": -1,`, `"m_nClipReferenceNodeIdx": -1,`, `"m_nTargetValueNodeIdx": -1,`, `"m_samplingMode": "Delta",`, `"m_targetUpdateRule": "None",`, `"m_bAlignWithTargetAtLastWarpEvent": false,`, `"m_flSamplingPositionErrorThresholdSq": 0.000000,`, `"m_flMaxTangentLength": 1.250000,`, `"m_flLerpFallbackDistanceThreshold": 0.100000,`, `"m_flTargetUpdateDistanceThreshold": 0.100000,`, `"m_flTargetUpdateAngleThresholdRadians": 0.087266,`, `"m_alignmentBoneID": ""`, `}`
+
+### CNmTargetWarpNode
+
+**Values:**
+
+| Name | Value |
+|------|-------|
+| `None` | 0 |
+| `Recalculate` | 1 |
+| `Offset` | 2 |
+| `RecalculateOrOffset` | 3 |
 
 ### CNmTimeConditionNode
 
@@ -1323,7 +1349,7 @@ classDiagram
 
 **Inherits from:** [CNmEvent](animlib.md#cnmevent)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmTransitionEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_bClientOnly": false,`, `"m_rule": "BlockTransition",`, `"m_ID": ""`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmTransitionEvent",`, `"m_flStartTime":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_flDuration":`, `{`, `"m_flValue": 0.000000`, `},`, `"m_syncID": "",`, `"m_rule": "BlockTransition",`, `"m_ID": ""`, `}`
 
 **Relationships:**
 
@@ -1359,7 +1385,7 @@ classDiagram
 
 ### CNmTwoBoneIKNode
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmTwoBoneIKNode::CDefinition",`, `"m_nNodeIdx": -1,`, `"m_nChildNodeIdx": -1,`, `"m_effectorBoneID": "",`, `"m_nEffectorTargetNodeIdx": -1,`, `"m_nEnabledNodeIdx": -1,`, `"m_flBlendTimeSeconds": 0.000000,`, `"m_blendMode": "Effector",`, `"m_bIsTargetInWorldSpace": false,`, `"m_flReferencePoseTwistWeight": 0.000000`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmTwoBoneIKNode::CDefinition",`, `"m_nNodeIdx": -1,`, `"m_nChildNodeIdx": -1,`, `"m_effectorBoneID": "",`, `"m_nEffectorTargetNodeIdx": -1,`, `"m_nEnabledNodeIdx": -1,`, `"m_flBlendTimeSeconds": 0.000000,`, `"m_blendMode": "Effector",`, `"m_bIsTargetInWorldSpace": false,`, `"m_flChainRotationWeight": 0.000000`, `}`
 
 ### CNmTwoBoneIKTask
 
@@ -1386,7 +1412,7 @@ classDiagram
 | `m_flBlendWeight` | float32 |  |
 | `m_bIsTargetInWorldSpace` | bool |  |
 | `m_bIsRunningFromDeserializedData` | bool |  |
-| `m_flReferencePoseTwistWeight` | float32 |  |
+| `m_flChainRotationWeight` | float32 |  |
 | `m_debugEffectorBoneID` | CGlobalSymbol |  |
 
 ### CNmValueNode
@@ -1480,7 +1506,7 @@ classDiagram
 
 ### NmCompressionSettings_t
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_translationRangeX":`, `{`, `"m_flRangeStart": 0.000000,`, `"m_flRangeLength": -1.000000`, `},`, `"m_translationRangeY":`, `{`, `"m_flRangeStart": 0.000000,`, `"m_flRangeLength": -1.000000`, `},`, `"m_translationRangeZ":`, `{`, `"m_flRangeStart": 0.000000,`, `"m_flRangeLength": -1.000000`, `},`, `"m_scaleRange":`, `{`, `"m_flRangeStart": 0.000000,`, `"m_flRangeLength": -1.000000`, `},`, `"m_constantRotation":`, `[`, `0.000000,`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_bIsRotationStatic": false,`, `"m_bIsTranslationStatic": false,`, `"m_bIsScaleStatic": false`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_translationRangeX":`, `{`, `"m_flRangeStart": 0.000000,`, `"m_flRangeLength": -1.000000`, `},`, `"m_translationRangeY":`, `{`, `"m_flRangeStart": 0.000000,`, `"m_flRangeLength": -1.000000`, `},`, `"m_translationRangeZ":`, `{`, `"m_flRangeStart": 0.000000,`, `"m_flRangeLength": -1.000000`, `},`, `"m_scaleRange":`, `{`, `"m_flRangeStart": 0.000000,`, `"m_flRangeLength": -1.000000`, `},`, `"m_nTrackReadOffset": 0,`, `"m_constantRotation":`, `[`, `0.000000,`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_bIsRotationStatic": false,`, `"m_bIsTranslationStatic": false,`, `"m_bIsScaleStatic": false`, `}`
 
 ### NmCompressionSettings_t
 
@@ -1596,6 +1622,15 @@ classDiagram
 |------|-------|
 | `Floor` | 0 |
 | `Round` | 1 |
+
+### NmGraphDebugMode_t
+
+**Values:**
+
+| Name | Value |
+|------|-------|
+| `Off` | 0 |
+| `On` | 1 |
 
 ### NmGraphEventTypeCondition_t
 

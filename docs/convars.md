@@ -28,6 +28,7 @@ All console variables extracted from CS2.
 | `adsp_street_min` | `118` | `developmentonly` `defensive` | <no description> |
 | `adsp_tunnel_min` | `114` | `developmentonly` `defensive` | <no description> |
 | `adsp_wall_height` | `128` | `developmentonly` `defensive` | <no description> |
+| `ag2_network_recipeshape_cache_size` | `32` | `min:` `1,` `max:` `1024,` `developmentonly` `gamedll` `dontrecord` | Cache size for recently-used pose recipe shapes. |
 | `ag2_preserve_params_on_reload` | `false` | `developmentonly` `gamedll` `clientdll` `replicated` | When an animgraph is reloaded, should the underlying system restore all params? |
 | `ag2_use_networked_serialization_context_demo` | `true` | `developmentonly` `gamedll` `clientdll` `replicated` `dontrecord` | Use networked compatibility serialization context in demo playback. |
 | `ag2_use_networked_serialization_context_game` | `false` | `developmentonly` `gamedll` `clientdll` `replicated` | Use networked compatibility serialization context in games. |
@@ -38,8 +39,6 @@ All console variables extracted from CS2.
 | `ai_debug_shoot_positions` | `0` | `gamedll` `clientdll` `replicated` `cheat` | <no description> |
 | `ai_debug_speech` | `0` | `developmentonly` `gamedll` `defensive` | <no description> |
 | `ai_disabled` | `false` | `gamedll` `clientdll` `replicated` `cheat` | <no description> |
-| `ai_expression_frametime` | `0.05` | `developmentonly` `gamedll` `defensive` | Maximum frametime to still play background expressions. |
-| `ai_expression_optimization` | `false` | `developmentonly` `gamedll` `defensive` | Disable npc background expressions when you can't see them. |
 | `ai_force_serverside_ragdoll` | `false` | `developmentonly` `gamedll` `defensive` | <no description> |
 | `ai_off_nav_show_nearest` | `false` | `gamedll` `cheat` | <no description> |
 | `ai_sequence_debug` | `false` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | <no description> |
@@ -85,16 +84,12 @@ All console variables extracted from CS2.
 | `ammo_grenade_limit_total` | `3` | `gamedll` `clientdll` `replicated` `release` `commandline_enforced` | <no description> |
 | `ammo_item_limit_adrenaline` | `5` | `gamedll` `clientdll` `replicated` `release` | <no description> |
 | `ammo_item_limit_healthshot` | `4` | `gamedll` `clientdll` `replicated` `release` `commandline_enforced` | <no description> |
-| `anim_damped_move_speed_timewindow` | `0.2` | `developmentonly` `gamedll` `clientdll` `replicated` | <no description> |
-| `anim_dampedaccel16_scale` | `0.85` | `developmentonly` `gamedll` `clientdll` `replicated` | <no description> |
-| `anim_dampedaccel16_timewindow` | `0.25` | `developmentonly` `gamedll` `clientdll` `replicated` | <no description> |
 | `anim_decode_forcewritealltransforms` | `false` | `developmentonly` | Force BatchAnimationDecode to write transformations for all bones |
-| `anim_disable` | `false` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | <no description> |
+| `anim_disable` | `false` | `developmentonly` `gamedll` `clientdll` `replicated` | <no description> |
 | `anim_resource_validate_on_load` | `true` | `release` | Validates the animation group channel list against the animations on load for every animation |
-| `anim_scale_wasd_input_hip_dip` | `0.8` | `developmentonly` `gamedll` `clientdll` `replicated` | <no description> |
-| `anim_scale_wasd_input_hip_swivel` | `0.8` | `developmentonly` `gamedll` `clientdll` `replicated` | <no description> |
 | `animated_material_attributes` | `true` | `clientdll` `cheat` | <no description> |
 | `animgraph2_enable_parallel_update` | `true` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | <no description> |
+| `animgraph2_serialize_pose_recipe_in_pre_pack_entities` | `true` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | <no description> |
 | `animgraph_debug` | `false` | `gamedll` `clientdll` `replicated` `cheat` | Debug animation graph |
 | `animgraph_debug_animevents` | `false` | `developmentonly` `gamedll` `clientdll` `replicated` | Print info about animevents emitted by AnimGraph |
 | `animgraph_debug_entindex` | `0` | `gamedll` `clientdll` `replicated` `cheat` | The entity to specifically debug |
@@ -111,9 +106,6 @@ All console variables extracted from CS2.
 | `animgraph_draw_traces` | `false` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | <no description> |
 | `animgraph_enable` | `true` | `developmentonly` `gamedll` `clientdll` `replicated` | Enable animation graph |
 | `animgraph_enable_dirty_netvar_optimization` | `true` | `developmentonly` `replicated` `defensive` | <no description> |
-| `animgraph_enable_parallel_op_evaluation` | `false` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | <no description> |
-| `animgraph_enable_parallel_preupdate` | `false` | `developmentonly` `gamedll` `clientdll` `replicated` | <no description> |
-| `animgraph_enable_parallel_update` | `true` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | <no description> |
 | `animgraph_footlock_auto_ledge_detection` | `true` | `developmentonly` `replicated` `defensive` | Attempt to detect when the foot is partially hanging off a ledge and stop it tilting to reach the bottom |
 | `animgraph_footlock_auto_stair_detection` | `true` | `developmentonly` `replicated` `defensive` | Attempt to detect when the foot is on a stair and will stop it from tilting to reach the next step |
 | `animgraph_footlock_calculate_tilt` | `true` | `developmentonly` `replicated` `defensive` | <no description> |
@@ -133,7 +125,6 @@ All console variables extracted from CS2.
 | `animgraph_motionmatching_print_compressionstats` | `false` | `developmentonly` `replicated` `defensive` | <no description> |
 | `animgraph_network_enable` | `true` | `developmentonly` `gamedll` `clientdll` `replicated` | Enable animation graph networking. The setting is only read at graph creation time; to use please set on the command line. |
 | `animgraph_parallel_postdataupdate` | `true` | `developmentonly` `clientdll` `defensive` | <no description> |
-| `animgraph_record_all` | `false` | `gamedll` `clientdll` `replicated` `cheat` | Automatically start recording AnimGraphs when they get created, and save them to disk when they are destroyed |
 | `animgraph_slope_draw_raycasts` | `false` | `gamedll` `clientdll` `replicated` `cheat` | <no description> |
 | `animgraph_slope_enable` | `true` | `gamedll` `clientdll` `replicated` `cheat` | <no description> |
 | `animgraph_slowdownonslopes_enabled` | `true` | `developmentonly` `replicated` `defensive` | <no description> |
@@ -144,7 +135,6 @@ All console variables extracted from CS2.
 | `attached_output_stall_ms` | `250` | `developmentonly` `defensive` | <no description> |
 | `audio_input_test_signal` | `false` | `developmentonly` | For testing the audio input pathway with a sine tone instead of SDL3. |
 | `audio_input_use_sdl_roles` | `false` | `developmentonly` | <no description> |
-| `automatically_open_saved_animgraph_recording` | `false` | `gamedll` `clientdll` `archive` `replicated` | <no description> |
 | `autosave_fully_async` | `true` | `developmentonly` `gamedll` `defensive` | Set to 1 to have autosaves execute completely on the save thread, forces 'render only' mode while the save completes |
 | `battery_saver` | `false` | `archive` | OBSOLETE replaced by mobile_fps_* - Battery saver mode. 0=off, 1=on |
 | `bot_allow_grenades` | `true` | `gamedll` `release` | If nonzero, bots may use grenades. |
@@ -195,6 +185,7 @@ All console variables extracted from CS2.
 | `bot_show_nav` | `false` | `gamedll` `cheat` | For internal testing purposes. |
 | `bot_show_occupy_time` | `false` | `gamedll` `cheat` | Show when each nav area can first be reached by each team. |
 | `bot_stop` | `"0"` | `gamedll` `cheat` | bot_stop <1\|all> \| <not_bomber> \| <t> \| <ct> |
+| `bot_strafe` | `0` | `gamedll` `release` | Strafe left and right (interval) |
 | `bot_traceview` | `0` | `gamedll` `cheat` | For internal testing purposes. |
 | `bot_walk` | `false` | `gamedll` `release` | If nonzero, bots can only walk, not run. |
 | `bot_zombie` | `false` | `gamedll` `cheat` | If nonzero, bots will stay in idle mode and not attack. |
@@ -223,9 +214,6 @@ All console variables extracted from CS2.
 | `cachedvalue_count_partybrowser` | `0` | `clientdll` `hidden` `archive` | <no description> |
 | `cachedvalue_count_teammates` | `0` | `clientdll` `hidden` `archive` | <no description> |
 | `cam_collision` | `1` | `clientdll` `archive` | When in thirdperson and cam_collision is set to 1, an attempt is made to keep the camera from passing though walls. |
-| `cam_head_constraint_debug` | `false` | `developmentonly` `gamedll` `clientdll` `replicated` | Show camera head constraint debug info |
-| `cam_head_constraint_distance` | `12` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | Distance to constrain first/thirdperson camera and head |
-| `cam_head_constraint_soft_transition` | `4` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | Constraint soft transition distance |
 | `cam_idealdelta` | `4` | `clientdll` `archive` | Controls the speed when matching offset to ideal angles in thirdperson view |
 | `cam_idealdist` | `150` | `clientdll` `archive` | <no description> |
 | `cam_ideallag` | `4` | `clientdll` `archive` | Amount of lag used when matching offset to ideal angles in thirdperson view |
@@ -235,11 +223,12 @@ All console variables extracted from CS2.
 | `cam_snapto` | `false` | `clientdll` `archive` | <no description> |
 | `camera_datadriven_debug` | `false` | `developmentonly` `clientdll` `cheat` | <no description> |
 | `camera_datadriven_disable_cache` | `false` | `developmentonly` `gamedll` `cheat` | <no description> |
-| `camera_jolt_fix` | `true` | `developmentonly` `gamedll` `clientdll` `replicated` | camera jolt fix |
 | `camera_path_edit_mode` | `false` | `clientdll` `cheat` | <no description> |
 | `cash_player_bomb_defused` | `300` | `gamedll` `clientdll` `notify` `replicated` `release` `commandline_enforced` | <no description> |
 | `cash_player_bomb_planted` | `300` | `gamedll` `clientdll` `notify` `replicated` `release` `commandline_enforced` | <no description> |
 | `cash_player_damage_hostage` | `-30` | `gamedll` `clientdll` `notify` `replicated` `release` `commandline_enforced` | <no description> |
+| `cash_player_drop_on_death` | `0` | `developmentonly` `gamedll` `clientdll` `notify` `replicated` `release` `commandline_enforced` | <no description> |
+| `cash_player_drop_on_death_stack_value` | `250` | `developmentonly` `gamedll` `clientdll` `notify` `replicated` `release` `commandline_enforced` | <no description> |
 | `cash_player_get_killed` | `0` | `gamedll` `clientdll` `notify` `replicated` `release` `commandline_enforced` | <no description> |
 | `cash_player_interact_with_hostage` | `150` | `gamedll` `clientdll` `notify` `replicated` `release` `commandline_enforced` | <no description> |
 | `cash_player_killed_enemy_default` | `300` | `gamedll` `clientdll` `notify` `replicated` `release` `commandline_enforced` | <no description> |
@@ -293,7 +282,6 @@ All console variables extracted from CS2.
 | `cl_allow_animated_avatars` | `true` | `clientdll` `archive` `release` | Whether or not to allow animated avatars |
 | `cl_allow_multi_input_binds` | `false` | `clientdll` `cheat` `release` | <no description> |
 | `cl_anglespeedkey` | `0.67` | `developmentonly` `clientdll` `defensive` | <no description> |
-| `cl_animgraph_history_force_temporal_consistency` | `true` | `developmentonly` `clientdll` `defensive` | <no description> |
 | `cl_async_client_shatter` | `true` | `developmentonly` `clientdll` | spawn client glass shards asynchronously during demos or when remotely connected. |
 | `cl_async_restore_server_authoritative_state` | `false` | `developmentonly` `clientdll` | <no description> |
 | `cl_async_usercmd_send` | `true` | `developmentonly` | <no description> |
@@ -301,7 +289,7 @@ All console variables extracted from CS2.
 | `cl_autobuy` | `""` | `clientdll` `release` | The order in which autobuy will attempt to purchase items |
 | `cl_autohelp` | `true` | `clientdll` `archive` `userinfo` | Auto-help |
 | `cl_batch_entity_list_ops_during_latch` | `false` | `developmentonly` `clientdll` | Batch entity list adds / removes while latching interpolated variables to avoid mutex contention. |
-| `cl_bone_cache_optimization` | `true` | `developmentonly` `clientdll` `defensive` | <no description> |
+| `cl_bone_cache_optimization` | `true` | `developmentonly` `clientdll` | <no description> |
 | `cl_borrow_music_from_player_slot` | `-1` | `clientdll` `release` | <no description> |
 | `cl_boxmove` | `0` | `developmentonly` `clientdll` | run in a square, # represents how many usercommands to run before turning. |
 | `cl_boxmove_speed` | `1` | `developmentonly` `clientdll` | how fast to run (1 to use player max run speed). |
@@ -374,6 +362,7 @@ All console variables extracted from CS2.
 | `cl_debug_force_push_to_talk` | `false` | `developmentonly` `clientdll` `defensive` | <no description> |
 | `cl_debug_overlay_fullposition` | `false` | `developmentonly` `clientdll` `defensive` | <no description> |
 | `cl_debug_overlays_broadcast` | `false` | `release` | Render debug overlays from server. |
+| `cl_debug_precipitation_surface_graph` | `false` | `clientdll` `replicated` `cheat` | When true, use the surface graph to pass in positions for rainfall. |
 | `cl_debug_round_stat_submission` | `false` | `developmentonly` `clientdll` | <no description> |
 | `cl_debugviewangle` | `false` | `developmentonly` `clientdll` | Plots view angles yaw at various stages of the frame/tick in Tracy. |
 | `cl_demo_predict` | `1` | `clientdll` `release` | Enable 'TrueView' when watching a demo, which attempts to recreate the client's experience more accurately.  0=disable, 1=only if demo version match, 2=always |
@@ -405,7 +394,6 @@ All console variables extracted from CS2.
 | `cl_embedded_stream_audio_volume` | `0` | `min:` `0,` `max:` `100,` `clientdll` `hidden` `archive` | Embedded stream audio volume |
 | `cl_embedded_stream_audio_volume_xmaster` | `true` | `clientdll` `hidden` `archive` | Whether embedded stream audio volume gets multiplied by master volume |
 | `cl_embedded_stream_video_playing` | `0` | `developmentonly` `clientdll` `hidden` `defensive` | Embedded stream video playing state |
-| `cl_enable_eye_occlusion` | `true` | `developmentonly` `clientdll` `defensive` | <no description> |
 | `cl_enable_party_voice` | `true` | `clientdll` `archive` `release` | <no description> |
 | `cl_ent_attachment_filter_substrings` | `""` | `clientdll` `cheat` | If an attachment's name has any of the given substrings in it, it will be displayed. Substrings can be delimited by the ',' or '\|' character. |
 | `cl_ent_joint_axis_size` | `4` | `developmentonly` `clientdll` `defensive` | <no description> |
@@ -424,10 +412,6 @@ All console variables extracted from CS2.
 | `cl_error_report_time` | `0` | `clientdll` `release` | Minimum time in seconds that must elapse before printing prediction error summary. 0 to disable. |
 | `cl_extrapolate` | `true` | `clientdll` `cheat` | Enable/disable extrapolation if interpolation history runs out. |
 | `cl_extrapolate_amount` | `0.25` | `clientdll` `cheat` | Set how many seconds the client will extrapolate entities for. |
-| `cl_eye_occlusion_debug` | `false` | `clientdll` `cheat` | <no description> |
-| `cl_eye_sin_wave` | `false` | `developmentonly` `clientdll` `defensive` | <no description> |
-| `cl_eye_target_override` | `[0, 0, 0]` | `developmentonly` `clientdll` `defensive` | <no description> |
-| `cl_eye_yaw_multiplier` | `1` | `developmentonly` `clientdll` `defensive` | <no description> |
 | `cl_fake_timeout` | `false` | `developmentonly` `clientdll` | <no description> |
 | `cl_fasttempentcollision` | `5` | `developmentonly` `clientdll` `defensive` | <no description> |
 | `cl_firstperson_legs` | `true` | `developmentonly` `clientdll` `defensive` | <no description> |
@@ -483,7 +467,7 @@ All console variables extracted from CS2.
 | `cl_hud_telemetry_frametime_poor` | `100` | `min:` `1,` `max:` `100,` `clientdll` `archive` `release` | Frame time greater than this is considered 'poor'. |
 | `cl_hud_telemetry_frametime_show` | `1` | `clientdll` `archive` `release` | Show frame time (FPS) in the HUD.  0=never, 1=only if poor, 2=always |
 | `cl_hud_telemetry_net_detailed` | `0` | `clientdll` `archive` `release` | Show breakdown network misdelivery (loss, late delivery, and peak jitter).  0=never, 1=only in poor network conditions, 2=always |
-| `cl_hud_telemetry_net_misdelivery_poor` | `5` | `clientdll` `archive` `release` | Packet delivery anomaly rate (0..100) higher than this is considered 'poor'. |
+| `cl_hud_telemetry_net_misdelivery_poor` | `2` | `clientdll` `archive` `release` | Packet delivery anomaly rate (0..100) higher than this is considered 'poor'. |
 | `cl_hud_telemetry_net_misdelivery_show` | `1` | `clientdll` `archive` `release` | Show percentage of user commands & server snapshots that are missed due to network conditions.  0=never, 1=only in poor conditions, 2=always |
 | `cl_hud_telemetry_net_quality_graph_show` | `0` | `clientdll` `archive` `release` | Show packet jitter and netframe loss/reordering in the HUD.  0=never, 1=only in poor conditions, 2=always |
 | `cl_hud_telemetry_ping_poor` | `100` | `clientdll` `archive` `release` | Ping higher than this (ms) is considered 'poor'. |
@@ -566,7 +550,7 @@ All console variables extracted from CS2.
 | `cl_phys_block_fraction` | `0.1` | `developmentonly` `clientdll` `defensive` | <no description> |
 | `cl_phys_debug_callback_entities` | `false` | `clientdll` `cheat` | Print all entities that get touch callbacks. Each entity is printed only once. |
 | `cl_phys_enabled` | `true` | `clientdll` `cheat` | Enable all physics simulation |
-| `cl_phys_networked_start_sleep` | `false` | `developmentonly` `clientdll` `defensive` | <no description> |
+| `cl_phys_networked_start_sleep` | `false` | `developmentonly` `clientdll` | <no description> |
 | `cl_phys_sleep_enable` | `true` | `clientdll` `cheat` | Enable sleeping for dynamic physics bodies. |
 | `cl_phys_sound_disable_impact_sounds_under_hard_threshold` | `false` | `clientdll` `cheat` | if true, impact sounds wont play if no soft impact sound is present and the impact is below the hard velocity threshold. |
 | `cl_phys_stop_at_collision` | `""` | `clientdll` `cheat` | <no description> |
@@ -579,7 +563,6 @@ All console variables extracted from CS2.
 | `cl_pitchup` | `89` | `clientdll` `cheat` | <no description> |
 | `cl_playback_screenshots` | `false` | `developmentonly` `defensive` | Allows the client to playback screenshot and jpeg commands in demos. |
 | `cl_player_ping_mute` | `0` | `clientdll` `archive` `release` | If 1, player pinging will make a sound, if 0, pings will be silent |
-| `cl_player_proximity_debug` | `false` | `clientdll` `replicated` `cheat` | <no description> |
 | `cl_player_ragdolls_collide` | `false` | `clientdll` `cheat` `release` | <no description> |
 | `cl_player_visibility_far` | `700` | `developmentonly` `clientdll` | distance at which proxy scale is maximized |
 | `cl_player_visibility_far_scale` | `1.3` | `developmentonly` `clientdll` | proxy scale multiplier at max dist (is 1.0 at mindist) |
@@ -596,7 +579,6 @@ All console variables extracted from CS2.
 | `cl_pred_optimize` | `true` | `developmentonly` `clientdll` `defensive` | Optimize for not repredicting if there were no errors |
 | `cl_pred_parallel_postnetwork` | `true` | `developmentonly` `clientdll` `defensive` | <no description> |
 | `cl_pred_print_every_cmd` | `false` | `clientdll` `release` | Print something every time we predict a command |
-| `cl_predict_after_every_createmove` | `true` | `developmentonly` | run prediction after every CreateMove instead of only after CreateMove for the final tick in a frame. |
 | `cl_predict_body_shot_fx` | `false` | `clientdll` `archive` `release` | <no description> |
 | `cl_predict_bomb_defusal` | `true` | `developmentonly` `clientdll` `defensive` | <no description> |
 | `cl_predict_head_shot_fx` | `false` | `clientdll` `archive` `release` | <no description> |
@@ -764,7 +746,6 @@ All console variables extracted from CS2.
 | `cl_tickpacket_recvmargin_spew_interval` | `0` | `release` | <no description> |
 | `cl_tickpacket_recvmargin_timeconstant` | `0.4` | `developmentonly` | Recvmargin-based usercommand pacing will remove 63.2% of the error in N seconds |
 | `cl_tickpacket_recvmargin_window` | `4` | `developmentonly` | Recvmargin-based usercommand pacing will use past N seconds |
-| `cl_tickpacket_send_every_tick` | `true` | `developmentonly` | Send a network packet each time we generate a new usercommand, even if our frame rate is slow and we generate multiple commands in one frame |
 | `cl_ticks_net_print_threshold` | `2` | `release` | Print a message if network issues cause problems with server snapshots of user commands not being available when needed, if the percentage (0...100) exceeds this value.  A value of 0 will cause the message to always print each time it is calculated |
 | `cl_ticks_warning_level` | `0` | `release` | Print a message about problems with ticks and interpolation.  0=never, 1=warnings, 2=all, even if hidden by interpolation |
 | `cl_timeout` | `30` | `archive` | After this many seconds without receiving a packet from the server, the client will disconnect itself |
@@ -790,7 +771,6 @@ All console variables extracted from CS2.
 | `cl_view_near_other_player_eye_dist` | `16` | `developmentonly` `clientdll` | <no description> |
 | `cl_viewing_vanity_loadout` | `false` | `gamedll` `clientdll` `userinfo` | <no description> |
 | `cl_viewmodelsclonedasworld` | `true` | `developmentonly` `clientdll` | <no description> |
-| `cl_viewtarget_clamp` | `true` | `developmentonly` `clientdll` `defensive` | <no description> |
 | `cl_voiceenabled` | `true` | `developmentonly` `clientdll` `defensive` | <no description> |
 | `cl_voip_lobby_audio_volume` | `0` | `min:` `0,` `max:` `100,` `developmentonly` `clientdll` `hidden` | Lobby voip stream audio volume |
 | `cl_vrr_recommendation_dont_show_again` | `false` | `clientdll` `archive` `release` | <no description> |
@@ -798,11 +778,6 @@ All console variables extracted from CS2.
 | `cl_vsnd_morph_override_ease_in` | `0.2` | `developmentonly` `clientdll` `defensive` | If cl_enable_vsnd_morph_override_ease_enabled is true, ease into vsnd morph driven animation over the specified number of seconds. |
 | `cl_vsnd_morph_override_ease_out` | `0.2` | `developmentonly` `clientdll` `defensive` | If cl_enable_vsnd_morph_override_ease_enabled is true, ease out of vsnd morph driven animation over the specified number of seconds. |
 | `cl_wallbang_heavy_threshold` | `22` | `clientdll` `cheat` `release` | The Threshold where to switch from Light to Heavy Wallbang tracer |
-| `cl_weapon_clip_thinwalls` | `true` | `clientdll` `replicated` `cheat` | <no description> |
-| `cl_weapon_clip_thinwalls_debug` | `false` | `clientdll` `replicated` `cheat` | <no description> |
-| `cl_weapon_clip_thinwalls_lock` | `false` | `clientdll` `replicated` `cheat` | <no description> |
-| `cl_weapon_clip_thinwalls_pitchlimit_down` | `67` | `clientdll` `replicated` `cheat` | <no description> |
-| `cl_weapon_clip_thinwalls_pitchlimit_up` | `77` | `clientdll` `replicated` `cheat` | <no description> |
 | `cl_weapon_debug_print_accuracy` | `false` | `developmentonly` `clientdll` `replicated` | <no description> |
 | `cl_weapon_debug_show_accuracy` | `0` | `clientdll` `cheat` `release` | Draws a circle representing the effective range with every shot. |
 | `cl_weapon_debug_show_accuracy_duration` | `10` | `clientdll` `cheat` `release` | <no description> |
@@ -916,6 +891,7 @@ All console variables extracted from CS2.
 | `csm_sst_pushback_distance` | `1500` | `cheat` | default pushback |
 | `csm_sst_shadow_focus_region_maxz` | `2000` | `cheat` | <no description> |
 | `csm_sst_shadow_focus_region_minz` | `-2000` | `cheat` | <no description> |
+| `csm_sst_shadow_focus_region_thin_compensation` | `500` | `clientdll` `cheat` | <no description> |
 | `csm_viewdir_shadow_bias` | `0` | `cheat` | <no description> |
 | `csm_viewmodel_farz` | `30` | `cheat` | <no description> |
 | `csm_viewmodel_max_shadow_dist` | `21` | `cheat` | <no description> |
@@ -941,6 +917,7 @@ All console variables extracted from CS2.
 | `debug_destructible_parts_ttl` | `1` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | How long the debug draws stick around for, unless they're per-tick. |
 | `debug_draw_enable` | `true` | `developmentonly` `replicated` | <no description> |
 | `debug_error_model` | `false` | `gamedll` `clientdll` `replicated` `cheat` | <no description> |
+| `debug_font_name` | `"Courier New"` | `developmentonly` `defensive` | Debug font name |
 | `debug_font_size` | `14` | `developmentonly` `defensive` | Font size for the debug font |
 | `debug_hltv` | `0` | `developmentonly` `clientdll` `replicated` `clientcmd_can_execute` | Print out hltv events |
 | `debug_overlay_fullposition` | `false` | `developmentonly` `gamedll` `defensive` | <no description> |
@@ -952,7 +929,7 @@ All console variables extracted from CS2.
 | `debug_visibility_monitor` | `0` | `gamedll` `cheat` | <no description> |
 | `debugoverlay_force_respect_ttl` | `false` | `cheat` | Force respect TTL even when clearing scopes |
 | `debugoverlay_show_text_outline` | `false` | `cheat` | Toggle display of box around text |
-| `debugoverlay_text_scale` | `1` | `archive` `cheat` | Scale of the text used for 3d display |
+| `debugoverlay_text_scale` | `1` | `archive` `cheat` | Scale of the text used for 3d display, but see also debug_font_{size,name} |
 | `decalfrequency` | `10` | `developmentonly` `gamedll` `notify` `defensive` | <no description> |
 | `default_fov` | `90` | `clientdll` `cheat` | <no description> |
 | `demo_allow_game_mismatch` | `false` | `developmentonly` `defensive` | Allow playback of demo even if game directories are not matched [may crash or fail to load]. |
@@ -1147,10 +1124,13 @@ All console variables extracted from CS2.
 | `func_breakdmg_explosive` | `1.25` | `developmentonly` `gamedll` `defensive` | <no description> |
 | `func_mover_async_movable_navmesh_updates` | `true` | `developmentonly` `gamedll` `defensive` | <no description> |
 | `func_mover_debug` | `false` | `developmentonly` `gamedll` `defensive` | <no description> |
-| `func_mover_debug_extra_text` | `false` | `developmentonly` `gamedll` `defensive` | <no description> |
+| `func_mover_debug_all` | `false` | `developmentonly` `gamedll` `defensive` | <no description> |
 | `func_mover_debug_follower` | `false` | `developmentonly` `gamedll` `defensive` | <no description> |
+| `func_mover_debug_parallel` | `false` | `developmentonly` `gamedll` `defensive` | <no description> |
+| `func_mover_debug_showtext` | `false` | `developmentonly` `gamedll` `defensive` | <no description> |
+| `func_mover_debug_verbose` | `false` | `developmentonly` `gamedll` `defensive` | <no description> |
 | `func_mover_get_speed_override` | `0` | `developmentonly` `gamedll` `defensive` | <no description> |
-| `func_mover_verbose_log_count` | `15` | `developmentonly` `gamedll` `defensive` | <no description> |
+| `func_mover_imgui_log_count` | `30` | `developmentonly` `gamedll` `defensive` | <no description> |
 | `func_rotator_debug` | `false` | `developmentonly` `gamedll` `defensive` | <no description> |
 | `fx_drawmetalspark` | `true` | `developmentonly` `clientdll` | Draw metal spark effects. |
 | `g_debug_angularsensor` | `false` | `gamedll` `cheat` | <no description> |
@@ -1359,7 +1339,6 @@ All console variables extracted from CS2.
 | `labelled_debug_helper_show_text` | `true` | `gamedll` `clientdll` `replicated` `cheat` | <no description> |
 | `labelled_debug_helper_skeleton_show_bone_names` | `true` | `gamedll` `clientdll` `replicated` `cheat` | <no description> |
 | `lb_allow_shadow_rotation` | `true` | `developmentonly` `cheat` `menubar_item` | SceneSystem/LightBinner/Shadow Rotation |
-| `lb_allow_time_sliced_shadow_map_rendering` | `true` | `developmentonly` `defensive` | Allow time-sliced shadow buffer rendering when enabled via gameinfo.gi |
 | `lb_barnlight_shadow_use_precomputed_vis` | `true` | `developmentonly` `defensive` | <no description> |
 | `lb_barnlight_shadowmap_scale` | `1` | `release` | Scale for computed barnlight shadowmap size |
 | `lb_bin_slices` | `8192` | `developmentonly` `defensive` | <no description> |
@@ -1391,7 +1370,7 @@ All console variables extracted from CS2.
 | `lb_dynamic_shadow_penumbra` | `true` | `developmentonly` `defensive` | Adjust shadow penumbra based on light size |
 | `lb_dynamic_shadow_resolution` | `true` | `developmentonly` `defensive` | Dynamically adjust shadow resolution |
 | `lb_dynamic_shadow_resolution_base` | `1024` | `min:` `128,` `max:` `2048,` `developmentonly` `defensive` | Base resolution for dynamic shadowmap sizing.  Shadowmap size of a screen sized light |
-| `lb_dynamic_shadow_resolution_base_cmp_shadowmapsize` | `false` | `developmentonly` `cheat` | take min of lb_dynamic_shadow_resolution and barnlight shadowmapsize as base shadowmapsize |
+| `lb_dynamic_shadow_resolution_base_cmp_shadowmapsize` | `false` | `developmentonly` | take min of lb_dynamic_shadow_resolution and barnlight shadowmapsize as base shadowmapsize |
 | `lb_dynamic_shadow_resolution_delay` | `0.85` | `min:` `0.1,` `max:` `3,` `developmentonly` `defensive` | Update delay for shadow size |
 | `lb_dynamic_shadow_resolution_hysteresis` | `0.33` | `min:` `0.01,` `max:` `1,` `developmentonly` `defensive` | Update hysteresis for shadow size |
 | `lb_dynamic_shadow_resolution_quantization` | `64` | `min:` `8,` `max:` `128,` `developmentonly` `defensive` | Quantization of dynamically computed shadow size |
@@ -1401,7 +1380,6 @@ All console variables extracted from CS2.
 | `lb_enable_envmaps` | `true` | `developmentonly` `cheat` `menubar_item` | SceneSystem/LightBinner/Enable EnvMaps |
 | `lb_enable_fog_mixed_shadows` | `true` | `developmentonly` `cheat` `menubar_item` | SceneSystem/LightBinner/Enable Fog Mixed Shadows |
 | `lb_enable_lights` | `true` | `developmentonly` `cheat` `menubar_item` | SceneSystem/LightBinner/Enable Lights |
-| `lb_enable_newsum` | `true` | `developmentonly` `cheat` `menubar_item` | SceneSystem/LightBinner/Enable New Sum |
 | `lb_enable_shadow_casting` | `true` | `developmentonly` `defensive` | Allow stationary/dynamic lights to cast shadows. |
 | `lb_enable_stationary_lights` | `true` | `developmentonly` `cheat` | Allows rendering stationary/mixed lights |
 | `lb_enable_sunlight` | `true` | `developmentonly` `cheat` `menubar_item` | SceneSystem/LightBinner/Enable Sunlight |
@@ -1412,7 +1390,7 @@ All console variables extracted from CS2.
 | `lb_override_barn_light_fade_sizes` | `[0.05, 0.025]` | `developmentonly` `cheat` | <no description> |
 | `lb_override_barn_light_fade_sizes_enable` | `false` | `developmentonly` `cheat` | <no description> |
 | `lb_override_barn_light_shadow_fade_sizes` | `[0.1, 0.05]` | `developmentonly` `cheat` | <no description> |
-| `lb_precomputed_shadowmap_depth_bias` | `0.0001` | `developmentonly` | <no description> |
+| `lb_precomputed_shadowmap_depth_bias` | `0.00035` | `developmentonly` | <no description> |
 | `lb_precomputed_shadowmap_enable` | `true` | `developmentonly` | <no description> |
 | `lb_shadow_map_cull_empty_mixed` | `false` | `cheat` | Don't render shadows for mixed shadowmaps with no dynamics objects in view |
 | `lb_shadow_map_culling` | `true` | `cheat` | <no description> |
@@ -1422,6 +1400,9 @@ All console variables extracted from CS2.
 | `lb_ssss_samples` | `11` | `min:` `3,` `max:` `15,` `developmentonly` `defensive` | Subsurface sample count |
 | `lb_sun_csm_size_cull_threshold_texels` | `10` | `developmentonly` `defensive` | Size, in texels, where we will cull an object in the shadowmap |
 | `lb_tile_pixels` | `8` | `developmentonly` `defensive` | <no description> |
+| `lb_time_sliced_shadow_map_reallocation_age` | `0.7` | `developmentonly` `defensive` | Age of cached allocation to be considered for re-allocation |
+| `lb_time_sliced_shadow_map_reallocation_pct` | `0.33` | `developmentonly` `defensive` | Likelyhood we'll re-allocate a timesliced shadowmap (to try to improve packing) |
+| `lb_time_sliced_shadow_map_rendering_enable` | `true` | `developmentonly` `defensive` | Allow time-sliced shadow buffer rendering when enabled via gameinfo.gi |
 | `lb_timesliced_shadows_dynamic_size` | `true` | `developmentonly` `defensive` | <no description> |
 | `lb_use_ellipsoid_bounds` | `true` | `developmentonly` `cheat` | <no description> |
 | `lb_use_illumination_silhouette` | `true` | `developmentonly` `cheat` `menubar_item` | SceneSystem/LightBinner/Use Illumination Bounds |
@@ -1512,21 +1493,11 @@ All console variables extracted from CS2.
 | `mm_events_listeners_validation` | `false` | `developmentonly` | <no description> |
 | `mm_ignored_sessions_forget_pass` | `5` | `developmentonly` | <no description> |
 | `mm_ignored_sessions_forget_time` | `600` | `developmentonly` | <no description> |
-| `mm_match_search_update_interval` | `10` | `developmentonly` | Interval between matchsearcher updates. |
 | `mm_player_search_count` | `5` | `developmentonly` | <no description> |
 | `mm_player_search_lan_ping_duration` | `3.5` | `developmentonly` | Duration of LAN discovery ping phase. |
 | `mm_player_search_lan_ping_interval` | `0.5` | `developmentonly` | Interval between LAN discovery pings. |
 | `mm_player_search_requests_limit` | `-1` | `developmentonly` | How many friend requests are displayed. |
 | `mm_player_search_update_interval` | `10` | `developmentonly` | Interval between players searches. |
-| `mm_server_search_inet_ping_interval` | `1` | `developmentonly` | How long to wait between pinging internet server details. |
-| `mm_server_search_inet_ping_refresh` | `15` | `developmentonly` | How often to refresh a listed server. |
-| `mm_server_search_inet_ping_timeout` | `3` | `developmentonly` | How long to wait for internet server details. |
-| `mm_server_search_inet_ping_window` | `10` | `developmentonly` | How many servers can be pinged for server details in a batch. |
-| `mm_server_search_lan_ping_duration` | `1` | `developmentonly` | Duration of LAN discovery ping phase. |
-| `mm_server_search_lan_ping_interval` | `0.4` | `developmentonly` | Interval between LAN discovery pings. |
-| `mm_server_search_lan_ports` | `"27015,27016,27017,27018,27019,27020"` | `archive` `release` | Ports to scan during LAN games discovery. Also used to discover and correctly connect to dedicated LAN servers behind NATs. |
-| `mm_server_search_server_lifetime` | `180` | `developmentonly` | How long until a server is no longer returned by the master till we remove it. |
-| `mm_server_search_update_interval` | `60` | `developmentonly` | Interval between servers updates. |
 | `mm_session_search_num_results` | `10` | `developmentonly` | <no description> |
 | `mm_session_search_qos_timeout` | `15` | `release` | <no description> |
 | `mm_session_sys_connect_timeout` | `8` | `developmentonly` | <no description> |
@@ -1831,6 +1802,7 @@ All console variables extracted from CS2.
 | `nav_draw_dangerareas` | `false` | `gamedll` `cheat` | <no description> |
 | `nav_draw_dormant_movable_meshes` | `false` | `gamedll` `cheat` | Draw dormant movable meshes. |
 | `nav_draw_externally_created` | `false` | `gamedll` `cheat` | <no description> |
+| `nav_draw_flow_map` | `false` | `gamedll` `cheat` | <no description> |
 | `nav_draw_hidingspots` | `false` | `gamedll` `cheat` | <no description> |
 | `nav_draw_indirect_connections` | `false` | `gamedll` `cheat` | <no description> |
 | `nav_draw_jump_links` | `false` | `gamedll` `cheat` | <no description> |
@@ -1944,17 +1916,17 @@ All console variables extracted from CS2.
 | `nav_show_elem_info_font` | `"Consolas"` | `gamedll` `cheat` | <no description> |
 | `nav_show_elem_info_font_size` | `-1` | `gamedll` `cheat` | <no description> |
 | `nav_show_elem_info_font_voffset` | `-11` | `gamedll` `cheat` | <no description> |
-| `nav_smooth_constrain_results` | `true` | `gamedll` `cheat` | <no description> |
-| `nav_smooth_constrain_results_relax` | `0.006` | `gamedll` `cheat` | <no description> |
+| `nav_smooth_constrain_spline` | `true` | `gamedll` `cheat` | <no description> |
+| `nav_smooth_constrain_spline_relax` | `0.006` | `gamedll` `cheat` | <no description> |
 | `nav_smooth_constrain_spring` | `2` | `gamedll` `cheat` | <no description> |
 | `nav_smooth_constrain_spring_relax` | `0.01` | `gamedll` `cheat` | <no description> |
-| `nav_smooth_draw_accel` | `0` | `gamedll` `cheat` | <no description> |
 | `nav_smooth_draw_boundary` | `0` | `gamedll` `cheat` | <no description> |
 | `nav_smooth_draw_calc` | `0` | `gamedll` `cheat` | <no description> |
 | `nav_smooth_draw_constraint_spline` | `false` | `gamedll` `cheat` | <no description> |
 | `nav_smooth_draw_constraint_spring` | `0` | `gamedll` `cheat` | <no description> |
 | `nav_smooth_draw_speed` | `0` | `gamedll` `cheat` | <no description> |
-| `nav_smooth_enable` | `true` | `gamedll` `cheat` | <no description> |
+| `nav_smooth_enable` | `1` | `gamedll` `cheat` | <no description> |
+| `nav_smooth_push_from_walls` | `-1` | `developmentonly` `gamedll` | <no description> |
 | `nav_smooth_relax` | `true` | `gamedll` `cheat` | <no description> |
 | `nav_smooth_relax_use_timesteps` | `false` | `gamedll` `cheat` | <no description> |
 | `nav_smooth_spring_const_override` | `-1` | `gamedll` `cheat` | <no description> |
@@ -2028,6 +2000,9 @@ All console variables extracted from CS2.
 | `nav_test_pos_place` | `-1` | `developmentonly` `gamedll` `defensive` | <no description> |
 | `nav_test_ray_space` | `0` | `gamedll` `cheat` | <no description> |
 | `nav_test_rays` | `false` | `gamedll` `cheat` | <no description> |
+| `nav_test_rays_use_npc_move` | `false` | `gamedll` `cheat` | <no description> |
+| `nav_test_search_on_path` | `false` | `gamedll` `cheat` | Test the 'on path' search mode for tactical searches. Requires a selected NPC with a current path. |
+| `nav_test_search_on_path_boundary_edges_only` | `false` | `gamedll` `cheat` | Activate the 'boundary edges only' constraint when testing the 'on path' search mode for tactical searches. |
 | `nav_test_smooth` | `false` | `gamedll` `cheat` | <no description> |
 | `nav_test_smooth_extern_push` | `0` | `gamedll` `cheat` | <no description> |
 | `nav_test_smooth_in_speed` | `120` | `gamedll` `cheat` | <no description> |
@@ -2052,7 +2027,6 @@ All console variables extracted from CS2.
 | `navspace_draw_changes_blocks` | `0` | `gamedll` `cheat` | Draw blocks when they change |
 | `navspace_draw_changes_waters` | `0` | `gamedll` `cheat` | Draw water volumes when they change |
 | `navspace_path_use_water_level_locator` | `true` | `gamedll` `cheat` | <no description> |
-| `net_allow_multicast` | `true` | `archive` `release` | <no description> |
 | `net_async_clientconnect` | `true` | `developmentonly` `defensive` | Enable async client connect optimization |
 | `net_async_job_random_sleep` | `0` | `developmentonly` `defensive` | Sleep randomly 0..net_async_job_random_sleep ms in the parallel server jobs; sleep is per job |
 | `net_client_steamdatagram_enable_override` | `0` | `clientdll` `release` | 0: Use connect method requested by GC.  >0: Always use SDR if possible.  <0: Always use direct UDP if possible |
@@ -2063,6 +2037,7 @@ All console variables extracted from CS2.
 | `nextmap_print_enabled` | `false` | `gamedll` `release` | When enabled prints next map to clients |
 | `nextmode` | `""` | `gamedll` `notify` `replicated` `release` | Sets the game mode to be played when the next level loads |
 | `noclip_fixup` | `true` | `gamedll` `cheat` | <no description> |
+| `npc_record_snapshot_data` | `false` | `developmentonly` `gamedll` | <no description> |
 | `npcsolve_attract_draw` | `false` | `developmentonly` `gamedll` `defensive` | <no description> |
 | `npcsolve_constraint_nav` | `true` | `developmentonly` `gamedll` `defensive` | <no description> |
 | `npcsolve_constraint_npc` | `true` | `developmentonly` `gamedll` `defensive` | <no description> |
@@ -2091,6 +2066,7 @@ All console variables extracted from CS2.
 | `panorama_alignment_fixes` | `true` | `developmentonly` `hidden` `defensive` | Fix alignment issues |
 | `panorama_allow_texture_composition_layer_fast_path` | `true` | `developmentonly` `hidden` `defensive` | <no description> |
 | `panorama_allow_transitions` | `true` | `developmentonly` `hidden` `defensive` | <no description> |
+| `panorama_apply_styles_for_invisible_parents` | `false` | `developmentonly` `hidden` `defensive` | Specifies whether to short circuit applying styles when a parent is invisible. |
 | `panorama_assert_loading_panel_type` | `false` | `developmentonly` `hidden` `defensive` | Force style invalidation of the entire panel subtree when adding / removing classes. |
 | `panorama_async_compute_mipgen` | `true` | `developmentonly` `clientdll` | use asynchronous compute for mipmap generation. |
 | `panorama_box_shadow_no_comp_layer` | `true` | `developmentonly` `hidden` `defensive` | <no description> |
@@ -2098,7 +2074,6 @@ All console variables extracted from CS2.
 | `panorama_cache_command_list_size_threshold` | `384` | `developmentonly` `hidden` `defensive` | <no description> |
 | `panorama_classes_force_invalidate` | `false` | `developmentonly` `hidden` `defensive` | Force style invalidation of the entire panel subtree when adding / removing classes. |
 | `panorama_clear_frames_on_device_restore` | `2` | `developmentonly` `hidden` `defensive` | <no description> |
-| `panorama_command_reordering` | `true` | `developmentonly` `hidden` `defensive` | <no description> |
 | `panorama_comp_layer_lru_lifetime` | `1` | `developmentonly` `hidden` `defensive` | <no description> |
 | `panorama_composition_atlas` | `true` | `developmentonly` `hidden` `defensive` | <no description> |
 | `panorama_console_max_autocomplete` | `100` | `developmentonly` `clientdll` `hidden` `defensive` | <no description> |
@@ -2131,6 +2106,9 @@ All console variables extracted from CS2.
 | `panorama_dragscroll_minflickvelocity` | `60` | `developmentonly` `clientdll` `hidden` `defensive` | Minimum velocity that the mouse must be moving as mouse up time to qualify as a drag scroll flick |
 | `panorama_dragscroll_mintime` | `0.02` | `developmentonly` `hidden` `defensive` | Minimum time that the mouse button must be down before a move is treated as a drag scroll |
 | `panorama_dragscroll_velocitymultiplier` | `0.5` | `developmentonly` `hidden` `defensive` | Multiplier for flick velocity off of actual measured velocity |
+| `panorama_draw_fast_path_img_shadow` | `true` | `developmentonly` `hidden` `defensive` | <no description> |
+| `panorama_draw_text_fast_path` | `true` | `developmentonly` `hidden` `defensive` | <no description> |
+| `panorama_draw_text_fast_path_text_shadow` | `true` | `developmentonly` `hidden` `defensive` | <no description> |
 | `panorama_enable_secondary_layout_pass` | `true` | `developmentonly` `hidden` `defensive` | <no description> |
 | `panorama_focus_world_panels` | `false` | `clientdll` `archive` | when set request key focus when a world panel is enabled |
 | `panorama_force_active_controller_type` | `-1` | `developmentonly` `hidden` `defensive` | <no description> |
@@ -2158,13 +2136,15 @@ All console variables extracted from CS2.
 | `panorama_min_comp_layer_cache_cost` | `4096` | `developmentonly` `hidden` `defensive` | <no description> |
 | `panorama_movie_async_load_size_bytes` | `20971520` | `developmentonly` `clientdll` `hidden` `defensive` | <no description> |
 | `panorama_movie_force_not_ready_behavior` | `-1` | `developmentonly` `clientdll` `hidden` `defensive` | <no description> |
+| `panorama_panel_occlusion` | `true` | `developmentonly` `hidden` `defensive` | <no description> |
+| `panorama_print_render_tree` | `""` | `developmentonly` `hidden` `defensive` | Print the RenderOperation_t tree for the given root window; set to * to print all |
 | `panorama_reload_animations` | `2` | `developmentonly` `hidden` `defensive` | <no description> |
 | `panorama_render_target_cache_max_size` | `31457280` | `developmentonly` `hidden` `defensive` | <no description> |
 | `panorama_script_cache_enabled` | `true` | `developmentonly` `hidden` `defensive` | Enable script caching to speed up recompiling scripts multiple times. |
 | `panorama_show_fps` | `false` | `developmentonly` `defensive` | <no description> |
 | `panorama_show_fps_scale` | `1` | `developmentonly` `defensive` | <no description> |
 | `panorama_simple_borders_no_comp_layer` | `true` | `developmentonly` `hidden` `defensive` | <no description> |
-| `panorama_skip_composition_layer_content_paint` | `false` | `developmentonly` `hidden` `defensive` | <no description> |
+| `panorama_skip_composition_layer_content_paint` | `true` | `developmentonly` `hidden` `defensive` | <no description> |
 | `panorama_skip_composition_layer_content_paint_tint` | `false` | `developmentonly` `hidden` `defensive` | <no description> |
 | `panorama_spew_async_event_substring` | `""` | `developmentonly` `hidden` `defensive` | If non-empty, print debug info about async event queue and dispatch behavior for events containing the substring. |
 | `panorama_spew_layout_invalidates` | `false` | `developmentonly` `hidden` `defensive` | <no description> |
@@ -2179,8 +2159,10 @@ All console variables extracted from CS2.
 | `panorama_transform_parents_no_layer_for_perspective` | `false` | `developmentonly` `hidden` `defensive` | <no description> |
 | `panorama_transforms_no_comp_layer` | `false` | `developmentonly` `hidden` `defensive` | <no description> |
 | `panorama_transition_time_factor` | `1` | `developmentonly` `hidden` `defensive` | A float representing a scale factor for transitions. 1.0 is normal, 2.0 would be twice as fast as normal, 0.5 half as fast |
+| `panorama_unlink_from_render_tree` | `true` | `developmentonly` `hidden` `defensive` | <no description> |
 | `panorama_use_backbuffer_directly` | `true` | `developmentonly` `hidden` `defensive` | <no description> |
-| `panorama_use_new_occlusion_invalidation` | `false` | `developmentonly` `hidden` `defensive` | <no description> |
+| `panorama_use_composite_cmd_for_cached_layers` | `true` | `developmentonly` `hidden` `defensive` | <no description> |
+| `panorama_use_new_occlusion_invalidation` | `true` | `developmentonly` `hidden` `defensive` | <no description> |
 | `panorama_worldpanel_update_cull_distance` | `1000` | `developmentonly` `clientdll` `defensive` | <no description> |
 | `panorama_worldpanel_update_cull_size_threshold` | `5` | `developmentonly` `clientdll` `defensive` | <no description> |
 | `panorama_worldpanel_update_culling` | `false` | `developmentonly` `clientdll` `defensive` | <no description> |
@@ -2198,6 +2180,7 @@ All console variables extracted from CS2.
 | `partybrowser_timeout` | `15` | `developmentonly` `clientdll` | <no description> |
 | `password` | `""` | `archive` `dontrecord` `server_cannot_query` `missing1` | Current server access password |
 | `path_closest_point_debug` | `false` | `developmentonly` `gamedll` `clientdll` `replicated` | <no description> |
+| `path_node_evaluation_debug` | `0` | `developmentonly` `gamedll` `clientdll` `replicated` | <no description> |
 | `pawn_mimic_all` | `false` | `developmentonly` `gamedll` `clientdll` `replicated` | <no description> |
 | `phonemedelay` | `0` | `developmentonly` `clientdll` `defensive` | Phoneme delay to account for sound system latency. |
 | `phonemefilter` | `0.08` | `developmentonly` `clientdll` `defensive` | Time duration of box filter to pass over phonemes. |
@@ -2207,6 +2190,7 @@ All console variables extracted from CS2.
 | `phys_cull_internal_mesh_contacts` | `false` | `developmentonly` `replicated` `defensive` | <no description> |
 | `phys_dynamic_scaling` | `true` | `gamedll` `clientdll` `replicated` `cheat` | <no description> |
 | `phys_expensive_shape_threshold` | `6` | `clientdll` `cheat` | <no description> |
+| `phys_force_controller_debug` | `false` | `developmentonly` `gamedll` | <no description> |
 | `phys_headshotscale` | `1.3` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | Modifier for the headshot impulse hits on players |
 | `phys_highlight_expensive_objects` | `false` | `cheat` | Highlight expensive physics objects |
 | `phys_highlight_expensive_objects_strength` | `0.02` | `cheat` | Highlight expensive physics objects strength |
@@ -2295,6 +2279,13 @@ All console variables extracted from CS2.
 | `r_always_render_all_windows` | `false` | `developmentonly` `defensive` | Always force all engine & tools to render |
 | `r_aoproxy_cull_dist` | `12` | `developmentonly` `defensive` | Distance to cull the AO proxy as a factor of size |
 | `r_aoproxy_debug` | `false` | `clientdll` `cheat` | <no description> |
+| `r_aoproxy_default_ambient_strength` | `1` | `developmentonly` `defensive` | <no description> |
+| `r_aoproxy_default_light_cone_angles` | `[0.3, 0.3, 0.3, 1]` | `developmentonly` `defensive` | <no description> |
+| `r_aoproxy_default_light_cone_strengths` | `[3, 8, 1, 4]` | `developmentonly` `defensive` | <no description> |
+| `r_aoproxy_default_light_position_0` | `[0.816497, 0, 0.57735]` | `developmentonly` `defensive` | <no description> |
+| `r_aoproxy_default_light_position_1` | `[-0.408248, 0.707107, 0.57735]` | `developmentonly` `defensive` | <no description> |
+| `r_aoproxy_default_light_position_2` | `[-0.408248, -0.707107, 0.57735]` | `developmentonly` `defensive` | <no description> |
+| `r_aoproxy_default_light_position_3` | `[0, 0, 1]` | `developmentonly` `defensive` | <no description> |
 | `r_aoproxy_enable` | `true` | `developmentonly` `clientdll` `defensive` | <no description> |
 | `r_aoproxy_min_dist` | `3` | `developmentonly` `defensive` | <no description> |
 | `r_aoproxy_min_dist_box` | `1` | `developmentonly` `defensive` | <no description> |
@@ -2308,7 +2299,6 @@ All console variables extracted from CS2.
 | `r_character_decal_renderdoc_capture` | `false` | `developmentonly` | <no description> |
 | `r_character_decal_resolution` | `1024` | `min:` `256,` `developmentonly` `defensive` | Resolution of character decal texture. |
 | `r_cs2_show_icon_editor` | `false` | `developmentonly` `clientdll` `replicated` `cheat` `menubar_item` | CSGO/Icon Editor |
-| `r_csgo_barnlight_shadow_scale_preview` | `4` | `developmentonly` `clientdll` | <no description> |
 | `r_csgo_bloom_threshold_all_samples` | `true` | `developmentonly` `clientdll` | Execute bloom threshold once per sample during downsample (default enabled, higher quality, less bloom aliasing) |
 | `r_csgo_bloom_threshold_downsample_jimenez` | `true` | `developmentonly` `clientdll` | Custom downsample based on Jimenez14, (default enabled, higher quality, decreases bloom aliasing further) |
 | `r_csgo_cable_pixel_radius_clamp` | `1.2` | `developmentonly` `clientdll` | Minimum clamped size in pixels of a cable (if using F_CLAMP_MIN_RADIUS 1 in cable material) |
@@ -2364,6 +2354,7 @@ All console variables extracted from CS2.
 | `r_csgo_gpu_opt_water_refraction_resolve` | `true` | `developmentonly` `clientdll` | copy already resolved depth for use by waterrefraction layers, instead of resolving main depth again (avoids msaa samples) |
 | `r_csgo_gpu_optimizations` | `true` | `developmentonly` `clientdll` | temporary cvar to control new GPU optimzations (depth resolves, etc) |
 | `r_csgo_joint_upscale_sigma` | `0.002` | `developmentonly` `clientdll` | <no description> |
+| `r_csgo_max_barnlight_shadow_scale_preview` | `4` | `developmentonly` `clientdll` | <no description> |
 | `r_csgo_mboit` | `true` | `clientdll` `cheat` | <no description> |
 | `r_csgo_mboit_bias` | `5e-06` | `clientdll` `cheat` | <no description> |
 | `r_csgo_mboit_debug` | `false` | `clientdll` `cheat` | <no description> |
@@ -2384,6 +2375,8 @@ All console variables extracted from CS2.
 | `r_csgo_opaquerefract_viewmodel_depthcopy` | `false` | `developmentonly` `clientdll` | Copy depth in viewmodel for opaquerefract |
 | `r_csgo_opaquerefract_viewmodel_quality` | `1` | `developmentonly` `clientdll` | Opaque refract quality in viewmodel: 0 = no background copy, no depth, 1= background copy, depth if enabled |
 | `r_csgo_outline_glow_scaledenom` | `1` | `developmentonly` `clientdll` `cheat` | <no description> |
+| `r_csgo_player_occlusion_query` | `true` | `developmentonly` `clientdll` | <no description> |
+| `r_csgo_player_occlusion_query_debug` | `false` | `developmentonly` `clientdll` | <no description> |
 | `r_csgo_postprocess_enable` | `true` | `clientdll` `cheat` | <no description> |
 | `r_csgo_r11g11b10_dither_mode` | `2` | `developmentonly` `clientdll` | 0 - disabled, 1 - regular dither noise, 2 - blue noise dither |
 | `r_csgo_readonly_depth_stencil_enable` | `true` | `clientdll` `cheat` | <no description> |
@@ -2740,13 +2733,14 @@ All console variables extracted from CS2.
 | `safezonex` | `1` | `min:` `0,` `max:` `1,` `clientdll` `archive` | The percentage of the screen width that is considered safe from overscan. Cannot result in a width less than the height. |
 | `safezoney` | `1` | `min:` `0.8,` `max:` `1,` `clientdll` `archive` | The percentage of the screen height that is considered safe from overscan |
 | `save_async` | `true` | `developmentonly` `gamedll` `defensive` | <no description> |
+| `save_debug_snapshots` | `false` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | Save/Load debug snapshot data |
 | `save_fake_hitch` | `0` | `developmentonly` `gamedll` `defensive` | Force a busy wait for the specified number of milliseconds during save to simulate a hitch |
 | `save_history_count` | `1` | `developmentonly` `gamedll` `defensive` | Keep this many old copies in history of autosaves and quicksaves. |
 | `save_maxarray_spew` | `10` | `gamedll` `release` | Max number of array entries to spew when using SaveRestoreIO spewing. |
-| `save_parallel` | `false` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | <no description> |
+| `save_parallel` | `true` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | <no description> |
 | `save_screenshot` | `2` | `developmentonly` `gamedll` `defensive` | 0 = none, 1 = non-autosave, 2 = always, 3 = bug_only |
 | `save_spew` | `false` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | <no description> |
-| `save_version` | `1` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | 0: (V0) Legacy save format, 1: (V1) KeyValues3 save format, 2: (V2) KV3Transfer saves |
+| `save_version` | `2` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | 0: (V0) Legacy save format, 1: (V1) KeyValues3 save format, 2: (V2) KV3Transfer saves |
 | `save_write_kv3` | `false` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | Write the KV3 entity data as a text file in the save directory |
 | `saving_enabled` | `true` | `developmentonly` `gamedll` `clientdll` `replicated` | <no description> |
 | `sc_aggregate_bvh` | `true` | `developmentonly` | <no description> |
@@ -2768,6 +2762,7 @@ All console variables extracted from CS2.
 | `sc_aggregate_rtproxy_debug_visualizer` | `false` | `developmentonly` `cheat` `menubar_item` | SceneSystem/Aggregates/RT Proxy Debug Visualizer |
 | `sc_aggregate_rtproxy_instanced_geo` | `true` | `developmentonly` `cheat` | <no description> |
 | `sc_aggregate_rtproxy_unique_geo` | `true` | `developmentonly` `cheat` | <no description> |
+| `sc_aggregate_rtproxy_visualize` | `false` | `developmentonly` `cheat` | <no description> |
 | `sc_aggregate_show_outside_vis` | `false` | `developmentonly` | <no description> |
 | `sc_allow_dithered_lod` | `true` | `developmentonly` `defensive` | Allow use of dithered lod transitions |
 | `sc_allow_dynamic_constant_batching` | `true` | `developmentonly` `defensive` | <no description> |
@@ -2787,6 +2782,7 @@ All console variables extracted from CS2.
 | `sc_disable_shadow_fastpath` | `false` | `cheat` | <no description> |
 | `sc_disable_spotlight_shadows` | `false` | `cheat` | <no description> |
 | `sc_disable_world_materials` | `false` | `cheat` | <no description> |
+| `sc_distance_field_visualize_atlas` | `false` | `developmentonly` `defensive` | <no description> |
 | `sc_dithered_lod_transition_amt` | `0.075` | `min:` `0,` `max:` `0.2,` `developmentonly` `defensive` | Percentage of the transition between two lods we will apply a dither |
 | `sc_draw_aggregate_meshes` | `true` | `developmentonly` `menubar_item` | SceneSystem/Aggregates/Draw Aggregates |
 | `sc_dump_lists` | `""` | `cheat` | <no description> |
@@ -2813,6 +2809,7 @@ All console variables extracted from CS2.
 | `sc_instanced_mesh_lod_bias_shadow` | `1.75` | `developmentonly` `defensive` | Bias for LOD selection of instanced meshes in shadowmaps |
 | `sc_instanced_mesh_mesh_shader` | `true` | `developmentonly` `defensive` | Toggles mesh shader rendering for instanced meshes |
 | `sc_instanced_mesh_motion_vectors` | `true` | `developmentonly` `defensive` | Toggles motion vector support for instanced meshes |
+| `sc_instanced_mesh_opaque_fade` | `true` | `developmentonly` `defensive` | Toggles fade support for instanced meshes |
 | `sc_instanced_mesh_size_cull_bias` | `1.5` | `developmentonly` `defensive` | Bias for size culling of instanced meshes |
 | `sc_instanced_mesh_size_cull_bias_shadow` | `2` | `developmentonly` `defensive` | Bias for size culling instanced meshes in shadowmaps |
 | `sc_instanced_mesh_solo` | `""` | `developmentonly` `cheat` | <no description> |
@@ -2882,7 +2879,6 @@ All console variables extracted from CS2.
 | `skeleton_instance_smear_boneflags` | `false` | `gamedll` `cheat` | Smear boneflags across the model.  Costs computation, but tests to make sure your bone flags are consistent. |
 | `skeleton_physics_joint_fixup` | `true` | `developmentonly` `gamedll` `clientdll` `replicated` `cheat` | <no description> |
 | `skill` | `1` | `min:` `1,` `max:` `3,` `gamedll` `clientdll` `archive` `replicated` `per_user` | Game skill level. |
-| `slope_drop_debug` | `0` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | Toggles a test dropping the view offset based on the slope |
 | `slope_drop_enable` | `true` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | Toggles a test dropping the view offset based on the slope |
 | `slope_drop_max_offset` | `16` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | The maximum distance to adjust the view height |
 | `slope_drop_off_ground_blend_speed` | `160` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | The speed with which the slope drop is blended out when the entity leaves the ground |
@@ -2937,6 +2933,7 @@ All console variables extracted from CS2.
 | `snd_gamevoicevolume` | `1` | `min:` `0,` `max:` `1,` `archive` | Game v.o. volume |
 | `snd_gamevolume` | `1` | `min:` `0,` `max:` `1,` `archive` `missing1` | Game volume |
 | `snd_group_cluster_debug` | `false` | `replicated` `cheat` | <no description> |
+| `snd_group_occlusion_debug` | `false` | `developmentonly` | <no description> |
 | `snd_group_priority_debug` | `false` | `replicated` `cheat` | <no description> |
 | `snd_group_priority_max_tolerance` | `0.05` | `replicated` `cheat` | <no description> |
 | `snd_headphone_eq` | `0` | `clientdll` `archive` `clientcmd_can_execute` | Select Headphone EQ Preset |
@@ -3172,7 +3169,6 @@ All console variables extracted from CS2.
 | `sv_accelerate` | `5.5` | `gamedll` `clientdll` `notify` `replicated` `release` | <no description> |
 | `sv_accelerate_debug_speed` | `false` | `gamedll` `clientdll` `notify` `replicated` `release` | <no description> |
 | `sv_accelerate_use_weapon_speed` | `true` | `gamedll` `clientdll` `notify` `replicated` `release` | <no description> |
-| `sv_ag2_low_skel_lod` | `false` | `developmentonly` `gamedll` `defensive` | <no description> |
 | `sv_ag2_record_entity_graph` | `""` | `developmentonly` `gamedll` | Automatically start AG2 recording when an entity with this name (wildcard) or id is created. |
 | `sv_air_max_wishspeed` | `30` | `gamedll` `clientdll` `replicated` `release` | <no description> |
 | `sv_airaccelerate` | `12` | `gamedll` `clientdll` `notify` `replicated` `release` | <no description> |
@@ -3221,12 +3217,12 @@ All console variables extracted from CS2.
 | `sv_client_min_interp_ratio` | `0` | `min:` `0,` `max:` `19,` `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | This can be used to limit the value of cl_interp_ratio for connected clients (only while they are connected). |
 | `sv_clip_penetration_traces_to_players` | `true` | `developmentonly` `gamedll` `clientdll` `replicated` `defensive` | <no description> |
 | `sv_clockcorrection_msecs` | `30` | `gamedll` `release` | The server tries to keep each player's m_nTickBase withing this many msecs of the server absolute tickcount |
+| `sv_clockdbg` | `false` | `developmentonly` | Print spew related to server clock and ticking |
 | `sv_cluster` | `0` | `release` | Data center cluster this server lives in. |
 | `sv_coaching_enabled` | `false` | `developmentonly` `gamedll` `clientdll` `replicated` `release` | Allows spectating and communicating with a team ( 'coach t' or 'coach ct' ) |
 | `sv_competitive_minspec` | `true` | `gamedll` `clientdll` `notify` `replicated` `release` | Enable to force certain client convars to minimum/maximum values to help prevent competitive advantages. |
 | `sv_compute_per_bot_difficulty` | `false` | `developmentonly` `gamedll` `clientdll` `replicated` | 0 = compute all bot difficulties equally, 1 = compute unique bot difficulty for each bot |
 | `sv_condense_late_buttons` | `true` | `developmentonly` `gamedll` `defensive` | When condensing late commands. Should we compress multiple moves of button presses into the target move? |
-| `sv_connectionless_legacy_events_allowed` | `false` | `developmentonly` | <no description> |
 | `sv_cq_min_queue` | `0` | `min:` `0,` `developmentonly` `replicated` `defensive` | Server min buffer size. |
 | `sv_cq_trim_bloat_remainder` | `1` | `gamedll` `release` | When trimming a bloated CQ, leave at least N more commands than the minimum |
 | `sv_cq_trim_bloat_space` | `0` | `gamedll` `release` | When trimming a bloated CQ, try to leave room for N more commands to be added.  0 will trim only what is needed to remove the immediate bloat, a very large value will reset the whole queue. |
@@ -3263,12 +3259,6 @@ All console variables extracted from CS2.
 | `sv_disable_teamselect_menu` | `false` | `gamedll` `clientdll` `replicated` `release` `commandline_enforced` | Disable teamselect menu on clients |
 | `sv_disconnected_player_data_hold_time` | `60` | `gamedll` `clientdll` `replicated` `release` | Duration, in seconds, to hold onto the data of disconnected players, for scoreboard display. |
 | `sv_disconnected_players_cleanup_delay` | `0` | `min:` `0,` `max:` `300,` `gamedll` `release` `commandline_enforced` | Delay between player disconnecting and their corpse getting cleaned up. |
-| `sv_dz_cash_bundle_size` | `50` | `gamedll` `replicated` `release` | Size of a cash bundle |
-| `sv_dz_cash_mega_bundle_size` | `13` | `gamedll` `replicated` `release` | Size of a mega cash bundle |
-| `sv_dz_contractkill_reward` | `10` | `gamedll` `replicated` `release` | Cash bundles to award for a successful contract kill |
-| `sv_dz_hostage_rescue_reward` | `18` | `gamedll` `clientdll` `replicated` `release` | Number of cash bundles to award for rescuing a hostage |
-| `sv_dz_show_enemy_name_scope_range` | `0` | `reference` | <no description> |
-| `sv_dz_squad_wipe_reward` | `2` | `gamedll` `clientdll` `replicated` `release` | Number of cash bundles to award for eliminating a squad |
 | `sv_early_network_message_processing` | `false` | `developmentonly` `gamedll` | Processes network messages on the server before entities think, instead of at the end of the tick. |
 | `sv_enable_alternate_baselines` | `1` | `release` | Allow alternate baseline system, set to 2 for debugging spew. |
 | `sv_enable_delta_packing` | `true` | `release` | When enabled, this allows for entity packing to use the property changes for building up the data. This is many times faster, but can be disabled for error checking. |
@@ -3296,6 +3286,10 @@ All console variables extracted from CS2.
 | `sv_force_team_intro_variant` | `0` | `developmentonly` `gamedll` | <no description> |
 | `sv_force_transmit_ents` | `false` | `developmentonly` `gamedll` | Will transmit all entities to client, regardless of PVS conditions (will still skip based on transmit flags, however). |
 | `sv_fps_max` | `0` | `developmentonly` `hidden` `defensive` | Dedicated server frame rate limiter. 0=tick rate. Only applies to the dedicated server. |
+| `sv_freeze_camera_angles` | `[0, 0, 0]` | `gamedll` `clientdll` `replicated` `release` `commandline_enforced` | <no description> |
+| `sv_freeze_camera_enabled` | `false` | `gamedll` `clientdll` `replicated` `release` `commandline_enforced` | <no description> |
+| `sv_freeze_camera_min_remaining` | `3` | `gamedll` `clientdll` `replicated` `release` `commandline_enforced` | <no description> |
+| `sv_freeze_camera_position` | `[0, 0, 0]` | `gamedll` `clientdll` `replicated` `release` `commandline_enforced` | <no description> |
 | `sv_friction` | `5.2` | `gamedll` `clientdll` `notify` `replicated` `release` | World friction. |
 | `sv_full_alltalk` | `false` | `gamedll` `clientdll` `replicated` `release` | Any player (including Spectator team) can speak to any other player |
 | `sv_game_mode_flags` | `0` | `gamedll` `release` | Dedicated server game mode flags to run |
@@ -3303,6 +3297,8 @@ All console variables extracted from CS2.
 | `sv_gameinstructor_enable` | `false` | `clientdll` `replicated` `release` | Force all clients to enable their game instructors. |
 | `sv_give_item` | `""` | `gamedll` `hidden` `replicated` `cheat` `release` `commandline_enforced` | Player's extra item to give |
 | `sv_gravity` | `800` | `gamedll` `clientdll` `notify` `replicated` `release` | World gravity. |
+| `sv_grenade_collision_sphere` | `false` | `gamedll` `clientdll` `replicated` `release` | <no description> |
+| `sv_grenade_collision_sphere_radius` | `2` | `gamedll` `clientdll` `replicated` `release` | <no description> |
 | `sv_grenade_trajectory_prac_pipreview` | `false` | `gamedll` `clientdll` `replicated` `release` `commandline_enforced` | Shows grenade trajectory practice picture-in-picture preview. |
 | `sv_grenade_trajectory_prac_trailtime` | `0` | `min:` `0,` `max:` `8,` `gamedll` `clientdll` `replicated` `release` `commandline_enforced` | Shows grenade trajectory practice visualization for this number of seconds. |
 | `sv_grenade_trajectory_time_spectator` | `0` | `min:` `0,` `max:` `8,` `gamedll` `clientdll` `replicated` `release` `commandline_enforced` | Length of time grenade trajectory remains visible as a spectator. |
@@ -3399,12 +3395,16 @@ All console variables extracted from CS2.
 | `sv_noclipduringpause` | `false` | `gamedll` `clientdll` `replicated` `cheat` | If cheats are enabled, then you can noclip with the game paused (for doing screenshots, etc.). |
 | `sv_noclipfriction` | `4` | `gamedll` `clientdll` `archive` `notify` `replicated` | Friction during noclip move. |
 | `sv_noclipspeed` | `1200` | `gamedll` `clientdll` `archive` `notify` `replicated` | <no description> |
+| `sv_noclipspeedscaleonshift` | `0.5` | `gamedll` `clientdll` `archive` `notify` `replicated` | <no description> |
 | `sv_nomvp` | `false` | `developmentonly` `gamedll` `defensive` | Disable MVP awards. |
 | `sv_nonemesis` | `true` | `developmentonly` `gamedll` `defensive` | Disable nemesis and revenge. |
 | `sv_nowinpanel` | `false` | `developmentonly` `gamedll` `defensive` | Turn on/off win panel on server |
 | `sv_optimizedmovement` | `true` | `developmentonly` `gamedll` `clientdll` `replicated` | <no description> |
 | `sv_outofammo_indicator` | `false` | `gamedll` `clientdll` `replicated` `release` `commandline_enforced` | <no description> |
 | `sv_outofpvsentityupdates` | `false` | `developmentonly` | <no description> |
+| `sv_override_max_health` | `0` | `gamedll` `release` | <no description> |
+| `sv_pack_entities_really_verbose` | `false` | `release` | Increase verbosity for entity packing |
+| `sv_pack_entities_verbose_entidx` | `-1` | `release` | Verbose output for entity packing, set to the entindex of the entity you want verbose output for. |
 | `sv_parallel_checktransmit` | `0` | `gamedll` `release` | Set to 1 to use threaded checkentities for transmit/pvs on listen servers, 2 for dedicated servers. |
 | `sv_parallel_packentities` | `2` | `release` | Set to 1 to use threaded snapshot sending on listen servers, 2 for dedicated servers. |
 | `sv_parallel_prepare_client_updates` | `false` | `developmentonly` | <no description> |

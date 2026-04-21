@@ -667,14 +667,8 @@ direction LR
     <<enumeration>>
     bi_RebroadcastGameEvent
     bi_RebroadcastSource
-    bi_GameEvent
+    bi_GameEvent_DEPRECATED
     bi_PredictionEvent
-  }
-
-  class Bidirectional_Messages_LowFrequency{
-    <<enumeration>>
-    bi_RelayInfo
-    bi_RelayPacket
   }
 
   class ReplayEventType_t{
@@ -805,15 +799,8 @@ direction LR
 |------|-------|
 | `bi_RebroadcastGameEvent` | 16 |
 | `bi_RebroadcastSource` | 17 |
-| `bi_GameEvent` | 18 |
+| `bi_GameEvent_DEPRECATED` | 18 |
 | `bi_PredictionEvent` | 19 |
-
-### `Bidirectional_Messages_LowFrequency`
-
-| Name | Value |
-|------|-------|
-| `bi_RelayInfo` | 700 |
-| `bi_RelayPacket` | 701 |
 
 ### `ReplayEventType_t`
 

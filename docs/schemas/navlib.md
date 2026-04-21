@@ -22,6 +22,7 @@ nav_exclude: true
 | [NavAttributeEnum](#navattributeenum) | enum |  | 20 |
 | [NavDirType](#navdirtype) | enum |  | 5 |
 | [NavGravity_t](#navgravity_t) | class |  | 2 |
+| [NavHull_t](#navhull_t) | class |  | 1 |
 
 ---
 
@@ -77,7 +78,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_vCenter` | Vector |  |
+| `m_vCenter` | VectorWS |  |
 | `m_flRadius` | float32 |  |
 
 ### CNavVolumeSphericalShell
@@ -174,3 +175,13 @@ classDiagram
 |------|------|-------------|
 | `m_vGravity` | Vector |  |
 | `m_bDefault` | bool |  |
+
+### NavHull_t
+
+**Metadata:** `MGetKV3ClassDefaults = Could not parse KV3 Defaults`
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `m_nHullIdx` | int32 |  |

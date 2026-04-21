@@ -13,13 +13,13 @@ All entities and types extracted from CS2's schema dump, organised by module.
 | Module | Entities | UML |
 |--------|----------|-----|
 | [animationsystem](schemas/animationsystem.md) | 55 | [📊 Diagram](diagrams/animationsystem.md) |
-| [animdoclib](schemas/animdoclib.md) | 203 | [📊 Diagram](diagrams/animdoclib.md) |
+| [animdoclib](schemas/animdoclib.md) | 209 | [📊 Diagram](diagrams/animdoclib.md) |
 | [animgraphdoclib](schemas/animgraphdoclib.md) | 172 | [📊 Diagram](diagrams/animgraphdoclib.md) |
-| [animgraphlib](schemas/animgraphlib.md) | 265 | [📊 Diagram](diagrams/animgraphlib.md) |
-| [animlib](schemas/animlib.md) | 210 | [📊 Diagram](diagrams/animlib.md) |
-| [client](schemas/client.md) | 714 | [📊 Diagram](diagrams/client.md) |
+| [animgraphlib](schemas/animgraphlib.md) | 298 | [📊 Diagram](diagrams/animgraphlib.md) |
+| [animlib](schemas/animlib.md) | 214 | [📊 Diagram](diagrams/animlib.md) |
+| [client](schemas/client.md) | 766 | [📊 Diagram](diagrams/client.md) |
 | [compositematerialslib](schemas/compositematerialslib.md) | 17 | [📊 Diagram](diagrams/compositematerialslib.md) |
-| [entity2](schemas/entity2.md) | 17 | [📊 Diagram](diagrams/entity2.md) |
+| [entity2](schemas/entity2.md) | 18 | [📊 Diagram](diagrams/entity2.md) |
 | [hammer](schemas/hammer.md) | 10 | — |
 | [host](schemas/host.md) | 2 | [📊 Diagram](diagrams/host.md) |
 | [mapdoclib](schemas/mapdoclib.md) | 3 | — |
@@ -27,16 +27,16 @@ All entities and types extracted from CS2's schema dump, organised by module.
 | [mathlib_extended](schemas/mathlib_extended.md) | 12 | — |
 | [met](schemas/met.md) | 3 | — |
 | [modeldoc_editor](schemas/modeldoc_editor.md) | 4 | — |
-| [modellib](schemas/modellib.md) | 140 | [📊 Diagram](diagrams/modellib.md) |
+| [modellib](schemas/modellib.md) | 139 | [📊 Diagram](diagrams/modellib.md) |
 | [modtools](schemas/modtools.md) | 2 | [📊 Diagram](diagrams/modtools.md) |
-| [navlib](schemas/navlib.md) | 11 | [📊 Diagram](diagrams/navlib.md) |
-| [networksystem](schemas/networksystem.md) | 2 | — |
+| [navlib](schemas/navlib.md) | 12 | [📊 Diagram](diagrams/navlib.md) |
+| [networksystem](schemas/networksystem.md) | 1 | — |
 | [panorama_content](schemas/panorama_content.md) | 2 | — |
-| [particles](schemas/particles.md) | 502 | [📊 Diagram](diagrams/particles.md) |
-| [particleslib](schemas/particleslib.md) | 33 | [📊 Diagram](diagrams/particleslib.md) |
+| [particles](schemas/particles.md) | 506 | [📊 Diagram](diagrams/particles.md) |
+| [particleslib](schemas/particleslib.md) | 39 | [📊 Diagram](diagrams/particleslib.md) |
 | [physicslib](schemas/physicslib.md) | 98 | [📊 Diagram](diagrams/physicslib.md) |
 | [pulse_runtime_lib](schemas/pulse_runtime_lib.md) | 107 | [📊 Diagram](diagrams/pulse_runtime_lib.md) |
-| [pulse_system](schemas/pulse_system.md) | 33 | [📊 Diagram](diagrams/pulse_system.md) |
+| [pulse_system](schemas/pulse_system.md) | 35 | [📊 Diagram](diagrams/pulse_system.md) |
 | [pulsedoc_lib](schemas/pulsedoc_lib.md) | 4 | — |
 | [qcontrols](schemas/qcontrols.md) | 15 | — |
 | [rendersystemdx11](schemas/rendersystemdx11.md) | 7 | [📊 Diagram](diagrams/rendersystemdx11.md) |
@@ -45,16 +45,16 @@ All entities and types extracted from CS2's schema dump, organised by module.
 | [resourcesystem](schemas/resourcesystem.md) | 48 | — |
 | [scenesystem](schemas/scenesystem.md) | 12 | [📊 Diagram](diagrams/scenesystem.md) |
 | [schemasystem](schemas/schemasystem.md) | 3 | — |
-| [server](schemas/server.md) | 745 | [📊 Diagram](diagrams/server.md) |
-| [smartprops](schemas/smartprops.md) | 159 | [📊 Diagram](diagrams/smartprops.md) |
+| [server](schemas/server.md) | 777 | [📊 Diagram](diagrams/server.md) |
+| [smartprops](schemas/smartprops.md) | 167 | [📊 Diagram](diagrams/smartprops.md) |
 | [sounddoc_lib](schemas/sounddoc_lib.md) | 75 | [📊 Diagram](diagrams/sounddoc_lib.md) |
-| [soundsystem](schemas/soundsystem.md) | 23 | [📊 Diagram](diagrams/soundsystem.md) |
+| [soundsystem](schemas/soundsystem.md) | 39 | [📊 Diagram](diagrams/soundsystem.md) |
 | [soundsystem_lowlevel](schemas/soundsystem_lowlevel.md) | 80 | [📊 Diagram](diagrams/soundsystem_lowlevel.md) |
 | [soundsystem_voicecontainers](schemas/soundsystem_voicecontainers.md) | 42 | [📊 Diagram](diagrams/soundsystem_voicecontainers.md) |
-| [steamaudio](schemas/steamaudio.md) | 16 | — |
+| [steamaudio](schemas/steamaudio.md) | 17 | — |
 | [texturelib](schemas/texturelib.md) | 10 | — |
 | [tier2](schemas/tier2.md) | 2 | — |
 | [toolscene](schemas/toolscene.md) | 12 | [📊 Diagram](diagrams/toolscene.md) |
 | [toolutils2](schemas/toolutils2.md) | 26 | [📊 Diagram](diagrams/toolutils2.md) |
-| [vphysics2](schemas/vphysics2.md) | 5 | [📊 Diagram](diagrams/vphysics2.md) |
+| [vphysics2](schemas/vphysics2.md) | 8 | [📊 Diagram](diagrams/vphysics2.md) |
 | [worldrenderer](schemas/worldrenderer.md) | 31 | [📊 Diagram](diagrams/worldrenderer.md) |

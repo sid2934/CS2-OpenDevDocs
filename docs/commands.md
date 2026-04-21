@@ -36,7 +36,6 @@ All console commands extracted from CS2.
 | `-radialradio2` | `clientdll` `release` | <no description> |
 | `-radialradio3` | `clientdll` `release` | <no description> |
 | `-spray_menu` | `clientdll` `release` | <no description> |
-| `CreatePredictionError` | `gamedll` `cheat` | Create a prediction error |
 | `ShowSteamStatsSessionID` | `developmentonly` `clientdll` | Prints out the game stats session ID's (developer convar must be set to non-zero). |
 | `StackStats_Dump` | `developmentonly` | Dump a named stackstats structure to disk. Usage: stackstats_dump "structname" ["filename"] |
 | `Test_Checkpoint` | `developmentonly` `defensive` | Indicate to a test script that a checkpoint has been reached |
@@ -112,6 +111,7 @@ All console commands extracted from CS2.
 | `camera_path_add` | `clientdll` `cheat` | <no description> |
 | `camera_path_clear_all` | `clientdll` `cheat` | <no description> |
 | `camera_path_delete` | `clientdll` `cheat` | <no description> |
+| `camera_path_demo` | `clientdll` `cheat` | <no description> |
 | `camera_path_load` | `clientdll` `cheat` | <no description> |
 | `camera_path_save` | `clientdll` `cheat` | <no description> |
 | `camerazoomin` | `developmentonly` `clientdll` `defensive` | <no description> |
@@ -154,7 +154,6 @@ All console commands extracted from CS2.
 | `cl_dev_decaltrace_blood` | `developmentonly` `clientdll` `cheat` | Shoot out a decal spray that shoots blood. |
 | `cl_drawcross` | `clientdll` `cheat` | Draws a cross at the given location |
 | `cl_drawline` | `clientdll` `cheat` | Draws line between two 3D Points. |
-| `cl_dump_player_animgraph_state` | `developmentonly` `clientdll` | Dumps the local player's animgraph state to console |
 | `cl_dump_projected_texture_count` | `developmentonly` `clientdll` `defensive` | Print out number of active projected textures |
 | `cl_dump_response_symbols` | `developmentonly` `clientdll` `defensive` | print all response symbols to the console |
 | `cl_dumpentity` | `clientdll` `cheat` | Dumps info about an entity |
@@ -164,7 +163,6 @@ All console commands extracted from CS2.
 | `cl_ent_animgraph2_open_graph` | `clientdll` `cheat` | Opens the graph and starts live debugging the AG2 graph for a given entity |
 | `cl_ent_animgraph2_record` | `clientdll` `cheat` | Starts live debugging & recording the AG2 graph for a given entity |
 | `cl_ent_animgraph_debug` | `clientdll` `cheat` | Displays debug draws about the given entity(ies) animgraph |
-| `cl_ent_animgraph_record` | `clientdll` `cheat` | Toggles recording of animgraph replay of the given entity(s) |
 | `cl_ent_attachments` | `clientdll` `cheat` | Displays the attachment points on an entity. |
 | `cl_ent_bbox` | `clientdll` `cheat` | Displays the movement bounding box for the given entity(ies) in orange.  Some entites will also display entity specific overlays. |
 | `cl_ent_call` | `clientdll` `cheat` | ent_call <funcname> <option:entname> calls function on current look target or filtername, checks on ent, then root, then mode, then map scope |
@@ -224,8 +222,6 @@ All console commands extracted from CS2.
 | `cl_phys_dump_main_world` | `developmentonly` `clientdll` | Dump physics main world to file |
 | `cl_phys_dump_memory` | `developmentonly` `clientdll` | Dump memory usage |
 | `cl_phys_list` | `developmentonly` `clientdll` | List all physics component contents of every entity in the game; |
-| `cl_phys_record_rays` | `developmentonly` `clientdll` | Dump physics main world to file |
-| `cl_phys_record_rays_and_world` | `developmentonly` `clientdll` | Dump traces physics main world to file |
 | `cl_phys_sleep` | `developmentonly` `clientdll` | Put all physics in all the worlds to sleep |
 | `cl_phys_wakeup` | `developmentonly` `clientdll` | Wake all physics objects in the Main physics up |
 | `cl_physics_add_test` | `developmentonly` `clientdll` | add test object |
@@ -249,7 +245,6 @@ All console commands extracted from CS2.
 | `cl_resetfps` | `developmentonly` `clientdll` `defensive` | Reset information from cl_showfps. |
 | `cl_rr_dump_rules` | `clientdll` `cheat` | Print all response rules |
 | `cl_rr_reloadresponsesystems` | `clientdll` `cheat` | Reload all response system scripts. |
-| `cl_save_animgraph_recording` | `clientdll` `cheat` | Saves all active animgraph recordings to disk |
 | `cl_script_add_debug_filter` | `clientdll` `cheat` | Add a filter to the game debug overlay |
 | `cl_script_add_watch` | `clientdll` `cheat` | Add a watch to the game debug overlay |
 | `cl_script_add_watch_pattern` | `clientdll` `cheat` | Add a watch to the game debug overlay |
@@ -387,8 +382,6 @@ All console commands extracted from CS2.
 | `ent_animgraph2_open_graph` | `gamedll` `cheat` | Opens the graph and starts live debugging the AG2 graph for a given entity |
 | `ent_animgraph2_record` | `gamedll` `cheat` | Starts live debugging & recording the AG2 graph for a given entity |
 | `ent_animgraph_debug` | `gamedll` `cheat` | Displays debug draws about the given entity(ies) animgraph |
-| `ent_animgraph_record` | `gamedll` `cheat` | Toggles recording of animgraph replay of the given entity(s) |
-| `ent_animgraph_setvar` | `gamedll` `cheat` | Sets a variable on the animgraph of the given entity(s) |
 | `ent_attachments` | `gamedll` `cheat` | Displays the attachment points on an entity. |
 | `ent_autoaim` | `gamedll` `cheat` | Displays the entity's autoaim radius. |
 | `ent_bbox` | `gamedll` `cheat` | Displays the movement bounding box for the given entity(ies) in orange.  Some entites will also display entity specific overlays. |
@@ -474,6 +467,8 @@ All console commands extracted from CS2.
 | `force_hibernate` | `developmentonly` | Force toggle hibernation state |
 | `fs_clear_open_duplicate_times` | `developmentonly` `defensive` | Clear the list of files that have been opened. |
 | `fs_dump_open_duplicate_times` | `developmentonly` `defensive` | Set fs_report_long_reads 1 before loading to use this. Prints a list of files that were opened more than once and ~how long was spent reading from them. |
+| `func_mover_count` | `gamedll` `cheat` | <no description> |
+| `func_mover_enable_debug_all` | `gamedll` `cheat` | <no description> |
 | `game_alias` | `release` | Set the configuration of game type and mode based on game alias like "deathmatch". |
 | `game_particle_manager_dump_requeue` | `developmentonly` `clientdll` | Dump contents of particle manager requeue |
 | `game_particle_manager_list_active` | `developmentonly` `clientdll` | Dump counts of active particles |
@@ -697,8 +692,10 @@ All console commands extracted from CS2.
 | `noclip` | `gamedll` `cheat` `client_can_execute` | Toggle. Player becomes non-solid and flies.  Optional argument of 0 or 1 to force enable/disable |
 | `notarget` | `gamedll` `cheat` `client_can_execute` | Toggle. Player becomes hidden to NPCs. |
 | `open_asset` | `developmentonly` `defensive` | Opens an asset in it's primary editor of choice. Specify the full path to the asset from the mod directory. |
+| `open_current_map_in_hammer` | `developmentonly` | opens the current map in hammer. |
 | `p2p_listpeers` | `developmentonly` `defensive` | List currently known peers. |
 | `p2p_ping` | `developmentonly` `clientdll` `defensive` | Ping a peer. |
+| `panorama_console_reset_size_and_position` | `linked_concommand` `developmentonly` `clientdll` `hidden` `defensive` | Resets the panorama console to its default size and position |
 | `panorama_dispatch_event` | `developmentonly` `defensive` | Dispatch the event defined by the argument string. No creating panel is specified. |
 | `panorama_dump_symbols` | `developmentonly` `defensive` | <ESymbolType> Dump all of the symbols in the Panorama symbol table |
 | `panorama_generate_layout_xsd` | `developmentonly` `defensive` | Generate the Layout XML Schema Definition for the current run-time (types are dependent on which game DLL is running). |
@@ -717,8 +714,6 @@ All console commands extracted from CS2.
 | `phys_dump_main_world` | `developmentonly` `gamedll` | Dump physics main world to file |
 | `phys_dump_memory` | `developmentonly` `gamedll` | Dump memory usage |
 | `phys_list` | `developmentonly` `gamedll` | List all physics component contents of every entity in the game; |
-| `phys_record_rays` | `developmentonly` `gamedll` | Dump physics main world to file |
-| `phys_record_rays_and_world` | `developmentonly` `gamedll` | Dump traces physics main world to file |
 | `phys_shoot` | `gamedll` `cheat` | Shoots a phys object. |
 | `phys_sleep` | `developmentonly` `gamedll` | Put all physics in all the worlds to sleep |
 | `phys_wakeup` | `developmentonly` `gamedll` | Wake all physics objects in the Main physics up |
@@ -812,7 +807,6 @@ All console commands extracted from CS2.
 | `rs_dump_stats` | `developmentonly` | rs_dump_stats - Dump resourcesystem stats. |
 | `run_perftest` | `cheat` `dontrecord` | Execute perftest.cfg |
 | `save` | `developmentonly` `gamedll` `dontrecord` `defensive` | Save Game |
-| `save_animgraph_recording` | `gamedll` `cheat` | Saves all active animgraph recordings to disk |
 | `save_clear_subdirectory` | `developmentonly` `gamedll` `replicated` `defensive` | <no description> |
 | `save_finish_async` | `developmentonly` `gamedll` `defensive` | <no description> |
 | `save_set_subdirectory` | `developmentonly` `gamedll` `replicated` `defensive` | <no description> |
@@ -917,11 +911,8 @@ All console commands extracted from CS2.
 | `snd_list_deferred_soundevents` | `developmentonly` `cheat` | List all current deferred load soundevents |
 | `snd_list_soundevents` | `developmentonly` `cheat` | List all available soundevents |
 | `snd_list_soundevents_by_stack` | `developmentonly` `cheat` | List all available soundevents using specified stack name |
-| `snd_print_activetracks` | `cheat` | List all active tracks |
-| `snd_print_arrangements` | `cheat` | List all available sequence arrangments |
 | `snd_print_current_mixer_mixgroup` | `developmentonly` `defensive` | Get data related to mix group matching string |
 | `snd_print_samplers` | `cheat` | List all available samplers |
-| `snd_print_sequences` | `cheat` | List all available midi sequences |
 | `snd_print_soundevent` | `developmentonly` `vconsole_fuzzy_matching` `vconsole_set_focus` | Print the data associated with the specified soundevent. |
 | `snd_print_soundevent_default_public_properties` | `developmentonly` `vconsole_fuzzy_matching` `vconsole_set_focus` | Print the default public properties of a specified soundevent. Values do not reflect values set on the soundevent. For that see "snd_print_soundevent" |
 | `snd_purge_vsnd_table` | `developmentonly` | Purges the VSnd table |
@@ -933,10 +924,14 @@ All console commands extracted from CS2.
 | `snd_remove_soundevent` | `developmentonly` `cheat` | Remove the specified soundevent |
 | `snd_samplers_play_note` | `cheat` | Play a note from a specified sampler |
 | `snd_samplers_stop_note` | `cheat` | Stop a note from a specified sampler |
-| `snd_sequence_set_track_bpm` | `cheat` | Sets the tempo of the specified track |
-| `snd_sequence_set_track_transpose` | `cheat` | Sets the transposition of the specified track |
-| `snd_sequence_stop_all_tracks` | `cheat` | Stops all currently playing sequences |
-| `snd_sequence_stop_track` | `cheat` | Stops the specified track |
+| `snd_sequencer_print_activetracks` | `cheat` | List all active tracks |
+| `snd_sequencer_print_arrangements` | `cheat` | List all available sequence arrangments |
+| `snd_sequencer_print_sequences` | `cheat` | List all available midi sequences |
+| `snd_sequencer_set_track_bpm` | `cheat` | Sets the tempo of the specified track |
+| `snd_sequencer_set_track_transpose` | `cheat` | Sets the transposition of the specified track |
+| `snd_sequencer_stop_all_tracks` | `cheat` | Stops all currently playing sequences |
+| `snd_sequencer_stop_track` | `cheat` | Stops the specified track |
+| `snd_sequencer_vmidi_flush` | `cheat` | Purge and reload all vmidi data and files. |
 | `snd_set_physics_surface_properties` | `cheat` | Set physics surface properties for materials. Usage: <heuristic #> <commit> |
 | `snd_setmixer` | `developmentonly` | Set named Mixgroup of current mixer to mix vol, mute, solo. |
 | `snd_setmixlayer` | `developmentonly` | Set named Mixgroup of named mix layer to mix vol, mute, solo. |
@@ -969,6 +964,7 @@ All console commands extracted from CS2.
 | `snd_sos_stop_all_soundevents` | `cheat` | Stops all soundevents currently on the execution list |
 | `snd_sos_stop_soundevent_guid` | `cheat` | Stops a specified soundevent |
 | `snd_sos_stop_soundevent_index` | `cheat` | Stops a specified soundevent |
+| `snd_sos_stop_track` | `cheat` | Stop the specified track and it's queue. |
 | `snd_sos_sv_soundevent_pause_last` | `developmentonly` `gamedll` `defensive` | Test |
 | `snd_sos_sv_soundevent_start` | `developmentonly` `gamedll` `defensive` | Test |
 | `snd_sos_sv_soundevent_stop_last` | `developmentonly` `gamedll` `defensive` | Test |
@@ -988,13 +984,13 @@ All console commands extracted from CS2.
 | `snd_stereo_speaker_pan_radial_weight` | `developmentonly` `defensive` | Apply cos(angle) * weight before pan law |
 | `snd_surround_speaker_pan_exponent` | `developmentonly` `defensive` | Specifies the exponent for the pan xfade from speaker to speaker if the "exp" pan law is being used. |
 | `snd_surround_speaker_pan_radial_weight` | `developmentonly` `defensive` | Apply cos(angle) * weight before pan law |
-| `snd_vmidi_flush` | `cheat` | Purge and reload all vmidi data and files. |
 | `sndplaydelay` | `developmentonly` `defensive` | <no description> |
 | `soundinfo` | `release` | Describe the current sound device with an active voice list. |
 | `soundlist` | `developmentonly` `defensive` | List all known sounds. |
 | `soundscape_dumpclient` | `clientdll` `cheat` | Dumps the client's soundscape data. |
 | `soundscape_flush` | `developmentonly` `gamedll` `defensive` | Flushes the server & client side soundscapes |
 | `soundsysteminfo` | `developmentonly` `defensive` | Describe the current sound device without an active voice list. |
+| `spawnCashStack` | `developmentonly` `gamedll` `cheat` | <no description> |
 | `spec_goto` | `clientdll` `clientcmd_can_execute` | Move the spectator camera to a specific location. `spec_goto x y z pitch yaw` |
 | `spec_lock_to_current_player` | `developmentonly` `clientdll` | As an observer, lock the spectator target to the currently observed target |
 | `spec_mode` | `clientdll` `clientcmd_can_execute` | Set spectator mode |

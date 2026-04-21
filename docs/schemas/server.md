@@ -12,35 +12,34 @@ nav_exclude: true
 | Name | Kind | Bases | Fields |
 |------|------|-------|--------|
 | [ActiveModelConfig_t](#activemodelconfig_t) | class |  | 4 |
+| [AnimGraph2SerializedPoseRecipeSlot_t](#animgraph2serializedposerecipeslot_t) | class |  | 1 |
 | [AutoRoomDoorwayPairs_t](#autoroomdoorwaypairs_t) | class |  | 2 |
 | [CAI_ChangeHintGroup](#cai_changehintgroup) | class | CBaseEntity | 4 |
 | [CAI_Expresser](#cai_expresser) | class |  | 11 |
 | [CAI_ExpresserWithFollowup](#cai_expresserwithfollowup) | class | CAI_Expresser | 0 |
 | [CAK47](#cak47) | class | CCSWeaponBaseGun | 0 |
 | [CAmbientGeneric](#cambientgeneric) | class | CPointEntity | 10 |
-| [CAnimGraphNetworkedVariables](#canimgraphnetworkedvariables) | class |  | 24 |
 | [CAttributeContainer](#cattributecontainer) | class | CAttributeManager | 1 |
 | [CAttributeList](#cattributelist) | class |  | 2 |
 | [CAttributeManager](#cattributemanager) | class |  | 6 |
 | [CAttributeManager](#cattributemanager) | class |  | 3 |
 | [CBarnLight](#cbarnlight) | class | CBaseModelEntity | 77 |
-| [CBaseAnimGraph](#cbaseanimgraph) | class | CBaseModelEntity | 15 |
+| [CBaseAnimGraph](#cbaseanimgraph) | class | CBaseModelEntity | 13 |
 | [CBaseAnimGraphController](#cbaseanimgraphcontroller) | class | CSkeletonAnimationController | 31 |
 | [CBaseButton](#cbasebutton) | class | CBaseToggle | 25 |
 | [CBaseCSGrenade](#cbasecsgrenade) | class | CCSWeaponBase | 13 |
 | [CBaseCSGrenadeProjectile](#cbasecsgrenadeprojectile) | class | CBaseGrenade | 16 |
 | [CBaseClientUIEntity](#cbaseclientuientity) | class | CBaseModelEntity | 14 |
-| [CBaseCombatCharacter](#cbasecombatcharacter) | class | CBaseFlex | 10 |
+| [CBaseCombatCharacter](#cbasecombatcharacter) | class | CBaseAnimGraph | 10 |
 | [CBaseDMStart](#cbasedmstart) | class | CPointEntity | 1 |
 | [CBaseDoor](#cbasedoor) | class | CBaseToggle | 28 |
-| [CBaseEntity](#cbaseentity) | class | CEntityInstance | 80 |
+| [CBaseEntity](#cbaseentity) | class | CEntityInstance | 86 |
 | [CBaseEntityAPI](#cbaseentityapi) | class |  | 0 |
 | [CBaseFilter](#cbasefilter) | class | CLogicalEntity | 3 |
-| [CBaseFlex](#cbaseflex) | class | CBaseAnimGraph | 6 |
-| [CBaseFlexAlias_funCBaseFlex](#cbaseflexalias_funcbaseflex) | class | CBaseFlex | 0 |
-| [CBaseGrenade](#cbasegrenade) | class | CBaseFlex | 14 |
+| [CBaseGrenade](#cbasegrenade) | class | CBaseAnimGraph | 14 |
 | [CBaseIssue](#cbaseissue) | class |  | 6 |
-| [CBaseModelEntity](#cbasemodelentity) | class | CBaseEntity | 32 |
+| [CBaseModelEntity](#cbasemodelentity) | class | CBaseEntity | 40 |
+| [CBaseModelEntity](#cbasemodelentity) | class |  | 0 |
 | [CBaseModelEntityAPI](#cbasemodelentityapi) | class |  | 0 |
 | [CBaseMoveBehavior](#cbasemovebehavior) | class | CPathKeyFrame | 11 |
 | [CBasePlatTrain](#cbaseplattrain) | class | CBaseToggle | 5 |
@@ -75,11 +74,15 @@ nav_exclude: true
 | [CBtNodeCondition](#cbtnodecondition) | class | CBtNodeDecorator | 1 |
 | [CBtNodeConditionInactive](#cbtnodeconditioninactive) | class | CBtNodeCondition | 3 |
 | [CBtNodeDecorator](#cbtnodedecorator) | class | CBtNode | 0 |
-| [CBuoyancyHelper](#cbuoyancyhelper) | class |  | 10 |
+| [CBuoyancyHelper](#cbuoyancyhelper) | class |  | 11 |
 | [CBuyZone](#cbuyzone) | class | CBaseTrigger | 1 |
 | [CC4](#cc4) | class | CCSWeaponBase | 11 |
+| [CCS2PawnGraphController](#ccs2pawngraphcontroller) | class | CCS2WeaponGraphController | 0 |
 | [CCS2WeaponGraphController](#ccs2weapongraphcontroller) | class | CAnimGraphControllerBase | 0 |
 | [CCSBot](#ccsbot) | class | CBot | 140 |
+| [CCSGO_EndOfMatchLineupEnd](#ccsgo_endofmatchlineupend) | class | CCSGO_EndOfMatchLineupEndpoint | 0 |
+| [CCSGO_EndOfMatchLineupEndpoint](#ccsgo_endofmatchlineupendpoint) | class | CBaseEntity | 0 |
+| [CCSGO_EndOfMatchLineupStart](#ccsgo_endofmatchlineupstart) | class | CCSGO_EndOfMatchLineupEndpoint | 0 |
 | [CCSGO_TeamIntroCharacterPosition](#ccsgo_teamintrocharacterposition) | class | CCSGO_TeamPreviewCharacterPosition | 0 |
 | [CCSGO_TeamIntroCounterTerroristPosition](#ccsgo_teamintrocounterterroristposition) | class | CCSGO_TeamIntroCharacterPosition | 0 |
 | [CCSGO_TeamIntroTerroristPosition](#ccsgo_teamintroterroristposition) | class | CCSGO_TeamIntroCharacterPosition | 0 |
@@ -113,7 +116,7 @@ nav_exclude: true
 | [CCSPlayerController_InventoryServices](#ccsplayercontroller_inventoryservices) | class |  | 3 |
 | [CCSPlayerLegacyJump](#ccsplayerlegacyjump) | class |  | 2 |
 | [CCSPlayerModernJump](#ccsplayermodernjump) | class |  | 9 |
-| [CCSPlayerPawn](#ccsplayerpawn) | class | CCSPlayerPawnBase | 121 |
+| [CCSPlayerPawn](#ccsplayerpawn) | class | CCSPlayerPawnBase | 112 |
 | [CCSPlayerPawnBase](#ccsplayerpawnbase) | class | CBasePlayerPawn | 15 |
 | [CCSPlayerResource](#ccsplayerresource) | class | CBaseEntity | 10 |
 | [CCSPlayer_ActionTrackingServices](#ccsplayer_actiontrackingservices) | class | CPlayerPawnComponent | 4 |
@@ -123,29 +126,31 @@ nav_exclude: true
 | [CCSPlayer_DamageReactServices](#ccsplayer_damagereactservices) | class | CPlayerPawnComponent | 0 |
 | [CCSPlayer_HostageServices](#ccsplayer_hostageservices) | class | CPlayerPawnComponent | 2 |
 | [CCSPlayer_ItemServices](#ccsplayer_itemservices) | class | CPlayer_ItemServices | 2 |
-| [CCSPlayer_MovementServices](#ccsplayer_movementservices) | class | CPlayer_MovementServices_Humanoid | 48 |
+| [CCSPlayer_MovementServices](#ccsplayer_movementservices) | class | CPlayer_MovementServices_Humanoid | 52 |
 | [CCSPlayer_PingServices](#ccsplayer_pingservices) | class | CPlayerPawnComponent | 2 |
 | [CCSPlayer_RadioServices](#ccsplayer_radioservices) | class | CPlayerPawnComponent | 5 |
 | [CCSPlayer_UseServices](#ccsplayer_useservices) | class | CPlayer_UseServices | 3 |
 | [CCSPlayer_WaterServices](#ccsplayer_waterservices) | class | CPlayer_WaterServices | 6 |
-| [CCSPlayer_WeaponServices](#ccsplayer_weaponservices) | class | CPlayer_WeaponServices | 15 |
+| [CCSPlayer_WeaponServices](#ccsplayer_weaponservices) | class | CPlayer_WeaponServices | 13 |
 | [CCSPointPulseAPI](#ccspointpulseapi) | class |  | 0 |
 | [CCSPointScriptEntity](#ccspointscriptentity) | class | CBaseEntity | 0 |
 | [CCSSprite](#ccssprite) | class | CSprite | 0 |
 | [CCSTeam](#ccsteam) | class | CTeam | 14 |
-| [CCSWeaponBase](#ccsweaponbase) | class | CBasePlayerWeapon | 51 |
+| [CCSWeaponBase](#ccsweaponbase) | class | CBasePlayerWeapon | 52 |
 | [CCSWeaponBaseGun](#ccsweaponbasegun) | class | CCSWeaponBase | 10 |
 | [CCSWeaponBaseShotgun](#ccsweaponbaseshotgun) | class | CCSWeaponBase | 0 |
 | [CCSWeaponBaseVData](#ccsweaponbasevdata) | class | CBasePlayerWeaponVData | 0 |
+| [CCashStack](#ccashstack) | class | CBaseModelEntity | 1 |
 | [CChangeLevel](#cchangelevel) | class | CBaseTrigger | 7 |
 | [CChicken](#cchicken) | class | CDynamicProp, IHasAttributes | 28 |
+| [CChoreoComponent](#cchoreocomponent) | class |  | 5 |
 | [CChoreoInfoTarget](#cchoreoinfotarget) | class | CPointEntity | 0 |
 | [CCitadelSoundOpvarSetOBB](#ccitadelsoundopvarsetobb) | class | CBaseEntity | 8 |
 | [CCollisionProperty](#ccollisionproperty) | class |  | 17 |
 | [CColorCorrection](#ccolorcorrection) | class | CBaseEntity | 17 |
 | [CColorCorrectionVolume](#ccolorcorrectionvolume) | class | CBaseTrigger | 8 |
 | [CCommentaryAuto](#ccommentaryauto) | class | CBaseEntity | 3 |
-| [CCommentarySystem](#ccommentarysystem) | class |  | 10 |
+| [CCommentarySystem](#ccommentarysystem) | class |  | 0 |
 | [CCommentaryViewPosition](#ccommentaryviewposition) | class | CSprite | 0 |
 | [CConstantForceController](#cconstantforcecontroller) | class |  | 4 |
 | [CConstraintAnchor](#cconstraintanchor) | class | CBaseAnimGraph | 1 |
@@ -155,18 +160,18 @@ nav_exclude: true
 | [CDebugHistory](#cdebughistory) | class | CBaseEntity | 1 |
 | [CDecoyGrenade](#cdecoygrenade) | class | CBaseCSGrenade | 0 |
 | [CDecoyProjectile](#cdecoyprojectile) | class | CBaseCSGrenadeProjectile | 4 |
-| [CDestructiblePartsComponent](#cdestructiblepartscomponent) | class |  | 3 |
+| [CDestructiblePartsComponent](#cdestructiblepartscomponent) | class |  | 4 |
 | [CDynamicLight](#cdynamiclight) | class | CBaseModelEntity | 9 |
 | [CDynamicNavConnectionsVolume](#cdynamicnavconnectionsvolume) | class | CTriggerMultiple | 7 |
 | [CDynamicProp](#cdynamicprop) | class | CBreakableProp | 22 |
 | [CDynamicPropAlias_cable_dynamic](#cdynamicpropalias_cable_dynamic) | class | CDynamicProp | 0 |
 | [CDynamicPropAlias_dynamic_prop](#cdynamicpropalias_dynamic_prop) | class | CDynamicProp | 0 |
 | [CDynamicPropAlias_prop_dynamic_override](#cdynamicpropalias_prop_dynamic_override) | class | CDynamicProp | 0 |
-| [CEconEntity](#ceconentity) | class | CBaseFlex, IHasAttributes | 9 |
+| [CEconEntity](#ceconentity) | class | CBaseAnimGraph, IHasAttributes | 9 |
 | [CEconItemAttribute](#ceconitemattribute) | class |  | 5 |
 | [CEconItemView](#ceconitemview) | class | IEconItemInterface | 13 |
 | [CEconWearable](#ceconwearable) | class | CEconEntity | 2 |
-| [CEffectData](#ceffectdata) | class |  | 21 |
+| [CEffectData](#ceffectdata) | class |  | 20 |
 | [CEnableMotionFixup](#cenablemotionfixup) | class | CBaseEntity | 0 |
 | [CEntityBlocker](#centityblocker) | class | CBaseModelEntity | 0 |
 | [CEntityDissolve](#centitydissolve) | class | CBaseModelEntity | 10 |
@@ -174,9 +179,10 @@ nav_exclude: true
 | [CEnvBeam](#cenvbeam) | class | CBeam | 19 |
 | [CEnvBeverage](#cenvbeverage) | class | CBaseEntity | 2 |
 | [CEnvCombinedLightProbeVolume](#cenvcombinedlightprobevolume) | class | CBaseEntity | 29 |
+| [CEnvCombinedLightProbeVolumeAlias_func_combined_light_probe_volume](#cenvcombinedlightprobevolumealias_func_combined_light_probe_volume) | class | CEnvCombinedLightProbeVolume | 0 |
 | [CEnvCubemap](#cenvcubemap) | class | CBaseEntity | 18 |
 | [CEnvCubemapBox](#cenvcubemapbox) | class | CEnvCubemap | 0 |
-| [CEnvCubemapFog](#cenvcubemapfog) | class | CBaseEntity | 18 |
+| [CEnvCubemapFog](#cenvcubemapfog) | class | CBaseEntity | 24 |
 | [CEnvDecal](#cenvdecal) | class | CBaseModelEntity | 9 |
 | [CEnvDetailController](#cenvdetailcontroller) | class | CBaseEntity | 2 |
 | [CEnvEntityIgniter](#cenventityigniter) | class | CBaseEntity | 1 |
@@ -191,7 +197,7 @@ nav_exclude: true
 | [CEnvLightProbeVolume](#cenvlightprobevolume) | class | CBaseEntity | 22 |
 | [CEnvMuzzleFlash](#cenvmuzzleflash) | class | CPointEntity | 2 |
 | [CEnvParticleGlow](#cenvparticleglow) | class | CParticleSystem | 5 |
-| [CEnvShake](#cenvshake) | class | CPointEntity | 10 |
+| [CEnvShake](#cenvshake) | class | CPointEntity | 11 |
 | [CEnvSky](#cenvsky) | class | CBaseModelEntity | 12 |
 | [CEnvSoundscape](#cenvsoundscape) | class | CBaseEntity | 11 |
 | [CEnvSoundscapeAlias_snd_soundscape](#cenvsoundscapealias_snd_soundscape) | class | CEnvSoundscape | 0 |
@@ -209,6 +215,7 @@ nav_exclude: true
 | [CEnvWindController](#cenvwindcontroller) | class | CBaseEntity | 11 |
 | [CEnvWindShared](#cenvwindshared) | class |  | 17 |
 | [CEnvWindVolume](#cenvwindvolume) | class | CBaseEntity | 9 |
+| [CExplosionTypeData](#cexplosiontypedata) | class |  | 0 |
 | [CFilterAttributeInt](#cfilterattributeint) | class | CBaseFilter | 1 |
 | [CFilterClass](#cfilterclass) | class | CBaseFilter | 1 |
 | [CFilterContext](#cfiltercontext) | class | CBaseFilter | 1 |
@@ -240,8 +247,8 @@ nav_exclude: true
 | [CFuncMonitor](#cfuncmonitor) | class | CFuncBrush | 9 |
 | [CFuncMoveLinear](#cfuncmovelinear) | class | CBaseToggle | 13 |
 | [CFuncMoveLinearAlias_momentary_door](#cfuncmovelinearalias_momentary_door) | class | CFuncMoveLinear | 0 |
-| [CFuncMover](#cfuncmover) | class | CBaseModelEntity | 84 |
-| [CFuncMover](#cfuncmover) | enum |  | 2 |
+| [CFuncMover](#cfuncmover) | class | CBaseModelEntity | 91 |
+| [CFuncMover](#cfuncmover) | enum |  | 3 |
 | [CFuncMover](#cfuncmover) | enum |  | 3 |
 | [CFuncMover](#cfuncmover) | enum |  | 3 |
 | [CFuncMover](#cfuncmover) | enum |  | 9 |
@@ -277,12 +284,13 @@ nav_exclude: true
 | [CGamePlayerZone](#cgameplayerzone) | class | CRuleBrushEntity | 4 |
 | [CGameRules](#cgamerules) | class |  | 8 |
 | [CGameRulesProxy](#cgamerulesproxy) | class | CBaseEntity | 0 |
-| [CGameSceneNode](#cgamescenenode) | class |  | 33 |
+| [CGameSceneNode](#cgamescenenode) | class |  | 32 |
 | [CGameSceneNodeHandle](#cgamescenenodehandle) | class |  | 2 |
 | [CGameScriptedMoveData](#cgamescriptedmovedata) | class |  | 0 |
-| [CGameScriptedMoveDef_t](#cgamescriptedmovedef_t) | class |  | 0 |
+| [CGameScriptedMoveDef_t](#cgamescriptedmovedef_t) | class |  | 9 |
 | [CGameText](#cgametext) | class | CRulePointEntity | 2 |
-| [CGenericConstraint](#cgenericconstraint) | class | CPhysConstraint | 48 |
+| [CGenericConstraint](#cgenericconstraint) | class | CPhysConstraint | 49 |
+| [CGenericShapeProxy](#cgenericshapeproxy) | class |  | 1 |
 | [CGlowProperty](#cglowproperty) | class |  | 11 |
 | [CGradientFog](#cgradientfog) | class | CBaseEntity | 16 |
 | [CGunTarget](#cguntarget) | class | CBaseToggle | 3 |
@@ -301,6 +309,9 @@ nav_exclude: true
 | [CHostageRescueZoneShim](#chostagerescuezoneshim) | class | CBaseTrigger | 0 |
 | [CIncendiaryGrenade](#cincendiarygrenade) | class | CMolotovGrenade | 0 |
 | [CInferno](#cinferno) | class | CBaseModelEntity | 24 |
+| [CInfoChoreoAnchor](#cinfochoreoanchor) | class | CPointEntity | 2 |
+| [CInfoChoreoAnchorPosition](#cinfochoreoanchorposition) | class |  | 6 |
+| [CInfoChoreoLocatorShapeType_t](#cinfochoreolocatorshapetype_t) | enum |  | 4 |
 | [CInfoData](#cinfodata) | class | CServerOnlyEntity | 0 |
 | [CInfoDeathmatchSpawn](#cinfodeathmatchspawn) | class | SpawnPoint | 0 |
 | [CInfoDynamicShadowHint](#cinfodynamicshadowhint) | class | CPointEntity | 5 |
@@ -311,7 +322,7 @@ nav_exclude: true
 | [CInfoInstructorHintBombTargetB](#cinfoinstructorhintbombtargetb) | class | CPointEntity | 0 |
 | [CInfoInstructorHintHostageRescueZone](#cinfoinstructorhinthostagerescuezone) | class | CPointEntity | 0 |
 | [CInfoInstructorHintTarget](#cinfoinstructorhinttarget) | class | CPointEntity | 0 |
-| [CInfoInteraction](#cinfointeraction) | class | CPointEntity | 3 |
+| [CInfoInteraction](#cinfointeraction) | class | CPointEntity | 15 |
 | [CInfoLadderDismount](#cinfoladderdismount) | class | CBaseEntity | 0 |
 | [CInfoLandmark](#cinfolandmark) | class | CPointEntity | 0 |
 | [CInfoOffscreenPanoramaTexture](#cinfooffscreenpanoramatexture) | class | CPointEntity | 11 |
@@ -339,7 +350,7 @@ nav_exclude: true
 | [CItemKevlar](#citemkevlar) | class | CItem | 0 |
 | [CItemSoda](#citemsoda) | class | CBaseAnimGraph | 0 |
 | [CItem_Healthshot](#citem_healthshot) | class | CWeaponBaseItem | 0 |
-| [CKeepUpright](#ckeepupright) | class | CPointEntity | 7 |
+| [CKeepUpright](#ckeepupright) | class | CPointEntity | 8 |
 | [CKnife](#cknife) | class | CCSWeaponBase | 1 |
 | [CLightComponent](#clightcomponent) | class | CEntityComponent | 71 |
 | [CLightDirectionalEntity](#clightdirectionalentity) | class | CLightEntity | 0 |
@@ -370,7 +381,7 @@ nav_exclude: true
 | [CLogicNavigation](#clogicnavigation) | class | CLogicalEntity | 2 |
 | [CLogicPlayerProxy](#clogicplayerproxy) | class | CLogicalEntity | 5 |
 | [CLogicProximity](#clogicproximity) | class | CPointEntity | 0 |
-| [CLogicRelay](#clogicrelay) | class | CLogicalEntity | 5 |
+| [CLogicRelay](#clogicrelay) | class | CLogicalEntity | 7 |
 | [CLogicRelayAPI](#clogicrelayapi) | class |  | 0 |
 | [CLogicScript](#clogicscript) | class | CPointEntity | 0 |
 | [CLogicalEntity](#clogicalentity) | class | CServerOnlyEntity | 0 |
@@ -388,7 +399,7 @@ nav_exclude: true
 | [CMessage](#cmessage) | class | CPointEntity | 6 |
 | [CMessageEntity](#cmessageentity) | class | CPointEntity | 5 |
 | [CModelPointEntity](#cmodelpointentity) | class | CBaseModelEntity | 0 |
-| [CModelState](#cmodelstate) | class |  | 8 |
+| [CModelState](#cmodelstate) | class |  | 14 |
 | [CMolotovGrenade](#cmolotovgrenade) | class | CBaseCSGrenade | 0 |
 | [CMolotovProjectile](#cmolotovprojectile) | class | CBaseCSGrenadeProjectile | 3 |
 | [CMomentaryRotButton](#cmomentaryrotbutton) | class | CRotButton | 14 |
@@ -413,8 +424,7 @@ nav_exclude: true
 | [CPathCornerCrash](#cpathcornercrash) | class | CPathCorner | 0 |
 | [CPathKeyFrame](#cpathkeyframe) | class | CLogicalEntity | 8 |
 | [CPathMover](#cpathmover) | class | CPathWithDynamicNodes | 3 |
-| [CPathMoverEntitySpawn](#cpathmoverentityspawn) | class |  | 2 |
-| [CPathMoverEntitySpawner](#cpathmoverentityspawner) | class | CLogicalEntity | 9 |
+| [CPathMoverEntitySpawner](#cpathmoverentityspawner) | class | CLogicalEntity | 14 |
 | [CPathNode](#cpathnode) | class | CPointEntity | 6 |
 | [CPathParticleRope](#cpathparticlerope) | class | CBaseEntity | 16 |
 | [CPathParticleRopeAlias_path_particle_rope_clientside](#cpathparticleropealias_path_particle_rope_clientside) | class | CPathParticleRope | 0 |
@@ -425,16 +435,16 @@ nav_exclude: true
 | [CPathWithDynamicNodes](#cpathwithdynamicnodes) | class | CPathSimple | 2 |
 | [CPhysBallSocket](#cphysballsocket) | class | CPhysConstraint | 6 |
 | [CPhysBox](#cphysbox) | class | CBreakable | 15 |
-| [CPhysConstraint](#cphysconstraint) | class | CLogicalEntity | 13 |
-| [CPhysExplosion](#cphysexplosion) | class | CPointEntity | 10 |
+| [CPhysConstraint](#cphysconstraint) | class | CLogicalEntity | 14 |
+| [CPhysExplosion](#cphysexplosion) | class | CPointEntity | 11 |
 | [CPhysFixed](#cphysfixed) | class | CPhysConstraint | 8 |
-| [CPhysForce](#cphysforce) | class | CPointEntity | 6 |
+| [CPhysForce](#cphysforce) | class | CPointEntity | 7 |
 | [CPhysHinge](#cphyshinge) | class | CPhysConstraint | 19 |
 | [CPhysHingeAlias_phys_hinge_local](#cphyshingealias_phys_hinge_local) | class | CPhysHinge | 0 |
 | [CPhysImpact](#cphysimpact) | class | CPointEntity | 3 |
 | [CPhysLength](#cphyslength) | class | CPhysConstraint | 5 |
 | [CPhysMagnet](#cphysmagnet) | class | CBaseAnimGraph | 12 |
-| [CPhysMotor](#cphysmotor) | class | CLogicalEntity | 13 |
+| [CPhysMotor](#cphysmotor) | class | CLogicalEntity | 15 |
 | [CPhysMotorAPI](#cphysmotorapi) | class |  | 0 |
 | [CPhysPulley](#cphyspulley) | class | CPhysConstraint | 4 |
 | [CPhysSlideConstraint](#cphysslideconstraint) | class | CPhysConstraint | 10 |
@@ -443,13 +453,13 @@ nav_exclude: true
 | [CPhysWheelConstraint](#cphyswheelconstraint) | class | CPhysConstraint | 12 |
 | [CPhysicalButton](#cphysicalbutton) | class | CBaseButton | 0 |
 | [CPhysicsEntitySolver](#cphysicsentitysolver) | class | CLogicalEntity | 4 |
-| [CPhysicsProp](#cphysicsprop) | class | CBreakableProp | 41 |
+| [CPhysicsProp](#cphysicsprop) | class | CBreakableProp | 42 |
 | [CPhysicsProp](#cphysicsprop) | enum |  | 2 |
 | [CPhysicsPropMultiplayer](#cphysicspropmultiplayer) | class | CPhysicsProp | 0 |
 | [CPhysicsPropOverride](#cphysicspropoverride) | class | CPhysicsProp | 0 |
 | [CPhysicsPropRespawnable](#cphysicsproprespawnable) | class | CPhysicsProp | 5 |
 | [CPhysicsShake](#cphysicsshake) | class |  | 1 |
-| [CPhysicsSpring](#cphysicsspring) | class | CBaseEntity | 8 |
+| [CPhysicsSpring](#cphysicsspring) | class | CBaseEntity | 9 |
 | [CPhysicsWire](#cphysicswire) | class | CBaseEntity | 1 |
 | [CPlantedC4](#cplantedc4) | class | CBaseAnimGraph, IHasAttributes | 27 |
 | [CPlatTrigger](#cplattrigger) | class | CBaseModelEntity | 1 |
@@ -460,7 +470,7 @@ nav_exclude: true
 | [CPlayer_CameraServices](#cplayer_cameraservices) | class | CPlayerPawnComponent | 12 |
 | [CPlayer_FlashlightServices](#cplayer_flashlightservices) | class | CPlayerPawnComponent | 0 |
 | [CPlayer_ItemServices](#cplayer_itemservices) | class | CPlayerPawnComponent | 0 |
-| [CPlayer_MovementServices](#cplayer_movementservices) | class | CPlayerPawnComponent | 15 |
+| [CPlayer_MovementServices](#cplayer_movementservices) | class | CPlayerPawnComponent | 18 |
 | [CPlayer_MovementServices_Humanoid](#cplayer_movementservices_humanoid) | class | CPlayer_MovementServices | 7 |
 | [CPlayer_ObserverServices](#cplayer_observerservices) | class | CPlayerPawnComponent | 4 |
 | [CPlayer_UseServices](#cplayer_useservices) | class | CPlayerPawnComponent | 0 |
@@ -483,14 +493,15 @@ nav_exclude: true
 | [CPointGiveAmmo](#cpointgiveammo) | class | CPointEntity | 1 |
 | [CPointHurt](#cpointhurt) | class | CPointEntity | 6 |
 | [CPointOrient](#cpointorient) | class | CBaseEntity | 7 |
-| [CPointPrefab](#cpointprefab) | class | CServerOnlyPointEntity | 6 |
+| [CPointPrefab](#cpointprefab) | class | CServerOnlyPointEntity | 7 |
+| [CPointPrefabAPI](#cpointprefabapi) | class |  | 0 |
 | [CPointProximitySensor](#cpointproximitysensor) | class | CPointEntity | 3 |
 | [CPointPulse](#cpointpulse) | class | CBaseEntity | 0 |
 | [CPointPush](#cpointpush) | class | CPointEntity | 7 |
 | [CPointServerCommand](#cpointservercommand) | class | CPointEntity | 0 |
 | [CPointTeleport](#cpointteleport) | class | CServerOnlyPointEntity | 4 |
 | [CPointTeleportAPI](#cpointteleportapi) | class |  | 0 |
-| [CPointTemplate](#cpointtemplate) | class | CLogicalEntity | 11 |
+| [CPointTemplate](#cpointtemplate) | class | CLogicalEntity | 12 |
 | [CPointTemplateAPI](#cpointtemplateapi) | class |  | 0 |
 | [CPointValueRemapper](#cpointvalueremapper) | class | CBaseEntity | 44 |
 | [CPointVelocitySensor](#cpointvelocitysensor) | class | CPointEntity | 6 |
@@ -512,6 +523,9 @@ nav_exclude: true
 | [CPulseCell_Outflow_PlaySceneBase](#cpulsecell_outflow_playscenebase) | class |  | 0 |
 | [CPulseCell_Outflow_PlaySequence](#cpulsecell_outflow_playsequence) | class | CPulseCell_Outflow_PlaySceneBase | 0 |
 | [CPulseCell_Outflow_PlayVCD](#cpulsecell_outflow_playvcd) | class | CPulseCell_Outflow_PlaySceneBase | 0 |
+| [CPulseCell_Outflow_PlayVCD](#cpulsecell_outflow_playvcd) | class |  | 0 |
+| [CPulseCell_Outflow_PlayVOLine](#cpulsecell_outflow_playvoline) | class | CPulseCell_BaseYieldingInflow | 0 |
+| [CPulseCell_Outflow_PlayVOLine](#cpulsecell_outflow_playvoline) | class |  | 0 |
 | [CPulseCell_Outflow_ScriptedSequence](#cpulsecell_outflow_scriptedsequence) | class | CPulseCell_BaseYieldingInflow | 0 |
 | [CPulseCell_Outflow_ScriptedSequence](#cpulsecell_outflow_scriptedsequence) | class |  | 0 |
 | [CPulseCell_PlaySequence](#cpulsecell_playsequence) | class | CPulseCell_BaseYieldingInflow | 0 |
@@ -532,11 +546,12 @@ nav_exclude: true
 | [CRagdollConstraint](#cragdollconstraint) | class | CPhysConstraint | 9 |
 | [CRagdollMagnet](#cragdollmagnet) | class | CPointEntity | 4 |
 | [CRagdollManager](#cragdollmanager) | class | CBaseEntity | 4 |
-| [CRagdollProp](#cragdollprop) | class | CBaseAnimGraph | 26 |
+| [CRagdollProp](#cragdollprop) | class | CBaseAnimGraph | 31 |
 | [CRagdollPropAlias_physics_prop_ragdoll](#cragdollpropalias_physics_prop_ragdoll) | class | CRagdollProp | 0 |
 | [CRagdollPropAttached](#cragdollpropattached) | class | CRagdollProp | 6 |
 | [CRectLight](#crectlight) | class | CBarnLight | 1 |
-| [CRelativeLocation](#crelativelocation) | class |  | 4 |
+| [CRelativeLocation](#crelativelocation) | class |  | 0 |
+| [CRelativeTransform](#crelativetransform) | class |  | 4 |
 | [CRenderComponent](#crendercomponent) | class | CEntityComponent | 5 |
 | [CResponseQueue](#cresponsequeue) | class |  | 1 |
 | [CRetakeGameRules](#cretakegamerules) | class |  | 6 |
@@ -553,11 +568,13 @@ nav_exclude: true
 | [CSAdditionalPerRoundStats_t](#csadditionalperroundstats_t) | class |  | 12 |
 | [CSMatchStats_t](#csmatchstats_t) | class | CSPerRoundStats_t | 21 |
 | [CSPerRoundStats_t](#csperroundstats_t) | class |  | 13 |
-| [CSceneEntity](#csceneentity) | class | CPointEntity | 62 |
+| [CSceneCriteria](#cscenecriteria) | class |  | 4 |
+| [CSceneEntity](#csceneentity) | class | CPointEntity | 66 |
 | [CSceneEntityAlias_logic_choreographed_scene](#csceneentityalias_logic_choreographed_scene) | class | CSceneEntity | 0 |
 | [CSceneListManager](#cscenelistmanager) | class | CLogicalEntity | 3 |
+| [CSceneOpportunity](#csceneopportunity) | class |  | 18 |
 | [CScenePayloadVData](#cscenepayloadvdata) | class |  | 0 |
-| [CSceneRequest](#cscenerequest) | class |  | 3 |
+| [CSceneRequest](#cscenerequest) | class |  | 9 |
 | [CScriptItem](#cscriptitem) | class | CItem | 1 |
 | [CScriptNavBlocker](#cscriptnavblocker) | class | CFuncNavBlocker | 1 |
 | [CScriptTriggerHurt](#cscripttriggerhurt) | class | CTriggerHurt | 1 |
@@ -569,12 +586,12 @@ nav_exclude: true
 | [CServerOnlyModelEntity](#cserveronlymodelentity) | class | CBaseModelEntity | 0 |
 | [CServerOnlyPointEntity](#cserveronlypointentity) | class | CServerOnlyEntity | 0 |
 | [CServerRagdollTrigger](#cserverragdolltrigger) | class | CBaseTrigger | 0 |
-| [CShatterGlassShard](#cshatterglassshard) | class |  | 28 |
+| [CShatterGlassShard](#cshatterglassshard) | class |  | 0 |
 | [CShatterGlassShardPhysics](#cshatterglassshardphysics) | class | CPhysicsProp | 3 |
 | [CShower](#cshower) | class | CModelPointEntity | 0 |
 | [CSimpleMarkupVolumeTagged](#csimplemarkupvolumetagged) | class | CMarkupVolumeTagged | 0 |
 | [CSingleplayRules](#csingleplayrules) | class | CGameRules | 1 |
-| [CSkeletonInstance](#cskeletoninstance) | class | CGameSceneNode | 9 |
+| [CSkeletonInstance](#cskeletoninstance) | class | CGameSceneNode | 8 |
 | [CSkyCamera](#cskycamera) | class | CBaseEntity | 4 |
 | [CSkyboxReference](#cskyboxreference) | class | CBaseEntity | 2 |
 | [CSmokeGrenade](#csmokegrenade) | class | CBaseCSGrenade | 0 |
@@ -600,19 +617,27 @@ nav_exclude: true
 | [CSoundOpvarSetPointBase](#csoundopvarsetpointbase) | class | CBaseEntity | 11 |
 | [CSoundOpvarSetPointEntity](#csoundopvarsetpointentity) | class | CSoundOpvarSetPointBase | 24 |
 | [CSoundStackSave](#csoundstacksave) | class | CLogicalEntity | 1 |
-| [CSplineConstraint](#csplineconstraint) | class | CPhysConstraint | 14 |
+| [CSplineConstraint](#csplineconstraint) | class | CPhysConstraint | 15 |
 | [CSpotlightEnd](#cspotlightend) | class | CBaseModelEntity | 4 |
 | [CSprite](#csprite) | class | CBaseModelEntity | 23 |
 | [CSpriteAlias_env_glow](#cspritealias_env_glow) | class | CSprite | 0 |
 | [CSpriteOriented](#cspriteoriented) | class | CSprite | 0 |
-| [CTakeDamageInfoAPI](#ctakedamageinfoapi) | class |  | 0 |
+| [CTakeDamageResultAPI](#ctakedamageresultapi) | class |  | 0 |
 | [CTankTargetChange](#ctanktargetchange) | class | CPointEntity | 2 |
 | [CTankTrainAI](#ctanktrainai) | class | CPointEntity | 7 |
 | [CTeam](#cteam) | class | CBaseEntity | 4 |
 | [CTeamplayRules](#cteamplayrules) | class | CMultiplayRules | 0 |
 | [CTestEffect](#ctesteffect) | class | CBaseEntity | 5 |
-| [CTestPulseIO](#ctestpulseio) | class | CLogicalEntity | 8 |
+| [CTestPulseIO](#ctestpulseio) | class | CLogicalEntity | 23 |
+| [CTestPulseIO](#ctestpulseio) | class |  | 0 |
+| [CTestPulseIO](#ctestpulseio) | class |  | 0 |
+| [CTestPulseIO](#ctestpulseio) | class |  | 0 |
+| [CTestPulseIO](#ctestpulseio) | class |  | 0 |
 | [CTestPulseIOAPI](#ctestpulseioapi) | class |  | 0 |
+| [CTestPulseIOComponent](#ctestpulseiocomponent) | class |  | 0 |
+| [CTestPulseIOComponent_API](#ctestpulseiocomponent_api) | class |  | 0 |
+| [CTestPulseIOComponent_Derived](#ctestpulseiocomponent_derived) | class | CTestPulseIOComponent | 0 |
+| [CTestPulseIOComponent_DerivedAPI](#ctestpulseiocomponent_derivedapi) | class |  | 0 |
 | [CTextureBasedAnimatable](#ctexturebasedanimatable) | class | CBaseModelEntity | 8 |
 | [CTimeline](#ctimeline) | class | IntervalTimer | 7 |
 | [CTimerEntity](#ctimerentity) | class | CLogicalEntity | 13 |
@@ -637,7 +662,7 @@ nav_exclude: true
 | [CTriggerLook](#ctriggerlook) | class | CTriggerOnce | 15 |
 | [CTriggerMultiple](#ctriggermultiple) | class | CBaseTrigger | 1 |
 | [CTriggerOnce](#ctriggeronce) | class | CTriggerMultiple | 0 |
-| [CTriggerPhysics](#ctriggerphysics) | class | CBaseTrigger | 13 |
+| [CTriggerPhysics](#ctriggerphysics) | class | CBaseTrigger | 14 |
 | [CTriggerProximity](#ctriggerproximity) | class | CBaseTrigger | 5 |
 | [CTriggerPush](#ctriggerpush) | class | CBaseTrigger | 7 |
 | [CTriggerRemove](#ctriggerremove) | class | CBaseTrigger | 1 |
@@ -687,9 +712,9 @@ nav_exclude: true
 | [ChickenActivity](#chickenactivity) | enum |  | 11 |
 | [ConstraintSoundInfo](#constraintsoundinfo) | class |  | 10 |
 | [CountdownTimer](#countdowntimer) | class |  | 4 |
+| [DestructiblePartDamageRequestAPI](#destructiblepartdamagerequestapi) | class |  | 0 |
 | [DynamicVolumeDef_t](#dynamicvolumedef_t) | class |  | 8 |
 | [EOverrideBlockLOS_t](#eoverrideblocklos_t) | enum |  | 3 |
-| [ESceneRequestState_t](#escenerequeststate_t) | enum |  | 2 |
 | [EngineCountdownTimer](#enginecountdowntimer) | class |  | 3 |
 | [EntFinderMethod_t](#entfindermethod_t) | enum |  | 3 |
 | [EntityRenderAttribute_t](#entityrenderattribute_t) | class |  | 2 |
@@ -698,7 +723,11 @@ nav_exclude: true
 | [FilterDamageType](#filterdamagetype) | class | CBaseFilter | 1 |
 | [FilterHealth](#filterhealth) | class | CBaseFilter | 3 |
 | [FuncDoorSpawnPos_t](#funcdoorspawnpos_t) | enum |  | 2 |
+| [FuncMoverMovementSummaryFlags_t](#funcmovermovementsummaryflags_t) | enum |  | 6 |
+| [FuncMoverMovementSummary_t](#funcmovermovementsummary_t) | class |  | 8 |
 | [HoverPoseFlags_t](#hoverposeflags_t) | enum |  | 3 |
+| [INavObstacle](#inavobstacle) | class |  | 1 |
+| [INavObstacle](#inavobstacle) | enum |  | 5 |
 | [IntervalTimer](#intervaltimer) | class |  | 2 |
 | [LessonPanelLayoutFileTypes_t](#lessonpanellayoutfiletypes_t) | enum |  | 3 |
 | [Materials](#materials) | enum |  | 12 |
@@ -706,8 +735,9 @@ nav_exclude: true
 | [NPCFollowFormation_t](#npcfollowformation_t) | enum |  | 5 |
 | [NavScopeFlags_t](#navscopeflags_t) | enum |  | 4 |
 | [NavScope_t](#navscope_t) | enum |  | 5 |
+| [PathMoverEntitySpawn](#pathmoverentityspawn) | class |  | 2 |
+| [PhysGenericShapeType_t](#physgenericshapetype_t) | enum |  | 5 |
 | [PhysicsRagdollPose_t](#physicsragdollpose_t) | class |  | 3 |
-| [PredictedDamageTag_t](#predicteddamagetag_t) | class |  | 4 |
 | [PropDoorRotatingOpenDirection_e](#propdoorrotatingopendirection_e) | enum |  | 3 |
 | [PropDoorRotatingSpawnPos_t](#propdoorrotatingspawnpos_t) | enum |  | 4 |
 | [PulseCollisionGroup_t](#pulsecollisiongroup_t) | enum |  | 1 |
@@ -722,7 +752,8 @@ nav_exclude: true
 | [RotatorQueueEntry_t](#rotatorqueueentry_t) | class |  | 2 |
 | [RotatorTargetSpace_t](#rotatortargetspace_t) | enum |  | 2 |
 | [SceneOnPlayerDeath_t](#sceneonplayerdeath_t) | enum |  | 2 |
-| [SceneRequestHandle_t](#scenerequesthandle_t) | class |  | 1 |
+| [SceneOpportunityActor_t](#sceneopportunityactor_t) | class |  | 6 |
+| [SceneRequestTargetMapPair_t](#scenerequesttargetmappair_t) | class |  | 0 |
 | [ScriptedConflictResponse_t](#scriptedconflictresponse_t) | enum |  | 2 |
 | [SellbackPurchaseEntry_t](#sellbackpurchaseentry_t) | class |  | 5 |
 | [SequenceHistory_t](#sequencehistory_t) | class |  | 6 |
@@ -753,6 +784,7 @@ nav_exclude: true
 | [lerpdata_t](#lerpdata_t) | class |  | 6 |
 | [locksound_t](#locksound_t) | class |  | 3 |
 | [magnetted_objects_t](#magnetted_objects_t) | class |  | 1 |
+| [modifiedconvars_t](#modifiedconvars_t) | class |  | 0 |
 | [navproperties_t](#navproperties_t) | enum |  | 1 |
 | [shard_model_desc_t](#shard_model_desc_t) | class |  | 13 |
 | [sky3dparams_t](#sky3dparams_t) | class |  | 6 |
@@ -773,10 +805,18 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_Handle` | [ModelConfigHandle_t](../schemas/client.md#modelconfighandle_t) | `MNetworkEnable` |
-| `m_Name` | CUtlSymbolLarge | `MNetworkEnable` |
-| `m_AssociatedEntities` | CNetworkUtlVectorBase< CHandle< [CBaseModelEntity](../schemas/server.md#cbasemodelentity) > > | `MNetworkEnable` |
-| `m_AssociatedEntityNames` | CNetworkUtlVectorBase< CUtlSymbolLarge > | `MNetworkEnable` |
+| `m_Handle` | [ModelConfigHandle_t](../schemas/client.md#modelconfighandle_t) |  |
+| `m_Name` | CUtlSymbolLarge |  |
+| `m_AssociatedEntities` | CNetworkUtlVectorBase< CHandle< [CBaseModelEntity](../schemas/server.md#cbasemodelentity) > > |  |
+| `m_AssociatedEntityNames` | CNetworkUtlVectorBase< CUtlSymbolLarge > |  |
+
+### AnimGraph2SerializedPoseRecipeSlot_t
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `m_topology` | CUtlBinaryBlock | `MNotSaved` |
 
 ### AutoRoomDoorwayPairs_t
 
@@ -818,7 +858,7 @@ classDiagram
 classDiagram
     CAI_Expresser <|-- CAI_ExpresserWithFollowup
     CAI_Expresser *-- GameTime_t
-    CAI_Expresser --> CBaseFlex
+    CAI_Expresser --> CBaseModelEntity
 ```
 
 **Fields:**
@@ -835,7 +875,7 @@ classDiagram
 | `m_bConsiderSceneInvolvementAsSpeech` | bool |  |
 | `m_bSceneEntityDisabled` | bool |  |
 | `m_nLastSpokenPriority` | int32 |  |
-| `m_pOuter` | [CBaseFlex](../schemas/server.md#cbaseflex)* | `MNotSaved` |
+| `m_pOuter` | [CBaseModelEntity](../schemas/server.md#cbasemodelentity)* | `MNotSaved` |
 
 ### CAI_ExpresserWithFollowup
 
@@ -863,7 +903,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CAmbientGeneric
@@ -895,42 +935,9 @@ classDiagram
 | `m_hSoundSource` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | `MNotSaved` |
 | `m_nSoundSourceEntIndex` | CEntityIndex | `MNotSaved` |
 
-### CAnimGraphNetworkedVariables
-
-**Fields:**
-
-| Name | Type | Annotations |
-|------|------|-------------|
-| `m_PredNetBoolVariables` | CNetworkUtlVectorBase< uint32 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkChangeCallback = "OnNetBoolVarChanged"` `MNetworkAlias = "m_PredBoolVariables"` |
-| `m_PredNetByteVariables` | CNetworkUtlVectorBase< uint8 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkChangeCallback = "OnNetByteVarChanged"` `MNetworkAlias = "m_PredByteVariables"` |
-| `m_PredNetUInt16Variables` | CNetworkUtlVectorBase< uint16 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkChangeCallback = "OnNetUInt16VarChanged"` `MNetworkAlias = "m_PredUInt16Variables"` |
-| `m_PredNetIntVariables` | CNetworkUtlVectorBase< int32 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkChangeCallback = "OnNetIntVarChanged"` `MNetworkAlias = "m_PredIntVariables"` |
-| `m_PredNetUInt32Variables` | CNetworkUtlVectorBase< uint32 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkChangeCallback = "OnNetUInt32VarChanged"` `MNetworkAlias = "m_PredUInt32Variables"` |
-| `m_PredNetUInt64Variables` | CNetworkUtlVectorBase< uint64 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkChangeCallback = "OnNetUInt64VarChanged"` `MNetworkAlias = "m_PredUInt64Variables"` |
-| `m_PredNetFloatVariables` | CNetworkUtlVectorBase< float32 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkChangeCallback = "OnNetFloatVarChanged"` `MNetworkAlias = "m_PredFloatVariables"` |
-| `m_PredNetVectorVariables` | CNetworkUtlVectorBase< Vector > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkChangeCallback = "OnNetVectorVarChanged"` `MNetworkAlias = "m_PredVectorVariables"` |
-| `m_PredNetQuaternionVariables` | CNetworkUtlVectorBase< Quaternion > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkChangeCallback = "OnNetQuaternionVarChanged"` `MNetworkAlias = "m_PredQuaternionVariables"` |
-| `m_PredNetGlobalSymbolVariables` | CNetworkUtlVectorBase< CGlobalSymbol > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkChangeCallback = "OnNetGlobalSymbolVarChanged"` `MNetworkAlias = "m_PredGlobalSymbolVariables"` |
-| `m_OwnerOnlyPredNetBoolVariables` | CNetworkUtlVectorBase< uint32 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOBoolVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetBoolVariables"` |
-| `m_OwnerOnlyPredNetByteVariables` | CNetworkUtlVectorBase< uint8 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOByteVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetByteVariables"` |
-| `m_OwnerOnlyPredNetUInt16Variables` | CNetworkUtlVectorBase< uint16 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOUInt16VarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetUInt16Variables"` |
-| `m_OwnerOnlyPredNetIntVariables` | CNetworkUtlVectorBase< int32 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOIntVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetIntVariables"` |
-| `m_OwnerOnlyPredNetUInt32Variables` | CNetworkUtlVectorBase< uint32 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOUInt32VarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetUInt32Variables"` |
-| `m_OwnerOnlyPredNetUInt64Variables` | CNetworkUtlVectorBase< uint64 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOUInt64VarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetUInt64Variables"` |
-| `m_OwnerOnlyPredNetFloatVariables` | CNetworkUtlVectorBase< float32 > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOFloatVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetFloatVariables"` |
-| `m_OwnerOnlyPredNetVectorVariables` | CNetworkUtlVectorBase< Vector > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOVectorVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetVectorVariables"` |
-| `m_OwnerOnlyPredNetQuaternionVariables` | CNetworkUtlVectorBase< Quaternion > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOQuaternionVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetQuaternionVariables"` |
-| `m_OwnerOnlyPredNetGlobalSymbolVariables` | CNetworkUtlVectorBase< CGlobalSymbol > | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkSendProxyRecipientsFilter = "LocalPlayerOuterOnly_RecipientsFilter"` `MNetworkChangeCallback = "OnNetOOGlobalSymbolVarChanged"` `MNetworkAlias = "m_OwnerOnlyPredNetGlobalSymbolVariables"` |
-| `m_nBoolVariablesCount` | int32 | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` |
-| `m_nOwnerOnlyBoolVariablesCount` | int32 | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` |
-| `m_nRandomSeedOffset` | int32 | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` |
-| `m_flLastTeleportTime` | float32 | `MNetworkEnable` `MNetworkUserGroup = "animationgraph"` `MNetworkChangeCallback = "OnTeleportTimeChanged"` |
-
 ### CAttributeContainer
 
 **Inherits from:** [CAttributeManager](server.md#cattributemanager)
-
-**Metadata:** `MNetworkIncludeByName = "m_ProviderType"`, `MNetworkIncludeByName = "m_hOuter"`, `MNetworkIncludeByName = "m_iReapplyProvisionParity"`, `MNetworkIncludeByName = "m_Item"`
 
 **Relationships:**
 
@@ -944,7 +951,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_Item` | [CEconItemView](../schemas/server.md#ceconitemview) | `MNetworkEnable` |
+| `m_Item` | [CEconItemView](../schemas/server.md#ceconitemview) |  |
 
 ### CAttributeList
 
@@ -960,7 +967,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_Attributes` | CUtlVectorEmbeddedNetworkVar< [CEconItemAttribute](../schemas/server.md#ceconitemattribute) > | `MNetworkEnable` `MNetworkTypeAlias = "CUtlVector< CEconItemAttribute >"` |
+| `m_Attributes` | CUtlVectorEmbeddedNetworkVar< [CEconItemAttribute](../schemas/server.md#ceconitemattribute) > |  |
 | `m_pManager` | [CAttributeManager](../schemas/server.md#cattributemanager)* |  |
 
 ### CAttributeManager
@@ -981,10 +988,10 @@ classDiagram
 | Name | Type | Annotations |
 |------|------|-------------|
 | `m_Providers` | CUtlVector< CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > > |  |
-| `m_iReapplyProvisionParity` | int32 | `MNetworkEnable` |
-| `m_hOuter` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | `MNetworkEnable` |
+| `m_iReapplyProvisionParity` | int32 |  |
+| `m_hOuter` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 | `m_bPreventLoopback` | bool |  |
-| `m_ProviderType` | attributeprovidertypes_t | `MNetworkEnable` |
+| `m_ProviderType` | attributeprovidertypes_t |  |
 | `m_CachedResults` | CUtlVector< [CAttributeManager](../schemas/server.md#cattributemanager)::cached_attribute_float_t > |  |
 
 ### CAttributeManager
@@ -1034,91 +1041,89 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_bEnabled` | bool | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_nColorMode` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_Color` | Color | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_flColorTemperature` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_flBrightness` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_flBrightnessScale` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_nDirectLight` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_nBakedShadowIndex` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_nLightPathUniqueId` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_nLightMapUniqueId` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_nLuminaireShape` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_flLuminaireSize` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_flLuminaireAnisotropy` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_LightStyleString` | CUtlString | `MNetworkEnable` `MNetworkChangeCallback = "StyleChanged"` |
-| `m_flLightStyleStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_QueuedLightStyleStrings` | CNetworkUtlVectorBase< CUtlString > | `MNetworkEnable` |
-| `m_LightStyleEvents` | CNetworkUtlVectorBase< CUtlString > | `MNetworkEnable` |
-| `m_LightStyleTargets` | CNetworkUtlVectorBase< CHandle< [CBaseModelEntity](../schemas/server.md#cbasemodelentity) > > | `MNetworkEnable` |
+| `m_bEnabled` | bool |  |
+| `m_nColorMode` | int32 |  |
+| `m_Color` | Color |  |
+| `m_flColorTemperature` | float32 |  |
+| `m_flBrightness` | float32 |  |
+| `m_flBrightnessScale` | float32 |  |
+| `m_nDirectLight` | int32 |  |
+| `m_nBakedShadowIndex` | int32 |  |
+| `m_nLightPathUniqueId` | int32 |  |
+| `m_nLightMapUniqueId` | int32 |  |
+| `m_nLuminaireShape` | int32 |  |
+| `m_flLuminaireSize` | float32 |  |
+| `m_flLuminaireAnisotropy` | float32 |  |
+| `m_LightStyleString` | CUtlString |  |
+| `m_flLightStyleStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
+| `m_QueuedLightStyleStrings` | CNetworkUtlVectorBase< CUtlString > |  |
+| `m_LightStyleEvents` | CNetworkUtlVectorBase< CUtlString > |  |
+| `m_LightStyleTargets` | CNetworkUtlVectorBase< CHandle< [CBaseModelEntity](../schemas/server.md#cbasemodelentity) > > |  |
 | `m_StyleEvent` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput)[4] |  |
-| `m_hLightCookie` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_flShape` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_flSoftX` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_flSoftY` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_flSkirt` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_flSkirtNear` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_vSizeParams` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` `MNetworkBitCount = 32` |
-| `m_flRange` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` `MNetworkBitCount = 32` |
-| `m_vShear` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` `MNetworkBitCount = 32` |
-| `m_nBakeSpecularToCubemaps` | int32 | `MNetworkEnable` |
-| `m_vBakeSpecularToCubemapsSize` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` `MNetworkBitCount = 32` |
-| `m_nCastShadows` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_nShadowMapSize` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_nShadowPriority` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_bContactShadow` | bool | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_bForceShadowsEnabled` | bool | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_nBounceLight` | int32 | `MNetworkEnable` |
-| `m_flBounceScale` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_bDynamicBounce` | bool | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_flMinRoughness` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_vAlternateColor` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_fAlternateColorBrightness` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_nFog` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_flFogStrength` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_nFogShadows` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_flFogScale` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_bFogMixedShadows` | bool | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_flFadeSizeStart` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_flFadeSizeEnd` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_flShadowFadeSizeStart` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_flShadowFadeSizeEnd` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_bPrecomputedFieldsValid` | bool | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_vPrecomputedBoundsMins` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_vPrecomputedBoundsMaxs` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_vPrecomputedOBBOrigin` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_vPrecomputedOBBAngles` | QAngle | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_vPrecomputedOBBExtent` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_nPrecomputedSubFrusta` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_vPrecomputedOBBOrigin0` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_vPrecomputedOBBAngles0` | QAngle | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_vPrecomputedOBBExtent0` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_vPrecomputedOBBOrigin1` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_vPrecomputedOBBAngles1` | QAngle | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_vPrecomputedOBBExtent1` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_vPrecomputedOBBOrigin2` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_vPrecomputedOBBAngles2` | QAngle | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_vPrecomputedOBBExtent2` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_vPrecomputedOBBOrigin3` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_vPrecomputedOBBAngles3` | QAngle | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_vPrecomputedOBBExtent3` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_vPrecomputedOBBOrigin4` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_vPrecomputedOBBAngles4` | QAngle | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_vPrecomputedOBBExtent4` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_vPrecomputedOBBOrigin5` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_vPrecomputedOBBAngles5` | QAngle | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_vPrecomputedOBBExtent5` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
+| `m_hLightCookie` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_flShape` | float32 |  |
+| `m_flSoftX` | float32 |  |
+| `m_flSoftY` | float32 |  |
+| `m_flSkirt` | float32 |  |
+| `m_flSkirtNear` | float32 |  |
+| `m_vSizeParams` | Vector |  |
+| `m_flRange` | float32 |  |
+| `m_vShear` | Vector |  |
+| `m_nBakeSpecularToCubemaps` | int32 |  |
+| `m_vBakeSpecularToCubemapsSize` | Vector |  |
+| `m_flBakeSpecularToCubemapsScale` | float32 |  |
+| `m_nCastShadows` | int32 |  |
+| `m_nShadowMapSize` | int32 |  |
+| `m_nShadowPriority` | int32 |  |
+| `m_bContactShadow` | bool |  |
+| `m_bForceShadowsEnabled` | bool |  |
+| `m_nBounceLight` | int32 |  |
+| `m_flBounceScale` | float32 |  |
+| `m_flMinRoughness` | float32 |  |
+| `m_vAlternateColor` | Vector |  |
+| `m_fAlternateColorBrightness` | float32 |  |
+| `m_nFog` | int32 |  |
+| `m_flFogStrength` | float32 |  |
+| `m_nFogShadows` | int32 |  |
+| `m_flFogScale` | float32 |  |
+| `m_flFadeSizeStart` | float32 |  |
+| `m_flFadeSizeEnd` | float32 |  |
+| `m_flShadowFadeSizeStart` | float32 |  |
+| `m_flShadowFadeSizeEnd` | float32 |  |
+| `m_bPrecomputedFieldsValid` | bool |  |
+| `m_vPrecomputedBoundsMins` | Vector |  |
+| `m_vPrecomputedBoundsMaxs` | Vector |  |
+| `m_vPrecomputedOBBOrigin` | Vector |  |
+| `m_vPrecomputedOBBAngles` | QAngle |  |
+| `m_vPrecomputedOBBExtent` | Vector |  |
+| `m_nPrecomputedSubFrusta` | int32 |  |
+| `m_vPrecomputedOBBOrigin0` | Vector |  |
+| `m_vPrecomputedOBBAngles0` | QAngle |  |
+| `m_vPrecomputedOBBExtent0` | Vector |  |
+| `m_vPrecomputedOBBOrigin1` | Vector |  |
+| `m_vPrecomputedOBBAngles1` | QAngle |  |
+| `m_vPrecomputedOBBExtent1` | Vector |  |
+| `m_vPrecomputedOBBOrigin2` | Vector |  |
+| `m_vPrecomputedOBBAngles2` | QAngle |  |
+| `m_vPrecomputedOBBExtent2` | Vector |  |
+| `m_vPrecomputedOBBOrigin3` | Vector |  |
+| `m_vPrecomputedOBBAngles3` | QAngle |  |
+| `m_vPrecomputedOBBExtent3` | Vector |  |
+| `m_vPrecomputedOBBOrigin4` | Vector |  |
+| `m_vPrecomputedOBBAngles4` | QAngle |  |
+| `m_vPrecomputedOBBExtent4` | Vector |  |
+| `m_vPrecomputedOBBOrigin5` | Vector |  |
+| `m_vPrecomputedOBBAngles5` | QAngle |  |
+| `m_vPrecomputedOBBExtent5` | Vector |  |
 | `m_bPvsModifyEntity` | bool |  |
-| `m_VisClusters` | CNetworkUtlVectorBase< uint16 > | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
+| `m_bTransmitAlways` | bool |  |
+| `m_VisClusters` | CNetworkUtlVectorBase< uint16 > |  |
 
 ### CBaseAnimGraph
 
 **Inherits from:** [CBaseModelEntity](server.md#cbasemodelentity)
 
-**Derived by:** [CBaseFlex](server.md#cbaseflex), [CBaseProp](client.md#cbaseprop), [CConstraintAnchor](server.md#cconstraintanchor), [CFish](server.md#cfish), [CHostageCarriableProp](server.md#chostagecarriableprop), [CItem](server.md#citem), [CItemSoda](server.md#citemsoda), [CPhysMagnet](server.md#cphysmagnet), [CPlantedC4](server.md#cplantedc4), [CPointCommentaryNode](server.md#cpointcommentarynode), [CRagdollProp](server.md#cragdollprop), [CWaterBullet](server.md#cwaterbullet), [C_BaseFlex](client.md#c_baseflex), [C_BulletHitModel](client.md#c_bullethitmodel), [C_CS2WeaponModuleBase](client.md#c_cs2weaponmodulebase), [C_ClientRagdoll](client.md#c_clientragdoll), [C_Fish](client.md#c_fish), [C_HostageCarriableProp](client.md#c_hostagecarriableprop), [C_LateUpdatedAnimating](client.md#c_lateupdatedanimating), [C_LocalTempEntity](client.md#c_localtempentity), [C_Multimeter](client.md#c_multimeter), [C_PhysMagnet](client.md#c_physmagnet), [C_PlantedC4](client.md#c_plantedc4), [C_PointCommentaryNode](client.md#c_pointcommentarynode), [C_RagdollProp](client.md#c_ragdollprop), [C_WaterBullet](client.md#c_waterbullet), [C_WorldModelGloves](client.md#c_worldmodelgloves)
-
-**Metadata:** `MNetworkIncludeByName = "m_bClientSideRagdoll"`
+**Derived by:** [CBaseCombatCharacter](server.md#cbasecombatcharacter), [CBaseGrenade](server.md#cbasegrenade), [CBaseProp](client.md#cbaseprop), [CConstraintAnchor](server.md#cconstraintanchor), [CEconEntity](server.md#ceconentity), [CFish](server.md#cfish), [CHostageCarriableProp](server.md#chostagecarriableprop), [CItem](server.md#citem), [CItemSoda](server.md#citemsoda), [CPhysMagnet](server.md#cphysmagnet), [CPlantedC4](server.md#cplantedc4), [CPointCommentaryNode](server.md#cpointcommentarynode), [CRagdollProp](server.md#cragdollprop), [CWaterBullet](server.md#cwaterbullet), [C_BaseCombatCharacter](client.md#c_basecombatcharacter), [C_BaseGrenade](client.md#c_basegrenade), [C_BulletHitModel](client.md#c_bullethitmodel), [C_CS2WeaponModuleBase](client.md#c_cs2weaponmodulebase), [C_CSGO_PreviewModel](client.md#c_csgo_previewmodel), [C_ClientRagdoll](client.md#c_clientragdoll), [C_EconEntity](client.md#c_econentity), [C_Fish](client.md#c_fish), [C_HostageCarriableProp](client.md#c_hostagecarriableprop), [C_LateUpdatedAnimating](client.md#c_lateupdatedanimating), [C_LocalTempEntity](client.md#c_localtempentity), [C_Multimeter](client.md#c_multimeter), [C_PhysMagnet](client.md#c_physmagnet), [C_PlantedC4](client.md#c_plantedc4), [C_PointCommentaryNode](client.md#c_pointcommentarynode), [C_RagdollProp](client.md#c_ragdollprop), [C_WaterBullet](client.md#c_waterbullet), [C_WorldModelGloves](client.md#c_worldmodelgloves)
 
 **Relationships:**
 
@@ -1128,10 +1133,13 @@ classDiagram
     CBaseEntity <|-- CBaseModelEntity
     CEntityInstance <|-- CBaseEntity
     CBaseAnimGraph <|-- CBaseProp
-    CBaseAnimGraph <|-- C_BaseFlex
+    CBaseAnimGraph <|-- C_BaseCombatCharacter
+    CBaseAnimGraph <|-- C_BaseGrenade
     CBaseAnimGraph <|-- C_BulletHitModel
     CBaseAnimGraph <|-- C_CS2WeaponModuleBase
+    CBaseAnimGraph <|-- C_CSGO_PreviewModel
     CBaseAnimGraph <|-- C_ClientRagdoll
+    CBaseAnimGraph <|-- C_EconEntity
     CBaseAnimGraph <|-- C_Fish
     CBaseAnimGraph <|-- C_HostageCarriableProp
     CBaseAnimGraph <|-- C_LateUpdatedAnimating
@@ -1143,8 +1151,10 @@ classDiagram
     CBaseAnimGraph <|-- C_RagdollProp
     CBaseAnimGraph <|-- C_WaterBullet
     CBaseAnimGraph <|-- C_WorldModelGloves
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CBaseCombatCharacter
+    CBaseAnimGraph <|-- CBaseGrenade
     CBaseAnimGraph <|-- CConstraintAnchor
+    CBaseAnimGraph <|-- CEconEntity
     CBaseAnimGraph <|-- CFish
     CBaseAnimGraph <|-- CHostageCarriableProp
     CBaseAnimGraph <|-- CItem
@@ -1157,6 +1167,7 @@ classDiagram
     CBaseAnimGraph *-- CAnimGraphControllerManager
     CBaseAnimGraph --> CAnimGraphControllerBase
     CBaseAnimGraph --> IChoreoServices
+    CBaseAnimGraph --> IPhysicsRagdollControl
     CBaseAnimGraph *-- PhysicsRagdollPose_t
 ```
 
@@ -1166,18 +1177,16 @@ classDiagram
 |------|------|-------------|
 | `m_graphControllerManager` | [CAnimGraphControllerManager](../schemas/client.md#canimgraphcontrollermanager) | `MSaveOpsForField = "GetAnimGraphControllerManagerSaveRestoreOps"` |
 | `m_pMainGraphController` | [CAnimGraphControllerBase](../schemas/client.md#canimgraphcontrollerbase)* | `MSaveOpsForField = "GetAnimGraphControllerPtrSaveRestoreOps"` |
-| `m_bInitiallyPopulateInterpHistory` | bool | `MNetworkEnable` |
+| `m_bInitiallyPopulateInterpHistory` | bool |  |
 | `m_pChoreoServices` | [IChoreoServices](../schemas/client.md#ichoreoservices)* | `MSaveOpsForField = "GetChoreoServicesSaveRestoreOps"` |
-| `m_bAnimGraphUpdateEnabled` | bool | `MNetworkEnable` |
-| `m_flMaxSlopeDistance` | float32 |  |
-| `m_vLastSlopeCheckPos` | VectorWS | `MNotSaved` |
-| `m_nAnimGraphUpdateId` | uint32 |  |
+| `m_bAnimGraphUpdateEnabled` | bool |  |
 | `m_bAnimationUpdateScheduled` | bool | `MNotSaved` |
-| `m_vecForce` | Vector | `MNetworkEnable` `MNotSaved` |
-| `m_nForceBone` | int32 | `MNetworkEnable` `MNotSaved` |
-| `m_RagdollPose` | [PhysicsRagdollPose_t](../schemas/server.md#physicsragdollpose_t) | `MNetworkEnable` |
-| `m_bRagdollEnabled` | bool | `MNetworkEnable` `MNetworkChangeCallback = "OnClientRagdollEnabledChanged"` |
-| `m_bRagdollClientSide` | bool | `MNetworkEnable` `MNetworkChangeCallback = "OnClientRagdollChanged"` `MNotSaved` |
+| `m_vecForce` | Vector | `MNotSaved` |
+| `m_nForceBone` | int32 | `MNotSaved` |
+| `m_pRagdollControl` | [IPhysicsRagdollControl](../schemas/vphysics2.md#iphysicsragdollcontrol)* | `MPhysPtr` |
+| `m_RagdollPose` | [PhysicsRagdollPose_t](../schemas/server.md#physicsragdollpose_t) |  |
+| `m_bRagdollEnabled` | bool |  |
+| `m_bRagdollClientSide` | bool | `MNotSaved` |
 | `m_xParentedRagdollRootInEntitySpace` | CTransform |  |
 
 ### CBaseAnimGraphController
@@ -1191,8 +1200,6 @@ classDiagram
     CSkeletonAnimationController <|-- CBaseAnimGraphController
     ISkeletonAnimationController <|-- CSkeletonAnimationController
     CBaseAnimGraphController *-- AnimationAlgorithm_t
-    CBaseAnimGraphController *-- CAnimGraphNetworkedVariables
-    CBaseAnimGraphController *-- IAnimationGraphInstance
     CBaseAnimGraphController *-- ExternalAnimGraphHandle_t
     CBaseAnimGraphController --> CBaseAnimGraph
     CBaseAnimGraphController *-- HSequence
@@ -1200,43 +1207,45 @@ classDiagram
     CBaseAnimGraphController *-- AnimLoopMode_t
     CBaseAnimGraphController *-- SequenceFinishNotifyState_t
     CBaseAnimGraphController *-- GameTick_t
+    CBaseAnimGraphController *-- InfoForResourceTypeCNmGraphDefinition
+    CBaseAnimGraphController *-- AnimGraph2SerializedPoseRecipeSlot_t
 ```
 
 **Fields:**
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_nAnimationAlgorithm` | [AnimationAlgorithm_t](../schemas/client.md#animationalgorithm_t) | `MNetworkEnable` `MNetworkChangeCallback = "AG2_OnAnimGraphDefinitionOrModeChanged"` |
-| `m_animGraphNetworkedVars` | [CAnimGraphNetworkedVariables](../schemas/server.md#canimgraphnetworkedvariables) | `MNetworkEnable` |
-| `m_pAnimGraphInstance` | CSmartPtr< [IAnimationGraphInstance](../schemas/animgraphlib.md#ianimationgraphinstance) > | `MSaveOpsForField = "GetAnimGraphSaveRestoreOps"` |
+| `m_nAnimationAlgorithm` | [AnimationAlgorithm_t](../schemas/client.md#animationalgorithm_t) |  |
 | `m_nNextExternalGraphHandle` | [ExternalAnimGraphHandle_t](../schemas/client.md#externalanimgraphhandle_t) |  |
-| `m_vecSecondarySkeletonNames` | CUtlVector< CGlobalSymbol > |  |
-| `m_vecSecondarySkeletons` | CNetworkUtlVectorBase< CHandle< [CBaseAnimGraph](../schemas/server.md#cbaseanimgraph) > > | `MNetworkEnable` `MNetworkChangeCallback = "OnSecondarySkeletonsChanged"` |
-| `m_nSecondarySkeletonMasterCount` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "AG2_OnAnimGraphDefinitionOrModeChanged"` |
+| `m_vecSecondarySkeletonSlotIDs` | CNetworkUtlVectorBase< CGlobalSymbol > |  |
+| `m_vecSecondarySkeletons` | CNetworkUtlVectorBase< CHandle< [CBaseAnimGraph](../schemas/server.md#cbaseanimgraph) > > |  |
+| `m_nSecondarySkeletonMasterCount` | int32 |  |
 | `m_flSoundSyncTime` | float32 |  |
 | `m_nActiveIKChainMask` | uint32 |  |
-| `m_hSequence` | [HSequence](../schemas/animationsystem.md#hsequence) | `MNetworkEnable` `MNetworkSerializer = "minusone"` `MNetworkChangeCallback = "OnNetworkedSequenceChanged"` `MNetworkPriority = 32` |
-| `m_flSeqStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` `MNetworkChangeCallback = "OnNetworkedAnimationChanged"` `MNetworkPriority = 32` |
-| `m_flSeqFixedCycle` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "OnNetworkedAnimationChanged"` `MNetworkPriority = 32` |
-| `m_nAnimLoopMode` | [AnimLoopMode_t](../schemas/client.md#animloopmode_t) | `MNetworkEnable` `MNetworkChangeCallback = "OnNetworkedAnimationChanged"` `MNetworkPriority = 32` |
-| `m_flPlaybackRate` | CNetworkedQuantizedFloat | `MNetworkEnable` `MNetworkBitCount = 8` `MNetworkMinValue = -4.000000` `MNetworkMaxValue = 12.000000` `MNetworkEncodeFlags = 5` `MNetworkChangeCallback = "OnNetworkedAnimationChanged"` `MNetworkPriority = 32` |
+| `m_hSequence` | [HSequence](../schemas/animationsystem.md#hsequence) |  |
+| `m_flSeqStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
+| `m_flSeqFixedCycle` | float32 |  |
+| `m_nAnimLoopMode` | [AnimLoopMode_t](../schemas/client.md#animloopmode_t) |  |
+| `m_flPlaybackRate` | CNetworkedQuantizedFloat |  |
 | `m_nNotifyState` | [SequenceFinishNotifyState_t](../schemas/client.md#sequencefinishnotifystate_t) |  |
 | `m_bNetworkedAnimationInputsChanged` | bool |  |
 | `m_bNetworkedSequenceChanged` | bool |  |
 | `m_bLastUpdateSkipped` | bool |  |
 | `m_bSequenceFinished` | bool |  |
 | `m_nPrevAnimUpdateTick` | [GameTick_t](../schemas/entity2.md#gametick_t) |  |
-| `m_hGraphDefinitionAG2` | CStrongHandle< [InfoForResourceTypeCNmGraphDefinition](../schemas/resourcesystem.md#infoforresourcetypecnmgraphdefinition) > | `MNetworkEnable` `MNetworkChangeCallback = "AG2_OnAnimGraphDefinitionOrModeChanged"` |
-| `m_serializedPoseRecipeAG2` | CNetworkUtlVectorBase< uint8 > | `MNetworkEnable` `MNotSaved` |
-| `m_nSerializePoseRecipeSizeAG2` | int32 | `MNetworkEnable` `MNotSaved` |
-| `m_nSerializePoseRecipeVersionAG2` | int32 | `MNetworkEnable` `MNotSaved` |
-| `m_nServerGraphInstanceIteration` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "AG2_OnAnimGraphSerializationContextInvalidated"` |
-| `m_nServerSerializationContextIteration` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "AG2_OnAnimGraphSerializationContextInvalidated"` |
-| `m_primaryGraphId` | [ResourceId_t](../schemas/resourcefile.md#resourceid_t) | `MNetworkEnable` `MNetworkChangeCallback = "AG2_OnAnimGraphSerializationContextInvalidated"` |
-| `m_vecExternalGraphIds` | CNetworkUtlVectorBase< [ResourceId_t](../schemas/resourcefile.md#resourceid_t) > | `MNetworkEnable` `MNetworkChangeCallback = "AG2_OnAnimGraphSerializationContextInvalidated"` |
-| `m_vecExternalClipIds` | CNetworkUtlVectorBase< [ResourceId_t](../schemas/resourcefile.md#resourceid_t) > | `MNetworkEnable` `MNetworkChangeCallback = "AG2_OnAnimGraphSerializationContextInvalidated"` |
+| `m_hGraphDefinitionAG2` | CStrongHandle< [InfoForResourceTypeCNmGraphDefinition](../schemas/resourcesystem.md#infoforresourcetypecnmgraphdefinition) > |  |
+| `m_SerializePoseRecipeAG2Slots` | CUtlVectorEmbeddedNetworkVar< [AnimGraph2SerializedPoseRecipeSlot_t](../schemas/server.md#animgraph2serializedposerecipeslot_t) > | `MNotSaved` |
+| `m_SerializePoseRecipeAG2Dynamic` | CNetworkUtlVectorBase< uint8 > | `MNotSaved` |
+| `m_nSerializePoseRecipeAG2ActiveSlot` | uint32 | `MNotSaved` |
+| `m_nSerializePoseRecipeVersionAG2` | int32 | `MNotSaved` |
+| `m_nServerGraphInstanceIteration` | int32 |  |
+| `m_nServerSerializationContextIteration` | int32 |  |
+| `m_primaryGraphId` | [ResourceId_t](../schemas/resourcefile.md#resourceid_t) |  |
+| `m_vecExternalGraphIds` | CNetworkUtlVectorBase< [ResourceId_t](../schemas/resourcefile.md#resourceid_t) > |  |
+| `m_vecExternalClipIds` | CNetworkUtlVectorBase< [ResourceId_t](../schemas/resourcefile.md#resourceid_t) > |  |
 | `m_sAnimGraph2Identifier` | CGlobalSymbol |  |
-| `m_vecExternalGraphs` | CUtlVector< [ExternalAnimGraph_t](../schemas/client.md#externalanimgraph_t) > |  |
+| `m_pGraphInstanceAG2` | [CNmGraphInstance](../schemas/animlib.md#cnmgraphinstance)* | `MSaveOpsForField = "GetAnimGraph2SaveRestoreOps"` |
+| `m_vecExternalGraphs` | CUtlVector< [ExternalAnimGraph_t](../schemas/client.md#externalanimgraph_t) > | `MSaveOpsForField = "GetExternalAnimGraphSaveRestoreOps"` |
 
 ### CBaseButton
 
@@ -1285,9 +1294,9 @@ classDiagram
 | `m_hConstraintParent` | CEntityHandle |  |
 | `m_bForceNpcExclude` | bool | `MNotSaved` |
 | `m_sGlowEntity` | CUtlSymbolLarge |  |
-| `m_glowEntity` | CHandle< [CBaseModelEntity](../schemas/server.md#cbasemodelentity) > | `MNetworkEnable` `MNotSaved` |
-| `m_usable` | bool | `MNetworkEnable` |
-| `m_szDisplayText` | CUtlSymbolLarge | `MNetworkEnable` `MNotSaved` |
+| `m_glowEntity` | CHandle< [CBaseModelEntity](../schemas/server.md#cbasemodelentity) > | `MNotSaved` |
+| `m_usable` | bool |  |
+| `m_szDisplayText` | CUtlSymbolLarge | `MNotSaved` |
 
 ### CBaseCSGrenade
 
@@ -1302,8 +1311,8 @@ classDiagram
     CCSWeaponBase <|-- CBaseCSGrenade
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CEconEntity
+    C_BaseModelEntity <|-- CBaseAnimGraph
     CBaseCSGrenade <|-- CDecoyGrenade
     CBaseCSGrenade <|-- CFlashbang
     CBaseCSGrenade <|-- CHEGrenade
@@ -1318,19 +1327,19 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_bRedraw` | bool | `MNetworkEnable` |
-| `m_bIsHeldByPlayer` | bool | `MNetworkEnable` `MNetworkChangeCallback = "OnGrenadeStateChanged"` |
-| `m_bPinPulled` | bool | `MNetworkEnable` `MNetworkChangeCallback = "OnGrenadeStateChanged"` |
-| `m_bJumpThrow` | bool | `MNetworkEnable` |
-| `m_bThrowAnimating` | bool | `MNetworkEnable` |
-| `m_fThrowTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` |
-| `m_flThrowStrength` | float32 | `MNetworkEnable` |
-| `m_fDropTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` |
-| `m_fPinPullTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` |
-| `m_bJustPulledPin` | bool | `MNetworkEnable` |
-| `m_nNextHoldTick` | [GameTick_t](../schemas/entity2.md#gametick_t) | `MNetworkEnable` |
-| `m_flNextHoldFrac` | float32 | `MNetworkEnable` |
-| `m_hSwitchToWeaponAfterThrow` | CHandle< [CCSWeaponBase](../schemas/server.md#ccsweaponbase) > | `MNetworkEnable` |
+| `m_bRedraw` | bool |  |
+| `m_bIsHeldByPlayer` | bool |  |
+| `m_bPinPulled` | bool |  |
+| `m_bJumpThrow` | bool |  |
+| `m_bThrowAnimating` | bool |  |
+| `m_fThrowTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
+| `m_flThrowStrength` | float32 |  |
+| `m_fDropTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
+| `m_fPinPullTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
+| `m_bJustPulledPin` | bool |  |
+| `m_nNextHoldTick` | [GameTick_t](../schemas/entity2.md#gametick_t) |  |
+| `m_flNextHoldFrac` | float32 |  |
+| `m_hSwitchToWeaponAfterThrow` | CHandle< [CCSWeaponBase](../schemas/server.md#ccsweaponbase) > |  |
 
 ### CBaseCSGrenadeProjectile
 
@@ -1346,10 +1355,10 @@ Base class for all CS2 grenade projectile entities (HE, flash, smoke, molotov, d
 ```mermaid
 classDiagram
     CBaseGrenade <|-- CBaseCSGrenadeProjectile
-    CBaseFlex <|-- CBaseGrenade
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CBaseGrenade
     C_BaseModelEntity <|-- CBaseAnimGraph
     C_BaseEntity <|-- C_BaseModelEntity
+    CEntityInstance <|-- C_BaseEntity
     CBaseCSGrenadeProjectile <|-- CDecoyProjectile
     CBaseCSGrenadeProjectile <|-- CFlashbangProjectile
     CBaseCSGrenadeProjectile <|-- CHEGrenadeProjectile
@@ -1363,12 +1372,12 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_vInitialPosition` | Vector | World-space position from which the grenade was thrown. `MNetworkEnable` |
-| `m_vInitialVelocity` | Vector | Initial velocity vector (world units per second) at the moment of throw. `MNetworkEnable` |
-| `m_nBounces` | int32 | Number of times the grenade has bounced off a surface so far. `MNetworkEnable` |
-| `m_nExplodeEffectIndex` | CStrongHandle< [InfoForResourceTypeIParticleSystemDefinition](../schemas/resourcesystem.md#infoforresourcetypeiparticlesystemdefinition) > | Particle system definition handle for the detonation effect. `MNetworkEnable` |
-| `m_nExplodeEffectTickBegin` | int32 | Server tick at which the explosion particle effect started. `MNetworkEnable` |
-| `m_vecExplodeEffectOrigin` | Vector | World-space position of the explosion centre. `MNetworkEnable` |
+| `m_vInitialPosition` | Vector | World-space position from which the grenade was thrown. |
+| `m_vInitialVelocity` | Vector | Initial velocity vector (world units per second) at the moment of throw. |
+| `m_nBounces` | int32 | Number of times the grenade has bounced off a surface so far. |
+| `m_nExplodeEffectIndex` | CStrongHandle< [InfoForResourceTypeIParticleSystemDefinition](../schemas/resourcesystem.md#infoforresourcetypeiparticlesystemdefinition) > | Particle system definition handle for the detonation effect. |
+| `m_nExplodeEffectTickBegin` | int32 | Server tick at which the explosion particle effect started. |
+| `m_vecExplodeEffectOrigin` | Vector | World-space position of the explosion centre. |
 | `m_flSpawnTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_unOGSExtraFlags` | uint8 |  |
 | `m_bDetonationRecorded` | bool |  |
@@ -1401,35 +1410,32 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_bEnabled` | bool | `MNetworkEnable` |
-| `m_DialogXMLName` | CUtlSymbolLarge | `MNetworkEnable` |
-| `m_PanelClassName` | CUtlSymbolLarge | `MNetworkEnable` |
-| `m_PanelID` | CUtlSymbolLarge | `MNetworkEnable` |
-| `m_CustomOutput0` | CEntityOutputTemplate< CUtlString, char* > |  |
-| `m_CustomOutput1` | CEntityOutputTemplate< CUtlString, char* > |  |
-| `m_CustomOutput2` | CEntityOutputTemplate< CUtlString, char* > |  |
-| `m_CustomOutput3` | CEntityOutputTemplate< CUtlString, char* > |  |
-| `m_CustomOutput4` | CEntityOutputTemplate< CUtlString, char* > |  |
-| `m_CustomOutput5` | CEntityOutputTemplate< CUtlString, char* > |  |
-| `m_CustomOutput6` | CEntityOutputTemplate< CUtlString, char* > |  |
-| `m_CustomOutput7` | CEntityOutputTemplate< CUtlString, char* > |  |
-| `m_CustomOutput8` | CEntityOutputTemplate< CUtlString, char* > |  |
-| `m_CustomOutput9` | CEntityOutputTemplate< CUtlString, char* > |  |
+| `m_bEnabled` | bool |  |
+| `m_DialogXMLName` | CUtlSymbolLarge |  |
+| `m_PanelClassName` | CUtlSymbolLarge |  |
+| `m_PanelID` | CUtlSymbolLarge |  |
+| `m_CustomOutput0` | CEntityOutputTemplate< CUtlString > |  |
+| `m_CustomOutput1` | CEntityOutputTemplate< CUtlString > |  |
+| `m_CustomOutput2` | CEntityOutputTemplate< CUtlString > |  |
+| `m_CustomOutput3` | CEntityOutputTemplate< CUtlString > |  |
+| `m_CustomOutput4` | CEntityOutputTemplate< CUtlString > |  |
+| `m_CustomOutput5` | CEntityOutputTemplate< CUtlString > |  |
+| `m_CustomOutput6` | CEntityOutputTemplate< CUtlString > |  |
+| `m_CustomOutput7` | CEntityOutputTemplate< CUtlString > |  |
+| `m_CustomOutput8` | CEntityOutputTemplate< CUtlString > |  |
+| `m_CustomOutput9` | CEntityOutputTemplate< CUtlString > |  |
 
 ### CBaseCombatCharacter
 
-**Inherits from:** [CBaseFlex](server.md#cbaseflex)
+**Inherits from:** [CBaseAnimGraph](server.md#cbaseanimgraph)
 
 **Derived by:** [CBasePlayerPawn](server.md#cbaseplayerpawn), [CHostageExpresserShim](server.md#chostageexpressershim)
-
-**Metadata:** `MNetworkExcludeByUserGroup = "LocalPlayerExclusive"`
 
 **Relationships:**
 
 ```mermaid
 classDiagram
-    CBaseFlex <|-- CBaseCombatCharacter
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CBaseCombatCharacter
     C_BaseModelEntity <|-- CBaseAnimGraph
     C_BaseEntity <|-- C_BaseModelEntity
     CEntityInstance <|-- C_BaseEntity
@@ -1446,7 +1452,7 @@ classDiagram
 | Name | Type | Annotations |
 |------|------|-------------|
 | `m_bForceServerRagdoll` | bool |  |
-| `m_hMyWearables` | CNetworkUtlVectorBase< CHandle< [CEconWearable](../schemas/server.md#ceconwearable) > > | `MNetworkEnable` `MNotSaved` |
+| `m_hMyWearables` | CNetworkUtlVectorBase< CHandle< [CEconWearable](../schemas/server.md#ceconwearable) > > | `MNotSaved` |
 | `m_impactEnergyScale` | float32 |  |
 | `m_bApplyStressDamage` | bool |  |
 | `m_bDeathEventsDispatched` | bool |  |
@@ -1525,7 +1531,7 @@ classDiagram
 | `m_bLoopMoveSound` | bool |  |
 | `m_bCreateNavObstacle` | bool |  |
 | `m_isChaining` | bool | `MNotSaved` |
-| `m_bIsUsable` | bool | `MNetworkEnable` `MNotSaved` |
+| `m_bIsUsable` | bool | `MNotSaved` |
 
 ### CBaseEntity
 
@@ -1534,9 +1540,7 @@ Root entity class in Source 2 from which all server-side entities derive. Provid
 
 **Inherits from:** [CEntityInstance](entity2.md#centityinstance)
 
-**Derived by:** [CAI_ChangeHintGroup](server.md#cai_changehintgroup), [CBaseModelEntity](server.md#cbasemodelentity), [CCSGO_TeamPreviewCharacterPosition](server.md#ccsgo_teampreviewcharacterposition), [CCSMinimapBoundary](server.md#ccsminimapboundary), [CCSPetPlacement](server.md#ccspetplacement), [CCSPlayerResource](server.md#ccsplayerresource), [CCSPointScriptEntity](server.md#ccspointscriptentity), [CColorCorrection](server.md#ccolorcorrection), [CCommentaryAuto](server.md#ccommentaryauto), [CDebugHistory](server.md#cdebughistory), [CEnableMotionFixup](server.md#cenablemotionfixup), [CEntityFlame](server.md#centityflame), [CEnvBeverage](server.md#cenvbeverage), [CEnvCombinedLightProbeVolume](server.md#cenvcombinedlightprobevolume), [CEnvCubemap](server.md#cenvcubemap), [CEnvCubemapFog](server.md#cenvcubemapfog), [CEnvDetailController](server.md#cenvdetailcontroller), [CEnvEntityIgniter](server.md#cenventityigniter), [CEnvLightProbeVolume](server.md#cenvlightprobevolume), [CEnvVolumetricFogController](server.md#cenvvolumetricfogcontroller), [CEnvVolumetricFogVolume](server.md#cenvvolumetricfogvolume), [CEnvWind](server.md#cenvwind), [CEnvWindController](server.md#cenvwindcontroller), [CEnvWindVolume](server.md#cenvwindvolume), [CFishPool](server.md#cfishpool), [CFogController](server.md#cfogcontroller), [CFuncPropRespawnZone](server.md#cfuncproprespawnzone), [CFuncTimescale](server.md#cfunctimescale), [CGameGibManager](server.md#cgamegibmanager), [CGameRulesProxy](server.md#cgamerulesproxy), [CGradientFog](server.md#cgradientfog), [CHandleDummy](server.md#chandledummy), [CHandleTest](server.md#chandletest), [CInfoLadderDismount](server.md#cinfoladderdismount), [CInfoVisibilityBox](server.md#cinfovisibilitybox), [CLogicAuto](server.md#clogicauto), [CLogicNPCCounter](server.md#clogicnpccounter), [CMapVetoPickController](server.md#cmapvetopickcontroller), [CNullEntity](server.md#cnullentity), [CPathParticleRope](server.md#cpathparticlerope), [CPhysicsSpring](server.md#cphysicsspring), [CPhysicsWire](server.md#cphysicswire), [CPlayerPing](server.md#cplayerping), [CPlayerVisibility](server.md#cplayervisibility), [CPointCamera](server.md#cpointcamera), [CPointEntity](server.md#cpointentity), [CPointEntityFinder](server.md#cpointentityfinder), [CPointPulse](server.md#cpointpulse), [CPointValueRemapper](server.md#cpointvalueremapper), [CScriptedSequence](server.md#cscriptedsequence), [CServerOnlyEntity](server.md#cserveronlyentity), [CSkyCamera](server.md#cskycamera), [CSoundAreaEntityBase](server.md#csoundareaentitybase), [CSoundEventEntity](server.md#csoundevententity), [CSoundEventParameter](server.md#csoundeventparameter), [CSoundOpvarSetEntity](server.md#csoundopvarsetentity), [CSoundOpvarSetPointBase](server.md#csoundopvarsetpointbase), [CTeam](server.md#cteam), [CTestEffect](server.md#ctesteffect), [CTonemapController2](server.md#ctonemapcontroller2), [CVoteController](server.md#cvotecontroller)
-
-**Metadata:** `MNetworkExcludeByName = "m_bClientSideRagdoll"`, `MNetworkExcludeByName = "m_iMaxHealth"`, `MNetworkExcludeByUserGroup = "Water"`, `MNetworkExcludeByUserGroup = "Player"`, `MNetworkExcludeByUserGroup = "LocalPlayerExclusive"`, `MNetworkExcludeByName = "m_spawnflags"`, `MNetworkExcludeByName = "m_bTakesDamage"`, `MNetworkExcludeByName = "m_nTakeDamageFlags"`, `MNetworkExcludeByName = "m_flSpeed"`, `MNetworkUserGroupProxy = "CBaseEntity"`
+**Derived by:** [CAI_ChangeHintGroup](server.md#cai_changehintgroup), [CBaseModelEntity](server.md#cbasemodelentity), [CCSGO_EndOfMatchLineupEndpoint](server.md#ccsgo_endofmatchlineupendpoint), [CCSGO_TeamPreviewCharacterPosition](server.md#ccsgo_teampreviewcharacterposition), [CCSMinimapBoundary](server.md#ccsminimapboundary), [CCSPetPlacement](server.md#ccspetplacement), [CCSPlayerResource](server.md#ccsplayerresource), [CCSPointScriptEntity](server.md#ccspointscriptentity), [CColorCorrection](server.md#ccolorcorrection), [CCommentaryAuto](server.md#ccommentaryauto), [CDebugHistory](server.md#cdebughistory), [CEnableMotionFixup](server.md#cenablemotionfixup), [CEntityFlame](server.md#centityflame), [CEnvBeverage](server.md#cenvbeverage), [CEnvCombinedLightProbeVolume](server.md#cenvcombinedlightprobevolume), [CEnvCubemap](server.md#cenvcubemap), [CEnvCubemapFog](server.md#cenvcubemapfog), [CEnvDetailController](server.md#cenvdetailcontroller), [CEnvEntityIgniter](server.md#cenventityigniter), [CEnvLightProbeVolume](server.md#cenvlightprobevolume), [CEnvVolumetricFogController](server.md#cenvvolumetricfogcontroller), [CEnvVolumetricFogVolume](server.md#cenvvolumetricfogvolume), [CEnvWind](server.md#cenvwind), [CEnvWindController](server.md#cenvwindcontroller), [CEnvWindVolume](server.md#cenvwindvolume), [CFishPool](server.md#cfishpool), [CFogController](server.md#cfogcontroller), [CFuncPropRespawnZone](server.md#cfuncproprespawnzone), [CFuncTimescale](server.md#cfunctimescale), [CGameGibManager](server.md#cgamegibmanager), [CGameRulesProxy](server.md#cgamerulesproxy), [CGradientFog](server.md#cgradientfog), [CHandleDummy](server.md#chandledummy), [CHandleTest](server.md#chandletest), [CInfoLadderDismount](server.md#cinfoladderdismount), [CInfoVisibilityBox](server.md#cinfovisibilitybox), [CLogicAuto](server.md#clogicauto), [CLogicNPCCounter](server.md#clogicnpccounter), [CMapVetoPickController](server.md#cmapvetopickcontroller), [CNullEntity](server.md#cnullentity), [CPathParticleRope](server.md#cpathparticlerope), [CPhysicsSpring](server.md#cphysicsspring), [CPhysicsWire](server.md#cphysicswire), [CPlayerPing](server.md#cplayerping), [CPlayerVisibility](server.md#cplayervisibility), [CPointCamera](server.md#cpointcamera), [CPointEntity](server.md#cpointentity), [CPointEntityFinder](server.md#cpointentityfinder), [CPointPulse](server.md#cpointpulse), [CPointValueRemapper](server.md#cpointvalueremapper), [CScriptedSequence](server.md#cscriptedsequence), [CServerOnlyEntity](server.md#cserveronlyentity), [CSkyCamera](server.md#cskycamera), [CSoundAreaEntityBase](server.md#csoundareaentitybase), [CSoundEventEntity](server.md#csoundevententity), [CSoundEventParameter](server.md#csoundeventparameter), [CSoundOpvarSetEntity](server.md#csoundopvarsetentity), [CSoundOpvarSetPointBase](server.md#csoundopvarsetpointbase), [CTeam](server.md#cteam), [CTestEffect](server.md#ctesteffect), [CTonemapController2](server.md#ctonemapcontroller2), [CVoteController](server.md#cvotecontroller)
 
 **Relationships:**
 
@@ -1545,6 +1549,7 @@ classDiagram
     CEntityInstance <|-- CBaseEntity
     CBaseEntity <|-- CAI_ChangeHintGroup
     CBaseEntity <|-- CBaseModelEntity
+    CBaseEntity <|-- CCSGO_EndOfMatchLineupEndpoint
     CBaseEntity <|-- CCSGO_TeamPreviewCharacterPosition
     CBaseEntity <|-- CCSMinimapBoundary
     CBaseEntity <|-- CCSPetPlacement
@@ -1620,25 +1625,31 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_CBodyComponent` | [CBodyComponent](../schemas/server.md#cbodycomponent)* | `MNetworkEnable` `MNetworkUserGroup = "CBodyComponent"` `MNetworkAlias = "CBodyComponent"` `MNetworkTypeAlias = "CBodyComponent"` `MNetworkPriority = 48` |
+| `m_CBodyComponent` | [CBodyComponent](../schemas/server.md#cbodycomponent)* |  |
 | `m_NetworkTransmitComponent` | [CNetworkTransmitComponent](../schemas/client.md#cnetworktransmitcomponent) |  |
-| `m_aThinkFunctions` | CUtlVector< thinkfunc_t > | `MSaveOpsForField = "GetThinkContextSaveDataOps"` |
+| `m_aThinkFunctions` | CUtlVector< thinkfunc_t > |  |
 | `m_iCurrentThinkContext` | int32 | `MNotSaved` |
 | `m_nLastThinkTick` | [GameTick_t](../schemas/entity2.md#gametick_t) |  |
 | `m_bDisabledContextThinks` | bool |  |
 | `m_isSteadyState` | CTypedBitVec< 64 > | `MNotSaved` |
 | `m_lastNetworkChange` | float32 | `MNotSaved` |
+| `m_think` | BASEPTR |  |
 | `m_ResponseContexts` | CUtlVector< [ResponseContext_t](../schemas/server.md#responsecontext_t) > |  |
 | `m_iszResponseContext` | CUtlSymbolLarge |  |
-| `m_iHealth` | int32 | Current health points of the entity. Serialised with the 'ClampHealth' encoder so values above max are clamped. *Sent only to the Player network group and LocalPlayerExclusive.* `MNetworkEnable` `MNetworkSerializer = "ClampHealth"` `MNetworkUserGroup = "Player"` `MNetworkPriority = 32` |
-| `m_iMaxHealth` | int32 | Maximum health points; used to normalise health bars in the HUD. `MNetworkEnable` |
-| `m_lifeState` | uint8 | LIFE_STATE enum: 0 = Alive, 1 = Dying, 2 = Dead, 3 = Respawnable, 4 = Discardbody. `MNetworkEnable` `MNetworkUserGroup = "Player"` `MNetworkPriority = 32` |
+| `m_pfnTouch` | ENTITYFUNCPTR |  |
+| `m_pfnUse` | USEPTR |  |
+| `m_pfnBlocked` | ENTITYFUNCPTR |  |
+| `m_pfnMoveDone` | BASEPTR |  |
+| `m_iHealth` | int32 | Current health points of the entity. Serialised with the 'ClampHealth' encoder so values above max are clamped. *Sent only to the Player network group and LocalPlayerExclusive.* |
+| `m_iMaxHealth` | int32 | Maximum health points; used to normalise health bars in the HUD. |
+| `m_lifeState` | uint8 | LIFE_STATE enum: 0 = Alive, 1 = Dying, 2 = Dead, 3 = Respawnable, 4 = Discardbody. |
 | `m_flDamageAccumulator` | float32 |  |
-| `m_bTakesDamage` | bool | `MNetworkEnable` |
-| `m_nTakeDamageFlags` | [TakeDamageFlags_t](../schemas/client.md#takedamageflags_t) | `MNetworkEnable` |
-| `m_nPlatformType` | [EntityPlatformTypes_t](../schemas/client.md#entityplatformtypes_t) | `MNetworkEnable` |
-| `m_MoveCollide` | [MoveCollide_t](../schemas/client.md#movecollide_t) | `MNetworkEnable` |
-| `m_MoveType` | [MoveType_t](../schemas/client.md#movetype_t) | `MNetworkEnable` |
+| `m_bTakesDamage` | bool |  |
+| `m_nTakeDamageFlags` | [TakeDamageFlags_t](../schemas/client.md#takedamageflags_t) |  |
+| `m_nPlatformType` | [EntityPlatformTypes_t](../schemas/client.md#entityplatformtypes_t) |  |
+| `m_MoveCollide` | [MoveCollide_t](../schemas/client.md#movecollide_t) |  |
+| `m_MoveType` | [MoveType_t](../schemas/client.md#movetype_t) |  |
+| `m_nPreviouslySetMoveType` | [MoveType_t](../schemas/client.md#movetype_t) |  |
 | `m_nActualMoveType` | [MoveType_t](../schemas/client.md#movetype_t) |  |
 | `m_nWaterTouch` | uint8 | `MNotSaved` |
 | `m_nSlimeTouch` | uint8 | `MNotSaved` |
@@ -1647,40 +1658,40 @@ classDiagram
 | `m_hDamageFilter` | CHandle< [CBaseFilter](../schemas/server.md#cbasefilter) > |  |
 | `m_iszDamageFilterName` | CUtlSymbolLarge |  |
 | `m_flMoveDoneTime` | float32 |  |
-| `m_nSubclassID` | CUtlStringToken | `MNetworkEnable` `MNetworkSendProxyRecipientsFilter = "SubclassID_RecipientsFilter"` |
-| `m_flAnimTime` | float32 | Floating-point timestamp of the most-recent animation update; used by the client for animation interpolation. `MNetworkEnable` `MNetworkPriority = 0` `MNetworkSerializer = "animTimeSerializer"` `MNetworkUserGroup = "AnimTime"` |
-| `m_flSimulationTime` | float32 | Floating-point timestamp of the most-recent physics simulation step; used by the client for position interpolation. `MNetworkEnable` `MNetworkPriority = 1` `MNetworkSerializer = "simulationTimeSerializer"` `MNetworkSendProxyRecipientsFilter = "SendProxyNoPlayerEntities_RecipientsFilter"` |
-| `m_flCreateTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` |
-| `m_bClientSideRagdoll` | bool | `MNetworkEnable` |
-| `m_ubInterpolationFrame` | uint8 | `MNetworkEnable` |
-| `m_vPrevVPhysicsUpdatePos` | Vector |  |
-| `m_iTeamNum` | uint8 | Team number: 0 = Unassigned, 1 = Spectator, 2 = Terrorist, 3 = Counter-Terrorist. `MNetworkEnable` |
+| `m_nSubclassID` | CUtlStringToken |  |
+| `m_flAnimTime` | float32 | Floating-point timestamp of the most-recent animation update; used by the client for animation interpolation. `MKV3TransferSaveOpsForField = "GetEngineTimeSaveRestoreOps"` |
+| `m_flSimulationTime` | float32 | Floating-point timestamp of the most-recent physics simulation step; used by the client for position interpolation. `MKV3TransferSaveOpsForField = "GetEngineTimeSaveRestoreOps"` |
+| `m_flCreateTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
+| `m_bClientSideRagdoll` | bool |  |
+| `m_ubInterpolationFrame` | uint8 |  |
+| `m_vPrevVPhysicsUpdatePos` | VectorWS |  |
+| `m_iTeamNum` | uint8 | Team number: 0 = Unassigned, 1 = Spectator, 2 = Terrorist, 3 = Counter-Terrorist. |
 | `m_iGlobalname` | CUtlSymbolLarge |  |
 | `m_iSentToClients` | int32 | `MNotSaved` |
-| `m_flSpeed` | float32 | `MNetworkEnable` |
+| `m_flSpeed` | float32 |  |
 | `m_sUniqueHammerID` | CUtlString |  |
-| `m_spawnflags` | uint32 | `MNetworkEnable` |
-| `m_nNextThinkTick` | [GameTick_t](../schemas/entity2.md#gametick_t) | Server tick on which the entity's Think() function will next execute (-1 = never). `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
-| `m_nSimulationTick` | int32 |  |
+| `m_spawnflags` | uint32 |  |
+| `m_nNextThinkTick` | [GameTick_t](../schemas/entity2.md#gametick_t) | Server tick on which the entity's Think() function will next execute (-1 = never). |
+| `m_nSimulationTick` | int32 | `MKV3TransferSaveOpsForField = "GetEngineTickSaveRestoreOps"` |
 | `m_OnKilled` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
-| `m_fFlags` | uint32 | Entity flags bitmask (FL_ONGROUND = 1, FL_DUCKING = 4, FL_INWATER = 8, FL_FROZEN = 0x200, etc.). `MNetworkEnable` `MNetworkPriority = 32` `MNetworkUserGroup = "Player"` |
+| `m_fFlags` | uint32 | Entity flags bitmask (FL_ONGROUND = 1, FL_DUCKING = 4, FL_INWATER = 8, FL_FROZEN = 0x200, etc.). |
 | `m_vecAbsVelocity` | Vector |  |
-| `m_vecVelocity` | [CNetworkVelocityVector](../schemas/client.md#cnetworkvelocityvector) | Current world-space velocity vector of the entity. `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` `MNetworkPriority = 32` |
-| `m_vecBaseVelocity` | Vector | Additional world-space velocity contributed by moving platforms, conveyor belts, etc. `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
+| `m_vecVelocity` | [CNetworkVelocityVector](../schemas/client.md#cnetworkvelocityvector) | Current world-space velocity vector of the entity. |
+| `m_vecBaseVelocity` | Vector | Additional world-space velocity contributed by moving platforms, conveyor belts, etc. |
 | `m_nPushEnumCount` | int32 | `MNotSaved` |
 | `m_pCollision` | [CCollisionProperty](../schemas/server.md#ccollisionproperty)* | `MNotSaved` |
-| `m_hEffectEntity` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | `MNetworkEnable` |
-| `m_hOwnerEntity` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | CHandle to the entity that owns or spawned this entity (e.g. the thrower of a grenade). `MNetworkEnable` `MNetworkPriority = 32` |
-| `m_fEffects` | uint32 | Effect flags bitmask (EF_NODRAW = 32, EF_NORECEIVESHADOW = 64, etc.). `MNetworkEnable` `MNetworkChangeCallback = "OnEffectsChanged"` |
-| `m_hGroundEntity` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | CHandle to the entity this entity is standing on (INVALID_EHANDLE if airborne). `MNetworkEnable` `MNetworkPriority = 32` `MNetworkUserGroup = "Player"` |
-| `m_nGroundBodyIndex` | int32 | `MNetworkEnable` `MNetworkPriority = 32` `MNetworkUserGroup = "Player"` |
-| `m_flFriction` | float32 | Surface friction multiplier (1.0 = normal; lower values make the entity slide more). `MNetworkEnable` `MNetworkBitCount = 8` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 4.000000` `MNetworkEncodeFlags = 1` `MNetworkUserGroup = "LocalPlayerExclusive"` |
-| `m_flElasticity` | float32 | `MNetworkEnable` `MNetworkEncoder = "coord"` |
-| `m_flGravityScale` | float32 | Gravity scale multiplier (1.0 = normal; 0 = no gravity). `MNetworkEnable` |
-| `m_flTimeScale` | float32 | Time-scale multiplier applied to this entity's simulation (1.0 = real time; used by bullet time effects). `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
-| `m_flWaterLevel` | float32 | `MNetworkEnable` `MNetworkUserGroup = "Water"` `MNetworkBitCount = 8` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 1.000000` `MNetworkEncodeFlags = 8` |
-| `m_bGravityDisabled` | bool | `MNetworkEnable` |
-| `m_bAnimatedEveryTick` | bool | True when the entity's animation must be updated every server tick regardless of network interest. `MNetworkEnable` |
+| `m_hEffectEntity` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
+| `m_hOwnerEntity` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | CHandle to the entity that owns or spawned this entity (e.g. the thrower of a grenade). |
+| `m_fEffects` | uint32 | Effect flags bitmask (EF_NODRAW = 32, EF_NORECEIVESHADOW = 64, etc.). |
+| `m_hGroundEntity` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | CHandle to the entity this entity is standing on (INVALID_EHANDLE if airborne). |
+| `m_nGroundBodyIndex` | int32 |  |
+| `m_flFriction` | float32 | Surface friction multiplier (1.0 = normal; lower values make the entity slide more). |
+| `m_flElasticity` | float32 |  |
+| `m_flGravityScale` | float32 | Gravity scale multiplier (1.0 = normal; 0 = no gravity). |
+| `m_flTimeScale` | float32 | Time-scale multiplier applied to this entity's simulation (1.0 = real time; used by bullet time effects). |
+| `m_flWaterLevel` | float32 |  |
+| `m_bGravityDisabled` | bool |  |
+| `m_bAnimatedEveryTick` | bool | True when the entity's animation must be updated every server tick regardless of network interest. |
 | `m_flActualGravityScale` | float32 |  |
 | `m_bGravityActuallyDisabled` | bool |  |
 | `m_bDisableLowViolence` | bool |  |
@@ -1691,15 +1702,15 @@ classDiagram
 | `m_OnUser3` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnUser4` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_iInitialTeamNum` | int32 |  |
-| `m_flNavIgnoreUntilTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` |
+| `m_flNavIgnoreUntilTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_vecAngVelocity` | QAngle |  |
 | `m_bNetworkQuantizeOriginAndAngles` | bool |  |
 | `m_bLagCompensate` | bool |  |
 | `m_pBlocker` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 | `m_flLocalTime` | float32 |  |
 | `m_flVPhysicsUpdateLocalTime` | float32 |  |
-| `m_nBloodType` | [BloodType](../schemas/client.md#bloodtype) | `MNetworkEnable` |
-| `m_pPulseGraphInstance` | [CPulseGraphInstance_ServerEntity](../schemas/server.md#cpulsegraphinstance_serverentity)* | `MSaveOpsForField = "GetPulseInstanceSaveRestoreOps"` |
+| `m_nBloodType` | [BloodType](../schemas/client.md#bloodtype) |  |
+| `m_pPulseGraphInstance` | [CPulseGraphInstance_ServerEntity](../schemas/server.md#cpulsegraphinstance_serverentity)* | `MKV3TransferSaveOpsForField = "GetPulseInstanceSaveRestoreOps"` |
 
 ### CBaseEntityAPI
 
@@ -1740,68 +1751,17 @@ classDiagram
 | `m_OnPass` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnFail` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 
-### CBaseFlex
+### CBaseGrenade
 
 **Inherits from:** [CBaseAnimGraph](server.md#cbaseanimgraph)
 
-**Derived by:** [CBaseCombatCharacter](server.md#cbasecombatcharacter), [CBaseFlexAlias_funCBaseFlex](server.md#cbaseflexalias_funcbaseflex), [CBaseGrenade](server.md#cbasegrenade), [CEconEntity](server.md#ceconentity)
-
-**Relationships:**
-
-```mermaid
-classDiagram
-    CBaseAnimGraph <|-- CBaseFlex
-    C_BaseModelEntity <|-- CBaseAnimGraph
-    C_BaseEntity <|-- C_BaseModelEntity
-    CEntityInstance <|-- C_BaseEntity
-    CBaseFlex <|-- CBaseCombatCharacter
-    CBaseFlex <|-- CBaseFlexAlias_funCBaseFlex
-    CBaseFlex <|-- CBaseGrenade
-    CBaseFlex <|-- CEconEntity
-    CBaseFlex *-- GameTime_t
-    CBaseFlex *-- SceneEventId_t
-```
-
-**Fields:**
-
-| Name | Type | Annotations |
-|------|------|-------------|
-| `m_flexWeight` | CNetworkUtlVectorBase< float32 > | `MNetworkEnable` `MNetworkBitCount = 12` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 1.000000` `MNetworkEncodeFlags = 1` |
-| `m_vLookTargetPosition` | VectorWS | `MNetworkEnable` `MNetworkEncoder = "coord"` |
-| `m_flAllowResponsesEndTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
-| `m_flLastFlexAnimationTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
-| `m_nNextSceneEventId` | [SceneEventId_t](../schemas/client.md#sceneeventid_t) |  |
-| `m_bUpdateLayerPriorities` | bool | `MNotSaved` |
-
-### CBaseFlexAlias_funCBaseFlex
-
-**Inherits from:** [CBaseFlex](server.md#cbaseflex)
-
-**Relationships:**
-
-```mermaid
-classDiagram
-    CBaseFlex <|-- CBaseFlexAlias_funCBaseFlex
-    CBaseAnimGraph <|-- CBaseFlex
-    C_BaseModelEntity <|-- CBaseAnimGraph
-    C_BaseEntity <|-- C_BaseModelEntity
-    CEntityInstance <|-- C_BaseEntity
-```
-
-### CBaseGrenade
-
-**Inherits from:** [CBaseFlex](server.md#cbaseflex)
-
 **Derived by:** [CBaseCSGrenadeProjectile](server.md#cbasecsgrenadeprojectile)
 
-**Metadata:** `MNetworkIncludeByName = "m_fFlags"`, `MNetworkIncludeByName = "m_vecVelocity"`, `MNetworkExcludeByName = "m_flexWeight"`, `MNetworkExcludeByUserGroup = "m_flPoseParameter"`, `MNetworkExcludeByName = "m_nResetEventsParity"`, `MNetworkExcludeByUserGroup = "overlay_vars"`, `MNetworkExcludeByUserGroup = "m_flCycle"`, `MNetworkExcludeByName = "m_baseLayer.m_hSequence"`, `MNetworkExcludeByName = "m_animationController.m_flPlaybackRate"`, `MNetworkExcludeByName = "m_nNewSequenceParity"`
-
 **Relationships:**
 
 ```mermaid
 classDiagram
-    CBaseFlex <|-- CBaseGrenade
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CBaseGrenade
     C_BaseModelEntity <|-- CBaseAnimGraph
     C_BaseEntity <|-- C_BaseModelEntity
     CEntityInstance <|-- C_BaseEntity
@@ -1819,14 +1779,14 @@ classDiagram
 | `m_OnExplode` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_bHasWarnedAI` | bool |  |
 | `m_bIsSmokeGrenade` | bool |  |
-| `m_bIsLive` | bool | `MNetworkEnable` |
-| `m_DmgRadius` | float32 | `MNetworkEnable` `MNetworkBitCount = 10` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 1024.000000` `MNetworkEncodeFlags = 1` |
-| `m_flDetonateTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` |
+| `m_bIsLive` | bool |  |
+| `m_DmgRadius` | float32 |  |
+| `m_flDetonateTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_flWarnAITime` | float32 |  |
-| `m_flDamage` | float32 | `MNetworkEnable` `MNetworkBitCount = 10` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 256.000000` `MNetworkEncodeFlags = 1` |
+| `m_flDamage` | float32 |  |
 | `m_iszBounceSound` | CUtlSymbolLarge |  |
 | `m_ExplosionSound` | CUtlString |  |
-| `m_hThrower` | CHandle< [CCSPlayerPawn](../schemas/server.md#ccsplayerpawn) > | `MNetworkEnable` |
+| `m_hThrower` | CHandle< [CCSPlayerPawn](../schemas/server.md#ccsplayerpawn) > |  |
 | `m_flNextAttack` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_hOriginalThrower` | CHandle< [CCSPlayerPawn](../schemas/server.md#ccsplayerpawn) > |  |
 
@@ -1909,6 +1869,7 @@ classDiagram
     CBaseModelEntity <|-- CWorld
     CBaseModelEntity --> CRenderComponent
     CBaseModelEntity *-- CHitboxComponent
+    CBaseModelEntity --> CChoreoComponent
     CBaseModelEntity *-- HitGroup_t
     CBaseModelEntity --> CDestructiblePartsComponent
     CBaseModelEntity *-- GameTime_t
@@ -1916,7 +1877,6 @@ classDiagram
     CBaseModelEntity *-- RenderMode_t
     CBaseModelEntity *-- RenderFx_t
     CBaseModelEntity *-- EntityRenderAttribute_t
-    CBaseModelEntity *-- CCollisionProperty
 ```
 
 **Fields:**
@@ -1924,7 +1884,8 @@ classDiagram
 | Name | Type | Annotations |
 |------|------|-------------|
 | `m_CRenderComponent` | [CRenderComponent](../schemas/server.md#crendercomponent)* | `MNotSaved` |
-| `m_CHitboxComponent` | [CHitboxComponent](../schemas/server.md#chitboxcomponent) | `MNetworkEnable` `MNetworkUserGroup = "CHitboxComponent"` `MNetworkAlias = "CHitboxComponent"` `MNetworkTypeAlias = "CHitboxComponent"` |
+| `m_CHitboxComponent` | [CHitboxComponent](../schemas/server.md#chitboxcomponent) |  |
+| `m_pChoreoComponent` | [CChoreoComponent](../schemas/server.md#cchoreocomponent)* | `MPtrAutoallocate` |
 | `m_nDestructiblePartInitialStateDestructed0` | [HitGroup_t](../schemas/client.md#hitgroup_t) |  |
 | `m_nDestructiblePartInitialStateDestructed1` | [HitGroup_t](../schemas/client.md#hitgroup_t) |  |
 | `m_nDestructiblePartInitialStateDestructed2` | [HitGroup_t](../schemas/client.md#hitgroup_t) |  |
@@ -1935,26 +1896,90 @@ classDiagram
 | `m_nDestructiblePartInitialStateDestructed2_PartIndex` | int32 |  |
 | `m_nDestructiblePartInitialStateDestructed3_PartIndex` | int32 |  |
 | `m_nDestructiblePartInitialStateDestructed4_PartIndex` | int32 |  |
-| `m_pDestructiblePartsSystemComponent` | [CDestructiblePartsComponent](../schemas/server.md#cdestructiblepartscomponent)* | `MNetworkEnable` `MPtrAutoallocate` `MNetworkTypeAlias = "CDestructiblePartsSystemComponent*"` |
+| `m_bDestructiblePartInitialStateDestructed0_GenerateBreakpieces` | bool |  |
+| `m_bDestructiblePartInitialStateDestructed1_GenerateBreakpieces` | bool |  |
+| `m_bDestructiblePartInitialStateDestructed2_GenerateBreakpieces` | bool |  |
+| `m_bDestructiblePartInitialStateDestructed3_GenerateBreakpieces` | bool |  |
+| `m_bDestructiblePartInitialStateDestructed4_GenerateBreakpieces` | bool |  |
+| `m_pDestructiblePartsSystemComponent` | [CDestructiblePartsComponent](../schemas/server.md#cdestructiblepartscomponent)* | `MPtrAutoallocate` |
+| `m_OnDestructibleHitGroupDamageLevelChanged` | CEntityOutputTemplate< [CBaseModelEntity](../schemas/server.md#cbasemodelentity)::OnDamageLevelChangedArgs_t > |  |
 | `m_flDissolveStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_OnIgnite` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
-| `m_nRenderMode` | [RenderMode_t](../schemas/client.md#rendermode_t) | RenderMode_t enum controlling transparency and rendering method (0 = Normal, 5 = Translucent, etc.). `MNetworkEnable` |
-| `m_nRenderFX` | [RenderFx_t](../schemas/client.md#renderfx_t) | RenderFx_t enum for special rendering effects (pulsing, fading, hologram, etc.). `MNetworkEnable` |
+| `m_nRenderMode` | [RenderMode_t](../schemas/client.md#rendermode_t) | RenderMode_t enum controlling transparency and rendering method (0 = Normal, 5 = Translucent, etc.). |
+| `m_nRenderFX` | [RenderFx_t](../schemas/client.md#renderfx_t) | RenderFx_t enum for special rendering effects (pulsing, fading, hologram, etc.). |
 | `m_bAllowFadeInView` | bool |  |
-| `m_clrRender` | Color | RGBA tint colour multiplied onto the entity's diffuse texture. `MNetworkEnable` `MNetworkChangeCallback = "OnColorChanged"` |
-| `m_vecRenderAttributes` | CUtlVectorEmbeddedNetworkVar< [EntityRenderAttribute_t](../schemas/server.md#entityrenderattribute_t) > | `MNetworkEnable` `MNetworkChangeCallback = "OnRenderAttributesChanged"` |
-| `m_bRenderToCubemaps` | bool | `MNetworkEnable` |
-| `m_bNoInterpolate` | bool | `MNetworkEnable` |
-| `m_Collision` | [CCollisionProperty](../schemas/server.md#ccollisionproperty) | CCollisionProperty struct encoding the entity's collision bounding box shape and flags. `MNetworkEnable` |
-| `m_Glow` | [CGlowProperty](../schemas/server.md#cglowproperty) | CGlowProperty struct controlling the entity's glow outline (colour, radius, visibility rules). `MNetworkEnable` |
-| `m_flGlowBackfaceMult` | float32 | Multiplier for the glow effect on back-facing surfaces of the model. `MNetworkEnable` |
-| `m_fadeMinDist` | float32 | Minimum distance (world units) at which the entity starts to fade out. `MNetworkEnable` |
-| `m_fadeMaxDist` | float32 | Distance at which the entity is fully faded out and invisible. `MNetworkEnable` |
-| `m_flFadeScale` | float32 | Scale factor applied to fade distances; 0 disables distance fading. `MNetworkEnable` |
-| `m_flShadowStrength` | float32 | Opacity of this entity's cast shadow (0 = no shadow, 1 = full shadow). `MNetworkEnable` |
-| `m_nObjectCulling` | uint8 | `MNetworkEnable` |
-| `m_vecViewOffset` | [CNetworkViewOffsetVector](../schemas/client.md#cnetworkviewoffsetvector) | Offset from the entity origin to the player's view position (eye height). `MNetworkEnable` `MNetworkPriority = 32` `MNetworkUserGroup = "Player"` |
-| `m_bvDisabledHitGroups` | uint32[1] | `MNetworkEnable` `MNetworkChangeCallback = "OnDisabledHitgroupsChanged"` `MSaveOpsForField = "GetHitgroupDisableListSaveRestoreOps"` |
+| `m_clrRender` | Color | RGBA tint colour multiplied onto the entity's diffuse texture. |
+| `m_vecRenderAttributes` | CUtlVectorEmbeddedNetworkVar< [EntityRenderAttribute_t](../schemas/server.md#entityrenderattribute_t) > |  |
+| `m_bRenderToCubemaps` | bool |  |
+| `m_bNoInterpolate` | bool |  |
+| `m_Collision` | [CCollisionProperty](../schemas/server.md#ccollisionproperty) | CCollisionProperty struct encoding the entity's collision bounding box shape and flags. |
+| `m_Glow` | [CGlowProperty](../schemas/server.md#cglowproperty) | CGlowProperty struct controlling the entity's glow outline (colour, radius, visibility rules). |
+| `m_flGlowBackfaceMult` | float32 | Multiplier for the glow effect on back-facing surfaces of the model. |
+| `m_fadeMinDist` | float32 | Minimum distance (world units) at which the entity starts to fade out. |
+| `m_fadeMaxDist` | float32 | Distance at which the entity is fully faded out and invisible. |
+| `m_flFadeScale` | float32 | Scale factor applied to fade distances; 0 disables distance fading. |
+| `m_flShadowStrength` | float32 | Opacity of this entity's cast shadow (0 = no shadow, 1 = full shadow). |
+| `m_nObjectCulling` | uint8 |  |
+| `m_bodyGroupChoices` | CUtlOrderedMap< CGlobalSymbol, int32 > |  |
+| `m_vecViewOffset` | [CNetworkViewOffsetVector](../schemas/client.md#cnetworkviewoffsetvector) | Offset from the entity origin to the player's view position (eye height). |
+| `m_bvDisabledHitGroups` | uint32[1] | `MSaveOpsForField = "GetHitgroupDisableListSaveRestoreOps"` |
+
+### CBaseModelEntity
+
+Extends CBaseEntity with a visible model, collision, glow, and render properties.  Base class for all entities that have a mesh in the world.
+
+
+**Derived by:** [CBarnLight](server.md#cbarnlight), [CBaseClientUIEntity](server.md#cbaseclientuientity), [CBaseToggle](server.md#cbasetoggle), [CBeam](server.md#cbeam), [CBreakable](server.md#cbreakable), [CDynamicLight](server.md#cdynamiclight), [CEntityBlocker](server.md#centityblocker), [CEntityDissolve](server.md#centitydissolve), [CEnvDecal](server.md#cenvdecal), [CEnvSky](server.md#cenvsky), [CFuncBrush](server.md#cfuncbrush), [CFuncConveyor](server.md#cfuncconveyor), [CFuncIllusionary](server.md#cfuncillusionary), [CFuncInteractionLayerClip](server.md#cfuncinteractionlayerclip), [CFuncLadder](server.md#cfuncladder), [CFuncMover](server.md#cfuncmover), [CFuncNavBlocker](server.md#cfuncnavblocker), [CFuncNavObstruction](server.md#cfuncnavobstruction), [CFuncRotating](server.md#cfuncrotating), [CFuncRotator](server.md#cfuncrotator), [CFuncShatterglass](server.md#cfuncshatterglass), [CFuncTrackTrain](server.md#cfunctracktrain), [CFuncTrainControls](server.md#cfunctraincontrols), [CFuncVPhysicsClip](server.md#cfuncvphysicsclip), [CFuncVehicleClip](server.md#cfuncvehicleclip), [CFuncWall](server.md#cfuncwall), [CInferno](server.md#cinferno), [CItemGenericTriggerHelper](server.md#citemgenerictriggerhelper), [CLightEntity](server.md#clightentity), [CMarkupVolume](server.md#cmarkupvolume), [CModelPointEntity](server.md#cmodelpointentity), [CParticleSystem](server.md#cparticlesystem), [CPlatTrigger](server.md#cplattrigger), [CPrecipitationBlocker](server.md#cprecipitationblocker), [CRopeKeyframe](server.md#cropekeyframe), [CRuleEntity](server.md#cruleentity), [CSpotlightEnd](server.md#cspotlightend), [CSprite](server.md#csprite), [CTextureBasedAnimatable](server.md#ctexturebasedanimatable), [CTriggerBrush](server.md#ctriggerbrush), [CTriggerVolume](server.md#ctriggervolume), [CWorld](server.md#cworld)
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"nHitGroup": "HITGROUP_GENERIC",`, `"nDamageLevel": 0,`, `"nDamageLevelsRemaining": 0,`, `"nPrevDamageLevel": 0`, `}`
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CBaseModelEntity <|-- CBarnLight
+    CBaseModelEntity <|-- CBaseClientUIEntity
+    CBaseModelEntity <|-- CBaseToggle
+    CBaseModelEntity <|-- CBeam
+    CBaseModelEntity <|-- CBreakable
+    CBaseModelEntity <|-- CDynamicLight
+    CBaseModelEntity <|-- CEntityBlocker
+    CBaseModelEntity <|-- CEntityDissolve
+    CBaseModelEntity <|-- CEnvDecal
+    CBaseModelEntity <|-- CEnvSky
+    CBaseModelEntity <|-- CFuncBrush
+    CBaseModelEntity <|-- CFuncConveyor
+    CBaseModelEntity <|-- CFuncIllusionary
+    CBaseModelEntity <|-- CFuncInteractionLayerClip
+    CBaseModelEntity <|-- CFuncLadder
+    CBaseModelEntity <|-- CFuncMover
+    CBaseModelEntity <|-- CFuncNavBlocker
+    CBaseModelEntity <|-- CFuncNavObstruction
+    CBaseModelEntity <|-- CFuncRotating
+    CBaseModelEntity <|-- CFuncRotator
+    CBaseModelEntity <|-- CFuncShatterglass
+    CBaseModelEntity <|-- CFuncTrackTrain
+    CBaseModelEntity <|-- CFuncTrainControls
+    CBaseModelEntity <|-- CFuncVPhysicsClip
+    CBaseModelEntity <|-- CFuncVehicleClip
+    CBaseModelEntity <|-- CFuncWall
+    CBaseModelEntity <|-- CInferno
+    CBaseModelEntity <|-- CItemGenericTriggerHelper
+    CBaseModelEntity <|-- CLightEntity
+    CBaseModelEntity <|-- CMarkupVolume
+    CBaseModelEntity <|-- CModelPointEntity
+    CBaseModelEntity <|-- CParticleSystem
+    CBaseModelEntity <|-- CPlatTrigger
+    CBaseModelEntity <|-- CPrecipitationBlocker
+    CBaseModelEntity <|-- CRopeKeyframe
+    CBaseModelEntity <|-- CRuleEntity
+    CBaseModelEntity <|-- CSpotlightEnd
+    CBaseModelEntity <|-- CSprite
+    CBaseModelEntity <|-- CTextureBasedAnimatable
+    CBaseModelEntity <|-- CTriggerBrush
+    CBaseModelEntity <|-- CTriggerVolume
+    CBaseModelEntity <|-- CWorld
+```
 
 ### CBaseModelEntityAPI
 
@@ -1982,10 +2007,10 @@ classDiagram
 | `m_flAnimStartTime` | float32 |  |
 | `m_flAnimEndTime` | float32 |  |
 | `m_flAverageSpeedAcrossFrame` | float32 |  |
-| `m_pCurrentKeyFrame` | [CPathKeyFrame](../schemas/server.md#cpathkeyframe)* | `MClassPtr` |
-| `m_pTargetKeyFrame` | [CPathKeyFrame](../schemas/server.md#cpathkeyframe)* | `MClassPtr` |
-| `m_pPreKeyFrame` | [CPathKeyFrame](../schemas/server.md#cpathkeyframe)* | `MClassPtr` |
-| `m_pPostKeyFrame` | [CPathKeyFrame](../schemas/server.md#cpathkeyframe)* | `MClassPtr` |
+| `m_pCurrentKeyFrame` | CHandle< [CPathKeyFrame](../schemas/server.md#cpathkeyframe) > |  |
+| `m_pTargetKeyFrame` | CHandle< [CPathKeyFrame](../schemas/server.md#cpathkeyframe) > |  |
+| `m_pPreKeyFrame` | CHandle< [CPathKeyFrame](../schemas/server.md#cpathkeyframe) > |  |
+| `m_pPostKeyFrame` | CHandle< [CPathKeyFrame](../schemas/server.md#cpathkeyframe) > |  |
 | `m_flTimeIntoFrame` | float32 |  |
 | `m_iDirection` | int32 |  |
 
@@ -2026,8 +2051,6 @@ Base class for all player controller entities in Source 2.  A controller is the 
 
 **Derived by:** [CCSPlayerController](client.md#ccsplayercontroller)
 
-**Metadata:** `MNetworkIncludeByName = "m_pEntity"`, `MNetworkIncludeByName = "m_flSimulationTime"`, `MNetworkIncludeByName = "m_flCreateTime"`, `MNetworkIncludeByName = "m_iTeamNum"`, `MNetworkIncludeByName = "m_nNextThinkTick"`, `MNetworkIncludeByName = "m_fFlags"`, `MNetworkUserGroupProxy = "CBasePlayerController"`, `MNetworkUserGroupProxy = "CBasePlayerController"`, `MNetworkIncludeByUserGroup = "LocalPlayerExclusive"`
-
 **Relationships:**
 
 ```mermaid
@@ -2045,15 +2068,15 @@ classDiagram
 | Name | Type | Annotations |
 |------|------|-------------|
 | `m_nInButtonsWhichAreToggles` | uint64 | `MNotSaved` |
-| `m_nTickBase` | uint32 | Server tick number at the time of the most-recent usercmd from this client. *Only sent to the owning player (LocalPlayerExclusive). Used for lag compensation and prediction.* `MNetworkEnable` `MNetworkPriority = 1` `MNetworkUserGroup = "LocalPlayerExclusive"` `MNotSaved` |
-| `m_hPawn` | CHandle< [CBasePlayerPawn](../schemas/server.md#cbaseplayerpawn) > | CHandle to the base pawn currently controlled by this controller. *For CS2 human players the concrete type is CCSPlayerPawn.  Use m_hPlayerPawn on CCSPlayerController for the typed handle.* `MNetworkEnable` `MNetworkChangeCallback = "OnPawnChanged"` |
-| `m_bKnownTeamMismatch` | bool | `MNetworkEnable` |
+| `m_nTickBase` | uint32 | Server tick number at the time of the most-recent usercmd from this client. *Only sent to the owning player (LocalPlayerExclusive). Used for lag compensation and prediction.* `MNotSaved` |
+| `m_hPawn` | CHandle< [CBasePlayerPawn](../schemas/server.md#cbaseplayerpawn) > | CHandle to the base pawn currently controlled by this controller. *For CS2 human players the concrete type is CCSPlayerPawn.  Use m_hPlayerPawn on CCSPlayerController for the typed handle.* |
+| `m_bKnownTeamMismatch` | bool |  |
 | `m_nSplitScreenSlot` | CSplitScreenSlot | `MNotSaved` |
 | `m_hSplitOwner` | CHandle< [CBasePlayerController](../schemas/server.md#cbaseplayercontroller) > | `MNotSaved` |
 | `m_hSplitScreenPlayers` | CUtlVector< CHandle< [CBasePlayerController](../schemas/server.md#cbaseplayercontroller) > > | `MNotSaved` |
 | `m_bIsHLTV` | bool |  |
-| `m_iConnected` | [PlayerConnectedState](../schemas/client.md#playerconnectedstate) | PlayerConnectedState enum – 0 = Disconnected, 1 = Connected, 2 = Connecting. `MNetworkEnable` `MNetworkChangeCallback = "OnConnectionStateChanged"` `MNotSaved` |
-| `m_iszPlayerName` | char[128] | Display name of the player, as reported by Steam (up to 128 bytes, UTF-8). `MNetworkEnable` `MNetworkChangeCallback = "OnPlayerControllerNameChanged"` `MNotSaved` |
+| `m_iConnected` | [PlayerConnectedState](../schemas/client.md#playerconnectedstate) | PlayerConnectedState enum – 0 = Disconnected, 1 = Connected, 2 = Connecting. `MNotSaved` |
+| `m_iszPlayerName` | char[128] | Display name of the player, as reported by Steam (up to 128 bytes, UTF-8). `MNotSaved` |
 | `m_szNetworkIDString` | CUtlString | `MNotSaved` |
 | `m_fLerpTime` | float32 | `MNotSaved` |
 | `m_bLagCompensation` | bool | `MNotSaved` |
@@ -2061,13 +2084,13 @@ classDiagram
 | `m_bIsLowViolence` | bool | `MNotSaved` |
 | `m_bGamePaused` | bool | `MNotSaved` |
 | `m_iIgnoreGlobalChat` | [ChatIgnoreType_t](../schemas/client.md#chatignoretype_t) | `MNotSaved` |
-| `m_flLastPlayerTalkTime` | float32 |  |
+| `m_flLastPlayerTalkTime` | float32 | `MKV3TransferSaveOpsForField = "GetEngineTimeSaveRestoreOps"` |
 | `m_flLastEntitySteadyState` | float32 | `MNotSaved` |
 | `m_nAvailableEntitySteadyState` | int32 | `MNotSaved` |
 | `m_bHasAnySteadyStateEnts` | bool | `MNotSaved` |
-| `m_steamID` | uint64 | 64-bit Steam account ID (SteamID64) of the connected client. *Transmitted as a fixed64; only sent to the owning player and GOTV.* `MNetworkEnable` `MNetworkEncoder = "fixed64"` `MNetworkChangeCallback = "OnSteamIDChanged"` `MNotSaved` |
-| `m_bNoClipEnabled` | bool | True when sv_cheats noclip is active for this player. `MNetworkEnable` `MNetworkChangeCallback = "OnNoClipEnableChanged"` |
-| `m_iDesiredFOV` | uint32 | Field-of-view override requested by the player (0 = use server default). `MNetworkEnable` |
+| `m_steamID` | uint64 | 64-bit Steam account ID (SteamID64) of the connected client. *Transmitted as a fixed64; only sent to the owning player and GOTV.* `MNotSaved` |
+| `m_bNoClipEnabled` | bool | True when sv_cheats noclip is active for this player. |
+| `m_iDesiredFOV` | uint32 | Field-of-view override requested by the player (0 = use server default). |
 
 ### CBasePlayerControllerAPI
 
@@ -2077,17 +2100,15 @@ classDiagram
 
 **Derived by:** [CCSPlayerPawnBase](server.md#ccsplayerpawnbase)
 
-**Metadata:** `MNetworkUserGroupProxy = "CBasePlayerPawn"`, `MNetworkExcludeByUserGroup = "FogController"`, `MNetworkIncludeByUserGroup = "Player"`, `MNetworkIncludeByUserGroup = "Water"`, `MNetworkIncludeByUserGroup = "LocalPlayerExclusive"`, `MNetworkIncludeByName = "m_iMaxHealth"`, `MNetworkOverride = "m_vecX CNetworkOriginCellCoordQuantizedVector"`, `MNetworkOverride = "m_vecY CNetworkOriginCellCoordQuantizedVector"`, `MNetworkOverride = "m_vecZ CNetworkOriginCellCoordQuantizedVector"`, `MNetworkExcludeByName = "m_pWeaponServices"`, `MNetworkExcludeByName = "m_pItemServices"`, `MNetworkExcludeByName = "m_pAutoaimServices"`, `MNetworkExcludeByName = "m_pObserverServices"`, `MNetworkExcludeByName = "m_pWaterServices"`, `MNetworkExcludeByName = "m_pUseServices"`, `MNetworkExcludeByName = "m_pFlashlightServices"`, `MNetworkExcludeByName = "m_pMovementServices"`, `MNetworkUserGroupProxy = "CBasePlayerPawn"`
-
 **Relationships:**
 
 ```mermaid
 classDiagram
     CBaseCombatCharacter <|-- CBasePlayerPawn
-    CBaseFlex <|-- CBaseCombatCharacter
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CBaseCombatCharacter
     C_BaseModelEntity <|-- CBaseAnimGraph
     C_BaseEntity <|-- C_BaseModelEntity
+    CEntityInstance <|-- C_BaseEntity
     CBasePlayerPawn <|-- CCSPlayerPawnBase
     CBasePlayerPawn --> CPlayer_WeaponServices
     CBasePlayerPawn --> CPlayer_ItemServices
@@ -2105,27 +2126,27 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_pWeaponServices` | [CPlayer_WeaponServices](../schemas/server.md#cplayer_weaponservices)* | `MNetworkEnable` `MNotSaved` |
-| `m_pItemServices` | [CPlayer_ItemServices](../schemas/server.md#cplayer_itemservices)* | `MNetworkEnable` `MNotSaved` |
-| `m_pAutoaimServices` | [CPlayer_AutoaimServices](../schemas/server.md#cplayer_autoaimservices)* | `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` `MNotSaved` |
-| `m_pObserverServices` | [CPlayer_ObserverServices](../schemas/server.md#cplayer_observerservices)* | `MNetworkEnable` `MNotSaved` |
-| `m_pWaterServices` | [CPlayer_WaterServices](../schemas/server.md#cplayer_waterservices)* | `MNetworkEnable` `MNotSaved` |
-| `m_pUseServices` | [CPlayer_UseServices](../schemas/server.md#cplayer_useservices)* | `MNetworkEnable` `MNotSaved` |
-| `m_pFlashlightServices` | [CPlayer_FlashlightServices](../schemas/server.md#cplayer_flashlightservices)* | `MNetworkEnable` `MNotSaved` |
-| `m_pCameraServices` | [CPlayer_CameraServices](../schemas/server.md#cplayer_cameraservices)* | `MNetworkEnable` `MNotSaved` |
-| `m_pMovementServices` | [CPlayer_MovementServices](../schemas/server.md#cplayer_movementservices)* | `MNetworkEnable` `MNotSaved` |
-| `m_ServerViewAngleChanges` | CUtlVectorEmbeddedNetworkVar< [ViewAngleServerChange_t](../schemas/server.md#viewangleserverchange_t) > | `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` `MNotSaved` |
+| `m_pWeaponServices` | [CPlayer_WeaponServices](../schemas/server.md#cplayer_weaponservices)* |  |
+| `m_pItemServices` | [CPlayer_ItemServices](../schemas/server.md#cplayer_itemservices)* |  |
+| `m_pAutoaimServices` | [CPlayer_AutoaimServices](../schemas/server.md#cplayer_autoaimservices)* |  |
+| `m_pObserverServices` | [CPlayer_ObserverServices](../schemas/server.md#cplayer_observerservices)* |  |
+| `m_pWaterServices` | [CPlayer_WaterServices](../schemas/server.md#cplayer_waterservices)* |  |
+| `m_pUseServices` | [CPlayer_UseServices](../schemas/server.md#cplayer_useservices)* |  |
+| `m_pFlashlightServices` | [CPlayer_FlashlightServices](../schemas/server.md#cplayer_flashlightservices)* |  |
+| `m_pCameraServices` | [CPlayer_CameraServices](../schemas/server.md#cplayer_cameraservices)* |  |
+| `m_pMovementServices` | [CPlayer_MovementServices](../schemas/server.md#cplayer_movementservices)* |  |
+| `m_ServerViewAngleChanges` | CUtlVectorEmbeddedNetworkVar< [ViewAngleServerChange_t](../schemas/server.md#viewangleserverchange_t) > | `MNotSaved` |
 | `v_angle` | QAngle |  |
 | `v_anglePrevious` | QAngle |  |
-| `m_iHideHUD` | uint32 | `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
-| `m_skybox3d` | sky3dparams_t | `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
+| `m_iHideHUD` | uint32 |  |
+| `m_skybox3d` | sky3dparams_t |  |
 | `m_fTimeLastHurt` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
-| `m_flDeathTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` |
+| `m_flDeathTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_fNextSuicideTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNotSaved` |
 | `m_fInitHUD` | bool |  |
-| `m_pExpresser` | [CAI_Expresser](../schemas/server.md#cai_expresser)* | `MNotSaved` |
-| `m_hController` | CHandle< [CBasePlayerController](../schemas/server.md#cbaseplayercontroller) > | `MNetworkEnable` |
-| `m_hDefaultController` | CHandle< [CBasePlayerController](../schemas/server.md#cbaseplayercontroller) > | `MNetworkEnable` |
+| `m_pExpresser` | [CAI_Expresser](../schemas/server.md#cai_expresser)* |  |
+| `m_hController` | CHandle< [CBasePlayerController](../schemas/server.md#cbaseplayercontroller) > |  |
+| `m_hDefaultController` | CHandle< [CBasePlayerController](../schemas/server.md#cbaseplayercontroller) > |  |
 | `m_fHltvReplayDelay` | float32 | `MNotSaved` |
 | `m_fHltvReplayEnd` | float32 | `MNotSaved` |
 | `m_iHltvReplayEntity` | CEntityIndex | `MNotSaved` |
@@ -2135,7 +2156,7 @@ classDiagram
 
 **Inherits from:** [CEntitySubclassVDataBase](client.md#centitysubclassvdatabase)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CBasePlayerVData",`, `"m_sModelName": "",`, `"m_flHeadDamageMultiplier": 3.000000,`, `"m_flChestDamageMultiplier": 1.000000,`, `"m_flStomachDamageMultiplier": 1.000000,`, `"m_flArmDamageMultiplier": 1.000000,`, `"m_flLegDamageMultiplier": 1.000000,`, `"m_flHoldBreathTime": 15.000000,`, `"m_flDrowningDamageInterval": 1.000000,`, `"m_nDrowningDamageInitial": 10,`, `"m_nDrowningDamageMax": 10,`, `"m_nWaterSpeed": 100,`, `"m_flUseRange": 55.000000,`, `"m_flUseAngleTolerance": 45.000000,`, `"m_flCrouchTime": 0.400000`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CBasePlayerVData",`, `"m_sModelName": "",`, `"m_sModelNameAg2Override": "",`, `"m_flHeadDamageMultiplier": 3.000000,`, `"m_flChestDamageMultiplier": 1.000000,`, `"m_flStomachDamageMultiplier": 1.000000,`, `"m_flArmDamageMultiplier": 1.000000,`, `"m_flLegDamageMultiplier": 1.000000,`, `"m_flHoldBreathTime": 15.000000,`, `"m_flDrowningDamageInterval": 1.000000,`, `"m_nDrowningDamageInitial": 10,`, `"m_nDrowningDamageMax": 10,`, `"m_nWaterSpeed": 100,`, `"m_flUseRange": 55.000000,`, `"m_flUseAngleTolerance": 45.000000,`, `"m_flCrouchTime": 0.400000`, `}`
 
 **Relationships:**
 
@@ -2153,17 +2174,15 @@ Base class for all player-held weapons in Source 2.  Manages clip ammo, reserve 
 
 **Derived by:** [CCSWeaponBase](server.md#ccsweaponbase)
 
-**Metadata:** `MNetworkExcludeByName = "m_flexWeight"`, `MNetworkExcludeByUserGroup = "m_flPoseParameter"`, `MNetworkExcludeByUserGroup = "m_flCycle"`, `MNetworkExcludeByUserGroup = "overlay_vars"`, `MNetworkIncludeByName = "m_nNextThinkTick"`, `MNetworkUserGroupProxy = "CBasePlayerWeapon"`
-
 **Relationships:**
 
 ```mermaid
 classDiagram
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CEconEntity
     C_BaseModelEntity <|-- CBaseAnimGraph
     C_BaseEntity <|-- C_BaseModelEntity
+    CEntityInstance <|-- C_BaseEntity
     CBasePlayerWeapon <|-- CCSWeaponBase
     CBasePlayerWeapon *-- GameTick_t
     CBasePlayerWeapon *-- CEntityIOOutput
@@ -2173,13 +2192,13 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_nNextPrimaryAttackTick` | [GameTick_t](../schemas/entity2.md#gametick_t) | Server game-tick after which the next primary fire is permitted. *Only sent to the owning player (LocalWeaponExclusive). Pair with m_flNextPrimaryAttackTickRatio for sub-tick precision.* `MNetworkEnable` `MNetworkUserGroup = "LocalWeaponExclusive"` |
-| `m_flNextPrimaryAttackTickRatio` | float32 | Fractional sub-tick ratio for m_nNextPrimaryAttackTick; together they encode the exact fire-rate timing. `MNetworkEnable` `MNetworkUserGroup = "LocalWeaponExclusive"` |
-| `m_nNextSecondaryAttackTick` | [GameTick_t](../schemas/entity2.md#gametick_t) | Server game-tick after which the next secondary fire is permitted. *Only sent to the owning player (LocalWeaponExclusive).* `MNetworkEnable` `MNetworkUserGroup = "LocalWeaponExclusive"` |
-| `m_flNextSecondaryAttackTickRatio` | float32 | Fractional sub-tick ratio for m_nNextSecondaryAttackTick. `MNetworkEnable` `MNetworkUserGroup = "LocalWeaponExclusive"` |
-| `m_iClip1` | int32 | Current ammunition in the primary clip/magazine. *Serialized with the 'minusone' encoder so -1 means 'use weapon max-clip'. Sent to all clients.* `MNetworkEnable` `MNetworkSerializer = "minusone"` `MNetworkPriority = 32` |
-| `m_iClip2` | int32 | Current ammunition in the secondary clip (unused by most weapons; grenade count for grenade weapons). *Only sent to the owning player (LocalWeaponExclusive).* `MNetworkEnable` `MNetworkSerializer = "minusone"` `MNetworkUserGroup = "LocalWeaponExclusive"` |
-| `m_pReserveAmmo` | int32[2] | Array of 2 reserve-ammo counts; index 0 = primary ammo type, index 1 = secondary ammo type. *Only sent to the owning player (LocalWeaponExclusive).* `MNetworkEnable` `MNetworkUserGroup = "LocalWeaponExclusive"` |
+| `m_nNextPrimaryAttackTick` | [GameTick_t](../schemas/entity2.md#gametick_t) | Server game-tick after which the next primary fire is permitted. *Only sent to the owning player (LocalWeaponExclusive). Pair with m_flNextPrimaryAttackTickRatio for sub-tick precision.* |
+| `m_flNextPrimaryAttackTickRatio` | float32 | Fractional sub-tick ratio for m_nNextPrimaryAttackTick; together they encode the exact fire-rate timing. |
+| `m_nNextSecondaryAttackTick` | [GameTick_t](../schemas/entity2.md#gametick_t) | Server game-tick after which the next secondary fire is permitted. *Only sent to the owning player (LocalWeaponExclusive).* |
+| `m_flNextSecondaryAttackTickRatio` | float32 | Fractional sub-tick ratio for m_nNextSecondaryAttackTick. |
+| `m_iClip1` | int32 | Current ammunition in the primary clip/magazine. *Serialized with the 'minusone' encoder so -1 means 'use weapon max-clip'. Sent to all clients.* |
+| `m_iClip2` | int32 | Current ammunition in the secondary clip (unused by most weapons; grenade count for grenade weapons). *Only sent to the owning player (LocalWeaponExclusive).* |
+| `m_pReserveAmmo` | int32[2] | Array of 2 reserve-ammo counts; index 0 = primary ammo type, index 1 = secondary ammo type. *Only sent to the owning player (LocalWeaponExclusive).* |
 | `m_OnPlayerUse` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 
 ### CBasePlayerWeaponVData
@@ -2188,7 +2207,7 @@ classDiagram
 
 **Derived by:** [CCSWeaponBaseVData](client.md#ccsweaponbasevdata)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CBasePlayerWeaponVData",`, `"m_szWorldModel": "",`, `"m_sToolsOnlyOwnerModelName": "",`, `"m_bBuiltRightHanded": true,`, `"m_bAllowFlipping": true,`, `"m_sMuzzleAttachment": "muzzle",`, `"m_szMuzzleFlashParticle": "",`, `"m_szMuzzleFlashParticleConfig": "",`, `"m_szBarrelSmokeParticle": "",`, `"m_nMuzzleSmokeShotThreshold": 4,`, `"m_flMuzzleSmokeTimeout": 0.250000,`, `"m_flMuzzleSmokeDecrementRate": 1.000000,`, `"m_bGenerateMuzzleLight": true,`, `"m_bLinkedCooldowns": false,`, `"m_iFlags": "",`, `"m_iWeight": 0,`, `"m_bAutoSwitchTo": true,`, `"m_bAutoSwitchFrom": true,`, `"m_nPrimaryAmmoType": "",`, `"m_nSecondaryAmmoType": "",`, `"m_iMaxClip1": 0,`, `"m_iMaxClip2": 0,`, `"m_iDefaultClip1": -1,`, `"m_iDefaultClip2": -1,`, `"m_bReserveAmmoAsClips": false,`, `"m_bTreatAsSingleClip": false,`, `"m_bKeepLoadedAmmo": false,`, `"m_iRumbleEffect": "RUMBLE_INVALID",`, `"m_flDropSpeed": 300.000000,`, `"m_iSlot": 0,`, `"m_iPosition": 0,`, `"m_aShootSounds":`, `{`, `}`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CBasePlayerWeaponVData",`, `"m_szWorldModel": "",`, `"m_szWorldModelAg2Override": "",`, `"m_sToolsOnlyOwnerModelName": "",`, `"m_bBuiltRightHanded": true,`, `"m_bAllowFlipping": true,`, `"m_sMuzzleAttachment": "muzzle",`, `"m_szMuzzleFlashParticle": "",`, `"m_szMuzzleFlashParticleConfig": "",`, `"m_szBarrelSmokeParticle": "",`, `"m_nMuzzleSmokeShotThreshold": 4,`, `"m_flMuzzleSmokeTimeout": 0.250000,`, `"m_flMuzzleSmokeDecrementRate": 1.000000,`, `"m_bGenerateMuzzleLight": true,`, `"m_bLinkedCooldowns": false,`, `"m_iFlags": "",`, `"m_iWeight": 0,`, `"m_bAutoSwitchTo": true,`, `"m_bAutoSwitchFrom": true,`, `"m_nPrimaryAmmoType": "",`, `"m_nSecondaryAmmoType": "",`, `"m_iMaxClip1": 0,`, `"m_iMaxClip2": 0,`, `"m_iDefaultClip1": -1,`, `"m_iDefaultClip2": -1,`, `"m_bReserveAmmoAsClips": false,`, `"m_bTreatAsSingleClip": false,`, `"m_bKeepLoadedAmmo": false,`, `"m_iRumbleEffect": "RUMBLE_INVALID",`, `"m_flDropSpeed": 300.000000,`, `"m_iSlot": 0,`, `"m_iPosition": 0,`, `"m_aShootSounds":`, `{`, `}`, `}`
 
 **Relationships:**
 
@@ -2231,8 +2250,6 @@ classDiagram
 
 **Derived by:** [CPropDoorRotating](server.md#cpropdoorrotating)
 
-**Metadata:** `MNetworkExcludeByName = "m_flexWeight"`, `MNetworkExcludeByUserGroup = "m_flPoseParameter"`, `MNetworkExcludeByName = "m_animationController.m_flPlaybackRate"`, `MNetworkExcludeByUserGroup = "overlay_vars"`, `MNetworkIncludeByName = "m_spawnflags"`
-
 **Relationships:**
 
 ```mermaid
@@ -2256,11 +2273,11 @@ classDiagram
 | `m_hDoorList` | CUtlVector< CHandle< [CBasePropDoor](../schemas/server.md#cbasepropdoor) > > | `MNotSaved` |
 | `m_nHardwareType` | int32 |  |
 | `m_bNeedsHardware` | bool |  |
-| `m_eDoorState` | [DoorState_t](../schemas/client.md#doorstate_t) | `MNetworkEnable` |
-| `m_bLocked` | bool | `MNetworkEnable` |
-| `m_bNoNPCs` | bool | `MNetworkEnable` |
-| `m_closedPosition` | Vector | `MNetworkEnable` |
-| `m_closedAngles` | QAngle | `MNetworkEnable` |
+| `m_eDoorState` | [DoorState_t](../schemas/client.md#doorstate_t) |  |
+| `m_bLocked` | bool |  |
+| `m_bNoNPCs` | bool |  |
+| `m_closedPosition` | Vector |  |
+| `m_closedAngles` | QAngle |  |
 | `m_hBlocker` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 | `m_bFirstBlocked` | bool |  |
 | `m_ls` | locksound_t |  |
@@ -2279,7 +2296,7 @@ classDiagram
 | `m_numCloseAttempts` | int32 | `MNotSaved` |
 | `m_nPhysicsMaterial` | CUtlStringToken | `MNotSaved` |
 | `m_SlaveName` | CUtlSymbolLarge |  |
-| `m_hMaster` | CHandle< [CBasePropDoor](../schemas/server.md#cbasepropdoor) > | `MNetworkEnable` |
+| `m_hMaster` | CHandle< [CBasePropDoor](../schemas/server.md#cbasepropdoor) > |  |
 | `m_OnBlockedClosing` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnBlockedOpening` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnUnblockedClosing` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
@@ -2341,8 +2358,6 @@ classDiagram
 
 **Derived by:** [CBuyZone](server.md#cbuyzone), [CChangeLevel](server.md#cchangelevel), [CColorCorrectionVolume](server.md#ccolorcorrectionvolume), [CFogTrigger](server.md#cfogtrigger), [CFootstepControl](server.md#cfootstepcontrol), [CPostProcessingVolume](server.md#cpostprocessingvolume), [CPrecipitation](server.md#cprecipitation), [CServerRagdollTrigger](server.md#cserverragdolltrigger), [CTonemapTrigger](server.md#ctonemaptrigger), [CTriggerActiveWeaponDetect](server.md#ctriggeractiveweapondetect), [CTriggerBombReset](server.md#ctriggerbombreset), [CTriggerBuoyancy](server.md#ctriggerbuoyancy), [CTriggerCallback](server.md#ctriggercallback), [CTriggerDetectBulletFire](server.md#ctriggerdetectbulletfire), [CTriggerDetectExplosion](server.md#ctriggerdetectexplosion), [CTriggerGameEvent](server.md#ctriggergameevent), [CTriggerGravity](server.md#ctriggergravity), [CTriggerHostageReset](server.md#ctriggerhostagereset), [CTriggerHurt](server.md#ctriggerhurt), [CTriggerLerpObject](server.md#ctriggerlerpobject), [CTriggerMultiple](server.md#ctriggermultiple), [CTriggerPhysics](server.md#ctriggerphysics), [CTriggerProximity](server.md#ctriggerproximity), [CTriggerPush](server.md#ctriggerpush), [CTriggerRemove](server.md#ctriggerremove), [CTriggerSave](server.md#ctriggersave), [CTriggerSndSosOpvar](server.md#ctriggersndsosopvar), [CTriggerSoundscape](server.md#ctriggersoundscape), [CTriggerTeleport](server.md#ctriggerteleport), [CTriggerToggleSave](server.md#ctriggertogglesave)
 
-**Metadata:** `MNetworkIncludeByName = "m_spawnflags"`
-
 **Relationships:**
 
 ```mermaid
@@ -2400,7 +2415,7 @@ classDiagram
 | `m_hTouchingEntities` | CUtlVector< CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > > |  |
 | `m_iFilterName` | CUtlSymbolLarge |  |
 | `m_hFilter` | CHandle< [CBaseFilter](../schemas/server.md#cbasefilter) > |  |
-| `m_bDisabled` | bool | `MNetworkEnable` `MNetworkChangeCallback = "OnNetworkedDisableChanged"` |
+| `m_bDisabled` | bool |  |
 | `m_bUseAsyncQueries` | bool |  |
 
 ### CBaseTriggerAPI
@@ -2410,8 +2425,6 @@ classDiagram
 **Inherits from:** [CBaseModelEntity](server.md#cbasemodelentity)
 
 **Derived by:** [CEnvBeam](server.md#cenvbeam), [CEnvLaser](server.md#cenvlaser)
-
-**Metadata:** `MNetworkIncludeByUserGroup = "Origin"`, `MNetworkIncludeByName = "m_nModelIndex"`, `MNetworkIncludeByName = "m_nRenderFX"`, `MNetworkIncludeByName = "m_nRenderMode"`, `MNetworkIncludeByName = "m_clrRender"`, `MNetworkIncludeByName = "CGameSceneNode::m_hParent"`, `MNetworkOverride = "m_clrRender"`
 
 **Relationships:**
 
@@ -2434,28 +2447,28 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_flFrameRate` | float32 | `MNetworkEnable` `MNetworkBitCount = 10` `MNetworkMinValue = -25.000000` `MNetworkMaxValue = 25.000000` `MNetworkEncodeFlags = 2` |
-| `m_flHDRColorScale` | float32 | `MNetworkEnable` |
+| `m_flFrameRate` | float32 |  |
+| `m_flHDRColorScale` | float32 |  |
 | `m_flFireTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_flDamage` | float32 |  |
-| `m_nNumBeamEnts` | uint8 | `MNetworkEnable` |
-| `m_hBaseMaterial` | CStrongHandle< [InfoForResourceTypeIMaterial2](../schemas/resourcesystem.md#infoforresourcetypeimaterial2) > | `MNetworkEnable` |
-| `m_nHaloIndex` | CStrongHandle< [InfoForResourceTypeIMaterial2](../schemas/resourcesystem.md#infoforresourcetypeimaterial2) > | `MNetworkEnable` |
-| `m_nBeamType` | [BeamType_t](../schemas/client.md#beamtype_t) | `MNetworkEnable` |
-| `m_nBeamFlags` | uint32 | `MNetworkEnable` |
-| `m_hAttachEntity` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) >[10] | `MNetworkEnable` |
-| `m_nAttachIndex` | [AttachmentHandle_t](../schemas/modellib.md#attachmenthandle_t)[10] | `MNetworkEnable` |
-| `m_fWidth` | float32 | `MNetworkEnable` `MNetworkBitCount = 10` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 102.300003` `MNetworkEncodeFlags = 2` |
-| `m_fEndWidth` | float32 | `MNetworkEnable` `MNetworkBitCount = 10` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 102.300003` `MNetworkEncodeFlags = 2` |
-| `m_fFadeLength` | float32 | `MNetworkEnable` |
-| `m_fHaloScale` | float32 | `MNetworkEnable` |
-| `m_fAmplitude` | float32 | `MNetworkEnable` `MNetworkBitCount = 8` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 64.000000` `MNetworkEncodeFlags = 1` |
-| `m_fStartFrame` | float32 | `MNetworkEnable` `MNetworkBitCount = 8` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 256.000000` `MNetworkEncodeFlags = 1` |
-| `m_fSpeed` | float32 | `MNetworkEnable` `MNetworkBitCount = 8` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 100.000000` |
-| `m_flFrame` | float32 | `MNetworkEnable` `MNetworkBitCount = 20` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 256.000000` `MNetworkEncodeFlags = 1` `MNetworkPriority = 32` |
-| `m_nClipStyle` | [BeamClipStyle_t](../schemas/client.md#beamclipstyle_t) | `MNetworkEnable` |
-| `m_bTurnedOff` | bool | `MNetworkEnable` |
-| `m_vecEndPos` | VectorWS | `MNetworkEnable` `MNetworkEncoder = "coord"` |
+| `m_nNumBeamEnts` | uint8 |  |
+| `m_hBaseMaterial` | CStrongHandle< [InfoForResourceTypeIMaterial2](../schemas/resourcesystem.md#infoforresourcetypeimaterial2) > |  |
+| `m_nHaloIndex` | CStrongHandle< [InfoForResourceTypeIMaterial2](../schemas/resourcesystem.md#infoforresourcetypeimaterial2) > |  |
+| `m_nBeamType` | [BeamType_t](../schemas/client.md#beamtype_t) |  |
+| `m_nBeamFlags` | uint32 |  |
+| `m_hAttachEntity` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) >[10] |  |
+| `m_nAttachIndex` | [AttachmentHandle_t](../schemas/modellib.md#attachmenthandle_t)[10] |  |
+| `m_fWidth` | float32 |  |
+| `m_fEndWidth` | float32 |  |
+| `m_fFadeLength` | float32 |  |
+| `m_fHaloScale` | float32 |  |
+| `m_fAmplitude` | float32 |  |
+| `m_fStartFrame` | float32 |  |
+| `m_fSpeed` | float32 |  |
+| `m_flFrame` | float32 |  |
+| `m_nClipStyle` | [BeamClipStyle_t](../schemas/client.md#beamclipstyle_t) |  |
+| `m_bTurnedOff` | bool |  |
+| `m_vecEndPos` | VectorWS |  |
 | `m_hEndEntity` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 | `m_nDissolveType` | int32 |  |
 
@@ -2524,7 +2537,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_animationController` | [CBaseAnimGraphController](../schemas/server.md#cbaseanimgraphcontroller) | `MNetworkEnable` |
+| `m_animationController` | [CBaseAnimGraphController](../schemas/server.md#cbaseanimgraphcontroller) |  |
 
 ### CBodyComponentBaseModelEntity
 
@@ -2556,7 +2569,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_sceneNode` | [CGameSceneNode](../schemas/server.md#cgamescenenode) | `MNetworkEnable` |
+| `m_sceneNode` | [CGameSceneNode](../schemas/server.md#cgamescenenode) |  |
 
 ### CBodyComponentSkeletonInstance
 
@@ -2579,7 +2592,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_skeletonInstance` | [CSkeletonInstance](../schemas/server.md#cskeletoninstance) | `MNetworkEnable` |
+| `m_skeletonInstance` | [CSkeletonInstance](../schemas/server.md#cskeletoninstance) |  |
 
 ### CBombTarget
 
@@ -2607,7 +2620,7 @@ classDiagram
 | `m_OnBombDefused` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_bIsBombSiteB` | bool |  |
 | `m_bIsHeistBombTarget` | bool |  |
-| `m_bBombPlantedHere` | bool | `MNetworkEnable` |
+| `m_bBombPlantedHere` | bool |  |
 | `m_szMountTarget` | CUtlSymbolLarge |  |
 | `m_hInstructorHint` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 | `m_nBombSiteDesignation` | int32 |  |
@@ -2673,7 +2686,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_CPropDataComponent` | [CPropDataComponent](../schemas/server.md#cpropdatacomponent) | `MNetworkEnable` `MNetworkUserGroup = "CPropDataComponent"` `MNetworkAlias = "CPropDataComponent"` `MNetworkTypeAlias = "CPropDataComponent"` |
+| `m_CPropDataComponent` | [CPropDataComponent](../schemas/server.md#cpropdatacomponent) |  |
 | `m_Material` | [Materials](../schemas/server.md#materials) |  |
 | `m_hBreaker` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 | `m_Explosion` | [Explosions](../schemas/server.md#explosions) |  |
@@ -2685,7 +2698,7 @@ classDiagram
 | `m_nOverrideBlockLOS` | [EOverrideBlockLOS_t](../schemas/server.md#eoverrideblocklos_t) |  |
 | `m_OnStartDeath` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnBreak` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
-| `m_OnHealthChanged` | CEntityOutputTemplate< float32, float32 > |  |
+| `m_OnHealthChanged` | CEntityOutputTemplate< float32 > |  |
 | `m_PerformanceMode` | [PerformanceMode_t](../schemas/client.md#performancemode_t) |  |
 | `m_hPhysicsAttacker` | CHandle< [CBasePlayerPawn](../schemas/server.md#cbaseplayerpawn) > |  |
 | `m_flLastPhysicsInfluenceTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
@@ -2713,7 +2726,6 @@ classDiagram
     CBreakableProp *-- PerformanceMode_t
     CBreakableProp *-- GameTime_t
     CBreakableProp *-- BreakableContentsType_t
-    CBreakableProp *-- BaseExplosionTypes_t
     CBreakableProp --> CBasePlayerPawn
 ```
 
@@ -2721,10 +2733,10 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_CPropDataComponent` | [CPropDataComponent](../schemas/server.md#cpropdatacomponent) | `MNetworkEnable` `MNetworkUserGroup = "CPropDataComponent"` `MNetworkAlias = "CPropDataComponent"` `MNetworkTypeAlias = "CPropDataComponent"` |
+| `m_CPropDataComponent` | [CPropDataComponent](../schemas/server.md#cpropdatacomponent) |  |
 | `m_OnStartDeath` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnBreak` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
-| `m_OnHealthChanged` | CEntityOutputTemplate< float32, float32 > |  |
+| `m_OnHealthChanged` | CEntityOutputTemplate< float32 > |  |
 | `m_OnTakeDamage` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_impactEnergyScale` | float32 |  |
 | `m_iMinHealthDmg` | int32 |  |
@@ -2741,7 +2753,7 @@ classDiagram
 | `m_bHasBreakPiecesOrCommands` | bool |  |
 | `m_explodeDamage` | float32 |  |
 | `m_explodeRadius` | float32 |  |
-| `m_nExplosionType` | [BaseExplosionTypes_t](../schemas/client.md#baseexplosiontypes_t) |  |
+| `m_sExplosionType` | CGlobalSymbol |  |
 | `m_explosionDelay` | float32 |  |
 | `m_explosionBuildupSound` | CUtlSymbolLarge |  |
 | `m_explosionCustomEffect` | CUtlSymbolLarge |  |
@@ -2940,10 +2952,18 @@ classDiagram
 
 ### CBuoyancyHelper
 
+**Relationships:**
+
+```mermaid
+classDiagram
+    CBuoyancyHelper --> IPhysicsMotionController
+```
+
 **Fields:**
 
 | Name | Type | Annotations |
 |------|------|-------------|
+| `m_pController` | [IPhysicsMotionController](../schemas/client.md#iphysicsmotioncontroller)* | `MPhysPtr` |
 | `m_nFluidType` | CUtlStringToken |  |
 | `m_flFluidDensity` | float32 |  |
 | `m_flNeutrallyBuoyantGravity` | float32 |  |
@@ -2987,8 +3007,8 @@ classDiagram
     CCSWeaponBase <|-- CC4
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CEconEntity
+    C_BaseModelEntity <|-- CBaseAnimGraph
     CC4 *-- GameTime_t
     CC4 *-- EntitySpottedState_t
 ```
@@ -3000,18 +3020,34 @@ classDiagram
 | `m_vecLastValidPlayerHeldPosition` | Vector |  |
 | `m_vecLastValidDroppedPosition` | Vector |  |
 | `m_bDoValidDroppedPositionCheck` | bool |  |
-| `m_bStartedArming` | bool | `MNetworkEnable` |
-| `m_fArmedTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` |
-| `m_bBombPlacedAnimation` | bool | `MNetworkEnable` |
-| `m_bIsPlantingViaUse` | bool | `MNetworkEnable` |
-| `m_entitySpottedState` | [EntitySpottedState_t](../schemas/server.md#entityspottedstate_t) | `MNetworkEnable` |
+| `m_bStartedArming` | bool |  |
+| `m_fArmedTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
+| `m_bBombPlacedAnimation` | bool |  |
+| `m_bIsPlantingViaUse` | bool |  |
+| `m_entitySpottedState` | [EntitySpottedState_t](../schemas/server.md#entityspottedstate_t) |  |
 | `m_nSpotRules` | int32 |  |
 | `m_bPlayedArmingBeeps` | bool[7] |  |
 | `m_bBombPlanted` | bool |  |
 
+### CCS2PawnGraphController
+
+**Inherits from:** [CCS2WeaponGraphController](server.md#ccs2weapongraphcontroller)
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CCS2PawnGraphController",`, `"m_hExternalGraph": 4294967295,`, `"m_action": null,`, `"m_bActionReset": null,`, `"m_flWeaponActionSpeedScale": null,`, `"m_weaponCategory": null,`, `"m_weaponType": null,`, `"m_weaponExtraInfo": null,`, `"m_flWeaponAmmo": null,`, `"m_flWeaponAmmoMax": null,`, `"m_flWeaponAmmoReserve": null,`, `"m_bWeaponIsSilenced": null,`, `"m_flWeaponIronsightAmount": null,`, `"m_bIsUsingLegacyModel": null,`, `"m_idleVariation": null,`, `"m_deployVariation": null,`, `"m_attackType": null,`, `"m_attackThrowStrength": null,`, `"m_flAttackVariation": null,`, `"m_inspectVariation": null,`, `"m_inspectExtraInfo": null,`, `"m_reloadStage": null,`, `"m_bIsDefusing": null,`, `"m_moveType": null,`, `"m_moveDirectionID": null,`, `"m_flMoveSpeedX": null,`, `"m_flMoveSpeedY": null,`, `"m_flMoveSpeedHorizontal": null,`, `"m_flPreviousMoveSpeedHorizontal": null,`, `"m_flCrouchAmount": null,`, `"m_bIsWalking": null,`, `"m_bIsStutterStep": null,`, `"m_flWeaponDropAmount": null,`, `"m_groundAction": null,`, `"m_groundActionDirectionID": null,`, `"m_flGroundTurnAngleOrVelocity": null,`, `"m_flLadderCycle": null,`, `"m_flLadderYaw": null,`, `"m_flLadderYawBackwards": null,`, `"m_airAction": null,`, `"m_flAirHeightAboveGround": null,`, `"m_leftFootTarget": null,`, `"m_rightFootTarget": null,`, `"m_flFlashedAmount": null,`, `"m_flAimPitchAngle": null,`, `"m_flAimYawAngle": null,`, `"m_flinchHead": null,`, `"m_flinchHeadRestart": null,`, `"m_flinchBody": null,`, `"m_flinchBodyRestart": null,`, `"m_flinchIsOnFire": null`, `}`
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CCS2WeaponGraphController <|-- CCS2PawnGraphController
+    CAnimGraphControllerBase <|-- CCS2WeaponGraphController
+```
+
 ### CCS2WeaponGraphController
 
 **Inherits from:** [CAnimGraphControllerBase](client.md#canimgraphcontrollerbase)
+
+**Derived by:** [CCS2PawnGraphController](client.md#ccs2pawngraphcontroller)
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CCS2WeaponGraphController",`, `"m_hExternalGraph": 4294967295,`, `"m_action": null,`, `"m_bActionReset": null,`, `"m_flWeaponActionSpeedScale": null,`, `"m_weaponCategory": null,`, `"m_weaponType": null,`, `"m_weaponExtraInfo": null,`, `"m_flWeaponAmmo": null,`, `"m_flWeaponAmmoMax": null,`, `"m_flWeaponAmmoReserve": null,`, `"m_bWeaponIsSilenced": null,`, `"m_flWeaponIronsightAmount": null,`, `"m_bIsUsingLegacyModel": null,`, `"m_idleVariation": null,`, `"m_deployVariation": null,`, `"m_attackType": null,`, `"m_attackThrowStrength": null,`, `"m_flAttackVariation": null,`, `"m_inspectVariation": null,`, `"m_inspectExtraInfo": null,`, `"m_reloadStage": null`, `}`
 
@@ -3020,6 +3056,7 @@ classDiagram
 ```mermaid
 classDiagram
     CAnimGraphControllerBase <|-- CCS2WeaponGraphController
+    CCS2WeaponGraphController <|-- CCS2PawnGraphController
 ```
 
 ### CCSBot
@@ -3183,6 +3220,47 @@ classDiagram
 | `m_voiceEndTimestamp` | float32 |  |
 | `m_lastValidReactionQueueFrame` | int32 |  |
 
+### CCSGO_EndOfMatchLineupEnd
+
+**Inherits from:** [CCSGO_EndOfMatchLineupEndpoint](server.md#ccsgo_endofmatchlineupendpoint)
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CCSGO_EndOfMatchLineupEndpoint <|-- CCSGO_EndOfMatchLineupEnd
+    CBaseEntity <|-- CCSGO_EndOfMatchLineupEndpoint
+    CEntityInstance <|-- CBaseEntity
+```
+
+### CCSGO_EndOfMatchLineupEndpoint
+
+**Inherits from:** [CBaseEntity](server.md#cbaseentity)
+
+**Derived by:** [CCSGO_EndOfMatchLineupStart](server.md#ccsgo_endofmatchlineupstart)
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CBaseEntity <|-- CCSGO_EndOfMatchLineupEndpoint
+    CEntityInstance <|-- CBaseEntity
+    CCSGO_EndOfMatchLineupEndpoint <|-- CCSGO_EndOfMatchLineupStart
+```
+
+### CCSGO_EndOfMatchLineupStart
+
+**Inherits from:** [CCSGO_EndOfMatchLineupEndpoint](server.md#ccsgo_endofmatchlineupendpoint)
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CCSGO_EndOfMatchLineupEndpoint <|-- CCSGO_EndOfMatchLineupStart
+    CBaseEntity <|-- CCSGO_EndOfMatchLineupEndpoint
+    CEntityInstance <|-- CBaseEntity
+```
+
 ### CCSGO_TeamIntroCharacterPosition
 
 **Inherits from:** [CCSGO_TeamPreviewCharacterPosition](server.md#ccsgo_teampreviewcharacterposition)
@@ -3249,14 +3327,14 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_nVariant` | int32 | `MNetworkEnable` |
-| `m_nRandom` | int32 | `MNetworkEnable` |
-| `m_nOrdinal` | int32 | `MNetworkEnable` |
-| `m_sWeaponName` | CUtlString | `MNetworkEnable` |
-| `m_xuid` | uint64 | `MNetworkEnable` |
-| `m_agentItem` | [CEconItemView](../schemas/server.md#ceconitemview) | `MNetworkEnable` |
-| `m_glovesItem` | [CEconItemView](../schemas/server.md#ceconitemview) | `MNetworkEnable` |
-| `m_weaponItem` | [CEconItemView](../schemas/server.md#ceconitemview) | `MNetworkEnable` |
+| `m_nVariant` | int32 |  |
+| `m_nRandom` | int32 |  |
+| `m_nOrdinal` | int32 |  |
+| `m_sWeaponName` | CUtlString |  |
+| `m_xuid` | uint64 |  |
+| `m_agentItem` | [CEconItemView](../schemas/server.md#ceconitemview) |  |
+| `m_glovesItem` | [CEconItemView](../schemas/server.md#ceconitemview) |  |
+| `m_weaponItem` | [CEconItemView](../schemas/server.md#ceconitemview) |  |
 
 ### CCSGO_TeamSelectCharacterPosition
 
@@ -3386,7 +3464,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_WeaponSequence` | CNetworkUtlVectorBase< CUtlString > | `MNetworkEnable` |
+| `m_WeaponSequence` | CNetworkUtlVectorBase< CUtlString > |  |
 
 ### CCSGameModeRules_Deathmatch
 
@@ -3404,9 +3482,9 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_flDMBonusStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` |
-| `m_flDMBonusTimeLength` | float32 | `MNetworkEnable` |
-| `m_sDMBonusWeapon` | CUtlString | `MNetworkEnable` |
+| `m_flDMBonusStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
+| `m_flDMBonusTimeLength` | float32 |  |
+| `m_sDMBonusWeapon` | CUtlString |  |
 
 ### CCSGameModeRules_Noop
 
@@ -3447,78 +3525,78 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_bFreezePeriod` | bool | True during the buy phase (freeze time) at the start of each round. *Players cannot move while this is true; buy menus open automatically.* `MNetworkEnable` |
-| `m_bWarmupPeriod` | bool | True while the pre-match warmup is active. `MNetworkEnable` |
-| `m_fWarmupPeriodEnd` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the warmup period ends and the first round begins. `MNetworkEnable` |
-| `m_fWarmupPeriodStart` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the current warmup period started. `MNetworkEnable` |
-| `m_bTerroristTimeOutActive` | bool | True while the Terrorist team's tactical time-out is in progress. `MNetworkEnable` |
-| `m_bCTTimeOutActive` | bool | True while the Counter-Terrorist team's tactical time-out is in progress. `MNetworkEnable` |
-| `m_flTerroristTimeOutRemaining` | float32 | Seconds remaining in the active Terrorist time-out. `MNetworkEnable` |
-| `m_flCTTimeOutRemaining` | float32 | Seconds remaining in the active CT time-out. `MNetworkEnable` |
-| `m_nTerroristTimeOuts` | int32 | Number of tactical time-outs the T-side has used so far in the match. `MNetworkEnable` |
-| `m_nCTTimeOuts` | int32 | Number of tactical time-outs the CT-side has used so far in the match. `MNetworkEnable` |
-| `m_bTechnicalTimeOut` | bool | True during a technical pause (admin-issued, not team time-out). `MNetworkEnable` |
-| `m_bMatchWaitingForResume` | bool | True when the match is paused and waiting for both teams to confirm resumption. `MNetworkEnable` |
-| `m_iFreezeTime` | int32 | Freeze-time duration in seconds (mirrors mp_freezetime convar value). `MNetworkEnable` |
-| `m_iRoundTime` | int32 | Round time limit in seconds (mirrors mp_roundtime_* convar value). `MNetworkEnable` |
-| `m_fMatchStartTime` | float32 | Unix-epoch float of when the match (not the round) began. `MNetworkEnable` |
-| `m_fRoundStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the current round's freeze time ended and play started. `MNetworkEnable` |
-| `m_flRestartRoundTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the current round will be force-restarted by the server (0 = no pending restart). `MNetworkEnable` |
-| `m_bGameRestart` | bool | True in the brief window between a restart being triggered and the new round spawning. `MNetworkEnable` |
-| `m_flGameStartTime` | float32 | GameTime at which the first live round of the match started (after all warmup/knife rounds). `MNetworkEnable` |
-| `m_timeUntilNextPhaseStarts` | float32 | Countdown in seconds until the next phase (round, half, overtime) begins; drives the on-screen timer. `MNetworkEnable` |
-| `m_gamePhase` | int32 | Game-phase enum: 1 = First Half, 2 = Second Half, 3 = Pre-overtime, 4 = Overtime, 5 = Game Over. *Triggers OnGamePhaseChanged callback on clients.* `MNetworkEnable` `MNetworkChangeCallback = "OnGamePhaseChanged"` |
-| `m_totalRoundsPlayed` | int32 | Total number of rounds completed since the match started (all phases combined). `MNetworkEnable` |
-| `m_nRoundsPlayedThisPhase` | int32 | Number of rounds played in the current phase (half/overtime period). `MNetworkEnable` |
-| `m_nOvertimePlaying` | int32 | Number of overtime periods played so far (0 = regulation). `MNetworkEnable` |
-| `m_iHostagesRemaining` | int32 | Number of hostages that have not yet been rescued or killed. `MNetworkEnable` |
-| `m_bAnyHostageReached` | bool | True once any hostage has reached the rescue zone this round. `MNetworkEnable` |
-| `m_bMapHasBombTarget` | bool | True when the map has at least one bomb-plant zone (bombsite entity). `MNetworkEnable` |
-| `m_bMapHasRescueZone` | bool | True when the map has at least one hostage rescue zone. `MNetworkEnable` |
-| `m_bMapHasBuyZone` | bool | True when the map has at least one buy zone. `MNetworkEnable` |
-| `m_bIsQueuedMatchmaking` | bool | True when the server is running a matchmaking (Valve-hosted) game rather than a community server. `MNetworkEnable` |
-| `m_nQueuedMatchmakingMode` | int32 | Matchmaking mode identifier (0 = casual, 1 = competitive, etc.). `MNetworkEnable` |
-| `m_bIsValveDS` | bool | True when the server is an official Valve dedicated server. `MNetworkEnable` |
-| `m_bLogoMap` | bool | True when the server is running a workshop or demo map that does not count for match records. `MNetworkEnable` |
-| `m_bPlayAllStepSoundsOnServer` | bool | `MNetworkEnable` |
-| `m_iSpectatorSlotCount` | int32 | Number of spectator slots available on this server. `MNetworkEnable` |
-| `m_MatchDevice` | int32 | Platform/device identifier for the match (used by Valve matchmaking for stats reporting). `MNetworkEnable` |
-| `m_bHasMatchStarted` | bool | True from the moment the first live round begins; remains true until the match ends. `MNetworkEnable` |
-| `m_nNextMapInMapgroup` | int32 | Index within the server's map-group of the map that will be played next. `MNetworkEnable` |
-| `m_szTournamentEventName` | char[512] | Display name of the tournament/event shown in the HUD scoreboard (up to 512 bytes). `MNetworkEnable` |
-| `m_szTournamentEventStage` | char[512] | Stage label for the tournament event (e.g. 'Grand Final', 'Quarterfinal'). `MNetworkEnable` |
-| `m_szMatchStatTxt` | char[512] | Match-stats summary text displayed in the scoreboard (tournament use). `MNetworkEnable` |
-| `m_szTournamentPredictionsTxt` | char[512] | `MNetworkEnable` |
-| `m_nTournamentPredictionsPct` | int32 | `MNetworkEnable` |
-| `m_flCMMItemDropRevealStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the post-match item-drop reveal animation begins. `MNetworkEnable` |
-| `m_flCMMItemDropRevealEndTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the post-match item-drop reveal animation ends. `MNetworkEnable` |
-| `m_bIsDroppingItems` | bool | True while the post-match item-drop animation is playing. `MNetworkEnable` |
-| `m_bIsQuestEligible` | bool | True when the current match is eligible for operation mission progress. `MNetworkEnable` |
-| `m_bIsHltvActive` | bool | True when at least one GOTV/HLTV spectator slot is connected. `MNetworkEnable` |
-| `m_bBombPlanted` | bool | True while the planted bomb entity is active and ticking. `MNetworkEnable` |
-| `m_arrProhibitedItemIndices` | uint16[100] | Array of up to 100 item-definition indices that are prohibited from being used in this match (e.g. tournament bans). `MNetworkEnable` |
-| `m_arrTournamentActiveCasterAccounts` | uint32[4] | `MNetworkEnable` |
-| `m_numBestOfMaps` | int32 | Best-of-N series length configured for this match (e.g. 1, 3, 5). `MNetworkEnable` |
-| `m_nHalloweenMaskListSeed` | int32 | `MNetworkEnable` |
-| `m_bBombDropped` | bool | True while the bomb (C4) is lying on the ground, not carried by any player. `MNetworkEnable` |
-| `m_iRoundWinStatus` | int32 | Which team won the most-recently completed round (0 = not over, 2 = Terrorist win, 3 = CT win). `MNetworkEnable` |
-| `m_eRoundWinReason` | int32 | RoundWinReason_t enum: 1 = target bombed, 7 = bomb defused, 8 = all T killed, 9 = hostage rescued, etc. `MNetworkEnable` |
-| `m_bTCantBuy` | bool | True when the Terrorist team is currently locked out of purchasing weapons. `MNetworkEnable` |
-| `m_bCTCantBuy` | bool | True when the Counter-Terrorist team is currently locked out of purchasing weapons. `MNetworkEnable` |
-| `m_iMatchStats_RoundResults` | int32[30] | Array of 30 round-result codes (one per round slot) used to fill the scoreboard half-time panel. `MNetworkEnable` |
-| `m_iMatchStats_PlayersAlive_CT` | int32[30] | Array of 30 values – number of CT players alive at the end of each round. `MNetworkEnable` |
-| `m_iMatchStats_PlayersAlive_T` | int32[30] | Array of 30 values – number of T players alive at the end of each round. `MNetworkEnable` |
-| `m_TeamRespawnWaveTimes` | float32[32] | `MNetworkEnable` |
-| `m_flNextRespawnWave` | [GameTime_t](../schemas/entity2.md#gametime_t)[32] | `MNetworkEnable` |
-| `m_vMinimapMins` | Vector | World-space minimum corner of the minimap bounding box. `MNetworkEnable` |
-| `m_vMinimapMaxs` | Vector | World-space maximum corner of the minimap bounding box. `MNetworkEnable` |
-| `m_MinimapVerticalSectionHeights` | float32[8] | Array of 8 height values dividing the map into vertical sections for the radar's floor-switching feature. `MNetworkEnable` |
+| `m_bFreezePeriod` | bool | True during the buy phase (freeze time) at the start of each round. *Players cannot move while this is true; buy menus open automatically.* |
+| `m_bWarmupPeriod` | bool | True while the pre-match warmup is active. |
+| `m_fWarmupPeriodEnd` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the warmup period ends and the first round begins. |
+| `m_fWarmupPeriodStart` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the current warmup period started. |
+| `m_bTerroristTimeOutActive` | bool | True while the Terrorist team's tactical time-out is in progress. |
+| `m_bCTTimeOutActive` | bool | True while the Counter-Terrorist team's tactical time-out is in progress. |
+| `m_flTerroristTimeOutRemaining` | float32 | Seconds remaining in the active Terrorist time-out. |
+| `m_flCTTimeOutRemaining` | float32 | Seconds remaining in the active CT time-out. |
+| `m_nTerroristTimeOuts` | int32 | Number of tactical time-outs the T-side has used so far in the match. |
+| `m_nCTTimeOuts` | int32 | Number of tactical time-outs the CT-side has used so far in the match. |
+| `m_bTechnicalTimeOut` | bool | True during a technical pause (admin-issued, not team time-out). |
+| `m_bMatchWaitingForResume` | bool | True when the match is paused and waiting for both teams to confirm resumption. |
+| `m_iFreezeTime` | int32 | Freeze-time duration in seconds (mirrors mp_freezetime convar value). |
+| `m_iRoundTime` | int32 | Round time limit in seconds (mirrors mp_roundtime_* convar value). |
+| `m_fMatchStartTime` | float32 | Unix-epoch float of when the match (not the round) began. |
+| `m_fRoundStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the current round's freeze time ended and play started. |
+| `m_flRestartRoundTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the current round will be force-restarted by the server (0 = no pending restart). |
+| `m_bGameRestart` | bool | True in the brief window between a restart being triggered and the new round spawning. |
+| `m_flGameStartTime` | float32 | GameTime at which the first live round of the match started (after all warmup/knife rounds). |
+| `m_timeUntilNextPhaseStarts` | float32 | Countdown in seconds until the next phase (round, half, overtime) begins; drives the on-screen timer. |
+| `m_gamePhase` | int32 | Game-phase enum: 1 = First Half, 2 = Second Half, 3 = Pre-overtime, 4 = Overtime, 5 = Game Over. *Triggers OnGamePhaseChanged callback on clients.* |
+| `m_totalRoundsPlayed` | int32 | Total number of rounds completed since the match started (all phases combined). |
+| `m_nRoundsPlayedThisPhase` | int32 | Number of rounds played in the current phase (half/overtime period). |
+| `m_nOvertimePlaying` | int32 | Number of overtime periods played so far (0 = regulation). |
+| `m_iHostagesRemaining` | int32 | Number of hostages that have not yet been rescued or killed. |
+| `m_bAnyHostageReached` | bool | True once any hostage has reached the rescue zone this round. |
+| `m_bMapHasBombTarget` | bool | True when the map has at least one bomb-plant zone (bombsite entity). |
+| `m_bMapHasRescueZone` | bool | True when the map has at least one hostage rescue zone. |
+| `m_bMapHasBuyZone` | bool | True when the map has at least one buy zone. |
+| `m_bIsQueuedMatchmaking` | bool | True when the server is running a matchmaking (Valve-hosted) game rather than a community server. |
+| `m_nQueuedMatchmakingMode` | int32 | Matchmaking mode identifier (0 = casual, 1 = competitive, etc.). |
+| `m_bIsValveDS` | bool | True when the server is an official Valve dedicated server. |
+| `m_bLogoMap` | bool | True when the server is running a workshop or demo map that does not count for match records. |
+| `m_bPlayAllStepSoundsOnServer` | bool |  |
+| `m_iSpectatorSlotCount` | int32 | Number of spectator slots available on this server. |
+| `m_MatchDevice` | int32 | Platform/device identifier for the match (used by Valve matchmaking for stats reporting). |
+| `m_bHasMatchStarted` | bool | True from the moment the first live round begins; remains true until the match ends. |
+| `m_nNextMapInMapgroup` | int32 | Index within the server's map-group of the map that will be played next. |
+| `m_szTournamentEventName` | char[512] | Display name of the tournament/event shown in the HUD scoreboard (up to 512 bytes). |
+| `m_szTournamentEventStage` | char[512] | Stage label for the tournament event (e.g. 'Grand Final', 'Quarterfinal'). |
+| `m_szMatchStatTxt` | char[512] | Match-stats summary text displayed in the scoreboard (tournament use). |
+| `m_szTournamentPredictionsTxt` | char[512] |  |
+| `m_nTournamentPredictionsPct` | int32 |  |
+| `m_flCMMItemDropRevealStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the post-match item-drop reveal animation begins. |
+| `m_flCMMItemDropRevealEndTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the post-match item-drop reveal animation ends. |
+| `m_bIsDroppingItems` | bool | True while the post-match item-drop animation is playing. |
+| `m_bIsQuestEligible` | bool | True when the current match is eligible for operation mission progress. |
+| `m_bIsHltvActive` | bool | True when at least one GOTV/HLTV spectator slot is connected. |
+| `m_bBombPlanted` | bool | True while the planted bomb entity is active and ticking. |
+| `m_arrProhibitedItemIndices` | uint16[100] | Array of up to 100 item-definition indices that are prohibited from being used in this match (e.g. tournament bans). |
+| `m_arrTournamentActiveCasterAccounts` | uint32[4] |  |
+| `m_numBestOfMaps` | int32 | Best-of-N series length configured for this match (e.g. 1, 3, 5). |
+| `m_nHalloweenMaskListSeed` | int32 |  |
+| `m_bBombDropped` | bool | True while the bomb (C4) is lying on the ground, not carried by any player. |
+| `m_iRoundWinStatus` | int32 | Which team won the most-recently completed round (0 = not over, 2 = Terrorist win, 3 = CT win). |
+| `m_eRoundWinReason` | int32 | RoundWinReason_t enum: 1 = target bombed, 7 = bomb defused, 8 = all T killed, 9 = hostage rescued, etc. |
+| `m_bTCantBuy` | bool | True when the Terrorist team is currently locked out of purchasing weapons. |
+| `m_bCTCantBuy` | bool | True when the Counter-Terrorist team is currently locked out of purchasing weapons. |
+| `m_iMatchStats_RoundResults` | int32[30] | Array of 30 round-result codes (one per round slot) used to fill the scoreboard half-time panel. |
+| `m_iMatchStats_PlayersAlive_CT` | int32[30] | Array of 30 values – number of CT players alive at the end of each round. |
+| `m_iMatchStats_PlayersAlive_T` | int32[30] | Array of 30 values – number of T players alive at the end of each round. |
+| `m_TeamRespawnWaveTimes` | float32[32] |  |
+| `m_flNextRespawnWave` | [GameTime_t](../schemas/entity2.md#gametime_t)[32] |  |
+| `m_vMinimapMins` | Vector | World-space minimum corner of the minimap bounding box. |
+| `m_vMinimapMaxs` | Vector | World-space maximum corner of the minimap bounding box. |
+| `m_MinimapVerticalSectionHeights` | float32[8] | Array of 8 height values dividing the map into vertical sections for the radar's floor-switching feature. |
 | `m_ullLocalMatchID` | uint64 |  |
-| `m_nEndMatchMapGroupVoteTypes` | int32[10] | Array of 10 vote-type codes for the end-of-match map vote options. `MNetworkEnable` |
-| `m_nEndMatchMapGroupVoteOptions` | int32[10] | Array of 10 map-group option indices corresponding to the vote types. `MNetworkEnable` |
-| `m_nEndMatchMapVoteWinner` | int32 | Index of the winning map-vote option (-1 while voting is in progress). `MNetworkEnable` |
-| `m_iNumConsecutiveCTLoses` | int32 | Number of consecutive rounds the CT side has lost; drives the loss-bonus economy. `MNetworkEnable` |
-| `m_iNumConsecutiveTerroristLoses` | int32 | Number of consecutive rounds the T side has lost; drives the loss-bonus economy. `MNetworkEnable` |
+| `m_nEndMatchMapGroupVoteTypes` | int32[10] | Array of 10 vote-type codes for the end-of-match map vote options. |
+| `m_nEndMatchMapGroupVoteOptions` | int32[10] | Array of 10 map-group option indices corresponding to the vote types. |
+| `m_nEndMatchMapVoteWinner` | int32 | Index of the winning map-vote option (-1 while voting is in progress). |
+| `m_iNumConsecutiveCTLoses` | int32 | Number of consecutive rounds the CT side has lost; drives the loss-bonus economy. |
+| `m_iNumConsecutiveTerroristLoses` | int32 | Number of consecutive rounds the T side has lost; drives the loss-bonus economy. |
 | `m_bHasHostageBeenTouched` | bool |  |
 | `m_flIntermissionStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_flIntermissionEndTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
@@ -3604,37 +3682,37 @@ classDiagram
 | `m_flLastThinkTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_fAccumulatedRoundOffDamage` | float32 |  |
 | `m_nShorthandedBonusLastEvalRound` | int32 |  |
-| `m_nMatchAbortedEarlyReason` | int32 | Reason code for an early match abort (0 = not aborted, non-zero codes map to abandonment reasons). `MNetworkEnable` |
+| `m_nMatchAbortedEarlyReason` | int32 | Reason code for an early match abort (0 = not aborted, non-zero codes map to abandonment reasons). |
 | `m_bHasTriggeredRoundStartMusic` | bool |  |
 | `m_bSwitchingTeamsAtRoundReset` | bool |  |
-| `m_pGameModeRules` | [CCSGameModeRules](../schemas/server.md#ccsgamemoderules)* | Polymorphic pointer to CCSGameModeRules (sub-classed for Arms Race, Deathmatch, etc.). *Use the MNetworkPolymorphic annotation when decoding; concrete types: CCSGameModeRules_ArmsRace, _Deathmatch, _Noop.* `MNetworkEnable` `MNetworkPolymorphic` |
+| `m_pGameModeRules` | [CCSGameModeRules](../schemas/server.md#ccsgamemoderules)* | Polymorphic pointer to CCSGameModeRules (sub-classed for Arms Race, Deathmatch, etc.). *Use the MNetworkPolymorphic annotation when decoding; concrete types: CCSGameModeRules_ArmsRace, _Deathmatch, _Noop.* |
 | `m_BtGlobalBlackboard` | KeyValues3 |  |
 | `m_hPlayerResource` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
-| `m_RetakeRules` | [CRetakeGameRules](../schemas/server.md#cretakegamerules) | CRetakeGameRules struct holding all Retakes-mode specific state. `MNetworkEnable` |
+| `m_RetakeRules` | [CRetakeGameRules](../schemas/server.md#cretakegamerules) | CRetakeGameRules struct holding all Retakes-mode specific state. |
 | `m_arrTeamUniqueKillWeaponsMatch` | CUtlVector< int32 >[4] |  |
 | `m_bTeamLastKillUsedUniqueWeaponMatch` | bool[4] |  |
-| `m_nMatchEndCount` | uint8 | Incremented each time a match-end event fires; clients trigger their match-end UI on the change. `MNetworkEnable` `MNetworkChangeCallback = "OnMatchEndCountChanged"` |
-| `m_nTTeamIntroVariant` | int32 | Variant index for the Terrorist team intro cinematic sequence. `MNetworkEnable` |
-| `m_nCTTeamIntroVariant` | int32 | Variant index for the CT team intro cinematic sequence. `MNetworkEnable` |
-| `m_bTeamIntroPeriod` | bool | True while the pre-round team-intro cinematic is playing. `MNetworkEnable` `MNetworkChangeCallback = "OnTeamIntroPeriodChanged"` |
+| `m_nMatchEndCount` | uint8 | Incremented each time a match-end event fires; clients trigger their match-end UI on the change. |
+| `m_nTTeamIntroVariant` | int32 | Variant index for the Terrorist team intro cinematic sequence. |
+| `m_nCTTeamIntroVariant` | int32 | Variant index for the CT team intro cinematic sequence. |
+| `m_bTeamIntroPeriod` | bool | True while the pre-round team-intro cinematic is playing. |
 | `m_fTeamIntroPeriodEnd` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_bPlayedTeamIntroVO` | bool |  |
-| `m_iRoundEndWinnerTeam` | int32 | Team number of the team that won the most-recently ended round. `MNetworkEnable` |
-| `m_eRoundEndReason` | int32 | RoundEndReason_t enum describing how the round ended (bomb exploded, time ran out, all enemies eliminated, etc.). `MNetworkEnable` |
-| `m_bRoundEndShowTimerDefend` | bool | True when the end-of-round panel should show a 'defend' timer countdown. `MNetworkEnable` |
-| `m_iRoundEndTimerTime` | int32 | Remaining time in seconds shown in the round-end countdown panel. `MNetworkEnable` |
-| `m_sRoundEndFunFactToken` | CUtlString | Localization token for the fun-fact string shown in the round-end panel. `MNetworkEnable` |
-| `m_iRoundEndFunFactPlayerSlot` | CPlayerSlot | Player slot of the player featured in the fun-fact message. `MNetworkEnable` |
-| `m_iRoundEndFunFactData1` | int32 | First numeric argument substituted into the fun-fact localization string. `MNetworkEnable` |
-| `m_iRoundEndFunFactData2` | int32 | Second numeric argument substituted into the fun-fact localization string. `MNetworkEnable` |
-| `m_iRoundEndFunFactData3` | int32 | Third numeric argument substituted into the fun-fact localization string. `MNetworkEnable` |
-| `m_sRoundEndMessage` | CUtlString | Custom message string displayed in the round-end overlay (tournament use). `MNetworkEnable` |
-| `m_iRoundEndPlayerCount` | int32 | `MNetworkEnable` |
-| `m_bRoundEndNoMusic` | bool | True when the end-of-round music stinger should be suppressed. `MNetworkEnable` |
-| `m_iRoundEndLegacy` | int32 | `MNetworkEnable` |
-| `m_nRoundEndCount` | uint8 | Incremented each time a round-end event fires; clients trigger round-end UI on the change. `MNetworkEnable` `MNetworkChangeCallback = "OnRoundEndCountChanged"` |
-| `m_iRoundStartRoundNumber` | int32 | The round number associated with the most-recent round-start event. `MNetworkEnable` |
-| `m_nRoundStartCount` | uint8 | Incremented each time a round-start event fires; clients initialize per-round state on the change. `MNetworkEnable` `MNetworkChangeCallback = "OnRoundStartCountChanged"` |
+| `m_iRoundEndWinnerTeam` | int32 | Team number of the team that won the most-recently ended round. |
+| `m_eRoundEndReason` | int32 | RoundEndReason_t enum describing how the round ended (bomb exploded, time ran out, all enemies eliminated, etc.). |
+| `m_bRoundEndShowTimerDefend` | bool | True when the end-of-round panel should show a 'defend' timer countdown. |
+| `m_iRoundEndTimerTime` | int32 | Remaining time in seconds shown in the round-end countdown panel. |
+| `m_sRoundEndFunFactToken` | CUtlString | Localization token for the fun-fact string shown in the round-end panel. |
+| `m_iRoundEndFunFactPlayerSlot` | CPlayerSlot | Player slot of the player featured in the fun-fact message. |
+| `m_iRoundEndFunFactData1` | int32 | First numeric argument substituted into the fun-fact localization string. |
+| `m_iRoundEndFunFactData2` | int32 | Second numeric argument substituted into the fun-fact localization string. |
+| `m_iRoundEndFunFactData3` | int32 | Third numeric argument substituted into the fun-fact localization string. |
+| `m_sRoundEndMessage` | CUtlString | Custom message string displayed in the round-end overlay (tournament use). |
+| `m_iRoundEndPlayerCount` | int32 |  |
+| `m_bRoundEndNoMusic` | bool | True when the end-of-round music stinger should be suppressed. |
+| `m_iRoundEndLegacy` | int32 |  |
+| `m_nRoundEndCount` | uint8 | Incremented each time a round-end event fires; clients trigger round-end UI on the change. |
+| `m_iRoundStartRoundNumber` | int32 | The round number associated with the most-recent round-start event. |
+| `m_nRoundStartCount` | uint8 | Incremented each time a round-start event fires; clients initialize per-round state on the change. |
 | `m_flLastPerfSampleTime` | float64 |  |
 
 ### CCSGameRulesProxy
@@ -3655,7 +3733,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_pGameRules` | [CCSGameRules](../schemas/server.md#ccsgamerules)* | `MNetworkEnable` `MNetworkTypeAlias = "CCSGameRules*"` `MNetworkPriority = 32` |
+| `m_pGameRules` | [CCSGameRules](../schemas/server.md#ccsgamerules)* |  |
 
 ### CCSMinimapBoundary
 
@@ -3676,8 +3754,6 @@ Lightweight pawn used when a player is in spectator mode.  Created when the play
 
 **Inherits from:** [CCSPlayerPawnBase](server.md#ccsplayerpawnbase)
 
-**Metadata:** `MNetworkVarTypeOverride = "CCSObserver_ObserverServices m_pObserverServices"`, `MNetworkIncludeByName = "m_pObserverServices"`, `MNetworkVarTypeOverride = "CCSObserver_MovementServices m_pMovementServices"`, `MNetworkIncludeByName = "m_pMovementServices"`, `MNetworkVarTypeOverride = "CCSObserver_CameraServices m_pCameraServices"`, `MNetworkIncludeByName = "m_pCameraServices"`, `MNetworkVarTypeOverride = "CCSObserver_UseServices m_pUseServices"`, `MNetworkIncludeByName = "m_pUseServices"`
-
 **Relationships:**
 
 ```mermaid
@@ -3685,8 +3761,8 @@ classDiagram
     CCSPlayerPawnBase <|-- CCSObserverPawn
     CBasePlayerPawn <|-- CCSPlayerPawnBase
     CBaseCombatCharacter <|-- CBasePlayerPawn
-    CBaseFlex <|-- CBaseCombatCharacter
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CBaseCombatCharacter
+    C_BaseModelEntity <|-- CBaseAnimGraph
 ```
 
 ### CCSObserver_CameraServices
@@ -3792,11 +3868,11 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_iFOV` | uint32 | `MNetworkEnable` |
-| `m_iFOVStart` | uint32 | `MNetworkEnable` |
-| `m_flFOVTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` |
-| `m_flFOVRate` | float32 | `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
-| `m_hZoomOwner` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | `MNetworkEnable` |
+| `m_iFOV` | uint32 |  |
+| `m_iFOVStart` | uint32 |  |
+| `m_flFOVTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
+| `m_flFOVRate` | float32 |  |
+| `m_hZoomOwner` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 | `m_hTriggerFogList` | CUtlVector< CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > > |  |
 | `m_hLastFogTrigger` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 
@@ -3809,8 +3885,6 @@ The server-side controller entity for a CS2 player.  One CCSPlayerController exi
 
 
 **Inherits from:** [CBasePlayerController](server.md#cbaseplayercontroller)
-
-**Metadata:** `MNetworkUserGroupProxy = "CCSPlayerController"`, `MNetworkUserGroupProxy = "CCSPlayerController"`, `MNetworkUserGroupProxy = "CCSPlayerController"`, `MNetworkUserGroupProxy = "CCSPlayerController"`
 
 **Relationships:**
 
@@ -3834,18 +3908,18 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_pInGameMoneyServices` | [CCSPlayerController_InGameMoneyServices](../schemas/server.md#ccsplayercontroller_ingamemoneyservices)* | `MNetworkEnable` |
-| `m_pInventoryServices` | [CCSPlayerController_InventoryServices](../schemas/server.md#ccsplayercontroller_inventoryservices)* | `MNetworkEnable` |
-| `m_pActionTrackingServices` | [CCSPlayerController_ActionTrackingServices](../schemas/server.md#ccsplayercontroller_actiontrackingservices)* | `MNetworkEnable` |
-| `m_pDamageServices` | [CCSPlayerController_DamageServices](../schemas/server.md#ccsplayercontroller_damageservices)* | `MNetworkEnable` |
-| `m_iPing` | uint32 | Player's current network round-trip latency, in milliseconds. *Smoothed by m_flSmoothedPing server-side; updated roughly every 5 s.* `MNetworkEnable` |
-| `m_bHasCommunicationAbuseMute` | bool | `MNetworkEnable` |
-| `m_uiCommunicationMuteFlags` | uint32 | `MNetworkEnable` |
-| `m_szCrosshairCodes` | CUtlSymbolLarge | Encoded crosshair configuration string (same format as the cl_crosshair_reticle_* convars share-code). `MNetworkEnable` |
-| `m_iPendingTeamNum` | uint8 | Team number the player will be moved to at the next team-change opportunity. `MNetworkEnable` `MNetworkChangeCallback = "OnPendingTeamChanged"` |
-| `m_flForceTeamTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime after which team-forcing is no longer applied. `MNetworkEnable` |
-| `m_iCompTeammateColor` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "OnCompTeammateColorChanged"` |
-| `m_bEverPlayedOnTeam` | bool | True once this player has played at least one round as a non-spectator. `MNetworkEnable` |
+| `m_pInGameMoneyServices` | [CCSPlayerController_InGameMoneyServices](../schemas/server.md#ccsplayercontroller_ingamemoneyservices)* |  |
+| `m_pInventoryServices` | [CCSPlayerController_InventoryServices](../schemas/server.md#ccsplayercontroller_inventoryservices)* |  |
+| `m_pActionTrackingServices` | [CCSPlayerController_ActionTrackingServices](../schemas/server.md#ccsplayercontroller_actiontrackingservices)* |  |
+| `m_pDamageServices` | [CCSPlayerController_DamageServices](../schemas/server.md#ccsplayercontroller_damageservices)* |  |
+| `m_iPing` | uint32 | Player's current network round-trip latency, in milliseconds. *Smoothed by m_flSmoothedPing server-side; updated roughly every 5 s.* |
+| `m_bHasCommunicationAbuseMute` | bool |  |
+| `m_uiCommunicationMuteFlags` | uint32 |  |
+| `m_szCrosshairCodes` | CUtlSymbolLarge | Encoded crosshair configuration string (same format as the cl_crosshair_reticle_* convars share-code). |
+| `m_iPendingTeamNum` | uint8 | Team number the player will be moved to at the next team-change opportunity. |
+| `m_flForceTeamTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime after which team-forcing is no longer applied. |
+| `m_iCompTeammateColor` | int32 |  |
+| `m_bEverPlayedOnTeam` | bool | True once this player has played at least one round as a non-spectator. |
 | `m_bAttemptedToGetColor` | bool |  |
 | `m_iTeammatePreferredColor` | int32 |  |
 | `m_bTeamChanged` | bool |  |
@@ -3855,22 +3929,22 @@ classDiagram
 | `m_bSwitchTeamsOnNextRoundReset` | bool |  |
 | `m_bRemoveAllItemsOnNextRoundReset` | bool |  |
 | `m_flLastJoinTeamTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
-| `m_szClan` | CUtlSymbolLarge | Player's clan tag string, displayed next to the name in the scoreboard. `MNetworkEnable` |
-| `m_iCoachingTeam` | int32 | Team number this player is coaching (0 if not coaching). `MNetworkEnable` |
-| `m_nPlayerDominated` | uint64 | 64-bit bitmask; bit N set means this player is dominating player-slot N. `MNetworkEnable` |
+| `m_szClan` | CUtlSymbolLarge | Player's clan tag string, displayed next to the name in the scoreboard. |
+| `m_iCoachingTeam` | int32 | Team number this player is coaching (0 if not coaching). |
+| `m_nPlayerDominated` | uint64 | 64-bit bitmask; bit N set means this player is dominating player-slot N. |
 | `m_nPlayerDominatingMe` | uint64 | 64-bit mask of player-slot bits that are currently dominating this player.
- `MNetworkEnable` |
-| `m_iCompetitiveRanking` | int32 | Player's current Premier/Competitive numeric skill rating. `MNetworkEnable` |
-| `m_iCompetitiveWins` | int32 | Total number of ranked wins accumulated on this account. `MNetworkEnable` |
-| `m_iCompetitiveRankType` | int8 | Rank type identifier (e.g. 0 = unranked, 11 = Premier, 12 = Competitive). `MNetworkEnable` |
-| `m_iCompetitiveRankingPredicted_Win` | int32 | Predicted rating delta if the match ends in a win for this player. `MNetworkEnable` |
-| `m_iCompetitiveRankingPredicted_Loss` | int32 | Predicted rating delta if the match ends in a loss. `MNetworkEnable` |
-| `m_iCompetitiveRankingPredicted_Tie` | int32 | Predicted rating delta if the match ends in a tie/draw. `MNetworkEnable` |
-| `m_nEndMatchNextMapVote` | int32 | Index of the map this player has voted for in the end-of-match map vote. `MNetworkEnable` |
-| `m_unActiveQuestId` | uint16 | Active operation mission ID for this player (0 if none active). `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
-| `m_rtActiveMissionPeriod` | uint32 | `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
-| `m_nQuestProgressReason` | [QuestProgress](../schemas/client.md#questprogress)::Reason | Reason code for the last quest-progress update sent to this player. `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
-| `m_unPlayerTvControlFlags` | uint32 | `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
+ |
+| `m_iCompetitiveRanking` | int32 | Player's current Premier/Competitive numeric skill rating. |
+| `m_iCompetitiveWins` | int32 | Total number of ranked wins accumulated on this account. |
+| `m_iCompetitiveRankType` | int8 | Rank type identifier (e.g. 0 = unranked, 11 = Premier, 12 = Competitive). |
+| `m_iCompetitiveRankingPredicted_Win` | int32 | Predicted rating delta if the match ends in a win for this player. |
+| `m_iCompetitiveRankingPredicted_Loss` | int32 | Predicted rating delta if the match ends in a loss. |
+| `m_iCompetitiveRankingPredicted_Tie` | int32 | Predicted rating delta if the match ends in a tie/draw. |
+| `m_nEndMatchNextMapVote` | int32 | Index of the map this player has voted for in the end-of-match map vote. |
+| `m_unActiveQuestId` | uint16 | Active operation mission ID for this player (0 if none active). |
+| `m_rtActiveMissionPeriod` | uint32 |  |
+| `m_nQuestProgressReason` | [QuestProgress](../schemas/client.md#questprogress)::Reason | Reason code for the last quest-progress update sent to this player. |
+| `m_unPlayerTvControlFlags` | uint32 |  |
 | `m_iDraftIndex` | int32 |  |
 | `m_msQueuedModeDisconnectionTimestamp` | uint32 |  |
 | `m_uiAbandonRecordedReason` | uint32 |  |
@@ -3881,39 +3955,39 @@ classDiagram
 | `m_bAbandonOffersInstantSurrender` | bool |  |
 | `m_bDisconnection1MinWarningPrinted` | bool |  |
 | `m_bScoreReported` | bool |  |
-| `m_nDisconnectionTick` | int32 | Server tick at which this player disconnected (used for reconnect grace period). `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
-| `m_bControllingBot` | bool | True when this human controller has taken over a bot pawn. `MNetworkEnable` |
-| `m_bHasControlledBotThisRound` | bool | True if the player took over a bot at any point this round. `MNetworkEnable` |
+| `m_nDisconnectionTick` | int32 | Server tick at which this player disconnected (used for reconnect grace period). |
+| `m_bControllingBot` | bool | True when this human controller has taken over a bot pawn. |
+| `m_bHasControlledBotThisRound` | bool | True if the player took over a bot at any point this round. |
 | `m_bHasBeenControlledByPlayerThisRound` | bool |  |
 | `m_nBotsControlledThisRound` | int32 |  |
-| `m_bCanControlObservedBot` | bool | True when the player is allowed to take control of the bot they are spectating. `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
+| `m_bCanControlObservedBot` | bool | True when the player is allowed to take control of the bot they are spectating. |
 | `m_hPlayerPawn` | CHandle< [CCSPlayerPawn](../schemas/server.md#ccsplayerpawn) > | CHandle pointing to the player's active CCSPlayerPawn. *Becomes invalid (INVALID_EHANDLE) when the player is dead and their pawn has been removed.  Check m_bPawnIsAlive before dereferencing.
-* `MNetworkEnable` |
-| `m_hObserverPawn` | CHandle< [CCSObserverPawn](../schemas/server.md#ccsobserverpawn) > | CHandle to the CCSObserverPawn when the player is spectating. *Valid only while the player is in spectator mode; otherwise INVALID_EHANDLE.* `MNetworkEnable` |
+* |
+| `m_hObserverPawn` | CHandle< [CCSObserverPawn](../schemas/server.md#ccsobserverpawn) > | CHandle to the CCSObserverPawn when the player is spectating. *Valid only while the player is in spectator mode; otherwise INVALID_EHANDLE.* |
 | `m_DesiredObserverMode` | int32 |  |
 | `m_hDesiredObserverTarget` | CEntityHandle |  |
-| `m_bPawnIsAlive` | bool | True while the player's pawn is alive and spawned. `MNetworkEnable` |
-| `m_iPawnHealth` | uint32 | Current health of the pawn, networked to teammates and spectators. *Only sent to TeammateAndSpectatorExclusive group; enemies do not receive this.* `MNetworkEnable` `MNetworkUserGroup = "TeammateAndSpectatorExclusive"` |
-| `m_iPawnArmor` | int32 | Current armor value of the pawn (0–100 for vest, 100+ for helmet). `MNetworkEnable` `MNetworkUserGroup = "TeammateAndSpectatorExclusive"` |
-| `m_bPawnHasDefuser` | bool | True when the pawn is carrying a defuse kit. `MNetworkEnable` `MNetworkUserGroup = "TeammateAndSpectatorExclusive"` |
-| `m_bPawnHasHelmet` | bool | True when the pawn has a full helmet (takes head-shot armor penalty into account). `MNetworkEnable` `MNetworkUserGroup = "TeammateAndSpectatorExclusive"` |
-| `m_nPawnCharacterDefIndex` | uint16 | Item definition index of the character/agent skin equipped on the pawn. `MNetworkEnable` |
-| `m_iPawnLifetimeStart` | int32 | Server tick on which the current pawn was spawned. `MNetworkEnable` |
-| `m_iPawnLifetimeEnd` | int32 | Server tick on which the current pawn died (0 while still alive). `MNetworkEnable` |
-| `m_iPawnBotDifficulty` | int32 | `MNetworkEnable` |
+| `m_bPawnIsAlive` | bool | True while the player's pawn is alive and spawned. |
+| `m_iPawnHealth` | uint32 | Current health of the pawn, networked to teammates and spectators. *Only sent to TeammateAndSpectatorExclusive group; enemies do not receive this.* |
+| `m_iPawnArmor` | int32 | Current armor value of the pawn (0–100 for vest, 100+ for helmet). |
+| `m_bPawnHasDefuser` | bool | True when the pawn is carrying a defuse kit. |
+| `m_bPawnHasHelmet` | bool | True when the pawn has a full helmet (takes head-shot armor penalty into account). |
+| `m_nPawnCharacterDefIndex` | uint16 | Item definition index of the character/agent skin equipped on the pawn. |
+| `m_iPawnLifetimeStart` | int32 | Server tick on which the current pawn was spawned. |
+| `m_iPawnLifetimeEnd` | int32 | Server tick on which the current pawn died (0 while still alive). |
+| `m_iPawnBotDifficulty` | int32 |  |
 | `m_hOriginalControllerOfCurrentPawn` | CHandle< [CCSPlayerController](../schemas/server.md#ccsplayercontroller) > | When a human takes over a bot, this holds a handle back to the original bot controller so the pawn can be returned after the human disconnects.
- `MNetworkEnable` |
-| `m_iScore` | int32 | Lifetime score for this connection (frags minus team-kills, etc.). `MNetworkEnable` |
+ |
+| `m_iScore` | int32 | Lifetime score for this connection (frags minus team-kills, etc.). |
 | `m_iRoundScore` | int32 |  |
 | `m_iRoundsWon` | int32 |  |
-| `m_recentKillQueue` | uint8[8] | Circular buffer of the 8 most-recent enemy kills this round (pawn entity indices). *Used to determine domination/revenge streaks.* `MNetworkEnable` |
-| `m_nFirstKill` | uint8 | Index within m_recentKillQueue of the oldest valid entry. `MNetworkEnable` |
-| `m_nKillCount` | uint8 | Number of valid entries currently in m_recentKillQueue. `MNetworkEnable` |
-| `m_bMvpNoMusic` | bool | True when the MVP jingle should be suppressed for this player's MVP award. `MNetworkEnable` |
-| `m_eMvpReason` | int32 | Reason for the most recent MVP award (enum: 1 = most kills, 2 = bomb defuse, 3 = bomb plant, etc.). `MNetworkEnable` |
-| `m_iMusicKitID` | int32 | Item definition index of the music kit active for this player. `MNetworkEnable` |
-| `m_iMusicKitMVPs` | int32 | Number of MVPs awarded while this music kit has been equipped (affects music kit stat tracking). `MNetworkEnable` |
-| `m_iMVPs` | int32 | Number of MVP stars the player has earned in the current match. `MNetworkEnable` `MNetworkChangeCallback = "OnMVPCountChanged"` |
+| `m_recentKillQueue` | uint8[8] | Circular buffer of the 8 most-recent enemy kills this round (pawn entity indices). *Used to determine domination/revenge streaks.* |
+| `m_nFirstKill` | uint8 | Index within m_recentKillQueue of the oldest valid entry. |
+| `m_nKillCount` | uint8 | Number of valid entries currently in m_recentKillQueue. |
+| `m_bMvpNoMusic` | bool | True when the MVP jingle should be suppressed for this player's MVP award. |
+| `m_eMvpReason` | int32 | Reason for the most recent MVP award (enum: 1 = most kills, 2 = bomb defuse, 3 = bomb plant, etc.). |
+| `m_iMusicKitID` | int32 | Item definition index of the music kit active for this player. |
+| `m_iMusicKitMVPs` | int32 | Number of MVPs awarded while this music kit has been equipped (affects music kit stat tracking). |
+| `m_iMVPs` | int32 | Number of MVP stars the player has earned in the current match. |
 | `m_nUpdateCounter` | int32 |  |
 | `m_flSmoothedPing` | float32 |  |
 | `m_lastHeldVoteTimer` | [IntervalTimer](../schemas/server.md#intervaltimer) |  |
@@ -3928,7 +4002,7 @@ classDiagram
 | `m_LastTimePlayerWasDisconnectedForPawnsRemove` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_nSuspiciousHitCount` | uint32 |  |
 | `m_nNonSuspiciousHitStreak` | uint32 |  |
-| `m_bFireBulletsSeedSynchronized` | bool | True once the client's bullet-fire PRNG seed has been synchronised with the server. *Only sent to the owning player (LocalPlayerExclusive).* `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
+| `m_bFireBulletsSeedSynchronized` | bool | True once the client's bullet-fire PRNG seed has been synchronised with the server. *Only sent to the owning player (LocalPlayerExclusive).* |
 
 ### CCSPlayerController_ActionTrackingServices
 
@@ -3947,17 +4021,15 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_perRoundStats` | CUtlVectorEmbeddedNetworkVar< [CSPerRoundStats_t](../schemas/server.md#csperroundstats_t) > | `MNetworkEnable` |
-| `m_matchStats` | [CSMatchStats_t](../schemas/server.md#csmatchstats_t) | `MNetworkEnable` |
-| `m_iNumRoundKills` | int32 | `MNetworkEnable` |
-| `m_iNumRoundKillsHeadshots` | int32 | `MNetworkEnable` |
-| `m_flTotalRoundDamageDealt` | float32 | `MNetworkEnable` |
+| `m_perRoundStats` | CUtlVectorEmbeddedNetworkVar< [CSPerRoundStats_t](../schemas/server.md#csperroundstats_t) > |  |
+| `m_matchStats` | [CSMatchStats_t](../schemas/server.md#csmatchstats_t) |  |
+| `m_iNumRoundKills` | int32 |  |
+| `m_iNumRoundKillsHeadshots` | int32 |  |
+| `m_flTotalRoundDamageDealt` | float32 |  |
 
 ### CCSPlayerController_DamageServices
 
 **Inherits from:** [CPlayerControllerComponent](client.md#cplayercontrollercomponent)
-
-**Metadata:** `MNetworkReplayCompatField = "m_DamageList.*"`
 
 **Relationships:**
 
@@ -3971,8 +4043,8 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_nSendUpdate` | int32 | `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusiveDuringRoundEnd"` `MNetworkChangeCallback = "OnDamageListUpdate"` |
-| `m_DamageList` | CUtlVectorEmbeddedNetworkVar< [CDamageRecord](../schemas/server.md#cdamagerecord) > | `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusiveDuringRoundEnd"` |
+| `m_nSendUpdate` | int32 |  |
+| `m_DamageList` | CUtlVectorEmbeddedNetworkVar< [CDamageRecord](../schemas/server.md#cdamagerecord) > |  |
 
 ### CCSPlayerController_InGameMoneyServices
 
@@ -3991,10 +4063,10 @@ classDiagram
 |------|------|-------------|
 | `m_bReceivesMoneyNextRound` | bool |  |
 | `m_iMoneyEarnedForNextRound` | int32 |  |
-| `m_iAccount` | int32 | `MNetworkEnable` |
-| `m_iStartAccount` | int32 | `MNetworkEnable` |
-| `m_iTotalCashSpent` | int32 | `MNetworkEnable` |
-| `m_iCashSpentThisRound` | int32 | `MNetworkEnable` |
+| `m_iAccount` | int32 |  |
+| `m_iStartAccount` | int32 |  |
+| `m_iTotalCashSpent` | int32 |  |
+| `m_iCashSpentThisRound` | int32 |  |
 
 ### CCSPlayerController_InventoryServices
 
@@ -4013,16 +4085,16 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_unMusicID` | uint16 | `MNetworkEnable` |
-| `m_rank` | [MedalRank_t](../schemas/client.md#medalrank_t)[6] | `MNetworkEnable` |
-| `m_nPersonaDataPublicLevel` | int32 | `MNetworkEnable` |
-| `m_nPersonaDataPublicCommendsLeader` | int32 | `MNetworkEnable` |
-| `m_nPersonaDataPublicCommendsTeacher` | int32 | `MNetworkEnable` |
-| `m_nPersonaDataPublicCommendsFriendly` | int32 | `MNetworkEnable` |
-| `m_nPersonaDataXpTrailLevel` | int32 | `MNetworkEnable` |
+| `m_unMusicID` | uint16 |  |
+| `m_rank` | [MedalRank_t](../schemas/client.md#medalrank_t)[6] |  |
+| `m_nPersonaDataPublicLevel` | int32 |  |
+| `m_nPersonaDataPublicCommendsLeader` | int32 |  |
+| `m_nPersonaDataPublicCommendsTeacher` | int32 |  |
+| `m_nPersonaDataPublicCommendsFriendly` | int32 |  |
+| `m_nPersonaDataXpTrailLevel` | int32 |  |
 | `m_unEquippedPlayerSprayIDs` | uint32[1] |  |
 | `m_unCurrentLoadoutHash` | uint64 |  |
-| `m_vecServerAuthoritativeWeaponSlots` | CUtlVectorEmbeddedNetworkVar< [ServerAuthoritativeWeaponSlot_t](../schemas/server.md#serverauthoritativeweaponslot_t) > | `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
+| `m_vecServerAuthoritativeWeaponSlots` | CUtlVectorEmbeddedNetworkVar< [ServerAuthoritativeWeaponSlot_t](../schemas/server.md#serverauthoritativeweaponslot_t) > |  |
 
 ### CCSPlayerController_InventoryServices
 
@@ -4047,7 +4119,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_bOldJumpPressed` | bool | `MNetworkEnable` |
+| `m_bOldJumpPressed` | bool |  |
 | `m_flJumpPressedTime` | float32 |  |
 
 ### CCSPlayerModernJump
@@ -4063,15 +4135,15 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_nLastActualJumpPressTick` | [GameTick_t](../schemas/entity2.md#gametick_t) | `MNetworkEnable` |
-| `m_flLastActualJumpPressFrac` | float32 | `MNetworkEnable` `MNetworkBitCount = 6` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 1.000000` `MNetworkEncodeFlags = 4` |
-| `m_nLastUsableJumpPressTick` | [GameTick_t](../schemas/entity2.md#gametick_t) | `MNetworkEnable` |
-| `m_flLastUsableJumpPressFrac` | float32 | `MNetworkEnable` `MNetworkBitCount = 6` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 1.000000` `MNetworkEncodeFlags = 4` |
-| `m_nLastLandedTick` | [GameTick_t](../schemas/entity2.md#gametick_t) | `MNetworkEnable` |
-| `m_flLastLandedFrac` | float32 | `MNetworkEnable` `MNetworkBitCount = 6` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 1.000000` `MNetworkEncodeFlags = 4` |
-| `m_flLastLandedVelocityX` | float32 | `MNetworkEnable` `MNetworkBitCount = 20` `MNetworkMinValue = -16384.000000` `MNetworkMaxValue = 16384.000000` `MNetworkEncodeFlags = 4` |
-| `m_flLastLandedVelocityY` | float32 | `MNetworkEnable` `MNetworkBitCount = 20` `MNetworkMinValue = -16384.000000` `MNetworkMaxValue = 16384.000000` `MNetworkEncodeFlags = 4` |
-| `m_flLastLandedVelocityZ` | float32 | `MNetworkEnable` `MNetworkBitCount = 20` `MNetworkMinValue = -16384.000000` `MNetworkMaxValue = 16384.000000` `MNetworkEncodeFlags = 4` |
+| `m_nLastActualJumpPressTick` | [GameTick_t](../schemas/entity2.md#gametick_t) |  |
+| `m_flLastActualJumpPressFrac` | float32 |  |
+| `m_nLastUsableJumpPressTick` | [GameTick_t](../schemas/entity2.md#gametick_t) |  |
+| `m_flLastUsableJumpPressFrac` | float32 |  |
+| `m_nLastLandedTick` | [GameTick_t](../schemas/entity2.md#gametick_t) |  |
+| `m_flLastLandedFrac` | float32 |  |
+| `m_flLastLandedVelocityX` | float32 |  |
+| `m_flLastLandedVelocityY` | float32 |  |
+| `m_flLastLandedVelocityZ` | float32 |  |
 
 ### CCSPlayerPawn
 
@@ -4083,8 +4155,6 @@ The physical in-world representation of a CS2 player.  Carries per-round state: 
 
 **Inherits from:** [CCSPlayerPawnBase](server.md#ccsplayerpawnbase)
 
-**Metadata:** `MNetworkOutOfPVSUpdates (UNKNOWN FOR PARSER)`, `MNetworkVarTypeOverride = "CCSPlayer_WeaponServices m_pWeaponServices"`, `MNetworkIncludeByName = "m_pWeaponServices"`, `MNetworkVarTypeOverride = "CCSPlayer_ItemServices m_pItemServices"`, `MNetworkIncludeByName = "m_pItemServices"`, `MNetworkVarTypeOverride = "CCSPlayer_UseServices m_pUseServices"`, `MNetworkIncludeByName = "m_pUseServices"`, `MNetworkVarTypeOverride = "CCSPlayer_WaterServices m_pWaterServices"`, `MNetworkIncludeByName = "m_pWaterServices"`, `MNetworkVarTypeOverride = "CCSPlayer_MovementServices m_pMovementServices"`, `MNetworkIncludeByName = "m_pMovementServices"`, `MNetworkVarTypeOverride = "CCSPlayer_CameraServices m_pCameraServices"`, `MNetworkIncludeByName = "m_pCameraServices"`
-
 **Relationships:**
 
 ```mermaid
@@ -4092,8 +4162,8 @@ classDiagram
     CCSPlayerPawnBase <|-- CCSPlayerPawn
     CBasePlayerPawn <|-- CCSPlayerPawnBase
     CBaseCombatCharacter <|-- CBasePlayerPawn
-    CBaseFlex <|-- CBaseCombatCharacter
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CBaseCombatCharacter
+    C_BaseModelEntity <|-- CBaseAnimGraph
     CCSPlayerPawn --> CCSPlayer_BulletServices
     CCSPlayerPawn --> CCSPlayer_HostageServices
     CCSPlayerPawn --> CCSPlayer_BuyServices
@@ -4110,60 +4180,59 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_pBulletServices` | [CCSPlayer_BulletServices](../schemas/server.md#ccsplayer_bulletservices)* | Pointer to CCSPlayer_BulletServices which tracks hit counts registered on the server. `MNetworkEnable` |
-| `m_pHostageServices` | [CCSPlayer_HostageServices](../schemas/server.md#ccsplayer_hostageservices)* | Pointer to CCSPlayer_HostageServices which tracks which hostage entity this player is currently carrying. `MNetworkEnable` |
-| `m_pBuyServices` | [CCSPlayer_BuyServices](../schemas/server.md#ccsplayer_buyservices)* | Pointer to CCSPlayer_BuyServices which tracks sellback purchase history for the current round. `MNetworkEnable` |
-| `m_pActionTrackingServices` | [CCSPlayer_ActionTrackingServices](../schemas/server.md#ccsplayer_actiontrackingservices)* | Pointer to CCSPlayer_ActionTrackingServices which tracks weapon purchases and rescue state for stats/scoring. `MNetworkEnable` |
+| `m_pBulletServices` | [CCSPlayer_BulletServices](../schemas/server.md#ccsplayer_bulletservices)* | Pointer to CCSPlayer_BulletServices which tracks hit counts registered on the server. |
+| `m_pHostageServices` | [CCSPlayer_HostageServices](../schemas/server.md#ccsplayer_hostageservices)* | Pointer to CCSPlayer_HostageServices which tracks which hostage entity this player is currently carrying. |
+| `m_pBuyServices` | [CCSPlayer_BuyServices](../schemas/server.md#ccsplayer_buyservices)* | Pointer to CCSPlayer_BuyServices which tracks sellback purchase history for the current round. |
+| `m_pActionTrackingServices` | [CCSPlayer_ActionTrackingServices](../schemas/server.md#ccsplayer_actiontrackingservices)* | Pointer to CCSPlayer_ActionTrackingServices which tracks weapon purchases and rescue state for stats/scoring. |
 | `m_pRadioServices` | [CCSPlayer_RadioServices](../schemas/server.md#ccsplayer_radioservices)* |  |
 | `m_pDamageReactServices` | [CCSPlayer_DamageReactServices](../schemas/server.md#ccsplayer_damagereactservices)* |  |
 | `m_nCharacterDefIndex` | uint16 |  |
-| `m_bHasFemaleVoice` | bool | True when the equipped agent skin uses a female voice pack. `MNetworkEnable` |
+| `m_bHasFemaleVoice` | bool | True when the equipped agent skin uses a female voice pack. |
 | `m_strVOPrefix` | CUtlString |  |
-| `m_szLastPlaceName` | char[18] | Human-readable area/landmark name from the nav mesh where the player was last located (e.g. 'CTSpawn', 'BombsiteA'). `MNetworkEnable` |
+| `m_szLastPlaceName` | char[18] | Human-readable area/landmark name from the nav mesh where the player was last located (e.g. 'CTSpawn', 'BombsiteA'). |
 | `m_bInHostageResetZone` | bool |  |
-| `m_bInBuyZone` | bool | True while the player is standing inside a buy zone. `MNetworkEnable` |
+| `m_bInBuyZone` | bool | True while the player is standing inside a buy zone. |
 | `m_TouchingBuyZones` | CUtlVector< CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > > |  |
 | `m_bWasInBuyZone` | bool |  |
-| `m_bInHostageRescueZone` | bool | True while the player is inside a hostage rescue zone. `MNetworkEnable` |
-| `m_bInBombZone` | bool | True while the player is standing inside a bomb-plant zone (bombsite trigger). *m_nWhichBombZone indicates which site (0 = not in any, 1 = A, 2 = B).* `MNetworkEnable` |
+| `m_bInHostageRescueZone` | bool | True while the player is inside a hostage rescue zone. |
+| `m_bInBombZone` | bool | True while the player is standing inside a bomb-plant zone (bombsite trigger). *m_nWhichBombZone indicates which site (0 = not in any, 1 = A, 2 = B).* |
 | `m_bWasInHostageRescueZone` | bool |  |
-| `m_iRetakesOffering` | int32 | Retakes-mode offering index: which weapon/utility load-out this player was offered for the retake. `MNetworkEnable` |
-| `m_iRetakesOfferingCard` | int32 | Card index the player selected in the retakes offering interface. `MNetworkEnable` |
-| `m_bRetakesHasDefuseKit` | bool | True when the retakes system has granted this player a defuse kit for the retake round. `MNetworkEnable` |
-| `m_bRetakesMVPLastRound` | bool | True if this player earned the retakes MVP award in the previous round. `MNetworkEnable` |
-| `m_iRetakesMVPBoostItem` | int32 | Item definition index of the bonus item awarded to the retakes MVP. `MNetworkEnable` |
-| `m_RetakesMVPBoostExtraUtility` | loadout_slot_t | `MNetworkEnable` |
-| `m_flHealthShotBoostExpirationTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the health-shot (medshot) movement speed boost expires. `MNetworkEnable` |
+| `m_iRetakesOffering` | int32 | Retakes-mode offering index: which weapon/utility load-out this player was offered for the retake. |
+| `m_iRetakesOfferingCard` | int32 | Card index the player selected in the retakes offering interface. |
+| `m_bRetakesHasDefuseKit` | bool | True when the retakes system has granted this player a defuse kit for the retake round. |
+| `m_bRetakesMVPLastRound` | bool | True if this player earned the retakes MVP award in the previous round. |
+| `m_iRetakesMVPBoostItem` | int32 | Item definition index of the bonus item awarded to the retakes MVP. |
+| `m_RetakesMVPBoostExtraUtility` | loadout_slot_t |  |
+| `m_flHealthShotBoostExpirationTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the health-shot (medshot) movement speed boost expires. |
 | `m_flLandingTimeSeconds` | float32 |  |
-| `m_aimPunchAngle` | QAngle | Accumulated aim-punch (recoil kick) angle in pitch and yaw applied to the camera view, in degrees. *Networked at full 32-bit precision. Clients subtract this from view angles to derive the true aim direction.* `MNetworkEnable` `MNetworkBitCount = 32` |
-| `m_aimPunchAngleVel` | QAngle | Current velocity of the aim-punch angle – how fast the recoil is decaying per tick. `MNetworkEnable` `MNetworkBitCount = 32` |
-| `m_aimPunchTickBase` | [GameTick_t](../schemas/entity2.md#gametick_t) | Server tick at which the aim-punch sample list was last reset. `MNetworkEnable` |
-| `m_aimPunchTickFraction` | float32 | Fractional tick offset for interpolating the aim-punch curve between ticks. `MNetworkEnable` |
+| `m_aimPunchAngle` | QAngle | Accumulated aim-punch (recoil kick) angle in pitch and yaw applied to the camera view, in degrees. *Networked at full 32-bit precision. Clients subtract this from view angles to derive the true aim direction.* |
+| `m_aimPunchAngleVel` | QAngle | Current velocity of the aim-punch angle – how fast the recoil is decaying per tick. |
+| `m_aimPunchTickBase` | [GameTick_t](../schemas/entity2.md#gametick_t) | Server tick at which the aim-punch sample list was last reset. |
+| `m_aimPunchTickFraction` | float32 | Fractional tick offset for interpolating the aim-punch curve between ticks. |
 | `m_aimPunchCache` | CUtlVector< QAngle > |  |
-| `m_bIsBuyMenuOpen` | bool | True while the player's buy menu is open. `MNetworkEnable` |
+| `m_bIsBuyMenuOpen` | bool | True while the player's buy menu is open. |
 | `m_lastLandTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_bOnGroundLastTick` | bool |  |
 | `m_iPlayerLocked` | int32 |  |
-| `m_flTimeOfLastInjury` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime of the most-recent damage event that reduced this player's health. `MNetworkEnable` |
-| `m_flNextSprayDecalTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
+| `m_flTimeOfLastInjury` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime of the most-recent damage event that reduced this player's health. |
+| `m_flNextSprayDecalTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_bNextSprayDecalTimeExpedited` | bool |  |
-| `m_nRagdollDamageBone` | int32 | Bone index of the last hit that caused a ragdoll impulse. `MNetworkEnable` |
-| `m_vRagdollDamageForce` | Vector | World-space impulse vector applied to the ragdoll bone on death. `MNetworkEnable` |
-| `m_vRagdollDamagePosition` | Vector | World-space position of the hit point that caused the fatal damage. `MNetworkEnable` |
-| `m_szRagdollDamageWeaponName` | char[64] | Class name of the weapon that killed this player (used to select the correct death ragdoll). `MNetworkEnable` |
-| `m_bRagdollDamageHeadshot` | bool | True if the fatal blow was a headshot, used to trigger headshot-specific ragdoll animation. `MNetworkEnable` |
-| `m_vRagdollServerOrigin` | Vector | World-space position of the player's origin at the moment of death. `MNetworkEnable` |
-| `m_EconGloves` | [CEconItemView](../schemas/server.md#ceconitemview) | CEconItemView describing the glove skin equipped on this player. `MNetworkEnable` |
-| `m_nEconGlovesChanged` | uint8 | Incremented each time the glove loadout changes, so the client can refresh the glove model. `MNetworkEnable` |
-| `m_qDeathEyeAngles` | QAngle | Eye angles at the moment of death, used to pose the ragdoll's head correctly. `MNetworkEnable` |
-| `m_bSkipOneHeadConstraintUpdate` | bool |  |
-| `m_bLeftHanded` | bool | True when the player has switched the weapon to the left hand (cl_lefthand 1). `MNetworkEnable` |
-| `m_fSwitchedHandednessTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the player last toggled handedness (prevents rapid toggling). `MNetworkEnable` |
-| `m_flViewmodelOffsetX` | float32 | Custom viewmodel X offset in world units (cl_viewmodel_offset_x). `MNetworkEnable` `MNetworkMinValue = -2.000000` `MNetworkMaxValue = 2.500000` |
-| `m_flViewmodelOffsetY` | float32 | Custom viewmodel Y offset in world units (cl_viewmodel_offset_y). `MNetworkEnable` `MNetworkMinValue = -2.000000` `MNetworkMaxValue = 2.000000` |
-| `m_flViewmodelOffsetZ` | float32 | Custom viewmodel Z offset in world units (cl_viewmodel_offset_z). `MNetworkEnable` `MNetworkMinValue = -2.000000` `MNetworkMaxValue = 2.000000` |
-| `m_flViewmodelFOV` | float32 | Custom viewmodel FOV in degrees (cl_viewmodel_fov; clamped to 60–68). `MNetworkEnable` `MNetworkMinValue = 60.000000` `MNetworkMaxValue = 68.000000` |
-| `m_bIsWalking` | bool | True while the player is in walk mode (shift-walk / cl_showpos = 1 walking). `MNetworkEnable` |
+| `m_nRagdollDamageBone` | int32 | Bone index of the last hit that caused a ragdoll impulse. |
+| `m_vRagdollDamageForce` | Vector | World-space impulse vector applied to the ragdoll bone on death. |
+| `m_vRagdollDamagePosition` | Vector | World-space position of the hit point that caused the fatal damage. |
+| `m_szRagdollDamageWeaponName` | char[64] | Class name of the weapon that killed this player (used to select the correct death ragdoll). |
+| `m_bRagdollDamageHeadshot` | bool | True if the fatal blow was a headshot, used to trigger headshot-specific ragdoll animation. |
+| `m_vRagdollServerOrigin` | Vector | World-space position of the player's origin at the moment of death. |
+| `m_EconGloves` | [CEconItemView](../schemas/server.md#ceconitemview) | CEconItemView describing the glove skin equipped on this player. |
+| `m_nEconGlovesChanged` | uint8 | Incremented each time the glove loadout changes, so the client can refresh the glove model. |
+| `m_qDeathEyeAngles` | QAngle | Eye angles at the moment of death, used to pose the ragdoll's head correctly. |
+| `m_bLeftHanded` | bool | True when the player has switched the weapon to the left hand (cl_lefthand 1). |
+| `m_fSwitchedHandednessTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the player last toggled handedness (prevents rapid toggling). |
+| `m_flViewmodelOffsetX` | float32 | Custom viewmodel X offset in world units (cl_viewmodel_offset_x). |
+| `m_flViewmodelOffsetY` | float32 | Custom viewmodel Y offset in world units (cl_viewmodel_offset_y). |
+| `m_flViewmodelOffsetZ` | float32 | Custom viewmodel Z offset in world units (cl_viewmodel_offset_z). |
+| `m_flViewmodelFOV` | float32 | Custom viewmodel FOV in degrees (cl_viewmodel_fov; clamped to 60–68). |
+| `m_bIsWalking` | bool | True while the player is in walk mode (shift-walk / cl_showpos = 1 walking). |
 | `m_fLastGivenDefuserTime` | float32 |  |
 | `m_fLastGivenBombTime` | float32 |  |
 | `m_flDealtDamageToEnemyMostRecentTimestamp` | float32 |  |
@@ -4171,50 +4240,44 @@ classDiagram
 | `m_flLastAttackedTeammate` | float32 |  |
 | `m_allowAutoFollowTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_bResetArmorNextSpawn` | bool |  |
-| `m_nLastKillerIndex` | CEntityIndex | Entity index of the player or entity that last killed this pawn. `MNetworkEnable` |
-| `m_entitySpottedState` | [EntitySpottedState_t](../schemas/server.md#entityspottedstate_t) | EntitySpottedState_t struct tracking which players have spotted (ESP-radar dot) this entity. *See also m_bSpotted and the spotted bitmask used by the minimap.* `MNetworkEnable` |
+| `m_nLastKillerIndex` | CEntityIndex | Entity index of the player or entity that last killed this pawn. |
+| `m_entitySpottedState` | [EntitySpottedState_t](../schemas/server.md#entityspottedstate_t) | EntitySpottedState_t struct tracking which players have spotted (ESP-radar dot) this entity. *See also m_bSpotted and the spotted bitmask used by the minimap.* |
 | `m_nSpotRules` | int32 |  |
-| `m_bIsScoped` | bool | True while the player is looking through a weapon scope. `MNetworkEnable` |
-| `m_bResumeZoom` | bool | True when the scope should be re-engaged automatically after the next shot (AWP/SSG 08 bolt-action mechanic). `MNetworkEnable` |
-| `m_bIsDefusing` | bool | True while the player is actively defusing the planted bomb. `MNetworkEnable` |
-| `m_bIsGrabbingHostage` | bool | True while the player is picking up a hostage entity. `MNetworkEnable` |
-| `m_iBlockingUseActionInProgress` | [CSPlayerBlockingUseAction_t](../schemas/client.md#csplayerblockinguseaction_t) | CSPlayerBlockingUseAction_t enum indicating a use-action in progress that blocks other actions (e.g. defuse, hostage grab). `MNetworkEnable` |
-| `m_flEmitSoundTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime of the next footstep sound emission; controls footstep sound spacing. `MNetworkEnable` |
-| `m_bInNoDefuseArea` | bool | True when the player is in a location where defusing is not permitted. `MNetworkEnable` |
+| `m_bIsScoped` | bool | True while the player is looking through a weapon scope. |
+| `m_bResumeZoom` | bool | True when the scope should be re-engaged automatically after the next shot (AWP/SSG 08 bolt-action mechanic). |
+| `m_bIsDefusing` | bool | True while the player is actively defusing the planted bomb. |
+| `m_bIsGrabbingHostage` | bool | True while the player is picking up a hostage entity. |
+| `m_iBlockingUseActionInProgress` | [CSPlayerBlockingUseAction_t](../schemas/client.md#csplayerblockinguseaction_t) | CSPlayerBlockingUseAction_t enum indicating a use-action in progress that blocks other actions (e.g. defuse, hostage grab). |
+| `m_flEmitSoundTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime of the next footstep sound emission; controls footstep sound spacing. |
+| `m_bInNoDefuseArea` | bool | True when the player is in a location where defusing is not permitted. |
 | `m_iBombSiteIndex` | CEntityIndex |  |
-| `m_nWhichBombZone` | int32 | Indicates which bomb site the player is currently inside (0 = none, 1 = A, 2 = B). `MNetworkEnable` |
+| `m_nWhichBombZone` | int32 | Indicates which bomb site the player is currently inside (0 = none, 1 = A, 2 = B). |
 | `m_bInBombZoneTrigger` | bool |  |
 | `m_bWasInBombZoneTrigger` | bool |  |
-| `m_iShotsFired` | int32 | Number of bullets fired since the player last stopped firing (resets when trigger is released or weapon changes). *Used to drive the walk-run bobbing animation state.* `MNetworkEnable` |
-| `m_flFlinchStack` | float32 | Accumulated flinch value from recent damage; drives the camera-shake magnitude. *Only sent to the owning player (LocalPlayerExclusive).* `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
-| `m_flVelocityModifier` | float32 | Multiplicative speed modifier applied on top of base movement speed (0.0–1.0 typically; reduced while injured or tased). `MNetworkEnable` |
-| `m_flHitHeading` | float32 | Horizontal heading angle (degrees) of the last incoming hit; drives the flinch animation direction. `MNetworkEnable` |
-| `m_nHitBodyPart` | int32 | Hit-group constant of the last incoming hit (head=1, chest=2, stomach=3, leftarm=4, rightarm=5, leftleg=6, rightleg=7, neck=8). `MNetworkEnable` |
+| `m_iShotsFired` | int32 | Number of bullets fired since the player last stopped firing (resets when trigger is released or weapon changes). *Used to drive the walk-run bobbing animation state.* |
+| `m_flFlinchStack` | float32 | Accumulated flinch value from recent damage; drives the camera-shake magnitude. *Only sent to the owning player (LocalPlayerExclusive).* |
+| `m_flVelocityModifier` | float32 | Multiplicative speed modifier applied on top of base movement speed (0.0–1.0 typically; reduced while injured or tased). |
 | `m_vecTotalBulletForce` | Vector |  |
-| `m_bWaitForNoAttack` | bool | True when the weapon's fire input must be fully released before the next shot is accepted (prevents auto-fire on re-deploy). `MNetworkEnable` |
+| `m_bWaitForNoAttack` | bool | True when the weapon's fire input must be fully released before the next shot is accepted (prevents auto-fire on re-deploy). |
 | `m_ignoreLadderJumpTime` | float32 |  |
-| `m_bKilledByHeadshot` | bool | True if the killing blow on this player was a headshot. `MNetworkEnable` |
+| `m_bKilledByHeadshot` | bool | True if the killing blow on this player was a headshot. |
 | `m_LastHitBox` | int32 |  |
 | `m_pBot` | [CCSBot](../schemas/server.md#ccsbot)* |  |
 | `m_bBotAllowActive` | bool |  |
-| `m_thirdPersonHeading` | QAngle | Horizontal heading angle shown in third-person and spectator view (may differ from eye yaw when crouching/moving). `MNetworkEnable` `MNetworkEncoder = "qangle_precise"` `MNetworkPriority = 32` |
-| `m_flSlopeDropOffset` | float32 | Vertical offset applied when the player is walking down a slope (prevents foot clipping). `MNetworkEnable` `MNetworkPriority = 32` |
-| `m_flSlopeDropHeight` | float32 | Height of the slope the player is descending; used to scale the slope-drop animation. `MNetworkEnable` `MNetworkPriority = 32` |
-| `m_vHeadConstraintOffset` | Vector | Additional world-space offset applied to the head bone IK constraint. `MNetworkEnable` `MNetworkPriority = 32` |
 | `m_nLastPickupPriority` | int32 |  |
 | `m_flLastPickupPriorityTime` | float32 |  |
-| `m_ArmorValue` | int32 | Current armor HP (0–100). Combined-arms note: vest+helmet does not exceed 100 armor points. `MNetworkEnable` |
-| `m_unCurrentEquipmentValue` | uint16 | Total buy value (in dollars) of equipment currently held by the player. `MNetworkEnable` |
-| `m_unRoundStartEquipmentValue` | uint16 | Equipment value at the start of the current round (after freeze-time buy phase ends). `MNetworkEnable` |
-| `m_unFreezetimeEndEquipmentValue` | uint16 | Equipment value at the moment freeze time ended. `MNetworkEnable` |
+| `m_ArmorValue` | int32 | Current armor HP (0–100). Combined-arms note: vest+helmet does not exceed 100 armor points. |
+| `m_unCurrentEquipmentValue` | uint16 | Total buy value (in dollars) of equipment currently held by the player. |
+| `m_unRoundStartEquipmentValue` | uint16 | Equipment value at the start of the current round (after freeze-time buy phase ends). |
+| `m_unFreezetimeEndEquipmentValue` | uint16 | Equipment value at the moment freeze time ended. |
 | `m_iLastWeaponFireUsercmd` | int32 |  |
 | `m_bIsSpawning` | bool |  |
 | `m_iDeathFlags` | int32 |  |
 | `m_bHasDeathInfo` | bool |  |
 | `m_flDeathInfoTime` | float32 |  |
 | `m_vecDeathInfoOrigin` | Vector |  |
-| `m_vecPlayerPatchEconIndices` | uint32[5] | Array of 5 item-definition indices for the agent patch slots (team patches worn on the uniform). `MNetworkEnable` |
-| `m_GunGameImmunityColor` | Color | Color applied to the player model while gun-game immunity is active. `MNetworkEnable` |
+| `m_vecPlayerPatchEconIndices` | uint32[5] | Array of 5 item-definition indices for the agent patch slots (team patches worn on the uniform). |
+| `m_GunGameImmunityColor` | Color | Color applied to the player model while gun-game immunity is active. |
 | `m_grenadeParameterStashTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_bGrenadeParametersStashed` | bool |  |
 | `m_angStashedShootAngles` | QAngle |  |
@@ -4223,14 +4286,12 @@ classDiagram
 | `m_angShootAngleHistory` | QAngle[2] |  |
 | `m_vecThrowPositionHistory` | Vector[2] |  |
 | `m_vecVelocityHistory` | Vector[2] |  |
-| `m_PredictedDamageTags` | CUtlVectorEmbeddedNetworkVar< [PredictedDamageTag_t](../schemas/server.md#predicteddamagetag_t) > | `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
-| `m_nHighestAppliedDamageTagTick` | int32 |  |
 | `m_bCommittingSuicideOnTeamChange` | bool |  |
 | `m_wasNotKilledNaturally` | bool |  |
-| `m_fImmuneToGunGameDamageTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime until which the player is immune to damage in Gun Game / Arms Race mode. `MNetworkEnable` |
-| `m_bGunGameImmunity` | bool | True while the player has gun-game spawn immunity (brief invincibility after spawning in Arms Race mode). `MNetworkEnable` |
-| `m_fMolotovDamageTime` | float32 | GameTime at which molotov/incendiary damage will next be applied to this player. `MNetworkEnable` |
-| `m_angEyeAngles` | QAngle | Server-authoritative eye angles (pitch, yaw, roll) used for hit-box calculation and third-person rendering. *Encoded at full qangle_precise precision. The definitive source for a player's look direction.* `MNetworkEnable` `MNetworkEncoder = "qangle_precise"` `MNetworkPriority = 32` |
+| `m_fImmuneToGunGameDamageTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime until which the player is immune to damage in Gun Game / Arms Race mode. |
+| `m_bGunGameImmunity` | bool | True while the player has gun-game spawn immunity (brief invincibility after spawning in Arms Race mode). |
+| `m_fMolotovDamageTime` | float32 | GameTime at which molotov/incendiary damage will next be applied to this player. |
+| `m_angEyeAngles` | QAngle | Server-authoritative eye angles (pitch, yaw, roll) used for hit-box calculation and third-person rendering. *Encoded at full qangle_precise precision. The definitive source for a player's look direction.* |
 
 ### CCSPlayerPawnBase
 
@@ -4241,17 +4302,15 @@ Abstract base class shared by CCSPlayerPawn and CCSObserverPawn, providing the f
 
 **Derived by:** [CCSObserverPawn](server.md#ccsobserverpawn), [CCSPlayerPawn](server.md#ccsplayerpawn)
 
-**Metadata:** `MNetworkExcludeByName = "m_flexWeight"`, `MNetworkExcludeByUserGroup = "m_flPoseParameter"`, `MNetworkExcludeByName = "m_baseLayer.m_hSequence"`, `MNetworkExcludeByName = "m_animationController.m_flPlaybackRate"`
-
 **Relationships:**
 
 ```mermaid
 classDiagram
     CBasePlayerPawn <|-- CCSPlayerPawnBase
     CBaseCombatCharacter <|-- CBasePlayerPawn
-    CBaseFlex <|-- CBaseCombatCharacter
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CBaseCombatCharacter
     C_BaseModelEntity <|-- CBaseAnimGraph
+    C_BaseEntity <|-- C_BaseModelEntity
     CCSPlayerPawnBase <|-- CCSObserverPawn
     CCSPlayerPawnBase <|-- CCSPlayerPawn
     CCSPlayerPawnBase *-- CTouchExpansionComponent
@@ -4265,21 +4324,21 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_CTouchExpansionComponent` | [CTouchExpansionComponent](../schemas/server.md#ctouchexpansioncomponent) | `MNetworkEnable` `MNetworkUserGroup = "CTouchExpansionComponent"` `MNetworkAlias = "CTouchExpansionComponent"` `MNetworkTypeAlias = "CTouchExpansionComponent"` |
-| `m_pPingServices` | [CCSPlayer_PingServices](../schemas/server.md#ccsplayer_pingservices)* | Pointer to CCSPlayer_PingServices managing the in-game map-ping system. `MNetworkEnable` |
+| `m_CTouchExpansionComponent` | [CTouchExpansionComponent](../schemas/server.md#ctouchexpansioncomponent) |  |
+| `m_pPingServices` | [CCSPlayer_PingServices](../schemas/server.md#ccsplayer_pingservices)* | Pointer to CCSPlayer_PingServices managing the in-game map-ping system. |
 | `m_blindUntilTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_blindStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
-| `m_iPlayerState` | [CSPlayerState](../schemas/client.md#csplayerstate) | CSPlayerState enum: STATE_ACTIVE = 0 (alive), STATE_WELCOME = 1, STATE_PICKINGTEAM = 2, STATE_PICKINGCLASS = 3, STATE_DEATH_ANIM = 4, STATE_DEATH_WAIT_FOR_KEY = 5, STATE_OBSERVER_MODE = 6. `MNetworkEnable` |
+| `m_iPlayerState` | [CSPlayerState](../schemas/client.md#csplayerstate) | CSPlayerState enum: STATE_ACTIVE = 0 (alive), STATE_WELCOME = 1, STATE_PICKINGTEAM = 2, STATE_PICKINGCLASS = 3, STATE_DEATH_ANIM = 4, STATE_DEATH_WAIT_FOR_KEY = 5, STATE_OBSERVER_MODE = 6. |
 | `m_bRespawning` | bool |  |
-| `m_bHasMovedSinceSpawn` | bool | True once the player moves after spawning; prevents accidental movement-triggered events. `MNetworkEnable` |
+| `m_bHasMovedSinceSpawn` | bool | True once the player moves after spawning; prevents accidental movement-triggered events. |
 | `m_iNumSpawns` | int32 |  |
 | `m_flIdleTimeSinceLastAction` | float32 |  |
 | `m_fNextRadarUpdateTime` | float32 |  |
-| `m_flFlashDuration` | float32 | Total duration in seconds of the current flash-bang blind effect (0 when not flashed). `MNetworkEnable` |
-| `m_flFlashMaxAlpha` | float32 | Peak screen-overlay alpha (0–255) of the current flash bang; scales with proximity and facing angle. `MNetworkEnable` |
-| `m_flProgressBarStartTime` | float32 | GameTime at which the current progress bar (defuse/pickup) started. `MNetworkEnable` |
-| `m_iProgressBarDuration` | int32 | Duration in seconds of the current progress bar interaction. `MNetworkEnable` |
-| `m_hOriginalController` | CHandle< [CCSPlayerController](../schemas/server.md#ccsplayercontroller) > | CHandle back to the CCSPlayerController that owns this pawn, even when a bot has taken over. *Use this to map a pawn to its player for demo parsing.* `MNetworkEnable` |
+| `m_flFlashDuration` | float32 | Total duration in seconds of the current flash-bang blind effect (0 when not flashed). |
+| `m_flFlashMaxAlpha` | float32 | Peak screen-overlay alpha (0–255) of the current flash bang; scales with proximity and facing angle. |
+| `m_flProgressBarStartTime` | float32 | GameTime at which the current progress bar (defuse/pickup) started. |
+| `m_iProgressBarDuration` | int32 | Duration in seconds of the current progress bar interaction. |
+| `m_hOriginalController` | CHandle< [CCSPlayerController](../schemas/server.md#ccsplayercontroller) > | CHandle back to the CCSPlayerController that owns this pawn, even when a bot has taken over. *Use this to map a pawn to its player for demo parsing.* |
 
 ### CCSPlayerResource
 
@@ -4297,15 +4356,15 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_bHostageAlive` | bool[12] | `MNetworkEnable` |
-| `m_isHostageFollowingSomeone` | bool[12] | `MNetworkEnable` |
-| `m_iHostageEntityIDs` | CEntityIndex[12] | `MNetworkEnable` |
-| `m_bombsiteCenterA` | Vector | `MNetworkEnable` |
-| `m_bombsiteCenterB` | Vector | `MNetworkEnable` |
-| `m_hostageRescueX` | int32[4] | `MNetworkEnable` |
-| `m_hostageRescueY` | int32[4] | `MNetworkEnable` |
-| `m_hostageRescueZ` | int32[4] | `MNetworkEnable` |
-| `m_bEndMatchNextMapAllVoted` | bool | `MNetworkEnable` |
+| `m_bHostageAlive` | bool[12] |  |
+| `m_isHostageFollowingSomeone` | bool[12] |  |
+| `m_iHostageEntityIDs` | CEntityIndex[12] |  |
+| `m_bombsiteCenterA` | Vector |  |
+| `m_bombsiteCenterB` | Vector |  |
+| `m_hostageRescueX` | int32[4] |  |
+| `m_hostageRescueY` | int32[4] |  |
+| `m_hostageRescueZ` | int32[4] |  |
+| `m_bEndMatchNextMapAllVoted` | bool |  |
 | `m_foundGoalPositions` | bool |  |
 
 ### CCSPlayer_ActionTrackingServices
@@ -4329,9 +4388,9 @@ classDiagram
 | Name | Type | Annotations |
 |------|------|-------------|
 | `m_hLastWeaponBeforeC4AutoSwitch` | CHandle< [CBasePlayerWeapon](../schemas/server.md#cbaseplayerweapon) > |  |
-| `m_bIsRescuing` | bool | True while the player is escorting a hostage to the rescue zone. `MNetworkEnable` |
-| `m_weaponPurchasesThisMatch` | [WeaponPurchaseTracker_t](../schemas/server.md#weaponpurchasetracker_t) | WeaponPurchaseTracker_t recording which weapons were bought during the match (used for match-stats). `MNetworkEnable` |
-| `m_weaponPurchasesThisRound` | [WeaponPurchaseTracker_t](../schemas/server.md#weaponpurchasetracker_t) | WeaponPurchaseTracker_t recording which weapons were bought this round (used for in-round stats and economy tracking). `MNetworkEnable` |
+| `m_bIsRescuing` | bool | True while the player is escorting a hostage to the rescue zone. |
+| `m_weaponPurchasesThisMatch` | [WeaponPurchaseTracker_t](../schemas/server.md#weaponpurchasetracker_t) | WeaponPurchaseTracker_t recording which weapons were bought during the match (used for match-stats). |
+| `m_weaponPurchasesThisRound` | [WeaponPurchaseTracker_t](../schemas/server.md#weaponpurchasetracker_t) | WeaponPurchaseTracker_t recording which weapons were bought this round (used for in-round stats and economy tracking). |
 
 ### CCSPlayer_BulletServices
 
@@ -4351,7 +4410,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_totalHitsOnServer` | int32 | Cumulative number of bullet hits this player has registered on the server this round. `MNetworkEnable` |
+| `m_totalHitsOnServer` | int32 | Cumulative number of bullet hits this player has registered on the server this round. |
 
 ### CCSPlayer_BuyServices
 
@@ -4372,7 +4431,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_vecSellbackPurchaseEntries` | CUtlVectorEmbeddedNetworkVar< [SellbackPurchaseEntry_t](../schemas/server.md#sellbackpurchaseentry_t) > | Vector of SellbackPurchaseEntry_t structs; each entry represents a weapon or equipment purchase that can still be sold back before freeze time expires. `MNetworkEnable` |
+| `m_vecSellbackPurchaseEntries` | CUtlVectorEmbeddedNetworkVar< [SellbackPurchaseEntry_t](../schemas/server.md#sellbackpurchaseentry_t) > | Vector of SellbackPurchaseEntry_t structs; each entry represents a weapon or equipment purchase that can still be sold back before freeze time expires. |
 
 ### CCSPlayer_CameraServices
 
@@ -4417,8 +4476,8 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_hCarriedHostage` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | CHandle to the CHostage entity currently being carried by this player (INVALID_EHANDLE if none). `MNetworkEnable` |
-| `m_hCarriedHostageProp` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | CHandle to the ragdoll/prop entity representing the carried hostage visually. `MNetworkEnable` |
+| `m_hCarriedHostage` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | CHandle to the CHostage entity currently being carried by this player (INVALID_EHANDLE if none). |
+| `m_hCarriedHostageProp` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | CHandle to the ragdoll/prop entity representing the carried hostage visually. |
 
 ### CCSPlayer_ItemServices
 
@@ -4436,8 +4495,8 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_bHasDefuser` | bool | `MNetworkEnable` |
-| `m_bHasHelmet` | bool | `MNetworkEnable` |
+| `m_bHasDefuser` | bool |  |
+| `m_bHasHelmet` | bool |  |
 
 ### CCSPlayer_MovementServices
 
@@ -4450,6 +4509,7 @@ classDiagram
     CPlayer_MovementServices_Humanoid <|-- CCSPlayer_MovementServices
     CPlayer_MovementServices <|-- CPlayer_MovementServices_Humanoid
     CPlayerPawnComponent <|-- CPlayer_MovementServices
+    CCSPlayer_MovementServices *-- CCSPlayerAnimationState
     CCSPlayer_MovementServices *-- GameTime_t
     CCSPlayer_MovementServices *-- CCSPlayerLegacyJump
     CCSPlayer_MovementServices *-- CCSPlayerModernJump
@@ -4460,19 +4520,19 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
+| `m_AnimationState` | [CCSPlayerAnimationState](../schemas/client.md#ccsplayeranimationstate) |  |
 | `m_vecLadderNormal` | Vector |  |
-| `m_nLadderSurfacePropIndex` | int32 | `MNetworkEnable` |
-| `m_bDucked` | bool | `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
-| `m_flDuckAmount` | float32 | `MNetworkEnable` |
-| `m_flDuckSpeed` | float32 | `MNetworkEnable` |
-| `m_bDuckOverride` | bool | `MNetworkEnable` |
-| `m_bDesiresDuck` | bool | `MNetworkEnable` |
-| `m_bDucking` | bool | `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
-| `m_flDuckOffset` | float32 | `MNetworkEnable` |
-| `m_nDuckTimeMsecs` | uint32 | `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` `MNetworkPriority = 32` |
-| `m_nDuckJumpTimeMsecs` | uint32 | `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
-| `m_nJumpTimeMsecs` | uint32 | `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
-| `m_flLastDuckTime` | float32 | `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
+| `m_nLadderSurfacePropIndex` | int32 |  |
+| `m_bDucked` | bool |  |
+| `m_flDuckAmount` | float32 |  |
+| `m_flDuckSpeed` | float32 |  |
+| `m_bDuckOverride` | bool |  |
+| `m_bDesiresDuck` | bool |  |
+| `m_bDucking` | bool |  |
+| `m_flDuckRootOffset` | float32 |  |
+| `m_flDuckViewOffset` | float32 |  |
+| `m_flLastDuckTime` | float32 |  |
+| `m_flBombPlantViewOffset` | float32 |  |
 | `m_vecLastPositionAtFullCrouchSpeed` | Vector2D |  |
 | `m_duckUntilOnGround` | bool |  |
 | `m_bHasWalkMovedSinceLastJump` | bool |  |
@@ -4485,29 +4545,33 @@ classDiagram
 | `m_vecForward` | Vector |  |
 | `m_vecLeft` | Vector |  |
 | `m_vecUp` | Vector |  |
-| `m_nGameCodeHasMovedPlayerAfterCommand` | int32 | `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
+| `m_nGameCodeHasMovedPlayerAfterCommand` | int32 |  |
 | `m_bMadeFootstepNoise` | bool |  |
 | `m_iFootsteps` | int32 |  |
-| `m_fStashGrenadeParameterWhen` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` |
-| `m_nButtonDownMaskPrev` | uint64 | `MNetworkEnable` |
-| `m_flOffsetTickCompleteTime` | float32 | `MNetworkEnable` |
-| `m_flOffsetTickStashedSpeed` | float32 | `MNetworkEnable` |
-| `m_flStamina` | float32 | `MNetworkEnable` |
+| `m_fStashGrenadeParameterWhen` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
+| `m_nButtonDownMaskPrev` | uint64 |  |
+| `m_bUseFrictionStashedSpeed` | bool |  |
+| `m_flUseFrictionStashedSpeedUntilFrac` | float32 |  |
+| `m_flFrictionStashedSpeed` | float32 |  |
+| `m_flStamina` | float32 |  |
 | `m_flHeightAtJumpStart` | float32 |  |
 | `m_flMaxJumpHeightThisJump` | float32 |  |
 | `m_flMaxJumpHeightLastJump` | float32 |  |
 | `m_flStaminaAtJumpStart` | float32 |  |
 | `m_flVelMulAtJumpStart` | float32 |  |
 | `m_flAccumulatedJumpError` | float32 |  |
-| `m_LegacyJump` | [CCSPlayerLegacyJump](../schemas/server.md#ccsplayerlegacyjump) | `MNetworkEnable` |
-| `m_ModernJump` | [CCSPlayerModernJump](../schemas/server.md#ccsplayermodernjump) | `MNetworkEnable` |
-| `m_nLastJumpTick` | [GameTick_t](../schemas/entity2.md#gametick_t) | `MNetworkEnable` |
-| `m_flLastJumpFrac` | float32 | `MNetworkEnable` `MNetworkBitCount = 6` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 1.000000` `MNetworkEncodeFlags = 4` |
-| `m_flLastJumpVelocityZ` | float32 | `MNetworkEnable` |
-| `m_bJumpApexPending` | bool | `MNetworkEnable` |
+| `m_LegacyJump` | [CCSPlayerLegacyJump](../schemas/server.md#ccsplayerlegacyjump) |  |
+| `m_ModernJump` | [CCSPlayerModernJump](../schemas/server.md#ccsplayermodernjump) |  |
+| `m_nLastJumpTick` | [GameTick_t](../schemas/entity2.md#gametick_t) |  |
+| `m_flLastJumpFrac` | float32 |  |
+| `m_flLastJumpVelocityZ` | float32 |  |
+| `m_bJumpApexPending` | bool |  |
 | `m_flTicksSinceLastSurfingDetected` | float32 |  |
-| `m_bWasSurfing` | bool | `MNetworkEnable` |
-| `m_vecInputRotated` | Vector |  |
+| `m_bWasSurfing` | bool |  |
+| `m_vecWalkWishVel` | Vector2D |  |
+| `m_gtLastTimeOnStaticWorldGround` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
+| `m_gtLastTimeInAir` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
+| `m_bHasEverProcessedCommand` | bool |  |
 
 ### CCSPlayer_PingServices
 
@@ -4527,7 +4591,7 @@ classDiagram
 | Name | Type | Annotations |
 |------|------|-------------|
 | `m_flPlayerPingTokens` | [GameTime_t](../schemas/entity2.md#gametime_t)[5] |  |
-| `m_hPlayerPing` | CHandle< [CPlayerPing](../schemas/server.md#cplayerping) > | `MNetworkEnable` |
+| `m_hPlayerPing` | CHandle< [CPlayerPing](../schemas/server.md#cplayerping) > |  |
 
 ### CCSPlayer_RadioServices
 
@@ -4618,9 +4682,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_flNextAttack` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime before which no weapon switch is permitted (e.g. after throwing a grenade). *Only sent to the owning player (LocalPlayerExclusive).* `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
-| `m_bIsLookingAtWeapon` | bool | True while the player is pressing the inspect key and the weapon is in the idle look-at animation. `MNetworkEnable` |
-| `m_bIsHoldingLookAtWeapon` | bool | True while the inspect key is held down (distinct from the animation actually playing). `MNetworkEnable` |
+| `m_flNextAttack` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime before which no weapon switch is permitted (e.g. after throwing a grenade). *Only sent to the owning player (LocalPlayerExclusive).* |
 | `m_hSavedWeapon` | CHandle< [CBasePlayerWeapon](../schemas/server.md#cbaseplayerweapon) > |  |
 | `m_nTimeToMelee` | int32 |  |
 | `m_nTimeToSecondary` | int32 |  |
@@ -4631,8 +4693,8 @@ classDiagram
 | `m_bPickedUpWeapon` | bool |  |
 | `m_bDisableAutoDeploy` | bool |  |
 | `m_bIsPickingUpGroundWeapon` | bool |  |
-| `m_networkAnimTiming` | CNetworkUtlVectorBase< uint8 > | Byte array encoding animation transition timing for the active weapon, used to synchronise viewmodel animations across client and server. `MNetworkEnable` |
-| `m_bBlockInspectUntilNextGraphUpdate` | bool | True when the inspect animation is suppressed until the animation graph ticks again (prevents stutter). `MNetworkEnable` |
+| `m_networkAnimTiming` | CNetworkUtlVectorBase< uint8 > | Byte array encoding animation transition timing for the active weapon, used to synchronise viewmodel animations across client and server. |
+| `m_bBlockInspectUntilNextGraphUpdate` | bool | True when the inspect animation is suppressed until the animation graph ticks again (prevents stutter). |
 
 ### CCSPointPulseAPI
 
@@ -4684,16 +4746,16 @@ classDiagram
 |------|------|-------------|
 | `m_nLastRecievedShorthandedRoundBonus` | int32 |  |
 | `m_nShorthandedRoundBonusStartRound` | int32 |  |
-| `m_bSurrendered` | bool | True when this team has surrendered the match (competitive FF vote passed). `MNetworkEnable` |
-| `m_szTeamMatchStat` | char[512] | Match-stat summary string displayed in the team header of the scoreboard (up to 512 bytes). `MNetworkEnable` |
-| `m_numMapVictories` | int32 | Number of maps this team has won in the current best-of-N series. `MNetworkEnable` |
-| `m_scoreFirstHalf` | int32 | Number of rounds won by this team during the first half. `MNetworkEnable` |
-| `m_scoreSecondHalf` | int32 | Number of rounds won by this team during the second half. `MNetworkEnable` |
-| `m_scoreOvertime` | int32 | Number of rounds won by this team across all overtime periods. `MNetworkEnable` |
-| `m_szClanTeamname` | char[129] | Team organisation/clan name displayed in the scoreboard (up to 129 bytes; set by tournament operators). `MNetworkEnable` |
-| `m_iClanID` | uint32 | Steam group / clan ID associated with this team (used for team logo lookup). `MNetworkEnable` |
-| `m_szTeamFlagImage` | char[8] | Short country/region flag code (up to 8 bytes) used to select the flag sprite (e.g. 'US', 'EU'). `MNetworkEnable` |
-| `m_szTeamLogoImage` | char[8] | Short logo image name (up to 8 bytes) used to look up the team logo spray texture. `MNetworkEnable` |
+| `m_bSurrendered` | bool | True when this team has surrendered the match (competitive FF vote passed). |
+| `m_szTeamMatchStat` | char[512] | Match-stat summary string displayed in the team header of the scoreboard (up to 512 bytes). |
+| `m_numMapVictories` | int32 | Number of maps this team has won in the current best-of-N series. |
+| `m_scoreFirstHalf` | int32 | Number of rounds won by this team during the first half. |
+| `m_scoreSecondHalf` | int32 | Number of rounds won by this team during the second half. |
+| `m_scoreOvertime` | int32 | Number of rounds won by this team across all overtime periods. |
+| `m_szClanTeamname` | char[129] | Team organisation/clan name displayed in the scoreboard (up to 129 bytes; set by tournament operators). |
+| `m_iClanID` | uint32 | Steam group / clan ID associated with this team (used for team logo lookup). |
+| `m_szTeamFlagImage` | char[8] | Short country/region flag code (up to 8 bytes) used to select the flag sprite (e.g. 'US', 'EU'). |
+| `m_szTeamLogoImage` | char[8] | Short logo image name (up to 8 bytes) used to look up the team logo spray texture. |
 | `m_flNextResourceTime` | float32 |  |
 | `m_iLastUpdateSentAt` | int32 |  |
 
@@ -4706,17 +4768,15 @@ Extends CBasePlayerWeapon with CS2-specific mechanics: recoil accumulation, accu
 
 **Derived by:** [CBaseCSGrenade](server.md#cbasecsgrenade), [CC4](server.md#cc4), [CCSWeaponBaseGun](server.md#ccsweaponbasegun), [CCSWeaponBaseShotgun](server.md#ccsweaponbaseshotgun), [CKnife](server.md#cknife), [CWeaponBaseItem](server.md#cweaponbaseitem)
 
-**Metadata:** `MNetworkOutOfPVSUpdates (UNKNOWN FOR PARSER)`
-
 **Relationships:**
 
 ```mermaid
 classDiagram
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CEconEntity
     C_BaseModelEntity <|-- CBaseAnimGraph
+    C_BaseEntity <|-- C_BaseModelEntity
     CCSWeaponBase <|-- CBaseCSGrenade
     CCSWeaponBase <|-- CC4
     CCSWeaponBase <|-- CCSWeaponBaseGun
@@ -4739,54 +4799,55 @@ classDiagram
 | `m_bRemoveable` | bool |  |
 | `m_bPlayerAmmoStockOnPickup` | bool |  |
 | `m_bRequireUseToTouch` | bool |  |
-| `m_iWeaponGameplayAnimState` | [WeaponGameplayAnimState](../schemas/client.md#weapongameplayanimstate) | WeaponGameplayAnimState enum controlling the weapon's anim-graph state (idle, firing, reloading, inspecting, etc.). `MNetworkEnable` `MNetworkChangeCallback = "WeaponGameplayAnimStateNetworkChangeCallback"` |
-| `m_flWeaponGameplayAnimStateTimestamp` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` |
-| `m_flInspectCancelCompleteTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which an in-progress inspect cancel animation will finish. `MNetworkEnable` |
-| `m_bInspectPending` | bool | True when an inspect animation has been queued but not yet started. `MNetworkEnable` |
-| `m_bInspectShouldLoop` | bool | True when the inspect animation should loop (held-inspect mode). `MNetworkEnable` |
+| `m_iWeaponGameplayAnimState` | [WeaponGameplayAnimState](../schemas/client.md#weapongameplayanimstate) | WeaponGameplayAnimState enum controlling the weapon's anim-graph state (idle, firing, reloading, inspecting, etc.). |
+| `m_flWeaponGameplayAnimStateTimestamp` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
+| `m_flInspectCancelCompleteTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which an in-progress inspect cancel animation will finish. |
+| `m_bInspectPending` | bool | True when an inspect animation has been queued but not yet started. |
+| `m_bInspectShouldLoop` | bool | True when the inspect animation should loop (held-inspect mode). |
 | `m_nLastEmptySoundCmdNum` | int32 |  |
 | `m_bFireOnEmpty` | bool |  |
 | `m_OnPlayerPickup` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
-| `m_weaponMode` | [CSWeaponMode](../schemas/client.md#csweaponmode) | CSWeaponMode enum: Primary_Mode = 0, Secondary_Mode = 1. Governs which attack function runs on fire. `MNetworkEnable` |
+| `m_weaponMode` | [CSWeaponMode](../schemas/client.md#csweaponmode) | CSWeaponMode enum: Primary_Mode = 0, Secondary_Mode = 1. Governs which attack function runs on fire. |
 | `m_flTurningInaccuracyDelta` | float32 |  |
 | `m_vecTurningInaccuracyEyeDirLast` | Vector |  |
 | `m_flTurningInaccuracy` | float32 |  |
-| `m_fAccuracyPenalty` | float32 | Additive inaccuracy penalty accumulated by recent shots; decays over time. Feeds into the cone-spread calculation. `MNetworkEnable` |
+| `m_fAccuracyPenalty` | float32 | Additive inaccuracy penalty accumulated by recent shots; decays over time. Feeds into the cone-spread calculation. |
 | `m_flLastAccuracyUpdateTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_fAccuracySmoothedForZoom` | float32 |  |
-| `m_iRecoilIndex` | int32 | Integer index into the weapon's recoil table; incremented with each shot, decays when not firing. `MNetworkEnable` |
-| `m_flRecoilIndex` | float32 | Fractional recoil index for sub-step interpolation of the recoil pattern table. *Demo parsers often use this to reproduce exact spray patterns.* `MNetworkEnable` |
-| `m_bBurstMode` | bool | True when the weapon is in burst-fire mode (e.g. Famas burst, Glock18 burst). `MNetworkEnable` `MNetworkChangeCallback = "OnWeaponBurstModeNetworkChange"` |
-| `m_nPostponeFireReadyTicks` | [GameTick_t](../schemas/entity2.md#gametick_t) | Tick after which a postponed shot will fire (used for the tick-aligned fire mechanism in sub-tick shooting). `MNetworkEnable` |
-| `m_flPostponeFireReadyFrac` | float32 | Fractional tick ratio for m_nPostponeFireReadyTicks. `MNetworkEnable` |
-| `m_bInReload` | bool | True while the weapon is performing its reload animation. `MNetworkEnable` |
-| `m_flDroppedAtTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which this weapon was dropped onto the ground. `MNetworkEnable` |
-| `m_bIsHauledBack` | bool | True while the player is winding up to throw a grenade (held throw). `MNetworkEnable` |
-| `m_bSilencerOn` | bool | True when the suppressor is attached (M4A1-S / USP-S). `MNetworkEnable` |
-| `m_flTimeSilencerSwitchComplete` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the suppressor attach/detach animation completes. `MNetworkEnable` |
-| `m_flWeaponActionPlaybackRate` | float32 | `MNetworkEnable` |
-| `m_iOriginalTeamNumber` | int32 | Team that originally spawned this weapon; buy-zone weapon pools are filtered by this. `MNetworkEnable` |
-| `m_iMostRecentTeamNumber` | int32 | Team of the player most recently holding this weapon. `MNetworkEnable` |
-| `m_bDroppedNearBuyZone` | bool | True if the weapon was dropped close to a buy zone (affects whether bots will pick it up). `MNetworkEnable` |
+| `m_iRecoilIndex` | int32 | Integer index into the weapon's recoil table; incremented with each shot, decays when not firing. |
+| `m_flRecoilIndex` | float32 | Fractional recoil index for sub-step interpolation of the recoil pattern table. *Demo parsers often use this to reproduce exact spray patterns.* |
+| `m_bBurstMode` | bool | True when the weapon is in burst-fire mode (e.g. Famas burst, Glock18 burst). |
+| `m_nPostponeFireReadyTicks` | [GameTick_t](../schemas/entity2.md#gametick_t) | Tick after which a postponed shot will fire (used for the tick-aligned fire mechanism in sub-tick shooting). |
+| `m_flPostponeFireReadyFrac` | float32 | Fractional tick ratio for m_nPostponeFireReadyTicks. |
+| `m_bInReload` | bool | True while the weapon is performing its reload animation. |
+| `m_nDeployTick` | [GameTick_t](../schemas/entity2.md#gametick_t) |  |
+| `m_flDroppedAtTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which this weapon was dropped onto the ground. |
+| `m_bIsHauledBack` | bool | True while the player is winding up to throw a grenade (held throw). |
+| `m_bSilencerOn` | bool | True when the suppressor is attached (M4A1-S / USP-S). |
+| `m_flTimeSilencerSwitchComplete` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the suppressor attach/detach animation completes. |
+| `m_flWeaponActionPlaybackRate` | float32 |  |
+| `m_iOriginalTeamNumber` | int32 | Team that originally spawned this weapon; buy-zone weapon pools are filtered by this. |
+| `m_iMostRecentTeamNumber` | int32 | Team of the player most recently holding this weapon. |
+| `m_bDroppedNearBuyZone` | bool | True if the weapon was dropped close to a buy zone (affects whether bots will pick it up). |
 | `m_flNextAttackRenderTimeOffset` | float32 |  |
 | `m_bCanBePickedUp` | bool |  |
 | `m_bUseCanOverrideNextOwnerTouchTime` | bool |  |
 | `m_nextOwnerTouchTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_nextPrevOwnerTouchTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
-| `m_nextPrevOwnerUseTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime before which the previous owner cannot pick this weapon back up (prevents instant re-pickup after dropping). `MNetworkEnable` |
-| `m_hPrevOwner` | CHandle< [CCSPlayerPawn](../schemas/server.md#ccsplayerpawn) > | CHandle to the CCSPlayerPawn that most recently owned this weapon before it was dropped. `MNetworkEnable` |
-| `m_nDropTick` | [GameTick_t](../schemas/entity2.md#gametick_t) | Server tick on which the weapon was most recently dropped. `MNetworkEnable` |
-| `m_bWasActiveWeaponWhenDropped` | bool | True if the weapon was the active weapon at the moment it was dropped. `MNetworkEnable` |
+| `m_nextPrevOwnerUseTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime before which the previous owner cannot pick this weapon back up (prevents instant re-pickup after dropping). |
+| `m_hPrevOwner` | CHandle< [CCSPlayerPawn](../schemas/server.md#ccsplayerpawn) > | CHandle to the CCSPlayerPawn that most recently owned this weapon before it was dropped. |
+| `m_nDropTick` | [GameTick_t](../schemas/entity2.md#gametick_t) | Server tick on which the weapon was most recently dropped. |
+| `m_bWasActiveWeaponWhenDropped` | bool | True if the weapon was the active weapon at the moment it was dropped. |
 | `m_donated` | bool |  |
-| `m_fLastShotTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime of the most recent shot fired from this weapon. `MNetworkEnable` |
+| `m_fLastShotTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime of the most recent shot fired from this weapon. |
 | `m_bWasOwnedByCT` | bool |  |
 | `m_bWasOwnedByTerrorist` | bool |  |
 | `m_numRemoveUnownedWeaponThink` | int32 |  |
 | `m_IronSightController` | [CIronSightController](../schemas/server.md#cironsightcontroller) |  |
-| `m_iIronSightMode` | int32 | Iron-sight zoom state (0 = none, 1 = iron-sighted). `MNetworkEnable` |
+| `m_iIronSightMode` | int32 | Iron-sight zoom state (0 = none, 1 = iron-sighted). |
 | `m_flLastLOSTraceFailureTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
-| `m_flWatTickOffset` | float32 | `MNetworkEnable` |
-| `m_flLastShakeTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` |
+| `m_flWatTickOffset` | float32 |  |
+| `m_flLastShakeTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 
 ### CCSWeaponBaseGun
 
@@ -4801,8 +4862,8 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CEconEntity
+    C_BaseModelEntity <|-- CBaseAnimGraph
     CCSWeaponBaseGun <|-- CAK47
     CCSWeaponBaseGun <|-- CDEagle
     CCSWeaponBaseGun <|-- CWeaponAWP
@@ -4841,12 +4902,12 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_zoomLevel` | int32 | `MNetworkEnable` |
-| `m_iBurstShotsRemaining` | int32 | `MNetworkEnable` |
+| `m_zoomLevel` | int32 |  |
+| `m_iBurstShotsRemaining` | int32 |  |
 | `m_silencedModelIndex` | int32 |  |
 | `m_inPrecache` | bool |  |
-| `m_bNeedsBoltAction` | bool | `MNetworkEnable` |
-| `m_nRevolverCylinderIdx` | int32 | `MNetworkEnable` |
+| `m_bNeedsBoltAction` | bool |  |
+| `m_nRevolverCylinderIdx` | int32 |  |
 | `m_bSkillReloadAvailable` | bool |  |
 | `m_bSkillReloadLiftedReloadKey` | bool |  |
 | `m_bSkillBoltInterruptAvailable` | bool |  |
@@ -4865,8 +4926,8 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseShotgun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CEconEntity
+    C_BaseModelEntity <|-- CBaseAnimGraph
     CCSWeaponBaseShotgun <|-- CWeaponNOVA
     CCSWeaponBaseShotgun <|-- CWeaponSawedoff
     CCSWeaponBaseShotgun <|-- CWeaponXM1014
@@ -4876,7 +4937,7 @@ classDiagram
 
 **Inherits from:** [CBasePlayerWeaponVData](server.md#cbaseplayerweaponvdata)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CCSWeaponBaseVData",`, `"m_szWorldModel": "",`, `"m_sToolsOnlyOwnerModelName": "",`, `"m_bBuiltRightHanded": true,`, `"m_bAllowFlipping": true,`, `"m_sMuzzleAttachment": "muzzle",`, `"m_szMuzzleFlashParticle": "",`, `"m_szMuzzleFlashParticleConfig": "",`, `"m_szBarrelSmokeParticle": "",`, `"m_nMuzzleSmokeShotThreshold": 4,`, `"m_flMuzzleSmokeTimeout": 0.250000,`, `"m_flMuzzleSmokeDecrementRate": 1.000000,`, `"m_bGenerateMuzzleLight": true,`, `"m_bLinkedCooldowns": false,`, `"m_iFlags": "",`, `"m_iWeight": 0,`, `"m_bAutoSwitchTo": true,`, `"m_bAutoSwitchFrom": true,`, `"m_nPrimaryAmmoType": "",`, `"m_nSecondaryAmmoType": "",`, `"m_iMaxClip1": 0,`, `"m_iMaxClip2": 0,`, `"m_iDefaultClip1": -1,`, `"m_iDefaultClip2": -1,`, `"m_bReserveAmmoAsClips": false,`, `"m_bTreatAsSingleClip": false,`, `"m_bKeepLoadedAmmo": false,`, `"m_iRumbleEffect": "RUMBLE_INVALID",`, `"m_flDropSpeed": 300.000000,`, `"m_iSlot": 0,`, `"m_iPosition": 0,`, `"m_aShootSounds":`, `{`, `},`, `"m_WeaponType": "WEAPONTYPE_UNKNOWN",`, `"m_WeaponCategory": "WEAPONCATEGORY_OTHER",`, `"m_szAnimSkeleton": "",`, `"m_vecMuzzlePos0":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_vecMuzzlePos1":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_szTracerParticle": "",`, `"m_GearSlot": "GEAR_SLOT_INVALID",`, `"m_GearSlotPosition": -1,`, `"m_DefaultLoadoutSlot": "LOADOUT_SLOT_INVALID",`, `"m_nPrice": 0,`, `"m_nKillAward": 0,`, `"m_nPrimaryReserveAmmoMax": 0,`, `"m_nSecondaryReserveAmmoMax": 0,`, `"m_bMeleeWeapon": false,`, `"m_bHasBurstMode": false,`, `"m_bIsRevolver": false,`, `"m_bCannotShootUnderwater": false,`, `"m_szName": "",`, `"m_eSilencerType": "WEAPONSILENCER_NONE",`, `"m_nCrosshairMinDistance": 0,`, `"m_nCrosshairDeltaDistance": 0,`, `"m_bIsFullAuto": false,`, `"m_nNumBullets": 0,`, `"m_bReloadsSingleShells": false,`, `"m_flCycleTime": 0.000000,`, `"m_flMaxSpeed": 0.000000,`, `"m_flSpread": 0.000000,`, `"m_flInaccuracyCrouch": 0.000000,`, `"m_flInaccuracyStand": 0.000000,`, `"m_flInaccuracyJump": 0.000000,`, `"m_flInaccuracyLand": 0.000000,`, `"m_flInaccuracyLadder": 0.000000,`, `"m_flInaccuracyFire": 0.000000,`, `"m_flInaccuracyMove": 0.000000,`, `"m_flRecoilAngle": 0.000000,`, `"m_flRecoilAngleVariance": 0.000000,`, `"m_flRecoilMagnitude": 0.000000,`, `"m_flRecoilMagnitudeVariance": 0.000000,`, `"m_nTracerFrequency": 0,`, `"m_flInaccuracyJumpInitial": 0.000000,`, `"m_flInaccuracyJumpApex": 0.000000,`, `"m_flInaccuracyReload": 0.000000,`, `"m_flDeployDuration": 0.000000,`, `"m_flDisallowAttackAfterReloadStartDuration": 0.000000,`, `"m_nBurstShotCount": 2,`, `"m_bAllowBurstHolster": true,`, `"m_nRecoilSeed": 0,`, `"m_nSpreadSeed": 0,`, `"m_flAttackMovespeedFactor": 0.000000,`, `"m_flInaccuracyPitchShift": 0.000000,`, `"m_flInaccuracyAltSoundThreshold": 0.000000,`, `"m_szUseRadioSubtitle": "",`, `"m_bUnzoomsAfterShot": false,`, `"m_bHideViewModelWhenZoomed": false,`, `"m_nZoomLevels": 0,`, `"m_nZoomFOV1": 0,`, `"m_nZoomFOV2": 0,`, `"m_flZoomTime0": 0.000000,`, `"m_flZoomTime1": 0.000000,`, `"m_flZoomTime2": 0.000000,`, `"m_flIronSightPullUpSpeed": 8.000000,`, `"m_flIronSightPutDownSpeed": 4.000000,`, `"m_flIronSightFOV": 80.000000,`, `"m_flIronSightPivotForward": 10.000000,`, `"m_flIronSightLooseness": 0.500000,`, `"m_nDamage": 0,`, `"m_flHeadshotMultiplier": 0.000000,`, `"m_flArmorRatio": 0.000000,`, `"m_flPenetration": 0.000000,`, `"m_flRange": 0.000000,`, `"m_flRangeModifier": 0.000000,`, `"m_flFlinchVelocityModifierLarge": 0.000000,`, `"m_flFlinchVelocityModifierSmall": 0.000000,`, `"m_flRecoveryTimeCrouch": 0.000000,`, `"m_flRecoveryTimeStand": 0.000000,`, `"m_flRecoveryTimeCrouchFinal": 0.000000,`, `"m_flRecoveryTimeStandFinal": 0.000000,`, `"m_nRecoveryTransitionStartBullet": 0,`, `"m_nRecoveryTransitionEndBullet": 0,`, `"m_flThrowVelocity": 0.000000,`, `"m_vSmokeColor":`, `[`, `1.000000,`, `1.000000,`, `1.000000`, `],`, `"m_szAnimClass": ""`, `}`, `MPropertySuppressBaseClassField = "m_iSlot"`, `MPropertySuppressBaseClassField = "m_iPosition"`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CCSWeaponBaseVData",`, `"m_szWorldModel": "",`, `"m_szWorldModelAg2Override": "",`, `"m_sToolsOnlyOwnerModelName": "",`, `"m_bBuiltRightHanded": true,`, `"m_bAllowFlipping": true,`, `"m_sMuzzleAttachment": "muzzle",`, `"m_szMuzzleFlashParticle": "",`, `"m_szMuzzleFlashParticleConfig": "",`, `"m_szBarrelSmokeParticle": "",`, `"m_nMuzzleSmokeShotThreshold": 4,`, `"m_flMuzzleSmokeTimeout": 0.250000,`, `"m_flMuzzleSmokeDecrementRate": 1.000000,`, `"m_bGenerateMuzzleLight": true,`, `"m_bLinkedCooldowns": false,`, `"m_iFlags": "",`, `"m_iWeight": 0,`, `"m_bAutoSwitchTo": true,`, `"m_bAutoSwitchFrom": true,`, `"m_nPrimaryAmmoType": "",`, `"m_nSecondaryAmmoType": "",`, `"m_iMaxClip1": 0,`, `"m_iMaxClip2": 0,`, `"m_iDefaultClip1": -1,`, `"m_iDefaultClip2": -1,`, `"m_bReserveAmmoAsClips": false,`, `"m_bTreatAsSingleClip": false,`, `"m_bKeepLoadedAmmo": false,`, `"m_iRumbleEffect": "RUMBLE_INVALID",`, `"m_flDropSpeed": 300.000000,`, `"m_iSlot": 0,`, `"m_iPosition": 0,`, `"m_aShootSounds":`, `{`, `},`, `"m_WeaponType": "WEAPONTYPE_UNKNOWN",`, `"m_WeaponCategory": "WEAPONCATEGORY_OTHER",`, `"m_szAnimSkeleton": "",`, `"m_vecMuzzlePos0":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_vecMuzzlePos1":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_szTracerParticle": "",`, `"m_GearSlot": "GEAR_SLOT_INVALID",`, `"m_GearSlotPosition": -1,`, `"m_DefaultLoadoutSlot": "LOADOUT_SLOT_INVALID",`, `"m_nPrice": 0,`, `"m_nKillAward": 0,`, `"m_nPrimaryReserveAmmoMax": 0,`, `"m_nSecondaryReserveAmmoMax": 0,`, `"m_bMeleeWeapon": false,`, `"m_bHasBurstMode": false,`, `"m_bIsRevolver": false,`, `"m_bCannotShootUnderwater": false,`, `"m_szName": "",`, `"m_eSilencerType": "WEAPONSILENCER_NONE",`, `"m_nCrosshairMinDistance": 0,`, `"m_nCrosshairDeltaDistance": 0,`, `"m_bIsFullAuto": false,`, `"m_nNumBullets": 0,`, `"m_bReloadsSingleShells": false,`, `"m_flCycleTime": 0.000000,`, `"m_flMaxSpeed": 0.000000,`, `"m_flSpread": 0.000000,`, `"m_flInaccuracyCrouch": 0.000000,`, `"m_flInaccuracyStand": 0.000000,`, `"m_flInaccuracyJump": 0.000000,`, `"m_flInaccuracyLand": 0.000000,`, `"m_flInaccuracyLadder": 0.000000,`, `"m_flInaccuracyFire": 0.000000,`, `"m_flInaccuracyMove": 0.000000,`, `"m_flRecoilAngle": 0.000000,`, `"m_flRecoilAngleVariance": 0.000000,`, `"m_flRecoilMagnitude": 0.000000,`, `"m_flRecoilMagnitudeVariance": 0.000000,`, `"m_nTracerFrequency": 0,`, `"m_flInaccuracyJumpInitial": 0.000000,`, `"m_flInaccuracyJumpApex": 0.000000,`, `"m_flInaccuracyReload": 0.000000,`, `"m_flDeployDuration": 0.000000,`, `"m_flDisallowAttackAfterReloadStartDuration": 0.000000,`, `"m_nBurstShotCount": 2,`, `"m_bAllowBurstHolster": true,`, `"m_nRecoilSeed": 0,`, `"m_nSpreadSeed": 0,`, `"m_flAttackMovespeedFactor": 0.000000,`, `"m_flInaccuracyPitchShift": 0.000000,`, `"m_flInaccuracyAltSoundThreshold": 0.000000,`, `"m_szUseRadioSubtitle": "",`, `"m_bUnzoomsAfterShot": false,`, `"m_bHideViewModelWhenZoomed": false,`, `"m_nZoomLevels": 0,`, `"m_nZoomFOV1": 0,`, `"m_nZoomFOV2": 0,`, `"m_flZoomTime0": 0.000000,`, `"m_flZoomTime1": 0.000000,`, `"m_flZoomTime2": 0.000000,`, `"m_flIronSightPullUpSpeed": 8.000000,`, `"m_flIronSightPutDownSpeed": 4.000000,`, `"m_flIronSightFOV": 80.000000,`, `"m_flIronSightPivotForward": 10.000000,`, `"m_flIronSightLooseness": 0.500000,`, `"m_nDamage": 0,`, `"m_flHeadshotMultiplier": 0.000000,`, `"m_flArmorRatio": 0.000000,`, `"m_flPenetration": 0.000000,`, `"m_flRange": 0.000000,`, `"m_flRangeModifier": 0.000000,`, `"m_flFlinchVelocityModifierLarge": 0.000000,`, `"m_flFlinchVelocityModifierSmall": 0.000000,`, `"m_flRecoveryTimeCrouch": 0.000000,`, `"m_flRecoveryTimeStand": 0.000000,`, `"m_flRecoveryTimeCrouchFinal": 0.000000,`, `"m_flRecoveryTimeStandFinal": 0.000000,`, `"m_nRecoveryTransitionStartBullet": 0,`, `"m_nRecoveryTransitionEndBullet": 0,`, `"m_flThrowVelocity": 0.000000,`, `"m_vSmokeColor":`, `[`, `1.000000,`, `1.000000,`, `1.000000`, `],`, `"m_szAnimClass": ""`, `}`, `MPropertySuppressBaseClassField = "m_iSlot"`, `MPropertySuppressBaseClassField = "m_iPosition"`
 
 **Relationships:**
 
@@ -4885,6 +4946,25 @@ classDiagram
     CBasePlayerWeaponVData <|-- CCSWeaponBaseVData
     CEntitySubclassVDataBase <|-- CBasePlayerWeaponVData
 ```
+
+### CCashStack
+
+**Inherits from:** [CBaseModelEntity](server.md#cbasemodelentity)
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CBaseModelEntity <|-- CCashStack
+    CBaseEntity <|-- CBaseModelEntity
+    CEntityInstance <|-- CBaseEntity
+```
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `m_nCashStackValue` | int32 |  |
 
 ### CChangeLevel
 
@@ -4939,7 +5019,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_AttributeManager` | [CAttributeContainer](../schemas/server.md#cattributecontainer) | `MNetworkEnable` |
+| `m_AttributeManager` | [CAttributeContainer](../schemas/server.md#cattributecontainer) |  |
 | `m_updateTimer` | [CountdownTimer](../schemas/server.md#countdowntimer) |  |
 | `m_stuckAnchor` | Vector |  |
 | `m_stuckTimer` | [CountdownTimer](../schemas/server.md#countdowntimer) |  |
@@ -4955,8 +5035,8 @@ classDiagram
 | `m_startleTimer` | [CountdownTimer](../schemas/server.md#countdowntimer) |  |
 | `m_vocalizeTimer` | [CountdownTimer](../schemas/server.md#countdowntimer) |  |
 | `m_flWhenZombified` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
-| `m_jumpedThisFrame` | bool | `MNetworkEnable` |
-| `m_leader` | CHandle< [CCSPlayerPawn](../schemas/server.md#ccsplayerpawn) > | `MNetworkEnable` |
+| `m_jumpedThisFrame` | bool |  |
+| `m_leader` | CHandle< [CCSPlayerPawn](../schemas/server.md#ccsplayerpawn) > |  |
 | `m_reuseTimer` | [CountdownTimer](../schemas/server.md#countdowntimer) |  |
 | `m_hasBeenUsed` | bool |  |
 | `m_jumpTimer` | [CountdownTimer](../schemas/server.md#countdowntimer) |  |
@@ -4967,6 +5047,28 @@ classDiagram
 | `m_flActiveFollowStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_followMinuteTimer` | [CountdownTimer](../schemas/server.md#countdowntimer) |  |
 | `m_BlockDirectionTimer` | [CountdownTimer](../schemas/server.md#countdowntimer) |  |
+
+### CChoreoComponent
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CChoreoComponent *-- CNetworkVarChainer
+    CChoreoComponent --> CBaseModelEntity
+    CChoreoComponent *-- SceneEventId_t
+    CChoreoComponent *-- GameTime_t
+```
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `__m_pChainEntity` | [CNetworkVarChainer](../schemas/entity2.md#cnetworkvarchainer) | `MNotSaved` |
+| `m_hOwner` | CHandle< [CBaseModelEntity](../schemas/server.md#cbasemodelentity) > |  |
+| `m_nNextSceneEventId` | [SceneEventId_t](../schemas/client.md#sceneeventid_t) |  |
+| `m_bUpdateLayerPriorities` | bool | `MNotSaved` |
+| `m_flAllowResponsesEndTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 
 ### CChoreoInfoTarget
 
@@ -4997,14 +5099,14 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_iszStackName` | CUtlSymbolLarge | `MNetworkEnable` |
-| `m_iszOperatorName` | CUtlSymbolLarge | `MNetworkEnable` |
-| `m_iszOpvarName` | CUtlSymbolLarge | `MNetworkEnable` |
-| `m_vDistanceInnerMins` | Vector | `MNetworkEnable` |
-| `m_vDistanceInnerMaxs` | Vector | `MNetworkEnable` |
-| `m_vDistanceOuterMins` | Vector | `MNetworkEnable` |
-| `m_vDistanceOuterMaxs` | Vector | `MNetworkEnable` |
-| `m_nAABBDirection` | int32 | `MNetworkEnable` |
+| `m_iszStackName` | CUtlSymbolLarge |  |
+| `m_iszOperatorName` | CUtlSymbolLarge |  |
+| `m_iszOpvarName` | CUtlSymbolLarge |  |
+| `m_vDistanceInnerMins` | Vector |  |
+| `m_vDistanceInnerMaxs` | Vector |  |
+| `m_vDistanceOuterMins` | Vector |  |
+| `m_vDistanceOuterMaxs` | Vector |  |
+| `m_nAABBDirection` | int32 |  |
 
 ### CCollisionProperty
 
@@ -5021,29 +5123,27 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_collisionAttribute` | [VPhysicsCollisionAttribute_t](../schemas/server.md#vphysicscollisionattribute_t) | `MNetworkEnable` `MNetworkChangeCallback = "CollisionAttributeChanged"` |
-| `m_vecMins` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "OnUpdateOBB"` |
-| `m_vecMaxs` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "OnUpdateOBB"` |
-| `m_usSolidFlags` | uint8 | `MNetworkEnable` `MNetworkChangeCallback = "OnUpdateSolidFlags"` |
-| `m_nSolidType` | [SolidType_t](../schemas/client.md#solidtype_t) | `MNetworkEnable` `MNetworkChangeCallback = "OnUpdateSolidType"` |
-| `m_triggerBloat` | uint8 | `MNetworkEnable` `MNetworkChangeCallback = "MarkSurroundingBoundsDirty"` |
-| `m_nSurroundType` | [SurroundingBoundsType_t](../schemas/client.md#surroundingboundstype_t) | `MNetworkEnable` `MNetworkChangeCallback = "MarkSurroundingBoundsDirty"` |
-| `m_CollisionGroup` | uint8 | `MNetworkEnable` |
-| `m_nEnablePhysics` | uint8 | `MNetworkEnable` `MNetworkChangeCallback = "OnUpdateEnablePhysics"` |
+| `m_collisionAttribute` | [VPhysicsCollisionAttribute_t](../schemas/server.md#vphysicscollisionattribute_t) |  |
+| `m_vecMins` | Vector |  |
+| `m_vecMaxs` | Vector |  |
+| `m_usSolidFlags` | uint8 |  |
+| `m_nSolidType` | [SolidType_t](../schemas/client.md#solidtype_t) |  |
+| `m_triggerBloat` | uint8 |  |
+| `m_nSurroundType` | [SurroundingBoundsType_t](../schemas/client.md#surroundingboundstype_t) |  |
+| `m_CollisionGroup` | uint8 |  |
+| `m_nEnablePhysics` | uint8 |  |
 | `m_flBoundingRadius` | float32 |  |
-| `m_vecSpecifiedSurroundingMins` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "MarkSurroundingBoundsDirty"` |
-| `m_vecSpecifiedSurroundingMaxs` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "MarkSurroundingBoundsDirty"` |
+| `m_vecSpecifiedSurroundingMins` | Vector |  |
+| `m_vecSpecifiedSurroundingMaxs` | Vector |  |
 | `m_vecSurroundingMaxs` | Vector |  |
 | `m_vecSurroundingMins` | Vector |  |
-| `m_vCapsuleCenter1` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "OnUpdateCapsule"` |
-| `m_vCapsuleCenter2` | Vector | `MNetworkEnable` `MNetworkChangeCallback = "OnUpdateCapsule"` |
-| `m_flCapsuleRadius` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "OnUpdateCapsule"` |
+| `m_vCapsuleCenter1` | Vector |  |
+| `m_vCapsuleCenter2` | Vector |  |
+| `m_flCapsuleRadius` | float32 |  |
 
 ### CColorCorrection
 
 **Inherits from:** [CBaseEntity](server.md#cbaseentity)
-
-**Metadata:** `MNetworkIncludeByUserGroup = "Origin"`
 
 **Relationships:**
 
@@ -5058,22 +5158,22 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_flFadeInDuration` | float32 | `MNetworkEnable` |
-| `m_flFadeOutDuration` | float32 | `MNetworkEnable` |
+| `m_flFadeInDuration` | float32 |  |
+| `m_flFadeOutDuration` | float32 |  |
 | `m_flStartFadeInWeight` | float32 |  |
 | `m_flStartFadeOutWeight` | float32 |  |
 | `m_flTimeStartFadeIn` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_flTimeStartFadeOut` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
-| `m_flMaxWeight` | float32 | `MNetworkEnable` |
+| `m_flMaxWeight` | float32 |  |
 | `m_bStartDisabled` | bool |  |
-| `m_bEnabled` | bool | `MNetworkEnable` |
-| `m_bMaster` | bool | `MNetworkEnable` `MNotSaved` |
-| `m_bClientSide` | bool | `MNetworkEnable` `MNotSaved` |
-| `m_bExclusive` | bool | `MNetworkEnable` |
-| `m_MinFalloff` | float32 | `MNetworkEnable` |
-| `m_MaxFalloff` | float32 | `MNetworkEnable` |
-| `m_flCurWeight` | float32 | `MNetworkEnable` |
-| `m_netlookupFilename` | char[512] | `MNetworkEnable` `MNotSaved` |
+| `m_bEnabled` | bool |  |
+| `m_bMaster` | bool | `MNotSaved` |
+| `m_bClientSide` | bool | `MNotSaved` |
+| `m_bExclusive` | bool |  |
+| `m_MinFalloff` | float32 |  |
+| `m_MaxFalloff` | float32 |  |
+| `m_flCurWeight` | float32 |  |
+| `m_netlookupFilename` | char[512] | `MNotSaved` |
 | `m_lookupFilename` | CUtlSymbolLarge |  |
 
 ### CColorCorrectionVolume
@@ -5096,10 +5196,10 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_MaxWeight` | float32 | `MNetworkEnable` |
-| `m_FadeDuration` | float32 | `MNetworkEnable` |
-| `m_Weight` | float32 | `MNetworkEnable` |
-| `m_lookupFilename` | char[512] | `MNetworkEnable` |
+| `m_MaxWeight` | float32 |  |
+| `m_FadeDuration` | float32 |  |
+| `m_Weight` | float32 |  |
+| `m_lookupFilename` | char[512] |  |
 | `m_LastEnterWeight` | float32 |  |
 | `m_LastEnterTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_LastExitWeight` | float32 |  |
@@ -5128,28 +5228,7 @@ classDiagram
 
 ### CCommentarySystem
 
-**Relationships:**
-
-```mermaid
-classDiagram
-    CCommentarySystem *-- GameTime_t
-    CCommentarySystem --> CPointCommentaryNode
-```
-
-**Fields:**
-
-| Name | Type | Annotations |
-|------|------|-------------|
-| `m_bCommentaryConvarsChanging` | bool |  |
-| `m_bCommentaryEnabledMidGame` | bool |  |
-| `m_flNextTeleportTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
-| `m_iTeleportStage` | int32 |  |
-| `m_bCheatState` | bool |  |
-| `m_bIsFirstSpawnGroupToLoad` | bool |  |
-| `m_hCurrentNode` | CHandle< [CPointCommentaryNode](../schemas/server.md#cpointcommentarynode) > |  |
-| `m_hActiveCommentaryNode` | CHandle< [CPointCommentaryNode](../schemas/server.md#cpointcommentarynode) > |  |
-| `m_hLastCommentaryNode` | CHandle< [CPointCommentaryNode](../schemas/server.md#cpointcommentarynode) > |  |
-| `m_vecNodes` | CUtlVector< CHandle< [CPointCommentaryNode](../schemas/server.md#cpointcommentarynode) > > |  |
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CCommentarySystem",`, `"m_bCommentaryEnabledMidGame": false,`, `"m_flNextTeleportTime": null,`, `"m_iTeleportStage": 0,`, `"m_bCheatState": false,`, `"m_bIsFirstSpawnGroupToLoad": false,`, `"m_ModifiedConvars":`, `[`, `],`, `"m_hCurrentNode": null,`, `"m_hActiveCommentaryNode": null,`, `"m_hLastCommentaryNode": null,`, `"m_vecNodes":`, `[`, `]`, `}`
 
 ### CCommentaryViewPosition
 
@@ -5230,12 +5309,10 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CDamageRecord
-
-**Metadata:** `MNetworkReplayCompatField = "m_iDamage"`, `MNetworkReplayCompatField = "m_iActualHealthRemoved"`
 
 **Relationships:**
 
@@ -5250,21 +5327,21 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_PlayerDamager` | CHandle< [CCSPlayerPawn](../schemas/server.md#ccsplayerpawn) > | `MNetworkEnable` |
-| `m_PlayerRecipient` | CHandle< [CCSPlayerPawn](../schemas/server.md#ccsplayerpawn) > | `MNetworkEnable` |
-| `m_hPlayerControllerDamager` | CHandle< [CCSPlayerController](../schemas/server.md#ccsplayercontroller) > | `MNetworkEnable` |
-| `m_hPlayerControllerRecipient` | CHandle< [CCSPlayerController](../schemas/server.md#ccsplayercontroller) > | `MNetworkEnable` |
-| `m_szPlayerDamagerName` | CUtlString | `MNetworkEnable` |
-| `m_szPlayerRecipientName` | CUtlString | `MNetworkEnable` |
-| `m_DamagerXuid` | uint64 | `MNetworkEnable` |
-| `m_RecipientXuid` | uint64 | `MNetworkEnable` |
+| `m_PlayerDamager` | CHandle< [CCSPlayerPawn](../schemas/server.md#ccsplayerpawn) > |  |
+| `m_PlayerRecipient` | CHandle< [CCSPlayerPawn](../schemas/server.md#ccsplayerpawn) > |  |
+| `m_hPlayerControllerDamager` | CHandle< [CCSPlayerController](../schemas/server.md#ccsplayercontroller) > |  |
+| `m_hPlayerControllerRecipient` | CHandle< [CCSPlayerController](../schemas/server.md#ccsplayercontroller) > |  |
+| `m_szPlayerDamagerName` | CUtlString |  |
+| `m_szPlayerRecipientName` | CUtlString |  |
+| `m_DamagerXuid` | uint64 |  |
+| `m_RecipientXuid` | uint64 |  |
 | `m_flBulletsDamage` | float32 |  |
-| `m_flDamage` | float32 | `MNetworkEnable` |
-| `m_flActualHealthRemoved` | float32 | `MNetworkEnable` |
-| `m_iNumHits` | int32 | `MNetworkEnable` |
-| `m_iLastBulletUpdate` | int32 | `MNetworkEnable` |
-| `m_bIsOtherEnemy` | bool | `MNetworkEnable` |
-| `m_killType` | [EKillTypes_t](../schemas/client.md#ekilltypes_t) | `MNetworkEnable` |
+| `m_flDamage` | float32 |  |
+| `m_flActualHealthRemoved` | float32 |  |
+| `m_iNumHits` | int32 |  |
+| `m_iLastBulletUpdate` | int32 |  |
+| `m_bIsOtherEnemy` | bool |  |
+| `m_killType` | [EKillTypes_t](../schemas/client.md#ekilltypes_t) |  |
 
 ### CDebugHistory
 
@@ -5296,7 +5373,7 @@ classDiagram
     CCSWeaponBase <|-- CBaseCSGrenade
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CDecoyProjectile
@@ -5309,9 +5386,9 @@ classDiagram
 classDiagram
     CBaseCSGrenadeProjectile <|-- CDecoyProjectile
     CBaseGrenade <|-- CBaseCSGrenadeProjectile
-    CBaseFlex <|-- CBaseGrenade
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CBaseGrenade
     C_BaseModelEntity <|-- CBaseAnimGraph
+    C_BaseEntity <|-- C_BaseModelEntity
     CDecoyProjectile *-- GameTime_t
 ```
 
@@ -5319,7 +5396,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_nDecoyShotTick` | int32 | `MNetworkEnable` |
+| `m_nDecoyShotTick` | int32 |  |
 | `m_shotsRemaining` | int32 |  |
 | `m_fExpireTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_decoyWeaponDefIndex` | uint16 |  |
@@ -5332,6 +5409,7 @@ classDiagram
 classDiagram
     CDestructiblePartsComponent *-- CNetworkVarChainer
     CDestructiblePartsComponent --> CBaseModelEntity
+    CDestructiblePartsComponent --> CBaseAnimGraphDestructibleParts_GraphController
 ```
 
 **Fields:**
@@ -5340,7 +5418,8 @@ classDiagram
 |------|------|-------------|
 | `__m_pChainEntity` | [CNetworkVarChainer](../schemas/entity2.md#cnetworkvarchainer) | `MNotSaved` |
 | `m_vecDamageTakenByHitGroup` | CUtlVector< uint16 > |  |
-| `m_hOwner` | CHandle< [CBaseModelEntity](../schemas/server.md#cbasemodelentity) > | `MNetworkEnable` |
+| `m_hOwner` | CHandle< [CBaseModelEntity](../schemas/server.md#cbasemodelentity) > |  |
+| `m_pAnimGraphDestructibleGraphController` | [CBaseAnimGraphDestructibleParts_GraphController](../schemas/client.md#cbaseanimgraphdestructibleparts_graphcontroller)* | `MSaveOpsForField = "GetAnimGraphControllerPtrSaveRestoreOps"` |
 
 ### CDynamicLight
 
@@ -5360,14 +5439,14 @@ classDiagram
 | Name | Type | Annotations |
 |------|------|-------------|
 | `m_ActualFlags` | uint8 |  |
-| `m_Flags` | uint8 | `MNetworkEnable` |
-| `m_LightStyle` | uint8 | `MNetworkEnable` |
+| `m_Flags` | uint8 |  |
+| `m_LightStyle` | uint8 |  |
 | `m_On` | bool |  |
-| `m_Radius` | float32 | `MNetworkEnable` |
-| `m_Exponent` | int32 | `MNetworkEnable` |
-| `m_InnerAngle` | float32 | `MNetworkEnable` `MNetworkBitCount = 8` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 360.000000` |
-| `m_OuterAngle` | float32 | `MNetworkEnable` `MNetworkBitCount = 8` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 360.000000` |
-| `m_SpotRadius` | float32 | `MNetworkEnable` |
+| `m_Radius` | float32 |  |
+| `m_Exponent` | int32 |  |
+| `m_InnerAngle` | float32 |  |
+| `m_OuterAngle` | float32 |  |
+| `m_SpotRadius` | float32 |  |
 
 ### CDynamicNavConnectionsVolume
 
@@ -5430,8 +5509,8 @@ classDiagram
 |------|------|-------------|
 | `m_bCreateNavObstacle` | bool |  |
 | `m_bNavObstacleUpdatesOverridden` | bool |  |
-| `m_bUseHitboxesForRenderBox` | bool | `MNetworkEnable` |
-| `m_bUseAnimGraph` | bool | `MNetworkEnable` |
+| `m_bUseHitboxesForRenderBox` | bool |  |
+| `m_bUseAnimGraph` | bool |  |
 | `m_pOutputAnimBegun` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_pOutputAnimOver` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_pOutputAnimLoopCycleOver` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
@@ -5498,7 +5577,7 @@ classDiagram
 
 ### CEconEntity
 
-**Inherits from:** [CBaseFlex](server.md#cbaseflex), [IHasAttributes](client.md#ihasattributes)
+**Inherits from:** [CBaseAnimGraph](server.md#cbaseanimgraph), [IHasAttributes](client.md#ihasattributes)
 
 **Derived by:** [CBasePlayerWeapon](server.md#cbaseplayerweapon), [CEconWearable](server.md#ceconwearable)
 
@@ -5506,8 +5585,7 @@ classDiagram
 
 ```mermaid
 classDiagram
-    CBaseFlex <|-- CEconEntity
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CEconEntity
     C_BaseModelEntity <|-- CBaseAnimGraph
     C_BaseEntity <|-- C_BaseModelEntity
     CEntityInstance <|-- C_BaseEntity
@@ -5521,13 +5599,13 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_AttributeManager` | [CAttributeContainer](../schemas/server.md#cattributecontainer) | `MNetworkEnable` |
-| `m_OriginalOwnerXuidLow` | uint32 | `MNetworkEnable` |
-| `m_OriginalOwnerXuidHigh` | uint32 | `MNetworkEnable` |
-| `m_nFallbackPaintKit` | int32 | `MNetworkEnable` |
-| `m_nFallbackSeed` | int32 | `MNetworkEnable` |
-| `m_flFallbackWear` | float32 | `MNetworkEnable` |
-| `m_nFallbackStatTrak` | int32 | `MNetworkEnable` |
+| `m_AttributeManager` | [CAttributeContainer](../schemas/server.md#cattributecontainer) |  |
+| `m_OriginalOwnerXuidLow` | uint32 |  |
+| `m_OriginalOwnerXuidHigh` | uint32 |  |
+| `m_nFallbackPaintKit` | int32 |  |
+| `m_nFallbackSeed` | int32 |  |
+| `m_flFallbackWear` | float32 |  |
+| `m_nFallbackStatTrak` | int32 |  |
 | `m_hOldProvidee` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 | `m_iOldOwnerClass` | int32 |  |
 
@@ -5537,11 +5615,11 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_iAttributeDefinitionIndex` | uint16 | `MNetworkEnable` |
-| `m_flValue` | float32 | `MNetworkEnable` `MNetworkAlias = "m_iRawValue32"` |
-| `m_flInitialValue` | float32 | `MNetworkEnable` |
-| `m_nRefundableCurrency` | int32 | `MNetworkEnable` |
-| `m_bSetBonus` | bool | `MNetworkEnable` |
+| `m_iAttributeDefinitionIndex` | uint16 |  |
+| `m_flValue` | float32 |  |
+| `m_flInitialValue` | float32 |  |
+| `m_nRefundableCurrency` | int32 |  |
+| `m_bSetBonus` | bool |  |
 
 ### CEconItemView
 
@@ -5559,18 +5637,18 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_iItemDefinitionIndex` | uint16 | `MNetworkEnable` |
-| `m_iEntityQuality` | int32 | `MNetworkEnable` |
-| `m_iEntityLevel` | uint32 | `MNetworkEnable` |
+| `m_iItemDefinitionIndex` | uint16 |  |
+| `m_iEntityQuality` | int32 |  |
+| `m_iEntityLevel` | uint32 |  |
 | `m_iItemID` | uint64 |  |
-| `m_iItemIDHigh` | uint32 | `MNetworkEnable` |
-| `m_iItemIDLow` | uint32 | `MNetworkEnable` |
-| `m_iAccountID` | uint32 | `MNetworkEnable` |
-| `m_iInventoryPosition` | uint32 | `MNetworkEnable` |
-| `m_bInitialized` | bool | `MNetworkEnable` |
-| `m_AttributeList` | [CAttributeList](../schemas/server.md#cattributelist) | `MNetworkEnable` |
-| `m_NetworkedDynamicAttributes` | [CAttributeList](../schemas/server.md#cattributelist) | `MNetworkEnable` |
-| `m_szCustomName` | char[161] | `MNetworkEnable` |
+| `m_iItemIDHigh` | uint32 |  |
+| `m_iItemIDLow` | uint32 |  |
+| `m_iAccountID` | uint32 |  |
+| `m_iInventoryPosition` | uint32 |  |
+| `m_bInitialized` | bool |  |
+| `m_AttributeList` | [CAttributeList](../schemas/server.md#cattributelist) |  |
+| `m_NetworkedDynamicAttributes` | [CAttributeList](../schemas/server.md#cattributelist) |  |
+| `m_szCustomName` | char[161] |  |
 | `m_szCustomNameOverride` | char[161] |  |
 
 ### CEconWearable
@@ -5582,10 +5660,10 @@ classDiagram
 ```mermaid
 classDiagram
     CEconEntity <|-- CEconWearable
-    CBaseFlex <|-- CEconEntity
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CEconEntity
     C_BaseModelEntity <|-- CBaseAnimGraph
     C_BaseEntity <|-- C_BaseModelEntity
+    CEntityInstance <|-- C_BaseEntity
 ```
 
 **Fields:**
@@ -5609,27 +5687,26 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_vOrigin` | VectorWS | `MNetworkEnable` `MNetworkEncoder = "coord_integral"` |
-| `m_vStart` | VectorWS | `MNetworkEnable` `MNetworkEncoder = "coord_integral"` |
-| `m_vNormal` | Vector | `MNetworkEnable` `MNetworkEncoder = "normal"` |
-| `m_vAngles` | QAngle | `MNetworkEnable` `MNetworkEncoder = "qangle"` |
-| `m_hEntity` | CEntityHandle | `MNetworkEnable` |
-| `m_hOtherEntity` | CEntityHandle | `MNetworkEnable` |
-| `m_flScale` | float32 | `MNetworkEnable` |
-| `m_flMagnitude` | float32 | `MNetworkEnable` `MNetworkBitCount = 12` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 1023.000000` `MNetworkEncodeFlags = 1` |
-| `m_flRadius` | float32 | `MNetworkEnable` `MNetworkBitCount = 10` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 1023.000000` `MNetworkEncodeFlags = 1` |
-| `m_nSurfaceProp` | CUtlStringToken | `MNetworkEnable` |
-| `m_nEffectIndex` | CWeakHandle< [InfoForResourceTypeIParticleSystemDefinition](../schemas/resourcesystem.md#infoforresourcetypeiparticlesystemdefinition) > | `MNetworkEnable` |
-| `m_nDamageType` | uint32 | `MNetworkEnable` |
-| `m_nPenetrate` | uint8 | `MNetworkEnable` |
-| `m_nMaterial` | uint16 | `MNetworkEnable` |
-| `m_nHitBox` | int16 | `MNetworkEnable` |
-| `m_nColor` | uint8 | `MNetworkEnable` |
-| `m_fFlags` | uint8 | `MNetworkEnable` |
-| `m_nAttachmentIndex` | [AttachmentHandle_t](../schemas/modellib.md#attachmenthandle_t) | `MNetworkEnable` |
-| `m_nAttachmentName` | CUtlStringToken | `MNetworkEnable` |
-| `m_iEffectName` | uint16 | `MNetworkEnable` |
-| `m_nExplosionType` | uint8 | `MNetworkEnable` |
+| `m_vOrigin` | VectorWS |  |
+| `m_vStart` | VectorWS |  |
+| `m_vNormal` | Vector |  |
+| `m_vAngles` | QAngle |  |
+| `m_hEntity` | CEntityHandle |  |
+| `m_hOtherEntity` | CEntityHandle |  |
+| `m_flScale` | float32 |  |
+| `m_flMagnitude` | float32 |  |
+| `m_flRadius` | float32 |  |
+| `m_nSurfaceProp` | CUtlStringToken |  |
+| `m_nEffectIndex` | CWeakHandle< [InfoForResourceTypeIParticleSystemDefinition](../schemas/resourcesystem.md#infoforresourcetypeiparticlesystemdefinition) > |  |
+| `m_nDamageType` | uint32 |  |
+| `m_nPenetrate` | uint8 |  |
+| `m_nMaterial` | uint16 |  |
+| `m_nHitBox` | int16 |  |
+| `m_nColor` | uint8 |  |
+| `m_fFlags` | uint8 |  |
+| `m_nAttachmentIndex` | [AttachmentHandle_t](../schemas/modellib.md#attachmenthandle_t) |  |
+| `m_nAttachmentName` | CUtlStringToken |  |
+| `m_iEffectName` | uint16 |  |
 
 ### CEnableMotionFixup
 
@@ -5675,16 +5752,16 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_flFadeInStart` | float32 | `MNetworkEnable` |
-| `m_flFadeInLength` | float32 | `MNetworkEnable` |
-| `m_flFadeOutModelStart` | float32 | `MNetworkEnable` |
-| `m_flFadeOutModelLength` | float32 | `MNetworkEnable` |
-| `m_flFadeOutStart` | float32 | `MNetworkEnable` |
-| `m_flFadeOutLength` | float32 | `MNetworkEnable` |
-| `m_flStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` |
-| `m_nDissolveType` | [EntityDisolveType_t](../schemas/client.md#entitydisolvetype_t) | `MNetworkEnable` |
-| `m_vDissolverOrigin` | Vector | `MNetworkEnable` |
-| `m_nMagnitude` | uint32 | `MNetworkEnable` |
+| `m_flFadeInStart` | float32 |  |
+| `m_flFadeInLength` | float32 |  |
+| `m_flFadeOutModelStart` | float32 |  |
+| `m_flFadeOutModelLength` | float32 |  |
+| `m_flFadeOutStart` | float32 |  |
+| `m_flFadeOutLength` | float32 |  |
+| `m_flStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
+| `m_nDissolveType` | [EntityDisolveType_t](../schemas/client.md#entitydisolvetype_t) |  |
+| `m_vDissolverOrigin` | Vector |  |
+| `m_nMagnitude` | uint32 |  |
 
 ### CEntityFlame
 
@@ -5704,8 +5781,8 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_hEntAttached` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | `MNetworkEnable` |
-| `m_bCheapEffect` | bool | `MNetworkEnable` |
+| `m_hEntAttached` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
+| `m_bCheapEffect` | bool |  |
 | `m_flSize` | float32 |  |
 | `m_bUseHitboxes` | bool | `MNotSaved` |
 | `m_iNumHitboxFires` | int32 | `MNotSaved` |
@@ -5780,6 +5857,8 @@ classDiagram
 
 **Inherits from:** [CBaseEntity](server.md#cbaseentity)
 
+**Derived by:** [CEnvCombinedLightProbeVolumeAlias_func_combined_light_probe_volume](server.md#cenvcombinedlightprobevolumealias_func_combined_light_probe_volume)
+
 **Metadata:** `MEntityAllowsPortraitWorldSpawn`
 
 **Relationships:**
@@ -5788,6 +5867,7 @@ classDiagram
 classDiagram
     CBaseEntity <|-- CEnvCombinedLightProbeVolume
     CEntityInstance <|-- CBaseEntity
+    CEnvCombinedLightProbeVolume <|-- CEnvCombinedLightProbeVolumeAlias_func_combined_light_probe_volume
     CEnvCombinedLightProbeVolume *-- InfoForResourceTypeCTextureBase
 ```
 
@@ -5795,35 +5875,48 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_Entity_Color` | Color | `MNetworkEnable` `MNetworkChangeCallback = "StateChanged"` |
-| `m_Entity_flBrightness` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "StateChanged"` |
-| `m_Entity_hCubemapTexture` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
-| `m_Entity_bCustomCubemapTexture` | bool | `MNetworkEnable` |
-| `m_Entity_hLightProbeTexture_AmbientCube` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
-| `m_Entity_hLightProbeTexture_SDF` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
-| `m_Entity_hLightProbeTexture_SH2_DC` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
-| `m_Entity_hLightProbeTexture_SH2_R` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
-| `m_Entity_hLightProbeTexture_SH2_G` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
-| `m_Entity_hLightProbeTexture_SH2_B` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
-| `m_Entity_hLightProbeDirectLightIndicesTexture` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
-| `m_Entity_hLightProbeDirectLightScalarsTexture` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
-| `m_Entity_hLightProbeDirectLightShadowsTexture` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
-| `m_Entity_vBoxMins` | Vector | `MNetworkEnable` |
-| `m_Entity_vBoxMaxs` | Vector | `MNetworkEnable` |
-| `m_Entity_bMoveable` | bool | `MNetworkEnable` |
-| `m_Entity_nHandshake` | int32 | `MNetworkEnable` |
-| `m_Entity_nEnvCubeMapArrayIndex` | int32 | `MNetworkEnable` |
-| `m_Entity_nPriority` | int32 | `MNetworkEnable` |
-| `m_Entity_bStartDisabled` | bool | `MNetworkEnable` |
-| `m_Entity_flEdgeFadeDist` | float32 | `MNetworkEnable` |
-| `m_Entity_vEdgeFadeDists` | Vector | `MNetworkEnable` |
-| `m_Entity_nLightProbeSizeX` | int32 | `MNetworkEnable` |
-| `m_Entity_nLightProbeSizeY` | int32 | `MNetworkEnable` |
-| `m_Entity_nLightProbeSizeZ` | int32 | `MNetworkEnable` |
-| `m_Entity_nLightProbeAtlasX` | int32 | `MNetworkEnable` |
-| `m_Entity_nLightProbeAtlasY` | int32 | `MNetworkEnable` |
-| `m_Entity_nLightProbeAtlasZ` | int32 | `MNetworkEnable` |
-| `m_Entity_bEnabled` | bool | `MNetworkEnable` |
+| `m_Entity_Color` | Color |  |
+| `m_Entity_flBrightness` | float32 |  |
+| `m_Entity_hCubemapTexture` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_Entity_bCustomCubemapTexture` | bool |  |
+| `m_Entity_hLightProbeTexture_AmbientCube` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_Entity_hLightProbeTexture_SDF` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_Entity_hLightProbeTexture_SH2_DC` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_Entity_hLightProbeTexture_SH2_R` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_Entity_hLightProbeTexture_SH2_G` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_Entity_hLightProbeTexture_SH2_B` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_Entity_hLightProbeDirectLightIndicesTexture` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_Entity_hLightProbeDirectLightScalarsTexture` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_Entity_hLightProbeDirectLightShadowsTexture` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_Entity_vBoxMins` | Vector |  |
+| `m_Entity_vBoxMaxs` | Vector |  |
+| `m_Entity_bMoveable` | bool |  |
+| `m_Entity_nHandshake` | int32 |  |
+| `m_Entity_nEnvCubeMapArrayIndex` | int32 |  |
+| `m_Entity_nPriority` | int32 |  |
+| `m_Entity_bStartDisabled` | bool |  |
+| `m_Entity_flEdgeFadeDist` | float32 |  |
+| `m_Entity_vEdgeFadeDists` | Vector |  |
+| `m_Entity_nLightProbeSizeX` | int32 |  |
+| `m_Entity_nLightProbeSizeY` | int32 |  |
+| `m_Entity_nLightProbeSizeZ` | int32 |  |
+| `m_Entity_nLightProbeAtlasX` | int32 |  |
+| `m_Entity_nLightProbeAtlasY` | int32 |  |
+| `m_Entity_nLightProbeAtlasZ` | int32 |  |
+| `m_Entity_bEnabled` | bool |  |
+
+### CEnvCombinedLightProbeVolumeAlias_func_combined_light_probe_volume
+
+**Inherits from:** [CEnvCombinedLightProbeVolume](server.md#cenvcombinedlightprobevolume)
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CEnvCombinedLightProbeVolume <|-- CEnvCombinedLightProbeVolumeAlias_func_combined_light_probe_volume
+    CBaseEntity <|-- CEnvCombinedLightProbeVolume
+    CEntityInstance <|-- CBaseEntity
+```
 
 ### CEnvCubemap
 
@@ -5847,24 +5940,24 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_Entity_hCubemapTexture` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
-| `m_Entity_bCustomCubemapTexture` | bool | `MNetworkEnable` |
-| `m_Entity_flInfluenceRadius` | float32 | `MNetworkEnable` |
-| `m_Entity_vBoxProjectMins` | Vector | `MNetworkEnable` |
-| `m_Entity_vBoxProjectMaxs` | Vector | `MNetworkEnable` |
-| `m_Entity_bMoveable` | bool | `MNetworkEnable` |
-| `m_Entity_nHandshake` | int32 | `MNetworkEnable` |
-| `m_Entity_nEnvCubeMapArrayIndex` | int32 | `MNetworkEnable` |
-| `m_Entity_nPriority` | int32 | `MNetworkEnable` |
-| `m_Entity_flEdgeFadeDist` | float32 | `MNetworkEnable` |
-| `m_Entity_vEdgeFadeDists` | Vector | `MNetworkEnable` |
-| `m_Entity_flDiffuseScale` | float32 | `MNetworkEnable` |
-| `m_Entity_bStartDisabled` | bool | `MNetworkEnable` |
-| `m_Entity_bDefaultEnvMap` | bool | `MNetworkEnable` |
-| `m_Entity_bDefaultSpecEnvMap` | bool | `MNetworkEnable` |
-| `m_Entity_bIndoorCubeMap` | bool | `MNetworkEnable` |
-| `m_Entity_bCopyDiffuseFromDefaultCubemap` | bool | `MNetworkEnable` |
-| `m_Entity_bEnabled` | bool | `MNetworkEnable` |
+| `m_Entity_hCubemapTexture` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_Entity_bCustomCubemapTexture` | bool |  |
+| `m_Entity_flInfluenceRadius` | float32 |  |
+| `m_Entity_vBoxProjectMins` | Vector |  |
+| `m_Entity_vBoxProjectMaxs` | Vector |  |
+| `m_Entity_bMoveable` | bool |  |
+| `m_Entity_nHandshake` | int32 |  |
+| `m_Entity_nEnvCubeMapArrayIndex` | int32 |  |
+| `m_Entity_nPriority` | int32 |  |
+| `m_Entity_flEdgeFadeDist` | float32 |  |
+| `m_Entity_vEdgeFadeDists` | Vector |  |
+| `m_Entity_flDiffuseScale` | float32 |  |
+| `m_Entity_bStartDisabled` | bool |  |
+| `m_Entity_bDefaultEnvMap` | bool |  |
+| `m_Entity_bDefaultSpecEnvMap` | bool |  |
+| `m_Entity_bIndoorCubeMap` | bool |  |
+| `m_Entity_bCopyDiffuseFromDefaultCubemap` | bool |  |
+| `m_Entity_bEnabled` | bool |  |
 
 ### CEnvCubemapBox
 
@@ -5897,23 +5990,29 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_flEndDistance` | float32 | `MNetworkEnable` |
-| `m_flStartDistance` | float32 | `MNetworkEnable` |
-| `m_flFogFalloffExponent` | float32 | `MNetworkEnable` |
-| `m_bHeightFogEnabled` | bool | `MNetworkEnable` |
-| `m_flFogHeightWidth` | float32 | `MNetworkEnable` |
-| `m_flFogHeightEnd` | float32 | `MNetworkEnable` |
-| `m_flFogHeightStart` | float32 | `MNetworkEnable` |
-| `m_flFogHeightExponent` | float32 | `MNetworkEnable` |
-| `m_flLODBias` | float32 | `MNetworkEnable` |
-| `m_bActive` | bool | `MNetworkEnable` |
-| `m_bStartDisabled` | bool | `MNetworkEnable` |
-| `m_flFogMaxOpacity` | float32 | `MNetworkEnable` |
-| `m_nCubemapSourceType` | int32 | `MNetworkEnable` |
-| `m_hSkyMaterial` | CStrongHandle< [InfoForResourceTypeIMaterial2](../schemas/resourcesystem.md#infoforresourcetypeimaterial2) > | `MNetworkEnable` |
-| `m_iszSkyEntity` | CUtlSymbolLarge | `MNetworkEnable` |
-| `m_hFogCubemapTexture` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
-| `m_bHasHeightFogEnd` | bool | `MNetworkEnable` |
+| `m_flEndDistance` | float32 |  |
+| `m_flStartDistance` | float32 |  |
+| `m_flFogFalloffExponent` | float32 |  |
+| `m_bHeightFogEnabled` | bool |  |
+| `m_flFogHeightWidth` | float32 |  |
+| `m_flFogHeightEnd` | float32 |  |
+| `m_flFogHeightStart` | float32 |  |
+| `m_flFogHeightExponent` | float32 |  |
+| `m_flLODBias` | float32 |  |
+| `m_bActive` | bool |  |
+| `m_bStartDisabled` | bool |  |
+| `m_flFogMaxOpacity` | float32 |  |
+| `m_nCubemapSourceType` | int32 |  |
+| `m_hSkyMaterial` | CStrongHandle< [InfoForResourceTypeIMaterial2](../schemas/resourcesystem.md#infoforresourcetypeimaterial2) > |  |
+| `m_iszSkyEntity` | CUtlSymbolLarge |  |
+| `m_nHeightFogType` | int32 |  |
+| `m_nFogHeightBlendMode` | int32 |  |
+| `m_nFogHeightCoordinateSpace` | int32 |  |
+| `m_nDistanceFogType` | int32 |  |
+| `m_DistanceFogCurveString` | CUtlSymbolLarge |  |
+| `m_HeightFogCurveString` | CUtlSymbolLarge |  |
+| `m_hFogCubemapTexture` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_bHasHeightFogEnd` | bool |  |
 | `m_bFirstTime` | bool |  |
 
 ### CEnvDecal
@@ -5936,15 +6035,15 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_hDecalMaterial` | CStrongHandle< [InfoForResourceTypeIMaterial2](../schemas/resourcesystem.md#infoforresourcetypeimaterial2) > | `MNetworkEnable` |
-| `m_flWidth` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "OnDecalDimensionsChanged"` |
-| `m_flHeight` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "OnDecalDimensionsChanged"` |
-| `m_flDepth` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "OnDecalDimensionsChanged"` |
-| `m_nRenderOrder` | uint32 | `MNetworkEnable` |
-| `m_bProjectOnWorld` | bool | `MNetworkEnable` |
-| `m_bProjectOnCharacters` | bool | `MNetworkEnable` |
-| `m_bProjectOnWater` | bool | `MNetworkEnable` |
-| `m_flDepthSortBias` | float32 | `MNetworkEnable` |
+| `m_hDecalMaterial` | CStrongHandle< [InfoForResourceTypeIMaterial2](../schemas/resourcesystem.md#infoforresourcetypeimaterial2) > |  |
+| `m_flWidth` | float32 |  |
+| `m_flHeight` | float32 |  |
+| `m_flDepth` | float32 |  |
+| `m_nRenderOrder` | uint32 |  |
+| `m_bProjectOnWorld` | bool |  |
+| `m_bProjectOnCharacters` | bool |  |
+| `m_bProjectOnWater` | bool |  |
+| `m_flDepthSortBias` | float32 |  |
 
 ### CEnvDetailController
 
@@ -5962,8 +6061,8 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_flFadeStartDist` | float32 | `MNetworkEnable` |
-| `m_flFadeEndDist` | float32 | `MNetworkEnable` |
+| `m_flFadeStartDist` | float32 |  |
+| `m_flFadeEndDist` | float32 |  |
 
 ### CEnvEntityIgniter
 
@@ -6070,7 +6169,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_fadeColor` | Color | `MNetworkEnable` |
+| `m_fadeColor` | Color |  |
 | `m_Duration` | float32 |  |
 | `m_HoldDuration` | float32 |  |
 | `m_OnBeginFade` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
@@ -6092,7 +6191,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_outCounter` | CEntityOutputTemplate< int32, int32 > |  |
+| `m_outCounter` | CEntityOutputTemplate< int32 > |  |
 | `m_globalstate` | CUtlSymbolLarge |  |
 | `m_triggermode` | int32 |  |
 | `m_initialstate` | int32 |  |
@@ -6206,7 +6305,7 @@ classDiagram
 | Name | Type | Annotations |
 |------|------|-------------|
 | `m_iszLaserTarget` | CUtlSymbolLarge |  |
-| `m_pSprite` | [CSprite](../schemas/server.md#csprite)* | `MClassPtr` |
+| `m_pSprite` | CHandle< [CSprite](../schemas/server.md#csprite) > |  |
 | `m_iszSpriteName` | CUtlSymbolLarge |  |
 | `m_firePosition` | Vector |  |
 | `m_flStartFrame` | float32 |  |
@@ -6228,28 +6327,28 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_Entity_hLightProbeTexture_AmbientCube` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
-| `m_Entity_hLightProbeTexture_SDF` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
-| `m_Entity_hLightProbeTexture_SH2_DC` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
-| `m_Entity_hLightProbeTexture_SH2_R` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
-| `m_Entity_hLightProbeTexture_SH2_G` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
-| `m_Entity_hLightProbeTexture_SH2_B` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
-| `m_Entity_hLightProbeDirectLightIndicesTexture` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
-| `m_Entity_hLightProbeDirectLightScalarsTexture` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
-| `m_Entity_hLightProbeDirectLightShadowsTexture` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
-| `m_Entity_vBoxMins` | Vector | `MNetworkEnable` |
-| `m_Entity_vBoxMaxs` | Vector | `MNetworkEnable` |
-| `m_Entity_bMoveable` | bool | `MNetworkEnable` |
-| `m_Entity_nHandshake` | int32 | `MNetworkEnable` |
-| `m_Entity_nPriority` | int32 | `MNetworkEnable` |
-| `m_Entity_bStartDisabled` | bool | `MNetworkEnable` |
-| `m_Entity_nLightProbeSizeX` | int32 | `MNetworkEnable` |
-| `m_Entity_nLightProbeSizeY` | int32 | `MNetworkEnable` |
-| `m_Entity_nLightProbeSizeZ` | int32 | `MNetworkEnable` |
-| `m_Entity_nLightProbeAtlasX` | int32 | `MNetworkEnable` |
-| `m_Entity_nLightProbeAtlasY` | int32 | `MNetworkEnable` |
-| `m_Entity_nLightProbeAtlasZ` | int32 | `MNetworkEnable` |
-| `m_Entity_bEnabled` | bool | `MNetworkEnable` |
+| `m_Entity_hLightProbeTexture_AmbientCube` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_Entity_hLightProbeTexture_SDF` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_Entity_hLightProbeTexture_SH2_DC` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_Entity_hLightProbeTexture_SH2_R` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_Entity_hLightProbeTexture_SH2_G` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_Entity_hLightProbeTexture_SH2_B` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_Entity_hLightProbeDirectLightIndicesTexture` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_Entity_hLightProbeDirectLightScalarsTexture` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_Entity_hLightProbeDirectLightShadowsTexture` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_Entity_vBoxMins` | Vector |  |
+| `m_Entity_vBoxMaxs` | Vector |  |
+| `m_Entity_bMoveable` | bool |  |
+| `m_Entity_nHandshake` | int32 |  |
+| `m_Entity_nPriority` | int32 |  |
+| `m_Entity_bStartDisabled` | bool |  |
+| `m_Entity_nLightProbeSizeX` | int32 |  |
+| `m_Entity_nLightProbeSizeY` | int32 |  |
+| `m_Entity_nLightProbeSizeZ` | int32 |  |
+| `m_Entity_nLightProbeAtlasX` | int32 |  |
+| `m_Entity_nLightProbeAtlasY` | int32 |  |
+| `m_Entity_nLightProbeAtlasZ` | int32 |  |
+| `m_Entity_bEnabled` | bool |  |
 
 ### CEnvMuzzleFlash
 
@@ -6290,11 +6389,11 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_flAlphaScale` | float32 | `MNetworkEnable` |
-| `m_flRadiusScale` | float32 | `MNetworkEnable` |
-| `m_flSelfIllumScale` | float32 | `MNetworkEnable` |
-| `m_ColorTint` | Color | `MNetworkEnable` |
-| `m_hTextureOverride` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
+| `m_flAlphaScale` | float32 |  |
+| `m_flRadiusScale` | float32 |  |
+| `m_flSelfIllumScale` | float32 |  |
+| `m_ColorTint` | Color |  |
+| `m_hTextureOverride` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
 
 ### CEnvShake
 
@@ -6308,6 +6407,7 @@ classDiagram
     CBaseEntity <|-- CPointEntity
     CEntityInstance <|-- CBaseEntity
     CEnvShake *-- GameTime_t
+    CEnvShake --> IPhysicsMotionController
     CEnvShake *-- CPhysicsShake
 ```
 
@@ -6324,6 +6424,7 @@ classDiagram
 | `m_nextShake` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_currentAmp` | float32 |  |
 | `m_maxForce` | Vector |  |
+| `m_pShakeController` | [IPhysicsMotionController](../schemas/client.md#iphysicsmotioncontroller)* | `MPhysPtr` |
 | `m_shakeCallback` | [CPhysicsShake](../schemas/server.md#cphysicsshake) |  |
 
 ### CEnvSky
@@ -6346,18 +6447,18 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_hSkyMaterial` | CStrongHandle< [InfoForResourceTypeIMaterial2](../schemas/resourcesystem.md#infoforresourcetypeimaterial2) > | `MNetworkEnable` `MNetworkChangeCallback = "SkyStateChanged"` |
-| `m_hSkyMaterialLightingOnly` | CStrongHandle< [InfoForResourceTypeIMaterial2](../schemas/resourcesystem.md#infoforresourcetypeimaterial2) > | `MNetworkEnable` `MNetworkChangeCallback = "SkyStateChanged"` |
-| `m_bStartDisabled` | bool | `MNetworkEnable` `MNetworkChangeCallback = "SkyStateChanged"` |
-| `m_vTintColor` | Color | `MNetworkEnable` `MNetworkChangeCallback = "SkyStateChanged"` |
-| `m_vTintColorLightingOnly` | Color | `MNetworkEnable` `MNetworkChangeCallback = "SkyStateChanged"` |
-| `m_flBrightnessScale` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "SkyStateChanged"` |
-| `m_nFogType` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "SkyStateChanged"` |
-| `m_flFogMinStart` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "SkyStateChanged"` |
-| `m_flFogMinEnd` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "SkyStateChanged"` |
-| `m_flFogMaxStart` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "SkyStateChanged"` |
-| `m_flFogMaxEnd` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "SkyStateChanged"` |
-| `m_bEnabled` | bool | `MNetworkEnable` `MNetworkChangeCallback = "SkyStateChanged"` |
+| `m_hSkyMaterial` | CStrongHandle< [InfoForResourceTypeIMaterial2](../schemas/resourcesystem.md#infoforresourcetypeimaterial2) > |  |
+| `m_hSkyMaterialLightingOnly` | CStrongHandle< [InfoForResourceTypeIMaterial2](../schemas/resourcesystem.md#infoforresourcetypeimaterial2) > |  |
+| `m_bStartDisabled` | bool |  |
+| `m_vTintColor` | Color |  |
+| `m_vTintColorLightingOnly` | Color |  |
+| `m_flBrightnessScale` | float32 |  |
+| `m_nFogType` | int32 |  |
+| `m_flFogMinStart` | float32 |  |
+| `m_flFogMinEnd` | float32 |  |
+| `m_flFogMaxStart` | float32 |  |
+| `m_flFogMaxEnd` | float32 |  |
+| `m_bEnabled` | bool |  |
 
 ### CEnvSoundscape
 
@@ -6578,41 +6679,41 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_flScattering` | float32 | `MNetworkEnable` |
-| `m_TintColor` | Color | `MNetworkEnable` |
-| `m_flAnisotropy` | float32 | `MNetworkEnable` |
-| `m_flFadeSpeed` | float32 | `MNetworkEnable` |
-| `m_flDrawDistance` | float32 | `MNetworkEnable` |
-| `m_flFadeInStart` | float32 | `MNetworkEnable` |
-| `m_flFadeInEnd` | float32 | `MNetworkEnable` |
-| `m_flIndirectStrength` | float32 | `MNetworkEnable` |
-| `m_nVolumeDepth` | int32 | `MNetworkEnable` |
-| `m_fFirstVolumeSliceThickness` | float32 | `MNetworkEnable` |
-| `m_nIndirectTextureDimX` | int32 | `MNetworkEnable` |
-| `m_nIndirectTextureDimY` | int32 | `MNetworkEnable` |
-| `m_nIndirectTextureDimZ` | int32 | `MNetworkEnable` |
-| `m_vBoxMins` | Vector | `MNetworkEnable` |
-| `m_vBoxMaxs` | Vector | `MNetworkEnable` |
-| `m_bActive` | bool | `MNetworkEnable` |
-| `m_flStartAnisoTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` |
-| `m_flStartScatterTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` |
-| `m_flStartDrawDistanceTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` |
-| `m_flStartAnisotropy` | float32 | `MNetworkEnable` |
-| `m_flStartScattering` | float32 | `MNetworkEnable` |
-| `m_flStartDrawDistance` | float32 | `MNetworkEnable` |
-| `m_flDefaultAnisotropy` | float32 | `MNetworkEnable` |
-| `m_flDefaultScattering` | float32 | `MNetworkEnable` |
-| `m_flDefaultDrawDistance` | float32 | `MNetworkEnable` |
-| `m_bStartDisabled` | bool | `MNetworkEnable` |
-| `m_bEnableIndirect` | bool | `MNetworkEnable` |
-| `m_bIsMaster` | bool | `MNetworkEnable` |
-| `m_hFogIndirectTexture` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
-| `m_nForceRefreshCount` | int32 | `MNetworkEnable` |
-| `m_fNoiseSpeed` | float32 | `MNetworkEnable` |
-| `m_fNoiseStrength` | float32 | `MNetworkEnable` |
-| `m_vNoiseScale` | Vector | `MNetworkEnable` |
-| `m_fWindSpeed` | float32 | `MNetworkEnable` |
-| `m_vWindDirection` | Vector | `MNetworkEnable` |
+| `m_flScattering` | float32 |  |
+| `m_TintColor` | Color |  |
+| `m_flAnisotropy` | float32 |  |
+| `m_flFadeSpeed` | float32 |  |
+| `m_flDrawDistance` | float32 |  |
+| `m_flFadeInStart` | float32 |  |
+| `m_flFadeInEnd` | float32 |  |
+| `m_flIndirectStrength` | float32 |  |
+| `m_nVolumeDepth` | int32 |  |
+| `m_fFirstVolumeSliceThickness` | float32 |  |
+| `m_nIndirectTextureDimX` | int32 |  |
+| `m_nIndirectTextureDimY` | int32 |  |
+| `m_nIndirectTextureDimZ` | int32 |  |
+| `m_vBoxMins` | Vector |  |
+| `m_vBoxMaxs` | Vector |  |
+| `m_bActive` | bool |  |
+| `m_flStartAnisoTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
+| `m_flStartScatterTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
+| `m_flStartDrawDistanceTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
+| `m_flStartAnisotropy` | float32 |  |
+| `m_flStartScattering` | float32 |  |
+| `m_flStartDrawDistance` | float32 |  |
+| `m_flDefaultAnisotropy` | float32 |  |
+| `m_flDefaultScattering` | float32 |  |
+| `m_flDefaultDrawDistance` | float32 |  |
+| `m_bStartDisabled` | bool |  |
+| `m_bEnableIndirect` | bool |  |
+| `m_bIsMaster` | bool |  |
+| `m_hFogIndirectTexture` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_nForceRefreshCount` | int32 |  |
+| `m_fNoiseSpeed` | float32 |  |
+| `m_fNoiseStrength` | float32 |  |
+| `m_vNoiseScale` | Vector |  |
+| `m_fWindSpeed` | float32 |  |
+| `m_vWindDirection` | Vector |  |
 | `m_bFirstTime` | bool |  |
 
 ### CEnvVolumetricFogVolume
@@ -6633,24 +6734,24 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_bActive` | bool | `MNetworkEnable` |
-| `m_vBoxMins` | Vector | `MNetworkEnable` |
-| `m_vBoxMaxs` | Vector | `MNetworkEnable` |
-| `m_bStartDisabled` | bool | `MNetworkEnable` |
-| `m_bIndirectUseLPVs` | bool | `MNetworkEnable` |
-| `m_flStrength` | float32 | `MNetworkEnable` |
-| `m_nFalloffShape` | int32 | `MNetworkEnable` |
-| `m_flFalloffExponent` | float32 | `MNetworkEnable` |
-| `m_flHeightFogDepth` | float32 | `MNetworkEnable` |
-| `m_fHeightFogEdgeWidth` | float32 | `MNetworkEnable` |
-| `m_fIndirectLightStrength` | float32 | `MNetworkEnable` |
-| `m_fSunLightStrength` | float32 | `MNetworkEnable` |
-| `m_fNoiseStrength` | float32 | `MNetworkEnable` |
-| `m_TintColor` | Color | `MNetworkEnable` |
-| `m_bOverrideTintColor` | bool | `MNetworkEnable` |
-| `m_bOverrideIndirectLightStrength` | bool | `MNetworkEnable` |
-| `m_bOverrideSunLightStrength` | bool | `MNetworkEnable` |
-| `m_bOverrideNoiseStrength` | bool | `MNetworkEnable` |
+| `m_bActive` | bool |  |
+| `m_vBoxMins` | Vector |  |
+| `m_vBoxMaxs` | Vector |  |
+| `m_bStartDisabled` | bool |  |
+| `m_bIndirectUseLPVs` | bool |  |
+| `m_flStrength` | float32 |  |
+| `m_nFalloffShape` | int32 |  |
+| `m_flFalloffExponent` | float32 |  |
+| `m_flHeightFogDepth` | float32 |  |
+| `m_fHeightFogEdgeWidth` | float32 |  |
+| `m_fIndirectLightStrength` | float32 |  |
+| `m_fSunLightStrength` | float32 |  |
+| `m_fNoiseStrength` | float32 |  |
+| `m_TintColor` | Color |  |
+| `m_bOverrideTintColor` | bool |  |
+| `m_bOverrideIndirectLightStrength` | bool |  |
+| `m_bOverrideSunLightStrength` | bool |  |
+| `m_bOverrideNoiseStrength` | bool |  |
 
 ### CEnvWind
 
@@ -6669,7 +6770,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_EnvWindShared` | [CEnvWindShared](../schemas/server.md#cenvwindshared) | `MNetworkEnable` |
+| `m_EnvWindShared` | [CEnvWindShared](../schemas/server.md#cenvwindshared) |  |
 
 ### CEnvWindController
 
@@ -6688,16 +6789,16 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_EnvWindShared` | [CEnvWindShared](../schemas/server.md#cenvwindshared) | `MNetworkEnable` |
-| `m_fDirectionVariation` | float32 | `MNetworkEnable` |
-| `m_fSpeedVariation` | float32 | `MNetworkEnable` |
-| `m_fTurbulence` | float32 | `MNetworkEnable` |
-| `m_fVolumeHalfExtentXY` | float32 | `MNetworkEnable` |
-| `m_fVolumeHalfExtentZ` | float32 | `MNetworkEnable` |
-| `m_nVolumeResolutionXY` | int32 | `MNetworkEnable` |
-| `m_nVolumeResolutionZ` | int32 | `MNetworkEnable` |
-| `m_nClipmapLevels` | int32 | `MNetworkEnable` |
-| `m_bIsMaster` | bool | `MNetworkEnable` |
+| `m_EnvWindShared` | [CEnvWindShared](../schemas/server.md#cenvwindshared) |  |
+| `m_fDirectionVariation` | float32 |  |
+| `m_fSpeedVariation` | float32 |  |
+| `m_fTurbulence` | float32 |  |
+| `m_fVolumeHalfExtentXY` | float32 |  |
+| `m_fVolumeHalfExtentZ` | float32 |  |
+| `m_nVolumeResolutionXY` | int32 |  |
+| `m_nVolumeResolutionZ` | int32 |  |
+| `m_nClipmapLevels` | int32 |  |
+| `m_bIsMaster` | bool |  |
 | `m_bFirstTime` | bool |  |
 
 ### CEnvWindShared
@@ -6715,20 +6816,20 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_flStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` `MNotSaved` |
-| `m_iWindSeed` | uint32 | `MNetworkEnable` `MNotSaved` |
-| `m_iMinWind` | uint16 | `MNetworkEnable` |
-| `m_iMaxWind` | uint16 | `MNetworkEnable` |
-| `m_windRadius` | int32 | `MNetworkEnable` |
-| `m_iMinGust` | uint16 | `MNetworkEnable` |
-| `m_iMaxGust` | uint16 | `MNetworkEnable` |
-| `m_flMinGustDelay` | float32 | `MNetworkEnable` |
-| `m_flMaxGustDelay` | float32 | `MNetworkEnable` |
-| `m_flGustDuration` | float32 | `MNetworkEnable` |
-| `m_iGustDirChange` | uint16 | `MNetworkEnable` |
-| `m_iInitialWindDir` | uint16 | `MNetworkEnable` `MNotSaved` |
-| `m_flInitialWindSpeed` | float32 | `MNetworkEnable` `MNotSaved` |
-| `m_location` | Vector | `MNetworkEnable` `MNetworkEncoder = "coord"` `MNotSaved` |
+| `m_flStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNotSaved` |
+| `m_iWindSeed` | uint32 | `MNotSaved` |
+| `m_iMinWind` | uint16 |  |
+| `m_iMaxWind` | uint16 |  |
+| `m_windRadius` | int32 |  |
+| `m_iMinGust` | uint16 |  |
+| `m_iMaxGust` | uint16 |  |
+| `m_flMinGustDelay` | float32 |  |
+| `m_flMaxGustDelay` | float32 |  |
+| `m_flGustDuration` | float32 |  |
+| `m_iGustDirChange` | uint16 |  |
+| `m_iInitialWindDir` | uint16 | `MNotSaved` |
+| `m_flInitialWindSpeed` | float32 | `MNotSaved` |
+| `m_location` | VectorWS | `MNotSaved` |
 | `m_OnGustStart` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnGustEnd` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_hEntOwner` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | `MNotSaved` |
@@ -6751,15 +6852,19 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_bActive` | bool | `MNetworkEnable` |
-| `m_vBoxMins` | Vector | `MNetworkEnable` |
-| `m_vBoxMaxs` | Vector | `MNetworkEnable` |
-| `m_bStartDisabled` | bool | `MNetworkEnable` |
-| `m_nShape` | int32 | `MNetworkEnable` |
-| `m_fWindSpeedMultiplier` | float32 | `MNetworkEnable` |
-| `m_fWindTurbulenceMultiplier` | float32 | `MNetworkEnable` |
-| `m_fWindSpeedVariationMultiplier` | float32 | `MNetworkEnable` |
-| `m_fWindDirectionVariationMultiplier` | float32 | `MNetworkEnable` |
+| `m_bActive` | bool |  |
+| `m_vBoxMins` | Vector |  |
+| `m_vBoxMaxs` | Vector |  |
+| `m_bStartDisabled` | bool |  |
+| `m_nShape` | int32 |  |
+| `m_fWindSpeedMultiplier` | float32 |  |
+| `m_fWindTurbulenceMultiplier` | float32 |  |
+| `m_fWindSpeedVariationMultiplier` | float32 |  |
+| `m_fWindDirectionVariationMultiplier` | float32 |  |
+
+### CExplosionTypeData
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_SoundName": "",`, `"m_ParticleEffect": "",`, `"m_bIsIncindiary": false,`, `"m_bHasForces": false,`, `"m_DecalType": "Scorch"`, `}`, `MVDataRoot`, `MVDataOverlayType = 1`, `MVDataAssociatedFile = "scripts/explosion_types.vdata"`
 
 ### CFilterAttributeInt
 
@@ -7002,8 +7107,6 @@ classDiagram
 
 **Inherits from:** [CBaseAnimGraph](server.md#cbaseanimgraph)
 
-**Metadata:** `MNetworkIncludeByName = "m_nModelIndex"`, `MNetworkIncludeByName = "m_lifeState"`
-
 **Relationships:**
 
 ```mermaid
@@ -7022,15 +7125,15 @@ classDiagram
 |------|------|-------------|
 | `m_pool` | CHandle< [CFishPool](../schemas/server.md#cfishpool) > |  |
 | `m_id` | uint32 |  |
-| `m_x` | float32 | `MNetworkEnable` `MNetworkSerializer = "fish_pos_x"` `MNotSaved` |
-| `m_y` | float32 | `MNetworkEnable` `MNetworkSerializer = "fish_pos_y"` `MNotSaved` |
-| `m_z` | float32 | `MNetworkEnable` `MNetworkSerializer = "fish_pos_z"` `MNotSaved` |
-| `m_angle` | float32 | `MNetworkEnable` `MNetworkSerializer = "angle_normalize_positive"` `MNetworkBitCount = 7` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 360.000000` `MNetworkEncodeFlags = 1` |
+| `m_x` | float32 | `MNotSaved` |
+| `m_y` | float32 | `MNotSaved` |
+| `m_z` | float32 | `MNotSaved` |
+| `m_angle` | float32 |  |
 | `m_angleChange` | float32 |  |
 | `m_forward` | Vector |  |
 | `m_perp` | Vector |  |
-| `m_poolOrigin` | Vector | `MNetworkEnable` `MNetworkEncoder = "coord"` |
-| `m_waterLevel` | float32 | `MNetworkEnable` |
+| `m_poolOrigin` | Vector |  |
+| `m_waterLevel` | float32 |  |
 | `m_speed` | float32 |  |
 | `m_desiredSpeed` | float32 |  |
 | `m_calmSpeed` | float32 |  |
@@ -7083,7 +7186,7 @@ classDiagram
     CCSWeaponBase <|-- CBaseCSGrenade
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CFlashbangProjectile
@@ -7096,9 +7199,9 @@ classDiagram
 classDiagram
     CBaseCSGrenadeProjectile <|-- CFlashbangProjectile
     CBaseGrenade <|-- CBaseCSGrenadeProjectile
-    CBaseFlex <|-- CBaseGrenade
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CBaseGrenade
     C_BaseModelEntity <|-- CBaseAnimGraph
+    C_BaseEntity <|-- C_BaseModelEntity
 ```
 
 **Fields:**
@@ -7127,7 +7230,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_fog` | fogparams_t | `MNetworkEnable` `MNotSaved` |
+| `m_fog` | fogparams_t | `MNotSaved` |
 | `m_bUseAngles` | bool |  |
 | `m_iChangedVariables` | int32 |  |
 
@@ -7195,8 +7298,8 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_source` | CUtlSymbolLarge | `MNetworkEnable` |
-| `m_destination` | CUtlSymbolLarge | `MNetworkEnable` |
+| `m_source` | CUtlSymbolLarge |  |
+| `m_destination` | CUtlSymbolLarge |  |
 
 ### CFuncBrush
 
@@ -7231,8 +7334,6 @@ classDiagram
 
 **Inherits from:** [CBaseModelEntity](server.md#cbasemodelentity)
 
-**Metadata:** `MNetworkIncludeByName = "m_fFlags"`, `MNetworkOverride = "m_fFlags CBaseEntity"`, `MNetworkOverride = "m_vecX CNetworkOriginCellCoordQuantizedVector"`, `MNetworkOverride = "m_vecY CNetworkOriginCellCoordQuantizedVector"`, `MNetworkOverride = "m_vecZ CNetworkOriginCellCoordQuantizedVector"`, `MNetworkOverride = "m_angRotation CGameSceneNode"`
-
 **Relationships:**
 
 ```mermaid
@@ -7251,12 +7352,12 @@ classDiagram
 | `m_szConveyorModels` | CUtlSymbolLarge |  |
 | `m_flTransitionDurationSeconds` | float32 |  |
 | `m_angMoveEntitySpace` | QAngle |  |
-| `m_vecMoveDirEntitySpace` | Vector | `MNetworkEnable` |
-| `m_flTargetSpeed` | float32 | `MNetworkEnable` |
-| `m_nTransitionStartTick` | [GameTick_t](../schemas/entity2.md#gametick_t) | `MNetworkEnable` |
-| `m_nTransitionDurationTicks` | int32 | `MNetworkEnable` |
-| `m_flTransitionStartSpeed` | float32 | `MNetworkEnable` |
-| `m_hConveyorModels` | CNetworkUtlVectorBase< CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > > | `MNetworkEnable` |
+| `m_vecMoveDirEntitySpace` | Vector |  |
+| `m_flTargetSpeed` | float32 |  |
+| `m_nTransitionStartTick` | [GameTick_t](../schemas/entity2.md#gametick_t) |  |
+| `m_nTransitionDurationTicks` | int32 |  |
+| `m_flTransitionStartSpeed` | float32 |  |
+| `m_hConveyorModels` | CNetworkUtlVectorBase< CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > > |  |
 
 ### CFuncElectrifiedVolume
 
@@ -7276,7 +7377,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_EffectName` | CUtlSymbolLarge | `MNetworkEnable` |
+| `m_EffectName` | CUtlSymbolLarge |  |
 | `m_EffectInterpenetrateName` | CUtlSymbolLarge |  |
 | `m_EffectZapName` | CUtlSymbolLarge |  |
 | `m_iszEffectSource` | CUtlSymbolLarge |  |
@@ -7337,14 +7438,14 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_vecLadderDir` | Vector | `MNetworkEnable` `MNetworkEncoder = "coord"` |
+| `m_vecLadderDir` | Vector |  |
 | `m_Dismounts` | CUtlVector< CHandle< [CInfoLadderDismount](../schemas/server.md#cinfoladderdismount) > > | `MNotSaved` |
 | `m_vecLocalTop` | Vector |  |
-| `m_vecPlayerMountPositionTop` | VectorWS | `MNetworkEnable` `MNetworkEncoder = "coord"` |
-| `m_vecPlayerMountPositionBottom` | VectorWS | `MNetworkEnable` `MNetworkEncoder = "coord"` |
-| `m_flAutoRideSpeed` | float32 | `MNetworkEnable` |
+| `m_vecPlayerMountPositionTop` | VectorWS |  |
+| `m_vecPlayerMountPositionBottom` | VectorWS |  |
+| `m_flAutoRideSpeed` | float32 |  |
 | `m_bDisabled` | bool |  |
-| `m_bFakeLadder` | bool | `MNetworkEnable` |
+| `m_bFakeLadder` | bool |  |
 | `m_bHasSlack` | bool |  |
 | `m_surfacePropName` | CUtlSymbolLarge |  |
 | `m_OnPlayerGotOnLadder` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
@@ -7383,14 +7484,14 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_targetCamera` | CUtlString | `MNetworkEnable` |
-| `m_nResolutionEnum` | int32 | `MNetworkEnable` |
-| `m_bRenderShadows` | bool | `MNetworkEnable` |
-| `m_bUseUniqueColorTarget` | bool | `MNetworkEnable` |
-| `m_brushModelName` | CUtlString | `MNetworkEnable` |
-| `m_hTargetCamera` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | `MNetworkEnable` |
-| `m_bEnabled` | bool | `MNetworkEnable` |
-| `m_bDraw3DSkybox` | bool | `MNetworkEnable` |
+| `m_targetCamera` | CUtlString |  |
+| `m_nResolutionEnum` | int32 |  |
+| `m_bRenderShadows` | bool |  |
+| `m_bUseUniqueColorTarget` | bool |  |
+| `m_brushModelName` | CUtlString |  |
+| `m_hTargetCamera` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
+| `m_bEnabled` | bool |  |
+| `m_bDraw3DSkybox` | bool |  |
 | `m_bStartEnabled` | bool |  |
 
 ### CFuncMoveLinear
@@ -7398,8 +7499,6 @@ classDiagram
 **Inherits from:** [CBaseToggle](server.md#cbasetoggle)
 
 **Derived by:** [CFuncMoveLinearAlias_momentary_door](server.md#cfuncmovelinearalias_momentary_door)
-
-**Metadata:** `MNetworkIncludeByName = "m_fFlags"`, `MNetworkIncludeByName = "m_vecVelocity"`, `MNetworkOverride = "m_fFlags CBaseEntity"`
 
 **Relationships:**
 
@@ -7465,6 +7564,7 @@ classDiagram
     CFuncMover *-- CEntityIOOutput
     CFuncMover --> CBaseEntity
     CFuncMover *-- GameTick_t
+    CFuncMover *-- FuncMoverMovementSummary_t
 ```
 
 **Fields:**
@@ -7476,6 +7576,7 @@ classDiagram
 | `m_hPrevPathMover` | CHandle< [CPathMover](../schemas/server.md#cpathmover) > |  |
 | `m_iszPathNodeStart` | CUtlSymbolLarge |  |
 | `m_iszPathNodeEnd` | CUtlSymbolLarge |  |
+| `m_bIgnoreEndNode` | bool |  |
 | `m_eMoveType` | [CFuncMover](../schemas/server.md#cfuncmover)::Move_t |  |
 | `m_bIsReversing` | bool |  |
 | `m_flStartSpeed` | float32 |  |
@@ -7514,10 +7615,9 @@ classDiagram
 | `m_flTimeStartOrientationChange` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_flTimeToBlendToNewOrientation` | float32 |  |
 | `m_flDurationBlendToNewOrientationRan` | float32 |  |
-| `m_nOriginalOrientationIndex` | int32 |  |
 | `m_bCreateMovableNavMesh` | bool |  |
 | `m_bAllowMovableNavMeshDockingOnEntireEntity` | bool |  |
-| `m_OnNodePassed` | CEntityOutputTemplate< CUtlString, char* > |  |
+| `m_OnNodePassed` | CEntityOutputTemplate< CUtlString > |  |
 | `m_iszOrientationMatchEntityName` | CUtlSymbolLarge |  |
 | `m_hOrientationMatchEntity` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 | `m_flTimeToTraverseToNextNode` | float32 |  |
@@ -7528,8 +7628,9 @@ classDiagram
 | `m_OnLerpToPositionComplete` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_bIsPaused` | bool |  |
 | `m_eTransitionedToPathNodeAction` | [CFuncMover](../schemas/server.md#cfuncmover)::TransitionToPathNodeAction_t |  |
+| `m_qTransitionSourceOrientation` | Quaternion |  |
 | `m_nDelayedTeleportToNode` | int32 |  |
-| `m_bIsVerboseLogging` | bool |  |
+| `m_bIsImGuiLogging` | bool |  |
 | `m_hFollowEntity` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 | `m_flFollowDistance` | float32 |  |
 | `m_flFollowMinimumSpeed` | float32 |  |
@@ -7548,13 +7649,19 @@ classDiagram
 | `m_hFollowMover` | CHandle< [CFuncMover](../schemas/server.md#cfuncmover) > |  |
 | `m_iszFollowMoverEntityName` | CUtlSymbolLarge |  |
 | `m_flFollowMoverDistance` | float32 |  |
+| `m_flFollowMoverRatio` | float32 |  |
 | `m_flFollowMoverCalculatedDistance` | float32 |  |
 | `m_flFollowMoverSpringStrength` | float32 |  |
+| `m_nFollowMoverConstraintPriority` | int32 |  |
 | `m_bFollowConstraintsInitialized` | bool |  |
 | `m_eFollowConstraint` | [CFuncMover](../schemas/server.md#cfuncmover)::FollowConstraint_t |  |
 | `m_flFollowMoverSpeed` | float32 |  |
 | `m_flFollowMoverVelocity` | float32 |  |
 | `m_nTickMovementRan` | [GameTick_t](../schemas/entity2.md#gametick_t) |  |
+| `m_movementSummary` | [FuncMoverMovementSummary_t](../schemas/server.md#funcmovermovementsummary_t) |  |
+| `m_bStopFromBeginStopTarget` | bool |  |
+| `m_bQueueStop` | bool |  |
+| `m_bQueueStopMoving` | bool |  |
 
 ### CFuncMover
 
@@ -7564,6 +7671,7 @@ classDiagram
 |------|-------|
 | `FOLLOW_CONSTRAINT_DISTANCE` | 0 |
 | `FOLLOW_CONSTRAINT_SPRING` | 1 |
+| `FOLLOW_CONSTRAINT_RATIO` | 2 |
 
 ### CFuncMover
 
@@ -7736,8 +7844,6 @@ classDiagram
 ### CFuncRotating
 
 **Inherits from:** [CBaseModelEntity](server.md#cbasemodelentity)
-
-**Metadata:** `MNetworkOverride = "m_angRotation CGameSceneNode"`, `MNetworkOverride = "m_flSimulationTime CBaseEntity"`
 
 **Relationships:**
 
@@ -7982,9 +8088,9 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_trackTop` | [CPathTrack](../schemas/server.md#cpathtrack)* | `MClassPtr` |
-| `m_trackBottom` | [CPathTrack](../schemas/server.md#cpathtrack)* | `MClassPtr` |
-| `m_train` | [CFuncTrackTrain](../schemas/server.md#cfunctracktrain)* | `MClassPtr` |
+| `m_trackTop` | CHandle< [CPathTrack](../schemas/server.md#cpathtrack) > |  |
+| `m_trackBottom` | CHandle< [CPathTrack](../schemas/server.md#cpathtrack) > |  |
+| `m_train` | CHandle< [CFuncTrackTrain](../schemas/server.md#cfunctracktrain) > |  |
 | `m_trackTopName` | CUtlSymbolLarge |  |
 | `m_trackBottomName` | CUtlSymbolLarge |  |
 | `m_trainName` | CUtlSymbolLarge |  |
@@ -8193,7 +8299,7 @@ classDiagram
 ```mermaid
 classDiagram
     IChoreoServices <|-- CGameChoreoServices
-    CGameChoreoServices --> CBaseAnimGraph
+    CGameChoreoServices --> CBaseModelEntity
     CGameChoreoServices --> CScriptedSequence
     CGameChoreoServices *-- IChoreoServices
     CGameChoreoServices *-- GameTime_t
@@ -8203,7 +8309,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_hOwner` | CHandle< [CBaseAnimGraph](../schemas/server.md#cbaseanimgraph) > |  |
+| `m_hOwner` | CHandle< [CBaseModelEntity](../schemas/server.md#cbasemodelentity) > |  |
 | `m_hScriptedSequence` | CHandle< [CScriptedSequence](../schemas/server.md#cscriptedsequence) > |  |
 | `m_scriptState` | [IChoreoServices](../schemas/client.md#ichoreoservices)::ScriptState_t |  |
 | `m_choreoState` | [IChoreoServices](../schemas/client.md#ichoreoservices)::ChoreoState_t |  |
@@ -8307,8 +8413,8 @@ classDiagram
 |------|------|-------------|
 | `m_OnPlayerInZone` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnPlayerOutZone` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
-| `m_PlayersInCount` | CEntityOutputTemplate< int32, int32 > |  |
-| `m_PlayersOutCount` | CEntityOutputTemplate< int32, int32 > |  |
+| `m_PlayersInCount` | CEntityOutputTemplate< int32 > |  |
+| `m_PlayersOutCount` | CEntityOutputTemplate< int32 > |  |
 
 ### CGameRules
 
@@ -8332,9 +8438,9 @@ classDiagram
 | `m_nQuestPhase` | int32 |  |
 | `m_nLastMatchTime` | uint32 |  |
 | `m_nLastMatchTime_MatchID64` | uint64 |  |
-| `m_nTotalPausedTicks` | int32 | `MNetworkEnable` |
-| `m_nPauseStartTick` | int32 | `MNetworkEnable` |
-| `m_bGamePaused` | bool | `MNetworkEnable` |
+| `m_nTotalPausedTicks` | int32 |  |
+| `m_nPauseStartTick` | int32 |  |
+| `m_bGamePaused` | bool |  |
 
 ### CGameRulesProxy
 
@@ -8374,10 +8480,10 @@ classDiagram
 | `m_pParent` | [CGameSceneNode](../schemas/server.md#cgamescenenode)* | `MNotSaved` |
 | `m_pChild` | [CGameSceneNode](../schemas/server.md#cgamescenenode)* | `MNotSaved` |
 | `m_pNextSibling` | [CGameSceneNode](../schemas/server.md#cgamescenenode)* | `MNotSaved` |
-| `m_hParent` | [CGameSceneNodeHandle](../schemas/server.md#cgamescenenodehandle) | `MNetworkEnable` `MNetworkSerializer = "gameSceneNode"` `MNetworkChangeCallback = "gameSceneNodeHierarchyParentChanged"` `MNetworkPriority = 32` `MNetworkVarEmbeddedFieldOffsetDelta = 8` |
-| `m_vecOrigin` | [CNetworkOriginCellCoordQuantizedVector](../schemas/client.md#cnetworkorigincellcoordquantizedvector) | `MNetworkEnable` `MNetworkPriority = 32` `MNetworkUserGroup = "Origin"` `MNetworkChangeCallback = "gameSceneNodeLocalOriginChanged"` |
-| `m_angRotation` | QAngle | `MNetworkEnable` `MNetworkPriority = 32` `MNetworkSerializer = "gameSceneNodeStepSimulationAnglesSerializer"` `MNetworkChangeCallback = "gameSceneNodeLocalAnglesChanged"` `MNetworkEncoder = "qangle_precise"` |
-| `m_flScale` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "gameSceneNodeLocalScaleChanged"` `MNetworkPriority = 32` |
+| `m_hParent` | [CGameSceneNodeHandle](../schemas/server.md#cgamescenenodehandle) |  |
+| `m_vecOrigin` | [CNetworkOriginCellCoordQuantizedVector](../schemas/client.md#cnetworkorigincellcoordquantizedvector) |  |
+| `m_angRotation` | QAngle |  |
+| `m_flScale` | float32 |  |
 | `m_vecAbsOrigin` | VectorWS |  |
 | `m_angAbsRotation` | QAngle |  |
 | `m_flAbsScale` | float32 |  |
@@ -8397,9 +8503,8 @@ classDiagram
 | `m_nHierarchicalDepth` | uint8 | `MNotSaved` |
 | `m_nHierarchyType` | uint8 | `MNotSaved` |
 | `m_nDoNotSetAnimTimeInInvalidatePhysicsCount` | uint8 | `MNotSaved` |
-| `m_name` | CUtlStringToken | `MNetworkEnable` |
-| `m_hierarchyAttachName` | CUtlStringToken | `MNetworkEnable` `MNetworkChangeCallback = "gameSceneNodeHierarchyAttachmentChanged"` |
-| `m_flZOffset` | float32 |  |
+| `m_name` | CUtlStringToken |  |
+| `m_hierarchyAttachName` | CUtlStringToken |  |
 | `m_flClientLocalScale` | float32 |  |
 | `m_vRenderOrigin` | Vector |  |
 
@@ -8409,8 +8514,8 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_hOwner` | CEntityHandle | `MNetworkEnable` |
-| `m_name` | CUtlStringToken | `MNetworkEnable` |
+| `m_hOwner` | CEntityHandle |  |
+| `m_name` | CUtlStringToken |  |
 
 ### CGameScriptedMoveData
 
@@ -8418,7 +8523,27 @@ classDiagram
 
 ### CGameScriptedMoveDef_t
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_vDestOffset":`, `[`, `340282346638528859811704183484516925440.000000,`, `340282346638528859811704183484516925440.000000,`, `340282346638528859811704183484516925440.000000`, `],`, `"m_hDestEntity": null,`, `"m_angDest":`, `[`, `340282346638528859811704183484516925440.000000,`, `340282346638528859811704183484516925440.000000,`, `340282346638528859811704183484516925440.000000`, `],`, `"m_flDuration": 0.000000,`, `"m_flAngRate": 180.000000,`, `"m_flMoveSpeed": 0.000000,`, `"m_bAimDisabled": false,`, `"m_bIgnoreRotation": false,`, `"m_nForcedCrouchState": "FORCEDCROUCH_NONE"`, `}`
+**Relationships:**
+
+```mermaid
+classDiagram
+    CGameScriptedMoveDef_t --> CBaseEntity
+    CGameScriptedMoveDef_t *-- ForcedCrouchState_t
+```
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `m_vDestOffset` | Vector |  |
+| `m_hDestEntity` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
+| `m_angDest` | QAngle |  |
+| `m_flDuration` | float32 |  |
+| `m_flAngRate` | float32 |  |
+| `m_flMoveSpeed` | float32 |  |
+| `m_bAimDisabled` | bool |  |
+| `m_bIgnoreRotation` | bool |  |
+| `m_nForcedCrouchState` | [ForcedCrouchState_t](../schemas/client.md#forcedcrouchstate_t) |  |
 
 ### CGameText
 
@@ -8463,6 +8588,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
+| `m_bPlaceAnchorsAtConstraintTransform` | bool |  |
 | `m_nLinearMotionX` | [JointMotion_t](../schemas/physicslib.md#jointmotion_t) |  |
 | `m_nLinearMotionY` | [JointMotion_t](../schemas/physicslib.md#jointmotion_t) |  |
 | `m_nLinearMotionZ` | [JointMotion_t](../schemas/physicslib.md#jointmotion_t) |  |
@@ -8512,6 +8638,14 @@ classDiagram
 | `m_NotifyForceReachedY` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_NotifyForceReachedZ` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 
+### CGenericShapeProxy
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `m_verts` | CUtlLeanVectorFixedGrowable< Vector, 8 > |  |
+
 ### CGlowProperty
 
 **Fields:**
@@ -8519,15 +8653,15 @@ classDiagram
 | Name | Type | Annotations |
 |------|------|-------------|
 | `m_fGlowColor` | Vector | `MNotSaved` |
-| `m_iGlowType` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "OnGlowTypeChanged"` |
-| `m_iGlowTeam` | int32 | `MNetworkEnable` `MNotSaved` |
-| `m_nGlowRange` | int32 | `MNetworkEnable` `MNotSaved` |
-| `m_nGlowRangeMin` | int32 | `MNetworkEnable` `MNotSaved` |
-| `m_glowColorOverride` | Color | `MNetworkEnable` `MNetworkChangeCallback = "OnGlowColorChanged"` `MNotSaved` |
-| `m_bFlashing` | bool | `MNetworkEnable` `MNotSaved` |
-| `m_flGlowTime` | float32 | `MNetworkEnable` `MNotSaved` |
-| `m_flGlowStartTime` | float32 | `MNetworkEnable` `MNotSaved` |
-| `m_bEligibleForScreenHighlight` | bool | `MNetworkEnable` |
+| `m_iGlowType` | int32 |  |
+| `m_iGlowTeam` | int32 | `MNotSaved` |
+| `m_nGlowRange` | int32 | `MNotSaved` |
+| `m_nGlowRangeMin` | int32 | `MNotSaved` |
+| `m_glowColorOverride` | Color | `MNotSaved` |
+| `m_bFlashing` | bool | `MNotSaved` |
+| `m_flGlowTime` | float32 | `MNotSaved` |
+| `m_flGlowStartTime` | float32 | `MNotSaved` |
+| `m_bEligibleForScreenHighlight` | bool |  |
 | `m_bGlowing` | bool | `MNotSaved` |
 
 ### CGradientFog
@@ -8547,21 +8681,21 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_hGradientFogTexture` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
-| `m_flFogStartDistance` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "FogStateChanged"` |
-| `m_flFogEndDistance` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "FogStateChanged"` |
-| `m_bHeightFogEnabled` | bool | `MNetworkEnable` `MNetworkChangeCallback = "FogStateChanged"` |
-| `m_flFogStartHeight` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "FogStateChanged"` |
-| `m_flFogEndHeight` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "FogStateChanged"` |
-| `m_flFarZ` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "FogStateChanged"` |
-| `m_flFogMaxOpacity` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "FogStateChanged"` |
-| `m_flFogFalloffExponent` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "FogStateChanged"` |
-| `m_flFogVerticalExponent` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "FogStateChanged"` |
-| `m_fogColor` | Color | `MNetworkEnable` `MNetworkChangeCallback = "FogStateChanged"` |
-| `m_flFogStrength` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "FogStateChanged"` |
-| `m_flFadeTime` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "FogStateChanged"` |
-| `m_bStartDisabled` | bool | `MNetworkEnable` |
-| `m_bIsEnabled` | bool | `MNetworkEnable` |
+| `m_hGradientFogTexture` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_flFogStartDistance` | float32 |  |
+| `m_flFogEndDistance` | float32 |  |
+| `m_bHeightFogEnabled` | bool |  |
+| `m_flFogStartHeight` | float32 |  |
+| `m_flFogEndHeight` | float32 |  |
+| `m_flFarZ` | float32 |  |
+| `m_flFogMaxOpacity` | float32 |  |
+| `m_flFogFalloffExponent` | float32 |  |
+| `m_flFogVerticalExponent` | float32 |  |
+| `m_fogColor` | Color |  |
+| `m_flFogStrength` | float32 |  |
+| `m_flFadeTime` | float32 |  |
+| `m_bStartDisabled` | bool |  |
+| `m_bIsEnabled` | bool |  |
 | `m_bGradientFogNeedsTextures` | bool |  |
 
 ### CGunTarget
@@ -8600,7 +8734,7 @@ classDiagram
     CCSWeaponBase <|-- CBaseCSGrenade
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CHEGrenadeProjectile
@@ -8613,9 +8747,9 @@ classDiagram
 classDiagram
     CBaseCSGrenadeProjectile <|-- CHEGrenadeProjectile
     CBaseGrenade <|-- CBaseCSGrenadeProjectile
-    CBaseFlex <|-- CBaseGrenade
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CBaseGrenade
     C_BaseModelEntity <|-- CBaseAnimGraph
+    C_BaseEntity <|-- C_BaseModelEntity
 ```
 
 ### CHandleDummy
@@ -8647,8 +8781,8 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_Handle` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | `MNetworkEnable` |
-| `m_bSendHandle` | bool | `MNetworkEnable` |
+| `m_Handle` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
+| `m_bSendHandle` | bool |  |
 
 ### CHintMessage
 
@@ -8704,17 +8838,15 @@ Entity representing a hostage NPC in hostage-rescue game mode.  Each hostage has
 
 **Derived by:** [CHostageAlias_info_hostage_spawn](server.md#chostagealias_info_hostage_spawn)
 
-**Metadata:** `MNetworkIncludeByName = "m_iMaxHealth"`, `MNetworkIncludeByName = "m_iHealth"`, `MNetworkIncludeByName = "m_lifeState"`, `MNetworkIncludeByName = "m_fFlags"`, `MNetworkIncludeByName = "m_vecViewOffset"`
-
 **Relationships:**
 
 ```mermaid
 classDiagram
     CHostageExpresserShim <|-- CHostage
     CBaseCombatCharacter <|-- CHostageExpresserShim
-    CBaseFlex <|-- CBaseCombatCharacter
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CBaseCombatCharacter
     C_BaseModelEntity <|-- CBaseAnimGraph
+    C_BaseEntity <|-- C_BaseModelEntity
     CHostage <|-- CHostageAlias_info_hostage_spawn
     CHostage *-- CEntityIOOutput
     CHostage *-- EntitySpottedState_t
@@ -8733,18 +8865,18 @@ classDiagram
 | `m_OnFirstPickedUp` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnDroppedNotRescued` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnRescued` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
-| `m_entitySpottedState` | [EntitySpottedState_t](../schemas/server.md#entityspottedstate_t) | EntitySpottedState_t tracking which players have spotted (radar dot) this hostage. `MNetworkEnable` |
+| `m_entitySpottedState` | [EntitySpottedState_t](../schemas/server.md#entityspottedstate_t) | EntitySpottedState_t tracking which players have spotted (radar dot) this hostage. |
 | `m_nSpotRules` | int32 |  |
 | `m_uiHostageSpawnExclusionGroupMask` | uint32 |  |
 | `m_nHostageSpawnRandomFactor` | uint32 |  |
 | `m_bRemove` | bool |  |
-| `m_vel` | Vector | Current velocity vector of the hostage entity. `MNetworkEnable` |
-| `m_isRescued` | bool | True after the hostage has been delivered to the rescue zone. `MNetworkEnable` |
-| `m_jumpedThisFrame` | bool | True if the hostage jumped this tick (used to trigger jump animation). `MNetworkEnable` |
-| `m_nHostageState` | int32 | State enum: 0 = Idle, 1 = Being grabbed, 2 = Being carried, 3 = Rescued, 4 = Dead. `MNetworkEnable` |
-| `m_leader` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | CHandle to the entity (usually CCSPlayerPawn) that is currently leading this hostage. `MNetworkEnable` |
+| `m_vel` | Vector | Current velocity vector of the hostage entity. |
+| `m_isRescued` | bool | True after the hostage has been delivered to the rescue zone. |
+| `m_jumpedThisFrame` | bool | True if the hostage jumped this tick (used to trigger jump animation). |
+| `m_nHostageState` | int32 | State enum: 0 = Idle, 1 = Being grabbed, 2 = Being carried, 3 = Rescued, 4 = Dead. |
+| `m_leader` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | CHandle to the entity (usually CCSPlayerPawn) that is currently leading this hostage. |
 | `m_lastLeader` | CHandle< [CCSPlayerPawnBase](../schemas/server.md#ccsplayerpawnbase) > |  |
-| `m_reuseTimer` | [CountdownTimer](../schemas/server.md#countdowntimer) | CountdownTimer preventing another player from grabbing this hostage too quickly after it was released. `MNetworkEnable` |
+| `m_reuseTimer` | [CountdownTimer](../schemas/server.md#countdowntimer) | CountdownTimer preventing another player from grabbing this hostage too quickly after it was released. |
 | `m_hasBeenUsed` | bool |  |
 | `m_accel` | Vector |  |
 | `m_isRunning` | bool |  |
@@ -8756,14 +8888,14 @@ classDiagram
 | `m_inhibitObstacleAvoidanceTimer` | [CountdownTimer](../schemas/server.md#countdowntimer) |  |
 | `m_wiggleTimer` | [CountdownTimer](../schemas/server.md#countdowntimer) |  |
 | `m_isAdjusted` | bool |  |
-| `m_bHandsHaveBeenCut` | bool | True once a CT has interacted with this hostage to free it (deprecated mechanic from CS:GO; retained for compatibility). `MNetworkEnable` |
-| `m_hHostageGrabber` | CHandle< [CCSPlayerPawn](../schemas/server.md#ccsplayerpawn) > | CHandle to the CCSPlayerPawn currently grabbing/carrying this hostage. `MNetworkEnable` |
+| `m_bHandsHaveBeenCut` | bool | True once a CT has interacted with this hostage to free it (deprecated mechanic from CS:GO; retained for compatibility). |
+| `m_hHostageGrabber` | CHandle< [CCSPlayerPawn](../schemas/server.md#ccsplayerpawn) > | CHandle to the CCSPlayerPawn currently grabbing/carrying this hostage. |
 | `m_fLastGrabTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_vecPositionWhenStartedDroppingToGround` | Vector |  |
 | `m_vecGrabbedPos` | Vector |  |
-| `m_flRescueStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the current rescue attempt began. `MNetworkEnable` |
-| `m_flGrabSuccessTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the grab interaction successfully completed and carrying began. `MNetworkEnable` |
-| `m_flDropStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the carrier started dropping the hostage. `MNetworkEnable` |
+| `m_flRescueStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the current rescue attempt began. |
+| `m_flGrabSuccessTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the grab interaction successfully completed and carrying began. |
+| `m_flDropStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the carrier started dropping the hostage. |
 | `m_nApproachRewardPayouts` | int32 |  |
 | `m_nPickupEventCount` | int32 |  |
 | `m_vecSpawnGroundPos` | Vector |  |
@@ -8780,8 +8912,8 @@ classDiagram
     CHostage <|-- CHostageAlias_info_hostage_spawn
     CHostageExpresserShim <|-- CHostage
     CBaseCombatCharacter <|-- CHostageExpresserShim
-    CBaseFlex <|-- CBaseCombatCharacter
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CBaseCombatCharacter
+    C_BaseModelEntity <|-- CBaseAnimGraph
 ```
 
 ### CHostageCarriableProp
@@ -8809,10 +8941,10 @@ classDiagram
 ```mermaid
 classDiagram
     CBaseCombatCharacter <|-- CHostageExpresserShim
-    CBaseFlex <|-- CBaseCombatCharacter
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CBaseCombatCharacter
     C_BaseModelEntity <|-- CBaseAnimGraph
     C_BaseEntity <|-- C_BaseModelEntity
+    CEntityInstance <|-- C_BaseEntity
     CHostageExpresserShim <|-- CHostage
     CHostageExpresserShim --> CAI_Expresser
 ```
@@ -8897,15 +9029,15 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_firePositions` | Vector[64] | Array of up to 64 world-space positions of active fire cells. `MNetworkEnable` |
-| `m_fireParentPositions` | Vector[64] | Array of parent fire-cell positions that spawned each fire cell (for spread graph). `MNetworkEnable` |
-| `m_bFireIsBurning` | bool[64] | Per-cell boolean array; true when the corresponding fire cell is actively burning. `MNetworkEnable` |
-| `m_BurnNormal` | Vector[64] | Surface normal at each fire-cell position; used to orient flame effects. `MNetworkEnable` |
-| `m_fireCount` | int32 | Number of active fire cells currently burning. `MNetworkEnable` |
-| `m_nInfernoType` | int32 | Type of fire: 0 = molotov, 1 = incendiary grenade. `MNetworkEnable` |
-| `m_nFireEffectTickBegin` | int32 | Server tick on which the fire visual effects started; used by clients to synchronise particle timing. `MNetworkEnable` |
-| `m_nFireLifetime` | float32 | Total lifetime of the inferno entity in seconds. `MNetworkEnable` |
-| `m_bInPostEffectTime` | bool | True during the brief post-fire period after all flames have died but before the entity is removed (allows smoke and heat-shimmer to linger). `MNetworkEnable` |
+| `m_firePositions` | Vector[64] | Array of up to 64 world-space positions of active fire cells. |
+| `m_fireParentPositions` | Vector[64] | Array of parent fire-cell positions that spawned each fire cell (for spread graph). |
+| `m_bFireIsBurning` | bool[64] | Per-cell boolean array; true when the corresponding fire cell is actively burning. |
+| `m_BurnNormal` | Vector[64] | Surface normal at each fire-cell position; used to orient flame effects. |
+| `m_fireCount` | int32 | Number of active fire cells currently burning. |
+| `m_nInfernoType` | int32 | Type of fire: 0 = molotov, 1 = incendiary grenade. |
+| `m_nFireEffectTickBegin` | int32 | Server tick on which the fire visual effects started; used by clients to synchronise particle timing. |
+| `m_nFireLifetime` | float32 | Total lifetime of the inferno entity in seconds. |
+| `m_bInPostEffectTime` | bool | True during the brief post-fire period after all flames have died but before the entity is removed (allows smoke and heat-shimmer to linger). |
 | `m_bWasCreatedInSmoke` | bool |  |
 | `m_extent` | [Extent](../schemas/navlib.md#extent) |  |
 | `m_damageTimer` | [CountdownTimer](../schemas/server.md#countdowntimer) |  |
@@ -8921,6 +9053,58 @@ classDiagram
 | `m_BookkeepingTimer` | [CountdownTimer](../schemas/server.md#countdowntimer) |  |
 | `m_NextSpreadTimer` | [CountdownTimer](../schemas/server.md#countdowntimer) |  |
 | `m_nSourceItemDefIndex` | uint16 |  |
+
+### CInfoChoreoAnchor
+
+**Inherits from:** [CPointEntity](server.md#cpointentity)
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CPointEntity <|-- CInfoChoreoAnchor
+    CBaseEntity <|-- CPointEntity
+    CEntityInstance <|-- CBaseEntity
+    CInfoChoreoAnchor *-- CInfoChoreoAnchorPosition
+```
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `m_vecTargetEntries` | CUtlVector< [CInfoChoreoAnchorPosition](../schemas/server.md#cinfochoreoanchorposition) > |  |
+| `m_vecTargetWarps` | CUtlVector< [CInfoChoreoAnchorPosition](../schemas/server.md#cinfochoreoanchorposition) > |  |
+
+### CInfoChoreoAnchorPosition
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CInfoChoreoAnchorPosition *-- CInfoChoreoLocatorShapeType_t
+```
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `m_vOrigin` | Vector |  |
+| `m_qAngles` | QAngle |  |
+| `m_vExtentsMin` | Vector |  |
+| `m_vExtentsMax` | Vector |  |
+| `m_flRadius` | float32 |  |
+| `m_nShapeType` | [CInfoChoreoLocatorShapeType_t](../schemas/server.md#cinfochoreolocatorshapetype_t) |  |
+
+### CInfoChoreoLocatorShapeType_t
+
+**Values:**
+
+| Name | Value |
+|------|-------|
+| `POINT` | 0 |
+| `LINE` | 1 |
+| `COUNT` | 2 |
+| `NONE` | 3 |
 
 ### CInfoData
 
@@ -9015,10 +9199,10 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_fFanForceMaxRadius` | float32 | `MNetworkEnable` |
-| `m_fFanForceMinRadius` | float32 | `MNetworkEnable` |
-| `m_flCurveDistRange` | float32 | `MNetworkEnable` |
-| `m_FanForceCurveString` | CUtlSymbolLarge | `MNetworkEnable` |
+| `m_fFanForceMaxRadius` | float32 |  |
+| `m_fFanForceMinRadius` | float32 |  |
+| `m_flCurveDistRange` | float32 |  |
+| `m_FanForceCurveString` | CUtlSymbolLarge |  |
 
 ### CInfoGameEventProxy
 
@@ -9103,15 +9287,29 @@ classDiagram
     CPointEntity <|-- CInfoInteraction
     CBaseEntity <|-- CPointEntity
     CEntityInstance <|-- CBaseEntity
+    CInfoInteraction *-- SceneRequestHandle_t
+    CInfoInteraction *-- SceneOpportunityHandle_t
 ```
 
 **Fields:**
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_strSlotEntityName` | CUtlSymbolLarge[8] |  |
-| `m_strInteractVData` | CUtlSymbolLarge |  |
-| `m_flInteractRadius` | float32 |  |
+| `m_hSceneRequest` | [SceneRequestHandle_t](../schemas/client.md#scenerequesthandle_t) |  |
+| `m_hSceneOpportunity` | [SceneOpportunityHandle_t](../schemas/client.md#sceneopportunityhandle_t) |  |
+| `m_bEnabled` | bool |  |
+| `m_bStartDisabled` | bool |  |
+| `m_strSceneVDataName` | CUtlSymbolLarge |  |
+| `m_strPulseVDataName` | CUtlSymbolLarge |  |
+| `m_flRadius` | float32 |  |
+| `m_flOwnerFOV` | float32 |  |
+| `m_strLocalInterestReqTags` | CUtlSymbolLarge |  |
+| `m_strLocalInterestOptTags` | CUtlSymbolLarge |  |
+| `m_strLookTarget` | CUtlSymbolLarge |  |
+| `m_flDuration` | float32 |  |
+| `m_flCooldown` | float32 |  |
+| `m_nRepeatCount` | int32 |  |
+| `m_bDisableOnExit` | bool |  |
 
 ### CInfoLadderDismount
 
@@ -9158,15 +9356,15 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_bDisabled` | bool | `MNetworkEnable` |
-| `m_nResolutionX` | int32 | `MNetworkEnable` |
-| `m_nResolutionY` | int32 | `MNetworkEnable` |
-| `m_szPanelType` | CUtlSymbolLarge | `MNetworkEnable` |
-| `m_szLayoutFileName` | CUtlSymbolLarge | `MNetworkEnable` |
-| `m_RenderAttrName` | CUtlSymbolLarge | `MNetworkEnable` |
-| `m_TargetEntities` | CNetworkUtlVectorBase< CHandle< [CBaseModelEntity](../schemas/server.md#cbasemodelentity) > > | `MNetworkEnable` |
-| `m_nTargetChangeCount` | int32 | `MNetworkEnable` |
-| `m_vecCSSClasses` | CNetworkUtlVectorBase< CUtlSymbolLarge > | `MNetworkEnable` |
+| `m_bDisabled` | bool |  |
+| `m_nResolutionX` | int32 |  |
+| `m_nResolutionY` | int32 |  |
+| `m_szPanelType` | CUtlSymbolLarge |  |
+| `m_szLayoutFileName` | CUtlSymbolLarge |  |
+| `m_RenderAttrName` | CUtlSymbolLarge |  |
+| `m_TargetEntities` | CNetworkUtlVectorBase< CHandle< [CBaseModelEntity](../schemas/server.md#cbasemodelentity) > > |  |
+| `m_nTargetChangeCount` | int32 |  |
+| `m_vecCSSClasses` | CNetworkUtlVectorBase< CUtlSymbolLarge > |  |
 | `m_szTargetsName` | CUtlSymbolLarge |  |
 | `m_AdditionalTargetEntities` | CUtlVector< CHandle< [CBaseModelEntity](../schemas/server.md#cbasemodelentity) > > |  |
 
@@ -9339,9 +9537,9 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_nMode` | int32 | `MNetworkEnable` |
-| `m_vBoxSize` | Vector | `MNetworkEnable` |
-| `m_bEnabled` | bool | `MNetworkEnable` |
+| `m_nMode` | int32 |  |
+| `m_vBoxSize` | Vector |  |
+| `m_bEnabled` | bool |  |
 
 ### CInfoWorldLayer
 
@@ -9361,10 +9559,10 @@ classDiagram
 | Name | Type | Annotations |
 |------|------|-------------|
 | `m_pOutputOnEntitiesSpawned` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
-| `m_worldName` | CUtlSymbolLarge | `MNetworkEnable` `MNotSaved` |
-| `m_layerName` | CUtlSymbolLarge | `MNetworkEnable` `MNotSaved` |
-| `m_bWorldLayerVisible` | bool | `MNetworkEnable` |
-| `m_bEntitiesSpawned` | bool | `MNetworkEnable` |
+| `m_worldName` | CUtlSymbolLarge | `MNotSaved` |
+| `m_layerName` | CUtlSymbolLarge | `MNotSaved` |
+| `m_bWorldLayerVisible` | bool |  |
+| `m_bEntitiesSpawned` | bool |  |
 | `m_bCreateAsChildSpawnGroup` | bool |  |
 | `m_hLayerSpawnGroup` | uint32 | `MNotSaved` |
 
@@ -9540,8 +9738,8 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_OwningPlayer` | CHandle< [CCSPlayerPawn](../schemas/server.md#ccsplayerpawn) > | `MNetworkEnable` |
-| `m_KillingPlayer` | CHandle< [CCSPlayerPawn](../schemas/server.md#ccsplayerpawn) > | `MNetworkEnable` |
+| `m_OwningPlayer` | CHandle< [CCSPlayerPawn](../schemas/server.md#ccsplayerpawn) > |  |
+| `m_KillingPlayer` | CHandle< [CCSPlayerPawn](../schemas/server.md#ccsplayerpawn) > |  |
 
 ### CItemGeneric
 
@@ -9661,7 +9859,7 @@ classDiagram
     CCSWeaponBase <|-- CWeaponBaseItem
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CKeepUpright
@@ -9675,6 +9873,7 @@ classDiagram
     CPointEntity <|-- CKeepUpright
     CBaseEntity <|-- CPointEntity
     CEntityInstance <|-- CBaseEntity
+    CKeepUpright --> IPhysicsMotionController
     CKeepUpright --> CBaseEntity
 ```
 
@@ -9684,6 +9883,7 @@ classDiagram
 |------|------|-------------|
 | `m_worldGoalAxis` | Vector |  |
 | `m_localTestAxis` | Vector |  |
+| `m_pController` | [IPhysicsMotionController](../schemas/client.md#iphysicsmotioncontroller)* | `MPhysPtr` |
 | `m_nameAttach` | CUtlSymbolLarge |  |
 | `m_attachedObject` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 | `m_angularLimit` | float32 |  |
@@ -9701,15 +9901,15 @@ classDiagram
     CCSWeaponBase <|-- CKnife
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CEconEntity
+    C_BaseModelEntity <|-- CBaseAnimGraph
 ```
 
 **Fields:**
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_bFirstAttack` | bool | `MNetworkEnable` |
+| `m_bFirstAttack` | bool |  |
 
 ### CLightComponent
 
@@ -9730,75 +9930,75 @@ classDiagram
 | Name | Type | Annotations |
 |------|------|-------------|
 | `__m_pChainEntity` | [CNetworkVarChainer](../schemas/entity2.md#cnetworkvarchainer) | `MNotSaved` |
-| `m_Color` | Color | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_SecondaryColor` | Color | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_flBrightness` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_flBrightnessScale` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_flBrightnessMult` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_flRange` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_flFalloff` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_flAttenuation0` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_flAttenuation1` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_flAttenuation2` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_flTheta` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_flPhi` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_hLightCookie` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_nCascades` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_nCastShadows` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_nShadowWidth` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_nShadowHeight` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_bRenderDiffuse` | bool | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_nRenderSpecular` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_bRenderTransmissive` | bool | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_flOrthoLightWidth` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_flOrthoLightHeight` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_nStyle` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_Pattern` | CUtlString | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_nCascadeRenderStaticObjects` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_flShadowCascadeCrossFade` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_flShadowCascadeDistanceFade` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_flShadowCascadeDistance0` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_flShadowCascadeDistance1` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_flShadowCascadeDistance2` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_flShadowCascadeDistance3` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_nShadowCascadeResolution0` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_nShadowCascadeResolution1` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_nShadowCascadeResolution2` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_nShadowCascadeResolution3` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_bUsesBakedShadowing` | bool | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` `MNetworkAlias = "m_bUsesIndexedBakedLighting"` |
-| `m_nShadowPriority` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_nBakedShadowIndex` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_nLightPathUniqueId` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_nLightMapUniqueId` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_bRenderToCubemaps` | bool | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_bAllowSSTGeneration` | bool | `MNetworkEnable` |
-| `m_nDirectLight` | int32 | `MNetworkEnable` |
-| `m_nIndirectLight` | int32 | `MNetworkEnable` |
-| `m_bDynamicBounce` | bool | `MNetworkEnable` |
-| `m_flFadeMinDist` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_flFadeMaxDist` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_flShadowFadeMinDist` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_flShadowFadeMaxDist` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_bEnabled` | bool | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_bFlicker` | bool | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_bPrecomputedFieldsValid` | bool | `MNetworkEnable` |
-| `m_vPrecomputedBoundsMins` | Vector | `MNetworkEnable` |
-| `m_vPrecomputedBoundsMaxs` | Vector | `MNetworkEnable` |
-| `m_vPrecomputedOBBOrigin` | Vector | `MNetworkEnable` |
-| `m_vPrecomputedOBBAngles` | QAngle | `MNetworkEnable` |
-| `m_vPrecomputedOBBExtent` | Vector | `MNetworkEnable` |
-| `m_flPrecomputedMaxRange` | float32 | `MNetworkEnable` |
-| `m_nFogLightingMode` | int32 | `MNetworkEnable` |
-| `m_flFogContributionStength` | float32 | `MNetworkEnable` |
-| `m_flNearClipPlane` | float32 | `MNetworkEnable` |
-| `m_SkyColor` | Color | `MNetworkEnable` |
-| `m_flSkyIntensity` | float32 | `MNetworkEnable` |
-| `m_SkyAmbientBounce` | Color | `MNetworkEnable` |
-| `m_bUseSecondaryColor` | bool | `MNetworkEnable` |
-| `m_bMixedShadows` | bool | `MNetworkEnable` `MNetworkChangeCallback = "MixedShadowsChanged"` `MNotSaved` |
-| `m_flLightStyleStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
-| `m_flCapsuleLength` | float32 | `MNetworkEnable` |
-| `m_flMinRoughness` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "LightRenderingChanged"` |
+| `m_Color` | Color |  |
+| `m_SecondaryColor` | Color |  |
+| `m_flBrightness` | float32 |  |
+| `m_flBrightnessScale` | float32 |  |
+| `m_flBrightnessMult` | float32 |  |
+| `m_flRange` | float32 |  |
+| `m_flFalloff` | float32 |  |
+| `m_flAttenuation0` | float32 |  |
+| `m_flAttenuation1` | float32 |  |
+| `m_flAttenuation2` | float32 |  |
+| `m_flTheta` | float32 |  |
+| `m_flPhi` | float32 |  |
+| `m_hLightCookie` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_nCascades` | int32 |  |
+| `m_nCastShadows` | int32 |  |
+| `m_nShadowWidth` | int32 |  |
+| `m_nShadowHeight` | int32 |  |
+| `m_bRenderDiffuse` | bool |  |
+| `m_nRenderSpecular` | int32 |  |
+| `m_bRenderTransmissive` | bool |  |
+| `m_flOrthoLightWidth` | float32 |  |
+| `m_flOrthoLightHeight` | float32 |  |
+| `m_nStyle` | int32 |  |
+| `m_Pattern` | CUtlString |  |
+| `m_nCascadeRenderStaticObjects` | int32 |  |
+| `m_flShadowCascadeCrossFade` | float32 |  |
+| `m_flShadowCascadeDistanceFade` | float32 |  |
+| `m_flShadowCascadeDistance0` | float32 |  |
+| `m_flShadowCascadeDistance1` | float32 |  |
+| `m_flShadowCascadeDistance2` | float32 |  |
+| `m_flShadowCascadeDistance3` | float32 |  |
+| `m_nShadowCascadeResolution0` | int32 |  |
+| `m_nShadowCascadeResolution1` | int32 |  |
+| `m_nShadowCascadeResolution2` | int32 |  |
+| `m_nShadowCascadeResolution3` | int32 |  |
+| `m_bUsesBakedShadowing` | bool |  |
+| `m_nShadowPriority` | int32 |  |
+| `m_nBakedShadowIndex` | int32 |  |
+| `m_nLightPathUniqueId` | int32 |  |
+| `m_nLightMapUniqueId` | int32 |  |
+| `m_bRenderToCubemaps` | bool |  |
+| `m_bAllowSSTGeneration` | bool |  |
+| `m_nDirectLight` | int32 |  |
+| `m_nBounceLight` | int32 |  |
+| `m_flBounceScale` | float32 |  |
+| `m_flFadeMinDist` | float32 |  |
+| `m_flFadeMaxDist` | float32 |  |
+| `m_flShadowFadeMinDist` | float32 |  |
+| `m_flShadowFadeMaxDist` | float32 |  |
+| `m_bEnabled` | bool |  |
+| `m_bFlicker` | bool |  |
+| `m_bPrecomputedFieldsValid` | bool |  |
+| `m_vPrecomputedBoundsMins` | Vector |  |
+| `m_vPrecomputedBoundsMaxs` | Vector |  |
+| `m_vPrecomputedOBBOrigin` | Vector |  |
+| `m_vPrecomputedOBBAngles` | QAngle |  |
+| `m_vPrecomputedOBBExtent` | Vector |  |
+| `m_flPrecomputedMaxRange` | float32 |  |
+| `m_nFogLightingMode` | int32 |  |
+| `m_flFogContributionStength` | float32 |  |
+| `m_flNearClipPlane` | float32 |  |
+| `m_SkyColor` | Color |  |
+| `m_flSkyIntensity` | float32 |  |
+| `m_SkyAmbientBounce` | Color |  |
+| `m_bUseSecondaryColor` | bool |  |
+| `m_bMixedShadows` | bool | `MNotSaved` |
+| `m_flLightStyleStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
+| `m_flCapsuleLength` | float32 |  |
+| `m_flMinRoughness` | float32 |  |
 | `m_bPvsModifyEntity` | bool |  |
 
 ### CLightDirectionalEntity
@@ -9843,7 +10043,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_CLightComponent` | [CLightComponent](../schemas/server.md#clightcomponent)* | `MNetworkEnable` `MNetworkUserGroup = "CLightComponent"` `MNetworkAlias = "CLightComponent"` `MNetworkTypeAlias = "CLightComponent"` |
+| `m_CLightComponent` | [CLightComponent](../schemas/server.md#clightcomponent)* |  |
 
 ### CLightEnvironmentEntity
 
@@ -10071,7 +10271,7 @@ classDiagram
 | `m_nLastShuffleCase` | int32 |  |
 | `m_uchShuffleCaseMap` | uint8[32] |  |
 | `m_OnCase` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput)[32] |  |
-| `m_OnDefault` | CEntityOutputTemplate< CUtlString, char* > |  |
+| `m_OnDefault` | CEntityOutputTemplate< CUtlString > |  |
 
 ### CLogicCollisionPair
 
@@ -10116,10 +10316,10 @@ classDiagram
 |------|------|-------------|
 | `m_flInValue` | float32 |  |
 | `m_flCompareValue` | float32 |  |
-| `m_OnLessThan` | CEntityOutputTemplate< float32, float32 > |  |
-| `m_OnEqualTo` | CEntityOutputTemplate< float32, float32 > |  |
-| `m_OnNotEqualTo` | CEntityOutputTemplate< float32, float32 > |  |
-| `m_OnGreaterThan` | CEntityOutputTemplate< float32, float32 > |  |
+| `m_OnLessThan` | CEntityOutputTemplate< float32 > |  |
+| `m_OnEqualTo` | CEntityOutputTemplate< float32 > |  |
+| `m_OnNotEqualTo` | CEntityOutputTemplate< float32 > |  |
+| `m_OnGreaterThan` | CEntityOutputTemplate< float32 > |  |
 
 ### CLogicDistanceAutosave
 
@@ -10191,7 +10391,7 @@ classDiagram
 | `m_strEventName` | CUtlString |  |
 | `m_bIsEnabled` | bool |  |
 | `m_nTeam` | int32 |  |
-| `m_OnEventFired` | CEntityOutputTemplate< CUtlString, char* > |  |
+| `m_OnEventFired` | CEntityOutputTemplate< CUtlString > |  |
 
 ### CLogicGameEvent
 
@@ -10233,7 +10433,7 @@ classDiagram
 | `m_OnEventFired` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_iszGameEventName` | CUtlSymbolLarge |  |
 | `m_iszGameEventItem` | CUtlSymbolLarge |  |
-| `m_bEnabled` | bool | `MNetworkEnable` |
+| `m_bEnabled` | bool |  |
 | `m_bStartDisabled` | bool |  |
 
 ### CLogicLineToEntity
@@ -10254,7 +10454,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_Line` | CEntityOutputTemplate< Vector, Vector > |  |
+| `m_Line` | CEntityOutputTemplate< Vector > |  |
 | `m_SourceName` | CUtlSymbolLarge |  |
 | `m_StartEntity` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 | `m_EndEntity` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
@@ -10309,20 +10509,20 @@ classDiagram
 |------|------|-------------|
 | `m_OnMinCountAll` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnMaxCountAll` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
-| `m_OnFactorAll` | CEntityOutputTemplate< float32, float32 > |  |
-| `m_OnMinPlayerDistAll` | CEntityOutputTemplate< float32, float32 > |  |
+| `m_OnFactorAll` | CEntityOutputTemplate< float32 > |  |
+| `m_OnMinPlayerDistAll` | CEntityOutputTemplate< float32 > |  |
 | `m_OnMinCount_1` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnMaxCount_1` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
-| `m_OnFactor_1` | CEntityOutputTemplate< float32, float32 > |  |
-| `m_OnMinPlayerDist_1` | CEntityOutputTemplate< float32, float32 > |  |
+| `m_OnFactor_1` | CEntityOutputTemplate< float32 > |  |
+| `m_OnMinPlayerDist_1` | CEntityOutputTemplate< float32 > |  |
 | `m_OnMinCount_2` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnMaxCount_2` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
-| `m_OnFactor_2` | CEntityOutputTemplate< float32, float32 > |  |
-| `m_OnMinPlayerDist_2` | CEntityOutputTemplate< float32, float32 > |  |
+| `m_OnFactor_2` | CEntityOutputTemplate< float32 > |  |
+| `m_OnMinPlayerDist_2` | CEntityOutputTemplate< float32 > |  |
 | `m_OnMinCount_3` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnMaxCount_3` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
-| `m_OnFactor_3` | CEntityOutputTemplate< float32, float32 > |  |
-| `m_OnMinPlayerDist_3` | CEntityOutputTemplate< float32, float32 > |  |
+| `m_OnFactor_3` | CEntityOutputTemplate< float32 > |  |
+| `m_OnMinPlayerDist_3` | CEntityOutputTemplate< float32 > |  |
 | `m_hSource` | CEntityHandle |  |
 | `m_iszSourceEntityName` | CUtlSymbolLarge |  |
 | `m_flDistanceMax` | float32 |  |
@@ -10437,7 +10637,7 @@ classDiagram
 | `m_PlayerHasAmmo` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_PlayerHasNoAmmo` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_PlayerDied` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
-| `m_RequestedPlayerHealth` | CEntityOutputTemplate< int32, int32 > |  |
+| `m_RequestedPlayerHealth` | CEntityOutputTemplate< int32 > |  |
 | `m_hPlayer` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 
 ### CLogicProximity
@@ -10464,12 +10664,15 @@ classDiagram
     CLogicalEntity <|-- CLogicRelay
     C_BaseEntity <|-- CLogicalEntity
     CEntityInstance <|-- C_BaseEntity
+    CLogicRelay *-- CEntityIOOutput
 ```
 
 **Fields:**
 
 | Name | Type | Annotations |
 |------|------|-------------|
+| `m_OnSpawn` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
+| `m_OnTrigger` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_bDisabled` | bool |  |
 | `m_bWaitForRefire` | bool |  |
 | `m_bTriggerOnce` | bool |  |
@@ -10614,26 +10817,26 @@ classDiagram
 | `m_bNeedToPlayFiveSecondsRemaining` | bool |  |
 | `m_dblPreMatchDraftSequenceTime` | float64 |  |
 | `m_bPreMatchDraftStateChanged` | bool |  |
-| `m_nDraftType` | int32 | `MNetworkEnable` |
-| `m_nTeamWinningCoinToss` | int32 | `MNetworkEnable` |
-| `m_nTeamWithFirstChoice` | int32[64] | `MNetworkEnable` |
-| `m_nVoteMapIdsList` | int32[7] | `MNetworkEnable` |
-| `m_nAccountIDs` | int32[64] | `MNetworkEnable` |
-| `m_nMapId0` | int32[64] | `MNetworkEnable` |
-| `m_nMapId1` | int32[64] | `MNetworkEnable` |
-| `m_nMapId2` | int32[64] | `MNetworkEnable` |
-| `m_nMapId3` | int32[64] | `MNetworkEnable` |
-| `m_nMapId4` | int32[64] | `MNetworkEnable` |
-| `m_nMapId5` | int32[64] | `MNetworkEnable` |
-| `m_nStartingSide0` | int32[64] | `MNetworkEnable` |
-| `m_nCurrentPhase` | int32 | `MNetworkEnable` |
-| `m_nPhaseStartTick` | int32 | `MNetworkEnable` |
-| `m_nPhaseDurationTicks` | int32 | `MNetworkEnable` |
-| `m_OnMapVetoed` | CEntityOutputTemplate< CUtlSymbolLarge, CUtlSymbolLarge > |  |
-| `m_OnMapPicked` | CEntityOutputTemplate< CUtlSymbolLarge, CUtlSymbolLarge > |  |
-| `m_OnSidesPicked` | CEntityOutputTemplate< int32, int32 > |  |
-| `m_OnNewPhaseStarted` | CEntityOutputTemplate< int32, int32 > |  |
-| `m_OnLevelTransition` | CEntityOutputTemplate< int32, int32 > |  |
+| `m_nDraftType` | int32 |  |
+| `m_nTeamWinningCoinToss` | int32 |  |
+| `m_nTeamWithFirstChoice` | int32[64] |  |
+| `m_nVoteMapIdsList` | int32[7] |  |
+| `m_nAccountIDs` | int32[64] |  |
+| `m_nMapId0` | int32[64] |  |
+| `m_nMapId1` | int32[64] |  |
+| `m_nMapId2` | int32[64] |  |
+| `m_nMapId3` | int32[64] |  |
+| `m_nMapId4` | int32[64] |  |
+| `m_nMapId5` | int32[64] |  |
+| `m_nStartingSide0` | int32[64] |  |
+| `m_nCurrentPhase` | int32 |  |
+| `m_nPhaseStartTick` | int32 |  |
+| `m_nPhaseDurationTicks` | int32 |  |
+| `m_OnMapVetoed` | CEntityOutputTemplate< CUtlSymbolLarge > |  |
+| `m_OnMapPicked` | CEntityOutputTemplate< CUtlSymbolLarge > |  |
+| `m_OnSidesPicked` | CEntityOutputTemplate< int32 > |  |
+| `m_OnNewPhaseStarted` | CEntityOutputTemplate< int32 > |  |
+| `m_OnLevelTransition` | CEntityOutputTemplate< int32 > |  |
 
 ### CMarkupVolume
 
@@ -10782,7 +10985,7 @@ classDiagram
 | `m_flInMax` | float32 |  |
 | `m_OutColor1` | Color |  |
 | `m_OutColor2` | Color |  |
-| `m_OutValue` | CEntityOutputTemplate< Color, Color > |  |
+| `m_OutValue` | CEntityOutputTemplate< Color > |  |
 
 ### CMathCounter
 
@@ -10807,8 +11010,8 @@ classDiagram
 | `m_bHitMin` | bool |  |
 | `m_bHitMax` | bool |  |
 | `m_bDisabled` | bool |  |
-| `m_OutValue` | CEntityOutputTemplate< float32, float32 > |  |
-| `m_OnGetValue` | CEntityOutputTemplate< float32, float32 > |  |
+| `m_OutValue` | CEntityOutputTemplate< float32 > |  |
+| `m_OnGetValue` | CEntityOutputTemplate< float32 > |  |
 | `m_OnHitMin` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnHitMax` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnChangedFromMin` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
@@ -10838,7 +11041,7 @@ classDiagram
 | `m_flOut2` | float32 |  |
 | `m_flOldInValue` | float32 |  |
 | `m_bEnabled` | bool |  |
-| `m_OutValue` | CEntityOutputTemplate< float32, float32 > |  |
+| `m_OutValue` | CEntityOutputTemplate< float32 > |  |
 | `m_OnRoseAboveMin` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnRoseAboveMax` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnFellBelowMin` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
@@ -10919,18 +11122,25 @@ classDiagram
 ```mermaid
 classDiagram
     CModelState *-- InfoForResourceTypeCModel
+    CModelState --> IPhysAggregateInstance
 ```
 
 **Fields:**
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_hModel` | CStrongHandle< [InfoForResourceTypeCModel](../schemas/resourcesystem.md#infoforresourcetypecmodel) > | `MNetworkEnable` `MNetworkChangeCallback = "skeletonModelChanged"` |
+| `m_hModel` | CStrongHandle< [InfoForResourceTypeCModel](../schemas/resourcesystem.md#infoforresourcetypecmodel) > |  |
 | `m_ModelName` | CUtlSymbolLarge |  |
-| `m_bClientClothCreationSuppressed` | bool | `MNetworkEnable` |
-| `m_MeshGroupMask` | uint64 | `MNetworkEnable` `MNetworkChangeCallback = "skeletonMeshGroupMaskChanged"` |
-| `m_nBodyGroupChoices` | CNetworkUtlVectorBase< int32 > | `MNetworkEnable` `MNetworkChangeCallback = "bodyGroupChoiceChanged"` |
-| `m_nIdealMotionType` | int8 | `MNetworkEnable` `MNetworkChangeCallback = "skeletonMotionTypeChanged"` |
+| `m_pVPhysicsAggregate` | [IPhysAggregateInstance](../schemas/vphysics2.md#iphysaggregateinstance)* | `MPhysPtr` |
+| `m_flRootBoneOffset_x` | float32 |  |
+| `m_flRootBoneOffset_y` | float32 |  |
+| `m_flRootBoneOffset_z` | float32 |  |
+| `m_nRootBoneOffsetResetSerialNumber` | uint8 |  |
+| `m_bClientClothCreationSuppressed` | bool |  |
+| `m_nAnimStateNoInterpSerialNumber` | uint8 |  |
+| `m_MeshGroupMask` | uint64 |  |
+| `m_nBodyGroupChoices` | CNetworkUtlVectorBase< int32 > |  |
+| `m_nIdealMotionType` | int8 |  |
 | `m_nForceLOD` | int8 |  |
 | `m_nClothUpdateFlags` | int8 |  |
 
@@ -10948,7 +11158,7 @@ classDiagram
     CCSWeaponBase <|-- CBaseCSGrenade
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
     CMolotovGrenade <|-- CIncendiaryGrenade
 ```
 
@@ -10962,9 +11172,9 @@ classDiagram
 classDiagram
     CBaseCSGrenadeProjectile <|-- CMolotovProjectile
     CBaseGrenade <|-- CBaseCSGrenadeProjectile
-    CBaseFlex <|-- CBaseGrenade
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CBaseGrenade
     C_BaseModelEntity <|-- CBaseAnimGraph
+    C_BaseEntity <|-- C_BaseModelEntity
     CMolotovProjectile *-- IntervalTimer
 ```
 
@@ -10972,7 +11182,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_bIsIncGrenade` | bool | `MNetworkEnable` |
+| `m_bIsIncGrenade` | bool |  |
 | `m_bDetonated` | bool |  |
 | `m_stillTimer` | [IntervalTimer](../schemas/server.md#intervaltimer) |  |
 
@@ -10996,7 +11206,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_Position` | CEntityOutputTemplate< float32, float32 > |  |
+| `m_Position` | CEntityOutputTemplate< float32 > |  |
 | `m_OnUnpressed` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnFullyOpen` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnFullyClosed` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
@@ -11056,11 +11266,11 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_OnStartFromOrInSegment` | CEntityOutputTemplate< CUtlString, char* > |  |
-| `m_OnStoppedAtOrInSegment` | CEntityOutputTemplate< CUtlString, char* > |  |
-| `m_OnPassThrough` | CEntityOutputTemplate< CUtlString, char* > |  |
-| `m_OnPassThroughForward` | CEntityOutputTemplate< CUtlString, char* > |  |
-| `m_OnPassThroughReverse` | CEntityOutputTemplate< CUtlString, char* > |  |
+| `m_OnStartFromOrInSegment` | CEntityOutputTemplate< CUtlString > |  |
+| `m_OnStoppedAtOrInSegment` | CEntityOutputTemplate< CUtlString > |  |
+| `m_OnPassThrough` | CEntityOutputTemplate< CUtlString > |  |
+| `m_OnPassThroughForward` | CEntityOutputTemplate< CUtlString > |  |
+| `m_OnPassThroughReverse` | CEntityOutputTemplate< CUtlString > |  |
 
 ### CMultiLightProxy
 
@@ -11175,7 +11385,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_vStartPos` | Vector |  |
+| `m_vStartPos` | VectorWS |  |
 | `m_flSearchDist` | float32 |  |
 
 ### CNavVolumeCalculatedVector
@@ -11229,10 +11439,10 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_hSequence` | [HSequence](../schemas/animationsystem.md#hsequence) | `MNetworkEnable` `MNetworkSerializer = "minusone"` `MNetworkChangeCallback = "sequenceOpSequenceChanged"` `MNetworkPriority = 32` |
-| `m_flPrevCycle` | float32 | `MNetworkEnable` `MNetworkBitCount = 15` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 1.000000` `MNetworkEncodeFlags = 8` `MNetworkPriority = 32` `MNetworkSendProxyRecipientsFilter = "SendProxyNeverSend_RecipientsFilter"` `MNetworkUserGroup = "m_flCycle"` |
-| `m_flCycle` | float32 | `MNetworkEnable` `MNetworkBitCount = 15` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 1.000000` `MNetworkEncodeFlags = 8` `MNetworkPriority = 32` `MNetworkSendProxyRecipientsFilter = "SendProxyNeverSend_RecipientsFilter"` `MNetworkUserGroup = "m_flCycle"` |
-| `m_flWeight` | CNetworkedQuantizedFloat | `MNetworkEnable` `MNetworkBitCount = 8` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 1.000000` `MNetworkEncodeFlags = 0` |
+| `m_hSequence` | [HSequence](../schemas/animationsystem.md#hsequence) |  |
+| `m_flPrevCycle` | float32 |  |
+| `m_flCycle` | float32 |  |
+| `m_flWeight` | CNetworkedQuantizedFloat |  |
 | `m_bSequenceChangeNetworked` | bool |  |
 | `m_bDiscontinuity` | bool |  |
 | `m_flPrevCycleFromDiscontinuity` | float32 |  |
@@ -11268,9 +11478,9 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_flInnerAngle` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_flOuterAngle` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
-| `m_bShowLight` | bool | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
+| `m_flInnerAngle` | float32 |  |
+| `m_flOuterAngle` | float32 |  |
+| `m_bShowLight` | bool |  |
 
 ### COrnamentProp
 
@@ -11299,7 +11509,7 @@ classDiagram
 
 **Derived by:** [CEnvParticleGlow](server.md#cenvparticleglow)
 
-**Metadata:** `MNetworkIncludeByUserGroup = "Origin"`, `MNetworkIncludeByName = "CGameSceneNode::m_angRotation"`, `MNetworkIncludeByName = "m_hOwnerEntity"`, `MNetworkIncludeByName = "CGameSceneNode::m_hParent"`, `MNetworkIncludeByName = "CGameSceneNode::m_hierarchyAttachName"`, `MNetworkIncludeByName = "m_nameStringableIndex"`, `MEntityAllowsPortraitWorldSpawn`
+**Metadata:** `MEntityAllowsPortraitWorldSpawn`
 
 **Relationships:**
 
@@ -11318,21 +11528,21 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_szSnapshotFileName` | char[512] | `MNetworkEnable` |
-| `m_bActive` | bool | `MNetworkEnable` |
-| `m_bFrozen` | bool | `MNetworkEnable` |
-| `m_flFreezeTransitionDuration` | float32 | `MNetworkEnable` |
-| `m_nStopType` | int32 | `MNetworkEnable` `MNotSaved` |
-| `m_bAnimateDuringGameplayPause` | bool | `MNetworkEnable` |
-| `m_iEffectIndex` | CStrongHandle< [InfoForResourceTypeIParticleSystemDefinition](../schemas/resourcesystem.md#infoforresourcetypeiparticlesystemdefinition) > | `MNetworkEnable` `MNotSaved` |
-| `m_flStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` |
-| `m_flPreSimTime` | float32 | `MNetworkEnable` |
-| `m_vServerControlPoints` | Vector[4] | `MNetworkEnable` |
-| `m_iServerControlPointAssignments` | uint8[4] | `MNetworkEnable` |
-| `m_hControlPointEnts` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) >[64] | `MNetworkEnable` |
-| `m_bNoSave` | bool | `MNetworkEnable` |
-| `m_bNoFreeze` | bool | `MNetworkEnable` |
-| `m_bNoRamp` | bool | `MNetworkEnable` |
+| `m_szSnapshotFileName` | char[512] |  |
+| `m_bActive` | bool |  |
+| `m_bFrozen` | bool |  |
+| `m_flFreezeTransitionDuration` | float32 |  |
+| `m_nStopType` | int32 | `MNotSaved` |
+| `m_bAnimateDuringGameplayPause` | bool |  |
+| `m_iEffectIndex` | CStrongHandle< [InfoForResourceTypeIParticleSystemDefinition](../schemas/resourcesystem.md#infoforresourcetypeiparticlesystemdefinition) > | `MNotSaved` |
+| `m_flStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
+| `m_flPreSimTime` | float32 |  |
+| `m_vServerControlPoints` | Vector[4] |  |
+| `m_iServerControlPointAssignments` | uint8[4] |  |
+| `m_hControlPointEnts` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) >[64] |  |
+| `m_bNoSave` | bool |  |
+| `m_bNoFreeze` | bool |  |
+| `m_bNoRamp` | bool |  |
 | `m_bStartActive` | bool |  |
 | `m_iszEffectName` | CUtlSymbolLarge |  |
 | `m_iszControlPointNames` | CUtlSymbolLarge[64] |  |
@@ -11405,8 +11615,8 @@ classDiagram
 | `m_qAngle` | Quaternion |  |
 | `m_iNextKey` | CUtlSymbolLarge |  |
 | `m_flNextTime` | float32 |  |
-| `m_pNextKey` | [CPathKeyFrame](../schemas/server.md#cpathkeyframe)* | `MClassPtr` |
-| `m_pPrevKey` | [CPathKeyFrame](../schemas/server.md#cpathkeyframe)* | `MClassPtr` |
+| `m_pNextKey` | CHandle< [CPathKeyFrame](../schemas/server.md#cpathkeyframe) > |  |
+| `m_pPrevKey` | CHandle< [CPathKeyFrame](../schemas/server.md#cpathkeyframe) > |  |
 | `m_flMoveSpeed` | float32 |  |
 
 ### CPathMover
@@ -11433,23 +11643,6 @@ classDiagram
 | `m_hMoverSpawner` | CHandle< [CPathMoverEntitySpawner](../schemas/server.md#cpathmoverentityspawner) > |  |
 | `m_iszMoverSpawnerName` | CUtlSymbolLarge |  |
 
-### CPathMoverEntitySpawn
-
-**Relationships:**
-
-```mermaid
-classDiagram
-    CPathMoverEntitySpawn --> CFuncMover
-    CPathMoverEntitySpawn --> CBaseEntity
-```
-
-**Fields:**
-
-| Name | Type | Annotations |
-|------|------|-------------|
-| `hMover` | CHandle< [CFuncMover](../schemas/server.md#cfuncmover) > |  |
-| `vecOtherEntities` | CUtlVector< CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > > |  |
-
 ### CPathMoverEntitySpawner
 
 **Inherits from:** [CLogicalEntity](server.md#clogicalentity)
@@ -11463,8 +11656,9 @@ classDiagram
     CEntityInstance <|-- C_BaseEntity
     CPathMoverEntitySpawner --> CPathMover
     CPathMoverEntitySpawner --> CFuncMover
-    CPathMoverEntitySpawner --> CPathMoverEntitySpawn
+    CPathMoverEntitySpawner --> PathMoverEntitySpawn
     CPathMoverEntitySpawner *-- GameTime_t
+    CPathMoverEntitySpawner *-- CEntityIOOutput
 ```
 
 **Fields:**
@@ -11476,10 +11670,15 @@ classDiagram
 | `m_hPathMover` | CHandle< [CPathMover](../schemas/server.md#cpathmover) > |  |
 | `m_flSpawnFrequencySeconds` | float32 |  |
 | `m_flSpawnFrequencyDistToNearestMover` | float32 |  |
-| `m_mapSpawnedMoverTemplates` | CUtlHashtable< CHandle< [CFuncMover](../schemas/server.md#cfuncmover) >, [CPathMoverEntitySpawn](../schemas/server.md#cpathmoverentityspawn) > |  |
+| `m_mapSpawnedMoverTemplates` | CUtlHashtable< CHandle< [CFuncMover](../schemas/server.md#cfuncmover) >, [PathMoverEntitySpawn](../schemas/server.md#pathmoverentityspawn) > |  |
 | `m_nMaxActive` | int32 |  |
+| `m_nSpawnNum` | int32 |  |
 | `m_flLastSpawnTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_bEnabled` | bool |  |
+| `m_bDestroyMoverOnArrivedAtEnd` | bool |  |
+| `m_vecQueuedRemovals` | CUtlVector< CHandle< [CFuncMover](../schemas/server.md#cfuncmover) > > |  |
+| `m_OnTemplateSpawned` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
+| `m_OnTemplateGroupSpawned` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 
 ### CPathNode
 
@@ -11502,10 +11701,10 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_vInTangentLocal` | Vector | `MNetworkEnable` |
-| `m_vOutTangentLocal` | Vector | `MNetworkEnable` |
-| `m_strParentPathUniqueID` | CUtlString | `MNetworkEnable` |
-| `m_strPathNodeParameter` | CUtlString | `MNetworkEnable` |
+| `m_vInTangentLocal` | Vector |  |
+| `m_vOutTangentLocal` | Vector |  |
+| `m_strParentPathUniqueID` | CUtlString |  |
+| `m_strPathNodeParameter` | CUtlString |  |
 | `m_xWSPrevParent` | CTransform |  |
 | `m_hPath` | CHandle< [CPathWithDynamicNodes](../schemas/server.md#cpathwithdynamicnodes) > |  |
 
@@ -11533,18 +11732,18 @@ classDiagram
 | `m_flMaxSimulationTime` | float32 |  |
 | `m_iszEffectName` | CUtlSymbolLarge |  |
 | `m_PathNodes_Name` | CUtlVector< CUtlSymbolLarge > |  |
-| `m_flParticleSpacing` | float32 | `MNetworkEnable` |
-| `m_flSlack` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "parametersChanged"` |
-| `m_flRadius` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "parametersChanged"` |
-| `m_ColorTint` | Color | `MNetworkEnable` `MNetworkChangeCallback = "parametersChanged"` |
-| `m_nEffectState` | int32 | `MNetworkEnable` `MNetworkChangeCallback = "effectStateChanged"` |
-| `m_iEffectIndex` | CStrongHandle< [InfoForResourceTypeIParticleSystemDefinition](../schemas/resourcesystem.md#infoforresourcetypeiparticlesystemdefinition) > | `MNetworkEnable` `MNotSaved` |
-| `m_PathNodes_Position` | CNetworkUtlVectorBase< Vector > | `MNetworkEnable` |
-| `m_PathNodes_TangentIn` | CNetworkUtlVectorBase< Vector > | `MNetworkEnable` |
-| `m_PathNodes_TangentOut` | CNetworkUtlVectorBase< Vector > | `MNetworkEnable` |
-| `m_PathNodes_Color` | CNetworkUtlVectorBase< Vector > | `MNetworkEnable` |
-| `m_PathNodes_PinEnabled` | CNetworkUtlVectorBase< bool > | `MNetworkEnable` `MNetworkChangeCallback = "pinStateChanged"` |
-| `m_PathNodes_RadiusScale` | CNetworkUtlVectorBase< float32 > | `MNetworkEnable` |
+| `m_flParticleSpacing` | float32 |  |
+| `m_flSlack` | float32 |  |
+| `m_flRadius` | float32 |  |
+| `m_ColorTint` | Color |  |
+| `m_nEffectState` | int32 |  |
+| `m_iEffectIndex` | CStrongHandle< [InfoForResourceTypeIParticleSystemDefinition](../schemas/resourcesystem.md#infoforresourcetypeiparticlesystemdefinition) > | `MNotSaved` |
+| `m_PathNodes_Position` | CNetworkUtlVectorBase< Vector > |  |
+| `m_PathNodes_TangentIn` | CNetworkUtlVectorBase< Vector > |  |
+| `m_PathNodes_TangentOut` | CNetworkUtlVectorBase< Vector > |  |
+| `m_PathNodes_Color` | CNetworkUtlVectorBase< Vector > |  |
+| `m_PathNodes_PinEnabled` | CNetworkUtlVectorBase< bool > |  |
+| `m_PathNodes_RadiusScale` | CNetworkUtlVectorBase< float32 > |  |
 
 ### CPathParticleRopeAlias_path_particle_rope_clientside
 
@@ -11592,8 +11791,8 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_CPathQueryComponent` | [CPathQueryComponent](../schemas/server.md#cpathquerycomponent) | `MNetworkEnable` `MNetworkUserGroup = "CPathQueryComponent"` `MNetworkAlias = "CPathQueryComponent"` `MNetworkTypeAlias = "CPathQueryComponent"` |
-| `m_pathString` | CUtlString | `MNetworkEnable` |
+| `m_CPathQueryComponent` | [CPathQueryComponent](../schemas/server.md#cpathquerycomponent) |  |
+| `m_pathString` | CUtlString |  |
 | `m_bClosedLoop` | bool |  |
 
 ### CPathSimpleAPI
@@ -11617,9 +11816,9 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_pnext` | [CPathTrack](../schemas/server.md#cpathtrack)* | `MClassPtr` |
-| `m_pprevious` | [CPathTrack](../schemas/server.md#cpathtrack)* | `MClassPtr` |
-| `m_paltpath` | [CPathTrack](../schemas/server.md#cpathtrack)* | `MClassPtr` |
+| `m_pnext` | CHandle< [CPathTrack](../schemas/server.md#cpathtrack) > |  |
+| `m_pprevious` | CHandle< [CPathTrack](../schemas/server.md#cpathtrack) > |  |
+| `m_paltpath` | CHandle< [CPathTrack](../schemas/server.md#cpathtrack) > |  |
 | `m_flRadius` | float32 |  |
 | `m_length` | float32 |  |
 | `m_altName` | CUtlSymbolLarge |  |
@@ -11648,8 +11847,8 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_vecPathNodes` | CNetworkUtlVectorBase< CHandle< [CPathNode](../schemas/server.md#cpathnode) > > | `MNetworkEnable` |
-| `m_xInitialPathWorldToLocal` | CTransform | `MNetworkEnable` |
+| `m_vecPathNodes` | CNetworkUtlVectorBase< CHandle< [CPathNode](../schemas/server.md#cpathnode) > > |  |
+| `m_xInitialPathWorldToLocal` | CTransform |  |
 
 ### CPhysBallSocket
 
@@ -11736,6 +11935,7 @@ classDiagram
     CPhysConstraint <|-- CPhysWheelConstraint
     CPhysConstraint <|-- CRagdollConstraint
     CPhysConstraint <|-- CSplineConstraint
+    CPhysConstraint --> IPhysicsJoint
     CPhysConstraint --> CBaseEntity
     CPhysConstraint *-- CEntityIOOutput
 ```
@@ -11744,6 +11944,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
+| `m_hJoint` | [IPhysicsJoint](../schemas/vphysics2.md#iphysicsjoint)* | `MPhysPtr` |
 | `m_nameAttach1` | CUtlSymbolLarge |  |
 | `m_nameAttach2` | CUtlSymbolLarge |  |
 | `m_hAttach1` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
@@ -11785,6 +11986,7 @@ classDiagram
 | `m_flPushScale` | float32 |  |
 | `m_bConvertToDebrisWhenPossible` | bool |  |
 | `m_bAffectInvulnerableEnts` | bool |  |
+| `m_bDisablePushClamp` | bool |  |
 | `m_OnPushedPlayer` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 
 ### CPhysFixed
@@ -11829,6 +12031,7 @@ classDiagram
     CEntityInstance <|-- CBaseEntity
     CPhysForce <|-- CPhysThruster
     CPhysForce <|-- CPhysTorque
+    CPhysForce --> IPhysicsMotionController
     CPhysForce --> CBaseEntity
     CPhysForce *-- CConstantForceController
 ```
@@ -11837,6 +12040,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
+| `m_pController` | [IPhysicsMotionController](../schemas/client.md#iphysicsmotioncontroller)* | `MPhysPtr` |
 | `m_nameAttach` | CUtlSymbolLarge |  |
 | `m_force` | float32 |  |
 | `m_forceTime` | float32 |  |
@@ -11872,7 +12076,7 @@ classDiagram
 | `m_NotifyMaxLimitReached` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_bAtMinLimit` | bool |  |
 | `m_bAtMaxLimit` | bool |  |
-| `m_hinge` | constraint_hingeparams_t | `MNotSaved` |
+| `m_hinge` | constraint_hingeparams_t |  |
 | `m_hingeFriction` | float32 |  |
 | `m_systemLoadScale` | float32 |  |
 | `m_bIsAxisLocal` | bool | `MNotSaved` |
@@ -11992,6 +12196,8 @@ classDiagram
     C_BaseEntity <|-- CLogicalEntity
     CEntityInstance <|-- C_BaseEntity
     CPhysMotor --> CBaseEntity
+    CPhysMotor --> IPhysicsBody
+    CPhysMotor --> IPhysicsJoint
     CPhysMotor *-- CMotorController
 ```
 
@@ -12011,6 +12217,8 @@ classDiagram
 | `m_flTorqueScale` | float32 |  |
 | `m_flTargetSpeed` | float32 |  |
 | `m_flSpeedWhenSpinUpOrSpinDownStarted` | float32 |  |
+| `m_pFixedWorldBody` | [IPhysicsBody](../schemas/vphysics2.md#iphysicsbody)* | `MPhysPtr` |
+| `m_pMotorJoint` | [IPhysicsJoint](../schemas/vphysics2.md#iphysicsjoint)* | `MPhysPtr` |
 | `m_motor` | [CMotorController](../schemas/server.md#cmotorcontroller) |  |
 
 ### CPhysMotorAPI
@@ -12185,8 +12393,6 @@ classDiagram
 
 **Derived by:** [CPhysicsPropMultiplayer](server.md#cphysicspropmultiplayer), [CPhysicsPropOverride](server.md#cphysicspropoverride), [CPhysicsPropRespawnable](server.md#cphysicsproprespawnable), [CShatterGlassShardPhysics](server.md#cshatterglassshardphysics)
 
-**Metadata:** `MNetworkExcludeByName = "m_flexWeight"`, `MNetworkExcludeByUserGroup = "m_flPoseParameter"`, `MNetworkExcludeByName = "m_animationController.m_flPlaybackRate"`, `MNetworkExcludeByUserGroup = "overlay_vars"`, `MNetworkIncludeByName = "m_spawnflags"`
-
 **Relationships:**
 
 ```mermaid
@@ -12203,6 +12409,7 @@ classDiagram
     CPhysicsProp *-- CEntityIOOutput
     CPhysicsProp *-- GameTime_t
     CPhysicsProp *-- DynamicContinuousContactBehavior_t
+    CPhysicsProp *-- INavObstacle
 ```
 
 **Fields:**
@@ -12239,6 +12446,7 @@ classDiagram
 | `m_glowColor` | Color |  |
 | `m_bShouldAutoConvertBackFromDebris` | bool |  |
 | `m_bMuteImpactEffects` | bool |  |
+| `m_nNavObstacleType` | [INavObstacle](../schemas/server.md#inavobstacle)::NavObstacleType_t |  |
 | `m_bUpdateNavWhenMoving` | bool |  |
 | `m_bForceNavObstacleCut` | bool |  |
 | `m_bAllowObstacleConvexHullMerging` | bool |  |
@@ -12248,7 +12456,7 @@ classDiagram
 | `m_strItemClass` | CUtlSymbolLarge[4] |  |
 | `m_nItemCount` | int32[4] |  |
 | `m_bRemovableForAmmoBalancing` | bool |  |
-| `m_bAwake` | bool | `MNetworkEnable` |
+| `m_bAwake` | bool |  |
 | `m_bAttachedToReferenceFrame` | bool |  |
 
 ### CPhysicsProp
@@ -12345,12 +12553,14 @@ classDiagram
 classDiagram
     CBaseEntity <|-- CPhysicsSpring
     CEntityInstance <|-- CBaseEntity
+    CPhysicsSpring --> IPhysicsJoint
 ```
 
 **Fields:**
 
 | Name | Type | Annotations |
 |------|------|-------------|
+| `m_pSpringJoint` | [IPhysicsJoint](../schemas/vphysics2.md#iphysicsjoint)* | `MPhysPtr` |
 | `m_flFrequency` | float32 |  |
 | `m_flDampingRatio` | float32 |  |
 | `m_flRestLength` | float32 |  |
@@ -12404,27 +12614,27 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_bBombTicking` | bool | True once the bomb has been armed and the countdown has started. `MNetworkEnable` |
-| `m_flC4Blow` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the bomb will detonate if not defused. *Compute remaining time as: m_flC4Blow - current_game_time.* `MNetworkEnable` |
-| `m_nBombSite` | int32 | Which bombsite the bomb was planted on (0 = site A, 1 = site B; matches the bombsite trigger index). `MNetworkEnable` |
-| `m_nSourceSoundscapeHash` | int32 | Hash of the soundscape entity to activate when players are near the planted bomb. `MNetworkEnable` |
+| `m_bBombTicking` | bool | True once the bomb has been armed and the countdown has started. |
+| `m_flC4Blow` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the bomb will detonate if not defused. *Compute remaining time as: m_flC4Blow - current_game_time.* |
+| `m_nBombSite` | int32 | Which bombsite the bomb was planted on (0 = site A, 1 = site B; matches the bombsite trigger index). |
+| `m_nSourceSoundscapeHash` | int32 | Hash of the soundscape entity to activate when players are near the planted bomb. |
 | `m_bAbortDetonationBecauseWorldIsFrozen` | bool |  |
-| `m_AttributeManager` | [CAttributeContainer](../schemas/server.md#cattributecontainer) | `MNetworkEnable` |
+| `m_AttributeManager` | [CAttributeContainer](../schemas/server.md#cattributecontainer) |  |
 | `m_OnBombDefused` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnBombBeginDefuse` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnBombDefuseAborted` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
-| `m_bCannotBeDefused` | bool | True when the bomb is in a state where it physically cannot be defused (e.g. during some special game modes). `MNetworkEnable` |
-| `m_entitySpottedState` | [EntitySpottedState_t](../schemas/server.md#entityspottedstate_t) | EntitySpottedState_t tracking which players have spotted (radar dot) the planted bomb. `MNetworkEnable` |
+| `m_bCannotBeDefused` | bool | True when the bomb is in a state where it physically cannot be defused (e.g. during some special game modes). |
+| `m_entitySpottedState` | [EntitySpottedState_t](../schemas/server.md#entityspottedstate_t) | EntitySpottedState_t tracking which players have spotted (radar dot) the planted bomb. |
 | `m_nSpotRules` | int32 |  |
-| `m_bHasExploded` | bool | True after the bomb has detonated. `MNetworkEnable` |
-| `m_bBombDefused` | bool | True after the bomb has been successfully defused. `MNetworkEnable` |
+| `m_bHasExploded` | bool | True after the bomb has detonated. |
+| `m_bBombDefused` | bool | True after the bomb has been successfully defused. |
 | `m_bTrainingPlacedByPlayer` | bool |  |
-| `m_flTimerLength` | float32 | Total bomb-timer duration in seconds (mirrors mp_c4timer value at plant time). `MNetworkEnable` |
-| `m_bBeingDefused` | bool | True while a CT player is actively pressing the defuse key on the bomb. `MNetworkEnable` |
+| `m_flTimerLength` | float32 | Total bomb-timer duration in seconds (mirrors mp_c4timer value at plant time). |
+| `m_bBeingDefused` | bool | True while a CT player is actively pressing the defuse key on the bomb. |
 | `m_fLastDefuseTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
-| `m_flDefuseLength` | float32 | Total defuse time in seconds: 5 s with kit, 10 s without. `MNetworkEnable` |
-| `m_flDefuseCountDown` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the defuse will complete if uninterrupted. *Remaining defuse time = m_flDefuseCountDown - current_game_time.* `MNetworkEnable` |
-| `m_hBombDefuser` | CHandle< [CCSPlayerPawn](../schemas/server.md#ccsplayerpawn) > | CHandle to the CCSPlayerPawn currently defusing the bomb (INVALID_EHANDLE if not being defused). `MNetworkEnable` |
+| `m_flDefuseLength` | float32 | Total defuse time in seconds: 5 s with kit, 10 s without. |
+| `m_flDefuseCountDown` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the defuse will complete if uninterrupted. *Remaining defuse time = m_flDefuseCountDown - current_game_time.* |
+| `m_hBombDefuser` | CHandle< [CCSPlayerPawn](../schemas/server.md#ccsplayerpawn) > | CHandle to the CCSPlayerPawn currently defusing the bomb (INVALID_EHANDLE if not being defused). |
 | `m_iProgressBarTime` | int32 |  |
 | `m_bVoiceAlertFired` | bool |  |
 | `m_bVoiceAlertPlayed` | bool[4] |  |
@@ -12470,11 +12680,11 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_hPlayer` | CHandle< [CCSPlayerPawn](../schemas/server.md#ccsplayerpawn) > | `MNetworkEnable` |
-| `m_hPingedEntity` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | `MNetworkEnable` |
-| `m_iType` | int32 | `MNetworkEnable` |
-| `m_bUrgent` | bool | `MNetworkEnable` |
-| `m_szPlaceName` | char[18] | `MNetworkEnable` |
+| `m_hPlayer` | CHandle< [CCSPlayerPawn](../schemas/server.md#ccsplayerpawn) > |  |
+| `m_hPingedEntity` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
+| `m_iType` | int32 |  |
+| `m_bUrgent` | bool |  |
+| `m_szPlaceName` | char[18] |  |
 
 ### CPlayerSprayDecal
 
@@ -12494,21 +12704,21 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_nUniqueID` | int32 | `MNetworkEnable` |
-| `m_unAccountID` | uint32 | `MNetworkEnable` |
-| `m_unTraceID` | uint32 | `MNetworkEnable` |
-| `m_rtGcTime` | uint32 | `MNetworkEnable` |
-| `m_vecEndPos` | Vector | `MNetworkEnable` |
-| `m_vecStart` | Vector | `MNetworkEnable` |
-| `m_vecLeft` | Vector | `MNetworkEnable` |
-| `m_vecNormal` | Vector | `MNetworkEnable` |
-| `m_nPlayer` | int32 | `MNetworkEnable` |
-| `m_nEntity` | int32 | `MNetworkEnable` |
-| `m_nHitbox` | int32 | `MNetworkEnable` |
-| `m_flCreationTime` | float32 | `MNetworkEnable` |
-| `m_nTintID` | int32 | `MNetworkEnable` |
-| `m_nVersion` | uint8 | `MNetworkEnable` |
-| `m_ubSignature` | uint8[128] | `MNetworkEnable` |
+| `m_nUniqueID` | int32 |  |
+| `m_unAccountID` | uint32 |  |
+| `m_unTraceID` | uint32 |  |
+| `m_rtGcTime` | uint32 |  |
+| `m_vecEndPos` | Vector |  |
+| `m_vecStart` | Vector |  |
+| `m_vecLeft` | Vector |  |
+| `m_vecNormal` | Vector |  |
+| `m_nPlayer` | int32 |  |
+| `m_nEntity` | int32 |  |
+| `m_nHitbox` | int32 |  |
+| `m_flCreationTime` | float32 |  |
+| `m_nTintID` | int32 |  |
+| `m_nVersion` | uint8 |  |
+| `m_ubSignature` | uint8[128] |  |
 
 ### CPlayerVisibility
 
@@ -12526,12 +12736,12 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_flVisibilityStrength` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "PlayerVisibilityStateChanged"` |
-| `m_flFogDistanceMultiplier` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "PlayerVisibilityStateChanged"` |
-| `m_flFogMaxDensityMultiplier` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "PlayerVisibilityStateChanged"` |
-| `m_flFadeTime` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "PlayerVisibilityStateChanged"` |
-| `m_bStartDisabled` | bool | `MNetworkEnable` |
-| `m_bIsEnabled` | bool | `MNetworkEnable` |
+| `m_flVisibilityStrength` | float32 |  |
+| `m_flFogDistanceMultiplier` | float32 |  |
+| `m_flFogMaxDensityMultiplier` | float32 |  |
+| `m_flFadeTime` | float32 |  |
+| `m_bStartDisabled` | bool |  |
+| `m_bIsEnabled` | bool |  |
 
 ### CPlayer_AutoaimServices
 
@@ -12568,15 +12778,15 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_vecCsViewPunchAngle` | QAngle | `MNetworkEnable` `MNetworkEncoder = "qangle_precise"` |
-| `m_nCsViewPunchAngleTick` | [GameTick_t](../schemas/entity2.md#gametick_t) | `MNetworkEnable` |
-| `m_flCsViewPunchAngleTickRatio` | float32 | `MNetworkEnable` |
-| `m_PlayerFog` | fogplayerparams_t | `MNetworkEnable` |
-| `m_hColorCorrectionCtrl` | CHandle< [CColorCorrection](../schemas/server.md#ccolorcorrection) > | `MNetworkEnable` |
-| `m_hViewEntity` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | `MNetworkEnable` |
-| `m_hTonemapController` | CHandle< [CTonemapController2](../schemas/server.md#ctonemapcontroller2) > | `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerAndObserversExclusive"` |
-| `m_audio` | audioparams_t | `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerAndObserversExclusive"` |
-| `m_PostProcessingVolumes` | CNetworkUtlVectorBase< CHandle< [CPostProcessingVolume](../schemas/server.md#cpostprocessingvolume) > > | `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerAndObserversExclusive"` |
+| `m_vecCsViewPunchAngle` | QAngle |  |
+| `m_nCsViewPunchAngleTick` | [GameTick_t](../schemas/entity2.md#gametick_t) |  |
+| `m_flCsViewPunchAngleTickRatio` | float32 |  |
+| `m_PlayerFog` | fogplayerparams_t |  |
+| `m_hColorCorrectionCtrl` | CHandle< [CColorCorrection](../schemas/server.md#ccolorcorrection) > |  |
+| `m_hViewEntity` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
+| `m_hTonemapController` | CHandle< [CTonemapController2](../schemas/server.md#ctonemapcontroller2) > |  |
+| `m_audio` | audioparams_t |  |
+| `m_PostProcessingVolumes` | CNetworkUtlVectorBase< CHandle< [CPostProcessingVolume](../schemas/server.md#cpostprocessingvolume) > > |  |
 | `m_flOldPlayerZ` | float32 |  |
 | `m_flOldPlayerViewOffsetZ` | float32 |  |
 | `m_hTriggerSoundscapeList` | CUtlVector< CHandle< [CEnvSoundscapeTriggerable](../schemas/server.md#cenvsoundscapetriggerable) > > |  |
@@ -12633,9 +12843,12 @@ classDiagram
 | `m_nButtonDoublePressed` | uint64 |  |
 | `m_pButtonPressedCmdNumber` | uint32[64] | `MNotSaved` |
 | `m_nLastCommandNumberProcessed` | uint32 | `MNotSaved` |
-| `m_nToggleButtonDownMask` | uint64 | `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
-| `m_flMaxspeed` | float32 | `MNetworkEnable` `MNetworkBitCount = 12` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 2048.000000` `MNetworkEncodeFlags = 1` |
-| `m_arrForceSubtickMoveWhen` | float32[4] | `MNetworkEnable` |
+| `m_nToggleButtonDownMask` | uint64 |  |
+| `m_flCmdForwardMove` | float32 |  |
+| `m_flCmdLeftMove` | float32 |  |
+| `m_flCmdUpMove` | float32 |  |
+| `m_flMaxspeed` | float32 |  |
+| `m_arrForceSubtickMoveWhen` | float32[4] |  |
 | `m_flForwardMove` | float32 |  |
 | `m_flLeftMove` | float32 |  |
 | `m_flUpMove` | float32 |  |
@@ -12662,7 +12875,7 @@ classDiagram
 | Name | Type | Annotations |
 |------|------|-------------|
 | `m_flStepSoundTime` | float32 |  |
-| `m_flFallVelocity` | float32 | `MNetworkEnable` `MNetworkMinValue = -16384.000000` `MNetworkMaxValue = 16384.000000` `MNetworkEncodeFlags = 4` `MNetworkBitCount = 20` |
+| `m_flFallVelocity` | float32 |  |
 | `m_groundNormal` | Vector | `MNotSaved` |
 | `m_flSurfaceFriction` | float32 |  |
 | `m_surfaceProps` | CUtlStringToken | `MNotSaved` |
@@ -12689,8 +12902,8 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_iObserverMode` | uint8 | `MNetworkEnable` `MNetworkChangeCallback = "OnObserverModeChanged"` |
-| `m_hObserverTarget` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | `MNetworkEnable` `MNetworkChangeCallback = "OnObserverTargetChanged"` |
+| `m_iObserverMode` | uint8 |  |
+| `m_hObserverTarget` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 | `m_iObserverLastMode` | [ObserverMode_t](../schemas/client.md#observermode_t) |  |
 | `m_bForcedObserverMode` | bool |  |
 
@@ -12742,10 +12955,10 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_hMyWeapons` | CNetworkUtlVectorBase< CHandle< [CBasePlayerWeapon](../schemas/server.md#cbaseplayerweapon) > > | `MNetworkEnable` `MNetworkChangeCallback = "OnMyWeaponsChanged"` |
-| `m_hActiveWeapon` | CHandle< [CBasePlayerWeapon](../schemas/server.md#cbaseplayerweapon) > | `MNetworkEnable` `MNetworkChangeCallback = "OnActiveWeaponChanged"` |
-| `m_hLastWeapon` | CHandle< [CBasePlayerWeapon](../schemas/server.md#cbaseplayerweapon) > | `MNetworkEnable` `MNetworkUserGroup = "LocalPlayerExclusive"` |
-| `m_iAmmo` | uint16[32] | `MNetworkEnable` `MNetworkChangeCallback = "OnReserveAmmoChanged"` |
+| `m_hMyWeapons` | CNetworkUtlVectorBase< CHandle< [CBasePlayerWeapon](../schemas/server.md#cbaseplayerweapon) > > |  |
+| `m_hActiveWeapon` | CHandle< [CBasePlayerWeapon](../schemas/server.md#cbaseplayerweapon) > |  |
+| `m_hLastWeapon` | CHandle< [CBasePlayerWeapon](../schemas/server.md#cbaseplayerweapon) > |  |
+| `m_iAmmo` | uint16[32] |  |
 | `m_bPreventWeaponPickup` | bool |  |
 
 ### CPointAngleSensor
@@ -12778,8 +12991,8 @@ classDiagram
 | `m_bFired` | bool |  |
 | `m_OnFacingLookat` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnNotFacingLookat` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
-| `m_TargetDir` | CEntityOutputTemplate< Vector, Vector > |  |
-| `m_FacingPercentage` | CEntityOutputTemplate< float32, float32 > |  |
+| `m_TargetDir` | CEntityOutputTemplate< Vector > |  |
+| `m_FacingPercentage` | CEntityOutputTemplate< float32 > |  |
 
 ### CPointAngularVelocitySensor
 
@@ -12811,7 +13024,7 @@ classDiagram
 | `m_lastOrientation` | QAngle |  |
 | `m_vecAxis` | VectorWS |  |
 | `m_bUseHelper` | bool |  |
-| `m_AngularVelocity` | CEntityOutputTemplate< float32, float32 > |  |
+| `m_AngularVelocity` | CEntityOutputTemplate< float32 > |  |
 | `m_OnLessThan` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnLessThanOrEqualTo` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnGreaterThan` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
@@ -12852,28 +13065,28 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_FOV` | float32 | `MNetworkEnable` |
-| `m_Resolution` | float32 | `MNetworkEnable` |
-| `m_bFogEnable` | bool | `MNetworkEnable` |
-| `m_FogColor` | Color | `MNetworkEnable` |
-| `m_flFogStart` | float32 | `MNetworkEnable` |
-| `m_flFogEnd` | float32 | `MNetworkEnable` |
-| `m_flFogMaxDensity` | float32 | `MNetworkEnable` |
-| `m_bActive` | bool | `MNetworkEnable` |
-| `m_bUseScreenAspectRatio` | bool | `MNetworkEnable` |
-| `m_flAspectRatio` | float32 | `MNetworkEnable` |
-| `m_bNoSky` | bool | `MNetworkEnable` |
-| `m_fBrightness` | float32 | `MNetworkEnable` |
-| `m_flZFar` | float32 | `MNetworkEnable` |
-| `m_flZNear` | float32 | `MNetworkEnable` |
-| `m_bCanHLTVUse` | bool | `MNetworkEnable` |
-| `m_bAlignWithParent` | bool | `MNetworkEnable` |
-| `m_bDofEnabled` | bool | `MNetworkEnable` |
-| `m_flDofNearBlurry` | float32 | `MNetworkEnable` |
-| `m_flDofNearCrisp` | float32 | `MNetworkEnable` |
-| `m_flDofFarCrisp` | float32 | `MNetworkEnable` |
-| `m_flDofFarBlurry` | float32 | `MNetworkEnable` |
-| `m_flDofTiltToGround` | float32 | `MNetworkEnable` |
+| `m_FOV` | float32 |  |
+| `m_Resolution` | float32 |  |
+| `m_bFogEnable` | bool |  |
+| `m_FogColor` | Color |  |
+| `m_flFogStart` | float32 |  |
+| `m_flFogEnd` | float32 |  |
+| `m_flFogMaxDensity` | float32 |  |
+| `m_bActive` | bool |  |
+| `m_bUseScreenAspectRatio` | bool |  |
+| `m_flAspectRatio` | float32 |  |
+| `m_bNoSky` | bool |  |
+| `m_fBrightness` | float32 |  |
+| `m_flZFar` | float32 |  |
+| `m_flZNear` | float32 |  |
+| `m_bCanHLTVUse` | bool |  |
+| `m_bAlignWithParent` | bool |  |
+| `m_bDofEnabled` | bool |  |
+| `m_flDofNearBlurry` | float32 |  |
+| `m_flDofNearCrisp` | float32 |  |
+| `m_flDofFarCrisp` | float32 |  |
+| `m_flDofFarBlurry` | float32 |  |
+| `m_flDofTiltToGround` | float32 |  |
 | `m_TargetFOV` | float32 |  |
 | `m_DegreesPerSecond` | float32 |  |
 | `m_bIsOn` | bool |  |
@@ -12949,7 +13162,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_hActivator` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | `MNetworkEnable` `MNetworkChangeCallback = "OnDialogActivatorChanged"` |
+| `m_hActivator` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 | `m_bStartEnabled` | bool |  |
 
 ### CPointClientUIWorldPanel
@@ -12975,30 +13188,30 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_bIgnoreInput` | bool | `MNetworkEnable` |
-| `m_bLit` | bool | `MNetworkEnable` |
-| `m_bFollowPlayerAcrossTeleport` | bool | `MNetworkEnable` |
-| `m_flWidth` | float32 | `MNetworkEnable` |
-| `m_flHeight` | float32 | `MNetworkEnable` |
-| `m_flDPI` | float32 | `MNetworkEnable` |
-| `m_flInteractDistance` | float32 | `MNetworkEnable` |
-| `m_flDepthOffset` | float32 | `MNetworkEnable` |
-| `m_unOwnerContext` | uint32 | `MNetworkEnable` |
-| `m_unHorizontalAlign` | uint32 | `MNetworkEnable` |
-| `m_unVerticalAlign` | uint32 | `MNetworkEnable` |
-| `m_unOrientation` | uint32 | `MNetworkEnable` |
-| `m_bAllowInteractionFromAllSceneWorlds` | bool | `MNetworkEnable` |
-| `m_vecCSSClasses` | CNetworkUtlVectorBase< CUtlSymbolLarge > | `MNetworkEnable` |
-| `m_bOpaque` | bool | `MNetworkEnable` |
-| `m_bNoDepth` | bool | `MNetworkEnable` |
-| `m_bVisibleWhenParentNoDraw` | bool | `MNetworkEnable` |
-| `m_bRenderBackface` | bool | `MNetworkEnable` |
-| `m_bUseOffScreenIndicator` | bool | `MNetworkEnable` |
-| `m_bExcludeFromSaveGames` | bool | `MNetworkEnable` |
-| `m_bGrabbable` | bool | `MNetworkEnable` |
-| `m_bOnlyRenderToTexture` | bool | `MNetworkEnable` |
-| `m_bDisableMipGen` | bool | `MNetworkEnable` |
-| `m_nExplicitImageLayout` | int32 | `MNetworkEnable` |
+| `m_bIgnoreInput` | bool |  |
+| `m_bLit` | bool |  |
+| `m_bFollowPlayerAcrossTeleport` | bool |  |
+| `m_flWidth` | float32 |  |
+| `m_flHeight` | float32 |  |
+| `m_flDPI` | float32 |  |
+| `m_flInteractDistance` | float32 |  |
+| `m_flDepthOffset` | float32 |  |
+| `m_unOwnerContext` | uint32 |  |
+| `m_unHorizontalAlign` | uint32 |  |
+| `m_unVerticalAlign` | uint32 |  |
+| `m_unOrientation` | uint32 |  |
+| `m_bAllowInteractionFromAllSceneWorlds` | bool |  |
+| `m_vecCSSClasses` | CNetworkUtlVectorBase< CUtlSymbolLarge > |  |
+| `m_bOpaque` | bool |  |
+| `m_bNoDepth` | bool |  |
+| `m_bVisibleWhenParentNoDraw` | bool |  |
+| `m_bRenderBackface` | bool |  |
+| `m_bUseOffScreenIndicator` | bool |  |
+| `m_bExcludeFromSaveGames` | bool |  |
+| `m_bGrabbable` | bool |  |
+| `m_bOnlyRenderToTexture` | bool |  |
+| `m_bDisableMipGen` | bool |  |
+| `m_nExplicitImageLayout` | int32 |  |
 
 ### CPointClientUIWorldTextPanel
 
@@ -13019,7 +13232,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_messageText` | char[512] | `MNetworkEnable` |
+| `m_messageText` | char[512] |  |
 
 ### CPointCommentaryNode
 
@@ -13044,12 +13257,12 @@ classDiagram
 |------|------|-------------|
 | `m_iszPreCommands` | CUtlSymbolLarge |  |
 | `m_iszPostCommands` | CUtlSymbolLarge |  |
-| `m_iszCommentaryFile` | CUtlSymbolLarge | `MNetworkEnable` |
+| `m_iszCommentaryFile` | CUtlSymbolLarge |  |
 | `m_iszViewTarget` | CUtlSymbolLarge |  |
 | `m_hViewTarget` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 | `m_hViewTargetAngles` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 | `m_iszViewPosition` | CUtlSymbolLarge |  |
-| `m_hViewPosition` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | `MNetworkEnable` |
+| `m_hViewPosition` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 | `m_hViewPositionMover` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 | `m_bPreventMovement` | bool |  |
 | `m_bUnderCrosshair` | bool |  |
@@ -13064,20 +13277,20 @@ classDiagram
 | `m_flAbortedPlaybackAt` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_pOnCommentaryStarted` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_pOnCommentaryStopped` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
-| `m_bActive` | bool | `MNetworkEnable` |
-| `m_flStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` |
-| `m_flStartTimeInCommentary` | float32 | `MNetworkEnable` |
-| `m_iszTitle` | CUtlSymbolLarge | `MNetworkEnable` |
-| `m_iszSpeakers` | CUtlSymbolLarge | `MNetworkEnable` |
-| `m_iNodeNumber` | int32 | `MNetworkEnable` |
-| `m_iNodeNumberMax` | int32 | `MNetworkEnable` |
-| `m_bListenedTo` | bool | `MNetworkEnable` |
+| `m_bActive` | bool |  |
+| `m_flStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
+| `m_flStartTimeInCommentary` | float32 |  |
+| `m_iszTitle` | CUtlSymbolLarge |  |
+| `m_iszSpeakers` | CUtlSymbolLarge |  |
+| `m_iNodeNumber` | int32 |  |
+| `m_iNodeNumberMax` | int32 |  |
+| `m_bListenedTo` | bool |  |
 
 ### CPointEntity
 
 **Inherits from:** [CBaseEntity](server.md#cbaseentity)
 
-**Derived by:** [CAmbientGeneric](server.md#cambientgeneric), [CBaseDMStart](server.md#cbasedmstart), [CBlood](server.md#cblood), [CCredits](server.md#ccredits), [CEnvEntityMaker](server.md#cenventitymaker), [CEnvHudHint](server.md#cenvhudhint), [CEnvInstructorHint](server.md#cenvinstructorhint), [CEnvInstructorVRHint](server.md#cenvinstructorvrhint), [CEnvMuzzleFlash](server.md#cenvmuzzleflash), [CEnvShake](server.md#cenvshake), [CEnvSpark](server.md#cenvspark), [CEnvSplash](server.md#cenvsplash), [CEnvTilt](server.md#cenvtilt), [CEnvViewPunch](server.md#cenvviewpunch), [CInfoGameEventProxy](server.md#cinfogameeventproxy), [CInfoInstructorHintBombTargetA](server.md#cinfoinstructorhintbombtargeta), [CInfoInstructorHintBombTargetB](server.md#cinfoinstructorhintbombtargetb), [CInfoInstructorHintHostageRescueZone](server.md#cinfoinstructorhinthostagerescuezone), [CInfoInstructorHintTarget](server.md#cinfoinstructorhinttarget), [CInfoLandmark](server.md#cinfolandmark), [CInfoPlayerStart](server.md#cinfoplayerstart), [CInfoSpawnGroupLandmark](server.md#cinfospawngrouplandmark), [CInfoTeleportDestination](server.md#cinfoteleportdestination), [CInstructorEventEntity](server.md#cinstructorevententity), [CKeepUpright](server.md#ckeepupright), [CLogicProximity](server.md#clogicproximity), [CLogicScript](server.md#clogicscript), [CMessage](server.md#cmessage), [CMessageEntity](server.md#cmessageentity), [CNavSpaceInfo](server.md#cnavspaceinfo), [CNavWalkable](server.md#cnavwalkable), [CPathCorner](server.md#cpathcorner), [CPathTrack](server.md#cpathtrack), [CPhysExplosion](server.md#cphysexplosion), [CPhysForce](server.md#cphysforce), [CPhysImpact](server.md#cphysimpact), [CPointAngleSensor](server.md#cpointanglesensor), [CPointAngularVelocitySensor](server.md#cpointangularvelocitysensor), [CPointBroadcastClientCommand](server.md#cpointbroadcastclientcommand), [CPointClientCommand](server.md#cpointclientcommand), [CPointGamestatsCounter](server.md#cpointgamestatscounter), [CPointGiveAmmo](server.md#cpointgiveammo), [CPointHurt](server.md#cpointhurt), [CPointProximitySensor](server.md#cpointproximitysensor), [CPointPush](server.md#cpointpush), [CPointServerCommand](server.md#cpointservercommand), [CPointVelocitySensor](server.md#cpointvelocitysensor), [CRagdollMagnet](server.md#cragdollmagnet), [CRotatorTarget](server.md#crotatortarget), [CSceneEntity](server.md#csceneentity), [CTankTargetChange](server.md#ctanktargetchange), [CTankTrainAI](server.md#ctanktrainai)
+**Derived by:** [CAmbientGeneric](server.md#cambientgeneric), [CBaseDMStart](server.md#cbasedmstart), [CBlood](server.md#cblood), [CCredits](server.md#ccredits), [CEnvEntityMaker](server.md#cenventitymaker), [CEnvHudHint](server.md#cenvhudhint), [CEnvInstructorHint](server.md#cenvinstructorhint), [CEnvInstructorVRHint](server.md#cenvinstructorvrhint), [CEnvMuzzleFlash](server.md#cenvmuzzleflash), [CEnvShake](server.md#cenvshake), [CEnvSpark](server.md#cenvspark), [CEnvSplash](server.md#cenvsplash), [CEnvTilt](server.md#cenvtilt), [CEnvViewPunch](server.md#cenvviewpunch), [CInfoChoreoAnchor](server.md#cinfochoreoanchor), [CInfoGameEventProxy](server.md#cinfogameeventproxy), [CInfoInstructorHintBombTargetA](server.md#cinfoinstructorhintbombtargeta), [CInfoInstructorHintBombTargetB](server.md#cinfoinstructorhintbombtargetb), [CInfoInstructorHintHostageRescueZone](server.md#cinfoinstructorhinthostagerescuezone), [CInfoInstructorHintTarget](server.md#cinfoinstructorhinttarget), [CInfoLandmark](server.md#cinfolandmark), [CInfoPlayerStart](server.md#cinfoplayerstart), [CInfoSpawnGroupLandmark](server.md#cinfospawngrouplandmark), [CInfoTeleportDestination](server.md#cinfoteleportdestination), [CInstructorEventEntity](server.md#cinstructorevententity), [CKeepUpright](server.md#ckeepupright), [CLogicProximity](server.md#clogicproximity), [CLogicScript](server.md#clogicscript), [CMessage](server.md#cmessage), [CMessageEntity](server.md#cmessageentity), [CNavSpaceInfo](server.md#cnavspaceinfo), [CNavWalkable](server.md#cnavwalkable), [CPathCorner](server.md#cpathcorner), [CPathTrack](server.md#cpathtrack), [CPhysExplosion](server.md#cphysexplosion), [CPhysForce](server.md#cphysforce), [CPhysImpact](server.md#cphysimpact), [CPointAngleSensor](server.md#cpointanglesensor), [CPointAngularVelocitySensor](server.md#cpointangularvelocitysensor), [CPointBroadcastClientCommand](server.md#cpointbroadcastclientcommand), [CPointClientCommand](server.md#cpointclientcommand), [CPointGamestatsCounter](server.md#cpointgamestatscounter), [CPointGiveAmmo](server.md#cpointgiveammo), [CPointHurt](server.md#cpointhurt), [CPointProximitySensor](server.md#cpointproximitysensor), [CPointPush](server.md#cpointpush), [CPointServerCommand](server.md#cpointservercommand), [CPointVelocitySensor](server.md#cpointvelocitysensor), [CRagdollMagnet](server.md#cragdollmagnet), [CRotatorTarget](server.md#crotatortarget), [CSceneEntity](server.md#csceneentity), [CTankTargetChange](server.md#ctanktargetchange), [CTankTrainAI](server.md#ctanktrainai)
 
 **Relationships:**
 
@@ -13099,6 +13312,7 @@ classDiagram
     CPointEntity <|-- CEnvSplash
     CPointEntity <|-- CEnvTilt
     CPointEntity <|-- CEnvViewPunch
+    CPointEntity <|-- CInfoChoreoAnchor
     CPointEntity <|-- CInfoGameEventProxy
     CPointEntity <|-- CInfoInstructorHintBombTargetA
     CPointEntity <|-- CInfoInstructorHintBombTargetB
@@ -13275,6 +13489,7 @@ classDiagram
     CServerOnlyEntity <|-- CServerOnlyPointEntity
     CBaseEntity <|-- CServerOnlyEntity
     CEntityInstance <|-- CBaseEntity
+    CPointPrefab --> CBaseEntity
 ```
 
 **Fields:**
@@ -13287,6 +13502,9 @@ classDiagram
 | `m_fixupNames` | bool |  |
 | `m_bLoadDynamic` | bool |  |
 | `m_associatedRelayEntity` | CHandle< [CPointPrefab](../schemas/server.md#cpointprefab) > |  |
+| `m_ProceduralRelaySources` | CUtlVector< CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > > |  |
+
+### CPointPrefabAPI
 
 ### CPointProximitySensor
 
@@ -13308,7 +13526,7 @@ classDiagram
 |------|------|-------------|
 | `m_bDisabled` | bool |  |
 | `m_hTargetEntity` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
-| `m_Distance` | CEntityOutputTemplate< float32, float32 > |  |
+| `m_Distance` | CEntityOutputTemplate< float32 > |  |
 
 ### CPointPulse
 
@@ -13416,6 +13634,7 @@ classDiagram
 | `m_SpawnedEntityHandles` | CUtlVector< CEntityHandle > |  |
 | `m_ScriptSpawnCallback` | HSCRIPT | `MNotSaved` |
 | `m_ScriptCallbackScope` | HSCRIPT | `MNotSaved` |
+| `m_OnEntitySpawned` | CEntityOutputTemplate< CUtlVector< CEntityHandle > > |  |
 
 ### CPointTemplateAPI
 
@@ -13444,31 +13663,31 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_bDisabled` | bool | `MNetworkEnable` |
-| `m_bUpdateOnClient` | bool | `MNetworkEnable` |
-| `m_nInputType` | [ValueRemapperInputType_t](../schemas/client.md#valueremapperinputtype_t) | `MNetworkEnable` |
+| `m_bDisabled` | bool |  |
+| `m_bUpdateOnClient` | bool |  |
+| `m_nInputType` | [ValueRemapperInputType_t](../schemas/client.md#valueremapperinputtype_t) |  |
 | `m_iszRemapLineStartName` | CUtlSymbolLarge |  |
 | `m_iszRemapLineEndName` | CUtlSymbolLarge |  |
-| `m_hRemapLineStart` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | `MNetworkEnable` |
-| `m_hRemapLineEnd` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | `MNetworkEnable` |
-| `m_flMaximumChangePerSecond` | float32 | `MNetworkEnable` |
-| `m_flDisengageDistance` | float32 | `MNetworkEnable` |
-| `m_flEngageDistance` | float32 | `MNetworkEnable` |
-| `m_bRequiresUseKey` | bool | `MNetworkEnable` |
-| `m_nOutputType` | [ValueRemapperOutputType_t](../schemas/client.md#valueremapperoutputtype_t) | `MNetworkEnable` |
+| `m_hRemapLineStart` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
+| `m_hRemapLineEnd` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
+| `m_flMaximumChangePerSecond` | float32 |  |
+| `m_flDisengageDistance` | float32 |  |
+| `m_flEngageDistance` | float32 |  |
+| `m_bRequiresUseKey` | bool |  |
+| `m_nOutputType` | [ValueRemapperOutputType_t](../schemas/client.md#valueremapperoutputtype_t) |  |
 | `m_iszOutputEntityName` | CUtlSymbolLarge |  |
 | `m_iszOutputEntity2Name` | CUtlSymbolLarge |  |
 | `m_iszOutputEntity3Name` | CUtlSymbolLarge |  |
 | `m_iszOutputEntity4Name` | CUtlSymbolLarge |  |
-| `m_hOutputEntities` | CNetworkUtlVectorBase< CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > > | `MNetworkEnable` `MNotSaved` |
-| `m_nHapticsType` | [ValueRemapperHapticsType_t](../schemas/client.md#valueremapperhapticstype_t) | `MNetworkEnable` |
-| `m_nMomentumType` | [ValueRemapperMomentumType_t](../schemas/client.md#valueremappermomentumtype_t) | `MNetworkEnable` |
-| `m_flMomentumModifier` | float32 | `MNetworkEnable` |
-| `m_flSnapValue` | float32 | `MNetworkEnable` |
+| `m_hOutputEntities` | CNetworkUtlVectorBase< CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > > | `MNotSaved` |
+| `m_nHapticsType` | [ValueRemapperHapticsType_t](../schemas/client.md#valueremapperhapticstype_t) |  |
+| `m_nMomentumType` | [ValueRemapperMomentumType_t](../schemas/client.md#valueremappermomentumtype_t) |  |
+| `m_flMomentumModifier` | float32 |  |
+| `m_flSnapValue` | float32 |  |
 | `m_flCurrentMomentum` | float32 |  |
-| `m_nRatchetType` | [ValueRemapperRatchetType_t](../schemas/client.md#valueremapperratchettype_t) | `MNetworkEnable` |
+| `m_nRatchetType` | [ValueRemapperRatchetType_t](../schemas/client.md#valueremapperratchettype_t) |  |
 | `m_flRatchetOffset` | float32 |  |
-| `m_flInputOffset` | float32 | `MNetworkEnable` |
+| `m_flInputOffset` | float32 |  |
 | `m_bEngaged` | bool |  |
 | `m_bFirstUpdate` | bool |  |
 | `m_flPreviousValue` | float32 |  |
@@ -13481,8 +13700,8 @@ classDiagram
 | `m_iszSoundReachedValueZero` | CUtlSymbolLarge |  |
 | `m_iszSoundReachedValueOne` | CUtlSymbolLarge |  |
 | `m_iszSoundMovingLoop` | CUtlSymbolLarge |  |
-| `m_Position` | CEntityOutputTemplate< float32, float32 > |  |
-| `m_PositionDelta` | CEntityOutputTemplate< float32, float32 > |  |
+| `m_Position` | CEntityOutputTemplate< float32 > |  |
+| `m_PositionDelta` | CEntityOutputTemplate< float32 > |  |
 | `m_OnReachedValueZero` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnReachedValueOne` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnReachedValueCustom` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
@@ -13512,7 +13731,7 @@ classDiagram
 | `m_bEnabled` | bool |  |
 | `m_fPrevVelocity` | float32 |  |
 | `m_flAvgInterval` | float32 |  |
-| `m_Velocity` | CEntityOutputTemplate< float32, float32 > |  |
+| `m_Velocity` | CEntityOutputTemplate< float32 > |  |
 
 ### CPointWorldText
 
@@ -13535,22 +13754,22 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_messageText` | char[512] | `MNetworkEnable` `MNotSaved` |
-| `m_FontName` | char[64] | `MNetworkEnable` `MNotSaved` |
-| `m_BackgroundMaterialName` | char[64] | `MNetworkEnable` `MNotSaved` |
-| `m_bEnabled` | bool | `MNetworkEnable` `MNotSaved` |
-| `m_bFullbright` | bool | `MNetworkEnable` `MNotSaved` |
-| `m_flWorldUnitsPerPx` | float32 | `MNetworkEnable` `MNotSaved` |
-| `m_flFontSize` | float32 | `MNetworkEnable` `MNotSaved` |
-| `m_flDepthOffset` | float32 | `MNetworkEnable` `MNotSaved` |
-| `m_bDrawBackground` | bool | `MNetworkEnable` `MNotSaved` |
-| `m_flBackgroundBorderWidth` | float32 | `MNetworkEnable` `MNotSaved` |
-| `m_flBackgroundBorderHeight` | float32 | `MNetworkEnable` `MNotSaved` |
-| `m_flBackgroundWorldToUV` | float32 | `MNetworkEnable` `MNotSaved` |
-| `m_Color` | Color | `MNetworkEnable` `MNotSaved` |
-| `m_nJustifyHorizontal` | [PointWorldTextJustifyHorizontal_t](../schemas/client.md#pointworldtextjustifyhorizontal_t) | `MNetworkEnable` `MNotSaved` |
-| `m_nJustifyVertical` | [PointWorldTextJustifyVertical_t](../schemas/client.md#pointworldtextjustifyvertical_t) | `MNetworkEnable` `MNotSaved` |
-| `m_nReorientMode` | [PointWorldTextReorientMode_t](../schemas/client.md#pointworldtextreorientmode_t) | `MNetworkEnable` `MNotSaved` |
+| `m_messageText` | char[512] |  |
+| `m_FontName` | char[64] | `MNotSaved` |
+| `m_BackgroundMaterialName` | char[64] | `MNotSaved` |
+| `m_bEnabled` | bool | `MNotSaved` |
+| `m_bFullbright` | bool | `MNotSaved` |
+| `m_flWorldUnitsPerPx` | float32 | `MNotSaved` |
+| `m_flFontSize` | float32 | `MNotSaved` |
+| `m_flDepthOffset` | float32 | `MNotSaved` |
+| `m_bDrawBackground` | bool | `MNotSaved` |
+| `m_flBackgroundBorderWidth` | float32 | `MNotSaved` |
+| `m_flBackgroundBorderHeight` | float32 | `MNotSaved` |
+| `m_flBackgroundWorldToUV` | float32 | `MNotSaved` |
+| `m_Color` | Color | `MNotSaved` |
+| `m_nJustifyHorizontal` | [PointWorldTextJustifyHorizontal_t](../schemas/client.md#pointworldtextjustifyhorizontal_t) | `MNotSaved` |
+| `m_nJustifyVertical` | [PointWorldTextJustifyVertical_t](../schemas/client.md#pointworldtextjustifyvertical_t) | `MNotSaved` |
+| `m_nReorientMode` | [PointWorldTextReorientMode_t](../schemas/client.md#pointworldtextreorientmode_t) | `MNotSaved` |
 
 ### CPostProcessingVolume
 
@@ -13574,18 +13793,18 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_hPostSettings` | CStrongHandle< [InfoForResourceTypeCPostProcessingResource](../schemas/resourcesystem.md#infoforresourcetypecpostprocessingresource) > | `MNetworkEnable` |
-| `m_flFadeDuration` | float32 | `MNetworkEnable` |
-| `m_flMinLogExposure` | float32 | `MNetworkEnable` |
-| `m_flMaxLogExposure` | float32 | `MNetworkEnable` |
-| `m_flMinExposure` | float32 | `MNetworkEnable` |
-| `m_flMaxExposure` | float32 | `MNetworkEnable` |
-| `m_flExposureCompensation` | float32 | `MNetworkEnable` |
-| `m_flExposureFadeSpeedUp` | float32 | `MNetworkEnable` |
-| `m_flExposureFadeSpeedDown` | float32 | `MNetworkEnable` |
-| `m_flTonemapEVSmoothingRange` | float32 | `MNetworkEnable` |
-| `m_bMaster` | bool | `MNetworkEnable` |
-| `m_bExposureControl` | bool | `MNetworkEnable` |
+| `m_hPostSettings` | CStrongHandle< [InfoForResourceTypeCPostProcessingResource](../schemas/resourcesystem.md#infoforresourcetypecpostprocessingresource) > |  |
+| `m_flFadeDuration` | float32 |  |
+| `m_flMinLogExposure` | float32 |  |
+| `m_flMaxLogExposure` | float32 |  |
+| `m_flMinExposure` | float32 |  |
+| `m_flMaxExposure` | float32 |  |
+| `m_flExposureCompensation` | float32 |  |
+| `m_flExposureFadeSpeedUp` | float32 |  |
+| `m_flExposureFadeSpeedDown` | float32 |  |
+| `m_flTonemapEVSmoothingRange` | float32 |  |
+| `m_bMaster` | bool |  |
+| `m_bExposureControl` | bool |  |
 
 ### CPrecipitation
 
@@ -13619,7 +13838,7 @@ classDiagram
 
 **Inherits from:** [CEntitySubclassVDataBase](client.md#centitysubclassvdatabase)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CPrecipitationVData",`, `"m_szParticlePrecipitationEffect": "",`, `"m_flInnerDistance": 32.000000,`, `"m_nAttachType": "PATTACH_ABSORIGIN_FOLLOW",`, `"m_bBatchSameVolumeType": true,`, `"m_nRTEnvCP": -1,`, `"m_nRTEnvCPComponent": 0,`, `"m_szModifier": ""`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CPrecipitationVData",`, `"m_szParticlePrecipitationEffect": "",`, `"m_flInnerDistance": 32.000000,`, `"m_nAttachType": "PATTACH_ABSORIGIN_FOLLOW",`, `"m_bBatchSameVolumeType": true,`, `"m_nRTEnvCP": -1,`, `"m_nRTEnvCPComponent": 0,`, `"m_szModifier": "",`, `"m_nUseSnapshotFromSurfaceGraph": -1,`, `"m_snapshotFilter":`, `{`, `"m_flMaxRadius": 200.000000`, `}`, `}`
 
 **Relationships:**
 
@@ -13801,7 +14020,7 @@ classDiagram
 
 **Derived by:** [CPulseCell_Outflow_PlaySequence](server.md#cpulsecell_outflow_playsequence), [CPulseCell_Outflow_PlayVCD](server.md#cpulsecell_outflow_playvcd)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_sceneInstance": null,`, `"m_mainActor": null`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_sceneInstance": null,`, `"m_mainActor": null,`, `"m_cursorIDToEventID":`, `{`, `}`, `}`
 
 **Relationships:**
 
@@ -13831,7 +14050,7 @@ classDiagram
 
 **Inherits from:** [CPulseCell_Outflow_PlaySceneBase](server.md#cpulsecell_outflow_playscenebase)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CPulseCell_Outflow_PlayVCD",`, `"m_nEditorNodeID": -1,`, `"m_OnFinished":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `},`, `"m_OnCanceled":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `},`, `"m_Triggers":`, `[`, `],`, `"m_hChoreoScene": "",`, `"m_OnPaused":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `},`, `"m_OnResumed":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `}`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CPulseCell_Outflow_PlayVCD",`, `"m_nEditorNodeID": -1,`, `"m_OnFinished":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `},`, `"m_OnCanceled":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `},`, `"m_Triggers":`, `[`, `],`, `"m_hChoreoScene": "",`, `"m_OnPaused":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `},`, `"m_OnResumed":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `},`, `"m_OutRequirements":`, `[`, `]`, `}`
 
 **Relationships:**
 
@@ -13842,6 +14061,29 @@ classDiagram
     CPulseCell_BaseFlow <|-- CPulseCell_BaseYieldingInflow
     CPulseCell_Base <|-- CPulseCell_BaseFlow
 ```
+
+### CPulseCell_Outflow_PlayVCD
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_nEventID": -1,`, `"m_Outflow":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `}`, `}`
+
+### CPulseCell_Outflow_PlayVOLine
+
+**Inherits from:** [CPulseCell_BaseYieldingInflow](pulse_runtime_lib.md#cpulsecell_baseyieldinginflow)
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CPulseCell_Outflow_PlayVOLine",`, `"m_nEditorNodeID": -1,`, `"m_OnFinished":`, `{`, `"m_SourceOutflowName": "",`, `"m_nDestChunk": -1,`, `"m_nInstruction": -1`, `}`, `}`, `MPropertyFriendlyName = "Play VO Line"`, `MPropertyDescription = "Starts a sound event on a speaker, and waits for its completion. Keywords: Voice Over, Choreo"`, `MPulseEditorHeaderIcon = "tools/images/pulse_editor/sequence.png"`
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CPulseCell_BaseYieldingInflow <|-- CPulseCell_Outflow_PlayVOLine
+    CPulseCell_BaseFlow <|-- CPulseCell_BaseYieldingInflow
+    CPulseCell_Base <|-- CPulseCell_BaseFlow
+```
+
+### CPulseCell_Outflow_PlayVOLine
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_sceneInstance": null`, `}`
 
 ### CPulseCell_Outflow_ScriptedSequence
 
@@ -13957,8 +14199,8 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_strGraphName` | CUtlString | `MNetworkEnable` |
-| `m_strStateBlob` | CUtlString | `MNetworkEnable` `MNetworkChangeCallback = "OnBlackboardStateChanged"` |
+| `m_strGraphName` | CUtlString |  |
+| `m_strStateBlob` | CUtlString |  |
 
 ### CPulseGraphInstance_GameBlackboard
 
@@ -14109,7 +14351,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_iCurrentMaxRagdollCount` | int8 | `MNetworkEnable` |
+| `m_iCurrentMaxRagdollCount` | int8 |  |
 | `m_iMaxRagdollCount` | int32 |  |
 | `m_bSaveImportant` | bool |  |
 | `m_bCanTakeDamage` | bool |  |
@@ -14130,6 +14372,7 @@ classDiagram
     CEntityInstance <|-- C_BaseEntity
     CRagdollProp <|-- CRagdollPropAlias_physics_prop_ragdoll
     CRagdollProp <|-- CRagdollPropAttached
+    CRagdollProp *-- INavObstacle
     CRagdollProp --> CBaseEntity
     CRagdollProp --> CBasePlayerPawn
     CRagdollProp *-- GameTime_t
@@ -14139,14 +14382,18 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_ragdoll` | ragdoll_t | `MNotSaved` |
+| `m_ragdoll` | ragdoll_t |  |
 | `m_bStartDisabled` | bool |  |
-| `m_ragEnabled` | CNetworkUtlVectorBase< bool > | `MNetworkEnable` |
-| `m_ragPos` | CNetworkUtlVectorBase< Vector > | `MNetworkEnable` `MNetworkEncoder = "coord"` |
-| `m_ragAngles` | CNetworkUtlVectorBase< QAngle > | `MNetworkEnable` `MNetworkEncoder = "qangle"` `MNetworkBitCount = 13` |
+| `m_ragEnabled` | CNetworkUtlVectorBase< bool > |  |
+| `m_ragPos` | CNetworkUtlVectorBase< Vector > |  |
+| `m_ragAngles` | CNetworkUtlVectorBase< QAngle > |  |
 | `m_lastUpdateTickCount` | uint32 |  |
 | `m_allAsleep` | bool |  |
 | `m_bFirstCollisionAfterLaunch` | bool |  |
+| `m_nNavObstacleType` | [INavObstacle](../schemas/server.md#inavobstacle)::NavObstacleType_t |  |
+| `m_bUpdateNavWhenMoving` | bool |  |
+| `m_bForceNavObstacleCut` | bool |  |
+| `m_bAttachedToReferenceFrame` | bool |  |
 | `m_hDamageEntity` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 | `m_hKiller` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 | `m_hPhysicsAttacker` | CHandle< [CBasePlayerPawn](../schemas/server.md#cbaseplayerpawn) > |  |
@@ -14160,11 +14407,12 @@ classDiagram
 | `m_strSourceClassName` | CUtlSymbolLarge |  |
 | `m_bHasBeenPhysgunned` | bool |  |
 | `m_bAllowStretch` | bool | `MNotSaved` |
-| `m_flBlendWeight` | float32 | `MNetworkEnable` `MNetworkBitCount = 8` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 1.000000` `MNetworkEncodeFlags = 1` |
+| `m_flBlendWeight` | float32 |  |
 | `m_flDefaultFadeScale` | float32 |  |
 | `m_ragdollMins` | CUtlVector< Vector > | `MNotSaved` |
 | `m_ragdollMaxs` | CUtlVector< Vector > | `MNotSaved` |
 | `m_bShouldDeleteActivationRecord` | bool | `MNotSaved` |
+| `m_vecNavObstacles` | CUtlVector< [INavObstacle](../schemas/server.md#inavobstacle)* > | `MNotSaved` |
 
 ### CRagdollPropAlias_physics_prop_ragdoll
 
@@ -14200,10 +14448,10 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_boneIndexAttached` | uint32 | `MNetworkEnable` |
-| `m_ragdollAttachedObjectIndex` | uint32 | `MNetworkEnable` |
-| `m_attachmentPointBoneSpace` | Vector | `MNetworkEnable` `MNetworkEncoder = "coord"` |
-| `m_attachmentPointRagdollSpace` | Vector | `MNetworkEnable` `MNetworkEncoder = "coord"` |
+| `m_boneIndexAttached` | uint32 |  |
+| `m_ragdollAttachedObjectIndex` | uint32 |  |
+| `m_attachmentPointBoneSpace` | Vector |  |
+| `m_attachmentPointRagdollSpace` | Vector |  |
 | `m_bShouldDetach` | bool |  |
 | `m_bShouldDeleteAttachedActivationRecord` | bool | `MNotSaved` |
 
@@ -14225,25 +14473,30 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_bShowLight` | bool | `MNetworkEnable` `MNetworkChangeCallback = "RenderingChanged"` |
+| `m_bShowLight` | bool |  |
 
 ### CRelativeLocation
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_Type": "WORLD_SPACE_POSITION",`, `"m_vRelativeOffset":`, `[`, `340282346638528859811704183484516925440.000000,`, `340282346638528859811704183484516925440.000000,`, `340282346638528859811704183484516925440.000000`, `],`, `"m_vWorldSpacePos": null,`, `"m_hEntity": null`, `}`
+
+### CRelativeTransform
+
+**Metadata:** `MGetKV3ClassDefaults = null`
 
 **Relationships:**
 
 ```mermaid
 classDiagram
-    CRelativeLocation *-- RelativeLocationType_t
-    CRelativeLocation --> CBaseEntity
+    CRelativeTransform --> CBaseEntity
 ```
 
 **Fields:**
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_Type` | [RelativeLocationType_t](../schemas/server.md#relativelocationtype_t) |  |
-| `m_vRelativeOffset` | Vector |  |
-| `m_vWorldSpacePos` | VectorWS |  |
+| `m_bTransformIsWorldSpace` | bool |  |
+| `m_transform` | CTransform |  |
+| `m_transformWS` | CTransformWS |  |
 | `m_hEntity` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 
 ### CRenderComponent
@@ -14296,12 +14549,12 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_nMatchSeed` | int32 | `MNetworkEnable` |
-| `m_bBlockersPresent` | bool | `MNetworkEnable` |
-| `m_bRoundInProgress` | bool | `MNetworkEnable` |
-| `m_iFirstSecondHalfRound` | int32 | `MNetworkEnable` |
-| `m_iBombSite` | int32 | `MNetworkEnable` |
-| `m_hBombPlanter` | CHandle< [CCSPlayerPawn](../schemas/server.md#ccsplayerpawn) > | `MNetworkEnable` |
+| `m_nMatchSeed` | int32 |  |
+| `m_bBlockersPresent` | bool |  |
+| `m_bRoundInProgress` | bool |  |
+| `m_iFirstSecondHalfRound` | int32 |  |
+| `m_iBombSite` | int32 |  |
+| `m_hBombPlanter` | CHandle< [CCSPlayerPawn](../schemas/server.md#ccsplayerpawn) > |  |
 
 ### CRevertSaved
 
@@ -14331,8 +14584,6 @@ classDiagram
 
 **Derived by:** [CRopeKeyframeAlias_move_rope](server.md#cropekeyframealias_move_rope)
 
-**Metadata:** `MNetworkIncludeByUserGroup = "Origin"`, `MNetworkIncludeByName = "CGameSceneNode::m_hParent"`, `MNetworkIncludeByName = "CGameSceneNode::m_hierarchyAttachName"`, `MNetworkIncludeByName = "m_nMinCPULevel"`, `MNetworkIncludeByName = "m_nMaxCPULevel"`, `MNetworkIncludeByName = "m_nMinGPULevel"`, `MNetworkIncludeByName = "m_nMaxGPULevel"`
-
 **Relationships:**
 
 ```mermaid
@@ -14350,27 +14601,27 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_RopeFlags` | uint16 | `MNetworkEnable` |
+| `m_RopeFlags` | uint16 |  |
 | `m_iNextLinkName` | CUtlSymbolLarge |  |
-| `m_Slack` | int16 | `MNetworkEnable` |
-| `m_Width` | float32 | `MNetworkEnable` |
-| `m_TextureScale` | float32 | `MNetworkEnable` `MNetworkBitCount = 10` `MNetworkMinValue = 0.100000` `MNetworkMaxValue = 10.000000` |
-| `m_nSegments` | uint8 | `MNetworkEnable` |
-| `m_bConstrainBetweenEndpoints` | bool | `MNetworkEnable` |
+| `m_Slack` | int16 |  |
+| `m_Width` | float32 |  |
+| `m_TextureScale` | float32 |  |
+| `m_nSegments` | uint8 |  |
+| `m_bConstrainBetweenEndpoints` | bool |  |
 | `m_strRopeMaterialModel` | CUtlSymbolLarge |  |
-| `m_iRopeMaterialModelIndex` | CStrongHandle< [InfoForResourceTypeIMaterial2](../schemas/resourcesystem.md#infoforresourcetypeimaterial2) > | `MNetworkEnable` |
-| `m_Subdiv` | uint8 | `MNetworkEnable` |
-| `m_nChangeCount` | uint8 | `MNetworkEnable` `MNotSaved` |
-| `m_RopeLength` | int16 | `MNetworkEnable` |
-| `m_fLockedPoints` | uint8 | `MNetworkEnable` |
+| `m_iRopeMaterialModelIndex` | CStrongHandle< [InfoForResourceTypeIMaterial2](../schemas/resourcesystem.md#infoforresourcetypeimaterial2) > |  |
+| `m_Subdiv` | uint8 |  |
+| `m_nChangeCount` | uint8 | `MNotSaved` |
+| `m_RopeLength` | int16 |  |
+| `m_fLockedPoints` | uint8 |  |
 | `m_bCreatedFromMapFile` | bool |  |
-| `m_flScrollSpeed` | float32 | `MNetworkEnable` |
+| `m_flScrollSpeed` | float32 |  |
 | `m_bStartPointValid` | bool |  |
 | `m_bEndPointValid` | bool |  |
-| `m_hStartPoint` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | `MNetworkEnable` |
-| `m_hEndPoint` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | `MNetworkEnable` |
-| `m_iStartAttachment` | [AttachmentHandle_t](../schemas/modellib.md#attachmenthandle_t) | `MNetworkEnable` |
-| `m_iEndAttachment` | [AttachmentHandle_t](../schemas/modellib.md#attachmenthandle_t) | `MNetworkEnable` |
+| `m_hStartPoint` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
+| `m_hEndPoint` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
+| `m_iStartAttachment` | [AttachmentHandle_t](../schemas/modellib.md#attachmenthandle_t) |  |
+| `m_iEndAttachment` | [AttachmentHandle_t](../schemas/modellib.md#attachmenthandle_t) |  |
 
 ### CRopeKeyframeAlias_move_rope
 
@@ -14584,11 +14835,11 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_iEnemy5Ks` | int32 | `MNetworkEnable` |
-| `m_iEnemy4Ks` | int32 | `MNetworkEnable` |
-| `m_iEnemy3Ks` | int32 | `MNetworkEnable` |
-| `m_iEnemyKnifeKills` | int32 | `MNetworkEnable` |
-| `m_iEnemyTaserKills` | int32 | `MNetworkEnable` |
+| `m_iEnemy5Ks` | int32 |  |
+| `m_iEnemy4Ks` | int32 |  |
+| `m_iEnemy3Ks` | int32 |  |
+| `m_iEnemyKnifeKills` | int32 |  |
+| `m_iEnemyTaserKills` | int32 |  |
 | `m_iEnemy2Ks` | int32 |  |
 | `m_iUtility_Count` | int32 |  |
 | `m_iUtility_Successes` | int32 |  |
@@ -14621,19 +14872,39 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_iKills` | int32 | `MNetworkEnable` |
-| `m_iDeaths` | int32 | `MNetworkEnable` |
-| `m_iAssists` | int32 | `MNetworkEnable` |
-| `m_iDamage` | int32 | `MNetworkEnable` `MNetworkUserGroup = "AllPlayersDuringFreezePeriodOrMatchEnd"` |
-| `m_iEquipmentValue` | int32 | `MNetworkEnable` `MNetworkUserGroup = "TeammateAndSpectatorExclusive"` |
-| `m_iMoneySaved` | int32 | `MNetworkEnable` `MNetworkUserGroup = "TeammateAndSpectatorExclusive"` |
-| `m_iKillReward` | int32 | `MNetworkEnable` `MNetworkUserGroup = "TeammateAndSpectatorExclusive"` |
-| `m_iLiveTime` | int32 | `MNetworkEnable` |
-| `m_iHeadShotKills` | int32 | `MNetworkEnable` |
-| `m_iObjective` | int32 | `MNetworkEnable` `MNetworkUserGroup = "AllPlayersDuringFreezePeriodOrMatchEnd"` |
-| `m_iCashEarned` | int32 | `MNetworkEnable` `MNetworkUserGroup = "TeammateAndSpectatorExclusive"` |
-| `m_iUtilityDamage` | int32 | `MNetworkEnable` `MNetworkUserGroup = "AllPlayersDuringFreezePeriodOrMatchEnd"` |
-| `m_iEnemiesFlashed` | int32 | `MNetworkEnable` `MNetworkUserGroup = "AllPlayersDuringFreezePeriodOrMatchEnd"` |
+| `m_iKills` | int32 |  |
+| `m_iDeaths` | int32 |  |
+| `m_iAssists` | int32 |  |
+| `m_iDamage` | int32 |  |
+| `m_iEquipmentValue` | int32 |  |
+| `m_iMoneySaved` | int32 |  |
+| `m_iKillReward` | int32 |  |
+| `m_iLiveTime` | int32 |  |
+| `m_iHeadShotKills` | int32 |  |
+| `m_iObjective` | int32 |  |
+| `m_iCashEarned` | int32 |  |
+| `m_iUtilityDamage` | int32 |  |
+| `m_iEnemiesFlashed` | int32 |  |
+
+### CSceneCriteria
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CSceneCriteria --> CBaseEntity
+    CSceneCriteria *-- InteractionPriority_t
+    CSceneCriteria *-- SceneInterestTags_t
+```
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `m_hOwner` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
+| `m_ePriority` | [InteractionPriority_t](../schemas/client.md#interactionpriority_t) |  |
+| `m_InterestReqTags` | [SceneInterestTags_t](../schemas/client.md#sceneinteresttags_t) |  |
+| `m_InterestOptTags` | [SceneInterestTags_t](../schemas/client.md#sceneinteresttags_t) |  |
 
 ### CSceneEntity
 
@@ -14651,7 +14922,7 @@ classDiagram
     CSceneEntity <|-- CInstancedSceneEntity
     CSceneEntity <|-- CSceneEntityAlias_logic_choreographed_scene
     CSceneEntity --> CBaseEntity
-    CSceneEntity --> CBaseFlex
+    CSceneEntity --> CBaseModelEntity
     CSceneEntity *-- CEntityIOOutput
     CSceneEntity --> CSceneListManager
     CSceneEntity *-- SceneOnPlayerDeath_t
@@ -14678,12 +14949,14 @@ classDiagram
 | `m_hTarget6` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 | `m_hTarget7` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 | `m_hTarget8` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
+| `m_hLocatorOrigin` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 | `m_sTargetAttachment` | CUtlSymbolLarge |  |
-| `m_bIsPlayingBack` | bool | `MNetworkEnable` |
-| `m_bPaused` | bool | `MNetworkEnable` |
-| `m_bMultiplayer` | bool | `MNetworkEnable` |
-| `m_bAutogenerated` | bool | `MNetworkEnable` |
-| `m_flForceClientTime` | float32 | `MNetworkEnable` |
+| `m_bIsPlayingBack` | bool |  |
+| `m_bPaused` | bool |  |
+| `m_bMultiplayer` | bool |  |
+| `m_bAutogenerated` | bool |  |
+| `m_bAllRequirementsComplete` | bool |  |
+| `m_flForceClientTime` | float32 |  |
 | `m_flCurrentTime` | float32 |  |
 | `m_flFrameTime` | float32 |  |
 | `m_bCancelAtNextInterrupt` | bool |  |
@@ -14698,16 +14971,18 @@ classDiagram
 | `m_bWaitingForActor` | bool |  |
 | `m_bWaitingForInterrupt` | bool |  |
 | `m_bInterruptedActorsScenes` | bool |  |
+| `m_bTakeOverNPCBehavior` | bool |  |
 | `m_bBreakOnNonIdle` | bool |  |
 | `m_bSceneFinished` | bool |  |
-| `m_hActorList` | CNetworkUtlVectorBase< CHandle< [CBaseFlex](../schemas/server.md#cbaseflex) > > | `MNetworkEnable` |
+| `m_hActorList` | CNetworkUtlVectorBase< CHandle< [CBaseModelEntity](../schemas/server.md#cbasemodelentity) > > |  |
 | `m_hRemoveActorList` | CUtlVector< CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > > |  |
-| `m_nSceneStringIndex` | uint16 | `MNetworkEnable` `MNotSaved` |
+| `m_nSceneStringIndex` | uint16 | `MNotSaved` |
 | `m_OnStart` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnCompletion` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnCanceled` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnPaused` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnResumed` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
+| `m_OnPulseRequirement` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_hInterruptScene` | CHandle< [CSceneEntity](../schemas/server.md#csceneentity) > |  |
 | `m_nInterruptCount` | int32 |  |
 | `m_bSceneMissing` | bool | `MNotSaved` |
@@ -14719,7 +14994,7 @@ classDiagram
 | `m_hListManagers` | CUtlVector< CHandle< [CSceneListManager](../schemas/server.md#cscenelistmanager) > > |  |
 | `m_iszSoundName` | CUtlSymbolLarge |  |
 | `m_iszSequenceName` | CUtlSymbolLarge |  |
-| `m_hActor` | CHandle< [CBaseFlex](../schemas/server.md#cbaseflex) > |  |
+| `m_hActor` | CHandle< [CBaseModelEntity](../schemas/server.md#cbasemodelentity) > |  |
 | `m_hActivator` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 | `m_BusyActor` | int32 |  |
 | `m_iPlayerDeathBehavior` | [SceneOnPlayerDeath_t](../schemas/server.md#sceneonplayerdeath_t) |  |
@@ -14760,9 +15035,46 @@ classDiagram
 | `m_iszScenes` | CUtlSymbolLarge[16] |  |
 | `m_hScenes` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) >[16] |  |
 
+### CSceneOpportunity
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CSceneOpportunity --> CBaseEntity
+    CSceneOpportunity *-- SceneOpportunityHandle_t
+    CSceneOpportunity *-- InteractionPriority_t
+    CSceneOpportunity *-- SceneInterestTags_t
+    CSceneOpportunity *-- SceneOpportunityActor_t
+    CSceneOpportunity *-- GameTime_t
+```
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `m_hOwner` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
+| `m_uHandle` | [SceneOpportunityHandle_t](../schemas/client.md#sceneopportunityhandle_t) |  |
+| `m_strInteractVDataName` | CUtlSymbolLarge |  |
+| `m_bEnabled` | bool |  |
+| `m_bActive` | bool |  |
+| `m_ePriority` | [InteractionPriority_t](../schemas/client.md#interactionpriority_t) |  |
+| `m_flRadius` | float32 |  |
+| `m_LocalInterestReqTags` | [SceneInterestTags_t](../schemas/client.md#sceneinteresttags_t) |  |
+| `m_LocalInterestOptTags` | [SceneInterestTags_t](../schemas/client.md#sceneinteresttags_t) |  |
+| `m_flOwnerFOV` | float32 |  |
+| `m_ActorList` | CUtlVector< [SceneOpportunityActor_t](../schemas/server.md#sceneopportunityactor_t) > |  |
+| `m_hLookTarget` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
+| `m_flDuration` | float32 |  |
+| `m_tStartTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
+| `m_flCooldown` | float32 |  |
+| `m_tCooldownTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
+| `m_nRepeatCount` | int32 |  |
+| `m_bDisableOnExit` | bool |  |
+
 ### CScenePayloadVData
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_sSceneFile": ""`, `}`, `MVDataRoot`, `MVDataOverlayType = 1`, `MVDataAssociatedFile = "scripts/scenes.vdata"`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_eNPCBehavior": "eTakeOver",`, `"m_sPulseFile": "",`, `"m_sSceneFile": "",`, `"m_ePriority": "INTERACT_PRIORITY_NONE"`, `}`, `MVDataRoot`, `MVDataOverlayType = 1`, `MVDataAssociatedFile = "scripts/scenes.vdata"`
 
 ### CSceneRequest
 
@@ -14772,15 +15084,24 @@ classDiagram
 classDiagram
     CSceneRequest *-- SceneRequestHandle_t
     CSceneRequest *-- ESceneRequestState_t
+    CSceneRequest *-- ENPCBehaviorOverride_t
+    CSceneRequest *-- SceneRequestTargetMapPair_t
+    CSceneRequest --> CBaseEntity
 ```
 
 **Fields:**
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_szPayloadTypeName` | CUtlSymbolLarge |  |
-| `m_uHandle` | [SceneRequestHandle_t](../schemas/server.md#scenerequesthandle_t) |  |
-| `m_state` | [ESceneRequestState_t](../schemas/server.md#escenerequeststate_t) |  |
+| `m_szPayloadVDataName` | CUtlSymbolLarge |  |
+| `m_uHandle` | [SceneRequestHandle_t](../schemas/client.md#scenerequesthandle_t) |  |
+| `m_state` | [ESceneRequestState_t](../schemas/client.md#escenerequeststate_t) |  |
+| `m_nNPCBehaviorOverride` | [ENPCBehaviorOverride_t](../schemas/client.md#enpcbehavioroverride_t) |  |
+| `m_vecActorMap` | CUtlVector< [SceneRequestTargetMapPair_t](../schemas/server.md#scenerequesttargetmappair_t) > |  |
+| `m_vecAnchorMap` | CUtlVector< [SceneRequestTargetMapPair_t](../schemas/server.md#scenerequesttargetmappair_t) > |  |
+| `m_vecGraphMap` | CUtlVector< [SceneRequestTargetMapPair_t](../schemas/server.md#scenerequesttargetmappair_t) > |  |
+| `m_hOwner` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
+| `m_nameMapKV3` | KeyValues3 |  |
 
 ### CScriptItem
 
@@ -15081,57 +15402,11 @@ classDiagram
 
 ### CShatterGlassShard
 
-**Relationships:**
-
-```mermaid
-classDiagram
-    CShatterGlassShard *-- InfoForResourceTypeCModel
-    CShatterGlassShard --> CShatterGlassShardPhysics
-    CShatterGlassShard --> CFuncShatterglass
-    CShatterGlassShard *-- ShatterGlassStressType
-    CShatterGlassShard *-- OnFrame
-    CShatterGlassShard *-- GameTime_t
-    CShatterGlassShard --> CBaseEntity
-```
-
-**Fields:**
-
-| Name | Type | Annotations |
-|------|------|-------------|
-| `m_hShardHandle` | uint32 |  |
-| `m_vecPanelVertices` | CUtlVector< Vector2D > | `MNotSaved` |
-| `m_vLocalPanelSpaceOrigin` | Vector2D | `MNotSaved` |
-| `m_hModel` | CStrongHandle< [InfoForResourceTypeCModel](../schemas/resourcesystem.md#infoforresourcetypecmodel) > | `MNotSaved` |
-| `m_hPhysicsEntity` | CHandle< [CShatterGlassShardPhysics](../schemas/server.md#cshatterglassshardphysics) > |  |
-| `m_hParentPanel` | CHandle< [CFuncShatterglass](../schemas/server.md#cfuncshatterglass) > |  |
-| `m_hParentShard` | uint32 |  |
-| `m_ShatterStressType` | [ShatterGlassStressType](../schemas/client.md#shatterglassstresstype) |  |
-| `m_vecStressVelocity` | Vector |  |
-| `m_bCreatedModel` | bool | `MNotSaved` |
-| `m_flLongestEdge` | float32 | `MNotSaved` |
-| `m_flShortestEdge` | float32 | `MNotSaved` |
-| `m_flLongestAcross` | float32 | `MNotSaved` |
-| `m_flShortestAcross` | float32 | `MNotSaved` |
-| `m_flSumOfAllEdges` | float32 | `MNotSaved` |
-| `m_flArea` | float32 | `MNotSaved` |
-| `m_nOnFrameEdge` | [OnFrame](../schemas/client.md#onframe) |  |
-| `m_nSubShardGeneration` | int32 |  |
-| `m_vecAverageVertPosition` | Vector2D | `MNotSaved` |
-| `m_bAverageVertPositionIsValid` | bool | `MNotSaved` |
-| `m_vecPanelSpaceStressPositionA` | Vector2D |  |
-| `m_vecPanelSpaceStressPositionB` | Vector2D |  |
-| `m_bStressPositionAIsValid` | bool |  |
-| `m_bStressPositionBIsValid` | bool |  |
-| `m_bFlaggedForRemoval` | bool |  |
-| `m_flPhysicsEntitySpawnedAtTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
-| `m_hEntityHittingMe` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
-| `m_vecNeighbors` | CUtlVector< uint32 > |  |
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CShatterGlassShard",`, `"m_hShardHandle": 0,`, `"m_hPhysicsEntity": null,`, `"m_hParentPanel": null,`, `"m_hParentShard": 0,`, `"m_ShatterStressType": "SHATTERGLASS_BLUNT",`, `"m_vecStressVelocity":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_nOnFrameEdge": "ONFRAME_UNKNOWN",`, `"m_nSubShardGeneration": 0,`, `"m_vecPanelSpaceStressPositionA":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vecPanelSpaceStressPositionB":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_bStressPositionAIsValid": false,`, `"m_bStressPositionBIsValid": false,`, `"m_bFlaggedForRemoval": false,`, `"m_flPhysicsEntitySpawnedAtTime": null,`, `"m_hEntityHittingMe": null,`, `"m_vecNeighbors":`, `[`, `]`, `}`
 
 ### CShatterGlassShardPhysics
 
 **Inherits from:** [CPhysicsProp](server.md#cphysicsprop)
-
-**Metadata:** `MNetworkExcludeByName = "m_hModel"`
 
 **Relationships:**
 
@@ -15150,7 +15425,7 @@ classDiagram
 |------|------|-------------|
 | `m_bDebris` | bool |  |
 | `m_hParentShard` | uint32 |  |
-| `m_ShardDesc` | shard_model_desc_t | `MNetworkEnable` |
+| `m_ShardDesc` | shard_model_desc_t |  |
 
 ### CShower
 
@@ -15214,14 +15489,13 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_modelState` | [CModelState](../schemas/server.md#cmodelstate) | `MNetworkEnable` |
-| `m_bIsAnimationEnabled` | bool | `MNetworkEnable` `MNotSaved` |
-| `m_bUseParentRenderBounds` | bool | `MNetworkEnable` `MNotSaved` |
+| `m_modelState` | [CModelState](../schemas/server.md#cmodelstate) |  |
+| `m_bUseParentRenderBounds` | bool | `MNotSaved` |
 | `m_bDisableSolidCollisionsForHierarchy` | bool |  |
 | `m_bDirtyMotionType` | bitfield:1 | `MNotSaved` |
 | `m_bIsGeneratingLatchedParentSpaceState` | bitfield:1 | `MNotSaved` |
-| `m_materialGroup` | CUtlStringToken | `MNetworkEnable` `MNetworkChangeCallback = "skeletonMaterialGroupChanged"` |
-| `m_nHitboxSet` | uint8 | `MNetworkEnable` |
+| `m_materialGroup` | CUtlStringToken |  |
+| `m_nHitboxSet` | uint8 |  |
 | `m_bForceServerConstraintsEnabled` | bool |  |
 
 ### CSkyCamera
@@ -15240,8 +15514,8 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_skyboxData` | sky3dparams_t | `MNetworkEnable` `MNotSaved` |
-| `m_skyboxSlotToken` | CUtlStringToken | `MNetworkEnable` |
+| `m_skyboxData` | sky3dparams_t | `MNotSaved` |
+| `m_skyboxSlotToken` | CUtlStringToken |  |
 | `m_bUseAngles` | bool |  |
 | `m_pNext` | [CSkyCamera](../schemas/server.md#cskycamera)* | `MNotSaved` |
 
@@ -15277,7 +15551,7 @@ classDiagram
     CCSWeaponBase <|-- CBaseCSGrenade
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CSmokeGrenadeProjectile
@@ -15290,9 +15564,9 @@ classDiagram
 classDiagram
     CBaseCSGrenadeProjectile <|-- CSmokeGrenadeProjectile
     CBaseGrenade <|-- CBaseCSGrenadeProjectile
-    CBaseFlex <|-- CBaseGrenade
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CBaseGrenade
     C_BaseModelEntity <|-- CBaseAnimGraph
+    C_BaseEntity <|-- C_BaseModelEntity
     CSmokeGrenadeProjectile *-- GameTime_t
 ```
 
@@ -15300,14 +15574,14 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_nSmokeEffectTickBegin` | int32 | `MNetworkEnable` |
-| `m_bDidSmokeEffect` | bool | `MNetworkEnable` |
-| `m_nRandomSeed` | int32 | `MNetworkEnable` |
-| `m_vSmokeColor` | Vector | `MNetworkEnable` |
-| `m_vSmokeDetonationPos` | Vector | `MNetworkEnable` |
-| `m_VoxelFrameData` | CNetworkUtlVectorBase< uint8 > | `MNetworkEnable` |
-| `m_nVoxelFrameDataSize` | int32 | `MNetworkEnable` |
-| `m_nVoxelUpdate` | int32 | `MNetworkEnable` |
+| `m_nSmokeEffectTickBegin` | int32 |  |
+| `m_bDidSmokeEffect` | bool |  |
+| `m_nRandomSeed` | int32 |  |
+| `m_vSmokeColor` | Vector |  |
+| `m_vSmokeDetonationPos` | Vector |  |
+| `m_VoxelFrameData` | CNetworkUtlVectorBase< uint8 > |  |
+| `m_nVoxelFrameDataSize` | int32 |  |
+| `m_nVoxelUpdate` | int32 |  |
 | `m_flLastBounce` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_fllastSimulationTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_bExplodeFromInferno` | bool |  |
@@ -15345,9 +15619,9 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_bDisabled` | bool | `MNetworkEnable` |
-| `m_iszSoundAreaType` | CUtlSymbolLarge | `MNetworkEnable` |
-| `m_vPos` | Vector | `MNetworkEnable` |
+| `m_bDisabled` | bool |  |
+| `m_iszSoundAreaType` | CUtlSymbolLarge |  |
+| `m_vPos` | Vector |  |
 
 ### CSoundAreaEntityOrientedBox
 
@@ -15366,8 +15640,8 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_vMin` | Vector | `MNetworkEnable` |
-| `m_vMax` | Vector | `MNetworkEnable` |
+| `m_vMin` | Vector |  |
+| `m_vMax` | Vector |  |
 
 ### CSoundAreaEntitySphere
 
@@ -15386,7 +15660,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_flRadius` | float32 | `MNetworkEnable` |
+| `m_flRadius` | float32 |  |
 
 ### CSoundEventAABBEntity
 
@@ -15405,8 +15679,8 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_vMins` | Vector | `MNetworkEnable` |
-| `m_vMaxs` | Vector | `MNetworkEnable` |
+| `m_vMins` | Vector |  |
+| `m_vMaxs` | Vector |  |
 
 ### CSoundEventConeEntity
 
@@ -15464,7 +15738,7 @@ classDiagram
 | `m_flSavedElapsedTime` | float32 |  |
 | `m_iszSourceEntityName` | CUtlSymbolLarge |  |
 | `m_iszAttachmentName` | CUtlSymbolLarge |  |
-| `m_onGUIDChanged` | CEntityOutputTemplate< uint64, uint64 > |  |
+| `m_onGUIDChanged` | CEntityOutputTemplate< SndOpEventGuid_t > |  |
 | `m_onSoundFinished` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_flClientCullRadius` | float32 |  |
 | `m_iszSoundName` | CUtlSymbolLarge |  |
@@ -15501,8 +15775,8 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_vMins` | Vector | `MNetworkEnable` |
-| `m_vMaxs` | Vector | `MNetworkEnable` |
+| `m_vMins` | Vector |  |
+| `m_vMaxs` | Vector |  |
 
 ### CSoundEventParameter
 
@@ -15547,7 +15821,7 @@ classDiagram
 | `m_flDistMaxSqr` | float32 |  |
 | `m_flDotProductMax` | float32 |  |
 | `m_bPlaying` | bool |  |
-| `m_vecCornerPairsNetworked` | CNetworkUtlVectorBase< [SoundeventPathCornerPairNetworked_t](../schemas/client.md#soundeventpathcornerpairnetworked_t) > | `MNetworkEnable` `MNotSaved` |
+| `m_vecCornerPairsNetworked` | CNetworkUtlVectorBase< [SoundeventPathCornerPairNetworked_t](../schemas/client.md#soundeventpathcornerpairnetworked_t) > | `MNotSaved` |
 
 ### CSoundEventSphereEntity
 
@@ -15566,7 +15840,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_flRadius` | float32 | `MNetworkEnable` |
+| `m_flRadius` | float32 |  |
 
 ### CSoundOpvarSetAABBEntity
 
@@ -15739,12 +16013,12 @@ classDiagram
 | `m_iszSourceEntityName` | CUtlSymbolLarge |  |
 | `m_vLastPosition` | Vector | `MNotSaved` |
 | `m_flRefreshTime` | float32 |  |
-| `m_iszStackName` | CUtlSymbolLarge | `MNetworkEnable` |
-| `m_iszOperatorName` | CUtlSymbolLarge | `MNetworkEnable` |
-| `m_iszOpvarName` | CUtlSymbolLarge | `MNetworkEnable` |
-| `m_iOpvarIndex` | int32 | `MNetworkEnable` |
-| `m_bUseAutoCompare` | bool | `MNetworkEnable` |
-| `m_bFastRefresh` | bool | `MNetworkEnable` |
+| `m_iszStackName` | CUtlSymbolLarge |  |
+| `m_iszOperatorName` | CUtlSymbolLarge |  |
+| `m_iszOpvarName` | CUtlSymbolLarge |  |
+| `m_iOpvarIndex` | int32 |  |
+| `m_bUseAutoCompare` | bool |  |
+| `m_bFastRefresh` | bool |  |
 
 ### CSoundOpvarSetPointEntity
 
@@ -15826,6 +16100,7 @@ classDiagram
     C_BaseEntity <|-- CLogicalEntity
     CEntityInstance <|-- C_BaseEntity
     CSplineConstraint --> CBaseEntity
+    CSplineConstraint --> IPhysicsBody
     CSplineConstraint *-- GameTime_t
 ```
 
@@ -15835,6 +16110,7 @@ classDiagram
 |------|------|-------------|
 | `m_vAnchorOffsetRestore` | Vector |  |
 | `m_hSplineEntity` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
+| `m_pSplineBody` | [IPhysicsBody](../schemas/vphysics2.md#iphysicsbody)* | `MPhysPtr` |
 | `m_bEnableLateralConstraint` | bool |  |
 | `m_bEnableVerticalConstraint` | bool |  |
 | `m_bEnableAngularConstraint` | bool |  |
@@ -15865,8 +16141,8 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_flLightScale` | float32 | `MNetworkEnable` |
-| `m_Radius` | float32 | `MNetworkEnable` |
+| `m_flLightScale` | float32 |  |
+| `m_Radius` | float32 |  |
 | `m_vSpotlightDir` | Vector |  |
 | `m_vSpotlightOrg` | VectorWS |  |
 
@@ -15896,19 +16172,19 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_hSpriteMaterial` | CStrongHandle< [InfoForResourceTypeIMaterial2](../schemas/resourcesystem.md#infoforresourcetypeimaterial2) > | `MNetworkEnable` |
-| `m_hAttachedToEntity` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | `MNetworkEnable` |
-| `m_nAttachment` | [AttachmentHandle_t](../schemas/modellib.md#attachmenthandle_t) | `MNetworkEnable` |
-| `m_flSpriteFramerate` | float32 | `MNetworkEnable` `MNetworkBitCount = 8` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 60.000000` `MNetworkEncodeFlags = 2` |
-| `m_flFrame` | float32 | `MNetworkEnable` `MNetworkBitCount = 20` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 256.000000` `MNetworkEncodeFlags = 1` |
+| `m_hSpriteMaterial` | CStrongHandle< [InfoForResourceTypeIMaterial2](../schemas/resourcesystem.md#infoforresourcetypeimaterial2) > |  |
+| `m_hAttachedToEntity` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
+| `m_nAttachment` | [AttachmentHandle_t](../schemas/modellib.md#attachmenthandle_t) |  |
+| `m_flSpriteFramerate` | float32 |  |
+| `m_flFrame` | float32 |  |
 | `m_flDieTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
-| `m_nBrightness` | uint32 | `MNetworkEnable` |
-| `m_flBrightnessDuration` | float32 | `MNetworkEnable` |
-| `m_flSpriteScale` | float32 | `MNetworkEnable` `MNetworkChangeCallback = "OnSpriteScaleChanged"` |
-| `m_flScaleDuration` | float32 | `MNetworkEnable` |
-| `m_bWorldSpaceScale` | bool | `MNetworkEnable` |
-| `m_flGlowProxySize` | float32 | `MNetworkEnable` `MNetworkBitCount = 6` `MNetworkMinValue = 0.000000` `MNetworkMaxValue = 64.000000` `MNetworkEncodeFlags = 2` |
-| `m_flHDRColorScale` | float32 | `MNetworkEnable` |
+| `m_nBrightness` | uint32 |  |
+| `m_flBrightnessDuration` | float32 |  |
+| `m_flSpriteScale` | float32 |  |
+| `m_flScaleDuration` | float32 |  |
+| `m_bWorldSpaceScale` | bool |  |
+| `m_flGlowProxySize` | float32 |  |
+| `m_flHDRColorScale` | float32 |  |
 | `m_flLastTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_flMaxFrame` | float32 |  |
 | `m_flStartScale` | float32 |  |
@@ -15948,7 +16224,7 @@ classDiagram
     CEntityInstance <|-- CBaseEntity
 ```
 
-### CTakeDamageInfoAPI
+### CTakeDamageResultAPI
 
 ### CTankTargetChange
 
@@ -16004,8 +16280,6 @@ classDiagram
 
 **Derived by:** [CCSTeam](server.md#ccsteam)
 
-**Metadata:** `MNetworkIncludeByName = "m_iTeamNum"`
-
 **Relationships:**
 
 ```mermaid
@@ -16021,10 +16295,10 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_aPlayerControllers` | CNetworkUtlVectorBase< CHandle< [CBasePlayerController](../schemas/server.md#cbaseplayercontroller) > > | `MNetworkEnable` `MNetworkAlias = "m_aPlayers"` |
-| `m_aPlayers` | CNetworkUtlVectorBase< CHandle< [CBasePlayerPawn](../schemas/server.md#cbaseplayerpawn) > > | `MNetworkEnable` `MNetworkAlias = "m_aPawns"` |
-| `m_iScore` | int32 | `MNetworkEnable` |
-| `m_szTeamname` | char[129] | `MNetworkEnable` |
+| `m_aPlayerControllers` | CNetworkUtlVectorBase< CHandle< [CBasePlayerController](../schemas/server.md#cbaseplayercontroller) > > |  |
+| `m_aPlayers` | CNetworkUtlVectorBase< CHandle< [CBasePlayerPawn](../schemas/server.md#cbaseplayerpawn) > > |  |
+| `m_iScore` | int32 |  |
+| `m_szTeamname` | char[129] |  |
 
 ### CTeamplayRules
 
@@ -16077,6 +16351,9 @@ classDiagram
     C_BaseEntity <|-- CLogicalEntity
     CEntityInstance <|-- C_BaseEntity
     CTestPulseIO *-- CEntityIOOutput
+    CTestPulseIO *-- CTestPulseIOComponent_Derived
+    CTestPulseIO --> CBaseEntity
+    CTestPulseIO *-- TestInputOutputCombinationsEnum_t
 ```
 
 **Fields:**
@@ -16084,15 +16361,76 @@ classDiagram
 | Name | Type | Annotations |
 |------|------|-------------|
 | `m_OnVariantVoid` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
-| `m_OnVariantBool` | CEntityOutputTemplate< bool, bool > |  |
-| `m_OnVariantInt` | CEntityOutputTemplate< int32, int32 > |  |
-| `m_OnVariantFloat` | CEntityOutputTemplate< float32, float32 > |  |
-| `m_OnVariantString` | CEntityOutputTemplate< CUtlSymbolLarge, CUtlSymbolLarge > |  |
-| `m_OnVariantColor` | CEntityOutputTemplate< Color, Color > |  |
-| `m_OnVariantVector` | CEntityOutputTemplate< Vector, Vector > |  |
+| `m_OnVariantBool` | CEntityOutputTemplate< bool > |  |
+| `m_OnVariantInt` | CEntityOutputTemplate< int32 > |  |
+| `m_OnVariantFloat` | CEntityOutputTemplate< float32 > |  |
+| `m_OnVariantString` | CEntityOutputTemplate< CUtlSymbolLarge > |  |
+| `m_OnVariantColor` | CEntityOutputTemplate< Color > |  |
+| `m_OnVariantVector` | CEntityOutputTemplate< Vector > |  |
 | `m_bAllowEmptyInputs` | bool |  |
+| `m_TestComponent` | [CTestPulseIOComponent_Derived](../schemas/server.md#ctestpulseiocomponent_derived) |  |
+| `m_OnInternalTestVoid` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
+| `m_OnInternalTestBool` | CEntityOutputTemplate< bool > |  |
+| `m_OnInternalTestInt` | CEntityOutputTemplate< int32 > |  |
+| `m_OnInternalTestFloat` | CEntityOutputTemplate< float32 > |  |
+| `m_OnInternalTestString` | CEntityOutputTemplate< CUtlSymbolLarge > |  |
+| `m_OnInternalTestColor` | CEntityOutputTemplate< Color > |  |
+| `m_OnInternalTestVector` | CEntityOutputTemplate< Vector > |  |
+| `m_OnInternalTestEntityName` | CEntityOutputTemplate< CEntityNameString > |  |
+| `m_OnInternalTestEntityHandle` | CEntityOutputTemplate< CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > > |  |
+| `m_OnInternalTestSchemaEnum` | CEntityOutputTemplate< [TestInputOutputCombinationsEnum_t](../schemas/server.md#testinputoutputcombinationsenum_t) > |  |
+| `m_OnInternalTestFloatString` | CEntityOutputTemplate< [CTestPulseIO](../schemas/server.md#ctestpulseio)::FloatStringArgs_t > |  |
+| `m_OnInternalTestEntityNameString` | CEntityOutputTemplate< [CTestPulseIO](../schemas/server.md#ctestpulseio)::EntityNameStringArgs_t > |  |
+| `m_OnInternalTestEntityHandleInt` | CEntityOutputTemplate< [CTestPulseIO](../schemas/server.md#ctestpulseio)::EntityHandleIntArgs_t > |  |
+| `m_OnInternalTestStringStringString` | CEntityOutputTemplate< [CTestPulseIO](../schemas/server.md#ctestpulseio)::ThreeStringArgs_t > |  |
+
+### CTestPulseIO
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"handleA": null,`, `"valueB": 0`, `}`
+
+### CTestPulseIO
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"nameA": "",`, `"strValueB": ""`, `}`
+
+### CTestPulseIO
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"flOutFloat": 0.000000,`, `"strOutString": ""`, `}`
+
+### CTestPulseIO
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"strArg1": "",`, `"strArg2": "",`, `"strArg3": ""`, `}`
 
 ### CTestPulseIOAPI
+
+### CTestPulseIOComponent
+
+**Derived by:** [CTestPulseIOComponent_Derived](server.md#ctestpulseiocomponent_derived)
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CTestPulseIOComponent",`, `"m_ComponentData": "DefaultComponentString",`, `"m_OnComponentTestFunc":`, `{`, `"m_Value": ""`, `}`, `}`
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CTestPulseIOComponent <|-- CTestPulseIOComponent_Derived
+```
+
+### CTestPulseIOComponent_API
+
+### CTestPulseIOComponent_Derived
+
+**Inherits from:** [CTestPulseIOComponent](server.md#ctestpulseiocomponent)
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CTestPulseIOComponent_Derived",`, `"m_ComponentData": "DefaultComponentString",`, `"m_OnComponentTestFunc":`, `{`, `"m_Value": ""`, `}`, `}`
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CTestPulseIOComponent <|-- CTestPulseIOComponent_Derived
+```
+
+### CTestPulseIOComponent_DerivedAPI
 
 ### CTextureBasedAnimatable
 
@@ -16112,14 +16450,14 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_bLoop` | bool | `MNetworkEnable` |
-| `m_flFPS` | float32 | `MNetworkEnable` |
-| `m_hPositionKeys` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
-| `m_hRotationKeys` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > | `MNetworkEnable` |
-| `m_vAnimationBoundsMin` | Vector | `MNetworkEnable` |
-| `m_vAnimationBoundsMax` | Vector | `MNetworkEnable` |
-| `m_flStartTime` | float32 | `MNetworkEnable` `MNotSaved` |
-| `m_flStartFrame` | float32 | `MNetworkEnable` |
+| `m_bLoop` | bool |  |
+| `m_flFPS` | float32 |  |
+| `m_hPositionKeys` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_hRotationKeys` | CStrongHandle< [InfoForResourceTypeCTextureBase](../schemas/resourcesystem.md#infoforresourcetypectexturebase) > |  |
+| `m_vAnimationBoundsMin` | Vector |  |
+| `m_vAnimationBoundsMax` | Vector |  |
+| `m_flStartTime` | float32 | `MNotSaved` |
+| `m_flStartFrame` | float32 |  |
 
 ### CTimeline
 
@@ -16137,13 +16475,13 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_flValues` | float32[64] | `MNetworkEnable` |
-| `m_nValueCounts` | int32[64] | `MNetworkEnable` |
-| `m_nBucketCount` | int32 | `MNetworkEnable` |
-| `m_flInterval` | float32 | `MNetworkEnable` |
-| `m_flFinalValue` | float32 | `MNetworkEnable` |
-| `m_nCompressionType` | [TimelineCompression_t](../schemas/client.md#timelinecompression_t) | `MNetworkEnable` |
-| `m_bStopped` | bool | `MNetworkEnable` |
+| `m_flValues` | float32[64] |  |
+| `m_nValueCounts` | int32[64] |  |
+| `m_nBucketCount` | int32 |  |
+| `m_flInterval` | float32 |  |
+| `m_flFinalValue` | float32 |  |
+| `m_nCompressionType` | [TimelineCompression_t](../schemas/client.md#timelinecompression_t) |  |
+| `m_bStopped` | bool |  |
 
 ### CTimerEntity
 
@@ -16198,11 +16536,11 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_flAutoExposureMin` | float32 | `MNetworkEnable` |
-| `m_flAutoExposureMax` | float32 | `MNetworkEnable` |
-| `m_flExposureAdaptationSpeedUp` | float32 | `MNetworkEnable` |
-| `m_flExposureAdaptationSpeedDown` | float32 | `MNetworkEnable` |
-| `m_flTonemapEVSmoothingRange` | float32 | `MNetworkEnable` |
+| `m_flAutoExposureMin` | float32 |  |
+| `m_flAutoExposureMax` | float32 |  |
+| `m_flExposureAdaptationSpeedUp` | float32 |  |
+| `m_flExposureAdaptationSpeedDown` | float32 |  |
+| `m_flTonemapEVSmoothingRange` | float32 |  |
 
 ### CTonemapController2Alias_env_tonemap_controller2
 
@@ -16333,7 +16671,7 @@ classDiagram
 | Name | Type | Annotations |
 |------|------|-------------|
 | `m_BuoyancyHelper` | [CBuoyancyHelper](../schemas/server.md#cbuoyancyhelper) |  |
-| `m_flFluidDensity` | float32 | `MNetworkEnable` |
+| `m_flFluidDensity` | float32 |  |
 
 ### CTriggerCallback
 
@@ -16416,15 +16754,15 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_vFanOriginOffset` | Vector | `MNetworkEnable` |
-| `m_vDirection` | Vector | `MNetworkEnable` |
-| `m_bPushTowardsInfoTarget` | bool | `MNetworkEnable` |
-| `m_bPushAwayFromInfoTarget` | bool | `MNetworkEnable` |
-| `m_qNoiseDelta` | Quaternion | `MNetworkEnable` |
-| `m_hInfoFan` | CHandle< [CInfoFan](../schemas/server.md#cinfofan) > | `MNetworkEnable` |
-| `m_flForce` | float32 | `MNetworkEnable` |
-| `m_bFalloff` | bool | `MNetworkEnable` |
-| `m_RampTimer` | [CountdownTimer](../schemas/server.md#countdowntimer) | `MNetworkEnable` |
+| `m_vFanOriginOffset` | Vector |  |
+| `m_vDirection` | Vector |  |
+| `m_bPushTowardsInfoTarget` | bool |  |
+| `m_bPushAwayFromInfoTarget` | bool |  |
+| `m_qNoiseDelta` | Quaternion |  |
+| `m_hInfoFan` | CHandle< [CInfoFan](../schemas/server.md#cinfofan) > |  |
+| `m_flForce` | float32 |  |
+| `m_bFalloff` | bool |  |
+| `m_RampTimer` | [CountdownTimer](../schemas/server.md#countdowntimer) |  |
 | `m_vFanOriginWS` | VectorWS |  |
 | `m_vFanOriginLS` | Vector |  |
 | `m_vFanEndLS` | Vector |  |
@@ -16461,9 +16799,9 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_strStartTouchEventName` | CUtlString | `MNetworkEnable` |
-| `m_strEndTouchEventName` | CUtlString | `MNetworkEnable` |
-| `m_strTriggerID` | CUtlString | `MNetworkEnable` |
+| `m_strStartTouchEventName` | CUtlString |  |
+| `m_strEndTouchEventName` | CUtlString |  |
+| `m_strTriggerID` | CUtlString |  |
 
 ### CTriggerGravity
 
@@ -16558,7 +16896,7 @@ classDiagram
 | `m_flMagnitude` | float32 |  |
 | `m_flNoise` | float32 |  |
 | `m_flViewkick` | float32 |  |
-| `m_pOutputForce` | CEntityOutputTemplate< Vector, Vector > |  |
+| `m_pOutputForce` | CEntityOutputTemplate< Vector > |  |
 
 ### CTriggerLerpObject
 
@@ -16631,8 +16969,8 @@ classDiagram
 | `m_bIsLooking` | bool |  |
 | `m_b2DFOV` | bool |  |
 | `m_bUseVelocity` | bool |  |
-| `m_bTestOcclusion` | bool | `MNetworkEnable` |
-| `m_bTestAllVisibleOcclusion` | bool | `MNetworkEnable` |
+| `m_bTestOcclusion` | bool |  |
+| `m_bTestAllVisibleOcclusion` | bool |  |
 | `m_OnTimeout` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnStartLook` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
 | `m_OnEndLook` | [CEntityIOOutput](../schemas/entity2.md#centityiooutput) |  |
@@ -16697,25 +17035,27 @@ classDiagram
     CBaseModelEntity <|-- CBaseToggle
     CBaseEntity <|-- CBaseModelEntity
     CEntityInstance <|-- CBaseEntity
+    CTriggerPhysics --> IPhysicsMotionController
 ```
 
 **Fields:**
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_gravityScale` | float32 | `MNetworkEnable` |
-| `m_linearLimit` | float32 | `MNetworkEnable` |
-| `m_linearDamping` | float32 | `MNetworkEnable` |
-| `m_angularLimit` | float32 | `MNetworkEnable` |
-| `m_angularDamping` | float32 | `MNetworkEnable` |
-| `m_linearForce` | float32 | `MNetworkEnable` |
-| `m_flFrequency` | float32 | `MNetworkEnable` |
-| `m_flDampingRatio` | float32 | `MNetworkEnable` |
-| `m_vecLinearForcePointAt` | Vector | `MNetworkEnable` |
-| `m_bCollapseToForcePoint` | bool | `MNetworkEnable` |
-| `m_vecLinearForcePointAtWorld` | Vector | `MNetworkEnable` |
-| `m_vecLinearForceDirection` | Vector | `MNetworkEnable` |
-| `m_bConvertToDebrisWhenPossible` | bool | `MNetworkEnable` |
+| `m_pController` | [IPhysicsMotionController](../schemas/client.md#iphysicsmotioncontroller)* | `MPhysPtr` |
+| `m_gravityScale` | float32 |  |
+| `m_linearLimit` | float32 |  |
+| `m_linearDamping` | float32 |  |
+| `m_angularLimit` | float32 |  |
+| `m_angularDamping` | float32 |  |
+| `m_linearForce` | float32 |  |
+| `m_flFrequency` | float32 |  |
+| `m_flDampingRatio` | float32 |  |
+| `m_vecLinearForcePointAt` | Vector |  |
+| `m_bCollapseToForcePoint` | bool |  |
+| `m_vecLinearForcePointAtWorld` | Vector |  |
+| `m_vecLinearForceDirection` | Vector |  |
+| `m_bConvertToDebrisWhenPossible` | bool |  |
 
 ### CTriggerProximity
 
@@ -16741,7 +17081,7 @@ classDiagram
 | `m_iszMeasureTarget` | CUtlSymbolLarge |  |
 | `m_fRadius` | float32 |  |
 | `m_nTouchers` | int32 |  |
-| `m_NearestEntityDistance` | CEntityOutputTemplate< float32, float32 > |  |
+| `m_NearestEntityDistance` | CEntityOutputTemplate< float32 > |  |
 
 ### CTriggerPush
 
@@ -16771,7 +17111,7 @@ classDiagram
 | `m_bTriggerOnStartTouch` | bool |  |
 | `m_bUsePathSimple` | bool |  |
 | `m_iszPathSimpleName` | CUtlSymbolLarge |  |
-| `m_PathSimple` | [CPathSimple](../schemas/server.md#cpathsimple)* | `MClassPtr` |
+| `m_PathSimple` | CHandle< [CPathSimple](../schemas/server.md#cpathsimple) > |  |
 | `m_splinePushType` | uint32 |  |
 
 ### CTriggerRemove
@@ -16957,11 +17297,11 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_iActiveIssueIndex` | int32 | `MNetworkEnable` |
-| `m_iOnlyTeamToVote` | int32 | `MNetworkEnable` |
-| `m_nVoteOptionCount` | int32[5] | `MNetworkEnable` |
-| `m_nPotentialVotes` | int32 | `MNetworkEnable` |
-| `m_bIsYesNoVote` | bool | `MNetworkEnable` |
+| `m_iActiveIssueIndex` | int32 |  |
+| `m_iOnlyTeamToVote` | int32 |  |
+| `m_nVoteOptionCount` | int32[5] |  |
+| `m_nPotentialVotes` | int32 |  |
+| `m_bIsYesNoVote` | bool |  |
 | `m_acceptingVotesTimer` | [CountdownTimer](../schemas/server.md#countdowntimer) |  |
 | `m_executeCommandTimer` | [CountdownTimer](../schemas/server.md#countdowntimer) |  |
 | `m_resetVoteTimer` | [CountdownTimer](../schemas/server.md#countdowntimer) |  |
@@ -16998,7 +17338,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponAug
@@ -17013,7 +17353,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponBaseItem
@@ -17029,8 +17369,8 @@ classDiagram
     CCSWeaponBase <|-- CWeaponBaseItem
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
-    CBaseAnimGraph <|-- CBaseFlex
+    CBaseAnimGraph <|-- CEconEntity
+    C_BaseModelEntity <|-- CBaseAnimGraph
     CWeaponBaseItem <|-- CItem_Healthshot
 ```
 
@@ -17038,8 +17378,8 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_bSequenceInProgress` | bool | `MNetworkEnable` |
-| `m_bRedraw` | bool | `MNetworkEnable` |
+| `m_bSequenceInProgress` | bool |  |
+| `m_bRedraw` | bool |  |
 
 ### CWeaponBizon
 
@@ -17053,7 +17393,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponCZ75a
@@ -17068,14 +17408,14 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 **Fields:**
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_bMagazineRemoved` | bool | `MNetworkEnable` |
+| `m_bMagazineRemoved` | bool |  |
 
 ### CWeaponElite
 
@@ -17089,7 +17429,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponFamas
@@ -17104,7 +17444,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponFiveSeven
@@ -17119,7 +17459,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponG3SG1
@@ -17134,7 +17474,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponGalilAR
@@ -17149,7 +17489,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponGlock
@@ -17164,7 +17504,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponHKP2000
@@ -17179,7 +17519,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponM249
@@ -17194,7 +17534,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponM4A1
@@ -17209,7 +17549,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponM4A1Silencer
@@ -17224,7 +17564,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponMAC10
@@ -17239,7 +17579,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponMP5SD
@@ -17254,7 +17594,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponMP7
@@ -17269,7 +17609,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponMP9
@@ -17284,7 +17624,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponMag7
@@ -17299,7 +17639,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponNOVA
@@ -17314,7 +17654,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseShotgun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponNegev
@@ -17329,7 +17669,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponP250
@@ -17344,7 +17684,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponP90
@@ -17359,7 +17699,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponRevolver
@@ -17374,7 +17714,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponSCAR20
@@ -17389,7 +17729,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponSG556
@@ -17404,7 +17744,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponSSG08
@@ -17419,7 +17759,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponSawedoff
@@ -17434,7 +17774,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseShotgun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponTaser
@@ -17449,7 +17789,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
     CWeaponTaser *-- GameTime_t
 ```
 
@@ -17457,7 +17797,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_fFireTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` |
+| `m_fFireTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_nLastAttackTick` | int32 |  |
 
 ### CWeaponTec9
@@ -17472,7 +17812,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponUMP45
@@ -17487,7 +17827,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponUSPSilencer
@@ -17502,7 +17842,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseGun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWeaponXM1014
@@ -17517,7 +17857,7 @@ classDiagram
     CCSWeaponBase <|-- CCSWeaponBaseShotgun
     CBasePlayerWeapon <|-- CCSWeaponBase
     CEconEntity <|-- CBasePlayerWeapon
-    CBaseFlex <|-- CEconEntity
+    CBaseAnimGraph <|-- CEconEntity
 ```
 
 ### CWorld
@@ -17578,6 +17918,8 @@ classDiagram
 
 ### CountdownTimer
 
+**Metadata:** `MGetKV3ClassDefaults = null`
+
 **Relationships:**
 
 ```mermaid
@@ -17589,10 +17931,12 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_duration` | float32 | `MNetworkEnable` |
-| `m_timestamp` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` |
-| `m_timescale` | float32 | `MNetworkEnable` |
-| `m_nWorldGroupId` | WorldGroupId_t | `MNetworkEnable` |
+| `m_duration` | float32 |  |
+| `m_timestamp` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
+| `m_timescale` | float32 |  |
+| `m_nWorldGroupId` | WorldGroupId_t |  |
+
+### DestructiblePartDamageRequestAPI
 
 ### DynamicVolumeDef_t
 
@@ -17626,24 +17970,15 @@ classDiagram
 | `BLOCK_LOS_FORCE_FALSE` | 1 |
 | `BLOCK_LOS_FORCE_TRUE` | 2 |
 
-### ESceneRequestState_t
-
-**Values:**
-
-| Name | Value |
-|------|-------|
-| `INACTIVE` | 0 |
-| `ACTIVE` | 1 |
-
 ### EngineCountdownTimer
 
 **Fields:**
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_duration` | float32 | `MNetworkEnable` |
-| `m_timestamp` | float32 | `MNetworkEnable` |
-| `m_timescale` | float32 | `MNetworkEnable` |
+| `m_duration` | float32 |  |
+| `m_timestamp` | float32 | `MKV3TransferSaveOpsForField = "GetEngineTimeSaveRestoreOps"` |
+| `m_timescale` | float32 |  |
 
 ### EntFinderMethod_t
 
@@ -17661,8 +17996,8 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_ID` | CUtlStringToken | `MNetworkEnable` |
-| `m_Values` | Vector4D | `MNetworkEnable` |
+| `m_ID` | CUtlStringToken |  |
+| `m_Values` | Vector4D |  |
 
 ### EntitySpottedState_t
 
@@ -17670,8 +18005,8 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_bSpotted` | bool | `MNetworkEnable` `MNetworkChangeCallback = "OnIsSpottedChanged"` |
-| `m_bSpottedByMask` | uint32[2] | `MNetworkEnable` `MNetworkChangeCallback = "OnIsSpottedChanged"` |
+| `m_bSpotted` | bool |  |
+| `m_bSpottedByMask` | uint32[2] |  |
 
 ### Explosions
 
@@ -17734,6 +18069,43 @@ classDiagram
 | `FUNC_DOOR_SPAWN_CLOSED` | 0 |
 | `FUNC_DOOR_SPAWN_OPEN` | 1 |
 
+### FuncMoverMovementSummaryFlags_t
+
+**Values:**
+
+| Name | Value |
+|------|-------|
+| `eNone` | 0 |
+| `eMovementBegin` | 1 |
+| `eStopBegin` | 2 |
+| `eStopComplete` | 4 |
+| `eReversing` | 8 |
+| `eEventsDispatched` | 16 |
+
+### FuncMoverMovementSummary_t
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    FuncMoverMovementSummary_t *-- FuncMoverMovementSummaryFlags_t
+    FuncMoverMovementSummary_t *-- GameTick_t
+    FuncMoverMovementSummary_t --> CPathMover
+```
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `flStartT` | float32 |  |
+| `flEndT` | float32 |  |
+| `nStartNodeIndex` | int32 |  |
+| `nStopNodeIndex` | int32 |  |
+| `nMovementMode` | int32 |  |
+| `nFlags` | [FuncMoverMovementSummaryFlags_t](../schemas/server.md#funcmovermovementsummaryflags_t) |  |
+| `nTick` | [GameTick_t](../schemas/entity2.md#gametick_t) |  |
+| `hPathMover` | CHandle< [CPathMover](../schemas/server.md#cpathmover) > |  |
+
 ### HoverPoseFlags_t
 
 **Values:**
@@ -17743,6 +18115,26 @@ classDiagram
 | `eNone` | 0 |
 | `ePosition` | 1 |
 | `eAngles` | 2 |
+
+### INavObstacle
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `m_nId` | uint64 |  |
+
+### INavObstacle
+
+**Values:**
+
+| Name | Value |
+|------|-------|
+| `NAV_OBSTACLE_TYPE_INVALID` | -1 |
+| `NAV_OBSTACLE_TYPE_NONE` | 0 |
+| `NAV_OBSTACLE_TYPE_AVOID` | 1 |
+| `NAV_OBSTACLE_TYPE_CONN` | 2 |
+| `NAV_OBSTACLE_TYPE_BLOCK` | 3 |
 
 ### IntervalTimer
 
@@ -17760,8 +18152,8 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_timestamp` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` |
-| `m_nWorldGroupId` | WorldGroupId_t | `MNetworkEnable` |
+| `m_timestamp` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
+| `m_nWorldGroupId` | WorldGroupId_t |  |
 
 ### LessonPanelLayoutFileTypes_t
 
@@ -17837,6 +18229,35 @@ classDiagram
 | `eFirst` | 0 |
 | `eInvalid` | 255 |
 
+### PathMoverEntitySpawn
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    PathMoverEntitySpawn --> CFuncMover
+    PathMoverEntitySpawn --> CBaseEntity
+```
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `hMover` | CHandle< [CFuncMover](../schemas/server.md#cfuncmover) > |  |
+| `vecOtherEntities` | CUtlVector< CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > > |  |
+
+### PhysGenericShapeType_t
+
+**Values:**
+
+| Name | Value |
+|------|-------|
+| `GENERIC_SHAPE_POINT` | 0 |
+| `GENERIC_SHAPE_SPHERE` | 1 |
+| `GENERIC_SHAPE_AABB` | 2 |
+| `GENERIC_SHAPE_CAPSULE` | 3 |
+| `GENERIC_SHAPE_HULL` | 4 |
+
 ### PhysicsRagdollPose_t
 
 **Relationships:**
@@ -17850,27 +18271,9 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_Transforms` | CNetworkUtlVectorBase< CTransform > | `MNetworkEnable` `MNetworkEncoder = "coord"` `MNetworkChangeCallback = "OnTransformChanged"` |
-| `m_hOwner` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > | `MNetworkEnable` |
+| `m_Transforms` | CNetworkUtlVectorBase< CTransform > |  |
+| `m_hOwner` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 | `m_bSetFromDebugHistory` | bool | `MNotSaved` |
-
-### PredictedDamageTag_t
-
-**Relationships:**
-
-```mermaid
-classDiagram
-    PredictedDamageTag_t *-- GameTick_t
-```
-
-**Fields:**
-
-| Name | Type | Annotations |
-|------|------|-------------|
-| `nTagTick` | [GameTick_t](../schemas/entity2.md#gametick_t) | `MNetworkEnable` |
-| `flFlinchModSmall` | float32 | `MNetworkEnable` |
-| `flFlinchModLarge` | float32 | `MNetworkEnable` |
-| `flFriendlyFireDamageReductionRatio` | float32 | `MNetworkEnable` |
 
 ### PropDoorRotatingOpenDirection_e
 
@@ -18043,15 +18446,30 @@ classDiagram
 | `SCENE_ONPLAYERDEATH_DO_NOTHING` | 0 |
 | `SCENE_ONPLAYERDEATH_CANCEL` | 1 |
 
-### SceneRequestHandle_t
+### SceneOpportunityActor_t
 
-**Metadata:** `MIsBoxedIntegerType`
+**Relationships:**
+
+```mermaid
+classDiagram
+    SceneOpportunityActor_t --> CBaseModelEntity
+    SceneOpportunityActor_t *-- SceneInterestTags_t
+```
 
 **Fields:**
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_Value` | int32 |  |
+| `m_hActor` | CHandle< [CBaseModelEntity](../schemas/server.md#cbasemodelentity) > |  |
+| `m_bDynamicActor` | bool |  |
+| `m_bAnchor` | bool |  |
+| `m_strActorName` | CUtlSymbolLarge |  |
+| `m_strEntityName` | CUtlSymbolLarge |  |
+| `m_InterestTags` | [SceneInterestTags_t](../schemas/client.md#sceneinteresttags_t) |  |
+
+### SceneRequestTargetMapPair_t
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_actorName": "",`, `"m_targetName": ""`, `}`
 
 ### ScriptedConflictResponse_t
 
@@ -18068,11 +18486,11 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_unDefIdx` | uint16 | `MNetworkEnable` |
-| `m_nCost` | int32 | `MNetworkEnable` |
-| `m_nPrevArmor` | int32 | `MNetworkEnable` |
-| `m_bPrevHelmet` | bool | `MNetworkEnable` |
-| `m_hItem` | CEntityHandle | `MNetworkEnable` |
+| `m_unDefIdx` | uint16 |  |
+| `m_nCost` | int32 |  |
+| `m_nPrevArmor` | int32 |  |
+| `m_bPrevHelmet` | bool |  |
+| `m_hItem` | CEntityHandle |  |
 
 ### SequenceHistory_t
 
@@ -18102,9 +18520,9 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `unClass` | uint16 | `MNetworkEnable` |
-| `unSlot` | uint16 | `MNetworkEnable` |
-| `unItemDefIdx` | uint16 | `MNetworkEnable` |
+| `unClass` | uint16 |  |
+| `unSlot` | uint16 |  |
+| `unItemDefIdx` | uint16 |  |
 
 ### SimpleConstraintSoundProfile
 
@@ -18249,17 +18667,17 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_nInteractsAs` | uint64 | `MNetworkEnable` |
-| `m_nInteractsWith` | uint64 | `MNetworkEnable` |
-| `m_nInteractsExclude` | uint64 | `MNetworkEnable` |
-| `m_nEntityId` | uint32 | `MNetworkEnable` |
-| `m_nOwnerId` | uint32 | `MNetworkEnable` |
-| `m_nHierarchyId` | uint16 | `MNetworkEnable` |
-| `m_nDetailLayerMask` | uint16 | `MNetworkEnable` |
-| `m_nDetailLayerMaskType` | uint8 | `MNetworkEnable` |
-| `m_nTargetDetailLayer` | uint8 | `MNetworkEnable` |
-| `m_nCollisionGroup` | uint8 | `MNetworkEnable` |
-| `m_nCollisionFunctionMask` | uint8 | `MNetworkEnable` |
+| `m_nInteractsAs` | uint64 |  |
+| `m_nInteractsWith` | uint64 |  |
+| `m_nInteractsExclude` | uint64 |  |
+| `m_nEntityId` | uint32 |  |
+| `m_nOwnerId` | uint32 |  |
+| `m_nHierarchyId` | uint16 |  |
+| `m_nDetailLayerMask` | uint16 |  |
+| `m_nDetailLayerMaskType` | uint8 |  |
+| `m_nTargetDetailLayer` | uint8 |  |
+| `m_nCollisionGroup` | uint8 |  |
+| `m_nCollisionFunctionMask` | uint8 |  |
 
 ### VelocitySampler
 
@@ -18291,9 +18709,9 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `nType` | [FixAngleSet_t](../schemas/client.md#fixangleset_t) | `MNetworkEnable` |
-| `qAngle` | QAngle | `MNetworkEnable` `MNetworkEncoder = "qangle_precise"` |
-| `nIndex` | uint32 | `MNetworkEnable` |
+| `nType` | [FixAngleSet_t](../schemas/client.md#fixangleset_t) |  |
+| `qAngle` | QAngle |  |
+| `nIndex` | uint32 |  |
 
 ### WeaponPurchaseCount_t
 
@@ -18301,8 +18719,8 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_nItemDefIndex` | uint16 | `MNetworkEnable` |
-| `m_nCount` | uint16 | `MNetworkEnable` |
+| `m_nItemDefIndex` | uint16 |  |
+| `m_nCount` | uint16 |  |
 
 ### WeaponPurchaseTracker_t
 
@@ -18317,7 +18735,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_weaponPurchases` | CUtlVectorEmbeddedNetworkVar< [WeaponPurchaseCount_t](../schemas/server.md#weaponpurchasecount_t) > | `MNetworkEnable` |
+| `m_weaponPurchases` | CUtlVectorEmbeddedNetworkVar< [WeaponPurchaseCount_t](../schemas/server.md#weaponpurchasecount_t) > |  |
 
 ### audioparams_t
 
@@ -18325,11 +18743,11 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `localSound` | Vector[8] | `MNetworkEnable` `MNetworkEncoder = "coord"` |
-| `soundscapeIndex` | int32 | `MNetworkEnable` |
-| `localBits` | uint8 | `MNetworkEnable` |
-| `soundscapeEntityListIndex` | int32 | `MNetworkEnable` |
-| `soundEventHash` | uint32 | `MNetworkEnable` |
+| `localSound` | Vector[8] |  |
+| `soundscapeIndex` | int32 |  |
+| `localBits` | uint8 |  |
+| `soundscapeEntityListIndex` | int32 |  |
+| `soundEventHash` | uint32 |  |
 
 ### doorCheck_e
 
@@ -18416,29 +18834,29 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `dirPrimary` | Vector | `MNetworkEnable` `MNetworkEncoder = "coord"` |
-| `colorPrimary` | Color | `MNetworkEnable` |
-| `colorSecondary` | Color | `MNetworkEnable` |
-| `colorPrimaryLerpTo` | Color | `MNetworkEnable` `MNetworkUserGroup = "FogController"` `MNotSaved` |
-| `colorSecondaryLerpTo` | Color | `MNetworkEnable` `MNetworkUserGroup = "FogController"` `MNotSaved` |
-| `start` | float32 | `MNetworkEnable` |
-| `end` | float32 | `MNetworkEnable` |
-| `farz` | float32 | `MNetworkEnable` `MNetworkUserGroup = "FogController"` |
-| `maxdensity` | float32 | `MNetworkEnable` |
-| `exponent` | float32 | `MNetworkEnable` |
-| `HDRColorScale` | float32 | `MNetworkEnable` |
-| `skyboxFogFactor` | float32 | `MNetworkEnable` `MNetworkUserGroup = "FogController"` `MNotSaved` |
-| `skyboxFogFactorLerpTo` | float32 | `MNetworkEnable` `MNetworkUserGroup = "FogController"` `MNotSaved` |
-| `startLerpTo` | float32 | `MNetworkEnable` `MNetworkUserGroup = "FogController"` `MNotSaved` |
-| `endLerpTo` | float32 | `MNetworkEnable` `MNetworkUserGroup = "FogController"` `MNotSaved` |
-| `maxdensityLerpTo` | float32 | `MNetworkEnable` `MNetworkUserGroup = "FogController"` `MNotSaved` |
-| `lerptime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNetworkEnable` `MNetworkUserGroup = "FogController"` `MNotSaved` |
-| `duration` | float32 | `MNetworkEnable` `MNetworkUserGroup = "FogController"` |
-| `blendtobackground` | float32 | `MNetworkEnable` `MNetworkUserGroup = "FogController"` |
-| `scattering` | float32 | `MNetworkEnable` `MNetworkUserGroup = "FogController"` |
-| `locallightscale` | float32 | `MNetworkEnable` `MNetworkUserGroup = "FogController"` |
-| `enable` | bool | `MNetworkEnable` |
-| `blend` | bool | `MNetworkEnable` |
+| `dirPrimary` | Vector |  |
+| `colorPrimary` | Color |  |
+| `colorSecondary` | Color |  |
+| `colorPrimaryLerpTo` | Color | `MNotSaved` |
+| `colorSecondaryLerpTo` | Color | `MNotSaved` |
+| `start` | float32 |  |
+| `end` | float32 |  |
+| `farz` | float32 |  |
+| `maxdensity` | float32 |  |
+| `exponent` | float32 |  |
+| `HDRColorScale` | float32 |  |
+| `skyboxFogFactor` | float32 | `MNotSaved` |
+| `skyboxFogFactorLerpTo` | float32 | `MNotSaved` |
+| `startLerpTo` | float32 | `MNotSaved` |
+| `endLerpTo` | float32 | `MNotSaved` |
+| `maxdensityLerpTo` | float32 | `MNotSaved` |
+| `lerptime` | [GameTime_t](../schemas/entity2.md#gametime_t) | `MNotSaved` |
+| `duration` | float32 |  |
+| `blendtobackground` | float32 |  |
+| `scattering` | float32 |  |
+| `locallightscale` | float32 |  |
+| `enable` | bool |  |
+| `blend` | bool |  |
 | `m_bPadding2` | bool | `MNotSaved` |
 | `m_bPadding` | bool | `MNotSaved` |
 
@@ -18455,7 +18873,7 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_hCtrl` | CHandle< [CFogController](../schemas/server.md#cfogcontroller) > | `MNetworkEnable` `MNetworkUserGroup = "PlayerFogController"` |
+| `m_hCtrl` | CHandle< [CFogController](../schemas/server.md#cfogcontroller) > |  |
 | `m_flTransitionTime` | float32 |  |
 | `m_OldColor` | Color |  |
 | `m_flOldStart` | float32 |  |
@@ -18525,6 +18943,10 @@ classDiagram
 |------|------|-------------|
 | `hEntity` | CHandle< [CBaseEntity](../schemas/server.md#cbaseentity) > |  |
 
+### modifiedconvars_t
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"pszConvar": "",`, `"pszCurrentValue": "",`, `"pszOrgValue": ""`, `}`
+
 ### navproperties_t
 
 **Values:**
@@ -18547,19 +18969,19 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_nModelID` | int32 | `MNetworkEnable` |
-| `m_hMaterialBase` | CStrongHandle< [InfoForResourceTypeIMaterial2](../schemas/resourcesystem.md#infoforresourcetypeimaterial2) > | `MNetworkEnable` |
-| `m_hMaterialDamageOverlay` | CStrongHandle< [InfoForResourceTypeIMaterial2](../schemas/resourcesystem.md#infoforresourcetypeimaterial2) > | `MNetworkEnable` |
-| `m_solid` | [ShardSolid_t](../schemas/client.md#shardsolid_t) | `MNetworkEnable` |
-| `m_vecPanelSize` | Vector2D | `MNetworkEnable` |
-| `m_vecStressPositionA` | Vector2D | `MNetworkEnable` |
-| `m_vecStressPositionB` | Vector2D | `MNetworkEnable` |
-| `m_vecPanelVertices` | CNetworkUtlVectorBase< Vector2D > | `MNetworkEnable` |
-| `m_vInitialPanelVertices` | CNetworkUtlVectorBase< Vector4D > | `MNetworkEnable` |
-| `m_flGlassHalfThickness` | float32 | `MNetworkEnable` |
-| `m_bHasParent` | bool | `MNetworkEnable` |
-| `m_bParentFrozen` | bool | `MNetworkEnable` |
-| `m_SurfacePropStringToken` | CUtlStringToken | `MNetworkEnable` |
+| `m_nModelID` | int32 |  |
+| `m_hMaterialBase` | CStrongHandle< [InfoForResourceTypeIMaterial2](../schemas/resourcesystem.md#infoforresourcetypeimaterial2) > |  |
+| `m_hMaterialDamageOverlay` | CStrongHandle< [InfoForResourceTypeIMaterial2](../schemas/resourcesystem.md#infoforresourcetypeimaterial2) > |  |
+| `m_solid` | [ShardSolid_t](../schemas/client.md#shardsolid_t) |  |
+| `m_vecPanelSize` | Vector2D |  |
+| `m_vecStressPositionA` | Vector2D |  |
+| `m_vecStressPositionB` | Vector2D |  |
+| `m_vecPanelVertices` | CNetworkUtlVectorBase< Vector2D > |  |
+| `m_vInitialPanelVertices` | CNetworkUtlVectorBase< Vector4D > |  |
+| `m_flGlassHalfThickness` | float32 |  |
+| `m_bHasParent` | bool |  |
+| `m_bParentFrozen` | bool |  |
+| `m_SurfacePropStringToken` | CUtlStringToken |  |
 
 ### sky3dparams_t
 
@@ -18567,9 +18989,9 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `scale` | int16 | `MNetworkEnable` |
-| `origin` | Vector | `MNetworkEnable` `MNetworkEncoder = "coord"` |
-| `bClip3DSkyBoxNearToWorldFar` | bool | `MNetworkEnable` `MNotSaved` |
-| `flClip3DSkyBoxNearToWorldFarOffset` | float32 | `MNetworkEnable` `MNotSaved` |
-| `fog` | fogparams_t | `MNetworkEnable` `MNotSaved` |
-| `m_nWorldGroupID` | WorldGroupId_t | `MNetworkEnable` |
+| `scale` | int16 |  |
+| `origin` | Vector |  |
+| `bClip3DSkyBoxNearToWorldFar` | bool | `MNotSaved` |
+| `flClip3DSkyBoxNearToWorldFarOffset` | float32 | `MNotSaved` |
+| `fog` | fogparams_t | `MNotSaved` |
+| `m_nWorldGroupID` | WorldGroupId_t |  |

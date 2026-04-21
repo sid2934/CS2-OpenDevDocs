@@ -646,7 +646,7 @@ classDiagram
 
 ### RnSoftbodyParticle_t
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_flMassInv": 0.000000`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_flMassInv": -nan`, `}`
 
 ### RnSoftbodySpring_t
 

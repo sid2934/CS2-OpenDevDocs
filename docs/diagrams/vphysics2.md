@@ -13,5 +13,6 @@ Class relationships (inheritance and composition) for the `vphysics2` module.
 
 ```mermaid
 classDiagram
+    IPhysicsBodyList <|-- IPhysAggregateInstance
     RnBodyDesc_t <|-- vphysics_save_cphysicsbody_t
 ```

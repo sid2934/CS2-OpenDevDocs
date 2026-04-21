@@ -7,12 +7,18 @@ nav_exclude: true
 
 # UML: client
 
-Class relationships (inheritance and composition) for the `client` module (showing 300 of 415 relationships).
+Class relationships (inheritance and composition) for the `client` module (showing 300 of 421 relationships).
 
 **Arrow legend:** `<|--` inheritance &nbsp; `*--` composition &nbsp; `-->` association/pointer
 
 ```mermaid
 classDiagram
+    DebugSnapshotBaseStructuredData_t <|-- AI_BaseNPCAnimGraph_DebugSnapshotData_t
+    DebugSnapshotBaseStructuredData_t <|-- AI_BaseNPC_DebugSnapshotData_t
+    DebugSnapshotBaseStructuredData_t <|-- AI_DefaultNPC_DebugSnapshotData_t
+    DebugSnapshotBaseStructuredData_t <|-- AI_MotorGroundAnimgraph_DebugSnapshotData_t
+    DebugSnapshotBaseStructuredData_t <|-- AI_Motor_DebugSnapshotData_t
+    DebugSnapshotBaseStructuredData_t <|-- AI_Navigator_DebugSnapshotData_t
     CAnimEventListenerBase <|-- CAnimEventListener
     CAnimEventListenerBase <|-- CAnimEventQueueListener
     C_BaseModelEntity <|-- CBaseAnimGraph
@@ -31,7 +37,10 @@ classDiagram
     CBodyComponent <|-- CBodyComponentSkeletonInstance
     C_BaseTrigger <|-- CBombTarget
     CAnimGraphControllerBase <|-- CCS2ChickenGraphController
+    CCS2WeaponGraphController <|-- CCS2PawnGraphController
+    CAnimGraphControllerBase <|-- CCS2UIPawnGraphController
     CAnimGraphControllerBase <|-- CCS2WeaponGraphController
+    C_CSGO_EndOfMatchLineupEndpoint <|-- CCSGO_EndOfMatchLineupEnd
     C_CSGO_TeamIntroCharacterPosition <|-- CCSGO_WingmanIntroCharacterPosition
     CCSGO_WingmanIntroCharacterPosition <|-- CCSGO_WingmanIntroCounterTerroristPosition
     CCSGO_WingmanIntroCharacterPosition <|-- CCSGO_WingmanIntroTerroristPosition
@@ -63,6 +72,7 @@ classDiagram
     CPlayer_WeaponServices <|-- CCSPlayer_WeaponServices
     CBasePlayerWeaponVData <|-- CCSWeaponBaseVData
     C_BaseEntity <|-- CCS_PortraitWorldCallbackHandler
+    C_BaseModelEntity <|-- CCashStack
     C_PointEntity <|-- CChoreoInfoTarget
     C_BaseEntity <|-- CCitadelSoundOpvarSetOBB
     IClientAlphaProperty <|-- CClientAlphaProperty
@@ -102,7 +112,6 @@ classDiagram
     C_PointEntity <|-- CMapInfo
     CNmPoseTask <|-- CNmAimCSTask
     CNmEventConsumer <|-- CNmEventConsumerAttributes
-    CNmEventConsumerAttributes <|-- CNmEventConsumerHudModelArmsAttributes
     CNmEventConsumer <|-- CNmEventConsumerLegacy
     CNmEventConsumer <|-- CNmEventConsumerParticle
     CNmEventConsumer <|-- CNmEventConsumerSound
@@ -156,11 +165,10 @@ classDiagram
     C_CSWeaponBase <|-- C_BaseCSGrenade
     C_BaseGrenade <|-- C_BaseCSGrenadeProjectile
     C_BaseModelEntity <|-- C_BaseClientUIEntity
-    C_BaseFlex <|-- C_BaseCombatCharacter
+    CBaseAnimGraph <|-- C_BaseCombatCharacter
     C_BaseToggle <|-- C_BaseDoor
     CEntityInstance <|-- C_BaseEntity
-    CBaseAnimGraph <|-- C_BaseFlex
-    C_BaseFlex <|-- C_BaseGrenade
+    CBaseAnimGraph <|-- C_BaseGrenade
     C_BaseEntity <|-- C_BaseModelEntity
     C_BaseCombatCharacter <|-- C_BasePlayerPawn
     C_EconEntity <|-- C_BasePlayerWeapon
@@ -181,16 +189,14 @@ classDiagram
     C_CSGO_TeamPreviewCamera <|-- C_CSGO_CounterTerroristWingmanIntroCamera
     C_CSGO_TeamPreviewCamera <|-- C_CSGO_EndOfMatchCamera
     C_CSGO_TeamPreviewCharacterPosition <|-- C_CSGO_EndOfMatchCharacterPosition
-    C_CSGO_EndOfMatchLineupEndpoint <|-- C_CSGO_EndOfMatchLineupEnd
     C_BaseEntity <|-- C_CSGO_EndOfMatchLineupEndpoint
     C_CSGO_EndOfMatchLineupEndpoint <|-- C_CSGO_EndOfMatchLineupStart
     C_BaseEntity <|-- C_CSGO_MapPreviewCameraPath
     C_BaseEntity <|-- C_CSGO_MapPreviewCameraPathNode
-    C_BaseFlex <|-- C_CSGO_PreviewModel
+    CBaseAnimGraph <|-- C_CSGO_PreviewModel
     C_CSGO_PreviewModel <|-- C_CSGO_PreviewModelAlias_csgo_item_previewmodel
     C_CSPlayerPawn <|-- C_CSGO_PreviewPlayer
     C_CSGO_PreviewPlayer <|-- C_CSGO_PreviewPlayerAlias_csgo_player_previewmodel
-    CAnimGraphControllerBase <|-- C_CSGO_PreviewPlayer_GraphController
     C_CSGO_TeamPreviewCharacterPosition <|-- C_CSGO_TeamIntroCharacterPosition
     C_CSGO_TeamIntroCharacterPosition <|-- C_CSGO_TeamIntroCounterTerroristPosition
     C_CSGO_TeamIntroCharacterPosition <|-- C_CSGO_TeamIntroTerroristPosition
@@ -229,13 +235,14 @@ classDiagram
     C_DynamicProp <|-- C_DynamicPropAlias_cable_dynamic
     C_DynamicProp <|-- C_DynamicPropAlias_dynamic_prop
     C_DynamicProp <|-- C_DynamicPropAlias_prop_dynamic_override
-    C_BaseFlex <|-- C_EconEntity
+    CBaseAnimGraph <|-- C_EconEntity
     IHasAttributes <|-- C_EconEntity
     IEconItemInterface <|-- C_EconItemView
     C_EconEntity <|-- C_EconWearable
     C_BaseModelEntity <|-- C_EntityDissolve
     C_BaseEntity <|-- C_EntityFlame
     C_BaseEntity <|-- C_EnvCombinedLightProbeVolume
+    C_EnvCombinedLightProbeVolume <|-- C_EnvCombinedLightProbeVolumeAlias_func_combined_light_probe_volume
     C_BaseEntity <|-- C_EnvCubemap
     C_EnvCubemap <|-- C_EnvCubemapBox
     C_BaseEntity <|-- C_EnvCubemapFog
@@ -306,11 +313,4 @@ classDiagram
     C_PathParticleRope <|-- C_PathParticleRopeAlias_path_particle_rope_clientside
     C_Breakable <|-- C_PhysBox
     CBaseAnimGraph <|-- C_PhysMagnet
-    C_BreakableProp <|-- C_PhysPropClientside
-    C_BreakableProp <|-- C_PhysicsProp
-    C_PhysicsProp <|-- C_PhysicsPropMultiplayer
-    CBaseAnimGraph <|-- C_PlantedC4
-    IHasAttributes <|-- C_PlantedC4
-    C_BaseEntity <|-- C_PlayerPing
-    C_ModelPointEntity <|-- C_PlayerSprayDecal
 ```

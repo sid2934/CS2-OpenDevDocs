@@ -19,6 +19,7 @@ nav_exclude: true
 | [CSteamAudioProbeData](#csteamaudioprobedata) | class |  | 0 |
 | [CSteamAudioProbeGrid](#csteamaudioprobegrid) | class |  | 0 |
 | [CSteamAudioProbeLineSegment](#csteamaudioprobelinesegment) | class |  | 0 |
+| [CSteamAudioSceneData](#csteamaudioscenedata) | class |  | 0 |
 | [SteamAudioCustomDataDimensionsSettings_t](#steamaudiocustomdatadimensionssettings_t) | class |  | 0 |
 | [SteamAudioCustomDataOcclusionSettings_t](#steamaudiocustomdataocclusionsettings_t) | class |  | 0 |
 | [SteamAudioPathSettings_t](#steamaudiopathsettings_t) | class |  | 0 |
@@ -50,7 +51,7 @@ nav_exclude: true
 
 ### CSteamAudioBakedReverbData
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_nBands": 3,`, `"m_grid":`, `{`, `"m_aabb":`, `{`, `"m_vMinBounds":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_vMaxBounds":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `]`, `},`, `"m_flSpacing": 0.000000,`, `"m_nx": 0,`, `"m_ny": 0,`, `"m_nz": 0,`, `"m_vecLineSegments":`, `[`, `],`, `"m_vecProbes":`, `[`, `]`, `},`, `"m_reverbSettings":`, `{`, `"m_nNumRays": 0,`, `"m_nNumBounces": 0,`, `"m_flIRDuration": 0.000000,`, `"m_nAmbisonicsOrder": 0`, `},`, `"m_reverbClusteringSettings":`, `{`, `"m_bEnableClustering": false,`, `"m_nCubeMapResolution": 0,`, `"m_flDepthThreshold": 0.000000`, `},`, `"m_reverbCompressionSettings":`, `{`, `"m_bEnableCompression": false,`, `"m_flQuality": 0.950000`, `},`, `"m_vecClusterForProbe":`, `[`, `],`, `"m_compressedData":`, `{`, `"m_nChannels": 0,`, `"m_nBands": 0,`, `"m_nBins": 0,`, `"m_nProbes": 0,`, `"m_vecNumSingularValues":`, `[`, `],`, `"m_vecDictionary":`, `[`, `],`, `"m_vecCompressedData":`, `[`, `]`, `},`, `"m_compressedClusteredData":`, `{`, `"m_nChannels": 0,`, `"m_nBands": 0,`, `"m_nBins": 0,`, `"m_nProbes": 0,`, `"m_vecNumSingularValues":`, `[`, `],`, `"m_vecDictionary":`, `[`, `],`, `"m_vecCompressedData":`, `[`, `]`, `},`, `"m_movables":`, `{`, `"m_vecData":`, `[`, `],`, `"m_vecInitialTransforms":`, `[`, `],`, `"m_vecAABBs":`, `[`, `],`, `"m_vecKeys":`, `[`, `]`, `}`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_nBands": 3,`, `"m_scene":`, `{`, `},`, `"m_grid":`, `{`, `"m_aabb":`, `{`, `"m_vMinBounds":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_vMaxBounds":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `]`, `},`, `"m_flSpacing": 0.000000,`, `"m_nx": 0,`, `"m_ny": 0,`, `"m_nz": 0,`, `"m_vecLineSegments":`, `[`, `],`, `"m_vecProbes":`, `[`, `]`, `},`, `"m_reverbSettings":`, `{`, `"m_nNumRays": 0,`, `"m_nNumBounces": 0,`, `"m_flIRDuration": 0.000000,`, `"m_nAmbisonicsOrder": 0,`, `"m_bExportScene": false`, `},`, `"m_reverbClusteringSettings":`, `{`, `"m_bEnableClustering": false,`, `"m_nCubeMapResolution": 0,`, `"m_flDepthThreshold": 0.000000`, `},`, `"m_reverbCompressionSettings":`, `{`, `"m_bEnableCompression": false,`, `"m_flQuality": 0.950000`, `},`, `"m_vecClusterForProbe":`, `[`, `],`, `"m_compressedData":`, `{`, `"m_nChannels": 0,`, `"m_nBands": 0,`, `"m_nBins": 0,`, `"m_nProbes": 0,`, `"m_vecNumSingularValues":`, `[`, `],`, `"m_vecDictionary":`, `[`, `],`, `"m_vecCompressedData":`, `[`, `]`, `},`, `"m_compressedClusteredData":`, `{`, `"m_nChannels": 0,`, `"m_nBands": 0,`, `"m_nBins": 0,`, `"m_nProbes": 0,`, `"m_vecNumSingularValues":`, `[`, `],`, `"m_vecDictionary":`, `[`, `],`, `"m_vecCompressedData":`, `[`, `]`, `},`, `"m_movables":`, `{`, `"m_vecData":`, `[`, `],`, `"m_vecInitialTransforms":`, `[`, `],`, `"m_vecAABBs":`, `[`, `],`, `"m_vecKeys":`, `[`, `]`, `}`, `}`
 
 ### CSteamAudioCompressedReverb
 
@@ -67,6 +68,10 @@ nav_exclude: true
 ### CSteamAudioProbeLineSegment
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"m_vStart":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_vEnd":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_vecIntervals":`, `[`, `],`, `"m_vecProbeIndices":`, `[`, `]`, `}`
+
+### CSteamAudioSceneData
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `}`
 
 ### SteamAudioCustomDataDimensionsSettings_t
 
@@ -86,8 +91,8 @@ nav_exclude: true
 
 ### SteamAudioReverbCompressionSettings_t
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_bEnableCompression": false,`, `"m_flQuality": 0.950000`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_bEnableCompression": true,`, `"m_flQuality": 0.950000`, `}`
 
 ### SteamAudioReverbSettings_t
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_nNumRays": 0,`, `"m_nNumBounces": 0,`, `"m_flIRDuration": 0.000000,`, `"m_nAmbisonicsOrder": 0`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_nNumRays": 0,`, `"m_nNumBounces": 0,`, `"m_flIRDuration": 0.000000,`, `"m_nAmbisonicsOrder": 0,`, `"m_bExportScene": false`, `}`

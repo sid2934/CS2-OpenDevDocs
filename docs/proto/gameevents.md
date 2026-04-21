@@ -37,6 +37,7 @@ direction LR
     +uint32 entityhandle
     +uint64 material_id
     +uint32 sequence_name
+    +CMsgVector position_objectspace
   }
 
   class CMsgClearWorldDecalsEvent {
@@ -194,6 +195,7 @@ Instructs clients to paint a decal (bullet hole, blood splatter, spray) onto a s
 | `material_id` | 11 | uint64 | optional | Material ID of the surface at the hit point. |
 | `sequence_name` | 12 | uint32 | optional | Hash of the decal sequence name for animated decals. |
 | `triangleindex` | 13 | int32 | optional | Mesh triangle index for precise placement on complex geometry. |
+| `position_objectspace` | 14 | CMsgVector | optional |  |
 
 ### `CMsgClearWorldDecalsEvent`
 

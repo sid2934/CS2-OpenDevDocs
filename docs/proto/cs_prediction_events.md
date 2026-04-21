@@ -23,8 +23,6 @@ direction LR
 
   class CCSPredictionEvent_AddAimPunch {
     +CMsgQAngle punch_angle
-    +uint32 when_tick
-    +float when_tick_frac
   }
 
   class ECSPredictionEvents{
@@ -59,5 +57,3 @@ direction LR
 | Field | Ordinal | Type | Label | Description |
 |-------|---------|------|-------|-------------|
 | `punch_angle` | 1 | CMsgQAngle | optional |  |
-| `when_tick` | 2 | uint32 | optional |  |
-| `when_tick_frac` | 3 | float | optional |  |
