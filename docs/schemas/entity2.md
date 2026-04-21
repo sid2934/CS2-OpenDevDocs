@@ -18,13 +18,14 @@ nav_exclude: true
 | [CEntityIOOutput](#centityiooutput) | class |  | 0 |
 | [CEntityIdentity](#centityidentity) | class |  | 12 |
 | [CEntityInstance](#centityinstance) | class |  | 3 |
+| [CEntityKeyValues](#centitykeyvalues) | class |  | 0 |
 | [CNetworkVarChainer](#cnetworkvarchainer) | class |  | 1 |
 | [CScriptComponent](#cscriptcomponent) | class | CEntityComponent | 1 |
 | [CVariantDefaultAllocator](#cvariantdefaultallocator) | class |  | 0 |
 | [EntComponentInfo_t](#entcomponentinfo_t) | class |  | 7 |
 | [EntInput_t](#entinput_t) | class |  | 0 |
-| [EntOutput_t](#entoutput_t) | class |  | 0 |
 | [EntityDormancyType_t](#entitydormancytype_t) | enum |  | 3 |
+| [EntityIOQueuePrioritizedEvent_t](#entityioqueueprioritizedevent_t) | class |  | 0 |
 | [EntityIOTargetType_t](#entityiotargettype_t) | enum |  | 4 |
 | [GameTick_t](#gametick_t) | class |  | 1 |
 | [GameTime_t](#gametime_t) | class |  | 1 |
@@ -94,14 +95,14 @@ classDiagram
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_nameStringableIndex` | int32 | `MNetworkEnable` `MNotSaved` `MNetworkChangeCallback = "entityIdentityNameChanged"` |
+| `m_nameStringTableIndex` | int32 | `MNotSaved` |
 | `m_name` | CUtlSymbolLarge |  |
 | `m_designerName` | CUtlSymbolLarge | `MNotSaved` |
 | `m_flags` | uint32 | `MNotSaved` |
 | `m_worldGroupId` | WorldGroupId_t | `MNotSaved` |
 | `m_fDataObjectTypes` | uint32 | `MNotSaved` |
 | `m_PathIndex` | [ChangeAccessorFieldPathIndex_t](../schemas/networksystem.md#changeaccessorfieldpathindex_t) | `MNotSaved` |
-| `m_pAttributes` | [CEntityAttributeTable](../schemas/entity2.md#centityattributetable)* | `MSaveOpsForField = "GetAttributeDictSaveDataOps"` |
+| `m_pAttributes` | [CEntityAttributeTable](../schemas/entity2.md#centityattributetable)* |  |
 | `m_pPrev` | [CEntityIdentity](../schemas/entity2.md#centityidentity)* | `MNotSaved` |
 | `m_pNext` | [CEntityIdentity](../schemas/entity2.md#centityidentity)* | `MNotSaved` |
 | `m_pPrevByClass` | [CEntityIdentity](../schemas/entity2.md#centityidentity)* | `MNotSaved` |
@@ -126,8 +127,10 @@ classDiagram
 | Name | Type | Annotations |
 |------|------|-------------|
 | `m_iszPrivateVScripts` | CUtlSymbolLarge |  |
-| `m_pEntity` | [CEntityIdentity](../schemas/entity2.md#centityidentity)* | `MNetworkEnable` `MNetworkPriority = 56` |
+| `m_pEntity` | [CEntityIdentity](../schemas/entity2.md#centityidentity)* |  |
 | `m_CScriptComponent` | [CScriptComponent](../schemas/entity2.md#cscriptcomponent)* |  |
+
+### CEntityKeyValues
 
 ### CNetworkVarChainer
 
@@ -186,8 +189,6 @@ classDiagram
 
 ### EntInput_t
 
-### EntOutput_t
-
 ### EntityDormancyType_t
 
 **Values:**
@@ -197,6 +198,10 @@ classDiagram
 | `ENTITY_NOT_DORMANT` | 0 |
 | `ENTITY_DORMANT` | 1 |
 | `ENTITY_SUSPENDED` | 2 |
+
+### EntityIOQueuePrioritizedEvent_t
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_flFireTime": null,`, `"m_targetType": 0,`, `"m_pTarget": "",`, `"m_pTargetInput": "",`, `"m_hActivator": null,`, `"m_hCaller": null,`, `"m_nOutputID": 0,`, `"m_hEntTarget": null`, `}`
 
 ### EntityIOTargetType_t
 

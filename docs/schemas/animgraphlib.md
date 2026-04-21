@@ -57,6 +57,7 @@ nav_exclude: true
 | [CAnimUpdateNodeBase](#canimupdatenodebase) | class |  | 3 |
 | [CAnimUpdateNodeRef](#canimupdatenoderef) | class |  | 0 |
 | [CAnimUpdateSharedData](#canimupdateshareddata) | class |  | 0 |
+| [CAnimationGraphInstance](#canimationgraphinstance) | class |  | 1 |
 | [CAnimationGraphVisualizerAxis](#canimationgraphvisualizeraxis) | class | CAnimationGraphVisualizerPrimitiveBase | 0 |
 | [CAnimationGraphVisualizerLine](#canimationgraphvisualizerline) | class | CAnimationGraphVisualizerPrimitiveBase | 0 |
 | [CAnimationGraphVisualizerPie](#canimationgraphvisualizerpie) | class | CAnimationGraphVisualizerPrimitiveBase | 0 |
@@ -64,11 +65,14 @@ nav_exclude: true
 | [CAnimationGraphVisualizerPrimitiveType](#canimationgraphvisualizerprimitivetype) | enum |  | 5 |
 | [CAnimationGraphVisualizerSphere](#canimationgraphvisualizersphere) | class | CAnimationGraphVisualizerPrimitiveBase | 0 |
 | [CAnimationGraphVisualizerText](#canimationgraphvisualizertext) | class | CAnimationGraphVisualizerPrimitiveBase | 0 |
+| [CAnimationLayer](#canimationlayer) | class |  | 0 |
 | [CAudioAnimTag](#caudioanimtag) | class | CAnimTagBase | 0 |
 | [CBinaryUpdateNode](#cbinaryupdatenode) | class | CAnimUpdateNodeBase | 6 |
 | [CBindPoseUpdateNode](#cbindposeupdatenode) | class | CLeafUpdateNode | 0 |
+| [CBlend2DInstanceData](#cblend2dinstancedata) | class |  | 0 |
 | [CBlend2DUpdateNode](#cblend2dupdatenode) | class | CAnimUpdateNodeBase | 0 |
 | [CBlendCurve](#cblendcurve) | class |  | 0 |
+| [CBlendNodeInstanceData](#cblendnodeinstancedata) | class |  | 0 |
 | [CBlendUpdateNode](#cblendupdatenode) | class | CAnimUpdateNodeBase | 0 |
 | [CBlockSelectionMetricEvaluator](#cblockselectionmetricevaluator) | class | CMotionMetricEvaluator | 0 |
 | [CBodyGroupAnimTag](#cbodygroupanimtag) | class | CAnimTagBase | 0 |
@@ -79,20 +83,25 @@ nav_exclude: true
 | [CBoolAnimParameter](#cboolanimparameter) | class | CConcreteAnimParameter | 0 |
 | [CCPPScriptComponentUpdater](#ccppscriptcomponentupdater) | class | CAnimComponentUpdater | 0 |
 | [CCachedPose](#ccachedpose) | class |  | 0 |
+| [CChoiceInstanceData](#cchoiceinstancedata) | class |  | 0 |
 | [CChoiceUpdateNode](#cchoiceupdatenode) | class | CAnimUpdateNodeBase | 0 |
+| [CChoreoInstanceData](#cchoreoinstancedata) | class |  | 0 |
 | [CChoreoUpdateNode](#cchoreoupdatenode) | class | CUnaryUpdateNode | 0 |
 | [CClothSettingsAnimTag](#cclothsettingsanimtag) | class | CAnimTagBase | 0 |
 | [CConcreteAnimParameter](#cconcreteanimparameter) | class | CAnimParameterBase | 6 |
 | [CCurrentRotationVelocityMetricEvaluator](#ccurrentrotationvelocitymetricevaluator) | class | CMotionMetricEvaluator | 0 |
 | [CCurrentVelocityMetricEvaluator](#ccurrentvelocitymetricevaluator) | class | CMotionMetricEvaluator | 0 |
+| [CCycleClipInstanceData](#ccycleclipinstancedata) | class |  | 0 |
 | [CCycleControlClipUpdateNode](#ccyclecontrolclipupdatenode) | class | CLeafUpdateNode | 0 |
 | [CCycleControlUpdateNode](#ccyclecontrolupdatenode) | class | CUnaryUpdateNode | 0 |
 | [CDampedPathAnimMotorUpdater](#cdampedpathanimmotorupdater) | class | CPathAnimMotorUpdaterBase | 0 |
 | [CDampedValueComponentUpdater](#cdampedvaluecomponentupdater) | class | CAnimComponentUpdater | 0 |
 | [CDampedValueUpdateItem](#cdampedvalueupdateitem) | class |  | 0 |
 | [CDemoSettingsComponentUpdater](#cdemosettingscomponentupdater) | class | CAnimComponentUpdater | 0 |
+| [CDirectPlaybackInstanceData](#cdirectplaybackinstancedata) | class |  | 0 |
 | [CDirectPlaybackTagData](#cdirectplaybacktagdata) | class |  | 0 |
 | [CDirectPlaybackUpdateNode](#cdirectplaybackupdatenode) | class | CUnaryUpdateNode | 0 |
+| [CDirectionalBlendInstanceData](#cdirectionalblendinstancedata) | class |  | 0 |
 | [CDirectionalBlendUpdateNode](#cdirectionalblendupdatenode) | class | CLeafUpdateNode | 0 |
 | [CDistanceRemainingMetricEvaluator](#cdistanceremainingmetricevaluator) | class | CMotionMetricEvaluator | 0 |
 | [CEditableMotionGraph](#ceditablemotiongraph) | class | CMotionGraph | 0 |
@@ -101,8 +110,10 @@ nav_exclude: true
 | [CExpressionActionUpdater](#cexpressionactionupdater) | class | CAnimActionUpdater | 0 |
 | [CFloatAnimParameter](#cfloatanimparameter) | class | CConcreteAnimParameter | 0 |
 | [CFollowAttachmentUpdateNode](#cfollowattachmentupdatenode) | class | CUnaryUpdateNode | 0 |
+| [CFollowPathInstanceData](#cfollowpathinstancedata) | class |  | 0 |
 | [CFollowPathUpdateNode](#cfollowpathupdatenode) | class | CUnaryUpdateNode | 0 |
 | [CFollowTargetUpdateNode](#cfollowtargetupdatenode) | class | CUnaryUpdateNode | 0 |
+| [CFootAdjustmentInstanceData](#cfootadjustmentinstancedata) | class |  | 0 |
 | [CFootAdjustmentUpdateNode](#cfootadjustmentupdatenode) | class | CUnaryUpdateNode | 0 |
 | [CFootCycleMetricEvaluator](#cfootcyclemetricevaluator) | class | CMotionMetricEvaluator | 0 |
 | [CFootFallAnimTag](#cfootfallanimtag) | class | CAnimTagBase | 0 |
@@ -121,6 +132,7 @@ nav_exclude: true
 | [CJumpHelperUpdateNode](#cjumphelperupdatenode) | class | CSequenceUpdateNode | 0 |
 | [CLODComponentUpdater](#clodcomponentupdater) | class | CAnimComponentUpdater | 0 |
 | [CLeafUpdateNode](#cleafupdatenode) | class | CAnimUpdateNodeBase | 0 |
+| [CLeanMatrixInstanceData](#cleanmatrixinstancedata) | class |  | 0 |
 | [CLeanMatrixUpdateNode](#cleanmatrixupdatenode) | class | CLeafUpdateNode | 0 |
 | [CLookAtUpdateNode](#clookatupdatenode) | class | CUnaryUpdateNode | 0 |
 | [CLookComponentUpdater](#clookcomponentupdater) | class | CAnimComponentUpdater | 0 |
@@ -139,7 +151,9 @@ nav_exclude: true
 | [CMotionSearchNode](#cmotionsearchnode) | class |  | 0 |
 | [CMovementComponentUpdater](#cmovementcomponentupdater) | class | CAnimComponentUpdater | 0 |
 | [CMovementHandshakeAnimTag](#cmovementhandshakeanimtag) | class | CHandshakeAnimTagBase | 0 |
+| [CMoverInstanceData](#cmoverinstancedata) | class |  | 0 |
 | [CMoverUpdateNode](#cmoverupdatenode) | class | CUnaryUpdateNode | 0 |
+| [CNetworkedCycle](#cnetworkedcycle) | class |  | 0 |
 | [COrientationWarpUpdateNode](#corientationwarpupdatenode) | class | CUnaryUpdateNode | 0 |
 | [CPairedSequenceComponentUpdater](#cpairedsequencecomponentupdater) | class | CAnimComponentUpdater | 0 |
 | [CPairedSequenceUpdateNode](#cpairedsequenceupdatenode) | class | CSequenceUpdateNodeBase | 0 |
@@ -158,6 +172,7 @@ nav_exclude: true
 | [CRagdollUpdateNode](#cragdollupdatenode) | class | CUnaryUpdateNode | 0 |
 | [CRemapValueComponentUpdater](#cremapvaluecomponentupdater) | class | CAnimComponentUpdater | 0 |
 | [CRemapValueUpdateItem](#cremapvalueupdateitem) | class |  | 0 |
+| [CRootMotion](#crootmotion) | class |  | 0 |
 | [CRootUpdateNode](#crootupdatenode) | class | CUnaryUpdateNode | 0 |
 | [CSelectorUpdateNode](#cselectorupdatenode) | class | CAnimUpdateNodeBase | 0 |
 | [CSequenceFinishedAnimTag](#csequencefinishedanimtag) | class | CAnimTagBase | 0 |
@@ -175,7 +190,9 @@ nav_exclude: true
 | [CStanceScaleUpdateNode](#cstancescaleupdatenode) | class | CUnaryUpdateNode | 0 |
 | [CStateActionUpdater](#cstateactionupdater) | class |  | 0 |
 | [CStateMachineComponentUpdater](#cstatemachinecomponentupdater) | class | CAnimComponentUpdater | 0 |
+| [CStateMachineInstanceData](#cstatemachineinstancedata) | class |  | 0 |
 | [CStateMachineUpdateNode](#cstatemachineupdatenode) | class | CAnimUpdateNodeBase | 0 |
+| [CStateNodeInstanceData](#cstatenodeinstancedata) | class |  | 4 |
 | [CStateNodeStateData](#cstatenodestatedata) | class |  | 0 |
 | [CStateNodeTransitionData](#cstatenodetransitiondata) | class |  | 0 |
 | [CStateUpdateData](#cstateupdatedata) | class |  | 0 |
@@ -193,6 +210,7 @@ nav_exclude: true
 | [CTimeRemainingMetricEvaluator](#ctimeremainingmetricevaluator) | class | CMotionMetricEvaluator | 0 |
 | [CToggleComponentActionUpdater](#ctogglecomponentactionupdater) | class | CAnimActionUpdater | 0 |
 | [CTransitionUpdateData](#ctransitionupdatedata) | class |  | 0 |
+| [CTurnHelperInstanceData](#cturnhelperinstancedata) | class |  | 0 |
 | [CTurnHelperUpdateNode](#cturnhelperupdatenode) | class | CUnaryUpdateNode | 0 |
 | [CTwoBoneIKUpdateNode](#ctwoboneikupdatenode) | class | CUnaryUpdateNode | 0 |
 | [CUnaryUpdateNode](#cunaryupdatenode) | class | CAnimUpdateNodeBase | 0 |
@@ -201,6 +219,7 @@ nav_exclude: true
 | [CVirtualAnimParameter](#cvirtualanimparameter) | class | CAnimParameterBase | 0 |
 | [CWarpSectionAnimTag](#cwarpsectionanimtag) | class | CWarpSectionAnimTagBase | 0 |
 | [CWarpSectionAnimTagBase](#cwarpsectionanimtagbase) | class | CAnimTagBase | 0 |
+| [CWayPointHelperInstanceData](#cwaypointhelperinstancedata) | class |  | 0 |
 | [CWayPointHelperUpdateNode](#cwaypointhelperupdatenode) | class | CUnaryUpdateNode | 0 |
 | [CZeroPoseUpdateNode](#czeroposeupdatenode) | class | CLeafUpdateNode | 0 |
 | [ChainToSolveData_t](#chaintosolvedata_t) | class |  | 0 |
@@ -208,6 +227,7 @@ nav_exclude: true
 | [ChoiceChangeMethod](#choicechangemethod) | enum |  | 3 |
 | [ChoiceMethod](#choicemethod) | enum |  | 4 |
 | [ConfigIndex](#configindex) | class |  | 0 |
+| [DampedPathMotorInstanceData_t](#dampedpathmotorinstancedata_t) | class |  | 0 |
 | [DampingSpeedFunction](#dampingspeedfunction) | enum |  | 4 |
 | [EDemoBoneSelectionMode](#edemoboneselectionmode) | enum |  | 2 |
 | [EIKEndEffectorRotationFixUpMode](#eikendeffectorrotationfixupmode) | enum |  | 5 |
@@ -246,21 +266,33 @@ nav_exclude: true
 | [LinearRootMotionBlendMode_t](#linearrootmotionblendmode_t) | enum |  | 3 |
 | [LookAtBone_t](#lookatbone_t) | class |  | 0 |
 | [LookAtOpFixedSettings_t](#lookatopfixedsettings_t) | class |  | 0 |
+| [LookData](#lookdata) | class |  | 0 |
 | [MatterialAttributeTagType_t](#matterialattributetagtype_t) | enum |  | 2 |
 | [MotionBlendItem](#motionblenditem) | class |  | 0 |
 | [MotionDBIndex](#motiondbindex) | class |  | 0 |
 | [MotionIndex](#motionindex) | class |  | 0 |
+| [MotionMatchingInstanceData](#motionmatchinginstancedata) | class |  | 0 |
+| [MotionSelection](#motionselection) | class |  | 0 |
+| [MovementData](#movementdata) | class |  | 0 |
+| [NetVarConfigIndex](#netvarconfigindex) | class |  | 0 |
 | [OrientationWarpMode_t](#orientationwarpmode_t) | enum |  | 3 |
 | [OrientationWarpRootMotionSource_t](#orientationwarprootmotionsource_t) | enum |  | 3 |
 | [OrientationWarpTargetOffsetMode_t](#orientationwarptargetoffsetmode_t) | enum |  | 4 |
+| [PairedSequenceData](#pairedsequencedata) | class |  | 0 |
+| [PairedSequence_t](#pairedsequence_t) | class |  | 0 |
 | [ParamSpanSample_t](#paramspansample_t) | class |  | 0 |
 | [ParamSpan_t](#paramspan_t) | class |  | 0 |
+| [PerTickSettings_t](#perticksettings_t) | class |  | 0 |
+| [PlayerInputMotorInstanceData_t](#playerinputmotorinstancedata_t) | class |  | 0 |
 | [PoseType_t](#posetype_t) | enum |  | 3 |
 | [RagdollPoseControl](#ragdollposecontrol) | enum |  | 1 |
 | [ResetCycleOption](#resetcycleoption) | enum |  | 5 |
 | [SampleCode](#samplecode) | class |  | 0 |
 | [ScriptInfo_t](#scriptinfo_t) | class |  | 0 |
+| [SelectorInstanceData_t](#selectorinstancedata_t) | class |  | 4 |
 | [SelectorTagBehavior_t](#selectortagbehavior_t) | enum |  | 3 |
+| [SequenceData](#sequencedata) | class |  | 0 |
+| [SlopeData](#slopedata) | class |  | 0 |
 | [SolveIKChainAnimNodeDebugSetting](#solveikchainanimnodedebugsetting) | enum |  | 7 |
 | [SolveIKChainPoseOpFixedSettings_t](#solveikchainposeopfixedsettings_t) | class |  | 0 |
 | [StanceInfo_t](#stanceinfo_t) | class |  | 0 |
@@ -269,6 +301,7 @@ nav_exclude: true
 | [StepPhase](#stepphase) | enum |  | 2 |
 | [TagSpan_t](#tagspan_t) | class |  | 0 |
 | [TargetSelectorAngleMode_t](#targetselectoranglemode_t) | enum |  | 2 |
+| [TargetSelectorInstanceData_t](#targetselectorinstancedata_t) | class |  | 2 |
 | [TargetWarpAngleMode_t](#targetwarpanglemode_t) | enum |  | 2 |
 | [TargetWarpCorrectionMethod](#targetwarpcorrectionmethod) | enum |  | 2 |
 | [TargetWarpTimingMethod](#targetwarptimingmethod) | enum |  | 2 |
@@ -808,6 +841,16 @@ classDiagram
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CAnimUpdateSharedData",`, `"m_nodes":`, `[`, `],`, `"m_nodeIndexMap":`, `[`, `],`, `"m_components":`, `[`, `],`, `"m_pParamListUpdater": null,`, `"m_pTagManagerUpdater": null,`, `"m_scriptManager": null,`, `"m_settings":`, `{`, `"_class": "CAnimGraphSettingsManager",`, `"m_settingsGroups":`, `[`, `{`, `"_class": "CAnimGraphNetworkSettings",`, `"m_bNetworkingEnabled": true`, `}`, `]`, `},`, `"m_pStaticPoseCache": null,`, `"m_pSkeleton": null,`, `"m_rootNodePath":`, `{`, `"m_path":`, `[`, `{`, `"m_id": <HIDDEN FOR DIFF>,`, `},`, `{`, `"m_id": <HIDDEN FOR DIFF>,`, `},`, `{`, `"m_id": <HIDDEN FOR DIFF>,`, `},`, `{`, `"m_id": <HIDDEN FOR DIFF>,`, `},`, `{`, `"m_id": <HIDDEN FOR DIFF>,`, `},`, `{`, `"m_id": <HIDDEN FOR DIFF>,`, `},`, `{`, `"m_id": <HIDDEN FOR DIFF>,`, `},`, `{`, `"m_id": <HIDDEN FOR DIFF>,`, `},`, `{`, `"m_id": <HIDDEN FOR DIFF>,`, `},`, `{`, `"m_id": <HIDDEN FOR DIFF>,`, `},`, `{`, `"m_id": <HIDDEN FOR DIFF>,`, `}`, `],`, `"m_nCount": 0`, `}`, `}`
 
+### CAnimationGraphInstance
+
+**Metadata:** `MGetKV3ClassDefaults = Could not parse KV3 Defaults`
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `m_bTagDispatchDirty` | bool |  |
+
 ### CAnimationGraphVisualizerAxis
 
 **Inherits from:** [CAnimationGraphVisualizerPrimitiveBase](animgraphlib.md#canimationgraphvisualizerprimitivebase)
@@ -902,6 +945,10 @@ classDiagram
     CAnimationGraphVisualizerPrimitiveBase <|-- CAnimationGraphVisualizerText
 ```
 
+### CAnimationLayer
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_hSequence": 0,`, `"m_flPrevCycle": 0.000000,`, `"m_flCycle": 0.000000,`, `"m_flWeight": 0.000000,`, `"m_nOrder": 12,`, `"m_bLooping": false,`, `"m_nFlags": 0,`, `"m_bSequenceFinished": false,`, `"m_flKillRate": 100.000000,`, `"m_flKillDelay": 0.000000,`, `"m_nPriority": 0`, `}`
+
 ### CAudioAnimTag
 
 **Inherits from:** [CAnimTagBase](animgraphlib.md#canimtagbase)
@@ -960,6 +1007,10 @@ classDiagram
     CAnimUpdateNodeBase <|-- CLeafUpdateNode
 ```
 
+### CBlend2DInstanceData
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_dampedValue":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_flCycle": 0.000000,`, `"m_flPrevCycle": 0.000000`, `}`
+
 ### CBlend2DUpdateNode
 
 **Inherits from:** [CAnimUpdateNodeBase](animgraphlib.md#canimupdatenodebase)
@@ -976,6 +1027,10 @@ classDiagram
 ### CBlendCurve
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"m_flControlPoint1": 0.000000,`, `"m_flControlPoint2": 1.000000`, `}`
+
+### CBlendNodeInstanceData
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_dampedValue": 0.000000,`, `"m_flCycle": 0.000000,`, `"m_flCycleZeroTime": 0.000000,`, `"m_flPlaybackRate": 1.000000,`, `"m_flBlendValue": 0.000000,`, `"m_flDuration": 1.000000,`, `"m_resetCount": 0`, `}`
 
 ### CBlendUpdateNode
 
@@ -1091,6 +1146,10 @@ classDiagram
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CCachedPose",`, `"m_transforms":`, `[`, `],`, `"m_morphWeights":`, `[`, `],`, `"m_hSequence": -1,`, `"m_flCycle": 0.000000`, `}`
 
+### CChoiceInstanceData
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_currentChoice": -1,`, `"m_previousChoice": -1,`, `"m_flClipStartTime": 0.000000,`, `"m_choicePreviousCycle": 0.000000`, `}`
+
 ### CChoiceUpdateNode
 
 **Inherits from:** [CAnimUpdateNodeBase](animgraphlib.md#canimupdatenodebase)
@@ -1103,6 +1162,10 @@ classDiagram
 classDiagram
     CAnimUpdateNodeBase <|-- CChoiceUpdateNode
 ```
+
+### CChoreoInstanceData
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_AnimOverlay":`, `[`, `{`, `"m_hSequence": 0,`, `"m_flPrevCycle": 0.000000,`, `"m_flCycle": 0.000000,`, `"m_flWeight": 0.000000,`, `"m_nOrder": 12,`, `"m_bLooping": false,`, `"m_nFlags": 0,`, `"m_bSequenceFinished": false,`, `"m_flKillRate": 100.000000,`, `"m_flKillDelay": 0.000000,`, `"m_nPriority": 0`, `},`, `{`, `"m_hSequence": 0,`, `"m_flPrevCycle": 0.000000,`, `"m_flCycle": 0.000000,`, `"m_flWeight": 0.000000,`, `"m_nOrder": 12,`, `"m_bLooping": false,`, `"m_nFlags": 0,`, `"m_bSequenceFinished": false,`, `"m_flKillRate": 100.000000,`, `"m_flKillDelay": 0.000000,`, `"m_nPriority": 0`, `},`, `{`, `"m_hSequence": 0,`, `"m_flPrevCycle": 0.000000,`, `"m_flCycle": 0.000000,`, `"m_flWeight": 0.000000,`, `"m_nOrder": 12,`, `"m_bLooping": false,`, `"m_nFlags": 0,`, `"m_bSequenceFinished": false,`, `"m_flKillRate": 100.000000,`, `"m_flKillDelay": 0.000000,`, `"m_nPriority": 0`, `},`, `{`, `"m_hSequence": 0,`, `"m_flPrevCycle": 0.000000,`, `"m_flCycle": 0.000000,`, `"m_flWeight": 0.000000,`, `"m_nOrder": 12,`, `"m_bLooping": false,`, `"m_nFlags": 0,`, `"m_bSequenceFinished": false,`, `"m_flKillRate": 100.000000,`, `"m_flKillDelay": 0.000000,`, `"m_nPriority": 0`, `},`, `{`, `"m_hSequence": 0,`, `"m_flPrevCycle": 0.000000,`, `"m_flCycle": 0.000000,`, `"m_flWeight": 0.000000,`, `"m_nOrder": 12,`, `"m_bLooping": false,`, `"m_nFlags": 0,`, `"m_bSequenceFinished": false,`, `"m_flKillRate": 100.000000,`, `"m_flKillDelay": 0.000000,`, `"m_nPriority": 0`, `},`, `{`, `"m_hSequence": 0,`, `"m_flPrevCycle": 0.000000,`, `"m_flCycle": 0.000000,`, `"m_flWeight": 0.000000,`, `"m_nOrder": 12,`, `"m_bLooping": false,`, `"m_nFlags": 0,`, `"m_bSequenceFinished": false,`, `"m_flKillRate": 100.000000,`, `"m_flKillDelay": 0.000000,`, `"m_nPriority": 0`, `},`, `{`, `"m_hSequence": 0,`, `"m_flPrevCycle": 0.000000,`, `"m_flCycle": 0.000000,`, `"m_flWeight": 0.000000,`, `"m_nOrder": 12,`, `"m_bLooping": false,`, `"m_nFlags": 0,`, `"m_bSequenceFinished": false,`, `"m_flKillRate": 100.000000,`, `"m_flKillDelay": 0.000000,`, `"m_nPriority": 0`, `},`, `{`, `"m_hSequence": 0,`, `"m_flPrevCycle": 0.000000,`, `"m_flCycle": 0.000000,`, `"m_flWeight": 0.000000,`, `"m_nOrder": 12,`, `"m_bLooping": false,`, `"m_nFlags": 0,`, `"m_bSequenceFinished": false,`, `"m_flKillRate": 100.000000,`, `"m_flKillDelay": 0.000000,`, `"m_nPriority": 0`, `},`, `{`, `"m_hSequence": 0,`, `"m_flPrevCycle": 0.000000,`, `"m_flCycle": 0.000000,`, `"m_flWeight": 0.000000,`, `"m_nOrder": 12,`, `"m_bLooping": false,`, `"m_nFlags": 0,`, `"m_bSequenceFinished": false,`, `"m_flKillRate": 100.000000,`, `"m_flKillDelay": 0.000000,`, `"m_nPriority": 0`, `},`, `{`, `"m_hSequence": 0,`, `"m_flPrevCycle": 0.000000,`, `"m_flCycle": 0.000000,`, `"m_flWeight": 0.000000,`, `"m_nOrder": 12,`, `"m_bLooping": false,`, `"m_nFlags": 0,`, `"m_bSequenceFinished": false,`, `"m_flKillRate": 100.000000,`, `"m_flKillDelay": 0.000000,`, `"m_nPriority": 0`, `},`, `{`, `"m_hSequence": 0,`, `"m_flPrevCycle": 0.000000,`, `"m_flCycle": 0.000000,`, `"m_flWeight": 0.000000,`, `"m_nOrder": 12,`, `"m_bLooping": false,`, `"m_nFlags": 0,`, `"m_bSequenceFinished": false,`, `"m_flKillRate": 100.000000,`, `"m_flKillDelay": 0.000000,`, `"m_nPriority": 0`, `},`, `{`, `"m_hSequence": 0,`, `"m_flPrevCycle": 0.000000,`, `"m_flCycle": 0.000000,`, `"m_flWeight": 0.000000,`, `"m_nOrder": 12,`, `"m_bLooping": false,`, `"m_nFlags": 0,`, `"m_bSequenceFinished": false,`, `"m_flKillRate": 100.000000,`, `"m_flKillDelay": 0.000000,`, `"m_nPriority": 0`, `}`, `]`, `}`
 
 ### CChoreoUpdateNode
 
@@ -1192,6 +1255,10 @@ classDiagram
     CMotionMetricEvaluator <|-- CCurrentVelocityMetricEvaluator
 ```
 
+### CCycleClipInstanceData
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_flCycle": 0.000000,`, `"m_flPrevCycle": 0.000000`, `}`
+
 ### CCycleControlClipUpdateNode
 
 **Inherits from:** [CLeafUpdateNode](animgraphlib.md#cleafupdatenode)
@@ -1264,6 +1331,10 @@ classDiagram
     CAnimComponentUpdater <|-- CDemoSettingsComponentUpdater
 ```
 
+### CDirectPlaybackInstanceData
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_vTargetPosition":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_flTargetFacing": 0.000000,`, `"m_flInterpEndTime": -1.000000,`, `"m_weights":`, `[`, `0.000000,`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_sequences":`, `[`, `{`, `"m_hSequence": -1,`, `"m_cycle":`, `{`, `"m_flCycleUnclamped": 0.000000,`, `"m_flPrevCycleUnclamped": 0.000000,`, `"m_flCyclesPerSecond": 1.000000,`, `"m_flCycleZeroTime": 0.000000,`, `"m_resetCount": 0`, `}`, `},`, `{`, `"m_hSequence": -1,`, `"m_cycle":`, `{`, `"m_flCycleUnclamped": 0.000000,`, `"m_flPrevCycleUnclamped": 0.000000,`, `"m_flCyclesPerSecond": 1.000000,`, `"m_flCycleZeroTime": 0.000000,`, `"m_resetCount": 0`, `}`, `},`, `{`, `"m_hSequence": -1,`, `"m_cycle":`, `{`, `"m_flCycleUnclamped": 0.000000,`, `"m_flPrevCycleUnclamped": 0.000000,`, `"m_flCyclesPerSecond": 1.000000,`, `"m_flCycleZeroTime": 0.000000,`, `"m_resetCount": 0`, `}`, `},`, `{`, `"m_hSequence": -1,`, `"m_cycle":`, `{`, `"m_flCycleUnclamped": 0.000000,`, `"m_flPrevCycleUnclamped": 0.000000,`, `"m_flCyclesPerSecond": 1.000000,`, `"m_flCycleZeroTime": 0.000000,`, `"m_resetCount": 0`, `}`, `}`, `],`, `"m_currentSequenceIndex": 0,`, `"m_currentSequenceData": 0,`, `"m_flFadeInTime": 0.200000,`, `"m_flFadeOutTime": 0.200000,`, `"m_flForcedCycle": -1.000000,`, `"m_bResetPending": false,`, `"m_SequenceCycleZeroTime": 0.000000`, `}`
+
 ### CDirectPlaybackTagData
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"m_sequenceName": "",`, `"m_tags":`, `[`, `]`, `}`
@@ -1281,6 +1352,10 @@ classDiagram
     CUnaryUpdateNode <|-- CDirectPlaybackUpdateNode
     CAnimUpdateNodeBase <|-- CUnaryUpdateNode
 ```
+
+### CDirectionalBlendInstanceData
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_dampedValue": 0.000000,`, `"m_flCycle": 0.000000,`, `"m_flPrevCycle": 0.000000,`, `"m_flPlaybackRate": 1.000000,`, `"m_flCycleZeroTime": 0.000000,`, `"m_resetCycleValue": 0.000000,`, `"m_resetCount": 0.000000`, `}`
 
 ### CDirectionalBlendUpdateNode
 
@@ -1390,6 +1465,10 @@ classDiagram
     CAnimUpdateNodeBase <|-- CUnaryUpdateNode
 ```
 
+### CFollowPathInstanceData
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_xLastPredictedTransformsDeltas":`, `[`, `],`, `"m_dampedTurnValue": 0.000000,`, `"m_flTurnAmount": 0.000000,`, `"m_flPredictionScale": 1.000000,`, `"m_flLastPathTime": 0.000000`, `}`
+
 ### CFollowPathUpdateNode
 
 **Inherits from:** [CUnaryUpdateNode](animgraphlib.md#cunaryupdatenode)
@@ -1417,6 +1496,10 @@ classDiagram
     CUnaryUpdateNode <|-- CFollowTargetUpdateNode
     CAnimUpdateNodeBase <|-- CUnaryUpdateNode
 ```
+
+### CFootAdjustmentInstanceData
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_flStartTime": 0.000000,`, `"m_flDuration": 0.000000,`, `"m_flStartHeadingWS": 0.000000`, `}`
 
 ### CFootAdjustmentUpdateNode
 
@@ -1679,6 +1762,10 @@ classDiagram
     CLeafUpdateNode <|-- CZeroPoseUpdateNode
 ```
 
+### CLeanMatrixInstanceData
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_flValueY": 0.000000,`, `"m_flValueX": 0.000000`, `}`
+
 ### CLeanMatrixUpdateNode
 
 **Inherits from:** [CLeafUpdateNode](animgraphlib.md#cleafupdatenode)
@@ -1903,6 +1990,10 @@ classDiagram
     CAnimTagBase <|-- CHandshakeAnimTagBase
 ```
 
+### CMoverInstanceData
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_flDampedValue": 0.000000,`, `"m_vMovement":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_Rotation":`, `{`, `"m_angle": 0.000000`, `},`, `"m_TargetOrientation":`, `{`, `"m_angle": 0.000000`, `}`, `}`
+
 ### CMoverUpdateNode
 
 **Inherits from:** [CUnaryUpdateNode](animgraphlib.md#cunaryupdatenode)
@@ -1916,6 +2007,10 @@ classDiagram
     CUnaryUpdateNode <|-- CMoverUpdateNode
     CAnimUpdateNodeBase <|-- CUnaryUpdateNode
 ```
+
+### CNetworkedCycle
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_flCycleUnclamped": 0.000000,`, `"m_flPrevCycleUnclamped": 0.000000,`, `"m_flCyclesPerSecond": 1.000000,`, `"m_flCycleZeroTime": 0.000000,`, `"m_resetCount": 0`, `}`
 
 ### COrientationWarpUpdateNode
 
@@ -2131,6 +2226,10 @@ classDiagram
 ### CRemapValueUpdateItem
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"m_hParamIn":`, `{`, `"m_type": "ANIMPARAM_UNKNOWN",`, `"m_index": 255`, `},`, `"m_hParamOut":`, `{`, `"m_type": "ANIMPARAM_UNKNOWN",`, `"m_index": 255`, `},`, `"m_flMinInputValue": 0.000000,`, `"m_flMaxInputValue": 0.000000,`, `"m_flMinOutputValue": 0.000000,`, `"m_flMaxOutputValue": 0.000000`, `}`
+
+### CRootMotion
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_deltaTransform":`, `{`, `"m_iszName":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_iszValue":`, `{`, `"m_angle": 0.000000`, `}`, `},`, `"m_vVelocityMS":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_vUpOverride":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `]`, `}`
 
 ### CRootUpdateNode
 
@@ -2350,6 +2449,10 @@ classDiagram
     CAnimComponentUpdater <|-- CStateMachineComponentUpdater
 ```
 
+### CStateMachineInstanceData
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_flTimeInState": 0.000000,`, `"m_currentTransitionIndex": -1,`, `"m_prevStateIndex": -1,`, `"m_scheduledTransitionIndex": -1`, `}`
+
 ### CStateMachineUpdateNode
 
 **Inherits from:** [CAnimUpdateNodeBase](animgraphlib.md#canimupdatenodebase)
@@ -2362,6 +2465,19 @@ classDiagram
 classDiagram
     CAnimUpdateNodeBase <|-- CStateMachineUpdateNode
 ```
+
+### CStateNodeInstanceData
+
+**Metadata:** `MGetKV3ClassDefaults = Could not parse KV3 Defaults`
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `m_stateWeights` | CRelativeArray< float32 > |  |
+| `m_vTransitionVelocityDeltaWS` | Vector |  |
+| `m_currentStateStartTime` | CAnimNetVar< float32 > |  |
+| `m_resetCount` | CAnimNetVar< uint8 > |  |
 
 ### CStateNodeStateData
 
@@ -2553,6 +2669,10 @@ classDiagram
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"m_srcStateIndex": 0,`, `"m_destStateIndex": 0,`, `"m_nHandshakeMaskToDisableFirst": 0,`, `"m_bDisabled": 0`, `}`
 
+### CTurnHelperInstanceData
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_turnAmount": 0.000000,`, `"m_turnStartTime": 0.000000,`, `"m_duration": 1.000000`, `}`
+
 ### CTurnHelperUpdateNode
 
 **Inherits from:** [CUnaryUpdateNode](animgraphlib.md#cunaryupdatenode)
@@ -2687,6 +2807,10 @@ classDiagram
     CWarpSectionAnimTagBase <|-- CWarpSectionAnimTag
 ```
 
+### CWayPointHelperInstanceData
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_vMovement":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_vRotation":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_vWaypointPosWS":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_bStopUpdatingWaypointPos": false`, `}`
+
 ### CWayPointHelperUpdateNode
 
 **Inherits from:** [CUnaryUpdateNode](animgraphlib.md#cunaryupdatenode)
@@ -2752,6 +2876,10 @@ classDiagram
 ### ConfigIndex
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"m_nGroup": 65535,`, `"m_nConfig": 65535`, `}`
+
+### DampedPathMotorInstanceData_t
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_vVelocity":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_vAcceleration":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_bStopping": false`, `}`
 
 ### DampingSpeedFunction
 
@@ -3100,6 +3228,10 @@ classDiagram
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"m_attachment":`, `{`, `"m_influenceRotations":`, `[`, `[`, `0.000000,`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `[`, `0.000000,`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `[`, `0.000000,`, `0.000000,`, `0.000000,`, `0.000000`, `]`, `],`, `"m_influenceOffsets":`, `[`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `]`, `],`, `"m_influenceIndices":`, `[`, `0,`, `0,`, `0`, `],`, `"m_influenceWeights":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_numInfluences": 0`, `},`, `"m_damping":`, `{`, `"_class": "CAnimInputDamping",`, `"m_speedFunction": "NoDamping",`, `"m_fSpeedScale": 1.000000,`, `"m_fFallingSpeedScale": 1.000000`, `},`, `"m_bones":`, `[`, `],`, `"m_flYawLimit": 45.000000,`, `"m_flPitchLimit": 45.000000,`, `"m_flHysteresisInnerAngle": 1.000000,`, `"m_flHysteresisOuterAngle": 20.000000,`, `"m_bRotateYawForward": true,`, `"m_bMaintainUpDirection": false,`, `"m_bTargetIsPosition": true,`, `"m_bUseHysteresis": false`, `}`
 
+### LookData
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_vLookTarget":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `]`, `}`
+
 ### MatterialAttributeTagType_t
 
 **Values:**
@@ -3120,6 +3252,22 @@ classDiagram
 ### MotionIndex
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"m_nGroup": 65535,`, `"m_nMotion": 65535`, `}`
+
+### MotionMatchingInstanceData
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_currentSelection":`, `{`, `"m_nConfigIndex":`, `{`, `"m_index": 4294967295`, `},`, `"m_flCycleZeroTime": 0.000000,`, `"m_flPlaybackSpeed": 1.000000,`, `"m_flStartTime": 0.000000,`, `"m_nSample": -1`, `},`, `"m_previousSelection":`, `{`, `"m_nConfigIndex":`, `{`, `"m_index": 4294967295`, `},`, `"m_flCycleZeroTime": 0.000000,`, `"m_flPlaybackSpeed": 1.000000,`, `"m_flStartTime": 0.000000,`, `"m_nSample": -1`, `}`, `}`
+
+### MotionSelection
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_nConfigIndex":`, `{`, `"m_index": 4294967295`, `},`, `"m_flCycleZeroTime": 0.000000,`, `"m_flPlaybackSpeed": 1.000000,`, `"m_flStartTime": 0.000000,`, `"m_nSample": -1`, `}`
+
+### MovementData
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_goalWayPointPos":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_vMoveDir":`, `[`, `1.000000,`, `0.000000,`, `0.000000`, `],`, `"m_vAcceleration":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_flCurrentMoveSpeed": 0.000000,`, `"m_flTargetMoveSpeed": 0.000000,`, `"m_flGoalDistance": -1.000000,`, `"m_flBoundaryRadius": 100.000000,`, `"m_bGoalChanged": false,`, `"m_bHasPath": false,`, `"m_flFacingHeading": 0.000000,`, `"m_vManualFacingDirection":`, `[`, `1.000000,`, `0.000000,`, `0.000000`, `],`, `"m_vManualFacingTarget": null,`, `"m_nFacingMode": 0,`, `"m_bForceFacing": false,`, `"m_nActiveMotorIndex": -1,`, `"m_bOnGround": true,`, `"m_vFacingPosition":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_vPrevFacingPosition":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `]`, `}`
+
+### NetVarConfigIndex
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_index": 4294967295`, `}`
 
 ### OrientationWarpMode_t
 
@@ -3152,6 +3300,14 @@ classDiagram
 | `eAnimationMovementHeading` | 2 |
 | `eAnimationMovementHeadingAtEnd` | 3 |
 
+### PairedSequenceData
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_vecPairedSequences":`, `[`, `{`, `"m_sRole": "",`, `"m_sSequenceName": "",`, `"m_hSequence": 0`, `},`, `{`, `"m_sRole": "",`, `"m_sSequenceName": "",`, `"m_hSequence": 0`, `},`, `{`, `"m_sRole": "",`, `"m_sSequenceName": "",`, `"m_hSequence": 0`, `},`, `{`, `"m_sRole": "",`, `"m_sSequenceName": "",`, `"m_hSequence": 0`, `},`, `{`, `"m_sRole": "",`, `"m_sSequenceName": "",`, `"m_hSequence": 0`, `},`, `{`, `"m_sRole": "",`, `"m_sSequenceName": "",`, `"m_hSequence": 0`, `},`, `{`, `"m_sRole": "",`, `"m_sSequenceName": "",`, `"m_hSequence": 0`, `},`, `{`, `"m_sRole": "",`, `"m_sSequenceName": "",`, `"m_hSequence": 0`, `}`, `]`, `}`
+
+### PairedSequence_t
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_sRole": "",`, `"m_sSequenceName": "",`, `"m_hSequence": 0`, `}`
+
 ### ParamSpanSample_t
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"m_value":`, `{`, `"m_nType": 0`, `},`, `"m_flCycle": 0.000000`, `}`
@@ -3159,6 +3315,14 @@ classDiagram
 ### ParamSpan_t
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"m_samples":`, `[`, `],`, `"m_hParam":`, `{`, `"m_type": "ANIMPARAM_UNKNOWN",`, `"m_index": 255`, `},`, `"m_eParamType": "ANIMPARAM_UNKNOWN",`, `"m_flStartCycle": 0.000000,`, `"m_flEndCycle": 0.000000`, `}`
+
+### PerTickSettings_t
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_startingLocalToWorld":`, `[`, `0.000000,`, `0.000000,`, `0.000000,`, `1.000000,`, `0.000000,`, `0.000000,`, `0.000000,`, `1.000000`, `],`, `"m_prevLocalToWorld":`, `[`, `0.000000,`, `0.000000,`, `0.000000,`, `1.000000,`, `0.000000,`, `0.000000,`, `0.000000,`, `1.000000`, `],`, `"m_finalLocalToWorld":`, `[`, `0.000000,`, `0.000000,`, `0.000000,`, `1.000000,`, `0.000000,`, `0.000000,`, `0.000000,`, `1.000000`, `],`, `"m_rootMotion":`, `{`, `"m_deltaTransform":`, `{`, `"m_iszName":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_iszValue":`, `{`, `"m_angle": 0.000000`, `}`, `},`, `"m_vVelocityMS":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_vUpOverride":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `]`, `},`, `"m_updateID": -1,`, `"m_flLastTimeStep": 0.000000,`, `"m_flPrevAnimTime": 0.000000,`, `"m_flNextAnimTime": 0.000000,`, `"m_bAwaken": false,`, `"m_bTeleported": false,`, `"m_bIsClient": false,`, `"m_bIsPredicted": false`, `}`
+
+### PlayerInputMotorInstanceData_t
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_vInputVectorWS":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_vVelocityWS":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_vAccelerationWS":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `]`, `}`
 
 ### PoseType_t
 
@@ -3198,6 +3362,19 @@ classDiagram
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"m_code": "",`, `"m_paramsModified":`, `[`, `],`, `"m_proxyReadParams":`, `[`, `],`, `"m_proxyWriteParams":`, `[`, `],`, `"m_eScriptType": "ANIMSCRIPT_TYPE_INVALID"`, `}`
 
+### SelectorInstanceData_t
+
+**Metadata:** `MGetKV3ClassDefaults = Could not parse KV3 Defaults`
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `m_weights` | CRelativeArray< float32 > |  |
+| `m_currentIndexStartTime` | CAnimNetVar< float32 > |  |
+| `m_currentIndex` | int32 |  |
+| `m_previousIndex` | int32 |  |
+
 ### SelectorTagBehavior_t
 
 **Values:**
@@ -3207,6 +3384,14 @@ classDiagram
 | `SelectorTagBehavior_OnWhileCurrent` | 0 |
 | `SelectorTagBehavior_OffWhenFinished` | 1 |
 | `SelectorTagBehavior_OffBeforeFinished` | 2 |
+
+### SequenceData
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_hSequence": -1,`, `"m_cycle":`, `{`, `"m_flCycleUnclamped": 0.000000,`, `"m_flPrevCycleUnclamped": 0.000000,`, `"m_flCyclesPerSecond": 1.000000,`, `"m_flCycleZeroTime": 0.000000,`, `"m_resetCount": 0`, `}`, `}`
+
+### SlopeData
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_vSlopeNormal":`, `[`, `0.000000,`, `0.000000,`, `1.000000`, `]`, `}`
 
 ### SolveIKChainAnimNodeDebugSetting
 
@@ -3272,6 +3457,17 @@ classDiagram
 |------|-------|
 | `eFacingHeading` | 0 |
 | `eMoveHeading` | 1 |
+
+### TargetSelectorInstanceData_t
+
+**Metadata:** `MGetKV3ClassDefaults = Could not parse KV3 Defaults`
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `m_currentIndex` | CAnimNetVar< int32 > |  |
+| `m_vMSRootMotionAnlyzerTarget` | CAnimNetVar< Vector > |  |
 
 ### TargetWarpAngleMode_t
 

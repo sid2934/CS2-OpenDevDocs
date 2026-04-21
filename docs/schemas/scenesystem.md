@@ -19,7 +19,7 @@ nav_exclude: true
 | [CSSDSMsg_ViewRender](#cssdsmsg_viewrender) | class |  | 0 |
 | [CSSDSMsg_ViewTarget](#cssdsmsg_viewtarget) | class |  | 0 |
 | [CSSDSMsg_ViewTargetList](#cssdsmsg_viewtargetlist) | class |  | 0 |
-| [DisableShadows_t](#disableshadows_t) | enum |  | 4 |
+| [DisableShadows_t](#disableshadows_t) | enum |  | 5 |
 | [ESceneObjectVisualization](#esceneobjectvisualization) | enum |  | 6 |
 | [ESilhouetteType_t](#esilhouettetype_t) | enum |  | 4 |
 | [SceneViewId_t](#sceneviewid_t) | class |  | 0 |
@@ -96,6 +96,7 @@ classDiagram
 | `kDisableShadows_All` | 1 |
 | `kDisableShadows_Baked` | 2 |
 | `kDisableShadows_Realtime` | 3 |
+| `kDisableShadows_ReallyNone` | 4 |
 
 ### ESceneObjectVisualization
 
@@ -123,4 +124,4 @@ classDiagram
 
 ### SceneViewId_t
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_nViewId": 0,`, `"m_nFrameCount": 0`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_nViewId": 4294967295,`, `"m_nFrameCount": 4294967295`, `}`

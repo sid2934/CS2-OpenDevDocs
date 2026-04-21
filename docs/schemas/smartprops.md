@@ -22,6 +22,7 @@ nav_exclude: true
 | [CSmartPropAttributeDistributionMode](#csmartpropattributedistributionmode) | class |  | 0 |
 | [CSmartPropAttributeGridOriginMode](#csmartpropattributegridoriginmode) | class |  | 0 |
 | [CSmartPropAttributeGridPlacementMode](#csmartpropattributegridplacementmode) | class |  | 0 |
+| [CSmartPropAttributeOrientationMode](#csmartpropattributeorientationmode) | class |  | 0 |
 | [CSmartPropAttributePathPositions](#csmartpropattributepathpositions) | class |  | 0 |
 | [CSmartPropAttributePickMode](#csmartpropattributepickmode) | class |  | 0 |
 | [CSmartPropAttributeRadiusPlacementMode](#csmartpropattributeradiusplacementmode) | class |  | 0 |
@@ -42,6 +43,7 @@ nav_exclude: true
 | [CSmartPropElement_PickOne](#csmartpropelement_pickone) | class | CSmartPropElement_Group | 0 |
 | [CSmartPropElement_PlaceInSphere](#csmartpropelement_placeinsphere) | class | CSmartPropElement_Group | 0 |
 | [CSmartPropElement_PlaceMultiple](#csmartpropelement_placemultiple) | class | CSmartPropElement_Group | 0 |
+| [CSmartPropElement_PlaceOnMesh](#csmartpropelement_placeonmesh) | class | CSmartPropElement_Deformer | 0 |
 | [CSmartPropElement_PlaceOnPath](#csmartpropelement_placeonpath) | class | CSmartPropElement_Group | 0 |
 | [CSmartPropElement_PropDynamic](#csmartpropelement_propdynamic) | class | CSmartPropElement_ModelEntity | 0 |
 | [CSmartPropElement_PropPhysics](#csmartpropelement_propphysics) | class | CSmartPropElement_ModelEntity | 0 |
@@ -120,10 +122,14 @@ nav_exclude: true
 | [CSmartPropRoot](#csmartproproot) | class |  | 0 |
 | [CSmartPropSelectionCriteria](#csmartpropselectioncriteria) | class |  | 1 |
 | [CSmartPropSelectionCriteria_ChoiceWeight](#csmartpropselectioncriteria_choiceweight) | class | CSmartPropSelectionCriteria | 0 |
+| [CSmartPropSelectionCriteria_EdgeAngleCriteria](#csmartpropselectioncriteria_edgeanglecriteria) | class | CSmartPropSelectionCriteria | 0 |
 | [CSmartPropSelectionCriteria_EndCap](#csmartpropselectioncriteria_endcap) | class | CSmartPropSelectionCriteria | 0 |
 | [CSmartPropSelectionCriteria_IsValid](#csmartpropselectioncriteria_isvalid) | class | CSmartPropSelectionCriteria | 0 |
 | [CSmartPropSelectionCriteria_LinearLength](#csmartpropselectioncriteria_linearlength) | class | CSmartPropSelectionCriteria | 0 |
+| [CSmartPropSelectionCriteria_MaterialCriteria](#csmartpropselectioncriteria_materialcriteria) | class | CSmartPropSelectionCriteria | 0 |
 | [CSmartPropSelectionCriteria_PathPosition](#csmartpropselectioncriteria_pathposition) | class | CSmartPropSelectionCriteria | 0 |
+| [CSmartPropSelectionCriteria_TopoEdgeCountCriteria](#csmartpropselectioncriteria_topoedgecountcriteria) | class | CSmartPropSelectionCriteria | 0 |
+| [CSmartPropSelectionCriteria_VertexCountCriteria](#csmartpropselectioncriteria_vertexcountcriteria) | class | CSmartPropSelectionCriteria | 0 |
 | [CSmartPropTransformOperation](#csmartproptransformoperation) | class | CSmartPropOperation | 0 |
 | [CSmartPropVariable](#csmartpropvariable) | class | CSmartPropParameter | 5 |
 | [CSmartPropVariable_Angles](#csmartpropvariable_angles) | class | CSmartPropVariable | 0 |
@@ -142,6 +148,7 @@ nav_exclude: true
 | [CSmartPropVariable_Material](#csmartpropvariable_material) | class | CSmartPropVariable | 0 |
 | [CSmartPropVariable_MaterialGroup](#csmartpropvariable_materialgroup) | class | CSmartPropVariable | 0 |
 | [CSmartPropVariable_Model](#csmartpropvariable_model) | class | CSmartPropVariable | 0 |
+| [CSmartPropVariable_OrientationMode](#csmartpropvariable_orientationmode) | class | CSmartPropVariable | 0 |
 | [CSmartPropVariable_PathPositions](#csmartpropvariable_pathpositions) | class | CSmartPropVariable | 0 |
 | [CSmartPropVariable_PickMode](#csmartpropvariable_pickmode) | class | CSmartPropVariable | 0 |
 | [CSmartPropVariable_RadiusPlacementMode](#csmartpropvariable_radiusplacementmode) | class | CSmartPropVariable | 0 |
@@ -167,6 +174,7 @@ nav_exclude: true
 | [SmartPropGridOriginBasis_t](#smartpropgridoriginbasis_t) | enum |  | 2 |
 | [SmartPropGridPlacementMode_t](#smartpropgridplacementmode_t) | enum |  | 2 |
 | [SmartPropPathPositions_t](#smartproppathpositions_t) | enum |  | 4 |
+| [SmartPropPlaceMeshOrientationMode_t](#smartpropplacemeshorientationmode_t) | enum |  | 4 |
 | [SmartPropRadiusPlacementMode_t](#smartpropradiusplacementmode_t) | enum |  | 2 |
 | [SmartPropSpace_t](#smartpropspace_t) | enum |  | 3 |
 | [TraceNoHitResult_t](#tracenohitresult_t) | enum |  | 4 |
@@ -227,6 +235,10 @@ classDiagram
 ### CSmartPropAttributeGridPlacementMode
 
 **Metadata:** `MPropertyCustomEditor = "SmartPropAttributeEditor(enum:SmartPropGridPlacementMode_t)"`
+
+### CSmartPropAttributeOrientationMode
+
+**Metadata:** `MPropertyCustomEditor = "SmartPropAttributeEditor(enum:SmartPropPlaceMeshOrientationMode_t)"`
 
 ### CSmartPropAttributePathPositions
 
@@ -301,7 +313,7 @@ classDiagram
 
 **Inherits from:** [CSmartPropElement_Group](smartprops.md#csmartpropelement_group)
 
-**Derived by:** [CSmartPropElement_BendDeformer](smartprops.md#csmartpropelement_benddeformer), [CSmartPropElement_MidpointDeformer](smartprops.md#csmartpropelement_midpointdeformer)
+**Derived by:** [CSmartPropElement_BendDeformer](smartprops.md#csmartpropelement_benddeformer), [CSmartPropElement_MidpointDeformer](smartprops.md#csmartpropelement_midpointdeformer), [CSmartPropElement_PlaceOnMesh](smartprops.md#csmartpropelement_placeonmesh)
 
 **Relationships:**
 
@@ -311,6 +323,7 @@ classDiagram
     CSmartPropElement <|-- CSmartPropElement_Group
     CSmartPropElement_Deformer <|-- CSmartPropElement_BendDeformer
     CSmartPropElement_Deformer <|-- CSmartPropElement_MidpointDeformer
+    CSmartPropElement_Deformer <|-- CSmartPropElement_PlaceOnMesh
 ```
 
 ### CSmartPropElement_FitOnLine
@@ -473,6 +486,21 @@ classDiagram
 ```mermaid
 classDiagram
     CSmartPropElement_Group <|-- CSmartPropElement_PlaceMultiple
+    CSmartPropElement <|-- CSmartPropElement_Group
+```
+
+### CSmartPropElement_PlaceOnMesh
+
+**Inherits from:** [CSmartPropElement_Deformer](smartprops.md#csmartpropelement_deformer)
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CSmartPropElement_PlaceOnMesh",`, `"m_nElementID": -1,`, `"m_bEnabled": true,`, `"m_sLabel": "",`, `"m_SelectionCriteria":`, `[`, `],`, `"m_Modifiers":`, `[`, `],`, `"m_Children":`, `[`, `],`, `"m_nPickMode": "FIRST_CLOSED_EDGE",`, `"m_MeshName": ""`, `}`, `MVDataExperimentalNodeSet (UNKNOWN FOR PARSER)`, `MPropertyFriendlyName = "Place on Mesh"`, `MPropertyDescription = "Place Children on Mesh Components."`
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CSmartPropElement_Deformer <|-- CSmartPropElement_PlaceOnMesh
+    CSmartPropElement_Group <|-- CSmartPropElement_Deformer
     CSmartPropElement <|-- CSmartPropElement_Group
 ```
 
@@ -1556,7 +1584,7 @@ classDiagram
 
 ### CSmartPropSelectionCriteria
 
-**Derived by:** [CSmartPropSelectionCriteria_ChoiceWeight](smartprops.md#csmartpropselectioncriteria_choiceweight), [CSmartPropSelectionCriteria_EndCap](smartprops.md#csmartpropselectioncriteria_endcap), [CSmartPropSelectionCriteria_IsValid](smartprops.md#csmartpropselectioncriteria_isvalid), [CSmartPropSelectionCriteria_LinearLength](smartprops.md#csmartpropselectioncriteria_linearlength), [CSmartPropSelectionCriteria_PathPosition](smartprops.md#csmartpropselectioncriteria_pathposition)
+**Derived by:** [CSmartPropSelectionCriteria_ChoiceWeight](smartprops.md#csmartpropselectioncriteria_choiceweight), [CSmartPropSelectionCriteria_EdgeAngleCriteria](smartprops.md#csmartpropselectioncriteria_edgeanglecriteria), [CSmartPropSelectionCriteria_EndCap](smartprops.md#csmartpropselectioncriteria_endcap), [CSmartPropSelectionCriteria_IsValid](smartprops.md#csmartpropselectioncriteria_isvalid), [CSmartPropSelectionCriteria_LinearLength](smartprops.md#csmartpropselectioncriteria_linearlength), [CSmartPropSelectionCriteria_MaterialCriteria](smartprops.md#csmartpropselectioncriteria_materialcriteria), [CSmartPropSelectionCriteria_PathPosition](smartprops.md#csmartpropselectioncriteria_pathposition), [CSmartPropSelectionCriteria_TopoEdgeCountCriteria](smartprops.md#csmartpropselectioncriteria_topoedgecountcriteria), [CSmartPropSelectionCriteria_VertexCountCriteria](smartprops.md#csmartpropselectioncriteria_vertexcountcriteria)
 
 **Metadata:** `MGetKV3ClassDefaults = Could not parse KV3 Defaults`, `MVDataBase`, `MVDataNodeType = 1`, `MVDataAnonymousNode`
 
@@ -1565,10 +1593,14 @@ classDiagram
 ```mermaid
 classDiagram
     CSmartPropSelectionCriteria <|-- CSmartPropSelectionCriteria_ChoiceWeight
+    CSmartPropSelectionCriteria <|-- CSmartPropSelectionCriteria_EdgeAngleCriteria
     CSmartPropSelectionCriteria <|-- CSmartPropSelectionCriteria_EndCap
     CSmartPropSelectionCriteria <|-- CSmartPropSelectionCriteria_IsValid
     CSmartPropSelectionCriteria <|-- CSmartPropSelectionCriteria_LinearLength
+    CSmartPropSelectionCriteria <|-- CSmartPropSelectionCriteria_MaterialCriteria
     CSmartPropSelectionCriteria <|-- CSmartPropSelectionCriteria_PathPosition
+    CSmartPropSelectionCriteria <|-- CSmartPropSelectionCriteria_TopoEdgeCountCriteria
+    CSmartPropSelectionCriteria <|-- CSmartPropSelectionCriteria_VertexCountCriteria
 ```
 
 **Fields:**
@@ -1588,6 +1620,19 @@ classDiagram
 ```mermaid
 classDiagram
     CSmartPropSelectionCriteria <|-- CSmartPropSelectionCriteria_ChoiceWeight
+```
+
+### CSmartPropSelectionCriteria_EdgeAngleCriteria
+
+**Inherits from:** [CSmartPropSelectionCriteria](smartprops.md#csmartpropselectioncriteria)
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CSmartPropSelectionCriteria_EdgeAngleCriteria",`, `"m_bEnabled": true,`, `"m_flMinAngle": 0.000000,`, `"m_flMaxAngle": 0.000000,`, `"m_bInvert": false`, `}`, `MVDataComponentValidGrandParents (UNKNOWN FOR PARSER)`, `MPropertyFriendlyName = "Filter Edges by Angle"`, `MPropertyDescription = ""`
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CSmartPropSelectionCriteria <|-- CSmartPropSelectionCriteria_EdgeAngleCriteria
 ```
 
 ### CSmartPropSelectionCriteria_EndCap
@@ -1629,6 +1674,19 @@ classDiagram
     CSmartPropSelectionCriteria <|-- CSmartPropSelectionCriteria_LinearLength
 ```
 
+### CSmartPropSelectionCriteria_MaterialCriteria
+
+**Inherits from:** [CSmartPropSelectionCriteria](smartprops.md#csmartpropselectioncriteria)
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CSmartPropSelectionCriteria_MaterialCriteria",`, `"m_bEnabled": true,`, `"m_material": "",`, `"m_bInvert": false`, `}`, `MVDataComponentValidGrandParents (UNKNOWN FOR PARSER)`, `MPropertyFriendlyName = "Filter Faces By Material"`, `MPropertyDescription = ""`
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CSmartPropSelectionCriteria <|-- CSmartPropSelectionCriteria_MaterialCriteria
+```
+
 ### CSmartPropSelectionCriteria_PathPosition
 
 **Inherits from:** [CSmartPropSelectionCriteria](smartprops.md#csmartpropselectioncriteria)
@@ -1640,6 +1698,32 @@ classDiagram
 ```mermaid
 classDiagram
     CSmartPropSelectionCriteria <|-- CSmartPropSelectionCriteria_PathPosition
+```
+
+### CSmartPropSelectionCriteria_TopoEdgeCountCriteria
+
+**Inherits from:** [CSmartPropSelectionCriteria](smartprops.md#csmartpropselectioncriteria)
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CSmartPropSelectionCriteria_TopoEdgeCountCriteria",`, `"m_bEnabled": true,`, `"m_nTargetOpenEdgeCount": 0,`, `"m_bInvert": false,`, `"m_bSharedVert": false`, `}`, `MVDataComponentValidGrandParents (UNKNOWN FOR PARSER)`, `MPropertyFriendlyName = "Filter Faces By Open Edges"`, `MPropertyDescription = ""`
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CSmartPropSelectionCriteria <|-- CSmartPropSelectionCriteria_TopoEdgeCountCriteria
+```
+
+### CSmartPropSelectionCriteria_VertexCountCriteria
+
+**Inherits from:** [CSmartPropSelectionCriteria](smartprops.md#csmartpropselectioncriteria)
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CSmartPropSelectionCriteria_VertexCountCriteria",`, `"m_bEnabled": true,`, `"m_nTargetVertexCount": 0`, `}`, `MVDataComponentValidGrandParents (UNKNOWN FOR PARSER)`, `MPropertyFriendlyName = "Filter Faces By Vertex Count"`, `MPropertyDescription = ""`
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CSmartPropSelectionCriteria <|-- CSmartPropSelectionCriteria_VertexCountCriteria
 ```
 
 ### CSmartPropTransformOperation
@@ -1678,7 +1762,7 @@ classDiagram
 
 **Inherits from:** [CSmartPropParameter](smartprops.md#csmartpropparameter)
 
-**Derived by:** [CSmartPropVariable_Angles](smartprops.md#csmartpropvariable_angles), [CSmartPropVariable_ApplyColorMode](smartprops.md#csmartpropvariable_applycolormode), [CSmartPropVariable_Bool](smartprops.md#csmartpropvariable_bool), [CSmartPropVariable_ChoiceSelectionMode](smartprops.md#csmartpropvariable_choiceselectionmode), [CSmartPropVariable_Color](smartprops.md#csmartpropvariable_color), [CSmartPropVariable_ColorSelectionMode](smartprops.md#csmartpropvariable_colorselectionmode), [CSmartPropVariable_CoordinateSpace](smartprops.md#csmartpropvariable_coordinatespace), [CSmartPropVariable_DirectionVector](smartprops.md#csmartpropvariable_directionvector), [CSmartPropVariable_DistributionMode](smartprops.md#csmartpropvariable_distributionmode), [CSmartPropVariable_Float](smartprops.md#csmartpropvariable_float), [CSmartPropVariable_GridOriginMode](smartprops.md#csmartpropvariable_gridoriginmode), [CSmartPropVariable_GridPlacementMode](smartprops.md#csmartpropvariable_gridplacementmode), [CSmartPropVariable_Int](smartprops.md#csmartpropvariable_int), [CSmartPropVariable_Material](smartprops.md#csmartpropvariable_material), [CSmartPropVariable_MaterialGroup](smartprops.md#csmartpropvariable_materialgroup), [CSmartPropVariable_Model](smartprops.md#csmartpropvariable_model), [CSmartPropVariable_PathPositions](smartprops.md#csmartpropvariable_pathpositions), [CSmartPropVariable_PickMode](smartprops.md#csmartpropvariable_pickmode), [CSmartPropVariable_RadiusPlacementMode](smartprops.md#csmartpropvariable_radiusplacementmode), [CSmartPropVariable_ScaleMode](smartprops.md#csmartpropvariable_scalemode), [CSmartPropVariable_String](smartprops.md#csmartpropvariable_string), [CSmartPropVariable_SurfaceProperty](smartprops.md#csmartpropvariable_surfaceproperty), [CSmartPropVariable_TraceNoHit](smartprops.md#csmartpropvariable_tracenohit), [CSmartPropVariable_Vector2D](smartprops.md#csmartpropvariable_vector2d), [CSmartPropVariable_Vector3D](smartprops.md#csmartpropvariable_vector3d), [CSmartPropVariable_Vector4D](smartprops.md#csmartpropvariable_vector4d)
+**Derived by:** [CSmartPropVariable_Angles](smartprops.md#csmartpropvariable_angles), [CSmartPropVariable_ApplyColorMode](smartprops.md#csmartpropvariable_applycolormode), [CSmartPropVariable_Bool](smartprops.md#csmartpropvariable_bool), [CSmartPropVariable_ChoiceSelectionMode](smartprops.md#csmartpropvariable_choiceselectionmode), [CSmartPropVariable_Color](smartprops.md#csmartpropvariable_color), [CSmartPropVariable_ColorSelectionMode](smartprops.md#csmartpropvariable_colorselectionmode), [CSmartPropVariable_CoordinateSpace](smartprops.md#csmartpropvariable_coordinatespace), [CSmartPropVariable_DirectionVector](smartprops.md#csmartpropvariable_directionvector), [CSmartPropVariable_DistributionMode](smartprops.md#csmartpropvariable_distributionmode), [CSmartPropVariable_Float](smartprops.md#csmartpropvariable_float), [CSmartPropVariable_GridOriginMode](smartprops.md#csmartpropvariable_gridoriginmode), [CSmartPropVariable_GridPlacementMode](smartprops.md#csmartpropvariable_gridplacementmode), [CSmartPropVariable_Int](smartprops.md#csmartpropvariable_int), [CSmartPropVariable_Material](smartprops.md#csmartpropvariable_material), [CSmartPropVariable_MaterialGroup](smartprops.md#csmartpropvariable_materialgroup), [CSmartPropVariable_Model](smartprops.md#csmartpropvariable_model), [CSmartPropVariable_OrientationMode](smartprops.md#csmartpropvariable_orientationmode), [CSmartPropVariable_PathPositions](smartprops.md#csmartpropvariable_pathpositions), [CSmartPropVariable_PickMode](smartprops.md#csmartpropvariable_pickmode), [CSmartPropVariable_RadiusPlacementMode](smartprops.md#csmartpropvariable_radiusplacementmode), [CSmartPropVariable_ScaleMode](smartprops.md#csmartpropvariable_scalemode), [CSmartPropVariable_String](smartprops.md#csmartpropvariable_string), [CSmartPropVariable_SurfaceProperty](smartprops.md#csmartpropvariable_surfaceproperty), [CSmartPropVariable_TraceNoHit](smartprops.md#csmartpropvariable_tracenohit), [CSmartPropVariable_Vector2D](smartprops.md#csmartpropvariable_vector2d), [CSmartPropVariable_Vector3D](smartprops.md#csmartpropvariable_vector3d), [CSmartPropVariable_Vector4D](smartprops.md#csmartpropvariable_vector4d)
 
 **Metadata:** `MGetKV3ClassDefaults = Could not parse KV3 Defaults`, `MVDataRoot`, `MVDataNodeType = 1`, `MVDataAnonymousNode`, `MVDataOutlinerNameExpr = "m_VariableName"`
 
@@ -1703,6 +1787,7 @@ classDiagram
     CSmartPropVariable <|-- CSmartPropVariable_Material
     CSmartPropVariable <|-- CSmartPropVariable_MaterialGroup
     CSmartPropVariable <|-- CSmartPropVariable_Model
+    CSmartPropVariable <|-- CSmartPropVariable_OrientationMode
     CSmartPropVariable <|-- CSmartPropVariable_PathPositions
     CSmartPropVariable <|-- CSmartPropVariable_PickMode
     CSmartPropVariable <|-- CSmartPropVariable_RadiusPlacementMode
@@ -1946,6 +2031,20 @@ classDiagram
 ```mermaid
 classDiagram
     CSmartPropVariable <|-- CSmartPropVariable_Model
+    CSmartPropParameter <|-- CSmartPropVariable
+```
+
+### CSmartPropVariable_OrientationMode
+
+**Inherits from:** [CSmartPropVariable](smartprops.md#csmartpropvariable)
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CSmartPropVariable_OrientationMode",`, `"m_nElementID": -1,`, `"m_VariableName": "",`, `"m_bExposeAsParameter": false,`, `"m_DisplayName": "",`, `"m_HideExpression": "",`, `"m_ReadOnlyExpression": "",`, `"m_DefaultValue": "FIRST_OPEN_EDGE"`, `}`, `MPropertyFriendlyName = "Fit on Line Pick Mode"`, `MPropertyDescription = "Specifies how a fit on line element will pick which child elements it will place."`, `MVDataClassGroup = "Enumerator Types"`
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CSmartPropVariable <|-- CSmartPropVariable_OrientationMode
     CSmartPropParameter <|-- CSmartPropVariable
 ```
 
@@ -2232,6 +2331,17 @@ classDiagram
 | `NTH` | 1 |
 | `START_AND_END` | 2 |
 | `CONTROL_POINTS` | 3 |
+
+### SmartPropPlaceMeshOrientationMode_t
+
+**Values:**
+
+| Name | Value |
+|------|-------|
+| `FIRST_OPEN_EDGE` | 0 |
+| `FIRST_CLOSED_EDGE` | 1 |
+| `UVMAP1` | 2 |
+| `UVMAP2` | 3 |
 
 ### SmartPropRadiusPlacementMode_t
 

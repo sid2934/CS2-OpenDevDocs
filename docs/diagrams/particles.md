@@ -7,7 +7,7 @@ nav_exclude: true
 
 # UML: particles
 
-Class relationships (inheritance and composition) for the `particles` module (showing 300 of 404 relationships).
+Class relationships (inheritance and composition) for the `particles` module (showing 300 of 407 relationships).
 
 **Arrow legend:** `<|--` inheritance &nbsp; `*--` composition &nbsp; `-->` association/pointer
 
@@ -236,6 +236,7 @@ classDiagram
     CParticleFunctionOperator <|-- C_OP_MovementRigidAttachToCP
     CParticleFunctionOperator <|-- C_OP_MovementRotateParticleAroundAxis
     CParticleFunctionOperator <|-- C_OP_MovementSkinnedPositionFromCPSnapshot
+    CParticleFunctionPreEmission <|-- C_OP_MultiSegmentDisplaySnapshotGenerator
     CParticleFunctionOperator <|-- C_OP_Noise
     CParticleFunctionEmitter <|-- C_OP_NoiseEmitter
     CParticleFunctionOperator <|-- C_OP_NormalLock
@@ -311,6 +312,5 @@ classDiagram
     CParticleFunctionOperator <|-- C_OP_RemapTransformVisibilityToScalar
     CParticleFunctionOperator <|-- C_OP_RemapTransformVisibilityToVector
     CParticleFunctionOperator <|-- C_OP_RemapVectorComponentToScalar
-    CParticleFunctionOperator <|-- C_OP_RemapVectortoCP
-    CParticleFunctionOperator <|-- C_OP_RemapVelocityToVector
+    CParticleFunctionOperator <|-- C_OP_RemapVectorToRotations
 ```

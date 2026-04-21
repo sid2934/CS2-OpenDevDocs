@@ -14,8 +14,13 @@ nav_exclude: true
 | [CDSPMixgroupModifier](#cdspmixgroupmodifier) | class |  | 0 |
 | [CDSPPresetMixgroupModifierTable](#cdsppresetmixgroupmodifiertable) | class |  | 0 |
 | [CDspPresetModifierList](#cdsppresetmodifierlist) | class |  | 0 |
+| [CSndSeqInstBaseSchema](#csndseqinstbaseschema) | class |  | 6 |
+| [CSndSeqInstMidiSampler](#csndseqinstmidisampler) | class | CSndSeqInstBaseSchema | 0 |
+| [CSndSeqInstSndEvtSchema](#csndseqinstsndevtschema) | class | CSndSeqInstBaseSchema | 0 |
+| [CSndSeqInstruments](#csndseqinstruments) | class | ISndSeqInstruments | 0 |
 | [CSosGroupActionLimitSchema](#csosgroupactionlimitschema) | class | CSosGroupActionSchema | 0 |
 | [CSosGroupActionMemberCountEnvelopeSchema](#csosgroupactionmembercountenvelopeschema) | class | CSosGroupActionSchema | 0 |
+| [CSosGroupActionOcclusionSchema](#csosgroupactionocclusionschema) | class | CSosGroupActionSchema | 0 |
 | [CSosGroupActionSchema](#csosgroupactionschema) | class |  | 0 |
 | [CSosGroupActionSetSoundeventParameterSchema](#csosgroupactionsetsoundeventparameterschema) | class | CSosGroupActionSchema | 0 |
 | [CSosGroupActionSoundeventClusterSchema](#csosgroupactionsoundeventclusterschema) | class | CSosGroupActionSchema | 0 |
@@ -26,7 +31,17 @@ nav_exclude: true
 | [CSosGroupActionTimeLimitSchema](#csosgroupactiontimelimitschema) | class | CSosGroupActionSchema | 0 |
 | [CSosSoundEventGroupSchema](#csossoundeventgroupschema) | class |  | 0 |
 | [CSoundEventMetaData](#csoundeventmetadata) | class |  | 0 |
+| [ISndSeqInstruments](#isndseqinstruments) | class |  | 0 |
+| [KeyGroup_t](#keygroup_t) | class |  | 5 |
+| [SamplerVoice_t](#samplervoice_t) | class |  | 1 |
 | [SelectedEditItemInfo_t](#selectededititeminfo_t) | class |  | 0 |
+| [SndSeqInstrumentType_t](#sndseqinstrumenttype_t) | enum |  | 3 |
+| [SndSeqMidiStatusType_t](#sndseqmidistatustype_t) | enum |  | 7 |
+| [SndSeqPlayerType_t](#sndseqplayertype_t) | enum |  | 3 |
+| [SndSeqQuantizeType_t](#sndseqquantizetype_t) | enum |  | 7 |
+| [SndSeqRegionType_t](#sndseqregiontype_t) | enum |  | 3 |
+| [SndSeqSyncType_t](#sndseqsynctype_t) | enum |  | 3 |
+| [SndSeqTrackPlaybackType_t](#sndseqtrackplaybacktype_t) | enum |  | 2 |
 | [SosActionLimitSortType_t](#sosactionlimitsorttype_t) | enum |  | 2 |
 | [SosActionSetParamSortType_t](#sosactionsetparamsorttype_t) | enum |  | 2 |
 | [SosActionStopType_t](#sosactionstoptype_t) | enum |  | 3 |
@@ -34,6 +49,7 @@ nav_exclude: true
 | [SosEditItemType_t](#sosedititemtype_t) | enum |  | 6 |
 | [SosGroupFieldBehavior_t](#sosgroupfieldbehavior_t) | enum |  | 3 |
 | [SosGroupType_t](#sosgrouptype_t) | enum |  | 2 |
+| [VelocityZone_t](#velocityzone_t) | class |  | 4 |
 
 ---
 
@@ -48,6 +64,70 @@ nav_exclude: true
 ### CDspPresetModifierList
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"m_dspName": "default",`, `"m_modifiers":`, `[`, `]`, `}`
+
+### CSndSeqInstBaseSchema
+
+**Derived by:** [CSndSeqInstMidiSampler](soundsystem.md#csndseqinstmidisampler), [CSndSeqInstSndEvtSchema](soundsystem.md#csndseqinstsndevtschema)
+
+**Metadata:** `MGetKV3ClassDefaults = Could not parse KV3 Defaults`, `MPropertyAutoExpandSelf`, `MPropertyPolymorphicClass`
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CSndSeqInstBaseSchema <|-- CSndSeqInstMidiSampler
+    CSndSeqInstBaseSchema <|-- CSndSeqInstSndEvtSchema
+    CSndSeqInstBaseSchema *-- SndSeqInstrumentType_t
+    CSndSeqInstBaseSchema *-- SndSeqPlayerType_t
+```
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `m_nType` | [SndSeqInstrumentType_t](../schemas/soundsystem.md#sndseqinstrumenttype_t) |  |
+| `m_nPlayerType` | [SndSeqPlayerType_t](../schemas/soundsystem.md#sndseqplayertype_t) |  |
+| `m_bStopCurrentEvents` | bool |  |
+| `m_flBPM` | float32 |  |
+| `m_flBPMFactor` | float32 |  |
+| `m_flBPMInvFactor` | float32 |  |
+
+### CSndSeqInstMidiSampler
+
+**Inherits from:** [CSndSeqInstBaseSchema](soundsystem.md#csndseqinstbaseschema)
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CSndSeqInstMidiSampler",`, `"m_nType": "eSndSeqInstMidiSampler",`, `"m_nPlayerType": "eSndSeqPlayerMidiSeq",`, `"m_bStopCurrentEvents": false,`, `"m_flBPM": 120.000000,`, `"m_flBPMFactor": 2.000000,`, `"m_flBPMInvFactor": 0.500000,`, `"m_bIsSoundEvent": false,`, `"m_bStopPrevious": true,`, `"m_nMinNote": 0,`, `"m_nMaxNote": 0,`, `"m_flMinVelocityAtten": 0.000000,`, `"m_flMaxVelocityAtten": 0.000000,`, `"m_flAttack": 0.000000,`, `"m_flRelease": 0.000000,`, `"m_bBeatEnvelopes": true,`, `"m_nNextVoiceSlot": 0,`, `"m_hSoundEventHash": 0`, `}`, `MPropertyFriendlyName = "Midi Sampler"`
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CSndSeqInstBaseSchema <|-- CSndSeqInstMidiSampler
+```
+
+### CSndSeqInstSndEvtSchema
+
+**Inherits from:** [CSndSeqInstBaseSchema](soundsystem.md#csndseqinstbaseschema)
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CSndSeqInstSndEvtSchema",`, `"m_nType": "eSndSeqInstSndEvt",`, `"m_nPlayerType": "eSndSeqPlayerSndEvt",`, `"m_bStopCurrentEvents": false,`, `"m_flBPM": 0.000000,`, `"m_flBPMFactor": 0.000000,`, `"m_flBPMInvFactor": 0.000000`, `}`, `MPropertyFriendlyName = "SoundEvent on Start"`
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CSndSeqInstBaseSchema <|-- CSndSeqInstSndEvtSchema
+```
+
+### CSndSeqInstruments
+
+**Inherits from:** [ISndSeqInstruments](soundsystem.md#isndseqinstruments)
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    ISndSeqInstruments <|-- CSndSeqInstruments
+```
 
 ### CSosGroupActionLimitSchema
 
@@ -75,9 +155,22 @@ classDiagram
     CSosGroupActionSchema <|-- CSosGroupActionMemberCountEnvelopeSchema
 ```
 
+### CSosGroupActionOcclusionSchema
+
+**Inherits from:** [CSosGroupActionSchema](soundsystem.md#csosgroupactionschema)
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CSosGroupActionOcclusionSchema",`, `"m_flCalculationInterval": 0.100000,`, `"m_flRadius": 0.000000,`, `"m_flOcclusionScale": 1.000000,`, `"m_flOcclusionMin": 0.000000,`, `"m_flOcclusionMax": 1.000000,`, `"m_flTestDepth": 0.000000`, `}`, `MPropertyFriendlyName = "Occlusion Info"`
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CSosGroupActionSchema <|-- CSosGroupActionOcclusionSchema
+```
+
 ### CSosGroupActionSchema
 
-**Derived by:** [CSosGroupActionLimitSchema](soundsystem.md#csosgroupactionlimitschema), [CSosGroupActionMemberCountEnvelopeSchema](soundsystem.md#csosgroupactionmembercountenvelopeschema), [CSosGroupActionSetSoundeventParameterSchema](soundsystem.md#csosgroupactionsetsoundeventparameterschema), [CSosGroupActionSoundeventClusterSchema](soundsystem.md#csosgroupactionsoundeventclusterschema), [CSosGroupActionSoundeventCountSchema](soundsystem.md#csosgroupactionsoundeventcountschema), [CSosGroupActionSoundeventMinMaxValuesSchema](soundsystem.md#csosgroupactionsoundeventminmaxvaluesschema), [CSosGroupActionSoundeventPrioritySchema](soundsystem.md#csosgroupactionsoundeventpriorityschema), [CSosGroupActionTimeBlockLimitSchema](soundsystem.md#csosgroupactiontimeblocklimitschema), [CSosGroupActionTimeLimitSchema](soundsystem.md#csosgroupactiontimelimitschema)
+**Derived by:** [CSosGroupActionLimitSchema](soundsystem.md#csosgroupactionlimitschema), [CSosGroupActionMemberCountEnvelopeSchema](soundsystem.md#csosgroupactionmembercountenvelopeschema), [CSosGroupActionOcclusionSchema](soundsystem.md#csosgroupactionocclusionschema), [CSosGroupActionSetSoundeventParameterSchema](soundsystem.md#csosgroupactionsetsoundeventparameterschema), [CSosGroupActionSoundeventClusterSchema](soundsystem.md#csosgroupactionsoundeventclusterschema), [CSosGroupActionSoundeventCountSchema](soundsystem.md#csosgroupactionsoundeventcountschema), [CSosGroupActionSoundeventMinMaxValuesSchema](soundsystem.md#csosgroupactionsoundeventminmaxvaluesschema), [CSosGroupActionSoundeventPrioritySchema](soundsystem.md#csosgroupactionsoundeventpriorityschema), [CSosGroupActionTimeBlockLimitSchema](soundsystem.md#csosgroupactiontimeblocklimitschema), [CSosGroupActionTimeLimitSchema](soundsystem.md#csosgroupactiontimelimitschema)
 
 **Metadata:** `MGetKV3ClassDefaults = Could not parse KV3 Defaults`, `MPropertyAutoExpandSelf`, `MPropertyPolymorphicClass`
 
@@ -87,6 +180,7 @@ classDiagram
 classDiagram
     CSosGroupActionSchema <|-- CSosGroupActionLimitSchema
     CSosGroupActionSchema <|-- CSosGroupActionMemberCountEnvelopeSchema
+    CSosGroupActionSchema <|-- CSosGroupActionOcclusionSchema
     CSosGroupActionSchema <|-- CSosGroupActionSetSoundeventParameterSchema
     CSosGroupActionSchema <|-- CSosGroupActionSoundeventClusterSchema
     CSosGroupActionSchema <|-- CSosGroupActionSoundeventCountSchema
@@ -195,9 +289,124 @@ classDiagram
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"m_soundEventVMix": ""`, `}`
 
+### ISndSeqInstruments
+
+**Derived by:** [CSndSeqInstruments](soundsystem.md#csndseqinstruments)
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    ISndSeqInstruments <|-- CSndSeqInstruments
+```
+
+### KeyGroup_t
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    KeyGroup_t --> VelocityZone_t
+```
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `nCenterNote` | uint8 |  |
+| `nMinNote` | uint8 |  |
+| `nMaxNote` | uint8 |  |
+| `nNumVelocityZones` | uint8 |  |
+| `pVelocityZones` | [VelocityZone_t](../schemas/soundsystem.md#velocityzone_t)* |  |
+
+### SamplerVoice_t
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `nNoteNum` | uint8 |  |
+
 ### SelectedEditItemInfo_t
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"m_EditItems":`, `[`, `]`, `}`
+
+### SndSeqInstrumentType_t
+
+**Values:**
+
+| Name | Value |
+|------|-------|
+| `eSndSeqInstNull` | 0 |
+| `eSndSeqInstSndEvt` | 1 |
+| `eSndSeqInstMidiSampler` | 2 |
+
+### SndSeqMidiStatusType_t
+
+**Values:**
+
+| Name | Value |
+|------|-------|
+| `SndSeqMidiStatusNoteOff` | 8 |
+| `SndSeqMidiStatusNoteOn` | 9 |
+| `SndSeqMidiStatusKeyPressure` | 10 |
+| `SndSeqMidiStatusCtrlChange` | 11 |
+| `SndSeqMidiStatusProgramChange` | 12 |
+| `SndSeqMidiStatusChannelPressure` | 13 |
+| `SndSeqMidiStatusPitchBend` | 14 |
+
+### SndSeqPlayerType_t
+
+**Values:**
+
+| Name | Value |
+|------|-------|
+| `eSndSeqPlayerNull` | 0 |
+| `eSndSeqPlayerSndEvt` | 1 |
+| `eSndSeqPlayerMidiSeq` | 2 |
+
+### SndSeqQuantizeType_t
+
+**Values:**
+
+| Name | Value |
+|------|-------|
+| `eSndSeqQuantizeInvalid` | -1 |
+| `eSndSeqQuantizeNone` | 0 |
+| `eSndSeqQuantizeBeat` | 1 |
+| `eSndSeqQuantizeBar` | 2 |
+| `eSndSeqQuantizeSequence` | 3 |
+| `eSndSeqQuantizeSeek` | 4 |
+| `eSndSeqQuantizeReset` | 5 |
+
+### SndSeqRegionType_t
+
+**Values:**
+
+| Name | Value |
+|------|-------|
+| `eSndSeqRegionTypeNull` | 0 |
+| `eSndSeqRegionTypeSndEvt` | 1 |
+| `eSndSeqRegionTypeMidiSeq` | 2 |
+
+### SndSeqSyncType_t
+
+**Values:**
+
+| Name | Value |
+|------|-------|
+| `eSndSeqSyncTypeNone` | 0 |
+| `eSndSeqSyncTypeWait` | 1 |
+| `eSndSeqSyncTypeSeek` | 2 |
+
+### SndSeqTrackPlaybackType_t
+
+**Values:**
+
+| Name | Value |
+|------|-------|
+| `eSndSeqTrackPlaybackTypeStep` | 0 |
+| `eSndSeqTrackPlaybackTypeFwd` | 1 |
 
 ### SosActionLimitSortType_t
 
@@ -262,3 +471,14 @@ classDiagram
 |------|-------|
 | `SOS_GROUPTYPE_DYNAMIC` | 0 |
 | `SOS_GROUPTYPE_STATIC` | 1 |
+
+### VelocityZone_t
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `nMaxVel` | uint8 |  |
+| `nNextSelection` | uint8 |  |
+| `nNumSamples` | uint8 |  |
+| `pSamples` | uint32[4] |  |

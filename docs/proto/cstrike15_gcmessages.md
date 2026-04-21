@@ -1352,29 +1352,6 @@ direction LR
     +string string_value
   }
 
-  class CMsgGCCStrike15_v2_ClientReportValidation {
-    +string file_report
-    +string command_line
-    +uint32 total_files
-    +uint32 internal_error
-    +uint32 trust_time
-    +uint32 count_pending
-    +uint32 count_completed
-    +uint32 process_id
-    +int32 osversion
-    +uint32 clientreportversion
-    +uint32 status_id
-    +uint32 diagnostic1
-    +uint64 diagnostic2
-    +uint64 diagnostic3
-    +string last_launch_data
-    +uint32 report_count
-    +uint64 client_time
-    +uint64 diagnostic4
-    +uint64 diagnostic5
-    +List~CVDiagnostic~ diagnostics
-  }
-
   class CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode {
     +string file_report
     +bool offer_insecure_mode
@@ -1524,7 +1501,6 @@ direction LR
   CMsgGCCStrike15_v2_Account_RequestCoPlays --> Player : players[]
   CMsgGCCStrike15_v2_ClientPartyWarning --> Entry : entries[]
   CMsgGCCStrike15_v2_ClientPerfReport --> Entry : entries[]
-  CMsgGCCStrike15_v2_ClientReportValidation --> CVDiagnostic : diagnostics[]
   CMsgGCCStrike15_v2_GC2ClientInitSystem_Response --> EInitSystemResult : einit_result
   CMsgRecurringMissionSchema --> MissionTemplateList : missions[]
 
@@ -1617,7 +1593,6 @@ direction LR
     k_EMsgGCCStrike15_v2_ClientPerfReport
     k_EMsgGCCStrike15_v2_GetEventFavorites_Response
     k_EMsgGCCStrike15_v2_ClientRequestSouvenir
-    k_EMsgGCCStrike15_v2_ClientReportValidation
     k_EMsgGCCStrike15_v2_GC2ClientRefuseSecureMode
     k_EMsgGCCStrike15_v2_GC2ClientRequestValidation
     k_EMsgGCCStrike15_v2_ClientRedeemMissionReward
@@ -1768,7 +1743,6 @@ direction LR
 | `k_EMsgGCCStrike15_v2_ClientPerfReport` | 9202 |
 | `k_EMsgGCCStrike15_v2_GetEventFavorites_Response` | 9203 |
 | `k_EMsgGCCStrike15_v2_ClientRequestSouvenir` | 9204 |
-| `k_EMsgGCCStrike15_v2_ClientReportValidation` | 9205 |
 | `k_EMsgGCCStrike15_v2_GC2ClientRefuseSecureMode` | 9206 |
 | `k_EMsgGCCStrike15_v2_GC2ClientRequestValidation` | 9207 |
 | `k_EMsgGCCStrike15_v2_ClientRedeemMissionReward` | 9209 |
@@ -3288,31 +3262,6 @@ direction LR
 | `extended` | 2 | uint32 | optional |  |
 | `value` | 3 | uint64 | optional |  |
 | `string_value` | 4 | string | optional |  |
-
-### `CMsgGCCStrike15_v2_ClientReportValidation`
-
-| Field | Ordinal | Type | Label | Description |
-|-------|---------|------|-------|-------------|
-| `file_report` | 1 | string | optional |  |
-| `command_line` | 2 | string | optional |  |
-| `total_files` | 3 | uint32 | optional |  |
-| `internal_error` | 4 | uint32 | optional |  |
-| `trust_time` | 5 | uint32 | optional |  |
-| `count_pending` | 6 | uint32 | optional |  |
-| `count_completed` | 7 | uint32 | optional |  |
-| `process_id` | 8 | uint32 | optional |  |
-| `osversion` | 9 | int32 | optional |  |
-| `clientreportversion` | 10 | uint32 | optional |  |
-| `status_id` | 11 | uint32 | optional |  |
-| `diagnostic1` | 12 | uint32 | optional |  |
-| `diagnostic2` | 13 | uint64 | optional |  |
-| `diagnostic3` | 14 | uint64 | optional |  |
-| `last_launch_data` | 15 | string | optional |  |
-| `report_count` | 16 | uint32 | optional |  |
-| `client_time` | 17 | uint64 | optional |  |
-| `diagnostic4` | 18 | uint64 | optional |  |
-| `diagnostic5` | 19 | uint64 | optional |  |
-| `diagnostics` | 20 | [CVDiagnostic](#cvdiagnostic) | repeated |  |
 
 ### `CMsgGCCStrike15_v2_GC2ClientRefuseSecureMode`
 

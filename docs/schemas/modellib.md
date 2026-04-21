@@ -107,8 +107,7 @@ nav_exclude: true
 | [ModelSkeletonData_t](#modelskeletondata_t) | enum |  | 22 |
 | [MorphBundleType_t](#morphbundletype_t) | enum |  | 4 |
 | [MorphFlexControllerRemapType_t](#morphflexcontrollerremaptype_t) | enum |  | 4 |
-| [MovementCapability_t](#movementcapability_t) | enum |  | 8 |
-| [MovementGaitId_t](#movementgaitid_t) | class |  | 0 |
+| [MovementCapability_t](#movementcapability_t) | enum |  | 10 |
 | [NPCPhysicsHullType_t](#npcphysicshulltype_t) | enum |  | 5 |
 | [PermModelDataAnimatedMaterialAttribute_t](#permmodeldataanimatedmaterialattribute_t) | class |  | 0 |
 | [PermModelData_t](#permmodeldata_t) | class |  | 0 |
@@ -896,7 +895,7 @@ classDiagram
 
 ### ModelMeshBufferData_t
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_nBlockIndex": -1,`, `"m_nElementCount": 0,`, `"m_nElementSizeInBytes": 0,`, `"m_bMeshoptCompressed": false,`, `"m_bMeshoptIndexSequence": false,`, `"m_bCompressedZSTD": false,`, `"m_bCreateBufferSRV": false,`, `"m_bCreateBufferUAV": false,`, `"m_bCreateRawBuffer": false,`, `"m_bCreatePooledBuffer": false,`, `"m_nBufferUsage": 0,`, `"m_inputLayoutFields":`, `[`, `]`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_nBlockIndex": -1,`, `"m_nElementCount": 0,`, `"m_nElementSizeInBytes": 0,`, `"m_bMeshoptCompressed": false,`, `"m_bMeshoptIndexSequence": false,`, `"m_nMeshoptMeshletEncodeVersion": -1,`, `"m_bCompressedZSTD": false,`, `"m_bCreateBufferSRV": false,`, `"m_bCreateBufferUAV": false,`, `"m_bCreateRawBuffer": false,`, `"m_bCreatePooledBuffer": false,`, `"m_nBufferUsage": 0,`, `"m_inputLayoutFields":`, `[`, `]`, `}`
 
 ### ModelMeshBufferUsage_t
 
@@ -980,11 +979,9 @@ classDiagram
 | `eInstantStop` | 4 |
 | `eShuffle` | 5 |
 | `ePlantedTurn` | 6 |
-| `eCount` | 7 |
-
-### MovementGaitId_t
-
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_sId": ""`, `}`
+| `eUseStartAsPlantedTurn` | 7 |
+| `eLean` | 8 |
+| `eCount` | 9 |
 
 ### NPCPhysicsHullType_t
 

@@ -278,6 +278,8 @@ direction LR
     +CUserMsg_ParticleManager.UpdateFan update_fan
     +CUserMsg_ParticleManager.SetParticleClusterGrowth set_particle_cluster_growth
     +CUserMsg_ParticleManager.RemoveFan remove_fan
+    +CUserMsg_ParticleManager.CreateSmokeGrid create_smoke_grid
+    +CUserMsg_ParticleManager.SetOverrideTexture set_override_texture
   }
 
   class ReleaseParticleIndex {
@@ -401,10 +403,15 @@ direction LR
 
   class SetParticleText {
     +string text
+    +bool localize
   }
 
   class SetTextureAttribute {
     +string attribute_name
+    +string texture_name
+  }
+
+  class SetOverrideTexture {
     +string texture_name
   }
 
@@ -480,6 +487,10 @@ direction LR
   }
 
   class DestroyPhysicsSim {
+  }
+
+  class CreateSmokeGrid {
+    +string vdata_name
   }
 
   class SetVData {
@@ -793,6 +804,8 @@ direction LR
   CUserMsg_ParticleManager --> UpdateFan : update_fan
   CUserMsg_ParticleManager --> SetParticleClusterGrowth : set_particle_cluster_growth
   CUserMsg_ParticleManager --> RemoveFan : remove_fan
+  CUserMsg_ParticleManager --> CreateSmokeGrid : create_smoke_grid
+  CUserMsg_ParticleManager --> SetOverrideTexture : set_override_texture
   SetParticleNamedValueContext --> FloatContextValue : float_values[]
   SetParticleNamedValueContext --> VectorContextValue : vector_values[]
   SetParticleNamedValueContext --> TransformContextValue : transform_values[]
@@ -921,6 +934,8 @@ direction LR
     GAME_PARTICLE_MANAGER_EVENT_UPDATE_FAN
     GAME_PARTICLE_MANAGER_EVENT_SET_CLUSTER_GROWTH
     GAME_PARTICLE_MANAGER_EVENT_REMOVE_FAN
+    GAME_PARTICLE_MANAGER_EVENT_CREATE_SMOKE_GRID
+    GAME_PARTICLE_MANAGER_EVENT_SET_OVERRIDE_TEXTURE
   }
 
   class EHapticPulseType{
@@ -1055,6 +1070,8 @@ direction LR
 | `GAME_PARTICLE_MANAGER_EVENT_UPDATE_FAN` | 37 |
 | `GAME_PARTICLE_MANAGER_EVENT_SET_CLUSTER_GROWTH` | 38 |
 | `GAME_PARTICLE_MANAGER_EVENT_REMOVE_FAN` | 39 |
+| `GAME_PARTICLE_MANAGER_EVENT_CREATE_SMOKE_GRID` | 40 |
+| `GAME_PARTICLE_MANAGER_EVENT_SET_OVERRIDE_TEXTURE` | 41 |
 
 ### `EHapticPulseType`
 
@@ -1389,6 +1406,8 @@ direction LR
 | `update_fan` | 40 | CUserMsg_ParticleManager.UpdateFan | optional |  |
 | `set_particle_cluster_growth` | 41 | CUserMsg_ParticleManager.SetParticleClusterGrowth | optional |  |
 | `remove_fan` | 42 | CUserMsg_ParticleManager.RemoveFan | optional |  |
+| `create_smoke_grid` | 43 | CUserMsg_ParticleManager.CreateSmokeGrid | optional |  |
+| `set_override_texture` | 44 | CUserMsg_ParticleManager.SetOverrideTexture | optional |  |
 
 ### `CUserMsg_HudError`
 

@@ -42,7 +42,8 @@ nav_exclude: true
 | [CNmGraphDocBlend1DNode](#cnmgraphdocblend1dnode) | class | CNmGraphDocFlowNode | 0 |
 | [CNmGraphDocBlend2DNode](#cnmgraphdocblend2dnode) | class | CNmGraphDocFlowNode | 0 |
 | [CNmGraphDocBoneMaskBlendNode](#cnmgraphdocbonemaskblendnode) | class | CNmGraphDocFlowNode | 0 |
-| [CNmGraphDocBoneMaskNode](#cnmgraphdocbonemasknode) | class | CNmGraphDocFlowNode | 0 |
+| [CNmGraphDocBoneMaskNode](#cnmgraphdocbonemasknode) | class | CNmGraphDocVariationDataNode | 0 |
+| [CNmGraphDocBoneMaskNode](#cnmgraphdocbonemasknode) | class |  | 0 |
 | [CNmGraphDocBoneMaskParameterReferenceNode](#cnmgraphdocbonemaskparameterreferencenode) | class | CNmGraphDocParameterReferenceNode | 0 |
 | [CNmGraphDocBoneMaskResultNode](#cnmgraphdocbonemaskresultnode) | class | CNmGraphDocResultNode | 0 |
 | [CNmGraphDocBoneMaskSelectorNode](#cnmgraphdocbonemaskselectornode) | class | CNmGraphDocFlowNode | 0 |
@@ -64,6 +65,10 @@ nav_exclude: true
 | [CNmGraphDocControlParameterNode](#cnmgraphdoccontrolparameternode) | class | CNmGraphDocParameterBaseNode | 0 |
 | [CNmGraphDocCurrentSyncEventIDNode](#cnmgraphdoccurrentsynceventidnode) | class | CNmGraphDocFlowNode | 0 |
 | [CNmGraphDocCurrentSyncEventNode](#cnmgraphdoccurrentsynceventnode) | class | CNmGraphDocFlowNode | 0 |
+| [CNmGraphDocDataDictionary](#cnmgraphdocdatadictionary) | class |  | 0 |
+| [CNmGraphDocDataDictionary](#cnmgraphdocdatadictionary) | class |  | 0 |
+| [CNmGraphDocDataDictionary](#cnmgraphdocdatadictionary) | class |  | 0 |
+| [CNmGraphDocDataDictionary](#cnmgraphdocdatadictionary) | class |  | 0 |
 | [CNmGraphDocEntryOverrideNode](#cnmgraphdocentryoverridenode) | class | CNmGraphDocResultNode | 0 |
 | [CNmGraphDocEntryStateOverrideConditionsNode](#cnmgraphdocentrystateoverrideconditionsnode) | class | CNmGraphDocResultNode | 0 |
 | [CNmGraphDocEntryStateOverrideConduitNode](#cnmgraphdocentrystateoverrideconduitnode) | class | CNmGraphDocStateMachineGraphNode | 0 |
@@ -85,6 +90,7 @@ nav_exclude: true
 | [CNmGraphDocFloatResultNode](#cnmgraphdocfloatresultnode) | class | CNmGraphDocResultNode | 0 |
 | [CNmGraphDocFloatSelectorNode](#cnmgraphdocfloatselectornode) | class | CNmGraphDocFlowNode | 0 |
 | [CNmGraphDocFloatSelectorNode](#cnmgraphdocfloatselectornode) | class |  | 0 |
+| [CNmGraphDocFloatSpringNode](#cnmgraphdocfloatspringnode) | class | CNmGraphDocFlowNode | 0 |
 | [CNmGraphDocFloatSwitchNode](#cnmgraphdocfloatswitchnode) | class | CNmGraphDocFlowNode | 0 |
 | [CNmGraphDocFloatVirtualParameterNode](#cnmgraphdocfloatvirtualparameternode) | class | CNmGraphDocVirtualParameterNode | 0 |
 | [CNmGraphDocFlowGraph](#cnmgraphdocflowgraph) | class | CNmGraphDocGraph | 0 |
@@ -98,6 +104,8 @@ nav_exclude: true
 | [CNmGraphDocGraph](#cnmgraphdocgraph) | class |  | 0 |
 | [CNmGraphDocGraphEventConditionNode](#cnmgraphdocgrapheventconditionnode) | class | CNmGraphDocFlowNode | 0 |
 | [CNmGraphDocGraphEventConditionNode](#cnmgraphdocgrapheventconditionnode) | class |  | 0 |
+| [CNmGraphDocIDBasedClipSelectorNode](#cnmgraphdocidbasedclipselectornode) | class | CNmGraphDocFlowNode | 0 |
+| [CNmGraphDocIDBasedSelectorNode](#cnmgraphdocidbasedselectornode) | class | CNmGraphDocFlowNode | 0 |
 | [CNmGraphDocIDComparisonNode](#cnmgraphdocidcomparisonnode) | class | CNmGraphDocFlowNode | 0 |
 | [CNmGraphDocIDControlParameterNode](#cnmgraphdocidcontrolparameternode) | class | CNmGraphDocControlParameterNode | 0 |
 | [CNmGraphDocIDEventConditionNode](#cnmgraphdocideventconditionnode) | class | CNmGraphDocFlowNode | 0 |
@@ -115,7 +123,7 @@ nav_exclude: true
 | [CNmGraphDocIsExternalPoseSetNode](#cnmgraphdocisexternalposesetnode) | class | CNmGraphDocFlowNode | 0 |
 | [CNmGraphDocIsInactiveBranchConditionNode](#cnmgraphdocisinactivebranchconditionnode) | class | CNmGraphDocFlowNode | 0 |
 | [CNmGraphDocIsTargetSetNode](#cnmgraphdocistargetsetnode) | class | CNmGraphDocFlowNode | 0 |
-| [CNmGraphDocLayerBaseNode](#cnmgraphdoclayerbasenode) | class | CNmGraphDocFlowNode | 0 |
+| [CNmGraphDocLayerBaseNode](#cnmgraphdoclayerbasenode) | class | CNmGraphDocFlowNode | 3 |
 | [CNmGraphDocLayerBlendNode](#cnmgraphdoclayerblendnode) | class | CNmGraphDocFlowNode | 0 |
 | [CNmGraphDocLocalLayerNode](#cnmgraphdoclocallayernode) | class | CNmGraphDocLayerBaseNode | 0 |
 | [CNmGraphDocNode](#cnmgraphdocnode) | class |  | 6 |
@@ -159,7 +167,8 @@ nav_exclude: true
 | [CNmGraphDocTargetResultNode](#cnmgraphdoctargetresultnode) | class | CNmGraphDocResultNode | 0 |
 | [CNmGraphDocTargetSelectorNode](#cnmgraphdoctargetselectornode) | class | CNmGraphDocFlowNode | 0 |
 | [CNmGraphDocTargetVirtualParameterNode](#cnmgraphdoctargetvirtualparameternode) | class | CNmGraphDocVirtualParameterNode | 0 |
-| [CNmGraphDocTargetWarpNode](#cnmgraphdoctargetwarpnode) | class | CNmGraphDocFlowNode | 0 |
+| [CNmGraphDocTargetWarpNode](#cnmgraphdoctargetwarpnode) | class | CNmGraphDocVariationDataNode | 0 |
+| [CNmGraphDocTargetWarpNode](#cnmgraphdoctargetwarpnode) | class |  | 0 |
 | [CNmGraphDocTimeConditionNode](#cnmgraphdoctimeconditionnode) | class | CNmGraphDocFlowNode | 0 |
 | [CNmGraphDocTransitionConduitNode](#cnmgraphdoctransitionconduitnode) | class | CNmGraphDocStateMachineGraphNode | 0 |
 | [CNmGraphDocTransitionEventConditionNode](#cnmgraphdoctransitioneventconditionnode) | class | CNmGraphDocFlowNode | 0 |
@@ -182,11 +191,6 @@ nav_exclude: true
 | [CNmGraphDocZeroPoseNode](#cnmgraphdoczeroposenode) | class | CNmGraphDocFlowNode | 0 |
 | [CNmGraphDocument](#cnmgraphdocument) | class | CNmAnimDocument | 0 |
 | [CNmGraphDocument](#cnmgraphdocument) | class |  | 0 |
-| [CNmGraphParameterArchetype](#cnmgraphparameterarchetype) | class |  | 0 |
-| [CNmGraphParameterArchetype](#cnmgraphparameterarchetype) | enum |  | 2 |
-| [CNmIKRigDocument](#cnmikrigdocument) | class | CNmAnimDocument | 0 |
-| [CNmIKRigLink](#cnmikriglink) | class |  | 0 |
-| [CNmIKRigTarget](#cnmikrigtarget) | class |  | 0 |
 | [CNmPreviewArchetype](#cnmpreviewarchetype) | class |  | 0 |
 | [CNmPreviewArchetype](#cnmpreviewarchetype) | class |  | 0 |
 | [CNmSkeletonDocument](#cnmskeletondocument) | class | CNmAnimDocument | 0 |
@@ -203,6 +207,8 @@ nav_exclude: true
 | [CnmGraphDocDurationScaleNode](#cnmgraphdocdurationscalenode) | class | CNmGraphDocFlowNode | 0 |
 | [CnmGraphDocFollowBoneNode](#cnmgraphdocfollowbonenode) | class | CNmGraphDocVariationDataNode | 0 |
 | [CnmGraphDocFollowBoneNode](#cnmgraphdocfollowbonenode) | class |  | 0 |
+| [CnmGraphDocFootIKNode](#cnmgraphdocfootiknode) | class | CNmGraphDocVariationDataNode | 0 |
+| [CnmGraphDocFootIKNode](#cnmgraphdocfootiknode) | class |  | 0 |
 | [CnmGraphDocSpeedScaleNode](#cnmgraphdocspeedscalenode) | class | CNmGraphDocFlowNode | 0 |
 | [CnmGraphDocTwoBoneIKNode](#cnmgraphdoctwoboneiknode) | class | CNmGraphDocVariationDataNode | 0 |
 | [CnmGraphDocTwoBoneIKNode](#cnmgraphdoctwoboneiknode) | class |  | 0 |
@@ -219,7 +225,7 @@ nav_exclude: true
 
 ### CNmAnimDocument
 
-**Derived by:** [CNmClipDocument](animdoclib.md#cnmclipdocument), [CNmGraphDocument](animdoclib.md#cnmgraphdocument), [CNmIKRigDocument](animdoclib.md#cnmikrigdocument), [CNmSkeletonDocument](animdoclib.md#cnmskeletondocument)
+**Derived by:** [CNmClipDocument](animdoclib.md#cnmclipdocument), [CNmGraphDocument](animdoclib.md#cnmgraphdocument), [CNmSkeletonDocument](animdoclib.md#cnmskeletondocument)
 
 **Metadata:** `MGetKV3ClassDefaults = Could not parse KV3 Defaults`
 
@@ -229,7 +235,6 @@ nav_exclude: true
 classDiagram
     CNmAnimDocument <|-- CNmClipDocument
     CNmAnimDocument <|-- CNmGraphDocument
-    CNmAnimDocument <|-- CNmIKRigDocument
     CNmAnimDocument <|-- CNmSkeletonDocument
 ```
 
@@ -295,7 +300,7 @@ classDiagram
 
 **Inherits from:** [CNmClipDocEvent](animdoclib.md#cnmclipdocevent)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmClipDocEvent_BodyGroup",`, `"m_flStartTime": 0.000000,`, `"m_flDuration": 0.000000,`, `"bodygroup": "",`, `"value": 0`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmClipDocEvent_BodyGroup",`, `"m_flStartTime": 0.000000,`, `"m_flDuration": 0.000000,`, `"m_target": "Self",`, `"bodygroup": "",`, `"value": 0`, `}`
 
 **Relationships:**
 
@@ -308,7 +313,7 @@ classDiagram
 
 **Inherits from:** [CNmClipDocEvent](animdoclib.md#cnmclipdocevent)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmClipDocEvent_EntityAttribute",`, `"m_flStartTime": 0.000000,`, `"m_flDuration": 0.000000,`, `"m_attributeName": "",`, `"m_nValueType": "EVENT_ENTITY_ATTR_TYPE_INT",`, `"m_nIntValue": 0,`, `"m_FloatValue":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `}`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmClipDocEvent_EntityAttribute",`, `"m_flStartTime": 0.000000,`, `"m_flDuration": 0.000000,`, `"m_target": "Self",`, `"m_attributeName": "",`, `"m_nValueType": "EVENT_ENTITY_ATTR_TYPE_INT",`, `"m_nIntValue": 0,`, `"m_FloatValue":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `}`, `}`
 
 **Relationships:**
 
@@ -395,7 +400,7 @@ classDiagram
 
 **Inherits from:** [CNmClipDocEvent](animdoclib.md#cnmclipdocevent)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmClipDocEvent_MaterialAttribute",`, `"m_flStartTime": 0.000000,`, `"m_flDuration": 0.000000,`, `"m_attributeName": "",`, `"m_x":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `},`, `"m_y":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `},`, `"m_z":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `},`, `"m_w":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `}`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmClipDocEvent_MaterialAttribute",`, `"m_flStartTime": 0.000000,`, `"m_flDuration": 0.000000,`, `"m_target": "Self",`, `"m_attributeName": "",`, `"m_x":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `},`, `"m_y":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `},`, `"m_z":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `},`, `"m_w":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `}`, `}`
 
 **Relationships:**
 
@@ -421,7 +426,7 @@ classDiagram
 
 **Inherits from:** [CNmClipDocEvent](animdoclib.md#cnmclipdocevent)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmClipDocEvent_Particle",`, `"m_flStartTime": 0.000000,`, `"m_flDuration": 0.000000,`, `"m_relevance": "ClientAndServer",`, `"m_type": "Create",`, `"m_particleSystem": "",`, `"m_bDetachFromOwner": false,`, `"m_bStopImmediately": false,`, `"m_bPlayEndCap": false,`, `"m_attachmentPoint0": "",`, `"m_attachmentType0": "PATTACH_INVALID",`, `"m_attachmentPoint1": "",`, `"m_attachmentType1": "PATTACH_INVALID",`, `"m_config": "",`, `"m_effectForConfig": "",`, `"m_tags": ""`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmClipDocEvent_Particle",`, `"m_flStartTime": 0.000000,`, `"m_flDuration": 0.000000,`, `"m_relevance": "ClientAndServer",`, `"m_type": "Create",`, `"m_target": "Self",`, `"m_particleSystem": "",`, `"m_bDetachFromOwner": false,`, `"m_bStopImmediately": false,`, `"m_bPlayEndCap": false,`, `"m_attachmentPoint0": "",`, `"m_attachmentType0": "PATTACH_INVALID",`, `"m_attachmentPoint1": "",`, `"m_attachmentType1": "PATTACH_INVALID",`, `"m_config": "",`, `"m_effectForConfig": "",`, `"m_tags": ""`, `}`
 
 **Relationships:**
 
@@ -486,7 +491,7 @@ classDiagram
 
 **Inherits from:** [CNmAnimDocument](animdoclib.md#cnmanimdocument)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmClipDocument",`, `"m_nVersion": 0,`, `"m_sourceFilename": "",`, `"m_animationSkeletonName": "",`, `"m_secondaryAnimationSkeletonNames":`, `[`, `],`, `"m_eventTracks":`, `[`, `],`, `"m_nStartFrame": -1,`, `"m_nEndFrame": -1,`, `"m_flDurationOverrideSeconds": -1.000000,`, `"m_additiveType": "None",`, `"m_additiveBaseFilename": "",`, `"m_additiveBaseFrame": "FirstFrame",`, `"m_nAdditiveBaseFrameIdx": -1,`, `"m_bonesToSampleInModelSpace":`, `[`, `]`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmClipDocument",`, `"m_nVersion": 0,`, `"m_sourceFilename": "",`, `"m_animationSkeletonName": "",`, `"m_secondaryAnimationSkeletonNames":`, `[`, `],`, `"m_eventTracks":`, `[`, `],`, `"m_nStartFrame": -1,`, `"m_nEndFrame": -1,`, `"m_flDurationOverrideSeconds": -1.000000,`, `"m_additiveType": "None",`, `"m_additiveBaseFilename": "",`, `"m_additiveBaseFrame": "FirstFrame",`, `"m_nAdditiveBaseFrameIdx": -1,`, `"m_bUseReferencePoseForSecondaryAnimAdditives": false,`, `"m_bonesToSampleInModelSpace":`, `[`, `]`, `}`
 
 **Relationships:**
 
@@ -594,17 +599,22 @@ classDiagram
 
 ### CNmGraphDocBoneMaskNode
 
-**Inherits from:** [CNmGraphDocFlowNode](animdoclib.md#cnmgraphdocflownode)
+**Inherits from:** [CNmGraphDocVariationDataNode](animdoclib.md#cnmgraphdocvariationdatanode)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmGraphDocBoneMaskNode",`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "",`, `"m_floatingComment": "",`, `"m_position":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_pChildGraph": null,`, `"m_pSecondaryGraph": null,`, `"m_inputPins":`, `[`, `],`, `"m_outputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Bone Mask",`, `"m_type": "BoneMask",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": true`, `}`, `],`, `"m_maskID": ""`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmGraphDocBoneMaskNode",`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "",`, `"m_floatingComment": "",`, `"m_position":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_pChildGraph": null,`, `"m_pSecondaryGraph": null,`, `"m_inputPins":`, `[`, `],`, `"m_outputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Bone Mask",`, `"m_type": "BoneMask",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": true`, `}`, `],`, `"m_pDefaultVariationData":`, `{`, `"_class": "CNmGraphDocBoneMaskNode::CData",`, `"m_overrideMaskID": ""`, `},`, `"m_overrides":`, `[`, `],`, `"m_defaultResourceName": "",`, `"m_maskID": ""`, `}`
 
 **Relationships:**
 
 ```mermaid
 classDiagram
-    CNmGraphDocFlowNode <|-- CNmGraphDocBoneMaskNode
+    CNmGraphDocVariationDataNode <|-- CNmGraphDocBoneMaskNode
+    CNmGraphDocFlowNode <|-- CNmGraphDocVariationDataNode
     CNmGraphDocNode <|-- CNmGraphDocFlowNode
 ```
+
+### CNmGraphDocBoneMaskNode
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmGraphDocBoneMaskNode::CData",`, `"m_overrideMaskID": ""`, `}`
 
 ### CNmGraphDocBoneMaskParameterReferenceNode
 
@@ -684,7 +694,7 @@ classDiagram
 
 **Inherits from:** [CNmGraphDocControlParameterNode](animdoclib.md#cnmgraphdoccontrolparameternode)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmGraphDocBoolControlParameterNode",`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "",`, `"m_floatingComment": "",`, `"m_position":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_pChildGraph": null,`, `"m_pSecondaryGraph": null,`, `"m_inputPins":`, `[`, `],`, `"m_outputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Value",`, `"m_type": "Bool",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": true`, `}`, `],`, `"m_groupName": "",`, `"m_previewStartValue": false`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmGraphDocBoolControlParameterNode",`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "",`, `"m_floatingComment": "",`, `"m_position":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_pChildGraph": null,`, `"m_pSecondaryGraph": null,`, `"m_inputPins":`, `[`, `],`, `"m_outputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Value",`, `"m_type": "Bool",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": true`, `}`, `],`, `"m_groupName": "",`, `"m_dictionaryParameterBinding": "00000000-0000-0000-0000-000000000000",`, `"m_previewStartValue": false`, `}`
 
 **Relationships:**
 
@@ -865,7 +875,7 @@ classDiagram
 
 **Derived by:** [CNmGraphDocBoolControlParameterNode](animdoclib.md#cnmgraphdocboolcontrolparameternode), [CNmGraphDocFloatControlParameterNode](animdoclib.md#cnmgraphdocfloatcontrolparameternode), [CNmGraphDocIDControlParameterNode](animdoclib.md#cnmgraphdocidcontrolparameternode), [CNmGraphDocTargetControlParameterNode](animdoclib.md#cnmgraphdoctargetcontrolparameternode), [CNmGraphDocVectorControlParameterNode](animdoclib.md#cnmgraphdocvectorcontrolparameternode)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmGraphDocControlParameterNode",`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "",`, `"m_floatingComment": "",`, `"m_position":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_pChildGraph": null,`, `"m_pSecondaryGraph": null,`, `"m_inputPins":`, `[`, `],`, `"m_outputPins":`, `[`, `],`, `"m_groupName": ""`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmGraphDocControlParameterNode",`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "",`, `"m_floatingComment": "",`, `"m_position":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_pChildGraph": null,`, `"m_pSecondaryGraph": null,`, `"m_inputPins":`, `[`, `],`, `"m_outputPins":`, `[`, `],`, `"m_groupName": "",`, `"m_dictionaryParameterBinding": "00000000-0000-0000-0000-000000000000"`, `}`
 
 **Relationships:**
 
@@ -908,6 +918,22 @@ classDiagram
     CNmGraphDocFlowNode <|-- CNmGraphDocCurrentSyncEventNode
     CNmGraphDocNode <|-- CNmGraphDocFlowNode
 ```
+
+### CNmGraphDocDataDictionary
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_parameterSets":`, `[`, `],`, `"m_IDSets":`, `[`, `]`, `}`, `MPropertyAutoExpandSelf`
+
+### CNmGraphDocDataDictionary
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "",`, `"m_graphIDs":`, `[`, `]`, `}`, `MPropertyAutoExpandSelf`
+
+### CNmGraphDocDataDictionary
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_name": "",`, `"m_parameters":`, `[`, `]`, `}`, `MPropertyAutoExpandSelf`
+
+### CNmGraphDocDataDictionary
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "",`, `"m_groupName": "",`, `"m_valueType": "ID",`, `"m_expectedValues":`, `[`, `]`, `}`, `MPropertyAutoExpandSelf`
 
 ### CNmGraphDocEntryOverrideNode
 
@@ -1041,7 +1067,7 @@ classDiagram
 
 **Inherits from:** [CNmGraphDocControlParameterNode](animdoclib.md#cnmgraphdoccontrolparameternode)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmGraphDocFloatControlParameterNode",`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "",`, `"m_floatingComment": "",`, `"m_position":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_pChildGraph": null,`, `"m_pSecondaryGraph": null,`, `"m_inputPins":`, `[`, `],`, `"m_outputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Value",`, `"m_type": "Float",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": true`, `}`, `],`, `"m_groupName": "",`, `"m_previewStartValue": 0.000000,`, `"m_previewMin": 0.000000,`, `"m_previewMax": 1.000000`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmGraphDocFloatControlParameterNode",`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "",`, `"m_floatingComment": "",`, `"m_position":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_pChildGraph": null,`, `"m_pSecondaryGraph": null,`, `"m_inputPins":`, `[`, `],`, `"m_outputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Value",`, `"m_type": "Float",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": true`, `}`, `],`, `"m_groupName": "",`, `"m_dictionaryParameterBinding": "00000000-0000-0000-0000-000000000000",`, `"m_previewStartValue": 0.000000,`, `"m_previewMin": 0.000000,`, `"m_previewMax": 1.000000`, `}`
 
 **Relationships:**
 
@@ -1189,6 +1215,20 @@ classDiagram
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"m_name": "",`, `"m_flValue": 0.000000`, `}`, `MPropertyAutoExpandSelf`
 
+### CNmGraphDocFloatSpringNode
+
+**Inherits from:** [CNmGraphDocFlowNode](animdoclib.md#cnmgraphdocflownode)
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmGraphDocFloatSpringNode",`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "",`, `"m_floatingComment": "",`, `"m_position":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_pChildGraph": null,`, `"m_pSecondaryGraph": null,`, `"m_inputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Value",`, `"m_type": "Float",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": false`, `}`, `],`, `"m_outputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Result",`, `"m_type": "Float",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": true`, `}`, `],`, `"m_flHertz": 4.000000,`, `"m_flDampingRatio": 0.700000,`, `"m_bUseStartValue": true,`, `"m_flStartValue": 0.000000`, `}`
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CNmGraphDocFlowNode <|-- CNmGraphDocFloatSpringNode
+    CNmGraphDocNode <|-- CNmGraphDocFlowNode
+```
+
 ### CNmGraphDocFloatSwitchNode
 
 **Inherits from:** [CNmGraphDocFlowNode](animdoclib.md#cnmgraphdocflownode)
@@ -1240,7 +1280,7 @@ classDiagram
 
 **Inherits from:** [CNmGraphDocNode](animdoclib.md#cnmgraphdocnode)
 
-**Derived by:** [CNmGraphDocAimCSNode](modtools.md#cnmgraphdocaimcsnode), [CNmGraphDocAndNode](animdoclib.md#cnmgraphdocandnode), [CNmGraphDocBlend1DNode](animdoclib.md#cnmgraphdocblend1dnode), [CNmGraphDocBlend2DNode](animdoclib.md#cnmgraphdocblend2dnode), [CNmGraphDocBoneMaskBlendNode](animdoclib.md#cnmgraphdocbonemaskblendnode), [CNmGraphDocBoneMaskNode](animdoclib.md#cnmgraphdocbonemasknode), [CNmGraphDocBoneMaskSelectorNode](animdoclib.md#cnmgraphdocbonemaskselectornode), [CNmGraphDocBoneMaskSwitchNode](animdoclib.md#cnmgraphdocbonemaskswitchnode), [CNmGraphDocCachedBoolNode](animdoclib.md#cnmgraphdoccachedboolnode), [CNmGraphDocCachedFloatNode](animdoclib.md#cnmgraphdoccachedfloatnode), [CNmGraphDocCachedIDNode](animdoclib.md#cnmgraphdoccachedidnode), [CNmGraphDocCachedTargetNode](animdoclib.md#cnmgraphdoccachedtargetnode), [CNmGraphDocCachedVectorNode](animdoclib.md#cnmgraphdoccachedvectornode), [CNmGraphDocCurrentSyncEventIDNode](animdoclib.md#cnmgraphdoccurrentsynceventidnode), [CNmGraphDocCurrentSyncEventNode](animdoclib.md#cnmgraphdoccurrentsynceventnode), [CNmGraphDocExternalGraphNode](animdoclib.md#cnmgraphdocexternalgraphnode), [CNmGraphDocExternalPoseNode](animdoclib.md#cnmgraphdocexternalposenode), [CNmGraphDocFixedWeightBoneMaskNode](animdoclib.md#cnmgraphdocfixedweightbonemasknode), [CNmGraphDocFloatAngleMathNode](animdoclib.md#cnmgraphdocfloatanglemathnode), [CNmGraphDocFloatClampNode](animdoclib.md#cnmgraphdocfloatclampnode), [CNmGraphDocFloatComparisonNode](animdoclib.md#cnmgraphdocfloatcomparisonnode), [CNmGraphDocFloatCurveEventNode](animdoclib.md#cnmgraphdocfloatcurveeventnode), [CNmGraphDocFloatCurveNode](animdoclib.md#cnmgraphdocfloatcurvenode), [CNmGraphDocFloatEaseNode](animdoclib.md#cnmgraphdocfloateasenode), [CNmGraphDocFloatMathNode](animdoclib.md#cnmgraphdocfloatmathnode), [CNmGraphDocFloatRangeComparisonNode](animdoclib.md#cnmgraphdocfloatrangecomparisonnode), [CNmGraphDocFloatRemapNode](animdoclib.md#cnmgraphdocfloatremapnode), [CNmGraphDocFloatSelectorNode](animdoclib.md#cnmgraphdocfloatselectornode), [CNmGraphDocFloatSwitchNode](animdoclib.md#cnmgraphdocfloatswitchnode), [CNmGraphDocFootEventConditionNode](animdoclib.md#cnmgraphdocfooteventconditionnode), [CNmGraphDocFootstepEventIDNode](animdoclib.md#cnmgraphdocfootstepeventidnode), [CNmGraphDocFootstepEventPercentageThroughNode](animdoclib.md#cnmgraphdocfootstepeventpercentagethroughnode), [CNmGraphDocGraphEventConditionNode](animdoclib.md#cnmgraphdocgrapheventconditionnode), [CNmGraphDocIDComparisonNode](animdoclib.md#cnmgraphdocidcomparisonnode), [CNmGraphDocIDEventConditionNode](animdoclib.md#cnmgraphdocideventconditionnode), [CNmGraphDocIDEventNode](animdoclib.md#cnmgraphdocideventnode), [CNmGraphDocIDEventPercentageThroughNode](animdoclib.md#cnmgraphdocideventpercentagethroughnode), [CNmGraphDocIDSelectorNode](animdoclib.md#cnmgraphdocidselectornode), [CNmGraphDocIDSwitchNode](animdoclib.md#cnmgraphdocidswitchnode), [CNmGraphDocIDToFloatNode](animdoclib.md#cnmgraphdocidtofloatnode), [CNmGraphDocIsExternalGraphSlotFilledNode](animdoclib.md#cnmgraphdocisexternalgraphslotfillednode), [CNmGraphDocIsExternalPoseSetNode](animdoclib.md#cnmgraphdocisexternalposesetnode), [CNmGraphDocIsInactiveBranchConditionNode](animdoclib.md#cnmgraphdocisinactivebranchconditionnode), [CNmGraphDocIsTargetSetNode](animdoclib.md#cnmgraphdocistargetsetnode), [CNmGraphDocLayerBaseNode](animdoclib.md#cnmgraphdoclayerbasenode), [CNmGraphDocLayerBlendNode](animdoclib.md#cnmgraphdoclayerblendnode), [CNmGraphDocNotNode](animdoclib.md#cnmgraphdocnotnode), [CNmGraphDocOrNode](animdoclib.md#cnmgraphdocornode), [CNmGraphDocOrientationWarpNode](animdoclib.md#cnmgraphdocorientationwarpnode), [CNmGraphDocParameterBaseNode](animdoclib.md#cnmgraphdocparameterbasenode), [CNmGraphDocParameterReferenceNode](animdoclib.md#cnmgraphdocparameterreferencenode), [CNmGraphDocReferencePoseNode](animdoclib.md#cnmgraphdocreferenceposenode), [CNmGraphDocResultNode](animdoclib.md#cnmgraphdocresultnode), [CNmGraphDocRootMotionOverrideNode](animdoclib.md#cnmgraphdocrootmotionoverridenode), [CNmGraphDocScaleNode](animdoclib.md#cnmgraphdocscalenode), [CNmGraphDocSelectorBaseNode](animdoclib.md#cnmgraphdocselectorbasenode), [CNmGraphDocStateCompletedConditionNode](animdoclib.md#cnmgraphdocstatecompletedconditionnode), [CNmGraphDocStateMachineNode](animdoclib.md#cnmgraphdocstatemachinenode), [CNmGraphDocSyncEventIndexConditionNode](animdoclib.md#cnmgraphdocsynceventindexconditionnode), [CNmGraphDocTargetInfoNode](animdoclib.md#cnmgraphdoctargetinfonode), [CNmGraphDocTargetOffsetNode](animdoclib.md#cnmgraphdoctargetoffsetnode), [CNmGraphDocTargetPointNode](animdoclib.md#cnmgraphdoctargetpointnode), [CNmGraphDocTargetSelectorNode](animdoclib.md#cnmgraphdoctargetselectornode), [CNmGraphDocTargetWarpNode](animdoclib.md#cnmgraphdoctargetwarpnode), [CNmGraphDocTimeConditionNode](animdoclib.md#cnmgraphdoctimeconditionnode), [CNmGraphDocTransitionEventConditionNode](animdoclib.md#cnmgraphdoctransitioneventconditionnode), [CNmGraphDocVariationDataNode](animdoclib.md#cnmgraphdocvariationdatanode), [CNmGraphDocVectorCreateNode](animdoclib.md#cnmgraphdocvectorcreatenode), [CNmGraphDocVectorInfoNode](animdoclib.md#cnmgraphdocvectorinfonode), [CNmGraphDocVectorNegateNode](animdoclib.md#cnmgraphdocvectornegatenode), [CNmGraphDocVelocityBlendNode](animdoclib.md#cnmgraphdocvelocityblendnode), [CNmGraphDocZeroPoseNode](animdoclib.md#cnmgraphdoczeroposenode), [CnmGraphDocConstBoneTargetNode](animdoclib.md#cnmgraphdocconstbonetargetnode), [CnmGraphDocConstBoolNode](animdoclib.md#cnmgraphdocconstboolnode), [CnmGraphDocConstFloatNode](animdoclib.md#cnmgraphdocconstfloatnode), [CnmGraphDocConstIDNode](animdoclib.md#cnmgraphdocconstidnode), [CnmGraphDocConstTargetNode](animdoclib.md#cnmgraphdocconsttargetnode), [CnmGraphDocConstVectorNode](animdoclib.md#cnmgraphdocconstvectornode), [CnmGraphDocDurationScaleNode](animdoclib.md#cnmgraphdocdurationscalenode), [CnmGraphDocSnapWeaponNode](modtools.md#cnmgraphdocsnapweaponnode), [CnmGraphDocSpeedScaleNode](animdoclib.md#cnmgraphdocspeedscalenode), [CnmGraphDocVelocityBasedSpeedScaleNode](animdoclib.md#cnmgraphdocvelocitybasedspeedscalenode)
+**Derived by:** [CNmGraphDocAimCSNode](modtools.md#cnmgraphdocaimcsnode), [CNmGraphDocAndNode](animdoclib.md#cnmgraphdocandnode), [CNmGraphDocBlend1DNode](animdoclib.md#cnmgraphdocblend1dnode), [CNmGraphDocBlend2DNode](animdoclib.md#cnmgraphdocblend2dnode), [CNmGraphDocBoneMaskBlendNode](animdoclib.md#cnmgraphdocbonemaskblendnode), [CNmGraphDocBoneMaskSelectorNode](animdoclib.md#cnmgraphdocbonemaskselectornode), [CNmGraphDocBoneMaskSwitchNode](animdoclib.md#cnmgraphdocbonemaskswitchnode), [CNmGraphDocCachedBoolNode](animdoclib.md#cnmgraphdoccachedboolnode), [CNmGraphDocCachedFloatNode](animdoclib.md#cnmgraphdoccachedfloatnode), [CNmGraphDocCachedIDNode](animdoclib.md#cnmgraphdoccachedidnode), [CNmGraphDocCachedTargetNode](animdoclib.md#cnmgraphdoccachedtargetnode), [CNmGraphDocCachedVectorNode](animdoclib.md#cnmgraphdoccachedvectornode), [CNmGraphDocCurrentSyncEventIDNode](animdoclib.md#cnmgraphdoccurrentsynceventidnode), [CNmGraphDocCurrentSyncEventNode](animdoclib.md#cnmgraphdoccurrentsynceventnode), [CNmGraphDocExternalGraphNode](animdoclib.md#cnmgraphdocexternalgraphnode), [CNmGraphDocExternalPoseNode](animdoclib.md#cnmgraphdocexternalposenode), [CNmGraphDocFixedWeightBoneMaskNode](animdoclib.md#cnmgraphdocfixedweightbonemasknode), [CNmGraphDocFloatAngleMathNode](animdoclib.md#cnmgraphdocfloatanglemathnode), [CNmGraphDocFloatClampNode](animdoclib.md#cnmgraphdocfloatclampnode), [CNmGraphDocFloatComparisonNode](animdoclib.md#cnmgraphdocfloatcomparisonnode), [CNmGraphDocFloatCurveEventNode](animdoclib.md#cnmgraphdocfloatcurveeventnode), [CNmGraphDocFloatCurveNode](animdoclib.md#cnmgraphdocfloatcurvenode), [CNmGraphDocFloatEaseNode](animdoclib.md#cnmgraphdocfloateasenode), [CNmGraphDocFloatMathNode](animdoclib.md#cnmgraphdocfloatmathnode), [CNmGraphDocFloatRangeComparisonNode](animdoclib.md#cnmgraphdocfloatrangecomparisonnode), [CNmGraphDocFloatRemapNode](animdoclib.md#cnmgraphdocfloatremapnode), [CNmGraphDocFloatSelectorNode](animdoclib.md#cnmgraphdocfloatselectornode), [CNmGraphDocFloatSpringNode](animdoclib.md#cnmgraphdocfloatspringnode), [CNmGraphDocFloatSwitchNode](animdoclib.md#cnmgraphdocfloatswitchnode), [CNmGraphDocFootEventConditionNode](animdoclib.md#cnmgraphdocfooteventconditionnode), [CNmGraphDocFootstepEventIDNode](animdoclib.md#cnmgraphdocfootstepeventidnode), [CNmGraphDocFootstepEventPercentageThroughNode](animdoclib.md#cnmgraphdocfootstepeventpercentagethroughnode), [CNmGraphDocGraphEventConditionNode](animdoclib.md#cnmgraphdocgrapheventconditionnode), [CNmGraphDocIDBasedClipSelectorNode](animdoclib.md#cnmgraphdocidbasedclipselectornode), [CNmGraphDocIDBasedSelectorNode](animdoclib.md#cnmgraphdocidbasedselectornode), [CNmGraphDocIDComparisonNode](animdoclib.md#cnmgraphdocidcomparisonnode), [CNmGraphDocIDEventConditionNode](animdoclib.md#cnmgraphdocideventconditionnode), [CNmGraphDocIDEventNode](animdoclib.md#cnmgraphdocideventnode), [CNmGraphDocIDEventPercentageThroughNode](animdoclib.md#cnmgraphdocideventpercentagethroughnode), [CNmGraphDocIDSelectorNode](animdoclib.md#cnmgraphdocidselectornode), [CNmGraphDocIDSwitchNode](animdoclib.md#cnmgraphdocidswitchnode), [CNmGraphDocIDToFloatNode](animdoclib.md#cnmgraphdocidtofloatnode), [CNmGraphDocIsExternalGraphSlotFilledNode](animdoclib.md#cnmgraphdocisexternalgraphslotfillednode), [CNmGraphDocIsExternalPoseSetNode](animdoclib.md#cnmgraphdocisexternalposesetnode), [CNmGraphDocIsInactiveBranchConditionNode](animdoclib.md#cnmgraphdocisinactivebranchconditionnode), [CNmGraphDocIsTargetSetNode](animdoclib.md#cnmgraphdocistargetsetnode), [CNmGraphDocLayerBaseNode](animdoclib.md#cnmgraphdoclayerbasenode), [CNmGraphDocLayerBlendNode](animdoclib.md#cnmgraphdoclayerblendnode), [CNmGraphDocNotNode](animdoclib.md#cnmgraphdocnotnode), [CNmGraphDocOrNode](animdoclib.md#cnmgraphdocornode), [CNmGraphDocOrientationWarpNode](animdoclib.md#cnmgraphdocorientationwarpnode), [CNmGraphDocParameterBaseNode](animdoclib.md#cnmgraphdocparameterbasenode), [CNmGraphDocParameterReferenceNode](animdoclib.md#cnmgraphdocparameterreferencenode), [CNmGraphDocReferencePoseNode](animdoclib.md#cnmgraphdocreferenceposenode), [CNmGraphDocResultNode](animdoclib.md#cnmgraphdocresultnode), [CNmGraphDocRootMotionOverrideNode](animdoclib.md#cnmgraphdocrootmotionoverridenode), [CNmGraphDocScaleNode](animdoclib.md#cnmgraphdocscalenode), [CNmGraphDocSelectorBaseNode](animdoclib.md#cnmgraphdocselectorbasenode), [CNmGraphDocStateCompletedConditionNode](animdoclib.md#cnmgraphdocstatecompletedconditionnode), [CNmGraphDocStateMachineNode](animdoclib.md#cnmgraphdocstatemachinenode), [CNmGraphDocSyncEventIndexConditionNode](animdoclib.md#cnmgraphdocsynceventindexconditionnode), [CNmGraphDocTargetInfoNode](animdoclib.md#cnmgraphdoctargetinfonode), [CNmGraphDocTargetOffsetNode](animdoclib.md#cnmgraphdoctargetoffsetnode), [CNmGraphDocTargetPointNode](animdoclib.md#cnmgraphdoctargetpointnode), [CNmGraphDocTargetSelectorNode](animdoclib.md#cnmgraphdoctargetselectornode), [CNmGraphDocTimeConditionNode](animdoclib.md#cnmgraphdoctimeconditionnode), [CNmGraphDocTransitionEventConditionNode](animdoclib.md#cnmgraphdoctransitioneventconditionnode), [CNmGraphDocVariationDataNode](animdoclib.md#cnmgraphdocvariationdatanode), [CNmGraphDocVectorCreateNode](animdoclib.md#cnmgraphdocvectorcreatenode), [CNmGraphDocVectorInfoNode](animdoclib.md#cnmgraphdocvectorinfonode), [CNmGraphDocVectorNegateNode](animdoclib.md#cnmgraphdocvectornegatenode), [CNmGraphDocVelocityBlendNode](animdoclib.md#cnmgraphdocvelocityblendnode), [CNmGraphDocZeroPoseNode](animdoclib.md#cnmgraphdoczeroposenode), [CnmGraphDocConstBoneTargetNode](animdoclib.md#cnmgraphdocconstbonetargetnode), [CnmGraphDocConstBoolNode](animdoclib.md#cnmgraphdocconstboolnode), [CnmGraphDocConstFloatNode](animdoclib.md#cnmgraphdocconstfloatnode), [CnmGraphDocConstIDNode](animdoclib.md#cnmgraphdocconstidnode), [CnmGraphDocConstTargetNode](animdoclib.md#cnmgraphdocconsttargetnode), [CnmGraphDocConstVectorNode](animdoclib.md#cnmgraphdocconstvectornode), [CnmGraphDocDurationScaleNode](animdoclib.md#cnmgraphdocdurationscalenode), [CnmGraphDocSnapWeaponNode](modtools.md#cnmgraphdocsnapweaponnode), [CnmGraphDocSpeedScaleNode](animdoclib.md#cnmgraphdocspeedscalenode), [CnmGraphDocVelocityBasedSpeedScaleNode](animdoclib.md#cnmgraphdocvelocitybasedspeedscalenode)
 
 **Metadata:** `MGetKV3ClassDefaults = Could not parse KV3 Defaults`
 
@@ -1253,7 +1293,6 @@ classDiagram
     CNmGraphDocFlowNode <|-- CNmGraphDocBlend1DNode
     CNmGraphDocFlowNode <|-- CNmGraphDocBlend2DNode
     CNmGraphDocFlowNode <|-- CNmGraphDocBoneMaskBlendNode
-    CNmGraphDocFlowNode <|-- CNmGraphDocBoneMaskNode
     CNmGraphDocFlowNode <|-- CNmGraphDocBoneMaskSelectorNode
     CNmGraphDocFlowNode <|-- CNmGraphDocBoneMaskSwitchNode
     CNmGraphDocFlowNode <|-- CNmGraphDocCachedBoolNode
@@ -1276,11 +1315,14 @@ classDiagram
     CNmGraphDocFlowNode <|-- CNmGraphDocFloatRangeComparisonNode
     CNmGraphDocFlowNode <|-- CNmGraphDocFloatRemapNode
     CNmGraphDocFlowNode <|-- CNmGraphDocFloatSelectorNode
+    CNmGraphDocFlowNode <|-- CNmGraphDocFloatSpringNode
     CNmGraphDocFlowNode <|-- CNmGraphDocFloatSwitchNode
     CNmGraphDocFlowNode <|-- CNmGraphDocFootEventConditionNode
     CNmGraphDocFlowNode <|-- CNmGraphDocFootstepEventIDNode
     CNmGraphDocFlowNode <|-- CNmGraphDocFootstepEventPercentageThroughNode
     CNmGraphDocFlowNode <|-- CNmGraphDocGraphEventConditionNode
+    CNmGraphDocFlowNode <|-- CNmGraphDocIDBasedClipSelectorNode
+    CNmGraphDocFlowNode <|-- CNmGraphDocIDBasedSelectorNode
     CNmGraphDocFlowNode <|-- CNmGraphDocIDComparisonNode
     CNmGraphDocFlowNode <|-- CNmGraphDocIDEventConditionNode
     CNmGraphDocFlowNode <|-- CNmGraphDocIDEventNode
@@ -1311,7 +1353,6 @@ classDiagram
     CNmGraphDocFlowNode <|-- CNmGraphDocTargetOffsetNode
     CNmGraphDocFlowNode <|-- CNmGraphDocTargetPointNode
     CNmGraphDocFlowNode <|-- CNmGraphDocTargetSelectorNode
-    CNmGraphDocFlowNode <|-- CNmGraphDocTargetWarpNode
     CNmGraphDocFlowNode <|-- CNmGraphDocTimeConditionNode
     CNmGraphDocFlowNode <|-- CNmGraphDocTransitionEventConditionNode
     CNmGraphDocFlowNode <|-- CNmGraphDocVariationDataNode
@@ -1445,6 +1486,34 @@ classDiagram
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"m_eventID": "",`, `"m_type": "Any"`, `}`, `MPropertyAutoExpandSelf`
 
+### CNmGraphDocIDBasedClipSelectorNode
+
+**Inherits from:** [CNmGraphDocFlowNode](animdoclib.md#cnmgraphdocflownode)
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmGraphDocIDBasedClipSelectorNode",`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "",`, `"m_floatingComment": "",`, `"m_position":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_pChildGraph": null,`, `"m_pSecondaryGraph": null,`, `"m_inputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "ID",`, `"m_type": "ID",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": false`, `},`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Optional Fallback",`, `"m_type": "Pose",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": false`, `},`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Option",`, `"m_type": "Pose",`, `"m_bIsDynamicPin": true,`, `"m_bAllowMultipleOutConnections": false`, `},`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Option",`, `"m_type": "Pose",`, `"m_bIsDynamicPin": true,`, `"m_bAllowMultipleOutConnections": false`, `}`, `],`, `"m_outputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Pose",`, `"m_type": "Pose",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": false`, `}`, `],`, `"m_optionLabels":`, `[`, `"Option",`, `"Option"`, `],`, `"m_bIgnoreInvalidOptions": false`, `}`
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CNmGraphDocFlowNode <|-- CNmGraphDocIDBasedClipSelectorNode
+    CNmGraphDocNode <|-- CNmGraphDocFlowNode
+```
+
+### CNmGraphDocIDBasedSelectorNode
+
+**Inherits from:** [CNmGraphDocFlowNode](animdoclib.md#cnmgraphdocflownode)
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmGraphDocIDBasedSelectorNode",`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "",`, `"m_floatingComment": "",`, `"m_position":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_pChildGraph": null,`, `"m_pSecondaryGraph": null,`, `"m_inputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "ID",`, `"m_type": "ID",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": false`, `},`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Optional Fallback",`, `"m_type": "Pose",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": false`, `},`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Option",`, `"m_type": "Pose",`, `"m_bIsDynamicPin": true,`, `"m_bAllowMultipleOutConnections": false`, `},`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Option",`, `"m_type": "Pose",`, `"m_bIsDynamicPin": true,`, `"m_bAllowMultipleOutConnections": false`, `}`, `],`, `"m_outputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Pose",`, `"m_type": "Pose",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": false`, `}`, `],`, `"m_optionLabels":`, `[`, `"Option",`, `"Option"`, `],`, `"m_bIgnoreInvalidOptions": false`, `}`
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CNmGraphDocFlowNode <|-- CNmGraphDocIDBasedSelectorNode
+    CNmGraphDocNode <|-- CNmGraphDocFlowNode
+```
+
 ### CNmGraphDocIDComparisonNode
 
 **Inherits from:** [CNmGraphDocFlowNode](animdoclib.md#cnmgraphdocflownode)
@@ -1463,7 +1532,7 @@ classDiagram
 
 **Inherits from:** [CNmGraphDocControlParameterNode](animdoclib.md#cnmgraphdoccontrolparameternode)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmGraphDocIDControlParameterNode",`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "",`, `"m_floatingComment": "",`, `"m_position":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_pChildGraph": null,`, `"m_pSecondaryGraph": null,`, `"m_inputPins":`, `[`, `],`, `"m_outputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Value",`, `"m_type": "ID",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": true`, `}`, `],`, `"m_groupName": "",`, `"m_previewStartValue": "",`, `"m_expectedValues":`, `[`, `]`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmGraphDocIDControlParameterNode",`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "",`, `"m_floatingComment": "",`, `"m_position":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_pChildGraph": null,`, `"m_pSecondaryGraph": null,`, `"m_inputPins":`, `[`, `],`, `"m_outputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Value",`, `"m_type": "ID",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": true`, `}`, `],`, `"m_groupName": "",`, `"m_dictionaryParameterBinding": "00000000-0000-0000-0000-000000000000",`, `"m_previewStartValue": "",`, `"m_expectedValues":`, `[`, `]`, `}`
 
 **Relationships:**
 
@@ -1681,6 +1750,8 @@ classDiagram
 
 **Derived by:** [CNmGraphDocLocalLayerNode](animdoclib.md#cnmgraphdoclocallayernode), [CNmGraphDocStateMachineLayerNode](animdoclib.md#cnmgraphdocstatemachinelayernode)
 
+**Metadata:** `MGetKV3ClassDefaults = Could not parse KV3 Defaults`
+
 **Relationships:**
 
 ```mermaid
@@ -1689,7 +1760,16 @@ classDiagram
     CNmGraphDocNode <|-- CNmGraphDocFlowNode
     CNmGraphDocLayerBaseNode <|-- CNmGraphDocLocalLayerNode
     CNmGraphDocLayerBaseNode <|-- CNmGraphDocStateMachineLayerNode
+    CNmGraphDocLayerBaseNode *-- NmPoseBlendMode_t
 ```
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `m_isSynchronized` | bool |  |
+| `m_ignoreEvents` | bool |  |
+| `m_blendMode` | [NmPoseBlendMode_t](../schemas/animlib.md#nmposeblendmode_t) |  |
 
 ### CNmGraphDocLayerBlendNode
 
@@ -2190,7 +2270,7 @@ classDiagram
 
 **Inherits from:** [CNmGraphDocControlParameterNode](animdoclib.md#cnmgraphdoccontrolparameternode)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmGraphDocTargetControlParameterNode",`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "",`, `"m_floatingComment": "",`, `"m_position":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_pChildGraph": null,`, `"m_pSecondaryGraph": null,`, `"m_inputPins":`, `[`, `],`, `"m_outputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Value",`, `"m_type": "Target",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": true`, `}`, `],`, `"m_groupName": "",`, `"m_bIsSet": false,`, `"m_bIsBoneID": false,`, `"m_targetOrientation":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_targetPosition":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_previewStartBoneID": ""`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmGraphDocTargetControlParameterNode",`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "",`, `"m_floatingComment": "",`, `"m_position":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_pChildGraph": null,`, `"m_pSecondaryGraph": null,`, `"m_inputPins":`, `[`, `],`, `"m_outputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Value",`, `"m_type": "Target",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": true`, `}`, `],`, `"m_groupName": "",`, `"m_dictionaryParameterBinding": "00000000-0000-0000-0000-000000000000",`, `"m_bIsSet": false,`, `"m_bIsBoneID": false,`, `"m_targetOrientation":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_targetPosition":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_previewStartBoneID": ""`, `}`
 
 **Relationships:**
 
@@ -2306,17 +2386,22 @@ classDiagram
 
 ### CNmGraphDocTargetWarpNode
 
-**Inherits from:** [CNmGraphDocFlowNode](animdoclib.md#cnmgraphdocflownode)
+**Inherits from:** [CNmGraphDocVariationDataNode](animdoclib.md#cnmgraphdocvariationdatanode)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmGraphDocTargetWarpNode",`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "",`, `"m_floatingComment": "",`, `"m_position":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_pChildGraph": null,`, `"m_pSecondaryGraph": null,`, `"m_inputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Input",`, `"m_type": "Pose",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": false`, `},`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "World Target",`, `"m_type": "Target",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": false`, `}`, `],`, `"m_outputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Result",`, `"m_type": "Pose",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": false`, `}`, `],`, `"m_bAllowTargetUpdate": false,`, `"m_bAlignWithTargetAtLastWarpEvent": false,`, `"m_samplingMode": "WorldSpace",`, `"m_flSamplingPositionErrorThreshold": 2.000000,`, `"m_flMaxTangentLength": 49.000000,`, `"m_flLerpFallbackDistanceThreshold": 4.000000,`, `"m_flTargetUpdateDistanceThresholdDegrees": 4.000000,`, `"m_flTargetUpdateAngleThresholdDegrees": 5.000000`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmGraphDocTargetWarpNode",`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "",`, `"m_floatingComment": "",`, `"m_position":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_pChildGraph": null,`, `"m_pSecondaryGraph": null,`, `"m_inputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Input",`, `"m_type": "Pose",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": false`, `},`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "World Target",`, `"m_type": "Target",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": false`, `}`, `],`, `"m_outputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Result",`, `"m_type": "Pose",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": false`, `}`, `],`, `"m_pDefaultVariationData":`, `{`, `"_class": "CNmGraphDocTargetWarpNode::CData",`, `"m_strAlignmentBoneName": ""`, `},`, `"m_overrides":`, `[`, `],`, `"m_defaultResourceName": "",`, `"m_targetUpdateRule": "None",`, `"m_bAllowTargetUpdate": false,`, `"m_bAlignWithTargetAtLastWarpEvent": false,`, `"m_samplingMode": "WorldSpace",`, `"m_flSamplingPositionErrorThreshold": 2.000000,`, `"m_flMaxTangentLength": 49.000000,`, `"m_flLerpFallbackDistanceThreshold": 4.000000,`, `"m_flTargetUpdateDistanceThresholdDegrees": 4.000000,`, `"m_flTargetUpdateAngleThresholdDegrees": 5.000000`, `}`
 
 **Relationships:**
 
 ```mermaid
 classDiagram
-    CNmGraphDocFlowNode <|-- CNmGraphDocTargetWarpNode
+    CNmGraphDocVariationDataNode <|-- CNmGraphDocTargetWarpNode
+    CNmGraphDocFlowNode <|-- CNmGraphDocVariationDataNode
     CNmGraphDocNode <|-- CNmGraphDocFlowNode
 ```
+
+### CNmGraphDocTargetWarpNode
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmGraphDocTargetWarpNode::CData",`, `"m_strAlignmentBoneName": ""`, `}`
 
 ### CNmGraphDocTimeConditionNode
 
@@ -2409,7 +2494,7 @@ classDiagram
 
 **Inherits from:** [CNmGraphDocFlowNode](animdoclib.md#cnmgraphdocflownode)
 
-**Derived by:** [CNmGraphDocAnimationPoseNode](animdoclib.md#cnmgraphdocanimationposenode), [CNmGraphDocClipNode](animdoclib.md#cnmgraphdocclipnode), [CNmGraphDocParameterizedClipSelectorNode](animdoclib.md#cnmgraphdocparameterizedclipselectornode), [CNmGraphDocParameterizedSelectorNode](animdoclib.md#cnmgraphdocparameterizedselectornode), [CNmGraphDocReferencedGraphNode](animdoclib.md#cnmgraphdocreferencedgraphnode), [CNmGraphDocVariationIDComparisonNode](animdoclib.md#cnmgraphdocvariationidcomparisonnode), [CnmGraphDocChainLookatNode](animdoclib.md#cnmgraphdocchainlookatnode), [CnmGraphDocFollowBoneNode](animdoclib.md#cnmgraphdocfollowbonenode), [CnmGraphDocTwoBoneIKNode](animdoclib.md#cnmgraphdoctwoboneiknode), [CnmGraphDocVariationConstFloatNode](animdoclib.md#cnmgraphdocvariationconstfloatnode)
+**Derived by:** [CNmGraphDocAnimationPoseNode](animdoclib.md#cnmgraphdocanimationposenode), [CNmGraphDocBoneMaskNode](animdoclib.md#cnmgraphdocbonemasknode), [CNmGraphDocClipNode](animdoclib.md#cnmgraphdocclipnode), [CNmGraphDocParameterizedClipSelectorNode](animdoclib.md#cnmgraphdocparameterizedclipselectornode), [CNmGraphDocParameterizedSelectorNode](animdoclib.md#cnmgraphdocparameterizedselectornode), [CNmGraphDocReferencedGraphNode](animdoclib.md#cnmgraphdocreferencedgraphnode), [CNmGraphDocTargetWarpNode](animdoclib.md#cnmgraphdoctargetwarpnode), [CNmGraphDocVariationIDComparisonNode](animdoclib.md#cnmgraphdocvariationidcomparisonnode), [CnmGraphDocChainLookatNode](animdoclib.md#cnmgraphdocchainlookatnode), [CnmGraphDocFollowBoneNode](animdoclib.md#cnmgraphdocfollowbonenode), [CnmGraphDocFootIKNode](animdoclib.md#cnmgraphdocfootiknode), [CnmGraphDocTwoBoneIKNode](animdoclib.md#cnmgraphdoctwoboneiknode), [CnmGraphDocVariationConstFloatNode](animdoclib.md#cnmgraphdocvariationconstfloatnode)
 
 **Metadata:** `MGetKV3ClassDefaults = Could not parse KV3 Defaults`
 
@@ -2420,13 +2505,16 @@ classDiagram
     CNmGraphDocFlowNode <|-- CNmGraphDocVariationDataNode
     CNmGraphDocNode <|-- CNmGraphDocFlowNode
     CNmGraphDocVariationDataNode <|-- CNmGraphDocAnimationPoseNode
+    CNmGraphDocVariationDataNode <|-- CNmGraphDocBoneMaskNode
     CNmGraphDocVariationDataNode <|-- CNmGraphDocClipNode
     CNmGraphDocVariationDataNode <|-- CNmGraphDocParameterizedClipSelectorNode
     CNmGraphDocVariationDataNode <|-- CNmGraphDocParameterizedSelectorNode
     CNmGraphDocVariationDataNode <|-- CNmGraphDocReferencedGraphNode
+    CNmGraphDocVariationDataNode <|-- CNmGraphDocTargetWarpNode
     CNmGraphDocVariationDataNode <|-- CNmGraphDocVariationIDComparisonNode
     CNmGraphDocVariationDataNode <|-- CnmGraphDocChainLookatNode
     CNmGraphDocVariationDataNode <|-- CnmGraphDocFollowBoneNode
+    CNmGraphDocVariationDataNode <|-- CnmGraphDocFootIKNode
     CNmGraphDocVariationDataNode <|-- CnmGraphDocTwoBoneIKNode
     CNmGraphDocVariationDataNode <|-- CnmGraphDocVariationConstFloatNode
 ```
@@ -2441,7 +2529,7 @@ classDiagram
 
 ### CNmGraphDocVariationDataNode
 
-**Derived by:** [CNmGraphDocAnimationPoseNode](animdoclib.md#cnmgraphdocanimationposenode), [CNmGraphDocClipNode](animdoclib.md#cnmgraphdocclipnode), [CNmGraphDocParameterizedClipSelectorNode](animdoclib.md#cnmgraphdocparameterizedclipselectornode), [CNmGraphDocParameterizedSelectorNode](animdoclib.md#cnmgraphdocparameterizedselectornode), [CNmGraphDocReferencedGraphNode](animdoclib.md#cnmgraphdocreferencedgraphnode), [CNmGraphDocVariationIDComparisonNode](animdoclib.md#cnmgraphdocvariationidcomparisonnode), [CnmGraphDocChainLookatNode](animdoclib.md#cnmgraphdocchainlookatnode), [CnmGraphDocFollowBoneNode](animdoclib.md#cnmgraphdocfollowbonenode), [CnmGraphDocTwoBoneIKNode](animdoclib.md#cnmgraphdoctwoboneiknode), [CnmGraphDocVariationConstFloatNode](animdoclib.md#cnmgraphdocvariationconstfloatnode)
+**Derived by:** [CNmGraphDocAnimationPoseNode](animdoclib.md#cnmgraphdocanimationposenode), [CNmGraphDocBoneMaskNode](animdoclib.md#cnmgraphdocbonemasknode), [CNmGraphDocClipNode](animdoclib.md#cnmgraphdocclipnode), [CNmGraphDocParameterizedClipSelectorNode](animdoclib.md#cnmgraphdocparameterizedclipselectornode), [CNmGraphDocParameterizedSelectorNode](animdoclib.md#cnmgraphdocparameterizedselectornode), [CNmGraphDocReferencedGraphNode](animdoclib.md#cnmgraphdocreferencedgraphnode), [CNmGraphDocTargetWarpNode](animdoclib.md#cnmgraphdoctargetwarpnode), [CNmGraphDocVariationIDComparisonNode](animdoclib.md#cnmgraphdocvariationidcomparisonnode), [CnmGraphDocChainLookatNode](animdoclib.md#cnmgraphdocchainlookatnode), [CnmGraphDocFollowBoneNode](animdoclib.md#cnmgraphdocfollowbonenode), [CnmGraphDocFootIKNode](animdoclib.md#cnmgraphdocfootiknode), [CnmGraphDocTwoBoneIKNode](animdoclib.md#cnmgraphdoctwoboneiknode), [CnmGraphDocVariationConstFloatNode](animdoclib.md#cnmgraphdocvariationconstfloatnode)
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmGraphDocVariationDataNode::CData"`, `}`
 
@@ -2450,20 +2538,23 @@ classDiagram
 ```mermaid
 classDiagram
     CNmGraphDocVariationDataNode <|-- CNmGraphDocAnimationPoseNode
+    CNmGraphDocVariationDataNode <|-- CNmGraphDocBoneMaskNode
     CNmGraphDocVariationDataNode <|-- CNmGraphDocClipNode
     CNmGraphDocVariationDataNode <|-- CNmGraphDocParameterizedClipSelectorNode
     CNmGraphDocVariationDataNode <|-- CNmGraphDocParameterizedSelectorNode
     CNmGraphDocVariationDataNode <|-- CNmGraphDocReferencedGraphNode
+    CNmGraphDocVariationDataNode <|-- CNmGraphDocTargetWarpNode
     CNmGraphDocVariationDataNode <|-- CNmGraphDocVariationIDComparisonNode
     CNmGraphDocVariationDataNode <|-- CnmGraphDocChainLookatNode
     CNmGraphDocVariationDataNode <|-- CnmGraphDocFollowBoneNode
+    CNmGraphDocVariationDataNode <|-- CnmGraphDocFootIKNode
     CNmGraphDocVariationDataNode <|-- CnmGraphDocTwoBoneIKNode
     CNmGraphDocVariationDataNode <|-- CnmGraphDocVariationConstFloatNode
 ```
 
 ### CNmGraphDocVariationDataNode
 
-**Derived by:** [CNmGraphDocAnimationPoseNode](animdoclib.md#cnmgraphdocanimationposenode), [CNmGraphDocClipNode](animdoclib.md#cnmgraphdocclipnode), [CNmGraphDocParameterizedClipSelectorNode](animdoclib.md#cnmgraphdocparameterizedclipselectornode), [CNmGraphDocParameterizedSelectorNode](animdoclib.md#cnmgraphdocparameterizedselectornode), [CNmGraphDocReferencedGraphNode](animdoclib.md#cnmgraphdocreferencedgraphnode), [CNmGraphDocVariationIDComparisonNode](animdoclib.md#cnmgraphdocvariationidcomparisonnode), [CnmGraphDocChainLookatNode](animdoclib.md#cnmgraphdocchainlookatnode), [CnmGraphDocFollowBoneNode](animdoclib.md#cnmgraphdocfollowbonenode), [CnmGraphDocTwoBoneIKNode](animdoclib.md#cnmgraphdoctwoboneiknode), [CnmGraphDocVariationConstFloatNode](animdoclib.md#cnmgraphdocvariationconstfloatnode)
+**Derived by:** [CNmGraphDocAnimationPoseNode](animdoclib.md#cnmgraphdocanimationposenode), [CNmGraphDocBoneMaskNode](animdoclib.md#cnmgraphdocbonemasknode), [CNmGraphDocClipNode](animdoclib.md#cnmgraphdocclipnode), [CNmGraphDocParameterizedClipSelectorNode](animdoclib.md#cnmgraphdocparameterizedclipselectornode), [CNmGraphDocParameterizedSelectorNode](animdoclib.md#cnmgraphdocparameterizedselectornode), [CNmGraphDocReferencedGraphNode](animdoclib.md#cnmgraphdocreferencedgraphnode), [CNmGraphDocTargetWarpNode](animdoclib.md#cnmgraphdoctargetwarpnode), [CNmGraphDocVariationIDComparisonNode](animdoclib.md#cnmgraphdocvariationidcomparisonnode), [CnmGraphDocChainLookatNode](animdoclib.md#cnmgraphdocchainlookatnode), [CnmGraphDocFollowBoneNode](animdoclib.md#cnmgraphdocfollowbonenode), [CnmGraphDocFootIKNode](animdoclib.md#cnmgraphdocfootiknode), [CnmGraphDocTwoBoneIKNode](animdoclib.md#cnmgraphdoctwoboneiknode), [CnmGraphDocVariationConstFloatNode](animdoclib.md#cnmgraphdocvariationconstfloatnode)
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"m_variationID": "",`, `"m_pData": null`, `}`
 
@@ -2472,13 +2563,16 @@ classDiagram
 ```mermaid
 classDiagram
     CNmGraphDocVariationDataNode <|-- CNmGraphDocAnimationPoseNode
+    CNmGraphDocVariationDataNode <|-- CNmGraphDocBoneMaskNode
     CNmGraphDocVariationDataNode <|-- CNmGraphDocClipNode
     CNmGraphDocVariationDataNode <|-- CNmGraphDocParameterizedClipSelectorNode
     CNmGraphDocVariationDataNode <|-- CNmGraphDocParameterizedSelectorNode
     CNmGraphDocVariationDataNode <|-- CNmGraphDocReferencedGraphNode
+    CNmGraphDocVariationDataNode <|-- CNmGraphDocTargetWarpNode
     CNmGraphDocVariationDataNode <|-- CNmGraphDocVariationIDComparisonNode
     CNmGraphDocVariationDataNode <|-- CnmGraphDocChainLookatNode
     CNmGraphDocVariationDataNode <|-- CnmGraphDocFollowBoneNode
+    CNmGraphDocVariationDataNode <|-- CnmGraphDocFootIKNode
     CNmGraphDocVariationDataNode <|-- CnmGraphDocTwoBoneIKNode
     CNmGraphDocVariationDataNode <|-- CnmGraphDocVariationConstFloatNode
 ```
@@ -2506,7 +2600,7 @@ classDiagram
 
 **Inherits from:** [CNmGraphDocControlParameterNode](animdoclib.md#cnmgraphdoccontrolparameternode)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmGraphDocVectorControlParameterNode",`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "",`, `"m_floatingComment": "",`, `"m_position":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_pChildGraph": null,`, `"m_pSecondaryGraph": null,`, `"m_inputPins":`, `[`, `],`, `"m_outputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Value",`, `"m_type": "Vector",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": true`, `}`, `],`, `"m_groupName": "",`, `"m_previewStartValue":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `]`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmGraphDocVectorControlParameterNode",`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "",`, `"m_floatingComment": "",`, `"m_position":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_pChildGraph": null,`, `"m_pSecondaryGraph": null,`, `"m_inputPins":`, `[`, `],`, `"m_outputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Value",`, `"m_type": "Vector",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": true`, `}`, `],`, `"m_groupName": "",`, `"m_dictionaryParameterBinding": "00000000-0000-0000-0000-000000000000",`, `"m_previewStartValue":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `]`, `}`
 
 **Relationships:**
 
@@ -2661,7 +2755,7 @@ classDiagram
 
 **Inherits from:** [CNmAnimDocument](animdoclib.md#cnmanimdocument)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmGraphDocument",`, `"m_nVersion": 0,`, `"m_pRootGraph": null,`, `"m_variationHierarchy":`, `{`, `"m_variations":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_parentID": "",`, `"m_skeleton": "",`, `"m_pUserData": null`, `}`, `]`, `},`, `"m_debugParameterSets":`, `[`, `]`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmGraphDocument",`, `"m_nVersion": 0,`, `"m_pRootGraph": null,`, `"m_variationHierarchy":`, `{`, `"m_variations":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_parentID": "",`, `"m_skeleton": "",`, `"m_pUserData": null`, `}`, `]`, `},`, `"m_debugParameterSets":`, `[`, `],`, `"m_dictionaryIDSetIDs":`, `[`, `]`, `}`
 
 **Relationships:**
 
@@ -2673,40 +2767,6 @@ classDiagram
 ### CNmGraphDocument
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_boolValues":`, `[`, `],`, `"m_floatValues":`, `[`, `],`, `"m_IDValues":`, `[`, `],`, `"m_vectorValues":`, `[`, `],`, `"m_targetValues":`, `[`, `]`, `}`
-
-### CNmGraphParameterArchetype
-
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_entryType": "Parameter",`, `"m_name": "",`, `"m_groupName": "",`, `"m_valueType": "ID",`, `"m_expectedValues":`, `[`, `]`, `}`, `MVDataRoot`, `MVDataOverlayType = 1`
-
-### CNmGraphParameterArchetype
-
-**Values:**
-
-| Name | Value |
-|------|-------|
-| `Parameter` | 0 |
-| `GraphIDs` | 1 |
-
-### CNmIKRigDocument
-
-**Inherits from:** [CNmAnimDocument](animdoclib.md#cnmanimdocument)
-
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmIKRigDocument",`, `"m_nVersion": 0,`, `"m_skeleton": "",`, `"m_links":`, `[`, `],`, `"m_targets":`, `[`, `]`, `}`
-
-**Relationships:**
-
-```mermaid
-classDiagram
-    CNmAnimDocument <|-- CNmIKRigDocument
-```
-
-### CNmIKRigLink
-
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_name": ""`, `}`
-
-### CNmIKRigTarget
-
-**Metadata:** `MGetKV3ClassDefaults = {`, `}`
 
 ### CNmPreviewArchetype
 
@@ -2720,7 +2780,7 @@ classDiagram
 
 **Inherits from:** [CNmAnimDocument](animdoclib.md#cnmanimdocument)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmSkeletonDocument",`, `"m_nVersion": 0,`, `"m_sourceFilename": "",`, `"m_rootBoneName": "root_motion",`, `"m_flGlobalScale": 1.000000,`, `"m_bIsAttachableProp": false,`, `"m_secondarySkeletons":`, `[`, `],`, `"m_highLODBones":`, `[`, `],`, `"m_boneMaskSetDefinitions":`, `[`, `],`, `"m_previewModelName": ""`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CNmSkeletonDocument",`, `"m_nVersion": 0,`, `"m_sourceFilename": "",`, `"m_rootBoneName": "root_motion",`, `"m_flGlobalScale": 1.000000,`, `"m_bIsAttachableProp": false,`, `"m_bIsCS_HACK": false,`, `"m_secondarySkeletons":`, `[`, `],`, `"m_gameplayRelevantBones":`, `[`, `],`, `"m_highLODBones":`, `[`, `],`, `"m_boneMaskSetDefinitions":`, `[`, `],`, `"m_previewModelName": ""`, `}`
 
 **Relationships:**
 
@@ -2873,6 +2933,25 @@ classDiagram
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CnmGraphDocFollowBoneNode::CData",`, `"m_boneName": "",`, `"m_followTargetBoneName": ""`, `}`
 
+### CnmGraphDocFootIKNode
+
+**Inherits from:** [CNmGraphDocVariationDataNode](animdoclib.md#cnmgraphdocvariationdatanode)
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CnmGraphDocFootIKNode",`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "",`, `"m_floatingComment": "",`, `"m_position":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_pChildGraph": null,`, `"m_pSecondaryGraph": null,`, `"m_inputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Input",`, `"m_type": "Pose",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": false`, `},`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Left Foot Target",`, `"m_type": "Target",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": false`, `},`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Right Foot Target",`, `"m_type": "Target",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": false`, `},`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Enabled",`, `"m_type": "Bool",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": false`, `}`, `],`, `"m_outputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Result",`, `"m_type": "Pose",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": true`, `}`, `],`, `"m_pDefaultVariationData":`, `{`, `"_class": "CnmGraphDocFootIKNode::CData",`, `"m_leftEffectorBoneName": "",`, `"m_rightEffectorBoneName": "",`, `"m_flBlendTimeSeconds": 0.000000`, `},`, `"m_overrides":`, `[`, `],`, `"m_defaultResourceName": "",`, `"m_bIsTargetInWorldSpace": false,`, `"m_blendMode": "Effector"`, `}`
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CNmGraphDocVariationDataNode <|-- CnmGraphDocFootIKNode
+    CNmGraphDocFlowNode <|-- CNmGraphDocVariationDataNode
+    CNmGraphDocNode <|-- CNmGraphDocFlowNode
+```
+
+### CnmGraphDocFootIKNode
+
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CnmGraphDocFootIKNode::CData",`, `"m_leftEffectorBoneName": "",`, `"m_rightEffectorBoneName": "",`, `"m_flBlendTimeSeconds": 0.000000`, `}`
+
 ### CnmGraphDocSpeedScaleNode
 
 **Inherits from:** [CNmGraphDocFlowNode](animdoclib.md#cnmgraphdocflownode)
@@ -2891,7 +2970,7 @@ classDiagram
 
 **Inherits from:** [CNmGraphDocVariationDataNode](animdoclib.md#cnmgraphdocvariationdatanode)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CnmGraphDocTwoBoneIKNode",`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "",`, `"m_floatingComment": "",`, `"m_position":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_pChildGraph": null,`, `"m_pSecondaryGraph": null,`, `"m_inputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Input",`, `"m_type": "Pose",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": false`, `},`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Target",`, `"m_type": "Target",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": false`, `},`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Enabled",`, `"m_type": "Bool",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": false`, `}`, `],`, `"m_outputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Result",`, `"m_type": "Pose",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": true`, `}`, `],`, `"m_pDefaultVariationData":`, `{`, `"_class": "CnmGraphDocTwoBoneIKNode::CData",`, `"m_effectorBoneName": "",`, `"m_flBlendTimeSeconds": 0.000000`, `},`, `"m_overrides":`, `[`, `],`, `"m_defaultResourceName": "",`, `"m_bIsTargetInWorldSpace": false,`, `"m_blendMode": "Effector",`, `"m_flReferencePoseTwistWeight": 0.000000`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CnmGraphDocTwoBoneIKNode",`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "",`, `"m_floatingComment": "",`, `"m_position":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_pChildGraph": null,`, `"m_pSecondaryGraph": null,`, `"m_inputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Input",`, `"m_type": "Pose",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": false`, `},`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Target",`, `"m_type": "Target",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": false`, `},`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Enabled",`, `"m_type": "Bool",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": false`, `}`, `],`, `"m_outputPins":`, `[`, `{`, `"m_ID": <HIDDEN FOR DIFF>,`, `"m_name": "Result",`, `"m_type": "Pose",`, `"m_bIsDynamicPin": false,`, `"m_bAllowMultipleOutConnections": true`, `}`, `],`, `"m_pDefaultVariationData":`, `{`, `"_class": "CnmGraphDocTwoBoneIKNode::CData",`, `"m_effectorBoneName": "",`, `"m_flBlendTimeSeconds": 0.000000`, `},`, `"m_overrides":`, `[`, `],`, `"m_defaultResourceName": "",`, `"m_bIsTargetInWorldSpace": false,`, `"m_blendMode": "Effector",`, `"m_flChainRotationWeight": 0.000000`, `}`
 
 **Relationships:**
 

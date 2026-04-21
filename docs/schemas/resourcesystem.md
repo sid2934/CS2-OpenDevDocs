@@ -24,7 +24,6 @@ nav_exclude: true
 | [InfoForResourceTypeCMorphSetData](#infoforresourcetypecmorphsetdata) | class |  | 0 |
 | [InfoForResourceTypeCNmClip](#infoforresourcetypecnmclip) | class |  | 0 |
 | [InfoForResourceTypeCNmGraphDefinition](#infoforresourcetypecnmgraphdefinition) | class |  | 0 |
-| [InfoForResourceTypeCNmIKRig](#infoforresourcetypecnmikrig) | class |  | 0 |
 | [InfoForResourceTypeCNmSkeleton](#infoforresourcetypecnmskeleton) | class |  | 0 |
 | [InfoForResourceTypeCPanoramaDynamicImages](#infoforresourcetypecpanoramadynamicimages) | class |  | 0 |
 | [InfoForResourceTypeCPanoramaLayout](#infoforresourcetypecpanoramalayout) | class |  | 0 |
@@ -39,6 +38,7 @@ nav_exclude: true
 | [InfoForResourceTypeCTestResourceData](#infoforresourcetypectestresourcedata) | class |  | 0 |
 | [InfoForResourceTypeCTextureBase](#infoforresourcetypectexturebase) | class |  | 0 |
 | [InfoForResourceTypeCTypeScriptResource](#infoforresourcetypectypescriptresource) | class |  | 0 |
+| [InfoForResourceTypeCVDataItemDefs](#infoforresourcetypecvdataitemdefs) | class |  | 0 |
 | [InfoForResourceTypeCVDataResource](#infoforresourcetypecvdataresource) | class |  | 0 |
 | [InfoForResourceTypeCVMixListResource](#infoforresourcetypecvmixlistresource) | class |  | 0 |
 | [InfoForResourceTypeCVPhysXSurfacePropertiesList](#infoforresourcetypecvphysxsurfacepropertieslist) | class |  | 0 |
@@ -120,10 +120,6 @@ nav_exclude: true
 
 **Metadata:** `MResourceTypeForInfoType = "vnmgraph"`
 
-### InfoForResourceTypeCNmIKRig
-
-**Metadata:** `MResourceTypeForInfoType = "vnmik"`
-
 ### InfoForResourceTypeCNmSkeleton
 
 **Metadata:** `MResourceTypeForInfoType = "vnmskel"`
@@ -179,6 +175,10 @@ nav_exclude: true
 ### InfoForResourceTypeCTypeScriptResource
 
 **Metadata:** `MResourceTypeForInfoType = "vts"`
+
+### InfoForResourceTypeCVDataItemDefs
+
+**Metadata:** `MResourceTypeForInfoType = "itemdefs"`
 
 ### InfoForResourceTypeCVDataResource
 

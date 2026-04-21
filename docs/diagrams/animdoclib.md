@@ -33,7 +33,7 @@ classDiagram
     CNmGraphDocFlowNode <|-- CNmGraphDocBlend1DNode
     CNmGraphDocFlowNode <|-- CNmGraphDocBlend2DNode
     CNmGraphDocFlowNode <|-- CNmGraphDocBoneMaskBlendNode
-    CNmGraphDocFlowNode <|-- CNmGraphDocBoneMaskNode
+    CNmGraphDocVariationDataNode <|-- CNmGraphDocBoneMaskNode
     CNmGraphDocParameterReferenceNode <|-- CNmGraphDocBoneMaskParameterReferenceNode
     CNmGraphDocResultNode <|-- CNmGraphDocBoneMaskResultNode
     CNmGraphDocFlowNode <|-- CNmGraphDocBoneMaskSelectorNode
@@ -73,6 +73,7 @@ classDiagram
     CNmGraphDocFlowNode <|-- CNmGraphDocFloatRemapNode
     CNmGraphDocResultNode <|-- CNmGraphDocFloatResultNode
     CNmGraphDocFlowNode <|-- CNmGraphDocFloatSelectorNode
+    CNmGraphDocFlowNode <|-- CNmGraphDocFloatSpringNode
     CNmGraphDocFlowNode <|-- CNmGraphDocFloatSwitchNode
     CNmGraphDocVirtualParameterNode <|-- CNmGraphDocFloatVirtualParameterNode
     CNmGraphDocGraph <|-- CNmGraphDocFlowGraph
@@ -83,6 +84,8 @@ classDiagram
     CNmGraphDocStateMachineGraphNode <|-- CNmGraphDocGlobalTransitionConduitNode
     CNmGraphDocTransitionNode <|-- CNmGraphDocGlobalTransitionNode
     CNmGraphDocFlowNode <|-- CNmGraphDocGraphEventConditionNode
+    CNmGraphDocFlowNode <|-- CNmGraphDocIDBasedClipSelectorNode
+    CNmGraphDocFlowNode <|-- CNmGraphDocIDBasedSelectorNode
     CNmGraphDocFlowNode <|-- CNmGraphDocIDComparisonNode
     CNmGraphDocControlParameterNode <|-- CNmGraphDocIDControlParameterNode
     CNmGraphDocFlowNode <|-- CNmGraphDocIDEventConditionNode
@@ -133,7 +136,7 @@ classDiagram
     CNmGraphDocResultNode <|-- CNmGraphDocTargetResultNode
     CNmGraphDocFlowNode <|-- CNmGraphDocTargetSelectorNode
     CNmGraphDocVirtualParameterNode <|-- CNmGraphDocTargetVirtualParameterNode
-    CNmGraphDocFlowNode <|-- CNmGraphDocTargetWarpNode
+    CNmGraphDocVariationDataNode <|-- CNmGraphDocTargetWarpNode
     CNmGraphDocFlowNode <|-- CNmGraphDocTimeConditionNode
     CNmGraphDocStateMachineGraphNode <|-- CNmGraphDocTransitionConduitNode
     CNmGraphDocFlowNode <|-- CNmGraphDocTransitionEventConditionNode
@@ -151,7 +154,6 @@ classDiagram
     CNmGraphDocParameterBaseNode <|-- CNmGraphDocVirtualParameterNode
     CNmGraphDocFlowNode <|-- CNmGraphDocZeroPoseNode
     CNmAnimDocument <|-- CNmGraphDocument
-    CNmAnimDocument <|-- CNmIKRigDocument
     CNmAnimDocument <|-- CNmSkeletonDocument
     CNmGraphDocVariationDataNode <|-- CnmGraphDocChainLookatNode
     CNmGraphDocFlowNode <|-- CnmGraphDocConstBoneTargetNode
@@ -162,6 +164,7 @@ classDiagram
     CNmGraphDocFlowNode <|-- CnmGraphDocConstVectorNode
     CNmGraphDocFlowNode <|-- CnmGraphDocDurationScaleNode
     CNmGraphDocVariationDataNode <|-- CnmGraphDocFollowBoneNode
+    CNmGraphDocVariationDataNode <|-- CnmGraphDocFootIKNode
     CNmGraphDocFlowNode <|-- CnmGraphDocSpeedScaleNode
     CNmGraphDocVariationDataNode <|-- CnmGraphDocTwoBoneIKNode
     CNmGraphDocVariationDataNode <|-- CnmGraphDocVariationConstFloatNode

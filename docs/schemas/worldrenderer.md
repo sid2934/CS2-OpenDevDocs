@@ -30,7 +30,7 @@ nav_exclude: true
 | [InfoForResourceTypeVMapResourceData_t](#infoforresourcetypevmapresourcedata_t) | class |  | 0 |
 | [MaterialOverride_t](#materialoverride_t) | class | BaseSceneObjectOverride_t | 0 |
 | [NodeData_t](#nodedata_t) | class |  | 0 |
-| [ObjectTypeFlags_t](#objecttypeflags_t) | enum |  | 15 |
+| [ObjectTypeFlags_t](#objecttypeflags_t) | enum |  | 16 |
 | [PermEntityLumpData_t](#permentitylumpdata_t) | class |  | 0 |
 | [RTProxyBLAS_t](#rtproxyblas_t) | class |  | 9 |
 | [RTProxyInstanceFlags_t](#rtproxyinstanceflags_t) | enum |  | 2 |
@@ -168,7 +168,6 @@ classDiagram
 | `OBJECT_TYPE_NO_SHADOWS` | 32 |
 | `OBJECT_TYPE_WORLDSPACE_TEXURE_BLEND` | 64 |
 | `OBJECT_TYPE_DISABLED_IN_LOW_QUALITY` | 128 |
-| `OBJECT_TYPE_NO_SUN_SHADOWS` | 256 |
 | `OBJECT_TYPE_RENDER_WITH_DYNAMIC` | 512 |
 | `OBJECT_TYPE_RENDER_TO_CUBEMAPS` | 1024 |
 | `OBJECT_TYPE_MODEL_HAS_LODS` | 2048 |
@@ -177,6 +176,8 @@ classDiagram
 | `OBJECT_TYPE_STATIC_CUBE_MAP` | 32768 |
 | `OBJECT_TYPE_DISABLE_VIS_CULLING` | 65536 |
 | `OBJECT_TYPE_BAKED_GEOMETRY` | 131072 |
+| `OBJECT_TYPE_NEEDS_DYNAMIC_SHADOWS` | 262144 |
+| `OBJECT_TYPE_HAS_AGGREGATE_RTPROXY` | 524288 |
 
 ### PermEntityLumpData_t
 
@@ -229,7 +230,7 @@ classDiagram
 
 ### VoxelVisBlockOffset_t
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_nOffset": 0,`, `"m_nElementCount": 0`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_nOffset": 0,`, `"m_nElementCount": 4294967295`, `}`
 
 ### WorldBuilderParams_t
 

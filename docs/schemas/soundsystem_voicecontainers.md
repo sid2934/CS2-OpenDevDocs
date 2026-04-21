@@ -74,7 +74,7 @@ nav_exclude: true
 
 ### CSoundContainerReference
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_bUseReference": true,`, `"m_sound": "",`, `"m_pSound": null`, `}`, `MPropertyFriendlyName = "Sound"`, `MPropertyDescription = "Reference to a vsnd file or another container."`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_namespace": "",`, `"m_bUseReference": true,`, `"m_sound": "",`, `"m_pSound": null`, `}`, `MPropertyFriendlyName = "Sound"`, `MPropertyDescription = "Reference to a vsnd file or another container."`
 
 ### CSoundContainerReferenceArray
 
@@ -183,7 +183,7 @@ classDiagram
 
 **Inherits from:** [CVoiceContainerBase](soundsystem_voicecontainers.md#cvoicecontainerbase)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CVoiceContainerBlender",`, `"m_vSound":`, `{`, `"m_nRate": 0,`, `"m_nFormat": "PCM16",`, `"m_nChannels": 0,`, `"m_nLoopStart": 0,`, `"m_nSampleCount": 0,`, `"m_flDuration": 0.000000,`, `"m_Sentences":`, `[`, `],`, `"m_nStreamingSize": 0,`, `"m_nSeekTable":`, `[`, `],`, `"m_nLoopEnd": 0,`, `"m_encodedHeader": "[BINARY BLOB]"`, `},`, `"m_pEnvelopeAnalyzer": null,`, `"m_firstSound":`, `{`, `"m_bUseReference": true,`, `"m_sound": "",`, `"m_pSound": null`, `},`, `"m_secondSound":`, `{`, `"m_bUseReference": true,`, `"m_sound": "",`, `"m_pSound": null`, `},`, `"m_flBlendFactor": 0.000000`, `}`, `MPropertyFriendlyName = "Blender"`, `MPropertyDescription = "Blends two containers."`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CVoiceContainerBlender",`, `"m_vSound":`, `{`, `"m_nRate": 0,`, `"m_nFormat": "PCM16",`, `"m_nChannels": 0,`, `"m_nLoopStart": 0,`, `"m_nSampleCount": 0,`, `"m_flDuration": 0.000000,`, `"m_Sentences":`, `[`, `],`, `"m_nStreamingSize": 0,`, `"m_nSeekTable":`, `[`, `],`, `"m_nLoopEnd": 0,`, `"m_encodedHeader": "[BINARY BLOB]"`, `},`, `"m_pEnvelopeAnalyzer": null,`, `"m_firstSound":`, `{`, `"m_namespace": "",`, `"m_bUseReference": true,`, `"m_sound": "",`, `"m_pSound": null`, `},`, `"m_secondSound":`, `{`, `"m_namespace": "",`, `"m_bUseReference": true,`, `"m_sound": "",`, `"m_pSound": null`, `},`, `"m_flBlendFactor": 0.000000`, `}`, `MPropertyFriendlyName = "Blender"`, `MPropertyDescription = "Blends two containers."`
 
 **Relationships:**
 
@@ -304,7 +304,7 @@ classDiagram
 
 **Inherits from:** [CVoiceContainerBase](soundsystem_voicecontainers.md#cvoicecontainerbase)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CVoiceContainerLoopTrigger",`, `"m_vSound":`, `{`, `"m_nRate": 0,`, `"m_nFormat": "PCM16",`, `"m_nChannels": 0,`, `"m_nLoopStart": 0,`, `"m_nSampleCount": 0,`, `"m_flDuration": 0.000000,`, `"m_Sentences":`, `[`, `],`, `"m_nStreamingSize": 0,`, `"m_nSeekTable":`, `[`, `],`, `"m_nLoopEnd": 0,`, `"m_encodedHeader": "[BINARY BLOB]"`, `},`, `"m_pEnvelopeAnalyzer": null,`, `"m_sound":`, `{`, `"m_bUseReference": true,`, `"m_sound": "",`, `"m_pSound": null`, `},`, `"m_flRetriggerTimeMin": 1.000000,`, `"m_flRetriggerTimeMax": 1.000000,`, `"m_flFadeTime": 0.500000,`, `"m_bCrossFade": false`, `}`, `MPropertyFriendlyName = "LoopTrigger"`, `MPropertyDescription = "Continuously retriggers a sound and optionally fades to the new instance."`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CVoiceContainerLoopTrigger",`, `"m_vSound":`, `{`, `"m_nRate": 0,`, `"m_nFormat": "PCM16",`, `"m_nChannels": 0,`, `"m_nLoopStart": 0,`, `"m_nSampleCount": 0,`, `"m_flDuration": 0.000000,`, `"m_Sentences":`, `[`, `],`, `"m_nStreamingSize": 0,`, `"m_nSeekTable":`, `[`, `],`, `"m_nLoopEnd": 0,`, `"m_encodedHeader": "[BINARY BLOB]"`, `},`, `"m_pEnvelopeAnalyzer": null,`, `"m_sound":`, `{`, `"m_namespace": "",`, `"m_bUseReference": true,`, `"m_sound": "",`, `"m_pSound": null`, `},`, `"m_flRetriggerTimeMin": 1.000000,`, `"m_flRetriggerTimeMax": 1.000000,`, `"m_flFadeTime": 0.500000,`, `"m_bCrossFade": false`, `}`, `MPropertyFriendlyName = "LoopTrigger"`, `MPropertyDescription = "Continuously retriggers a sound and optionally fades to the new instance."`
 
 **Relationships:**
 
@@ -317,7 +317,7 @@ classDiagram
 
 **Inherits from:** [CVoiceContainerBase](soundsystem_voicecontainers.md#cvoicecontainerbase)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CVoiceContainerLoopXFade",`, `"m_vSound":`, `{`, `"m_nRate": 0,`, `"m_nFormat": "PCM16",`, `"m_nChannels": 0,`, `"m_nLoopStart": 0,`, `"m_nSampleCount": 0,`, `"m_flDuration": 0.000000,`, `"m_Sentences":`, `[`, `],`, `"m_nStreamingSize": 0,`, `"m_nSeekTable":`, `[`, `],`, `"m_nLoopEnd": 0,`, `"m_encodedHeader": "[BINARY BLOB]"`, `},`, `"m_pEnvelopeAnalyzer": null,`, `"m_sound":`, `{`, `"m_bUseReference": true,`, `"m_sound": "",`, `"m_pSound": null`, `},`, `"m_flLoopEnd": 0.000000,`, `"m_flLoopStart": 0.000000,`, `"m_flFadeOut": 0.000000,`, `"m_flFadeIn": 0.000000,`, `"m_bPlayHead": false,`, `"m_bPlayTail": false,`, `"m_bEqualPow": false`, `}`, `MPropertyFriendlyName = "Loop XFade"`, `MPropertyDescription = "Sample accurate looping with xfade capabilities."`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CVoiceContainerLoopXFade",`, `"m_vSound":`, `{`, `"m_nRate": 0,`, `"m_nFormat": "PCM16",`, `"m_nChannels": 0,`, `"m_nLoopStart": 0,`, `"m_nSampleCount": 0,`, `"m_flDuration": 0.000000,`, `"m_Sentences":`, `[`, `],`, `"m_nStreamingSize": 0,`, `"m_nSeekTable":`, `[`, `],`, `"m_nLoopEnd": 0,`, `"m_encodedHeader": "[BINARY BLOB]"`, `},`, `"m_pEnvelopeAnalyzer": null,`, `"m_sound":`, `{`, `"m_namespace": "",`, `"m_bUseReference": true,`, `"m_sound": "",`, `"m_pSound": null`, `},`, `"m_flLoopEnd": 0.000000,`, `"m_flLoopStart": 0.000000,`, `"m_flFadeOut": 0.000000,`, `"m_flFadeIn": 0.000000,`, `"m_bPlayHead": false,`, `"m_bPlayTail": false,`, `"m_bEqualPow": false`, `}`, `MPropertyFriendlyName = "Loop XFade"`, `MPropertyDescription = "Sample accurate looping with xfade capabilities."`
 
 **Relationships:**
 
@@ -357,7 +357,7 @@ classDiagram
 
 **Inherits from:** [CVoiceContainerBase](soundsystem_voicecontainers.md#cvoicecontainerbase)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CVoiceContainerParameterBlender",`, `"m_vSound":`, `{`, `"m_nRate": 0,`, `"m_nFormat": "PCM16",`, `"m_nChannels": 0,`, `"m_nLoopStart": 0,`, `"m_nSampleCount": 0,`, `"m_flDuration": 0.000000,`, `"m_Sentences":`, `[`, `],`, `"m_nStreamingSize": 0,`, `"m_nSeekTable":`, `[`, `],`, `"m_nLoopEnd": 0,`, `"m_encodedHeader": "[BINARY BLOB]"`, `},`, `"m_pEnvelopeAnalyzer": null,`, `"m_firstSound":`, `{`, `"m_bUseReference": true,`, `"m_sound": "",`, `"m_pSound": null`, `},`, `"m_secondSound":`, `{`, `"m_bUseReference": true,`, `"m_sound": "",`, `"m_pSound": null`, `},`, `"m_bEnableOcclusionBlend": false,`, `"m_curve1":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `},`, `"m_curve2":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `},`, `"m_bEnableDistanceBlend": false,`, `"m_curve3":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `},`, `"m_curve4":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `}`, `}`, `MPropertyFriendlyName = "Parameter Blender"`, `MPropertyDescription = "Blends two containers according to parameter curves."`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CVoiceContainerParameterBlender",`, `"m_vSound":`, `{`, `"m_nRate": 0,`, `"m_nFormat": "PCM16",`, `"m_nChannels": 0,`, `"m_nLoopStart": 0,`, `"m_nSampleCount": 0,`, `"m_flDuration": 0.000000,`, `"m_Sentences":`, `[`, `],`, `"m_nStreamingSize": 0,`, `"m_nSeekTable":`, `[`, `],`, `"m_nLoopEnd": 0,`, `"m_encodedHeader": "[BINARY BLOB]"`, `},`, `"m_pEnvelopeAnalyzer": null,`, `"m_firstSound":`, `{`, `"m_namespace": "",`, `"m_bUseReference": true,`, `"m_sound": "",`, `"m_pSound": null`, `},`, `"m_secondSound":`, `{`, `"m_namespace": "",`, `"m_bUseReference": true,`, `"m_sound": "",`, `"m_pSound": null`, `},`, `"m_bEnableOcclusionBlend": false,`, `"m_curve1":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `},`, `"m_curve2":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `},`, `"m_bEnableDistanceBlend": false,`, `"m_curve3":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `},`, `"m_curve4":`, `{`, `"m_spline":`, `[`, `],`, `"m_tangents":`, `[`, `],`, `"m_vDomainMins":`, `[`, `0.000000,`, `0.000000`, `],`, `"m_vDomainMaxs":`, `[`, `0.000000,`, `0.000000`, `]`, `}`, `}`, `MPropertyFriendlyName = "Parameter Blender"`, `MPropertyDescription = "Blends two containers according to parameter curves."`
 
 **Relationships:**
 
@@ -423,7 +423,7 @@ classDiagram
 
 ### CVoiceContainerSetElement
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_sound":`, `{`, `"m_bUseReference": true,`, `"m_sound": "",`, `"m_pSound": null`, `},`, `"m_flVolumeDB": 0.000000`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"m_sound":`, `{`, `"m_namespace": "",`, `"m_bUseReference": true,`, `"m_sound": "",`, `"m_pSound": null`, `},`, `"m_flVolumeDB": 0.000000`, `}`
 
 ### CVoiceContainerShapedNoise
 

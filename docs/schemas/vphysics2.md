@@ -11,49 +11,44 @@ nav_exclude: true
 
 | Name | Kind | Bases | Fields |
 |------|------|-------|--------|
+| [IPhysAggregateInstance](#iphysaggregateinstance) | class | IPhysicsBodyList | 2 |
+| [IPhysicsBody](#iphysicsbody) | class |  | 0 |
+| [IPhysicsJoint](#iphysicsjoint) | class |  | 0 |
+| [IPhysicsParticleRope](#iphysicsparticlerope) | class |  | 0 |
 | [IPhysicsPlayerController](#iphysicsplayercontroller) | class |  | 0 |
-| [constraint_axislimit_t](#constraint_axislimit_t) | class |  | 4 |
-| [constraint_breakableparams_t](#constraint_breakableparams_t) | class |  | 5 |
-| [constraint_hingeparams_t](#constraint_hingeparams_t) | class |  | 4 |
+| [IPhysicsRagdollControl](#iphysicsragdollcontrol) | class |  | 0 |
 | [vphysics_save_cphysicsbody_t](#vphysics_save_cphysicsbody_t) | class | RnBodyDesc_t | 0 |
+| [vphysics_save_ragdoll_control_t](#vphysics_save_ragdoll_control_t) | class |  | 10 |
 
 ---
 
+### IPhysAggregateInstance
+
+**Inherits from:** [IPhysicsBodyList](client.md#iphysicsbodylist)
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    IPhysicsBodyList <|-- IPhysAggregateInstance
+```
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `m_pSkeleton` | void* |  |
+| `m_bIsAxisAligned` | bool |  |
+
+### IPhysicsBody
+
+### IPhysicsJoint
+
+### IPhysicsParticleRope
+
 ### IPhysicsPlayerController
 
-### constraint_axislimit_t
-
-**Fields:**
-
-| Name | Type | Annotations |
-|------|------|-------------|
-| `flMinRotation` | float32 |  |
-| `flMaxRotation` | float32 |  |
-| `flMotorTargetAngSpeed` | float32 |  |
-| `flMotorMaxTorque` | float32 |  |
-
-### constraint_breakableparams_t
-
-**Fields:**
-
-| Name | Type | Annotations |
-|------|------|-------------|
-| `strength` | float32 |  |
-| `forceLimit` | float32 |  |
-| `torqueLimit` | float32 |  |
-| `bodyMassScale` | float32[2] |  |
-| `isActive` | bool |  |
-
-### constraint_hingeparams_t
-
-**Fields:**
-
-| Name | Type | Annotations |
-|------|------|-------------|
-| `worldPosition` | Vector |  |
-| `worldAxisDirection` | Vector |  |
-| `hingeAxis` | constraint_axislimit_t |  |
-| `constraint` | constraint_breakableparams_t |  |
+### IPhysicsRagdollControl
 
 ### vphysics_save_cphysicsbody_t
 
@@ -67,3 +62,22 @@ nav_exclude: true
 classDiagram
     RnBodyDesc_t <|-- vphysics_save_cphysicsbody_t
 ```
+
+### vphysics_save_ragdoll_control_t
+
+**Metadata:** `MGetKV3ClassDefaults = Could not parse KV3 Defaults`
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `m_flMinSpringFrequency` | float32 |  |
+| `m_flMaxSpringFrequency` | float32 |  |
+| `m_flMaxStretch` | float32 |  |
+| `m_bSolidCollisionAtZeroWeight` | bool |  |
+| `m_bRequiresDynamicBodies` | bool |  |
+| `m_bIgnoreTeleport` | bool |  |
+| `m_vLinearVelocityAccumulator` | Vector |  |
+| `m_vAngularVelocityAccumulator` | RotationVector |  |
+| `m_vForceAccumulator` | Vector |  |
+| `m_nBodyCount` | int32 |  |

@@ -44,6 +44,8 @@ nav_exclude: true
 | [FakeEntity_tAPI](#fakeentity_tapi) | class |  | 0 |
 | [PulseTestEnumColor_t](#pulsetestenumcolor_t) | enum |  | 5 |
 | [PulseTestEnumShape_t](#pulsetestenumshape_t) | enum |  | 3 |
+| [TestComponent_t](#testcomponent_t) | class |  | 1 |
+| [TestComponent_tAPI](#testcomponent_tapi) | class |  | 0 |
 
 ---
 
@@ -455,3 +457,13 @@ classDiagram
 | `CIRCLE` | 100 |
 | `SQUARE` | 200 |
 | `TRIANGLE` | 300 |
+
+### TestComponent_t
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `m_ComponentData` | CUtlString |  |
+
+### TestComponent_tAPI

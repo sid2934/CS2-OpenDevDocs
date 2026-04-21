@@ -13,8 +13,12 @@ Class relationships (inheritance and composition) for the `soundsystem` module.
 
 ```mermaid
 classDiagram
+    CSndSeqInstBaseSchema <|-- CSndSeqInstMidiSampler
+    CSndSeqInstBaseSchema <|-- CSndSeqInstSndEvtSchema
+    ISndSeqInstruments <|-- CSndSeqInstruments
     CSosGroupActionSchema <|-- CSosGroupActionLimitSchema
     CSosGroupActionSchema <|-- CSosGroupActionMemberCountEnvelopeSchema
+    CSosGroupActionSchema <|-- CSosGroupActionOcclusionSchema
     CSosGroupActionSchema <|-- CSosGroupActionSetSoundeventParameterSchema
     CSosGroupActionSchema <|-- CSosGroupActionSoundeventClusterSchema
     CSosGroupActionSchema <|-- CSosGroupActionSoundeventCountSchema
@@ -22,4 +26,7 @@ classDiagram
     CSosGroupActionSchema <|-- CSosGroupActionSoundeventPrioritySchema
     CSosGroupActionSchema <|-- CSosGroupActionTimeBlockLimitSchema
     CSosGroupActionSchema <|-- CSosGroupActionTimeLimitSchema
+    CSndSeqInstBaseSchema *-- SndSeqInstrumentType_t
+    CSndSeqInstBaseSchema *-- SndSeqPlayerType_t
+    KeyGroup_t --> VelocityZone_t
 ```

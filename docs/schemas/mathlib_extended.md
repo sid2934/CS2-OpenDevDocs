@@ -30,8 +30,8 @@ nav_exclude: true
 
 | Name | Type | Annotations |
 |------|------|-------------|
-| `m_vMinBounds` | Vector | `MNetworkEnable` |
-| `m_vMaxBounds` | Vector | `MNetworkEnable` |
+| `m_vMinBounds` | Vector |  |
+| `m_vMaxBounds` | Vector |  |
 
 ### CFuseProgram
 
