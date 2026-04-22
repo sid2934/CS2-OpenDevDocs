@@ -17,7 +17,7 @@ All entities and types extracted from CS2's schema dump, organised by module.
 | [animgraphdoclib](schemas/animgraphdoclib.md) | 172 | [📊 Diagram](diagrams/animgraphdoclib.md) |
 | [animgraphlib](schemas/animgraphlib.md) | 298 | [📊 Diagram](diagrams/animgraphlib.md) |
 | [animlib](schemas/animlib.md) | 214 | [📊 Diagram](diagrams/animlib.md) |
-| [client](schemas/client.md) | 766 | [📊 Diagram](diagrams/client.md) |
+| [client](schemas/client.md) | 767 | [📊 Diagram](diagrams/client.md) |
 | [compositematerialslib](schemas/compositematerialslib.md) | 17 | [📊 Diagram](diagrams/compositematerialslib.md) |
 | [entity2](schemas/entity2.md) | 18 | [📊 Diagram](diagrams/entity2.md) |
 | [hammer](schemas/hammer.md) | 10 | — |
@@ -45,7 +45,7 @@ All entities and types extracted from CS2's schema dump, organised by module.
 | [resourcesystem](schemas/resourcesystem.md) | 48 | — |
 | [scenesystem](schemas/scenesystem.md) | 12 | [📊 Diagram](diagrams/scenesystem.md) |
 | [schemasystem](schemas/schemasystem.md) | 3 | — |
-| [server](schemas/server.md) | 777 | [📊 Diagram](diagrams/server.md) |
+| [server](schemas/server.md) | 778 | [📊 Diagram](diagrams/server.md) |
 | [smartprops](schemas/smartprops.md) | 167 | [📊 Diagram](diagrams/smartprops.md) |
 | [sounddoc_lib](schemas/sounddoc_lib.md) | 75 | [📊 Diagram](diagrams/sounddoc_lib.md) |
 | [soundsystem](schemas/soundsystem.md) | 39 | [📊 Diagram](diagrams/soundsystem.md) |

@@ -116,10 +116,11 @@ nav_exclude: true
 | [CCSPlayerController_InventoryServices](#ccsplayercontroller_inventoryservices) | class |  | 3 |
 | [CCSPlayerLegacyJump](#ccsplayerlegacyjump) | class |  | 2 |
 | [CCSPlayerModernJump](#ccsplayermodernjump) | class |  | 9 |
-| [CCSPlayerPawn](#ccsplayerpawn) | class | CCSPlayerPawnBase | 112 |
+| [CCSPlayerPawn](#ccsplayerpawn) | class | CCSPlayerPawnBase | 108 |
 | [CCSPlayerPawnBase](#ccsplayerpawnbase) | class | CBasePlayerPawn | 15 |
 | [CCSPlayerResource](#ccsplayerresource) | class | CBaseEntity | 10 |
 | [CCSPlayer_ActionTrackingServices](#ccsplayer_actiontrackingservices) | class | CPlayerPawnComponent | 4 |
+| [CCSPlayer_AimPunchServices](#ccsplayer_aimpunchservices) | class | CPlayerPawnComponent | 6 |
 | [CCSPlayer_BulletServices](#ccsplayer_bulletservices) | class | CPlayerPawnComponent | 1 |
 | [CCSPlayer_BuyServices](#ccsplayer_buyservices) | class | CPlayerPawnComponent | 1 |
 | [CCSPlayer_CameraServices](#ccsplayer_cameraservices) | class | CCSPlayerBase_CameraServices | 0 |
@@ -4168,11 +4169,11 @@ classDiagram
     CCSPlayerPawn --> CCSPlayer_HostageServices
     CCSPlayerPawn --> CCSPlayer_BuyServices
     CCSPlayerPawn --> CCSPlayer_ActionTrackingServices
+    CCSPlayerPawn --> CCSPlayer_AimPunchServices
     CCSPlayerPawn --> CCSPlayer_RadioServices
     CCSPlayerPawn --> CCSPlayer_DamageReactServices
     CCSPlayerPawn --> CBaseEntity
     CCSPlayerPawn *-- GameTime_t
-    CCSPlayerPawn *-- GameTick_t
     CCSPlayerPawn *-- CEconItemView
 ```
 
@@ -4184,6 +4185,7 @@ classDiagram
 | `m_pHostageServices` | [CCSPlayer_HostageServices](../schemas/server.md#ccsplayer_hostageservices)* | Pointer to CCSPlayer_HostageServices which tracks which hostage entity this player is currently carrying. |
 | `m_pBuyServices` | [CCSPlayer_BuyServices](../schemas/server.md#ccsplayer_buyservices)* | Pointer to CCSPlayer_BuyServices which tracks sellback purchase history for the current round. |
 | `m_pActionTrackingServices` | [CCSPlayer_ActionTrackingServices](../schemas/server.md#ccsplayer_actiontrackingservices)* | Pointer to CCSPlayer_ActionTrackingServices which tracks weapon purchases and rescue state for stats/scoring. |
+| `m_pAimPunchServices` | [CCSPlayer_AimPunchServices](../schemas/server.md#ccsplayer_aimpunchservices)* |  |
 | `m_pRadioServices` | [CCSPlayer_RadioServices](../schemas/server.md#ccsplayer_radioservices)* |  |
 | `m_pDamageReactServices` | [CCSPlayer_DamageReactServices](../schemas/server.md#ccsplayer_damagereactservices)* |  |
 | `m_nCharacterDefIndex` | uint16 |  |
@@ -4205,11 +4207,6 @@ classDiagram
 | `m_RetakesMVPBoostExtraUtility` | loadout_slot_t |  |
 | `m_flHealthShotBoostExpirationTime` | [GameTime_t](../schemas/entity2.md#gametime_t) | GameTime at which the health-shot (medshot) movement speed boost expires. |
 | `m_flLandingTimeSeconds` | float32 |  |
-| `m_aimPunchAngle` | QAngle | Accumulated aim-punch (recoil kick) angle in pitch and yaw applied to the camera view, in degrees. *Networked at full 32-bit precision. Clients subtract this from view angles to derive the true aim direction.* |
-| `m_aimPunchAngleVel` | QAngle | Current velocity of the aim-punch angle – how fast the recoil is decaying per tick. |
-| `m_aimPunchTickBase` | [GameTick_t](../schemas/entity2.md#gametick_t) | Server tick at which the aim-punch sample list was last reset. |
-| `m_aimPunchTickFraction` | float32 | Fractional tick offset for interpolating the aim-punch curve between ticks. |
-| `m_aimPunchCache` | CUtlVector< QAngle > |  |
 | `m_bIsBuyMenuOpen` | bool | True while the player's buy menu is open. |
 | `m_lastLandTime` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_bOnGroundLastTick` | bool |  |
@@ -4391,6 +4388,29 @@ classDiagram
 | `m_bIsRescuing` | bool | True while the player is escorting a hostage to the rescue zone. |
 | `m_weaponPurchasesThisMatch` | [WeaponPurchaseTracker_t](../schemas/server.md#weaponpurchasetracker_t) | WeaponPurchaseTracker_t recording which weapons were bought during the match (used for match-stats). |
 | `m_weaponPurchasesThisRound` | [WeaponPurchaseTracker_t](../schemas/server.md#weaponpurchasetracker_t) | WeaponPurchaseTracker_t recording which weapons were bought this round (used for in-round stats and economy tracking). |
+
+### CCSPlayer_AimPunchServices
+
+**Inherits from:** [CPlayerPawnComponent](client.md#cplayerpawncomponent)
+
+**Relationships:**
+
+```mermaid
+classDiagram
+    CPlayerPawnComponent <|-- CCSPlayer_AimPunchServices
+    CCSPlayer_AimPunchServices *-- GameTick_t
+```
+
+**Fields:**
+
+| Name | Type | Annotations |
+|------|------|-------------|
+| `m_predictableBaseTick` | [GameTick_t](../schemas/entity2.md#gametick_t) |  |
+| `m_predictableBaseTickInterpAmount` | float32 |  |
+| `m_predictableBaseAngle` | QAngle |  |
+| `m_predictableBaseAngleVel` | QAngle |  |
+| `m_unpredictableBaseTick` | [GameTick_t](../schemas/entity2.md#gametick_t) |  |
+| `m_unpredictableBaseAngle` | QAngle |  |
 
 ### CCSPlayer_BulletServices
 
@@ -4937,7 +4957,7 @@ classDiagram
 
 **Inherits from:** [CBasePlayerWeaponVData](server.md#cbaseplayerweaponvdata)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CCSWeaponBaseVData",`, `"m_szWorldModel": "",`, `"m_szWorldModelAg2Override": "",`, `"m_sToolsOnlyOwnerModelName": "",`, `"m_bBuiltRightHanded": true,`, `"m_bAllowFlipping": true,`, `"m_sMuzzleAttachment": "muzzle",`, `"m_szMuzzleFlashParticle": "",`, `"m_szMuzzleFlashParticleConfig": "",`, `"m_szBarrelSmokeParticle": "",`, `"m_nMuzzleSmokeShotThreshold": 4,`, `"m_flMuzzleSmokeTimeout": 0.250000,`, `"m_flMuzzleSmokeDecrementRate": 1.000000,`, `"m_bGenerateMuzzleLight": true,`, `"m_bLinkedCooldowns": false,`, `"m_iFlags": "",`, `"m_iWeight": 0,`, `"m_bAutoSwitchTo": true,`, `"m_bAutoSwitchFrom": true,`, `"m_nPrimaryAmmoType": "",`, `"m_nSecondaryAmmoType": "",`, `"m_iMaxClip1": 0,`, `"m_iMaxClip2": 0,`, `"m_iDefaultClip1": -1,`, `"m_iDefaultClip2": -1,`, `"m_bReserveAmmoAsClips": false,`, `"m_bTreatAsSingleClip": false,`, `"m_bKeepLoadedAmmo": false,`, `"m_iRumbleEffect": "RUMBLE_INVALID",`, `"m_flDropSpeed": 300.000000,`, `"m_iSlot": 0,`, `"m_iPosition": 0,`, `"m_aShootSounds":`, `{`, `},`, `"m_WeaponType": "WEAPONTYPE_UNKNOWN",`, `"m_WeaponCategory": "WEAPONCATEGORY_OTHER",`, `"m_szAnimSkeleton": "",`, `"m_vecMuzzlePos0":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_vecMuzzlePos1":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_szTracerParticle": "",`, `"m_GearSlot": "GEAR_SLOT_INVALID",`, `"m_GearSlotPosition": -1,`, `"m_DefaultLoadoutSlot": "LOADOUT_SLOT_INVALID",`, `"m_nPrice": 0,`, `"m_nKillAward": 0,`, `"m_nPrimaryReserveAmmoMax": 0,`, `"m_nSecondaryReserveAmmoMax": 0,`, `"m_bMeleeWeapon": false,`, `"m_bHasBurstMode": false,`, `"m_bIsRevolver": false,`, `"m_bCannotShootUnderwater": false,`, `"m_szName": "",`, `"m_eSilencerType": "WEAPONSILENCER_NONE",`, `"m_nCrosshairMinDistance": 0,`, `"m_nCrosshairDeltaDistance": 0,`, `"m_bIsFullAuto": false,`, `"m_nNumBullets": 0,`, `"m_bReloadsSingleShells": false,`, `"m_flCycleTime": 0.000000,`, `"m_flMaxSpeed": 0.000000,`, `"m_flSpread": 0.000000,`, `"m_flInaccuracyCrouch": 0.000000,`, `"m_flInaccuracyStand": 0.000000,`, `"m_flInaccuracyJump": 0.000000,`, `"m_flInaccuracyLand": 0.000000,`, `"m_flInaccuracyLadder": 0.000000,`, `"m_flInaccuracyFire": 0.000000,`, `"m_flInaccuracyMove": 0.000000,`, `"m_flRecoilAngle": 0.000000,`, `"m_flRecoilAngleVariance": 0.000000,`, `"m_flRecoilMagnitude": 0.000000,`, `"m_flRecoilMagnitudeVariance": 0.000000,`, `"m_nTracerFrequency": 0,`, `"m_flInaccuracyJumpInitial": 0.000000,`, `"m_flInaccuracyJumpApex": 0.000000,`, `"m_flInaccuracyReload": 0.000000,`, `"m_flDeployDuration": 0.000000,`, `"m_flDisallowAttackAfterReloadStartDuration": 0.000000,`, `"m_nBurstShotCount": 2,`, `"m_bAllowBurstHolster": true,`, `"m_nRecoilSeed": 0,`, `"m_nSpreadSeed": 0,`, `"m_flAttackMovespeedFactor": 0.000000,`, `"m_flInaccuracyPitchShift": 0.000000,`, `"m_flInaccuracyAltSoundThreshold": 0.000000,`, `"m_szUseRadioSubtitle": "",`, `"m_bUnzoomsAfterShot": false,`, `"m_bHideViewModelWhenZoomed": false,`, `"m_nZoomLevels": 0,`, `"m_nZoomFOV1": 0,`, `"m_nZoomFOV2": 0,`, `"m_flZoomTime0": 0.000000,`, `"m_flZoomTime1": 0.000000,`, `"m_flZoomTime2": 0.000000,`, `"m_flIronSightPullUpSpeed": 8.000000,`, `"m_flIronSightPutDownSpeed": 4.000000,`, `"m_flIronSightFOV": 80.000000,`, `"m_flIronSightPivotForward": 10.000000,`, `"m_flIronSightLooseness": 0.500000,`, `"m_nDamage": 0,`, `"m_flHeadshotMultiplier": 0.000000,`, `"m_flArmorRatio": 0.000000,`, `"m_flPenetration": 0.000000,`, `"m_flRange": 0.000000,`, `"m_flRangeModifier": 0.000000,`, `"m_flFlinchVelocityModifierLarge": 0.000000,`, `"m_flFlinchVelocityModifierSmall": 0.000000,`, `"m_flRecoveryTimeCrouch": 0.000000,`, `"m_flRecoveryTimeStand": 0.000000,`, `"m_flRecoveryTimeCrouchFinal": 0.000000,`, `"m_flRecoveryTimeStandFinal": 0.000000,`, `"m_nRecoveryTransitionStartBullet": 0,`, `"m_nRecoveryTransitionEndBullet": 0,`, `"m_flThrowVelocity": 0.000000,`, `"m_vSmokeColor":`, `[`, `1.000000,`, `1.000000,`, `1.000000`, `],`, `"m_szAnimClass": ""`, `}`, `MPropertySuppressBaseClassField = "m_iSlot"`, `MPropertySuppressBaseClassField = "m_iPosition"`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CCSWeaponBaseVData",`, `"m_szWorldModel": "",`, `"m_szWorldModelAg2Override": "",`, `"m_sToolsOnlyOwnerModelName": "",`, `"m_bBuiltRightHanded": true,`, `"m_bAllowFlipping": true,`, `"m_sMuzzleAttachment": "muzzle",`, `"m_szMuzzleFlashParticle": "",`, `"m_szMuzzleFlashParticleConfig": "",`, `"m_szBarrelSmokeParticle": "",`, `"m_nMuzzleSmokeShotThreshold": 4,`, `"m_flMuzzleSmokeTimeout": 0.250000,`, `"m_flMuzzleSmokeDecrementRate": 1.000000,`, `"m_bGenerateMuzzleLight": true,`, `"m_bLinkedCooldowns": false,`, `"m_iFlags": "",`, `"m_iWeight": 0,`, `"m_bAutoSwitchTo": true,`, `"m_bAutoSwitchFrom": true,`, `"m_nPrimaryAmmoType": "",`, `"m_nSecondaryAmmoType": "",`, `"m_iMaxClip1": 0,`, `"m_iMaxClip2": 0,`, `"m_iDefaultClip1": -1,`, `"m_iDefaultClip2": -1,`, `"m_bReserveAmmoAsClips": false,`, `"m_bTreatAsSingleClip": false,`, `"m_bKeepLoadedAmmo": false,`, `"m_iRumbleEffect": "RUMBLE_INVALID",`, `"m_flDropSpeed": 300.000000,`, `"m_iSlot": 0,`, `"m_iPosition": 0,`, `"m_aShootSounds":`, `{`, `},`, `"m_WeaponType": "WEAPONTYPE_UNKNOWN",`, `"m_WeaponCategory": "WEAPONCATEGORY_OTHER",`, `"m_szAnimSkeleton": "",`, `"m_vecMuzzlePos0":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_vecMuzzlePos1":`, `[`, `0.000000,`, `0.000000,`, `0.000000`, `],`, `"m_szTracerParticle": "",`, `"m_GearSlot": "GEAR_SLOT_INVALID",`, `"m_GearSlotPosition": -1,`, `"m_DefaultLoadoutSlot": "LOADOUT_SLOT_INVALID",`, `"m_nPrice": 0,`, `"m_nKillAward": 0,`, `"m_nPrimaryReserveAmmoMax": 0,`, `"m_nSecondaryReserveAmmoMax": 0,`, `"m_bMeleeWeapon": false,`, `"m_bHasBurstMode": false,`, `"m_bIsRevolver": false,`, `"m_bCannotShootUnderwater": false,`, `"m_szName": "",`, `"m_eSilencerType": "WEAPONSILENCER_NONE",`, `"m_nCrosshairMinDistance": 0,`, `"m_nCrosshairDeltaDistance": 0,`, `"m_bIsFullAuto": false,`, `"m_nNumBullets": 0,`, `"m_bReloadsSingleShells": false,`, `"m_flCycleTime": 0.000000,`, `"m_flCycleTimeWhenInBurstMode": 0.000000,`, `"m_flTimeBetweenBurstShots": 0.000000,`, `"m_flMaxSpeed": 0.000000,`, `"m_flSpread": 0.000000,`, `"m_flInaccuracyCrouch": 0.000000,`, `"m_flInaccuracyStand": 0.000000,`, `"m_flInaccuracyJump": 0.000000,`, `"m_flInaccuracyLand": 0.000000,`, `"m_flInaccuracyLadder": 0.000000,`, `"m_flInaccuracyFire": 0.000000,`, `"m_flInaccuracyMove": 0.000000,`, `"m_flRecoilAngle": 0.000000,`, `"m_flRecoilAngleVariance": 0.000000,`, `"m_flRecoilMagnitude": 0.000000,`, `"m_flRecoilMagnitudeVariance": 0.000000,`, `"m_nTracerFrequency": 0,`, `"m_flInaccuracyJumpInitial": 0.000000,`, `"m_flInaccuracyJumpApex": 0.000000,`, `"m_flInaccuracyReload": 0.000000,`, `"m_flDeployDuration": 0.000000,`, `"m_flDisallowAttackAfterReloadStartDuration": 0.000000,`, `"m_nBurstShotCount": 2,`, `"m_bAllowBurstHolster": true,`, `"m_nRecoilSeed": 0,`, `"m_nSpreadSeed": 0,`, `"m_flAttackMovespeedFactor": 0.000000,`, `"m_flInaccuracyPitchShift": 0.000000,`, `"m_flInaccuracyAltSoundThreshold": 0.000000,`, `"m_szUseRadioSubtitle": "",`, `"m_bUnzoomsAfterShot": false,`, `"m_bHideViewModelWhenZoomed": false,`, `"m_nZoomLevels": 0,`, `"m_nZoomFOV1": 0,`, `"m_nZoomFOV2": 0,`, `"m_flZoomTime0": 0.000000,`, `"m_flZoomTime1": 0.000000,`, `"m_flZoomTime2": 0.000000,`, `"m_flIronSightPullUpSpeed": 8.000000,`, `"m_flIronSightPutDownSpeed": 4.000000,`, `"m_flIronSightFOV": 80.000000,`, `"m_flIronSightPivotForward": 10.000000,`, `"m_flIronSightLooseness": 0.500000,`, `"m_nDamage": 0,`, `"m_flHeadshotMultiplier": 0.000000,`, `"m_flArmorRatio": 0.000000,`, `"m_flPenetration": 0.000000,`, `"m_flRange": 0.000000,`, `"m_flRangeModifier": 0.000000,`, `"m_flFlinchVelocityModifierLarge": 0.000000,`, `"m_flFlinchVelocityModifierSmall": 0.000000,`, `"m_flRecoveryTimeCrouch": 0.000000,`, `"m_flRecoveryTimeStand": 0.000000,`, `"m_flRecoveryTimeCrouchFinal": 0.000000,`, `"m_flRecoveryTimeStandFinal": 0.000000,`, `"m_nRecoveryTransitionStartBullet": 0,`, `"m_nRecoveryTransitionEndBullet": 0,`, `"m_flThrowVelocity": 0.000000,`, `"m_vSmokeColor":`, `[`, `1.000000,`, `1.000000,`, `1.000000`, `],`, `"m_szAnimClass": ""`, `}`, `MPropertySuppressBaseClassField = "m_iSlot"`, `MPropertySuppressBaseClassField = "m_iPosition"`
 
 **Relationships:**
 
