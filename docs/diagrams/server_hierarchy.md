@@ -56,6 +56,7 @@ classDiagram
     CPlayerControllerComponent <|-- CCSPlayerController_InGameMoneyServices
     CPlayerControllerComponent <|-- CCSPlayerController_InventoryServices
     CPlayerPawnComponent <|-- CCSPlayer_ActionTrackingServices
+    CPlayerPawnComponent <|-- CCSPlayer_AimPunchServices
     CPlayerPawnComponent <|-- CCSPlayer_BulletServices
     CPlayerPawnComponent <|-- CCSPlayer_BuyServices
     CCSPlayerBase_CameraServices <|-- CCSPlayer_CameraServices
@@ -310,5 +311,4 @@ classDiagram
     C_BaseEntity <|-- C_PathParticleRope
     C_PathParticleRope <|-- C_PathParticleRopeAlias_path_particle_rope_clientside
     C_Breakable <|-- C_PhysBox
-    CBaseAnimGraph <|-- C_PhysMagnet
 ```

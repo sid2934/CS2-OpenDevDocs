@@ -7,7 +7,7 @@ nav_exclude: true
 
 # UML: server
 
-Class relationships (inheritance and composition) for the `server` module (showing 300 of 611 relationships).
+Class relationships (inheritance and composition) for the `server` module (showing 300 of 612 relationships).
 
 **Arrow legend:** `<|--` inheritance &nbsp; `*--` composition &nbsp; `-->` association/pointer
 
@@ -46,6 +46,7 @@ classDiagram
     CPlayerControllerComponent <|-- CCSPlayerController_InGameMoneyServices
     CPlayerControllerComponent <|-- CCSPlayerController_InventoryServices
     CPlayerPawnComponent <|-- CCSPlayer_ActionTrackingServices
+    CPlayerPawnComponent <|-- CCSPlayer_AimPunchServices
     CPlayerPawnComponent <|-- CCSPlayer_BulletServices
     CPlayerPawnComponent <|-- CCSPlayer_BuyServices
     CCSPlayerBase_CameraServices <|-- CCSPlayer_CameraServices
@@ -312,5 +313,4 @@ classDiagram
     CBaseCombatCharacter <|-- CHostageExpresserShim
     CMolotovGrenade <|-- CIncendiaryGrenade
     CBaseModelEntity <|-- CInferno
-    CPointEntity <|-- CInfoChoreoAnchor
 ```
