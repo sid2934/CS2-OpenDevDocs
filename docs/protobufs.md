@@ -15,7 +15,7 @@ Network message definitions and game event structures from CS2's Protobufs direc
 | [clientmessages.proto](proto/clientmessages.md) | 7 | 2 |
 | [connectionless_netmessages.proto](proto/connectionless_netmessages.md) | 3 | 0 |
 | [cs_gameevents.proto](proto/cs_gameevents.md) | 4 | 1 |
-| [cs_prediction_events.proto](proto/cs_prediction_events.md) | 2 | 1 |
+| [cs_prediction_events.proto](proto/cs_prediction_events.md) | 1 | 1 |
 | [cs_usercmd.proto](proto/cs_usercmd.md) | 4 | 0 |
 | [cstrike15_gcmessages.proto](proto/cstrike15_gcmessages.md) | 155 | 5 |
 | [cstrike15_usermessages.proto](proto/cstrike15_usermessages.md) | 74 | 2 |

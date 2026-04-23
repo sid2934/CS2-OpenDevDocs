@@ -21,14 +21,9 @@ direction LR
     +float friendly_fire_damage_reduction_ratio
   }
 
-  class CCSPredictionEvent_AddAimPunch {
-    +CMsgQAngle punch_angle
-  }
-
   class ECSPredictionEvents{
     <<enumeration>>
     CSPE_DamageTag
-    CSPE_AddAimPunch
   }
 
 ```
@@ -40,7 +35,6 @@ direction LR
 | Name | Value |
 |------|-------|
 | `CSPE_DamageTag` | 1 |
-| `CSPE_AddAimPunch` | 3 |
 
 ## Messages
 
@@ -51,9 +45,3 @@ direction LR
 | `flinch_mod_small` | 1 | float | optional |  |
 | `flinch_mod_large` | 2 | float | optional |  |
 | `friendly_fire_damage_reduction_ratio` | 3 | float | optional |  |
-
-### `CCSPredictionEvent_AddAimPunch`
-
-| Field | Ordinal | Type | Label | Description |
-|-------|---------|------|-------|-------------|
-| `punch_angle` | 1 | CMsgQAngle | optional |  |
