@@ -11,11 +11,9 @@ nav_exclude: true
 
 | Name | Kind | Bases | Fields |
 |------|------|-------|--------|
-| [AssetEditInfoFilterFunc_t](#asseteditinfofilterfunc_t) | enum |  | 23 |
 | [AssetEngineCommand_t](#assetenginecommand_t) | class |  | 0 |
 | [AssetWarningFixType_t](#assetwarningfixtype_t) | enum |  | 3 |
 | [AutoTagVDataCondition_t](#autotagvdatacondition_t) | class |  | 0 |
-| [CAssetInfoFilterParams](#cassetinfofilterparams) | class |  | 0 |
 | [CAssetTagInfo](#cassettaginfo) | class |  | 0 |
 | [CAssetTypeConfig](#cassettypeconfig) | class |  | 0 |
 | [CAssetWarning](#cassetwarning) | class |  | 0 |
@@ -34,41 +32,10 @@ nav_exclude: true
 | [CSubassetTypeInfo](#csubassettypeinfo) | class |  | 0 |
 | [CToolsConfig](#ctoolsconfig) | class |  | 0 |
 | [CVMMDAssetTypeInfo](#cvmmdassettypeinfo) | class | CSimpleAssetTypeInfo | 0 |
-| [InfoDataFilter_t](#infodatafilter_t) | class |  | 0 |
 | [ResourceBlockTypeInfo_t](#resourceblocktypeinfo_t) | class |  | 0 |
 | [ResourceDataEncodingType_t](#resourcedataencodingtype_t) | enum |  | 15 |
 
 ---
-
-### AssetEditInfoFilterFunc_t
-
-**Values:**
-
-| Name | Value |
-|------|-------|
-| `ASSET_FILTER_EQUAL` | 0 |
-| `ASSET_FILTER_NOT_EQUAL` | 1 |
-| `ASSET_FILTER_EQUAL_OR_MISSING` | 2 |
-| `ASSET_FILTER_NOT_EQUAL_OR_MISSING` | 3 |
-| `ASSET_FILTER_LESS` | 4 |
-| `ASSET_FILTER_LESS_EQUAL` | 5 |
-| `ASSET_FILTER_GREATER` | 6 |
-| `ASSET_FILTER_GREATER_EQUAL` | 7 |
-| `ASSET_FILTER_CONTAINS` | 8 |
-| `ASSET_FILTER_DOES_NOT_CONTAIN` | 9 |
-| `ASSET_FILTER_DEPREF_ASSET` | 10 |
-| `ASSET_FILTER_DEPREF_BY_ASSET` | 11 |
-| `ASSET_FILTER_PARENTS_ASSET` | 12 |
-| `ASSET_FILTER_PARENTED_BY_ASSET` | 13 |
-| `ASSET_FILTER_REF_SUBASSET` | 14 |
-| `ASSET_FILTER_DEF_SUBASSET` | 15 |
-| `ASSET_FILTER_EXACT_DEPREF_ASSET` | 16 |
-| `ASSET_FILTER_EXACT_DEPREF_BY_ASSET` | 17 |
-| `ASSET_FILTER_EXACT_PARENTS_ASSET` | 18 |
-| `ASSET_FILTER_EXACT_PARENTED_BY_ASSET` | 19 |
-| `ASSET_FILTER_EXACT_REF_SUBASSET` | 20 |
-| `ASSET_FILTER_EXACT_DEF_SUBASSET` | 21 |
-| `ASSET_FILTER_FUNC_COUNT` | 22 |
 
 ### AssetEngineCommand_t
 
@@ -87,10 +54,6 @@ nav_exclude: true
 ### AutoTagVDataCondition_t
 
 **Metadata:** `MGetKV3ClassDefaults = {`, `"m_SourceFile": "",`, `"m_AssetKey": "",`, `"m_AlternateAssetKey": "",`, `"m_Expression": ""`, `}`
-
-### CAssetInfoFilterParams
-
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_Filters":`, `[`, `]`, `}`
 
 ### CAssetTagInfo
 
@@ -126,7 +89,7 @@ classDiagram
 
 **Inherits from:** [CSimpleAssetTypeInfo](toolutils2.md#csimpleassettypeinfo)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CBitmapAssetTypeInfo",`, `"m_FriendlyName": "",`, `"m_Ext": "",`, `"m_IconLg": "game:tools/images/assettypes/generic_lg.png",`, `"m_IconSm": "game:tools/images/assettypes/generic_sm.png",`, `"m_SuppressSubstrings":`, `[`, `],`, `"m_AdditionalExtensions":`, `[`, `],`, `"m_EngineCommands":`, `[`, `],`, `"m_LimitToMods":`, `[`, `],`, `"m_ExcludeFromMods":`, `[`, `],`, `"m_HideForRetailMods":`, `[`, `],`, `"m_PreviewThumbnailOverlayIcon": "",`, `"m_bHideTypeByDefault": false,`, `"m_bCannotBeShown": false,`, `"m_bIsNontrivialChildAssetType": false,`, `"m_bSuppressFullFingerprintCalculation": false,`, `"m_bIgnoreCompiledState": false,`, `"m_bContentFileIsText": false,`, `"m_bPrefersLivePreview": false,`, `"m_bPresentInGameTree": false,`, `"m_bShouldCompileErrorFallbackToDisk": false,`, `"m_bUnrecognizedReferencesAreErrors": false,`, `"m_nAssetTypeVersion": 0,`, `"m_Test_InjectSearchable": ""`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CBitmapAssetTypeInfo",`, `"m_FriendlyName": "",`, `"m_Ext": "",`, `"m_IconLg": "game:tools/images/assettypes/generic_lg.png",`, `"m_IconSm": "game:tools/images/assettypes/generic_sm.png",`, `"m_SuppressSubstrings":`, `[`, `],`, `"m_AdditionalExtensions":`, `[`, `],`, `"m_EngineCommands":`, `[`, `],`, `"m_LimitToMods":`, `[`, `],`, `"m_ExcludeFromMods":`, `[`, `],`, `"m_HideForRetailMods":`, `[`, `],`, `"m_PreviewThumbnailOverlayIcon": "",`, `"m_bErrorOnUnrecognizedOutboundRefs": false,`, `"m_UnrecognizedOutboundRefsErrorTypeExceptions":`, `[`, `],`, `"m_bHideTypeByDefault": false,`, `"m_bCannotBeShown": false,`, `"m_bIsNontrivialChildAssetType": false,`, `"m_bSuppressFullFingerprintCalculation": false,`, `"m_bIgnoreCompiledState": false,`, `"m_bContentFileIsText": false,`, `"m_bPrefersLivePreview": false,`, `"m_bPresentInGameTree": false,`, `"m_bShouldCompileErrorFallbackToDisk": false,`, `"m_nAssetTypeVersion": 0,`, `"m_Test_InjectSearchable": ""`, `}`
 
 **Relationships:**
 
@@ -177,7 +140,7 @@ classDiagram
 
 **Inherits from:** [CResourceAssetTypeInfo](toolutils2.md#cresourceassettypeinfo)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CMapAssetTypeInfo",`, `"m_FriendlyName": "",`, `"m_Ext": "",`, `"m_IconLg": "game:tools/images/assettypes/generic_lg.png",`, `"m_IconSm": "game:tools/images/assettypes/generic_sm.png",`, `"m_SuppressSubstrings":`, `[`, `],`, `"m_AdditionalExtensions":`, `[`, `],`, `"m_EngineCommands":`, `[`, `],`, `"m_LimitToMods":`, `[`, `],`, `"m_ExcludeFromMods":`, `[`, `],`, `"m_HideForRetailMods":`, `[`, `],`, `"m_PreviewThumbnailOverlayIcon": "",`, `"m_bHideTypeByDefault": false,`, `"m_bCannotBeShown": false,`, `"m_bIsNontrivialChildAssetType": false,`, `"m_bSuppressFullFingerprintCalculation": false,`, `"m_bIgnoreCompiledState": false,`, `"m_bContentFileIsText": false,`, `"m_bPrefersLivePreview": false,`, `"m_bPresentInGameTree": false,`, `"m_bShouldCompileErrorFallbackToDisk": false,`, `"m_bUnrecognizedReferencesAreErrors": false,`, `"m_nAssetTypeVersion": 0,`, `"m_Test_InjectSearchable": "",`, `"m_CompilerIdentifier": "",`, `"m_CompileDependsOnResourceTypes":`, `[`, `],`, `"m_Blocks":`, `[`, `],`, `"m_RequiredSpecialDependency": "",`, `"m_bPreventDirectCompile": false,`, `"m_bCannotBeAMultiParentChildCompile": false,`, `"m_bPrefersIconForThumbnail": false,`, `"m_bAllowedToCompileInTestMode": false`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CMapAssetTypeInfo",`, `"m_FriendlyName": "",`, `"m_Ext": "",`, `"m_IconLg": "game:tools/images/assettypes/generic_lg.png",`, `"m_IconSm": "game:tools/images/assettypes/generic_sm.png",`, `"m_SuppressSubstrings":`, `[`, `],`, `"m_AdditionalExtensions":`, `[`, `],`, `"m_EngineCommands":`, `[`, `],`, `"m_LimitToMods":`, `[`, `],`, `"m_ExcludeFromMods":`, `[`, `],`, `"m_HideForRetailMods":`, `[`, `],`, `"m_PreviewThumbnailOverlayIcon": "",`, `"m_bErrorOnUnrecognizedOutboundRefs": false,`, `"m_UnrecognizedOutboundRefsErrorTypeExceptions":`, `[`, `],`, `"m_bHideTypeByDefault": false,`, `"m_bCannotBeShown": false,`, `"m_bIsNontrivialChildAssetType": false,`, `"m_bSuppressFullFingerprintCalculation": false,`, `"m_bIgnoreCompiledState": false,`, `"m_bContentFileIsText": false,`, `"m_bPrefersLivePreview": false,`, `"m_bPresentInGameTree": false,`, `"m_bShouldCompileErrorFallbackToDisk": false,`, `"m_nAssetTypeVersion": 0,`, `"m_Test_InjectSearchable": "",`, `"m_CompilerIdentifier": "",`, `"m_CompileDependsOnResourceTypes":`, `[`, `],`, `"m_Blocks":`, `[`, `],`, `"m_RequiredSpecialDependency": "",`, `"m_bPreventDirectCompile": false,`, `"m_bCannotBeAMultiParentChildCompile": false,`, `"m_bPrefersIconForThumbnail": false,`, `"m_bAllowedToCompileInTestMode": false`, `}`
 
 **Relationships:**
 
@@ -197,7 +160,7 @@ classDiagram
 
 **Derived by:** [CMapAssetTypeInfo](toolutils2.md#cmapassettypeinfo)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CResourceAssetTypeInfo",`, `"m_FriendlyName": "",`, `"m_Ext": "",`, `"m_IconLg": "game:tools/images/assettypes/generic_lg.png",`, `"m_IconSm": "game:tools/images/assettypes/generic_sm.png",`, `"m_SuppressSubstrings":`, `[`, `],`, `"m_AdditionalExtensions":`, `[`, `],`, `"m_EngineCommands":`, `[`, `],`, `"m_LimitToMods":`, `[`, `],`, `"m_ExcludeFromMods":`, `[`, `],`, `"m_HideForRetailMods":`, `[`, `],`, `"m_PreviewThumbnailOverlayIcon": "",`, `"m_bHideTypeByDefault": false,`, `"m_bCannotBeShown": false,`, `"m_bIsNontrivialChildAssetType": false,`, `"m_bSuppressFullFingerprintCalculation": false,`, `"m_bIgnoreCompiledState": false,`, `"m_bContentFileIsText": false,`, `"m_bPrefersLivePreview": false,`, `"m_bPresentInGameTree": false,`, `"m_bShouldCompileErrorFallbackToDisk": false,`, `"m_bUnrecognizedReferencesAreErrors": false,`, `"m_nAssetTypeVersion": 0,`, `"m_Test_InjectSearchable": "",`, `"m_CompilerIdentifier": "",`, `"m_CompileDependsOnResourceTypes":`, `[`, `],`, `"m_Blocks":`, `[`, `],`, `"m_RequiredSpecialDependency": "",`, `"m_bPreventDirectCompile": false,`, `"m_bCannotBeAMultiParentChildCompile": false,`, `"m_bPrefersIconForThumbnail": false,`, `"m_bAllowedToCompileInTestMode": false`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CResourceAssetTypeInfo",`, `"m_FriendlyName": "",`, `"m_Ext": "",`, `"m_IconLg": "game:tools/images/assettypes/generic_lg.png",`, `"m_IconSm": "game:tools/images/assettypes/generic_sm.png",`, `"m_SuppressSubstrings":`, `[`, `],`, `"m_AdditionalExtensions":`, `[`, `],`, `"m_EngineCommands":`, `[`, `],`, `"m_LimitToMods":`, `[`, `],`, `"m_ExcludeFromMods":`, `[`, `],`, `"m_HideForRetailMods":`, `[`, `],`, `"m_PreviewThumbnailOverlayIcon": "",`, `"m_bErrorOnUnrecognizedOutboundRefs": false,`, `"m_UnrecognizedOutboundRefsErrorTypeExceptions":`, `[`, `],`, `"m_bHideTypeByDefault": false,`, `"m_bCannotBeShown": false,`, `"m_bIsNontrivialChildAssetType": false,`, `"m_bSuppressFullFingerprintCalculation": false,`, `"m_bIgnoreCompiledState": false,`, `"m_bContentFileIsText": false,`, `"m_bPrefersLivePreview": false,`, `"m_bPresentInGameTree": false,`, `"m_bShouldCompileErrorFallbackToDisk": false,`, `"m_nAssetTypeVersion": 0,`, `"m_Test_InjectSearchable": "",`, `"m_CompilerIdentifier": "",`, `"m_CompileDependsOnResourceTypes":`, `[`, `],`, `"m_Blocks":`, `[`, `],`, `"m_RequiredSpecialDependency": "",`, `"m_bPreventDirectCompile": false,`, `"m_bCannotBeAMultiParentChildCompile": false,`, `"m_bPrefersIconForThumbnail": false,`, `"m_bAllowedToCompileInTestMode": false`, `}`
 
 **Relationships:**
 
@@ -211,7 +174,7 @@ classDiagram
 
 **Derived by:** [CBitmapAssetTypeInfo](toolutils2.md#cbitmapassettypeinfo), [CResourceAssetTypeInfo](toolutils2.md#cresourceassettypeinfo), [CVMMDAssetTypeInfo](toolutils2.md#cvmmdassettypeinfo)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CSimpleAssetTypeInfo",`, `"m_FriendlyName": "",`, `"m_Ext": "",`, `"m_IconLg": "game:tools/images/assettypes/generic_lg.png",`, `"m_IconSm": "game:tools/images/assettypes/generic_sm.png",`, `"m_SuppressSubstrings":`, `[`, `],`, `"m_AdditionalExtensions":`, `[`, `],`, `"m_EngineCommands":`, `[`, `],`, `"m_LimitToMods":`, `[`, `],`, `"m_ExcludeFromMods":`, `[`, `],`, `"m_HideForRetailMods":`, `[`, `],`, `"m_PreviewThumbnailOverlayIcon": "",`, `"m_bHideTypeByDefault": false,`, `"m_bCannotBeShown": false,`, `"m_bIsNontrivialChildAssetType": false,`, `"m_bSuppressFullFingerprintCalculation": false,`, `"m_bIgnoreCompiledState": false,`, `"m_bContentFileIsText": false,`, `"m_bPrefersLivePreview": false,`, `"m_bPresentInGameTree": false,`, `"m_bShouldCompileErrorFallbackToDisk": false,`, `"m_bUnrecognizedReferencesAreErrors": false,`, `"m_nAssetTypeVersion": 0,`, `"m_Test_InjectSearchable": ""`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CSimpleAssetTypeInfo",`, `"m_FriendlyName": "",`, `"m_Ext": "",`, `"m_IconLg": "game:tools/images/assettypes/generic_lg.png",`, `"m_IconSm": "game:tools/images/assettypes/generic_sm.png",`, `"m_SuppressSubstrings":`, `[`, `],`, `"m_AdditionalExtensions":`, `[`, `],`, `"m_EngineCommands":`, `[`, `],`, `"m_LimitToMods":`, `[`, `],`, `"m_ExcludeFromMods":`, `[`, `],`, `"m_HideForRetailMods":`, `[`, `],`, `"m_PreviewThumbnailOverlayIcon": "",`, `"m_bErrorOnUnrecognizedOutboundRefs": false,`, `"m_UnrecognizedOutboundRefsErrorTypeExceptions":`, `[`, `],`, `"m_bHideTypeByDefault": false,`, `"m_bCannotBeShown": false,`, `"m_bIsNontrivialChildAssetType": false,`, `"m_bSuppressFullFingerprintCalculation": false,`, `"m_bIgnoreCompiledState": false,`, `"m_bContentFileIsText": false,`, `"m_bPrefersLivePreview": false,`, `"m_bPresentInGameTree": false,`, `"m_bShouldCompileErrorFallbackToDisk": false,`, `"m_nAssetTypeVersion": 0,`, `"m_Test_InjectSearchable": ""`, `}`
 
 **Relationships:**
 
@@ -234,7 +197,7 @@ classDiagram
 
 **Inherits from:** [CSimpleAssetTypeInfo](toolutils2.md#csimpleassettypeinfo)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CVMMDAssetTypeInfo",`, `"m_FriendlyName": "",`, `"m_Ext": "",`, `"m_IconLg": "game:tools/images/assettypes/generic_lg.png",`, `"m_IconSm": "game:tools/images/assettypes/generic_sm.png",`, `"m_SuppressSubstrings":`, `[`, `],`, `"m_AdditionalExtensions":`, `[`, `],`, `"m_EngineCommands":`, `[`, `],`, `"m_LimitToMods":`, `[`, `],`, `"m_ExcludeFromMods":`, `[`, `],`, `"m_HideForRetailMods":`, `[`, `],`, `"m_PreviewThumbnailOverlayIcon": "",`, `"m_bHideTypeByDefault": false,`, `"m_bCannotBeShown": false,`, `"m_bIsNontrivialChildAssetType": false,`, `"m_bSuppressFullFingerprintCalculation": false,`, `"m_bIgnoreCompiledState": false,`, `"m_bContentFileIsText": false,`, `"m_bPrefersLivePreview": false,`, `"m_bPresentInGameTree": false,`, `"m_bShouldCompileErrorFallbackToDisk": false,`, `"m_bUnrecognizedReferencesAreErrors": false,`, `"m_nAssetTypeVersion": 0,`, `"m_Test_InjectSearchable": ""`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CVMMDAssetTypeInfo",`, `"m_FriendlyName": "",`, `"m_Ext": "",`, `"m_IconLg": "game:tools/images/assettypes/generic_lg.png",`, `"m_IconSm": "game:tools/images/assettypes/generic_sm.png",`, `"m_SuppressSubstrings":`, `[`, `],`, `"m_AdditionalExtensions":`, `[`, `],`, `"m_EngineCommands":`, `[`, `],`, `"m_LimitToMods":`, `[`, `],`, `"m_ExcludeFromMods":`, `[`, `],`, `"m_HideForRetailMods":`, `[`, `],`, `"m_PreviewThumbnailOverlayIcon": "",`, `"m_bErrorOnUnrecognizedOutboundRefs": false,`, `"m_UnrecognizedOutboundRefsErrorTypeExceptions":`, `[`, `],`, `"m_bHideTypeByDefault": false,`, `"m_bCannotBeShown": false,`, `"m_bIsNontrivialChildAssetType": false,`, `"m_bSuppressFullFingerprintCalculation": false,`, `"m_bIgnoreCompiledState": false,`, `"m_bContentFileIsText": false,`, `"m_bPrefersLivePreview": false,`, `"m_bPresentInGameTree": false,`, `"m_bShouldCompileErrorFallbackToDisk": false,`, `"m_nAssetTypeVersion": 0,`, `"m_Test_InjectSearchable": ""`, `}`
 
 **Relationships:**
 
@@ -242,10 +205,6 @@ classDiagram
 classDiagram
     CSimpleAssetTypeInfo <|-- CVMMDAssetTypeInfo
 ```
-
-### InfoDataFilter_t
-
-**Metadata:** `MGetKV3ClassDefaults = {`, `"m_Name": "",`, `"m_FilterFunc": "ASSET_FILTER_EQUAL",`, `"m_Value": ""`, `}`
 
 ### ResourceBlockTypeInfo_t
 

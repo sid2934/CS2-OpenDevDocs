@@ -386,7 +386,7 @@ nav_exclude: true
 | [CLogicRelayAPI](#clogicrelayapi) | class |  | 0 |
 | [CLogicScript](#clogicscript) | class | CPointEntity | 0 |
 | [CLogicalEntity](#clogicalentity) | class | CServerOnlyEntity | 0 |
-| [CMapInfo](#cmapinfo) | class | CPointEntity | 14 |
+| [CMapInfo](#cmapinfo) | class | CPointEntity | 15 |
 | [CMapSharedEnvironment](#cmapsharedenvironment) | class | CLogicalEntity | 1 |
 | [CMapVetoPickController](#cmapvetopickcontroller) | class | CBaseEntity | 24 |
 | [CMarkupVolume](#cmarkupvolume) | class | CBaseModelEntity | 1 |
@@ -3034,7 +3034,7 @@ classDiagram
 
 **Inherits from:** [CCS2WeaponGraphController](server.md#ccs2weapongraphcontroller)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CCS2PawnGraphController",`, `"m_hExternalGraph": 4294967295,`, `"m_action": null,`, `"m_bActionReset": null,`, `"m_flWeaponActionSpeedScale": null,`, `"m_weaponCategory": null,`, `"m_weaponType": null,`, `"m_weaponExtraInfo": null,`, `"m_flWeaponAmmo": null,`, `"m_flWeaponAmmoMax": null,`, `"m_flWeaponAmmoReserve": null,`, `"m_bWeaponIsSilenced": null,`, `"m_flWeaponIronsightAmount": null,`, `"m_bIsUsingLegacyModel": null,`, `"m_idleVariation": null,`, `"m_deployVariation": null,`, `"m_attackType": null,`, `"m_attackThrowStrength": null,`, `"m_flAttackVariation": null,`, `"m_inspectVariation": null,`, `"m_inspectExtraInfo": null,`, `"m_reloadStage": null,`, `"m_bIsDefusing": null,`, `"m_moveType": null,`, `"m_moveDirectionID": null,`, `"m_flMoveSpeedX": null,`, `"m_flMoveSpeedY": null,`, `"m_flMoveSpeedHorizontal": null,`, `"m_flPreviousMoveSpeedHorizontal": null,`, `"m_flCrouchAmount": null,`, `"m_bIsWalking": null,`, `"m_bIsStutterStep": null,`, `"m_flWeaponDropAmount": null,`, `"m_groundAction": null,`, `"m_groundActionDirectionID": null,`, `"m_flGroundTurnAngleOrVelocity": null,`, `"m_flLadderCycle": null,`, `"m_flLadderYaw": null,`, `"m_flLadderYawBackwards": null,`, `"m_airAction": null,`, `"m_flAirHeightAboveGround": null,`, `"m_leftFootTarget": null,`, `"m_rightFootTarget": null,`, `"m_flFlashedAmount": null,`, `"m_flAimPitchAngle": null,`, `"m_flAimYawAngle": null,`, `"m_flinchHead": null,`, `"m_flinchHeadRestart": null,`, `"m_flinchBody": null,`, `"m_flinchBodyRestart": null,`, `"m_flinchIsOnFire": null`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CCS2PawnGraphController",`, `"m_hExternalGraph": 4294967295,`, `"m_action": null,`, `"m_bActionReset": null,`, `"m_flWeaponActionSpeedScale": null,`, `"m_weaponCategory": null,`, `"m_weaponType": null,`, `"m_weaponExtraInfo": null,`, `"m_flWeaponAmmo": null,`, `"m_flWeaponAmmoMax": null,`, `"m_flWeaponAmmoReserve": null,`, `"m_bWeaponIsSilenced": null,`, `"m_flWeaponIronsightAmount": null,`, `"m_bIsUsingLegacyModel": null,`, `"m_idleVariation": null,`, `"m_deployVariation": null,`, `"m_attackType": null,`, `"m_attackThrowStrength": null,`, `"m_flAttackVariation": null,`, `"m_inspectVariation": null,`, `"m_inspectExtraInfo": null,`, `"m_reloadStage": null,`, `"m_bIsDefusing": null,`, `"m_moveType": null,`, `"m_moveDirectionID": null,`, `"m_flMoveSpeedX": null,`, `"m_flMoveSpeedY": null,`, `"m_flMoveSpeedHorizontal": null,`, `"m_flPreviousMoveSpeedHorizontal": null,`, `"m_flCrouchAmount": null,`, `"m_bIsWalking": null,`, `"m_flWeaponDropAmount": null,`, `"m_groundAction": null,`, `"m_groundActionDirectionID": null,`, `"m_flGroundTurnAngleOrVelocity": null,`, `"m_flLadderCycle": null,`, `"m_flLadderYaw": null,`, `"m_flLadderYawBackwards": null,`, `"m_airAction": null,`, `"m_flAirHeightAboveGround": null,`, `"m_leftFootTarget": null,`, `"m_rightFootTarget": null,`, `"m_flFlashedAmount": null,`, `"m_flAimPitchAngle": null,`, `"m_flAimYawAngle": null,`, `"m_flinchHead": null,`, `"m_flinchHeadRestart": null,`, `"m_flinchBody": null,`, `"m_flinchBodyRestart": null,`, `"m_flinchIsOnFire": null`, `}`
 
 **Relationships:**
 
@@ -10792,6 +10792,7 @@ classDiagram
 | `m_iHostageCount` | int32 |  |
 | `m_bFadePlayerVisibilityFarZ` | bool |  |
 | `m_bRainTraceToSkyEnabled` | bool |  |
+| `m_bGPUCullSkybox` | bool |  |
 | `m_flEnvRainStrength` | float32 |  |
 | `m_flEnvPuddleRippleStrength` | float32 |  |
 | `m_flEnvPuddleRippleDirection` | float32 |  |

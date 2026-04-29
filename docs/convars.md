@@ -2226,7 +2226,7 @@ All console variables extracted from CS2.
 | `player0_using_joystick` | `false` | `archive` | <no description> |
 | `player_botdifflast_s` | `"2"` | `clientdll` `archive` `release` | <no description> |
 | `player_competitive_maplist_2v2_10_0_630B8B7C` | `"mg_de_inferno,mg_de_nuke,mg_de_vertigo,mg_de_poseidon,mg_de_sanctum,mg_de_overpass"` | `clientdll` `archive` | <no description> |
-| `player_competitive_maplist_8_10_0_C512DEBE` | `"mg_de_warden,mg_de_dust2,mg_de_train,mg_de_ancient,mg_de_inferno,mg_de_nuke,mg_de_vertigo,mg_de_mirage,mg_cs_office,mg_cs_italy,mg_cs_alpine,mg_de_stronghold,mg_de_anubis,mg_lobby_mapveto,mg_de_overpass"` | `clientdll` `archive` | <no description> |
+| `player_competitive_maplist_8_10_0_556B3D03` | `"mg_de_warden,mg_de_dust2,mg_de_train,mg_de_ancient,mg_de_inferno,mg_de_nuke,mg_de_vertigo,mg_de_mirage,mg_cs_office,mg_cs_italy,mg_cs_alpine,mg_de_cache,mg_de_stronghold,mg_de_anubis,mg_lobby_mapveto,mg_de_overpass"` | `clientdll` `archive` | <no description> |
 | `player_debug_off_nav` | `false` | `gamedll` `cheat` | <no description> |
 | `player_debug_print_damage` | `false` | `gamedll` `cheat` | When true, print amount and type of all damage received by player to console. |
 | `player_nevershow_communityservermessage` | `"0"` | `clientdll` `archive` `per_user` | <no description> |
@@ -2807,7 +2807,6 @@ All console variables extracted from CS2.
 | `sc_instanced_mesh_gpu_vis_culling` | `true` | `developmentonly` `defensive` | Toggles GPU vis of instanced meshes |
 | `sc_instanced_mesh_lod_bias` | `1.25` | `developmentonly` `defensive` | Bias for LOD selection of instanced meshes |
 | `sc_instanced_mesh_lod_bias_shadow` | `1.75` | `developmentonly` `defensive` | Bias for LOD selection of instanced meshes in shadowmaps |
-| `sc_instanced_mesh_mesh_shader` | `true` | `developmentonly` `defensive` | Toggles mesh shader rendering for instanced meshes |
 | `sc_instanced_mesh_motion_vectors` | `true` | `developmentonly` `defensive` | Toggles motion vector support for instanced meshes |
 | `sc_instanced_mesh_opaque_fade` | `true` | `developmentonly` `defensive` | Toggles fade support for instanced meshes |
 | `sc_instanced_mesh_size_cull_bias` | `1.5` | `developmentonly` `defensive` | Bias for size culling of instanced meshes |
@@ -3228,6 +3227,7 @@ All console variables extracted from CS2.
 | `sv_cq_trim_bloat_space` | `0` | `gamedll` `release` | When trimming a bloated CQ, try to leave room for N more commands to be added.  0 will trim only what is needed to remove the immediate bloat, a very large value will reset the whole queue. |
 | `sv_cq_trim_catchup_remainder` | `1` | `gamedll` `release` | When trimming an overful CQ due to app 'catchup' request, leave at least N more commands than the minimum |
 | `sv_cs_player_speed_has_hostage` | `200` | `gamedll` `clientdll` `replicated` `release` | <no description> |
+| `sv_csgo_gpu_culling_skybox` | `false` | `gamedll` `clientdll` `replicated` `release` | <no description> |
 | `sv_csgo_shoot_assert_lagcompensation_error` | `false` | `developmentonly` `gamedll` `clientdll` `replicated` | <no description> |
 | `sv_csgo_shoot_force_full_interp` | `false` | `developmentonly` `gamedll` `clientdll` `replicated` | <no description> |
 | `sv_csgo_shoot_force_use_target_time` | `false` | `developmentonly` `gamedll` `clientdll` `replicated` | <no description> |
@@ -3712,11 +3712,11 @@ All console variables extracted from CS2.
 | `ui_deepstats_radio_heat_team` | `"0"` | `clientdll` `archive` `release` | <no description> |
 | `ui_deepstats_toplevel_mode` | `"0"` | `clientdll` `archive` `release` | <no description> |
 | `ui_hud_dist` | `24` | `developmentonly` `clientdll` `replicated` `defensive` | distance from the player to the hud |
-| `ui_inspect_bkgnd_map_539CD0B9` | `"warehouse"` | `clientdll` `archive` `release` | Inspect background map |
+| `ui_inspect_bkgnd_map_C2AEBB5E` | `"warehouse"` | `clientdll` `archive` `release` | Inspect background map |
 | `ui_inventorysettings_recently_acknowledged` | `""` | `clientdll` `archive` `release` | <no description> |
 | `ui_leaderboards_top_public_appid` | `730` | `clientdll` `hidden` `release` | <no description> |
 | `ui_lobby_draft_enabled` | `false` | `clientdll` `release` | <no description> |
-| `ui_mainmenu_bkgnd_movie_539CD0B9` | `"de_ancient"` | `clientdll` `archive` `release` | Main menu background movie |
+| `ui_mainmenu_bkgnd_movie_C2AEBB5E` | `"de_cache"` | `clientdll` `archive` `release` | Main menu background movie |
 | `ui_nearbylobbies_filter3` | `"competitive"` | `clientdll` `archive` `release` | <no description> |
 | `ui_news_last_read_link` | `""` | `clientdll` `archive` `release` | <no description> |
 | `ui_news_last_read_link2` | `""` | `clientdll` `archive` `release` | <no description> |
