@@ -55,6 +55,6 @@ All entities and types extracted from CS2's schema dump, organised by module.
 | [texturelib](schemas/texturelib.md) | 10 | — |
 | [tier2](schemas/tier2.md) | 2 | — |
 | [toolscene](schemas/toolscene.md) | 12 | [📊 Diagram](diagrams/toolscene.md) |
-| [toolutils2](schemas/toolutils2.md) | 26 | [📊 Diagram](diagrams/toolutils2.md) |
+| [toolutils2](schemas/toolutils2.md) | 23 | [📊 Diagram](diagrams/toolutils2.md) |
 | [vphysics2](schemas/vphysics2.md) | 8 | [📊 Diagram](diagrams/vphysics2.md) |
 | [worldrenderer](schemas/worldrenderer.md) | 31 | [📊 Diagram](diagrams/worldrenderer.md) |

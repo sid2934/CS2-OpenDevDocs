@@ -80,7 +80,7 @@ nav_exclude: true
 | [CCSObserver_MovementServices](#ccsobserver_movementservices) | class | CPlayer_MovementServices | 0 |
 | [CCSObserver_ObserverServices](#ccsobserver_observerservices) | class | CPlayer_ObserverServices | 1 |
 | [CCSObserver_UseServices](#ccsobserver_useservices) | class | CPlayer_UseServices | 0 |
-| [CCSPlayerAnimationState](#ccsplayeranimationstate) | class |  | 18 |
+| [CCSPlayerAnimationState](#ccsplayeranimationstate) | class |  | 16 |
 | [CCSPlayerAnimationState](#ccsplayeranimationstate) | enum |  | 4 |
 | [CCSPlayerAnimationState](#ccsplayeranimationstate) | enum |  | 9 |
 | [CCSPlayerAnimationState](#ccsplayeranimationstate) | enum |  | 7 |
@@ -181,7 +181,7 @@ nav_exclude: true
 | [CLogicRelay](#clogicrelay) | class | CLogicalEntity | 7 |
 | [CLogicRelayAPI](#clogicrelayapi) | class |  | 0 |
 | [CLogicalEntity](#clogicalentity) | class | C_BaseEntity | 0 |
-| [CMapInfo](#cmapinfo) | class | C_PointEntity | 14 |
+| [CMapInfo](#cmapinfo) | class | C_PointEntity | 15 |
 | [CModelState](#cmodelstate) | class |  | 14 |
 | [CNetworkOriginCellCoordQuantizedVector](#cnetworkorigincellcoordquantizedvector) | class |  | 7 |
 | [CNetworkOriginQuantizedVector](#cnetworkoriginquantizedvector) | class |  | 3 |
@@ -1672,7 +1672,7 @@ classDiagram
 
 **Inherits from:** [CCS2WeaponGraphController](client.md#ccs2weapongraphcontroller)
 
-**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CCS2PawnGraphController",`, `"m_hExternalGraph": 4294967295,`, `"m_action": null,`, `"m_bActionReset": null,`, `"m_flWeaponActionSpeedScale": null,`, `"m_weaponCategory": null,`, `"m_weaponType": null,`, `"m_weaponExtraInfo": null,`, `"m_flWeaponAmmo": null,`, `"m_flWeaponAmmoMax": null,`, `"m_flWeaponAmmoReserve": null,`, `"m_bWeaponIsSilenced": null,`, `"m_flWeaponIronsightAmount": null,`, `"m_bIsUsingLegacyModel": null,`, `"m_idleVariation": null,`, `"m_deployVariation": null,`, `"m_attackType": null,`, `"m_attackThrowStrength": null,`, `"m_flAttackVariation": null,`, `"m_inspectVariation": null,`, `"m_inspectExtraInfo": null,`, `"m_reloadStage": null,`, `"m_bIsDefusing": null,`, `"m_moveType": null,`, `"m_moveDirectionID": null,`, `"m_flMoveSpeedX": null,`, `"m_flMoveSpeedY": null,`, `"m_flMoveSpeedHorizontal": null,`, `"m_flPreviousMoveSpeedHorizontal": null,`, `"m_flCrouchAmount": null,`, `"m_bIsWalking": null,`, `"m_bIsStutterStep": null,`, `"m_flWeaponDropAmount": null,`, `"m_groundAction": null,`, `"m_groundActionDirectionID": null,`, `"m_flGroundTurnAngleOrVelocity": null,`, `"m_flLadderCycle": null,`, `"m_flLadderYaw": null,`, `"m_flLadderYawBackwards": null,`, `"m_airAction": null,`, `"m_flAirHeightAboveGround": null,`, `"m_leftFootTarget": null,`, `"m_rightFootTarget": null,`, `"m_flFlashedAmount": null,`, `"m_flAimPitchAngle": null,`, `"m_flAimYawAngle": null,`, `"m_flinchHead": null,`, `"m_flinchHeadRestart": null,`, `"m_flinchBody": null,`, `"m_flinchBodyRestart": null,`, `"m_flinchIsOnFire": null`, `}`
+**Metadata:** `MGetKV3ClassDefaults = {`, `"_class": "CCS2PawnGraphController",`, `"m_hExternalGraph": 4294967295,`, `"m_action": null,`, `"m_bActionReset": null,`, `"m_flWeaponActionSpeedScale": null,`, `"m_weaponCategory": null,`, `"m_weaponType": null,`, `"m_weaponExtraInfo": null,`, `"m_flWeaponAmmo": null,`, `"m_flWeaponAmmoMax": null,`, `"m_flWeaponAmmoReserve": null,`, `"m_bWeaponIsSilenced": null,`, `"m_flWeaponIronsightAmount": null,`, `"m_bIsUsingLegacyModel": null,`, `"m_idleVariation": null,`, `"m_deployVariation": null,`, `"m_attackType": null,`, `"m_attackThrowStrength": null,`, `"m_flAttackVariation": null,`, `"m_inspectVariation": null,`, `"m_inspectExtraInfo": null,`, `"m_reloadStage": null,`, `"m_bIsDefusing": null,`, `"m_moveType": null,`, `"m_moveDirectionID": null,`, `"m_flMoveSpeedX": null,`, `"m_flMoveSpeedY": null,`, `"m_flMoveSpeedHorizontal": null,`, `"m_flPreviousMoveSpeedHorizontal": null,`, `"m_flCrouchAmount": null,`, `"m_bIsWalking": null,`, `"m_flWeaponDropAmount": null,`, `"m_groundAction": null,`, `"m_groundActionDirectionID": null,`, `"m_flGroundTurnAngleOrVelocity": null,`, `"m_flLadderCycle": null,`, `"m_flLadderYaw": null,`, `"m_flLadderYawBackwards": null,`, `"m_airAction": null,`, `"m_flAirHeightAboveGround": null,`, `"m_leftFootTarget": null,`, `"m_rightFootTarget": null,`, `"m_flFlashedAmount": null,`, `"m_flAimPitchAngle": null,`, `"m_flAimYawAngle": null,`, `"m_flinchHead": null,`, `"m_flinchHeadRestart": null,`, `"m_flinchBody": null,`, `"m_flinchBodyRestart": null,`, `"m_flinchIsOnFire": null`, `}`
 
 **Relationships:**
 
@@ -1918,9 +1918,7 @@ classDiagram
 | `m_bWasStationaryLastUpdate` | bool |  |
 | `m_actionStartTick` | [GameTick_t](../schemas/entity2.md#gametick_t) |  |
 | `m_staticAimTimerStartTick` | [GameTick_t](../schemas/entity2.md#gametick_t) |  |
-| `m_stutterStepStartTick` | [GameTick_t](../schemas/entity2.md#gametick_t) |  |
 | `m_plantAndTurnStartTick` | [GameTick_t](../schemas/entity2.md#gametick_t) |  |
-| `m_bIsStutterStep` | bool |  |
 | `m_flTurnOnSpotAngle` | float32 |  |
 | `m_flPreviousAimYaw` | float32 |  |
 | `m_flPreviousHorizontalSpeed` | float32 |  |
@@ -4016,6 +4014,7 @@ classDiagram
 | `m_iHostageCount` | int32 |  |
 | `m_bFadePlayerVisibilityFarZ` | bool |  |
 | `m_bRainTraceToSkyEnabled` | bool |  |
+| `m_bGPUCullSkybox` | bool |  |
 | `m_flEnvRainStrength` | float32 |  |
 | `m_flEnvPuddleRippleStrength` | float32 |  |
 | `m_flEnvPuddleRippleDirection` | float32 |  |
