@@ -127,7 +127,7 @@ nav_exclude: true
 | [CCSPlayer_DamageReactServices](#ccsplayer_damagereactservices) | class | CPlayerPawnComponent | 0 |
 | [CCSPlayer_HostageServices](#ccsplayer_hostageservices) | class | CPlayerPawnComponent | 2 |
 | [CCSPlayer_ItemServices](#ccsplayer_itemservices) | class | CPlayer_ItemServices | 2 |
-| [CCSPlayer_MovementServices](#ccsplayer_movementservices) | class | CPlayer_MovementServices_Humanoid | 52 |
+| [CCSPlayer_MovementServices](#ccsplayer_movementservices) | class | CPlayer_MovementServices_Humanoid | 53 |
 | [CCSPlayer_PingServices](#ccsplayer_pingservices) | class | CPlayerPawnComponent | 2 |
 | [CCSPlayer_RadioServices](#ccsplayer_radioservices) | class | CPlayerPawnComponent | 5 |
 | [CCSPlayer_UseServices](#ccsplayer_useservices) | class | CPlayer_UseServices | 3 |
@@ -4541,6 +4541,9 @@ classDiagram
 | Name | Type | Annotations |
 |------|------|-------------|
 | `m_AnimationState` | [CCSPlayerAnimationState](../schemas/client.md#ccsplayeranimationstate) |  |
+| `m_bUsingGroundTopologyOffset` | bool |  |
+| `m_flAltitudeAtLastUsingGroundTopologyOffsetTransition` | float32 |  |
+| `m_flUsingGroundTopologyOffsetTransitionSmoothing` | float32 |  |
 | `m_vecLadderNormal` | Vector |  |
 | `m_nLadderSurfacePropIndex` | int32 |  |
 | `m_bDucked` | bool |  |
@@ -4589,8 +4592,6 @@ classDiagram
 | `m_flTicksSinceLastSurfingDetected` | float32 |  |
 | `m_bWasSurfing` | bool |  |
 | `m_vecWalkWishVel` | Vector2D |  |
-| `m_gtLastTimeOnStaticWorldGround` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
-| `m_gtLastTimeInAir` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_bHasEverProcessedCommand` | bool |  |
 
 ### CCSPlayer_PingServices

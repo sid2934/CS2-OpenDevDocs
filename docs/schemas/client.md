@@ -103,7 +103,7 @@ nav_exclude: true
 | [CCSPlayer_GlowServices](#ccsplayer_glowservices) | class | CPlayerPawnComponent | 0 |
 | [CCSPlayer_HostageServices](#ccsplayer_hostageservices) | class | CPlayerPawnComponent | 2 |
 | [CCSPlayer_ItemServices](#ccsplayer_itemservices) | class | CPlayer_ItemServices | 2 |
-| [CCSPlayer_MovementServices](#ccsplayer_movementservices) | class | CPlayer_MovementServices_Humanoid | 50 |
+| [CCSPlayer_MovementServices](#ccsplayer_movementservices) | class | CPlayer_MovementServices_Humanoid | 51 |
 | [CCSPlayer_PingServices](#ccsplayer_pingservices) | class | CPlayerPawnComponent | 1 |
 | [CCSPlayer_UseServices](#ccsplayer_useservices) | class | CPlayer_UseServices | 0 |
 | [CCSPlayer_WaterServices](#ccsplayer_waterservices) | class | CPlayer_WaterServices | 3 |
@@ -338,7 +338,7 @@ nav_exclude: true
 | [C_CSMinimapBoundary](#c_csminimapboundary) | class | C_BaseEntity | 0 |
 | [C_CSObserverPawn](#c_csobserverpawn) | class | C_CSPlayerPawnBase | 1 |
 | [C_CSPetPlacement](#c_cspetplacement) | class | C_BaseEntity | 0 |
-| [C_CSPlayerPawn](#c_csplayerpawn) | class | C_CSPlayerPawnBase | 106 |
+| [C_CSPlayerPawn](#c_csplayerpawn) | class | C_CSPlayerPawnBase | 105 |
 | [C_CSPlayerPawnBase](#c_csplayerpawnbase) | class | C_BasePlayerPawn | 26 |
 | [C_CSPlayerResource](#c_csplayerresource) | class | C_BaseEntity | 10 |
 | [C_CSTeam](#c_csteam) | class | C_Team | 10 |
@@ -2444,6 +2444,9 @@ classDiagram
 | Name | Type | Annotations |
 |------|------|-------------|
 | `m_AnimationState` | [CCSPlayerAnimationState](../schemas/client.md#ccsplayeranimationstate) |  |
+| `m_bUsingGroundTopologyOffset` | bool |  |
+| `m_flAltitudeAtLastUsingGroundTopologyOffsetTransition` | float32 |  |
+| `m_flUsingGroundTopologyOffsetTransitionSmoothing` | float32 |  |
 | `m_vecLadderNormal` | Vector |  |
 | `m_nLadderSurfacePropIndex` | int32 |  |
 | `m_bDucked` | bool |  |
@@ -2490,8 +2493,6 @@ classDiagram
 | `m_flTicksSinceLastSurfingDetected` | float32 |  |
 | `m_bWasSurfing` | bool |  |
 | `m_vecWalkWishVel` | Vector2D |  |
-| `m_gtLastTimeOnStaticWorldGround` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
-| `m_gtLastTimeInAir` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_bHasEverProcessedCommand` | bool |  |
 
 ### CCSPlayer_PingServices
@@ -7493,7 +7494,6 @@ classDiagram
 | `m_bGunGameImmunity` | bool |  |
 | `m_fImmuneToGunGameDamageTimeLast` | [GameTime_t](../schemas/entity2.md#gametime_t) |  |
 | `m_fMolotovDamageTime` | float32 |  |
-| `m_bThirdpersonActiveWeaponCanSafelyOcclude` | bool |  |
 | `m_nPlayerInfernoBodyFx` | [ParticleIndex_t](../schemas/client.md#particleindex_t) |  |
 | `m_angEyeAngles` | QAngle |  |
 | `m_arrOldEyeAnglesTimes` | [GameTime_t](../schemas/entity2.md#gametime_t)[4] |  |
